@@ -1,0 +1,50 @@
+int countNumBits2(int mask) {	//	O(bits Count)		__builtin_popcount(n)
+	int ret = 0;
+	while (mask) 	{
+		mask &= (mask-1);
+		++ret;	// Simply remove the last bit and so on
+	}
+	return ret;
+}
+
+to add two binary numbers
+{
+        string s1,s2; cin>>s1>>s2;
+        int l=s1.length()-1,r=s2.length()-1,c=0,sum=0;
+        string res="";    
+        while(l>=0 || r>=0 || c==1)
+        {
+            if(l>=0)
+            {
+                sum+=s1[l--]-'0';
+            }
+            
+            if(r>=0)
+            {
+                sum+=s2[r--]-'0';
+            }
+            sum+=c;
+            res+=(sum%2)+'0';
+            c=sum/2;
+            sum=0;
+        }
+        reverse(res.begin(),res.end());
+        cout<<res<<"\n";
+}
+to print binary representaion we use
+void bin(int n) 
+{ 
+    if (n > 1) 
+    bin(n>>1); 
+    cout<<n&1;
+} 
+
+// len = 3: 000, 001, 010, 011, 100, 101, 110, 111
+void printAllSubsets(int len)	// Remember we did it recursively! This is much SIMPLER!
+{
+	for (int i = 0; i < (1<<len); ++i)
+		{bin(len);cout<<' ';}
+
+	// For reversed order
+	//for (int i = (1<<len); i >= 0 ; --i)
+}
