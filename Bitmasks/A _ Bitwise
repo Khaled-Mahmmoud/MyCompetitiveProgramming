@@ -1,0 +1,51 @@
+32-bit Integers
+4 Bytes ( 1 Byte = 8 bits )
+bit 31 for sign 
+we can use first 31 bits (bit 0 to bit 30) to avoid issues with 2's complement 
+31                             0
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+64-bit Integers
+8 Bytes
+bit 63 for sign 
+we can use first 63 bits (bit 0 to bit 62) to avoid issues with 2's complement 
+63                                                             0
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+bitmask is any integer
+set : bit with value 1
+clear : bit with value 0
+
+basic bitwise operations
+
+AND operator (&)
+Ex. a=5 , b=4
+int c=a&b; // 101 & 100 = 100
+
+OR operator (|)
+Ex. a=5 , b=4
+int c= a | b; // 101 & 100 = 101
+ 
+XOR operator (^)
+Ex. a=5 , b=4
+int c= a ^ b; // 101 & 100 = 001
+
+NOT operator (~)
+flip each bit
+int a=10 ; // 1010
+int b=~a=~(1010)=0101
+
+Shift Left 
+operator : <<
+Form : x << y
+shift number x in binary times y to the left
+Ex. int x=10; // 1010
+int y=x<<2; // 101000
+
+Shift Right 
+operator : >>
+Form : x >> y
+shift number x in binary times y to the right
+Ex. int x=10; // 1010
+int y=x>>2; // 0010
