@@ -1,0 +1,54 @@
+A ^ B ^ C ^ D = E	For any bit in E with 1, must be ODD number of 1s
+X ^ 0 = X	              	X ^ X = 0
+(A ^ B ^ C ^ D ^ E) ^ (A ^ B ^ C) = D ^ E
+
+X << 1	 =  100100000000		Equals X*2 but faster than X*2
+X << 2	 =  1001000000000		Equals X*4 but faster than X*4
+X >> 1	 = 	1001000000 		Equals X/2 but faster than X/2
+X >> 2	 = 	100100000 		Equals X/4 but faster than X/4
+1 << X   =                              Equals 2^X but faster than 2^X
+
+X = 11010 = 26 = 2^1 + 2^3 + 2^4 = 2 + 8 + 16
+Generally:	X % (2^n)  = X & (2^n-1)
+
+Even test
+	if(n%2 == 1)		-> Fails of n is negative
+
+	if( (n&1) == 1)	-> Works always
+
+
+void printNumber(int n, int len)
+{
+	if(!len)
+		return ;
+
+	printNumber(n>>1, len-1);	// remove last bit
+	cout<<(n&1);						// print last bit
+}
+
+
+// Let's count bits
+
+int countNumBits1(int mask) {	// O(bits Length)
+	int ret = 0;	//1101001 -> 110100 -> 11010 -> 1101 -> 110 -> 11 -> 1 -> 0
+	while (mask) {
+		if(mask&1)
+			ret++;
+		mask >>= 1;
+	}
+	return ret;
+}
+
+int flipBit(int num, int idx) {
+	return num ^ (1<<idx);
+}
+
+/*
+X-1 is very important!
+
+X 	= 840 	= 01101001000
+X-1 = 839 	= 01101000111		What happened? First bit 16=(2^4) is removed, and 15=2^4-1 is added.
+
+X & (X-1) 	= 01101000000		first bit from right removed
+
+X & ~(X-1) 	= 01101001000 & 10010111000 = 00000001000	value of 1<<SmaintestBitIdx
