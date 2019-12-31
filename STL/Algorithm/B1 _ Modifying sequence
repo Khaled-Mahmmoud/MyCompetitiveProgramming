@@ -1,0 +1,55 @@
+********************** copy or move *************************
+Copies the elements in the range [first,last] into the range beginning at result
+case 1:
+    vector<int>v={3,4,4,5,6,5},v1(3);
+    copy(v.begin(),v.end(),v1.begin()); or move(v.begin(),v.end(),v1.begin());
+    for(int z:v1)cout<<z<<' '; // 3 4 4
+case 2:
+    vector<int>v={3,4,4,5,6,5},v1(0);
+    copy(v.begin(),v.end(),v1.begin());
+    for(int z:v1)cout<<z<<' '; // run error
+case 3:
+    vector<int>v={3,4,4,5,6,5},v1;
+    copy(v.begin(),v.end(),v1.begin());
+    for(int z:v1)cout<<z<<' '; // run error
+case 4:
+    vector<int>v={3,4,4,5,6,5},v1(10);
+    copy(v.begin(),v.end(),v1.begin()+2);
+    for(int z:v1)cout<<z<<' '; // 0 0 3 4 4 5 6 5
+case 5:
+    vector<int>v={3,4,4,5,6,5},v1(10);
+    auto it=v1.end();it--;
+    copy(v.begin(),v.end(),it);
+    for(int z:v1)cout<<z<<' '; // run error
+Complexity : linear in the distance between first and last
+********************** copy_n *************************
+copy(first1 itr, n,first2 itr)
+Copies the first n elements from the range beginning at first into the range beginning at result
+Complexity : linear in the distance between first and last O(n)
+********************** copy_if *************************
+Copies the elements in the range [first,last] for which pred returns true to the range beginning at result
+copy_if(first1 itr,last1 itr,first2 itr,pred)
+Complexity : linear in the distance between first and last
+
+********************** copy_backward or move_backward *************************
+Copies the elements in the range [first,last) starting from the end into the range terminating at result
+
+    vector<int>v={3,4,4,5,6,7},v1(10);
+    copy_backward(v.begin(),v.end(),v1.begin()+3);
+    for(int z:v1)cout<<z<<' '; // 5 6 7 0 0 0 0 0 0 0
+ Complexity : linear in the distance between first and last
+********************** swap *************************
+Exchanges the values of a and b
+swap(a,b)
+ Complexity : Constant
+ 
+ ********************** swap_ranges *************************
+ swap_ranges(first1,last1,first2)
+ Exchanges the values of each of the elements in the range [first1,last1] with those of their respective elements 
+ in the range beginning at first2
+ Complexity : linear in the distance between first and last
+ 
+  ********************** iter_swap *************************
+Exchange values of objects pointed to by two iterators
+iter_swap( itr1, itr2)
+ Complexity : Constant
