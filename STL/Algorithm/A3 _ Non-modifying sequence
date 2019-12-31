@@ -1,0 +1,47 @@
+********************** count *************************
+int cnt=count(first itr,last itr,val)
+Returns the number of elements in the range [first,last] that compare equal to val
+Complexity : Linear in the distance between first and last
+
+********************** count_if *************************
+int cnt=count_if(first itr,last itr,pred)
+Return number of elements in range satisfying condition
+Complexity : Linear in the distance between first and last
+
+********************** mismatch *************************
+pair<int,int>p = mismatch(first1,last1,first2) OR
+pair<int,int>p = mismatch(first1,last1,first2,pred)
+Compares the elements in the range [first1,last1] with those in the range beginning at first2 and 
+returns the first element of both sequences that does not match
+Complexity : Linear in the distance between first1 and last1
+
+********************** equal *************************
+bool g=equal(first1,last1,first2) OR bool g=equal(first1,last1,first2,compare)
+Compares the elements in the range [first1,last1] with those in the range beginning at first2, and returns true if all of the elements 
+in both ranges match
+Complexity :  linear in the distance between first1 and last1
+
+********************** search *************************
+auto it=search(first1,last1,first2,last2) OR auto it=search(first1,last1,first2,last2,compare)
+Searches the range [first1,last1] for the first occurrence of the sequence defined by [first2,last2]
+and returns an iterator to its first element, or last1 if no occurrences are found
+search for the first occurence but if_end for the last occurence
+Complexity : linear in count1*count2 (where countX is the distance between firstX and lastX)
+********************** search_n *************************
+auto it=search_n(first1,last1,count,val) OR auto it=search_n(first1,last1,count,val,compare)
+Searches the range [first,last] for a sequence of count elements, each comparing equal to val (or for which pred returns true)
+    vector<int>v={3,4,4,5,6,5};
+    if(search_n(v.begin(),v.end(),2,4)!=v.end())
+        cout<<"sequence 1 exists"<<endl;
+    if(search_n(v.begin(),v.end(),2,5)!=v.end())
+        cout<<"sequence 2 exists"<<endl;
+this code prints : sequence 1 exists
+Complexity : linear in the distance between first and last
+
+********************** is_permutation *************************
+bool g=is_permutation(first1 itr,last1 itr,first2 itr) OR
+bool g=is_permutation(first1 itr,last1 itr,first2 itr,pred)
+Compares the elements in the range [first1,last1] with those in the range beginning at first2
+and returns true if all of the elements in both ranges match, even in a different order
+Complexity : If both sequence are equal (with the elements in the same order), linear in the distance between first1 and last1.
+Otherwise, up to quadratic N : (where N is the distance between first1 and last1)
