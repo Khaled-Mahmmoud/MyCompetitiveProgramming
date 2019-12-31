@@ -1,0 +1,62 @@
+unorderedmaps store elements formed by a combination of a key value and a mapped value
+#include <unordered_map>
+unordered_map<int,object_type>object_name;
+
+********************* Iterators *****************************
+m.begin()    || O(1) || Returns an iterator pointing to the first element 
+m.end()      || O(1) || Returns an iterator pointing to the last element 
+m.cbegin()   || O(1) || Returns a const_iterator pointing to the first element 
+m.cend()     || O(1) || Returns a const_iterator pointing to the last element 
+
+********************* Capacity ********************************
+m.size()     || O(1) || Returns the number of elements 
+m.max_size() || O(1) || Returns the maximum number of elements that the container can hold
+m.empty()    || O(1) || Returns whether the container is empty 
+
+********************* Element Access ************************** 
+m.at(pos)    || O(1) ~ O(n) || Returns a reference to the element at position pos (O-Indexed)
+operator[pos]|| O(1) ~ O(n) || Returns a reference to the element at position pos (O-Indexed)
+
+********************* Modifiers *******************************
+m.insert({key,val})   OR 
+m.insert(iterator,{key,val})  (faster) //iterator = m.begin()   OR 
+m1.insert(m2 first iterator,m2 last iterator) 
+Single element insertions:
+Average case: constant.
+Worst case: linear in container size.
+Multiple elements insertion:
+Average case: linear in the number of elements inserted.
+Worst case: N*size: number of elements inserted times the container size
+May trigger a rehash (not included)
+
+m.erase(iterator) OR m.erase(key)  OR 
+m.erase(first iterator , last iterator)
+Average case: Linear in the number of elements removed 
+Worst case: Linear in the container size
+
+m.emplace({key,val}) ||  Average case: constant , Worst case: linear in container size 
+m.emplace_hint(iterator,{key,val}) || Average case: constant , Worst case: linear in container size ) (faster than m.emplace)
+ 
+m1.swap(m2)         || O(1) || Sawp two container
+swap(m[0],m[2])     || O(1) || Sawp two vals
+m.clear()  || Linear in size || Removes all elements , leaving the vector with a size of 0
+
+********************* Member functions *******************************
+m1.operator=(m2) OR m1=m2|| Linear in size || Assigns new contents , replacing its current contents, and modifying its size   
+
+********************unordered_multimap******************
+unordered_multimaps store elements formed by a combination of a key value and a mapped value
+unordered_multimap is a map that allows duplicated keys but not sorted
+unordered_multimap has properties of map except (at,[]) because Random access is not supported 
+
+********************* Buckets *******************************
+m.bucket_count() // Returns the number of buckets in the container // O(1)
+m.max_bucket_count() // Returns the maximum number of buckets that container can have// O(1)
+m.max_bucket_count()=st.max()=536870911
+m.bucket_size(n) // Returns the number of elements in bucket n // O(bucket size)
+m.bucket(n) // Returns the bucket number where the element with value k is located // O(1)
+Assume that the number of buckets in any container is n , the first bucket = 0 , the second =1 ,...., the last bucket = n-1
+
+st.rehash(n) // Sets the number of buckets in the container to n or more & n should be greater than bucket.count() to avoid drawbackets
+Average case: linear in container size.
+Worst case: quadratic in container size.
