@@ -5,7 +5,7 @@ vertex u comes before v in the ordering. Topological Sorting for a graph is not 
 using namespace std;
 vector<vector<int>>adj;
 vector<bool>vis;vector<int>result;
-void dfs(int u)
+void toposordfs(int u)
 {
     vis[u] = true;
     for (int z : adj[u])
@@ -28,7 +28,7 @@ int main()
         adj[u].push_back(v);
     }
     for(int i=1;i<=n;i++)
-    if(!vis[i])dfs(i);
+    if(!vis[i])toposordfs(i);
     reverse(result.begin(),result.end());
     for(int i=0;i<result.size();i++)
         cout<<result[i]<<' ';
