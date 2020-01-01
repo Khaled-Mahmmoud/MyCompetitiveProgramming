@@ -7,6 +7,7 @@
 - [Iterators](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/B%20_%20Iterators)
 - [sequence Containers](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Containers)
 	- [Vector](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/D%20_%20Vector)
+	- [Array](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/C%20_%20Array)
 
 ### Data Structures
 - [Sparse Table](https://github.com/OmarBazaraa/Competitive-Programming/tree/master/src/data_structures/sparse_table)
