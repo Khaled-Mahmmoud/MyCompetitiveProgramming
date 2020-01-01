@@ -29,6 +29,6 @@ int main()
         adj[v].push_back(u);
     }
     for(int i=1;i<=n;i++)
-        dfs(i);
+    if(!vis[i])dfs(i);
     return 0;
 }
