@@ -39,6 +39,6 @@ int main()
         adj[v].push_back(u);
     }
     for(int i=1;i<=n;i++)
-        bfs(i);
+      if(!vis[i])bfs(i);
     return 0;
 }
