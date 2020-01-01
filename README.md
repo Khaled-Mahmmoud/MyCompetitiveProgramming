@@ -34,7 +34,7 @@ A brief explanation to each of the following topics will be added soon, hopefull
 	- [Mo's Algorithm](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/data_structures/sqrt_decomposition/mo_algorithm.cpp)
 
 ### Strings
-- [KMP](https://github.com/OmarBazaraa/Competitive-Programming/tree/master/src/strings/KMP)
+- [KMP](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/String/KMP)
 - [Z-Algorithm](https://github.com/OmarBazaraa/Competitive-Programming/tree/master/src/strings/z_algorithm)
 - [Trie](https://github.com/OmarBazaraa/Competitive-Programming/tree/master/src/strings/trie)
 	- [Implemented with static memory allocation](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/strings/trie/trie_static.cpp)
