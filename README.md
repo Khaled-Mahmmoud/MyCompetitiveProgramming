@@ -1,6 +1,5 @@
 # اللَّهُمَّ انْفَعْنِي بِمَا عَلَّمْتَنِي، وَعَلِّمْنِي مَا يَنْفَعُنِي، وَزِدْنِي عِلْمًا
 
-## Content
 
 ### Containers
 - [Introduction](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/A%20_%20Introduction)     
@@ -8,6 +7,11 @@
 - [sequence Containers](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Containers)
 	- [Vector](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/D%20_%20Vector)
 	- [Array](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/C%20_%20Array)
+	- [Deque](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/E%20_%20Deque)
+	- [List1](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/F1%20_%20List)
+	- [List2](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/F2%20_%20List)
+	- [Forward List1](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/G1%20_%20Forward%20List)
+	- [Forward List2](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/G2%20_%20Forward%20List)
 
 ### Data Structures
 - [Sparse Table](https://github.com/OmarBazaraa/Competitive-Programming/tree/master/src/data_structures/sparse_table)
