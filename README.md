@@ -1,16 +1,12 @@
 # اللَّهُمَّ انْفَعْنِي بِمَا عَلَّمْتَنِي، وَعَلِّمْنِي مَا يَنْفَعُنِي، وَزِدْنِي عِلْمًا
-# Competitive Programming
-
-C++ code library contains useful algorithms for competitive programming.
-
-#### PDF Version
-[1] You can download an easy printable minified PDF version of this library from [here](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/docs/Momentum%20Library.pdf).
-
-[2] You can download *Theoretical Computer Science Cheat Sheet* from [here](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/docs/Cheat%20Sheet.pdf).
 
 ## Content
 
-A brief explanation to each of the following topics will be added soon, hopefully.
+### Containers
+- [Introduction](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/A%20_%20Introduction)     
+- [Iterators](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/B%20_%20Iterators)
+- [sequence Containers](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Containers)
+        - [Array](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/C%20_%20Array)
 
 ### Data Structures
 - [Sparse Table](https://github.com/OmarBazaraa/Competitive-Programming/tree/master/src/data_structures/sparse_table)
