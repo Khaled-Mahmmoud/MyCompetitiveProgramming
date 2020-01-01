@@ -5,3 +5,6 @@ Associative Containers
 Unordered Associative Containers
 1-unordered_map    2-unordered_multimap    3-unordered_set    4-unordered_multiset
 for Associative container(map and unordered_map) supported random access (at,[])
+
+static memory allocation ==>> fixed size ==>>  int a[10]
+dynamic memory allocation ==>> size varies ==>>  stack , queue
