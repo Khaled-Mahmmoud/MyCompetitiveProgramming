@@ -12,6 +12,13 @@
 	- [List2](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/F2%20_%20List)
 	- [Forward List1](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/G1%20_%20Forward%20List)
 	- [Forward List2](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/G2%20_%20Forward%20List)
+- [Associative Containers](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Containers)
+        - [Map & Multimap](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/H%20_%20Map%20%26%20Multimap)
+	- [Set & Multiset](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/J%20_%20Set%20%26%20Multiset)
+- [Unordered Associative Containers](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Containers)
+        - [Unordered_map & Unordered_multimap](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/I%20_%20Unordered_map%20%26%20Unordered_multimap)
+	- [Unordered_set & Unordered_multiset](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/K%20_%20Unordered_set%20%26%20Unordered_multiset)
+- [stack & queue & priority queue](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/L%20_%20stack%20%26%20queue%20%26%20priority%20queue)
 
 ### Data Structures
 - [Sparse Table](https://github.com/OmarBazaraa/Competitive-Programming/tree/master/src/data_structures/sparse_table)
