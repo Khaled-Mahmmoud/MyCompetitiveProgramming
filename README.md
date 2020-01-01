@@ -6,8 +6,6 @@
 - [Introduction](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/A%20_%20Introduction)     
 - [Iterators](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/B%20_%20Iterators)
 - [sequence Containers](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Containers)
-        - [Array](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming
-/blob/master/Containers/C%20_%20Array)
 	- [Vector](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/D%20_%20Vector)
 
 ### Data Structures
