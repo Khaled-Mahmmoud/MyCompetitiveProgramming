@@ -5,8 +5,8 @@
 - [Introduction](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/A%20_%20Introduction)     
 - [Iterators](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/B%20_%20Iterators)
 - [sequence Containers](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Containers)
+        - [Array](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/C%20_%20Array)
 	- [Vector](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/D%20_%20Vector)
-	- [Array](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/C%20_%20Array)
 	- [Deque](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/E%20_%20Deque)
 	- [List1](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/F1%20_%20List)
 	- [List2](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/F2%20_%20List)
@@ -45,7 +45,7 @@
 - [KMP](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/String/KMP)
 - [Z-Algorithm](https://github.com/OmarBazaraa/Competitive-Programming/tree/master/src/strings/z_algorithm)
 - [Trie](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/String/Trie)
-        - [abstraction](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/Trie/Abstraction.pdf)
+        - [Abstraction](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/Trie/Abstraction.pdf)
 	- [Implemented with static memory allocation](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/Trie/Trie_Static.cpp)
 	- [Implemented with dynamic memory allocation](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/strings/trie/trie_dynamic.cpp)
 - Suffix Array
