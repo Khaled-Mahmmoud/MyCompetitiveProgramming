@@ -29,3 +29,8 @@ F(1) =1 , F(n) = n * F(n-1)
 
 Ex S = 1, 1, 2, 3, 5, 8,...
 S(1)=1 , S(2)=1 , S(n)=S(n-1)+S(n-2)
+
+String sequence : a,b,c,3,5,'',""
+.letters , numbers and special letters
+.no commas
+.if we remove commas from a sequence it becomes string
