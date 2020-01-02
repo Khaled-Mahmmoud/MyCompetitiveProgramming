@@ -1,0 +1,23 @@
+Set : is a well-defined collection of distinct objects 
+
+For example, the numbers 2, 4, and 6 are distinct objects when considered separately, but when they are considered collectively they 
+form a single set of size three, written {2, 4, 6} 
+
+(No order)
+the order in a set is not important , Thus {2,6,4} , {4,6,2} , {6,2,4} , {4,2,6} ,{6,4,2} are all representations of set {2,4,6}
+
+(No repeation)
+repeated elements of the set can be ignored
+{ 3,5,6,5,5,3} ===>>> {3,5,6}
+{1,1,7,2,7,2,2,2}  ===>>> {1,2,7}
+
+
+Another way to define a set 
+x={x | x is a positive integer less than 10}
+x={1,2,3,...,9}
+
+x={x | x is a letter in car}
+x={'c','a','r'}
+
+
+Φ = {} is empty set  // phi
