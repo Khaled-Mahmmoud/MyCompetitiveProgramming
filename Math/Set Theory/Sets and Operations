@@ -11,6 +11,12 @@ repeated elements of the set can be ignored
 { 3,5,6,5,5,3} ===>>> {3,5,6}
 {1,1,7,2,7,2,2,2}  ===>>> {1,2,7}
 
+Difference between set and sequence ?
+set ==>> no order , no reaption
+sequence ==>> order and reaption are important
+
+sequenc 1,2,3 is not the same as sequenc 1,3,2
+sequenc 1,2,2 is not the same as sequenc 1,1,2
 
 Another way to define a set 
 x={x | x is a positive integer less than 10}
