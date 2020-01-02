@@ -45,7 +45,6 @@
 - [KMP](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/String/KMP)
 - [Z-Algorithm](https://github.com/OmarBazaraa/Competitive-Programming/tree/master/src/strings/z_algorithm)
 - [Trie](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/String/Trie)
--[]
         - [Abstraction](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/Trie/Abstraction.pdf)
 	- [Implemented with static memory allocation](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/Trie/Trie_Static.cpp)
 	- [Implemented with dynamic memory allocation](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/strings/trie/trie_dynamic.cpp)
