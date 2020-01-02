@@ -35,10 +35,20 @@ Natural numbers
 
 S ∪ T = {x : (x ∈ S) or (x ∈ T )}
 S ∩ T = {x : (x ∈ S) and (x ∈ T )}
-S ∩ T = {x : (x ∈ S) ∧ (x ∈ T )}
 
-A ∪ (B ∪ C) = (A ∪ B) ∪ C
-A ∩ (B ∩ C) = (A ∩ B) ∩ C
+S ∪ T = S + T − S ∩ T 
+
+S ∪ T = T ∪ S                           S ∩ T = T ∩ S
+S ∪ S = S                               S ∩ S = S
+U' = Φ                                   Φ' = U
+A ∪ (B ∪ C) = (A ∪ B) ∪ C              A ∩ (B ∩ C) = (A ∩ B) ∩ C
+A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)        A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)
+(A ∪ B)' = A' ∩ B'                     (A ∩ B)' = A' ∪ B'
+A ∪ U = U                              A ∩ U = A             
+A ∪ Φ = A                              A ∩ Φ = Φ                                                                            
+
+A'' = A
+
 
 A ∆ B = A ∪ B - A ∩ B
 A ∆ (B ∆ C) = (A ∆ B) ∆ C
