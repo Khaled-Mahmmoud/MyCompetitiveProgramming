@@ -126,7 +126,3 @@ Will be added soon...
 - [Code definitions](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/others/others.cpp)
 
 ## Thanks
-Special thanks to anyone contributed to this repository:
-- By teaching me any of these topics.
-- By inspiring me any code optimizations.
-- By being supportive.
