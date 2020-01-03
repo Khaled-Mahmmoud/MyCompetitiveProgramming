@@ -42,8 +42,8 @@ S - T = S - S ∩ T
 S ∪ T = T ∪ S                           S ∩ T = T ∩ S
 S ∪ S = S                               S ∩ S = S
 U' = Φ                                   Φ' = U
-A ∪ (B ∪ C) = (A ∪ B) ∪ C              A ∩ (B ∩ C) = (A ∩ B) ∩ C
-A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)        A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)
+A ∪ (B ∪ C) = (A ∪ B) ∪ C              A ∩ (B ∩ C) = (A ∩ B) ∩ C            // Associative
+A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)        A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)     // Commutative
 (A ∪ B)' = A' ∩ B'                     (A ∩ B)' = A' ∪ B'
 A ∪ U = U                              A ∩ U = A             
 A ∪ Φ = A                              A ∩ Φ = Φ                                                                            
@@ -54,3 +54,7 @@ A'' = A
 A ∆ B = A ∪ B - A ∩ B = A + B - 2( A ∩ B)
 A ∆ (B ∆ C) = (A ∆ B) ∆ C
 A ∆ (B ∪ C) = (A ∆ B) ∪ C
+
+and ==>> ∧ 
+or ==>>  v
+xor ==>> ⊕
