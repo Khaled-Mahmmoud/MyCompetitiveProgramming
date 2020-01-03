@@ -88,8 +88,8 @@
 
 ### Math
 - [Basic Discrete Math & Modular Arithmetics](https://github.com/OmarBazaraa/Competitive-Programming/tree/master/src/math)
-	- [Greatest Common Divisor (GCD)](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/math.cpp#L9)
-	- [Least Common Multiple (LCM)](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/math.cpp#L29)
+	- [Greatest Common Divisor (GCD)](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Greatest%20Common%20Divisor.cpp)
+	- [Least Common Multiple (LCM)](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Least%20Common%20Multiple.cpp)
 	- [Bézout's Coefficients (using extended Euclid's method)](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/math.cpp#L44)
 	- [Fast Power](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/math.cpp#L69)
 	- [Modular Inverse](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/math.cpp#L97)
