@@ -87,21 +87,20 @@
 	- [Bridge Tree](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/graphs/others/bridge_tree.cpp)
 
 ### Math
-- [Basic Discrete Math & Modular Arithmetics](https://github.com/OmarBazaraa/Competitive-Programming/tree/master/src/math)
-	- [Greatest Common Divisor (GCD)](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Greatest%20Common%20Divisor.cpp)
-	- [Least Common Multiple (LCM)](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Least%20Common%20Multiple.cpp)
-	- [Bézout's Coefficients (using extended Euclid's method)](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/math.cpp#L44)
-	- [Fast Power](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/math.cpp#L69)
-	- [Modular Inverse](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/math.cpp#L97)
-	- [Combinations (nCr)](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/math.cpp#L117)
-	- [Combinations (nCr) for Large Numbers](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/math.cpp#L139)
-	- [Pascal Triangle](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/math.cpp#L176)
-	- [Check Integer Primality](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/math.cpp#L196)
-	- [Check Integer Primality using Miller Rabin](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/math.cpp#L219)
-	- [Generate Prime Numbers (using Sieve of Eratosthenes' algorithm)](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/math.cpp#L290)
-	- [Generate Divisors (single/bulk operation)](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/math.cpp#L315)
-		- All divisors
-		- Prime divisors
+- [Greatest Common Divisor (GCD)](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Greatest%20Common%20Divisor.cpp)
+- [Least Common Multiple (LCM)](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Least%20Common%20Multiple.cpp)
+- [Bézout's Coefficients (using extended Euclid's method)](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/math.cpp#L44)
+- [Fast Power](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/math.cpp#L69)
+- [Modular Inverse](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/math.cpp#L97)
+- [Combinations (nCr)](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/math.cpp#L117)
+- [Combinations (nCr) for Large Numbers](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/math.cpp#L139)
+- [Pascal Triangle](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/math.cpp#L176)
+- [Check Integer Primality](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/math.cpp#L196)
+- [Check Integer Primality using Miller Rabin](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/math.cpp#L219)
+- [Generate Prime Numbers (using Sieve of Eratosthenes' algorithm)](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/math.cpp#L290)
+- [Generate Divisors (single/bulk operation)](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/math.cpp#L315)
+	- All divisors
+	- Prime divisors
 - [Matrix Operations](https://github.com/OmarBazaraa/Competitive-Programming/tree/master/src/math)
 	- [Matrix Class](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/matrix.cpp)
 	- [Matrix Power](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/matrix_minified.cpp)
