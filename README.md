@@ -92,6 +92,7 @@
 - [GCD & LCM & Matrix](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM%20%26%20Matrix.pdf)
 - [Set Theory](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Math/Set%20Theory)
 	- [Sets and Operations](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Set%20Theory/Sets%20and%20Operations)
+	- [Table of set theory symbols](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Math/Set%20Theory/Table%20of%20set%20theory%20symbols)
 - [Sequence](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Sequence)
 - [Bézout's Coefficients (using extended Euclid's method)](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/math.cpp#L44)
 - [Fast Power](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/math.cpp#L69)
