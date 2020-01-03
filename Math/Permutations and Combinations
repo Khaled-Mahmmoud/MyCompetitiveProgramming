@@ -1,0 +1,13 @@
+Any Task 
+1) with repetition 
+                 n^r
+                 Ex. you have 5 pens and you want to write 3 tasks so number of ways is 5^3 
+                 Ex. you forgot your password but you know it consists of 3 letters of this set A={a,b,e,i,p} so number of ways is 5^3
+2) without repetition
+        1/ order is important (Permutation)
+                 nPr = P(n,r) = n! / (n-r)!
+                 Ex. you forgot your password but you know it consists of 3 distinct letters of this set A={a,b,e,i,p} so number of ways 
+                 is 5P3 = 5! / (5-3)!
+        2/ order is not important (Combination)
+                  nCr = C(n,r) = n! / (n-r)! * r!
+                  Ex. Picking a team of 3 people from a group of 10 = 10C3 = 10! / (10-3)! * 3!
