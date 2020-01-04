@@ -1,0 +1,9 @@
+sum(x=1,n) x   = 1 + 2 + 3 + ... + n = n*(n+1)/2
+sum(x=1,n) x^2 = 1 + 4 + 9 + ... + n*n = n*(n+1)*(2n+1)/6
+
+Arithmetic Progression (AP):: is a sequence of numbers where the difference between any two consecutive numbers is constant
+n ==>> number of elements , a ==>> first element , b ==>> last element , r ==>> difference between any two consecutive numbers
+a + (r+a) + (2r+a) + (3r+a) + ... + b
+3 , 7 , 11 , 15 , 19 , 23 , 27
+i'th term = a + (n-1) * r
+
