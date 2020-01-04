@@ -48,3 +48,5 @@ void printAllSubsets(int len)	// Remember we did it recursively! This is much SI
 	// For reversed order
 	//for (int i = (1<<len); i >= 0 ; --i)
 }
+if n is even then n^2 is even
+if n is odd then n^2 is odd
