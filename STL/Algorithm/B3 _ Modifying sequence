@@ -25,5 +25,37 @@ Assigns the value returned by successive calls to gen to the first n elements of
 generate(first itr, n , pred)
 Complexity : linear in n
 
-********************** remove *************************
-Remove value from range
+********************** for_each *************************
+Applies function fn to each of the elements in the range [first,last]
+void myfunction (int i) 
+{  
+  cout << ' ' << i;
+}
+struct myclass 
+{          
+  void operator() (int i) {cout << ' ' << i;}
+} myobject;
+int main ()
+{
+  vector<int> myvector={10,20,30};
+  cout << "myvector contains:";
+  for_each (myvector.begin(), myvector.end(), myfunction);
+  cout << '\n';
+
+  cout << "myvector contains:";
+  for_each (myvector.begin(), myvector.end(), myobject);
+  cout << '\n';
+
+  return 0;
+}
+// Another Example
+struct myclass
+{
+  void operator() (int &i) {i++;}
+} myobject;
+vector<int> myvector={10,20,30};
+cout << "myvector contains:";
+for_each (myvector.begin(), myvector.end(), myobject);
+cout << '\n';
+for(int z:myvector)cout<<z<<' '; // 11 21 31
+Complexity : linear in the distance between first and last
