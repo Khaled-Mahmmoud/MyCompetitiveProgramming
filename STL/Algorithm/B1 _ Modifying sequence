@@ -32,7 +32,7 @@ copy_if(first1 itr,last1 itr,first2 itr,pred)
 Complexity : linear in the distance between first and last
 
 ********************** copy_backward or move_backward *************************
-Copies the elements in the range [first,last) starting from the end into the range terminating at result
+Copies the elements in the range [first,last] starting from the end into the range terminating at result
 
     vector<int>v={3,4,4,5,6,7},v1(10);
     copy_backward(v.begin(),v.end(),v1.begin()+3);
