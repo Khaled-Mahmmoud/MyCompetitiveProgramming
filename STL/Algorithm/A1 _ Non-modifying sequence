@@ -1,10 +1,9 @@
 ********************** all_of *************************
 Test condition on all elements in range
 Returns true if pred returns true for all the elements in the range [first,last] or if the range is empty, and false otherwise
-bool pred
 int main () 
 {
-  sarray<int,8> foo = {3,5,7,11,13,17,19,23};
+  array<int,8> foo = {3,5,7,11,13,17,19,23};
   if (all_of(foo.begin(), foo.end(), [](int i){return i%2;} ))
     cout << "All the elements are odd numbers.\n";
   return 0;
@@ -45,39 +44,4 @@ int main ()
 
   return 0;
 }
-Complexity : linear in the distance between first and last
-********************** for_each *************************
-Applies function fn to each of the elements in the range [first,last]
-void myfunction (int i) 
-{  
-  cout << ' ' << i;
-}
-struct myclass 
-{          
-  void operator() (int i) {cout << ' ' << i;}
-} myobject;
-int main ()
-{
-  vector<int> myvector={10,20,30};
-  std::cout << "myvector contains:";
-  for_each (myvector.begin(), myvector.end(), myfunction);
-  cout << '\n';
-
-  cout << "myvector contains:";
-  for_each (myvector.begin(), myvector.end(), myobject);
-  cout << '\n';
-
-  return 0;
-}
-This function is belong to Modifying Sequence thus
-
-struct myclass
-{
-  void operator() (int &i) {i++;}
-} myobject;
-vector<int> myvector={10,20,30};
-cout << "myvector contains:";
-for_each (myvector.begin(), myvector.end(), myobject);
-cout << '\n';
-for(int z:myvector)cout<<z<<' '; // 11 21 31
 Complexity : linear in the distance between first and last
