@@ -2,7 +2,7 @@
 
 
 ### Containers
-- [Introduction](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/A%20_%20Introduction)     
+- [Containers and Time Complexity](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/A%20_%20Introduction)     
 - [Iterators](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/B%20_%20Iterators)
 - [sequence Containers](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Containers)
 	- [Vector](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/D%20_%20Vector)
@@ -19,6 +19,13 @@
 	- [Unordered_set & Unordered_multiset](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/K%20_%20Unordered_set%20%26%20Unordered_multiset)
 	- [Unordered_map & Unordered_multimap](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/I%20_%20Unordered_map%20%26%20Unordered_multimap)
 - [stack & queue & priority queue](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/L%20_%20stack%20%26%20queue%20%26%20priority%20queue)
+
+### General
+- [Binary Search](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Binary%20Search.cpp)
+- [Cumulative Sum.pdf](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Cumulative%20Sum.pdf)
+- [Cumulative Sum.cpp](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Cumulative%20Sum.cpp)
+- [Frequency Array](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Frequency%20Array)
+- [Two pointers .pdf](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Two%20pointers%20.pdf)
 
 ### Data Structures
 - [Sparse Table](https://github.com/OmarBazaraa/Competitive-Programming/tree/master/src/data_structures/sparse_table)
@@ -114,10 +121,6 @@
 
 ### Geomerty
 Will be added soon...
-
-### Search Algorithms
-- [Binary Search](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/search/binary_search.cpp)
-- [Ternary Search](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/search/ternary_search.cpp)
 
 ### Sorting Algorithms **<i>(comming soon)</i>**
 - Heap Sort
