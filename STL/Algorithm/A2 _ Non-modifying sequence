@@ -1,5 +1,5 @@
 ********************** find *************************
-Returns an iterator to the first element in the range [first,last] that compares equal to val
+Returns an iterator to the first element in the range [first,last] that equal to val
 If no such element is found, the function returns last
 vector<int>v={2,3,4,5,6}
 if(find(v.begin(),v.end(),4)!=v.end())
@@ -15,7 +15,7 @@ bool iseven(int i)
 }
 vector<int>v={3,4,8,23,6}
 vector<int>::iterator it=find_if(v.begin(),v.end(),iseven);
-cout<<*it;
+cout<<*it;  // 4
 Complixty :  linear in the distance between first and last
 
 ********************** find_if_not *************************
@@ -23,11 +23,11 @@ Returns an iterator to the first element in the range [first,last] for which pre
 If no such element is found, the function returns last
 bool pred(int i)
 {
-    return i%2;
+    return i%2==0;
 }
 vector<int>v={3,4,8,23,6}
 vector<int>::iterator it=find_if_not(v.begin(),v.end(),pred);
-cout<<*it;
+cout<<*it;  //3
 Complixty :  linear in the distance between first and last
 
 ********************** find_end *************************
@@ -45,13 +45,13 @@ auto it=find_end(v1.begin(),v1.end(),v.begin(),v.end());
 vector<int>v={1,2},v1={5,1,2,3,1,2,4};
 auto it=find_end(v1.begin(),v1.end(),v.begin(),v.end(),pred);
 cout<<"at index : "<<distance(v1.begin(),it); // 4
-Complexity : linear in count2*count1, where countX is the distance between firstX and lastX 
+Complexity : O(nm) // n number of elements of first range , m numbers of elements of second range
 
 ********************** find_first_of *************************
 it=find_first_of(first1,last1,first2,last2) OR it=find_first_of(first1,last1,first2,last2,compare)
 Returns an iterator to the first element in the range [first1,last1] that matches any of the elements in [first2,last2]
 If no such element is found, the function returns last1
-Complexity : linear in count1*count2 (where countX is the distance between firstX and lastX)
+Complexity : O(nm) // n number of elements of first range , m numbers of elements of second range
 
 ********************** adjacent_find *************************
 it=adjacent_find(first,last)
