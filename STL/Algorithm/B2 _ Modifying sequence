@@ -45,7 +45,7 @@ struct myclass
      int operator()(int i){ return i%2;}
 }isodd;
 vector<int>v= {35,20,3,30,20,17,10,29};
-replace (v.begin(), v.end(), isodd, 0); // 10 99 30 30 99 10 10 99
+replace (v.begin(), v.end(), isodd, 0); // 0 20 0 30 20 0 10 0
 
 Complexity : linear in the distance between first and last
 
@@ -54,11 +54,7 @@ Copies the elements in the range [first,last] to the range beginning at result, 
 
   int myints[] = { 10, 20, 30, 30, 20, 10, 10, 20 };
   vector<int> myvector (8);
-  replace_copy (myints, myints+8, myvector.begin(), 20, 99);
-
-  cout << "myvector contains:";
-  for (vector<int>::iterator it=myvector.begin(); it!=myvector.end(); ++it)
-   cout << ' ' << *it;
+  replace_copy (myints, myints+8, myvector.begin(), 20, 99); // 10 99 30 30 99 10 10 99
    
 Complexity : linear in the distance between first and last
 
