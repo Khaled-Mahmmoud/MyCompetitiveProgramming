@@ -1,0 +1,26 @@
+********************** sort *************************
+Sorts the elements in the range [first,last) into ascending order
+sort(first,last) OR sort(first,last,pred)
+Complexity : n*log2(n) 
+********************** stable_sort *************************
+Sorts the elements in the range [first,last) into ascending order, like sort, but stable_sort preserves the relative order of the elements 
+with equivalent values
+stable_sort(first,last) OR stable_sort(first,last,pred)
+
+  double mydoubles[] = {3.14, 1.41, 2.72, 4.67, 1.73, 1.32, 1.62, 2.58};
+  vector<double> myvector;
+  myvector.assign(mydoubles,mydoubles+8);
+
+  stable_sort (myvector.begin(), myvector.end());          //  1.32 1.41 1.62 1.73 2.58 2.72 3.14 4.67
+  stable_sort (myvector.begin(), myvector.end(), pred);   //    1.41 1.73 1.32 1.62 2.72 2.58 3.14 4.67
+  
+Complexity : If enough extra memory is available up to N*log2(N) Otherwise up to N*(log2(N))^2
+********************** partial_sort *************************
+partial_sort(first,middle,last) OR partial_sort(first,middle,last,pred)
+Partially sort elements in range
+Rearranges the elements in the range [first,last] , in such a way that the elements before middle are the smallest elements 
+in the entire range and are sorted in ascending order, while the remaining elements are left without any specific order
+    vector<int>v={2,8,3,0,10,9,4,7,1,6,5};
+    partial_sort(v.begin(),v.begin()+5,v.end()); // 0 1 2 3 4 10 9 8 7 6 5
+    
+Complexity :  N*log(M)  where N is this distance , and M is the distance between first and middle
