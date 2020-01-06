@@ -1,0 +1,36 @@
+********************** is_partitioned *************************
+is_partitioned is used for finding whether the range [first, last] is partitioned or not . A range is said to be partitioned with respect 
+to a condition if all the elements for which the condition evaluates to true precede those for which it is false 
+if range is empty then this function returns true
+is_partitioned(first , last , pred)
+bool pred(int a) 
+{ 
+    return (a % 2 == 0); 
+} 
+int main() 
+{ 
+    vector<int> v1 = { 2, 4, 6, 3, 5, 7, 9 }; 
+    
+    if (is_partitioned(v1.begin(), v1.end(), pred)) 
+        cout << "All the even no. are present before odd no."; 
+     else 
+        cout << "All the even no. are not present before odd no."; 
+    
+    v1.push_back(16); 
+  
+    if (is_partitioned(v1.begin(), v1.end(), pred))  
+        cout << "\n All the even no. are present before odd no."; 
+     else 
+        cout << "\n All the even no. are not present before odd no."; 
+  
+    return 0; 
+} 
+Complexity : linear in the distance between first and last
+
+********************** partition *************************
+Partition range in two
+Rearranges the elements from the range [first,last), in such a way that all the elements for which pred returns true precede all those for 
+which it returns false . The iterator returned points to the first element of the second group
+auto it = partition(first,last,pred)
+Complexity : linear in the distance between first and last
+
