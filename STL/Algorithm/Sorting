@@ -3,8 +3,8 @@ Sorts the elements in the range [first,last) into ascending order
 sort(first,last) OR sort(first,last,pred)
 Complexity : n*log2(n) 
 ********************** stable_sort *************************
-Sorts the elements in the range [first,last) into ascending order, like sort, but stable_sort preserves the relative order of the elements 
-with equivalent values
+Sorts the elements in the range [first,last) into ascending order, like sort, but stable_sort preserves the relative order of 
+the elements with equivalent values
 stable_sort(first,last) OR stable_sort(first,last,pred)
 
   double mydoubles[] = {3.14, 1.41, 2.72, 4.67, 1.73, 1.32, 1.62, 2.58};
@@ -24,3 +24,10 @@ in the entire range and are sorted in ascending order, while the remaining eleme
     partial_sort(v.begin(),v.begin()+5,v.end()); // 0 1 2 3 4 10 9 8 7 6 5
     
 Complexity :  N*log(M)  where N is this distance , and M is the distance between first and middle
+
+********************** partial_sort_copy *************************
+Copy and partially sort range
+Copies the smallest elements in the range [first,last) to [result_first,result_last), sorting the elements copied . 
+The number of elements copied is the same as the distance between result_first and result_last (unless this is more than the amount of 
+elements in [first,last]
+
