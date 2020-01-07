@@ -1,3 +1,6 @@
+                                    
+                                    Sorting
+                                    
 ********************** sort *************************
 Sorts the elements in the range [first,last) into ascending order
 sort(first,last) OR sort(first,last,pred)
@@ -35,3 +38,20 @@ Find first unsorted element in range
 Returns an iterator to the first element in the range [first,last] which does not follow an ascending order 
 is_sorted_until(first,last) OR is_sorted_until(first,last,pred)
 Complexity : Up to linear in the distance between first and last
+
+                                        Binary Search
+
+********************** lower_bound *************************
+Returns an iterator pointing to the first element in the range [first,last] which greater than or equal val
+auto it =lower_bound(first,last,val)   OR   auto it =lower_bound(first,last,val,pred)
+Complexity : log2(N) where N is the distance between first and last
+
+********************** upper_bound *************************
+Returns an iterator pointing to the first element in the range [first,last] which compares greater than val
+auto it = upper_bound(first,last,val)   OR   auto it = upper_bound(first,last,val,pred)
+Complexity : log2(N) where N is the distance between first and last
+
+********************** binary_search *************************
+Returns true if any element in the range [first,last) is equivalent to val, and false otherwise.
+binary_search(first,last,val)   OR  binary_search(first,last,val,pred)
+Complexity :  the distance between first and last
