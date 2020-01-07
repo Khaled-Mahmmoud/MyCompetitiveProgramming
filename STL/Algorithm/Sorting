@@ -25,9 +25,13 @@ in the entire range and are sorted in ascending order, while the remaining eleme
     
 Complexity :  N*log(M)  where N is this distance , and M is the distance between first and middle
 
-********************** partial_sort_copy *************************
-Copy and partially sort range
-Copies the smallest elements in the range [first,last) to [result_first,result_last), sorting the elements copied . 
-The number of elements copied is the same as the distance between result_first and result_last (unless this is more than the amount of 
-elements in [first,last]
+********************** is_sorted *************************
+Returns true if the range [first,last] is sorted into ascending order   
+is_sorted(first,last) OR is_sorted(first,last,pred)
+Complexity : Up to linear in the distance between first and last
 
+********************** is_sorted_until *************************
+Find first unsorted element in range
+Returns an iterator to the first element in the range [first,last] which does not follow an ascending order 
+is_sorted_until(first,last) OR is_sorted_until(first,last,pred)
+Complexity : Up to linear in the distance between first and last
