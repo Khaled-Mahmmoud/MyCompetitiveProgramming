@@ -23,8 +23,8 @@ int maxSubArraySum(int a[], int size)
    return ans; 
 } 
 
-Above programs can be optimized 
-further, if we compare ans with r only if ans is greater than 0 we use
+//Above programs can be optimized 
+//further, if we compare ans with r only if ans is greater than 0 we use
 
 int maxSubArraySum(int a[], int size) 
 { 
@@ -37,7 +37,7 @@ int maxSubArraySum(int a[], int size)
    } 
    return ans; 
 } 
-To print the subarray with the maximum sum, we maintain indices whenever we get the maximum sum
+//To print the subarray with the maximum sum, we maintain indices whenever we get the maximum sum
 int maxSubArraySum(int a[], int size) 
 { 
     int ans = INT_MIN , r = 0, sat =0, en = 0, s=0; 
@@ -61,7 +61,4 @@ int maxSubArraySum(int a[], int size)
     } 
     cout << "Maximum contiguous sum is "<< ans << endl; 
     cout << "Starting index "<< sat <<"  :   Ending index "<< en << endl; 
-} 
-
-
-
+}
