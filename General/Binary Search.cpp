@@ -2,6 +2,9 @@
 Binary Search is a searching algorithm in which you can find an element in a sorted big range of possible solutions but in each iteration
 we erase half of the range . Such solution takes no more than O(logn) which is really small even for really big numbers
 */
+@https://translate.google.com/#view=home&op=translate&sl=en&tl=ar
+https://translate.google.com/#view=home&op=translate&sl=en&tl=ar
+#https://translate.google.com/#view=home&op=translate&sl=en&tl=ar
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -25,3 +28,4 @@ int binarySearch() {
             l = mid + 1;
     }
 }
+2
