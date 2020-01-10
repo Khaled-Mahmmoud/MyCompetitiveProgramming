@@ -1,0 +1,3 @@
+#include<Bitset>
+bitset <object_size> object_name;  
+A bitset stores bits
