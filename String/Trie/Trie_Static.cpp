@@ -2,7 +2,7 @@
 // for insert OR search O(L) Where L length of a word
 #include <bits/stdc++.h>
 #define ll long long
-#define N 50000000
+#define N 100009
 using namespace std;
 void fast()
 {
