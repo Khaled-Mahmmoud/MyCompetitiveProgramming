@@ -13,6 +13,7 @@
 	- [List2](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/F2%20_%20List)
 	- [Forward List1](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/G1%20_%20Forward%20List)
 	- [Forward List2](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/G2%20_%20Forward%20List)
+	- [Bitset](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/M%20_%20Bitset)
 - [Associative Containers](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Containers)
 	- [Set & Multiset](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/J%20_%20Set%20%26%20Multiset)
 	- [Map & Multimap](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/H%20_%20Map%20%26%20Multimap)
