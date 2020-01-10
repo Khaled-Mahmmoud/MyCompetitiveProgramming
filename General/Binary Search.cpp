@@ -17,7 +17,7 @@ int binarySearch() {
 	int l = 0, r = 1e9;
 
     while (l < r) {
-        int mid = l + (r - l) / 2;
+        int mid = l + (r - l) >> 1;
 
         if (valid(mid))
             r = mid;
