@@ -22,16 +22,16 @@
 - [stack & queue & priority queue](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/L%20_%20stack%20%26%20queue%20%26%20priority%20queue)
 
 ### STL
--[Iterator](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/STL/Iterator)
--[Algorithm](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/STL/Algorithm)
+- [Iterator](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/STL/Iterator)
+- [Algorithm](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/STL/Algorithm)
 
 ### Two Pointers
 - [Two pointers .pdf](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Two%20Pointers/Two%20pointers%20.pdf)
 - [Largest Sum Contiguous](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Two%20Pointers/Largest%20Sum%20Contiguous)
 
 ### Number Theory
--[Count trailing zeroes N!](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Number%20Theory/Count%20trailing%20zeroes%20N!)
--[Number System](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Number%20System)
+- [Count trailing zeroes N!](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Number%20Theory/Count%20trailing%20zeroes%20N!)
+- [Number System](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Number%20System)
 
 ### Data Structures
 - [Sparse Table](https://github.com/OmarBazaraa/Competitive-Programming/tree/master/src/data_structures/sparse_table)
