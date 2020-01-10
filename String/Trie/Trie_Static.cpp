@@ -1,5 +1,5 @@
 // for implementation O(N * L) Where n is number of words and L is average length of strings
-// for insert OR search O(L) Where L length of a word
+// for insert OR search OR erase O(L) Where L length of a word
 #include <bits/stdc++.h>
 #define ll long long
 #define N 100009
