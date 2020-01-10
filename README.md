@@ -5,9 +5,9 @@
 - [Containers and Time Complexity](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/A%20_%20Introduction)     
 - [Iterators](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/B%20_%20Iterators)
 - [sequence Containers](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Containers)
+	- [Array](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/C%20_%20Array)
 	- [Vector1](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/D%20_%20Vector)
 	- [vector2](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/D2%20_%20vector)
-	- [Array](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/C%20_%20Array)
 	- [Deque](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/E%20_%20Deque)
 	- [List1](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/F1%20_%20List)
 	- [List2](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/F2%20_%20List)
@@ -22,8 +22,8 @@
 - [stack & queue & priority queue](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/L%20_%20stack%20%26%20queue%20%26%20priority%20queue)
 
 ### STL
-- [Iterator](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/STL/Iterator)
 - [Algorithm](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/STL/Algorithm)
+- [Iterator](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/STL/Iterator)
 
 ### Two Pointers
 - [Two pointers .pdf](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Two%20Pointers/Two%20pointers%20.pdf)
