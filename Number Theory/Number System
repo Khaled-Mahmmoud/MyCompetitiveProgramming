@@ -18,7 +18,7 @@ Representation                Base         numbers
 Binary                         2           0   1
 Octal                          8           0 1 2 3 4 5 6 7
 Decimal                        10          0 1 2 3 4 5 6 7 8 9
-Hexidecimal                    16          0 1 2 3 4 5 6 7 8 9 A B C D E F
+Hexadecimal                    16          0 1 2 3 4 5 6 7 8 9 A B C D E F
 
 How to convert a number from one base to another?
 
@@ -80,3 +80,21 @@ and continue
 1 * 8^1 + 2 * 8^0 +      2 * 8^-1 = 8+2+0.25 = 10.25
 
 (12.2)8 = (10.25)10
+
+************************ Decimal to Hexadecimal ***********************
+
+(720.046875)10 = ( ? )16
+
+16   |   720           ٨
+16   |   45     0      |
+16   |   2      D      |
+16   |   0      2      |
+(720)10 = (2D0)16
+
+0.046875*16  = 0.75     0    | 
+0.75*16      = 12.00    C    V
+
+Note : Keep multiplying the fractional part with 16 until decimal part .00 is obtained
+(.046875)10 = (.0C)16
+
+(720.0625)10 = ( 2D0.0C )16
