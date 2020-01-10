@@ -41,7 +41,7 @@ and continue
 (720)10 = (2D0)16
 
 0.046875 * 16  = 0.75     0    | 
-0.75*16      = 12.00    C    V
+0.75 * 16      = 12.00    C    V
 
 Note : Keep multiplying the fractional part with 16 until decimal part .00 is obtained
 (.046875)10 = (.0C)16
@@ -54,3 +54,7 @@ For (0.659)10 = (?)16
 0.704 *  16 = 11.264    B    |
 0.264 *  16 = 4.422     4    V
 and continue
+************************ Hexadecimal to Decimal ***********************
+(9FA.E6)16 = ( ? )10
+9 * 16^2 + F * 16^1 + A * 16^0 +     E * 16^-1 + 6 * 16^-2 = 57892.843
+(9FA.E6)16 = ( 57892.843 )10
