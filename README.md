@@ -20,12 +20,17 @@
 	- [Unordered_map & Unordered_multimap](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/I%20_%20Unordered_map%20%26%20Unordered_multimap)
 - [stack & queue & priority queue](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/L%20_%20stack%20%26%20queue%20%26%20priority%20queue)
 
-### General
-- [Binary Search](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Binary%20Search.cpp)
-- [Cumulative Sum.pdf](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Cumulative%20Sum.pdf)
-- [Cumulative Sum.cpp](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Cumulative%20Sum.cpp)
-- [Frequency Array](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Frequency%20Array)
-- [Two pointers .pdf](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Two%20pointers%20.pdf)
+### STL
+-[Algorithm](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/STL/Algorithm)
+-[Iterator](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/STL/Iterator)
+
+### Two Pointers
+- [Two pointers .pdf](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Two%20Pointers/Two%20pointers%20.pdf)
+- [Largest Sum Contiguous](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Two%20Pointers/Largest%20Sum%20Contiguous)
+
+### Number Theory
+-[Number System](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Number%20System)
+-[Count trailing zeroes N!](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Number%20Theory/Count%20trailing%20zeroes%20N!)
 
 ### Data Structures
 - [Sparse Table](https://github.com/OmarBazaraa/Competitive-Programming/tree/master/src/data_structures/sparse_table)
@@ -118,9 +123,12 @@
 - [Matrix Operations](https://github.com/OmarBazaraa/Competitive-Programming/tree/master/src/math)
 	- [Matrix Class](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/matrix.cpp)
 	- [Matrix Power](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/math/matrix_minified.cpp)
-
-### Geomerty
-Will be added soon...
+	
+### General
+- [Binary Search](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Binary%20Search.cpp)
+- [Cumulative Sum.pdf](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Cumulative%20Sum.pdf)
+- [Cumulative Sum.cpp](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Cumulative%20Sum.cpp)
+- [Frequency Array](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Frequency%20Array)
 
 ### Sorting Algorithms **<i>(comming soon)</i>**
 - Heap Sort
