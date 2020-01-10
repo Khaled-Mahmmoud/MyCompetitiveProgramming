@@ -14,7 +14,7 @@ dn-1 = Most significant bit (MSB)
 
 d-m = Least significant bit (LSB)
 
-Representation                Base         numbers
+Representation             Base/Radix        numbers
 Binary                         2           0   1
 Octal                          8           0 1 2 3 4 5 6 7
 Decimal                        10          0 1 2 3 4 5 6 7 8 9
