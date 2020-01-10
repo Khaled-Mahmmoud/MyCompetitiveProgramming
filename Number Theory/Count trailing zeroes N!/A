@@ -1,5 +1,5 @@
 Given an integer n, write a function that returns count of trailing zeroes in N!
-
+OR Given an integer N, the task is to find the number of trailing zeroes in the base 10 representation of the factorial of N
 Input: n = 5
 Output: 1 
 Factorial of 5 is 120 which has one trailing 0.
