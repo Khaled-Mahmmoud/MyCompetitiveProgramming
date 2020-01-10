@@ -1,8 +1,6 @@
 #include<vector>
 vector<object_type> v ( size_of_object , intial_value )
 vector<object_type> v = {2,4,5,9}
-10^7 ==>> 0,5
-10^8 ==>> 2,5
 ********************* Iterators *****************************
 v.begin()    || O(1) || Returns an iterator pointing to the first element 
 v.end()      || O(1) || Returns an iterator pointing to the last element 
