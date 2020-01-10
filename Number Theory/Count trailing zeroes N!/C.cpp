@@ -13,6 +13,7 @@ Output: 1
 observe it's 0 when n % 16 == 0
 Number of trailing zeroes would be the highest power of 16 in the factorial of N in base 10
 We know that 16 = 2^4. So, the highest power of 16 is equal to the highest power 2 in the factorial of N divided by 4
+n <= 1e18
 */
 void solve(ll n)
 {
@@ -33,6 +34,7 @@ Suppose, the base is 10 i.e., decimal then we’ll have to calculate the highest
 not easy to get highest power of 10 , so we get highest power of 10's prime factors 
 but 10 = 2 * 5 , so we answer is minimum between the highest power of 2 and the highest power of 5
 Hence, problem reduces to finding the highest power of B in N!
+n <= 1e18 & b <= 1e12
 codeforce problem link : https://codeforces.com/contest/1114/problem/C
 */
 
