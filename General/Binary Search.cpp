@@ -13,16 +13,16 @@ bool valid(int m) {
 }
 
 // Binary search on the minimum value fulfilling a certain criteria
-int binarySearch() {
-	int l = 0, r = 1e9;
-
-    while (l < r) {
-        int mid = l + (r - l) >> 1;
-
-        if (valid(mid))
-            r = mid;
-        else
-            l = mid + 1;
-    }
+int binarySearch() 
+{
+       int l = 0, r = 1e9;
+       while (l < r) 
+       {
+          int mid = l + (r - l) >> 1;
+          if (valid(mid))
+              r = mid;
+            else
+               l = mid + 1;
+      }
+      return l;
 }
-2
