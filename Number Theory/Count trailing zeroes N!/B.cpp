@@ -1,3 +1,4 @@
+/*
 Given a number n. The task is to find the smallest number whose factorial contains at least n trailing zeroes.
 Input : n = 1
 Output : 5 
@@ -15,6 +16,7 @@ Output : 5
 25! to 29! have 6 trailing zeroes
 
 We can notice that, the minimum value whose factorial contain n trailing zeroes is 5*n
+*/
 
 bool valid(ll mid)
 {
