@@ -4,12 +4,8 @@ ceil(2.3) = 3
 ceil(2.5) = 3
 ceil(2.8) = 3
 ceil(2)   = 2
-
-******************** Round ********************
-Returns the integral value that is nearest to x, with halfway cases rounded away from zero   O(1)
-round(2.3) = 2
-round(2.5) = 3            
-round(2.7) = 3   
+floor(-3.2)= -3
+floor(-5.5)= -5
 
 ******************** floor ********************
 Rounds x downward, returning the largest integral value that is not greater than x   O(1)
@@ -17,10 +13,34 @@ floor(2.3) = 2
 floor(2.5) = 2
 floor(2.8) = 2
 floor(3)   = 3
+floor(-3.2)= -4
+floor(-5.5)= -6
+
+******************** round/lround/llround ********************
+Returns the integral value that is nearest to x, with halfway cases rounded away from zero   O(1)
+round(2)   = 2
+round(2.3) = 2
+round(2.5) = 3            
+round(2.7) = 3   
+floor(-5.2)= -5
+floor(-5.5)= -6
+floor(-5.8)= -6
+
+round   ==>> int
+lround  ==>> long int
+llround ==>> long long int
+
+******************** trunc ********************
+Rounds x toward zero, returning the nearest integral value that is not larger in magnitude than x   O(1)
+trunc(2)   = 2
+trunc(2.3) = 2
+trunc(2.5) = 3            
+trunc(2.7) = 3 
+trunc(-3.4)= -3
+trucn(-2.9)= -2
 
 ******************** fmod ********************
 Returns the floating-point remainder of numer/denom (rounded towards zero)     O(1)
 fmod(a,b) a is Value of the quotient numerator , b is Value of the quotient denominator
 fmod(18.5,4.2)  = 1.7
 fmod(5.3,2)     = 1.3
-
