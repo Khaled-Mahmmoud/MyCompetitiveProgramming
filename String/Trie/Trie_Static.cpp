@@ -39,7 +39,7 @@ bool search(string s)
     }
     return en[v];
 }
-void erase(string s)
+void remove(string s)
 {
     int v=0;
     for(int i=0;i<s[i];i++)
