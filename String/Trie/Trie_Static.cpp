@@ -9,7 +9,7 @@ void fast()
     ios::sync_with_stdio(false);
     cin.tie(0);cout.tie(0);
 }
-int sz,disword;
+int sz,d;
 vector<int>en(N);vector<int>cnt(N);
 vector<vector<int>>node(N,vector<int>(27));
 void insert(string s)
@@ -24,7 +24,7 @@ void insert(string s)
         v=node[v][c];
     }
     cnt[v]++;
-    disword+=(++en[v]==1);
+    d+=(++en[v]==1);
 }
 bool search(string s)
 {
@@ -53,7 +53,7 @@ void erase(string s)
         v=nx;
     }
     cnt[v]--;
-    disword-=(--en[v]==0);
+    d-=(--en[v]==0);
 }
 int main()
 {
