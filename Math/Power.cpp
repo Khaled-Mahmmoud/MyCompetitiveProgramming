@@ -13,6 +13,21 @@ T power(T a, T b, T mod)
 
     return ans;
 }
+
+        OR
+
+template<class T>
+T power(T a, T b,T mod)
+{
+    if(!b)return a;
+    T t=power(a,b/2)%mod;
+    t=(t*t)%mod;
+    if(b&1)
+        return (a*t)%mod;
+    else 
+        return t;
+}
+
 //  O(log b)
 // int x=3,y=2;   cout<<power(x,y,1000);
 // ll a=2,b=3;    cout<<power(a,b,1000ll);
