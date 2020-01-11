@@ -1,9 +1,10 @@
 int power(int x, int y)
 {
-    if (y == 0)
+    if(!y)
         return 1;
-    else if (y % 2 == 0)
-        return power(x, y / 2) * power(x, y / 2);
-    else
-        return x * power(x, y / 2) * power(x, y / 2);
+    int t=power(x,y/2);
+    t*=t;
+    if(y&1)
+        return x*t;
+    return t;
 }
