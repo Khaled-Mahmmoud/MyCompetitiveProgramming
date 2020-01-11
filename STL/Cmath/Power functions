@@ -1,0 +1,7 @@
+********************** pow **********************
+Returns base raised to the power exponent:
+pow(7 , 3)        =   343.000000
+pow(4.73 , 12)    =   125410439.217423
+pow(32.01 , 1.54) =   208.036691
+Time complexity O(log b)
+
