@@ -12,6 +12,7 @@ void fast()
 int sz,d;
 vector<int>en(N);vector<int>cnt(N);
 vector<vector<int>>node(N,vector<int>(27));
+//                                     ^ OR 255 for all characters and digits
 void insert(string s)
 {
     int v=0;
@@ -19,7 +20,7 @@ void insert(string s)
     {
         cnt[v]++;
         int c=s[i]-'a';
-        if(!node[v][c])
+        if(!node[v][c]) // if 255 we put node[v][s[i]]
             node[v][c]=++sz;
         v=node[v][c];
     }
