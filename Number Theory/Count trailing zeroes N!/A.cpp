@@ -1,4 +1,15 @@
 /*
+Leading Zero :: A leading zero is any 0 digit that comes before the first nonzero digit in a number string in positional notation
+0070009 ==>> has 2 leading zero , 000402 has 3 leading zero
+
+Trailing Zeros :: are a sequence of 0 in the representation which has no non-zero digits that are less significan than the zero digit
+910034050000 ==>> The number has {4} trailing zeros . Note that there are 3 other zeros in the representation of the number 
+but they do not count as trailing zeros because there are other non-zero digits that are less significant 
+
+The number of trailing zeros in a non-zero base-b integer n equals the exponent of the highest power of b that divides n
+For example, 14000 has three trailing zeros and is therefore divisible by 1000 = 10^3
+
+/*
 Given an integer n, write a function that returns count of trailing zeroes in N!
 OR Given an integer N, the task is to find the number of trailing zeroes in the base 10 representation of the factorial of N
 Input: n = 5
