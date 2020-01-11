@@ -1,0 +1,5 @@
+******************** Round ********************
+Returns the integral value that is nearest to x, with halfway cases rounded away from zero
+round(2.3) = 2
+round(2.5) = 3
+round(2.7) = 3
