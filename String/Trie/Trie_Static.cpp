@@ -4,11 +4,6 @@
 #define ll long long
 #define N 100009
 using namespace std;
-void fast()
-{
-    ios::sync_with_stdio(false);
-    cin.tie(0);cout.tie(0);
-}
 int sz,d;
 vector<int>en(N);vector<int>cnt(N);
 vector<vector<int>>node(N,vector<int>(27));
@@ -58,7 +53,8 @@ void remove(string s)
 }
 int main()
 {
-    fast();
+    ios::sync_with_stdio(false);
+    cin.tie(0);cout.tie(0);
     int n,m;
     cin>>n>>m;
     string x;
@@ -67,7 +63,7 @@ int main()
         cin>>x;
         insert(x);
     }
-    erase(x);
+    remove(x);
     while(m--)
     {
         cin>>x;
