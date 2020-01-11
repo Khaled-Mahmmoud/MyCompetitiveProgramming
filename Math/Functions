@@ -1,5 +1,8 @@
-The function a(x) rounds the number x down to an integer, and the function b(x) rounds the number x up to an integer
-For example  a(3/2) = 1 and b(3/2) = 2
+                                                                               _   _
+The function |_ x _| rounds the number x down to an integer, and the function |  x  | rounds the number x up to an integer
+                                _   _
+For example  |_ 3/2 _| = 1 and | 3/2 | = 2 
+                  
 
 The functions min(x1, x2,..., xn) and max(x1, x2,..., xn) give the smallest and largest of values x1, x2,..., xn
 For example min(1,2,3) = 1 and max(1,2,3) = 3
