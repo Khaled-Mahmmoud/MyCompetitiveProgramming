@@ -34,7 +34,7 @@ for emplcace and emplace_hint May trigger a rehash (not included).
 st1.swap(st2)         || O(1) || Swap two container
 st.clear()  || Linear in size || Removes all elements , leaving the vector with a size of 0
 
-********************* Member functions *******************************
+********************* Member functions ***********************
 st1.operator=(st2) OR st1=st2|| Linear in size || Assigns new contents , replacing its current contents, and modifying its size   
 
 ********************* Buckets *******************************
@@ -60,3 +60,33 @@ Worst case: quadratic in container size.
 
 Unordered_multisets are containers that store elements , and where unordered_multiple elements 
 can have equivalent values and it has the some properties of unordered_set
+
+********************* Operations  *************************
+int cnt = st.count(val);
+Searches the container for elements equivalent to val and returns the number of matches
+Because all elements in a unordered_set container are unique, the function can only return 1 (if the element is found) or 0 (otherwise)
+Complexity : ( Average case ==>> constant ) & ( Worst case: linear in container size )
+
+auto it = st.find(val)
+Searches the container for an element equivalent to val and returns an iterator to it if found
+otherwise it returns an iterator to unordered_set::end
+Complexity : ( Average case ==>> constant ) & ( Worst case: linear in container size )
+
+                                     equal_range
+Returns the bounds of a range that includes all the elements in the container that compare equal to k
+but in unordered_set containers, where keys are unique, the range will include one element at most
+
+    unordered_multiset<string> myums = {"cow","pig","pig","chicken","pig","chicken"};
+    auto myrange = myums.equal_range("pig");
+
+    while ( myrange.first != myrange.second ) 
+    cout << " " << *myrange.first++;                // pig pig pig
+  
+    OR >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    
+    unordered_set<string> myums = {"cow","pig","pig","chicken","pig","chicken"};
+    auto myrange = myums.equal_range("pig");
+
+    while ( myrange.first != myrange.second ) 
+    cout << " " << *myrange.first++;                // pig 
+Complexity : ( Average case ==>> constant ) & ( Worst case: linear in container size )
