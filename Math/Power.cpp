@@ -1,10 +1,17 @@
-int power(int x, int y)
+template<class T>
+T power(T base, T exp, T mod)
 {
-    if(!y)
-        return 1;
-    int t=power(x,y/2);
-    t*=t;
-    if(y&1)
-        return x*t;
-    return t;
+    T ans = 1;
+    base %= mod;
+
+    while (exp) 
+    {
+        if (exp & 1) ans = (ans * base) % mod;
+        exp >>= 1;
+        base = (base * base) % mod;
+    }
+
+    return ans;
 }
+// int x=3,y=2;   cout<<power(x,y,1000);
+// ll a=2,b=3;    cout<<power(a,b,1000ll);
