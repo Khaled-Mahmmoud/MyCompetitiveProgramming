@@ -18,3 +18,9 @@ cbrt(8) = 2
 cbrt(27) = 3
 cbrt(43) = 3.5033
 Time complexity O(log x)
+
+********************** hypot **********************
+Compute hypotenuse :                       hypot(x,y)
+Returns the hypotenuse of a right-angled triangle whose legs are x and y
+hypot(3,4) = 5
+hypot(3,2) = 3.60555127
