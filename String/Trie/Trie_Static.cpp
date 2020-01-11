@@ -12,7 +12,7 @@ void fast()
 int sz,d;
 vector<int>en(N);vector<int>cnt(N);
 vector<vector<int>>node(N,vector<int>(27));
-//                                     ^ OR 255 for all characters and digits
+//                                     ^ OR 255 for all characters and digits and symbols
 void insert(string s)
 {
     int v=0;
