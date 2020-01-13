@@ -11,6 +11,7 @@ Input : arr[] = {10, 10, 10}
 Output : -1.
 */
 
+// O(n)
 #include <bits/stdc++.h>
 #define ll long long
 #define N 27
