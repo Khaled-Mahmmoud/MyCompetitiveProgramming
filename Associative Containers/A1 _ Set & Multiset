@@ -1,0 +1,34 @@
+Sets are containers that store unique elements following a specific order
+set is paradigm of red_back_tree
+#inlcude<set>
+set<object_type>object_name;
+********************* Iterators *****************************
+st.begin()    || O(1) || Returns an iterator pointing to the first element 
+st.end()      || O(1) || Returns an iterator pointing to the last element 
+st.rbegin()    || O(1) || Returns a reverse iterator pointing to the last element 
+st.rend()     || O(1) || Returns a reverse iterator pointing to the first element 
+st.cbegin()   || O(1) || Returns a const_iterator pointing to the first element 
+st.cend()     || O(1) || Returns a const_iterator pointing to the last element 
+st.crbegin()  || O(1) || Returns a const_reverse_iterator pointing to the last element 
+st.crend()    || O(1) || Returns a const_reverse_iterator pointing to the first element 
+********************* Capacity ********************************
+st.size()     || O(1) || Returns the number of elements 
+st.max_size() || O(1) || Returns the maximum number of elements that the container can hold
+st.empty()    || O(1) || Returns whether the container is empty 
+********************* Modifiers *******************************
+st.insert(val) O(log n)   OR 
+st.insert(iterator,val) O(log n) (faster) //iterator = m.begin()   OR 
+st1.insert(st2 first iterator,st2 last iterator) Complexity : number of elements inserted * log n
+
+st.erase(iterator) O(log n) OR st.erase(val) O(log n) OR 
+st.erase(first iterator , last iterator) Complexity : number of elements erased * log n
+
+
+st.emplace(val) || Insert a new element O(log n)   (faster)
+st.emplace_hint(iterator,val) || Insert a new element with a pointer hint O(log n) (faster than st.emplace)
+ 
+st1.swap(m2)         || O(1) || Swap two container
+st.clear()  || Linear in size || Removes all elements , leaving the vector with a size of 0
+
+Multisets are containers that store elements following a specific order, and where multiple elements can have equivalent values
+and it has the some properties of map
