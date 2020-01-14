@@ -4,10 +4,10 @@
 ### Containers
 - [Containers](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/Containers)     
 - [Iterators](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/B%20_%20Iterators)
-- [sequence Containers](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Containers/Sequence%20Containers)
+- [Sequence Containers](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Containers/Sequence%20Containers)
 	- [Array](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/Sequence%20Containers/A%20_%20Array)
 	- [Vector1](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/Sequence%20Containers/B1%20_%20Vector)
-	- [vector2](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/Sequence%20Containers/B2%20_%20vector)
+	- [Vector2](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/Sequence%20Containers/B2%20_%20vector)
 	- [Deque](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/Sequence%20Containers/C%20_%20Deque)
 	- [List1](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/Sequence%20Containers/D1%20_%20List)
 	- [List2](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/Sequence%20Containers/D2%20_%20List)
@@ -24,7 +24,7 @@
 	- [Unordered_map & Unordered_multimap1](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/Unordered%20Associative%20Containers/B1%20_%20Unordered_map%20%26%20Unordered_multimap)
 	- [Unordered_map & Unordered_multimap2](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/Unordered%20Associative%20Containers/B2%20_%20Unordered_map%20%26%20Unordered_multimap)
 - [Container adaptors](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/Container%20adaptors)
--[Bitset](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/Bitset)
+- [Bitset](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/Bitset)
 
 ### STL
 - [Algorithm](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/STL/Algorithm)
