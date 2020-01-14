@@ -1,0 +1,30 @@
+string s = "ksimuye"
+********************* Iterators *****************************
+s.begin()    || O(1) || Returns an iterator pointing to the first element 
+s.end()      || O(1) || Returns an iterator pointing to the last element 
+s.rbegin()   || O(1) || Returns a reverse iterator pointing to the last element 
+s.rend()     || O(1) || Returns a reverse iterator pointing to the first element 
+s.cbegin()   || O(1) || Returns a const_iterator pointing to the first element 
+s.cend()     || O(1) || Returns a const_iterator pointing to the last element 
+s.crbegin()  || O(1) || Returns a const_reverse_iterator pointing to the last element 
+s.crend()    || O(1) || Returns a const_reverse_iterator pointing to the first element 
+
+********************* Element Access **************************
+s.front()    || O(1) || Returns a reference pointing to the first element 
+s.back()     || O(1) || Returns a reference pointing to the last element 
+s.at(pos)    || O(1) || Returns a reference to the element at position pos (O-Indexed)
+operator[pos]|| O(1) || Returns a reference to the element at position pos (O-Indexed)
+
+********************* Capacity ********************************
+s.size()     || O(1) || Return length of string 
+s.size()     || O(1) || Return length of string 
+s.max_size() || O(1) || Returns the maximum number of characters that the string can hold
+s.empty()    || O(1) || Returns whether the string is empty 
+s.clear()    || O(1) || Clear string
+s.resize(n)  ||      || Change size of string to n size
+{
+   If n is smaller than the current string size, the content is reduced to its first n elements, removing those beyond
+   If n is greater than the current string size, the content is expanded by inserting at the end as many elements as
+   needed to reach a size of n (charater inserted is empty character)
+   Complexity : linear in the new string length 
+}
