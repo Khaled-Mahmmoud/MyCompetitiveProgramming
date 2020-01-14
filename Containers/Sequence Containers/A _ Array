@@ -1,0 +1,28 @@
+#include<array>
+array<object_type,size_of_object> a
+array<object_type,size_of_object> a={2,5,6,..size}
+10^6 ==>> 4
+10^5 ==>> 0.5
+********************* Iterators *****************************
+a.begin()    || O(1) || Returns an iterator pointing to the first element in the array
+a.end()      || O(1) || Returns an iterator pointing to the last element in the array
+a.rbegin()   || O(1) || Returns a reverse iterator pointing to the last element in the array
+a.rend()     || O(1) || Returns a reverse iterator pointing to the first element in the array 
+a.cbegin()   || O(1) || Returns a const_iterator pointing to the first element in the array
+a.cend()     || O(1) || Returns a const_iterator pointing to the last element in the array
+a.crbegin()  || O(1) || Returns a const_reverse_iterator pointing to the last element in the array
+a.crend()    || O(1) || Returns a const_reverse_iterator pointing to the first element in the array
+********************* Element Access **************************
+v.front()    || O(1) || Returns a reference pointing to the first element in the vector
+v.back()     || O(1) || Returns a reference pointing to the last element in the vector
+v.at(pos)    || O(1) || Returns a reference to the element at position pos in the vector (O-Indexed)
+operator[pos]|| O(1) || Returns a reference to the element at position pos in the vector (O-Indexed)
+v.data()     || O(1) || Returns a pointer to the first element in the vector
+********************* Capacity ********************************
+v.size()     || O(1) || Returns the number of elements in the vector
+v.max_size() || O(1) || Returns the maximum number of elements that the vector can hold
+v.empty()    || O(1) || Returns whether the vector is empty 
+********************* Modifiers *******************************
+v1.swap(v2)         || O(1) || Sawp two vectors
+swap(v[0],v[2])     || O(1) || Sawp two elements
+a.fill(val)   || Linear on the size of array || Fill array with value val
