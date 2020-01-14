@@ -59,4 +59,6 @@ if (abs(a-b) < 1e-9) {
 
 
 to print a floating point numbers with n digits after the decimal point , we use
-cout<< fixed << showpoint << setprecision(n);
+
+#include<iomanip>
+cout<< fixed << showpoint << setprecision(n) ;
