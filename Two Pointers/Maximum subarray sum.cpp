@@ -43,8 +43,8 @@ int maxSubArraySum(int a[], int size)
    for (int i = 0; i < size ; i++) 
    { 
        r += a[i]; 
-       if (r < 0) r = 0; 
-       if (ans < r) ans = r; 
+       if (ans < r) ans = r;
+       if (r < 0) r = 0;  
    } 
    return ans; 
 } 
