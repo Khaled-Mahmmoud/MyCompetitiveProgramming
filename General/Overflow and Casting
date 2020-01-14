@@ -1,4 +1,4 @@
-The most used integer type in competitive programming is int, which is a 32-bit type with a value range of −2 * 10^31 . . . (2 * 10^31)−1 
+The most used integer type in competitive programming is int, which is a 32-bit type with a value range of −2 * 10^31 . . .(2 * 10^31)−1 
 OR about −2 * 109 . . . 2 * 109
 If the type int is not enough, the 64-bit type long long can be used. It has a value range of −2 * 10^63 . . . (2 * 10^63)-1
 OR about −9 * 10^18 . . . 9 * 10^18
@@ -11,6 +11,16 @@ int (op) long long = long long
 
 op could be + (addition) , - (subtraction) , * (multiplication) , / (division)
 
+***** Overflow and casting ****
+Concept of overflow:
+ 11111111
++
+ 00000001
+=
+100000000
+
+>>> Overflow happens because of the limited capacity of our data type
+
 
 A common mistake when using the type long long is that the type int is still used somewhere in the code
 For example, the following code contains a subtle-error
@@ -19,6 +29,10 @@ int a = 123456789;
 long long b = a*a;
 cout << b << "\n"; // -1757895751
 
-Even though the variable b is of type long long, both numbers in the expression a*a are of type int and the result is also of type int Because of this, the
-variable b will contain a wrong result
+Even though the variable b is of type long long, both numbers in the expression a * a are of type int and the result is also of type int 
+Because of this, the variable b will contain a wrong result (Casting)
 The problem can be solved by changing the type of a to long long or by changing the expression to (long long)a*a
+
+int a = 1e9 , b = 1e9 ;
+cout<<a * b ;             // -148668157543         // Overflow 
+long long c = a*b ;       // c = -148668157543     // Casting
