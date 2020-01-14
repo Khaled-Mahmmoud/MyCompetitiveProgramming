@@ -13,7 +13,7 @@ to solve :: O(n)
 */
 int maxSubArraySum(int a[], int size) 
 { 
-    int ans = INT_MIN, r = 0; 
+    int ans = INT_MIN, r = 0;            // if ans should be greater than 0 we initialized ans =0 
     for (int i = 0; i < size; i++) 
     { 
         r += a[i]; 
@@ -34,20 +34,6 @@ int maxSubArraySum(int a[], int size)
    return ans; 
 } 
 
-//Above programs can be optimized 
-//further, if we compare ans with r only if ans is greater than 0 we use
-
-int maxSubArraySum(int a[], int size) 
-{ 
-   int ans = 0, r = 0; 
-   for (int i = 0; i < size ; i++) 
-   { 
-       r += a[i]; 
-       if (ans < r) ans = r;
-       if (r < 0) r = 0;  
-   } 
-   return ans; 
-} 
 //To print the subarray with the maximum sum, we maintain indices whenever we get the maximum sum
 int maxSubArraySum(int a[], int size) 
 { 
