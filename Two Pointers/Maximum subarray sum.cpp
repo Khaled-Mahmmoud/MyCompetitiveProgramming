@@ -16,7 +16,7 @@ int maxSubArraySum(int a[], int size)
     int ans = INT_MIN, r = 0; 
     for (int i = 0; i < size; i++) 
     { 
-        r = r + a[i]; 
+        r += a[i]; 
         if (ans < r) ans = r; 
         if (r < 0) r = 0; 
     } 
@@ -42,9 +42,9 @@ int maxSubArraySum(int a[], int size)
    int ans = 0, r = 0; 
    for (int i = 0; i < size ; i++) 
    { 
-       r = r + a[i]; 
+       r += a[i]; 
        if (r < 0) r = 0; 
-       else if (ans < r) ans = r; 
+       if (ans < r) ans = r; 
    } 
    return ans; 
 } 
