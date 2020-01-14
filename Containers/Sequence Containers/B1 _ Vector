@@ -1,6 +1,7 @@
 #include<vector>
 vector<object_type> v ( size_of_object , intial_value )
-vector<object_type> v = {2,4,5,9}
+vector<int> v (10,5) ;
+vector<int> v = {2,4,5,9} ;
 ********************* Iterators *****************************
 v.begin()    || O(1) || Returns an iterator pointing to the first element 
 v.end()      || O(1) || Returns an iterator pointing to the last element 
