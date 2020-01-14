@@ -35,4 +35,4 @@ Container adaptors provide a different interface for sequential containers
 for Associative container(map and unordered_map) supported random access (at,[])
 
 static memory allocation ==>> fixed size ==>>  int a[10]
-dynamic memory allocation ==>> size varies ==>>  stack , queue
+dynamic memory allocation ==>> size varies ==>>  stack , queue , vector , deque
