@@ -1,0 +1,41 @@
+It is almost never a good idea to use a self-made sorting algorithm in a contest
+because there are good implementations available in programming languages
+For example, the C++ standard library contains the function sort that can be easily used for sorting arrays and other data structures
+There are many benefits in using a library function. First, it saves time because there is no need to implement the function
+Second, the library implementation is certainly correct and efficient: it is not probable that a self-made sorting function would 
+be better
+In this section we will see how to use the C++ sort function. The following code sorts a vector in increasing order
+vector<int> v = {4,2,5,3,5,8,3};
+sort(v.begin(),v.end());
+After the sorting, the contents of the vector will be [2,3,3,4,5,5,8]
+a reverse order is possible as follows:
+sort(v.rbegin(),v.rend());          OR       sort(v.begin(),v.end(),greater<int>())
+An ordinary array can be sorted as follows:
+sort(t,t+n);   where n is the size of array
+
+The following code sorts the string s:
+string s = "monkey";
+sort(s.begin(), s.end());
+
+Sorting a string means that the characters of the string are sorted. For example, the string ”monkey” becomes ”ekmnoy”
+
+******************* Comparison operators *******************
+The function sort requires that a comparison operator is defined for the data type of the elements to be sorted
+When sorting, this operator will be used whenever it is necessary to find out the order of two elements
+Most C++ data types have a built-in comparison operator, and elements of those types can be sorted automatically
+For example, numbers are sorted according to their values and strings are sorted in alphabetical order
+
+Pairs (pair) are sorted primarily according to their first elements (first).
+However, if the first elements of two pairs are equal, they are sorted according to
+their second elements (second)
+
+vector<pair<int,int>> v;
+v.push_back({1,5});
+v.push_back({2,3});
+v.push_back({1,2});
+sort(v.begin(), v.end());
+
+After this, the order of the pairs is (1,2), (1,5) and (2,3).
+
+In a similar way, tuples (tuple) are sorted primarily by the first element,
+secondarily by the second element, etc.:
