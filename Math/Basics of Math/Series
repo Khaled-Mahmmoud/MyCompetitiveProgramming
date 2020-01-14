@@ -24,7 +24,9 @@ and solving the equation
 S*r − S = b*r − a
 
 A special case of a sum of a geometric progression is the formula
-1 + 2 + 4 + 8 +...+ 2^(n-1) = 2^n -1 
+  1   +   2   +   4   +  8   + ... + 2^(n-1) = 2^n -1 
+2^(0) + 2^(1) + 2^(2) +2^(3) + ... + 2^(n-1) = 2^n -1
+
 Assume we have sum of this geometric (k) , how to get n
 k = 2^n - 1
 k + 1 = 2^n   
