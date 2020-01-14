@@ -51,13 +51,29 @@ suggests,they can randomly access any element inside the container. They are the
 advance(itr,5);  // move itr forward 5 steps . equal itr+=5
 Complixty : Constant for random-access iterators. Otherwise, linear in n
 
-********************** Containers **********************
-Sequence Containers
-1-array   2-vector   3-deque   4-list   5-forward list
-Associative Containers
-1-map    2-multimap    3-set    4-multiset
-Unordered Associative Containers
-1-unordered_map    2-unordered_multimap    3-unordered_set    4-unordered_multiset
+/v/v/v/v/v/v/v/v/v/v/v/ Containers /v/v/v/v/v/v/v/v/v/v/v/v/
+
+********* Sequence Containers *********
+
+1- array            Static contiguous array
+2- vector           Dynamic contiguous array
+3- deque            Double-ended queue
+4- list             Doubly-linked list
+5- forward list     Singly-linked list
+
+********* Associative Containers *********
+
+1- map              Collection of key-value pairs, sorted by keys, keys are unique
+2- multimap         Collection of key-value pairs, sorted by keys, keys are multi
+3- set              Collection of unique keys, sorted by keys
+4- multiset         Collection of multi keys, sorted by keys
+
+********* Unordered Associative Containers *********
+1- unordered_map    2- unordered_multimap    3- unordered_set    4- unordered_multiset
+********* Container Adaptors *********
+1- stack  2- queue  3- priority_queue
+
+
 for Associative container(map and unordered_map) supported random access (at,[])
 
 static memory allocation ==>> fixed size ==>>  int a[10]
