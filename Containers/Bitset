@@ -69,6 +69,13 @@ Returns an unsigned long long with the integer value that has the same bits set 
   cout << foo << " as an integer is: " << foo.to_ullong() << '\n';   // O(n)
   // 1111  as an iteger is: 15
 
+
+    bitset<8>bs;
+    int x=10;
+    bs=x;
+    cout<<bs;          00001010
+    
+    
 ********************* applicable operators *****************************
 
   std::bitset<4> foo (std::string("1001"));
