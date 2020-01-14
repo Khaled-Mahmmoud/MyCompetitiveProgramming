@@ -1,5 +1,16 @@
-// Write an efficient program to find the sum of contiguous subarray within a one-dimensional array of numbers which has the largest sum
-// O(n)
+/*
+Write an efficient program to find the sum of contiguous subarray within a one-dimensional array of numbers which has the largest sum
+
+n = 5
+6 -3 2 -1 5
+ans = 6
+
+n = 4
+-1 -2 -3 -4
+ans = -1
+
+to solve :: O(n)
+*/
 int maxSubArraySum(int a[], int size) 
 { 
     int ans = INT_MIN, r = 0; 
