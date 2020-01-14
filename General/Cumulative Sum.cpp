@@ -8,9 +8,7 @@ Complexity:
          One-dimensional array: O(n)
          Two-dimensional array: O(n*m)
 2) Answering each query: O(1)
-
-Prerequisites
-None                 
+                
 */
 
 //Building one-dimensional prefix sum array and printing the prefix sum between to indices for each query
