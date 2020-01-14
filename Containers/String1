@@ -29,7 +29,7 @@ s.resize(n)  ||      || Change size of string to n size
    Complexity : linear in the new string length 
 }
 
-********************* Modifiers *******************************
+*************************** Modifiers ***************************
 
 assign
 Assigns a new value to the string , replacing its current contents
@@ -62,5 +62,3 @@ int main ()
   return 0;
 }
 Complexity : Linear on initial + final sizes
-
-
