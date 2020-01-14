@@ -19,12 +19,6 @@ sort(s.begin(), s.end());
 
 Sorting a string means that the characters of the string are sorted. For example, the string ”monkey” becomes ”ekmnoy”
 
-******************* Comparison operators *******************
-The function sort requires that a comparison operator is defined for the data type of the elements to be sorted
-When sorting, this operator will be used whenever it is necessary to find out the order of two elements
-Most C++ data types have a built-in comparison operator, and elements of those types can be sorted automatically
-For example, numbers are sorted according to their values and strings are sorted in alphabetical order
-
 Pairs (pair) are sorted primarily according to their first elements (first).
 However, if the first elements of two pairs are equal, they are sorted according to
 their second elements (second)
@@ -45,3 +39,15 @@ v.push_back(make_tuple(1,5,3));
 v.push_back(make_tuple(2,1,3));
 sort(v.begin(), v.end());
 After this, the order of the tuples is (1,5,3), (2,1,3) and (2,1,4)
+
+******************* Comparison functions *******************
+It is also possible to give an external comparison function to the sort function
+as a callback function. For example, the following comparison function sorts
+strings primarily by length and secondarily by alphabetical order
+
+bool pred(string a, string b) {
+if (a.size() != b.size()) return a.size() < b.size();
+return a < b;
+}
+Now a vector of strings can be sorted as follows:
+sort(v.begin(), v.end(), pred);
