@@ -13,7 +13,7 @@ Complexity:
 
 //Building one-dimensional prefix sum array and printing the prefix sum between to indices for each query
     int n;cin>>n;
-    vector<int>v(n),prefix_sum(n);
+    vector<int>v(n),prefix_sum(n+1);
     for(int i=0;i<n;i++)cin>>v[i];
     for(int i=1;i<=n;i++)prefix_sum[i]=prefix_sum[i-1]+v[i-1];
     int q;cin>>q;
