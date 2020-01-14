@@ -1,0 +1,51 @@
+#include<list>
+list<object_type> object_name ;
+list<object_type> object_name (size);
+list<object_type> object_name = {2,3,5,1};
+********************* Iterators *****************************
+l.begin()    || O(1) || Returns an iterator pointing to the first element in the list
+l.end()      || O(1) || Returns an iterator pointing to the last element in the list
+l.rbegin()   || O(1) || Returns a reverse iterator pointing to the last element in the list
+l.rend()     || O(1) || Returns a reverse iterator pointing to the first element in the list 
+l.cbegin()   || O(1) || Returns a const_iterator pointing to the first element in the list
+l.cend()     || O(1) || Returns a const_iterator pointing to the last element in the list
+l.crbegin()  || O(1) || Returns a const_reverse_iterator pointing to the last element in the list
+l.crend()    || O(1) || Returns a const_reverse_iterator pointing to the first element in the list
+********************* Element Access **************************
+l.front()    || O(1) || Returns a reference pointing to the first element in the list
+l.back()     || O(1) || Returns a reference pointing to the last element in the list
+********************* Capacity ********************************
+l.size()     || O(1) || Returns the number of elements in the list
+l.max_size() || O(1) || Returns the maximum number of elements that the list can hold
+l.empty()    || O(1) || Returns whether the list is empty 
+l.resize(n,val)||    || Change size of list to n size , val: It is a value which is to be inserted in a newly constructed space
+{
+   If n is smaller than the current container size, the content is reduced to its first n elements, removing those beyond
+   If n is greater than the current container size, the content is expanded by inserting at the end as many elements as
+   needed to reach a size of n
+   Complexity : Linear on the number of elements inserted / erased  plus up to linear in the size 
+}
+********************* Modifiers *******************************
+l.assign(n,val) OR l1.assign(l2 first iterator ,l2 last iterator)
+Complexity : Linear on initial + final sizes
+
+l.insert(iterator,const val) OR l.insert(iterator,n,const val) OR l1.insert(l1 iterator,l2 first iterator,l2 last iterator)
+Complexity : Linear on the number of elements inserted 
+
+l.erase(iterator) //O(1) OR l.erase(first iterator , last iterator)
+Complexity : Linear on the number of elements erased 
+
+l.emplace(iterator,const val) || Insert a new element at position of iterator (faster)
+Complexity : Constant
+
+l.push_back(const val)    || O(1) || Add element at the end of the list
+l.push_front(const val)   || O(1) || Add element at the begin of the list
+l.emplace_back(const val) || O(1) || Add element at the end of the list  (faster)
+l.emplace_front(const val)|| O(1) || Add element at the begin of the list    (faster)
+l.pop_back()              || O(1) || Delete the last element of the list
+l.pop_front()             || O(1) || Delete the first element of the list
+l1.swap(l2)               || O(1) || Sawp two lists
+swap(l[0],l[2])           || O(1) || Sawp two elements
+l.clear()            || Linear in size || Removes all elements from the list , leaving the list with a size of 0
+********************* Member functions *******************************
+l1.operator=(l2) || Linear in size (v1+v2) || Assigns new contents , replacing its current contents, and modifying its size   
