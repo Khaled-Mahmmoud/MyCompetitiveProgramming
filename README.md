@@ -138,12 +138,6 @@
 - [Cumulative Sum.cpp](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Cumulative%20Sum.cpp)
 - [Frequency Array](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Frequency%20Array)
 
-### Sorting Algorithms **<i>(comming soon)</i>**
-- Heap Sort
-- Merge Sort
-- Quick Sort
-- Radix Sort
-
 ### Other Algorithms
 - [K-th Order Statistic](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/others/kth_order_statistic.cpp)
 - [Longest Increasing Sub-sequence (LIS)](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/src/others/others.cpp)
