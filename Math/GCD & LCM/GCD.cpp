@@ -34,6 +34,10 @@ a          b          a-b         b-a
 2         4                       2
 2         2
 gcd is 2 because a == b
+
+Below is a recursive function to evaluate gcd using Euclidean’s algorithm
+
+O(log min(a,b))
 */
 #include <bits/stdc++.h>
 #define ll long long
