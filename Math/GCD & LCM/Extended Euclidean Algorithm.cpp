@@ -1,6 +1,7 @@
+/*
 Extended Euclidean algorithm also finds integer coefficients x and y such that
   a * x + b * y = gcd(a, b) 
-  /*
+  
 Input: a = 30, b = 20
 Output: gcd = 10
         x = 1, y = -1
