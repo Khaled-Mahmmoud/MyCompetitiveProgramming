@@ -4,8 +4,8 @@ Tutorial
 We will show that if some interesting nonempty subarray exists, then also exists some interesting subarray of length 2
 
 Therefore, the solution is as follows: 
-for each i from 1 to n−1 check if |a(i+1) − a(i)| ≥ 2 holds. If this is true for some i, we have found an interesting subarray of length 2
-else such subarray doesn't exist.
+for each i from 1 to n−1 check if |a(i+1) − a(i)| ≥ 2 holds. If this is true for some i,
+we have found an interesting subarray of length 2 else such subarray doesn't exist
 */
 #include <bits/stdc++.h>
 #define ll long long
