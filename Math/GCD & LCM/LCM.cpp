@@ -21,3 +21,4 @@ int main()
     cout<<lcm(a,b);
     return 0;
 }
+//  GCD(LCM (x, y), LCM (x, z)) = LCM(x, GCD(y, z))
