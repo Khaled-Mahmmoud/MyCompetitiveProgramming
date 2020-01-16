@@ -6,7 +6,7 @@ Output : 24
 We know
 LCM = a*b / gcd(a,b)
 The above relation only holds for two numbers
-LCM = a*b*c / gcd(a,b,c)
+LCM != a*b*c / gcd(a,b,c)
 */
 #include <bits/stdc++.h>
 using namespace std;
