@@ -1,4 +1,31 @@
 // GCD (Greatest Common Divisor) or HCF (Highest Common Factor)
+/*
+we express the 2 numbers in form of : m = qn + r 
+find gcd of 190 , 34
+190 = 5 (34) + 20
+34 = 1 (20) + 14
+20 = 1 (14) + 6
+14 = 2 (6) + 2
+6 = 3 (2) + 0
+2 is GCD of 190 , 34
+we have another way to find gcd of 2 numbers called successive difference
+a          b          a-b         b-a
+144       166                     22
+144       22          122
+122       22          100
+100       22          78
+78        22          56
+56        22          34
+34        22          12
+12        22                      10
+12        10          2
+2         10                      8
+2         8                       6
+2         6                       4
+2         4                       2
+2         2
+gcd is 2 because a == b
+*/
 #include <bits/stdc++.h>
 #define ll long long
 #define N 50000000
