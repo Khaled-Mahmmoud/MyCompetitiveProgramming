@@ -1,5 +1,14 @@
 // GCD (Greatest Common Divisor) or HCF (Highest Common Factor)
 /*
+GCD of two numbers is the largest number that divides both of them . A simple way to find GCD is to factorize both numbers 
+and multiply common factors
+36 = 2 * 2 * 3 * 3
+60 = 2 * 2 * 3 * 5
+
+gcd = Multiplication of common factors
+    = 2 * 2 * 3
+    = 12
+
 we express the 2 numbers in form of : m = qn + r 
 find gcd of 190 , 34
 190 = 5 (34) + 20
