@@ -17,7 +17,7 @@ operator[pos]|| O(1) || Returns a reference to the element at position pos (O-In
 
 ********************* Capacity ********************************
 s.size()     || O(1) || Return length of string 
-s.size()     || O(1) || Return length of string 
+s.length()   || O(1) || Return length of string 
 s.max_size() || O(1) || Returns the maximum number of characters that the string can hold
 s.empty()    || O(1) || Returns whether the string is empty 
 s.clear()    || O(1) || Clear string
