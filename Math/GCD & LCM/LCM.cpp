@@ -21,4 +21,5 @@ int main()
     cout<<lcm(a,b);
     return 0;
 }
-//  GCD(LCM (x, y), LCM (x, z)) = LCM(x, GCD(y, z))
+//           GCD(LCM (x, y), LCM (x, z)) = LCM(x, GCD(y, z))
+//gengeral   GCD(f(x,y),f(x,z)) = f(x,GCD(y,z))   where f is fuction
