@@ -6,7 +6,7 @@ void primeFactors(int n)
         cout << 2 << " ";  
         n >> = 1;  
     }
-    for (int i = 3; i*i <= n; i = i + 2)  
+    for (int i = 3; i*i <= n; i += 2)  
     {  
         while (!(n % i))  
         {  
