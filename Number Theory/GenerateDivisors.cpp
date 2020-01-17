@@ -26,6 +26,9 @@ vector<int> divs[N];
  * After calling this function, "divs[i]" will contains all the divisors of integer "i".
  *
  * Complexity: O(n.log(n))
+ for this code only
+ n=10^5 -->> 2s
+ n=10^6 -->> 19s
  */
 void generateDivisors(int n) {
     for (int i = 1; i <= n; ++i)
