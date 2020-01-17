@@ -1,8 +1,6 @@
 // prime numbers : numbers which are only divisible by themselves and one
-#include <bits/stdc++.h>
-#define ll long long
-#define N 50000000
-using namespace std;
+// Complexity: O(sqrt(n))
+
 bool isprime(int n)
 {
      if (n < 2)
