@@ -24,8 +24,7 @@ void solve(ll n)
     }
     cout<<cnt/4;
 }
-
-Time Complexity : O(log2(n))
+// Time Complexity : O(log2(n))
 /*
 Given two positive integers B and N . The task is to find the number of trailing zeroes in b-ary (base B) representation of N!
 6! = (720)10 = (880)9 = (246)7
