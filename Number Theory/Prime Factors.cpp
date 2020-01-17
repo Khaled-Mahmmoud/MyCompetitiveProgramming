@@ -1,12 +1,12 @@
 // O(sqrt(n))
 void primeFactors(int n)  
 {  
-    while (!(n & 2))  
+    while (!(n & 1))  
     {  
         cout << 2 << " ";  
-        n /= 2;  
+        n >> = 1;  
     }
-    for (int i = 3; i <= sqrt(n); i = i + 2)  
+    for (int i = 3; i*i <= n; i = i + 2)  
     {  
         while (!(n % i))  
         {  
@@ -14,7 +14,7 @@ void primeFactors(int n)
             n /= i;  
         }  
     }    
-    if (n > 2)  
+    if (n > 1)  
         cout << n << " ";  
 } 
 // O(log(n))
