@@ -50,10 +50,10 @@ ll solve(ll n,ll p)
 void primefactors(ll n)
 {
     ll cnt=0;
-    while(!(n%2))
+    while(!(n & 1))
     {
         cnt++;
-        n/=2;
+        n>>=1;
     }
     if(cnt)
     v.push_back({2,cnt});
@@ -68,7 +68,7 @@ void primefactors(ll n)
         if(cnt)
         v.push_back({i,cnt});
     }
-    if(n>2)
+    if(n>1)
     v.push_back({n,1});
 }
 int main()
