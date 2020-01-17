@@ -35,3 +35,4 @@ void solve()
     }
     cout<<l;
 }
+Time Complexity : O( log2(n) * log5(n) )
