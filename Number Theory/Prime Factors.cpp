@@ -20,7 +20,7 @@ void primeFactors(int n)
 
 
 // using Sieve of Eratosthenes
-// O(n)
+// O(n.log(log(n)))
 #define N 10000009
 vector<int>spf(N);
 void sieve()
