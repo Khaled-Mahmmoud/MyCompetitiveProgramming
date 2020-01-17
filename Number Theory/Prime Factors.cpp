@@ -32,12 +32,10 @@ void sieve()
         spf[i] = 2;
     
     for(int i=3 ; i*i<=N ; i+=2)
-    {
         if(spf[i]==i)
             for(int j=i*i;j<N;j+=i)
               if(spf[j]==j)
                 spf[j]=i;
-    }
 } 
 
 // O(log(n))
