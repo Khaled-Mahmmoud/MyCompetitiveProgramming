@@ -1,7 +1,7 @@
 /*
 you are given an array of n integers
-Your task is to calculate the minimum number of integers you need to remove so that the greatest common divisor of the remaining integers 
-is bigger than that of all integers
+Your task is to calculate the minimum number of integers you need to remove so that the greatest common divisor of
+the remaining integers is bigger than that of all integers
 codeforces problem link : https://codeforces.com/problemset/problem/1034/A
 
 Solution 
