@@ -37,3 +37,30 @@ void generateDivisors(int n) {
 }
 
 // =====================================================================================
+/*
+Given an array of integers and you have to find the index of the number witch has the maximum number of divisors, 
+if there many answers print the smallest index
+N <= 10^6
+a[i] <= 10^6
+*/
+#include <bits/stdc++.h>
+#define ll long long
+#define N  1000000
+using namespace std;
+vector<int>d(N);
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(0);cout.tie(0);
+    for (int i = 1; i < N; ++i)
+        for (int j = i; j < N; j += i)
+            d[j]++;
+    int n,x,idx=0,mx=0;cin>>n;
+    for(int i=1;i<=n;i++)
+    {
+        cin>>x;
+        if(mx<d[x]){mx=d[x];idx=i;}
+    }
+    cout<<idx;
+    return 0;
+}
