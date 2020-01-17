@@ -1,7 +1,7 @@
 // O(sqrt(n))
 void primeFactors(int n)  
 {  
-    while (!(n % 2))  
+    while (!(n & 2))  
     {  
         cout << 2 << " ";  
         n /= 2;  
@@ -24,7 +24,7 @@ vector<int>spf(N);
 void sieve()
 {
     for(int i=0;i<N;i++)
-        if(i%2)spf[i]=i;else spf[i]=2;
+        if(i & 2)spf[i]=i;else spf[i]=2;
     for(int i=3;i*i<N;i+=2)
     {
         if(spf[i]==i)
