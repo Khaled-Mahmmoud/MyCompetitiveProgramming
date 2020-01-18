@@ -28,51 +28,88 @@ level-order traversal : A B E C D F
              
 */
 
-void preorder (node* p)
+#include <bits/stdc++.h>
+using namespace std;
+struct node
 {
-    if(p != nullptr)
+    int   item;
+    node* left;
+    node* right;
+};
+class BST
+{
+    node* root;
+public:
+    BST()
     {
-        cout<<p->item;
-        preorder(p->left);
-        preorder(p->right);
+        root=nullptr;
     }
-}
-
-void inorder (node* p)
-{
-    if(p != nullptr)
+    ~BST()
     {
-        inorder(p->left);
-        cout<<p->item;
-        inorder(p->right);
+        clear(root);
     }
-}
-
-void postorder (node* p)
-{
-    if(p != nullptr)
+    void preordertraversal()
     {
-        postorder(p->left);
-        postorder(p->right);
-        cout<<p->item;
+        preorder(root);
     }
-}
-
-void levelorder (node* p)
-{
-    if(p != nullptr)
+    void inordertraversal()
     {
-        queue<node*>q;
-        q.push_back(p);
-        while(!q.empty())
+        inorder(root);
+    }
+    void postordertraversal()
+    {
+        postorder(root);
+    }
+    void levelordertraversal()
+    {
+        levelorder(root);
+    }
+    
+private:
+    void preorder(node* p)
+    {
+        if(p!=nullptr)
         {
-            node* cur=q.front();
-            cout<<cur->item;
-            if(cur->left!=nullptr)
-               q.push_back(cur->left);
-            if(cur->right!=nullptr)
-               q.push_back(cur->right);
-            q.pop();
+            cout<<p->item<<' ';
+            preorder(p->left);
+            preorder(p->right);
         }
     }
-}
+    void inorder(node* p)
+    {
+        if(p!=nullptr)
+        {
+            inorder(p->left);
+            cout<<p->item<<' ';
+            inorder(p->right);
+        }
+    }
+    void postorder(node* p)
+    {
+        if(p!=nullptr)
+        {
+            postorder(p->left);
+            postorder(p->right);
+            cout<<p->item<<' ';
+        }
+    }
+    void levelorder(node* p)
+    {
+        if(p!=nullptr)
+        {
+            queue<node*>q;
+            q.push_back(p);
+            while(!q.empty())
+            {
+                node* cur=q.front();
+                cout<<cur->item<<' ';
+                if(cur->left!=nullptr)
+                    q.push_back(cur->left);
+                if(cur->right!=nullptr)
+                    q.push_back(cur->right);
+                q.pop();
+            }
+        }
+    }
+    
+};
