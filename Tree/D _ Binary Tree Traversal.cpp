@@ -62,17 +62,17 @@ void levelorder (node* p)
 {
     if(p != nullptr)
     {
-        queue<Node*>q;
+        queue<node*>q;
         q.push_back(p);
         while(!q.empty())
         {
-           node* cur=q.front();
-           cout<<cur->item;
-           if(cur->left!=nullptr)
-              q.push_back(cur->left);
-           if(cur->right!=nullptr)
-              q.push_back(cur->right);
-           q.pop();
+            node* cur=q.front();
+            cout<<cur->item;
+            if(cur->left!=nullptr)
+               q.push_back(cur->left);
+            if(cur->right!=nullptr)
+               q.push_back(cur->right);
+            q.pop();
         }
     }
 }
