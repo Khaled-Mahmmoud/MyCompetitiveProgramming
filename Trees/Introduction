@@ -1,0 +1,29 @@
+
+
+Tree Data Structure
+Search - Remove - Add ==>>{ O(log n) - Best Case } , { O(n) - Worst Case }
+
+Tree types 
+1) Binary Tree ( Binary Search Tree , AVL tree or Height Balanced Binary Tree )
+2) Binary Space Partition
+3) GGM Tree
+4) Syntax Tree
+5) Huffman Coding Tree
+
+                A           Level : 0
+             /  |  \ brunch or edge
+            B   E   F       Level : 1
+          /  \    / | \ brunch
+         C    D  G  H  I    Level : 2
+     
+     (this tree has 8 brunch(edges) and 9 nodes)
+
+root      -->> A
+parent    -->> A , B , F
+children  -->> B,E,F  C,D  G,H,I
+leaves    -->> C,D  E  G,H,I
+internal nodes (is parent and children at the same time)  -->> B , F
+Siblings  -->> {B,E,F}  {C,D}   {G,H,I}
+Ancestor  -->> C{A,B}  E{A}    I{A,F}
+Depth(C) = 2 (path from root to C) , Depth(E) = 1 , Depth(A) = 0
+Height(B) = 1 (path from B to the farthest leave) , Height(A) = 2
