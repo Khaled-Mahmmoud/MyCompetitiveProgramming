@@ -1,5 +1,9 @@
 /*
 
+Breadth-first traversal
+level-order  -->> + A B
+
+Depth-first traversal
 Pre-order traversal  : root left right (VLR) or (XLR) -->> + A B
 In-order traversal   : left root right (LVR) or (LXR)-->> A + B
 post-order traversal : left right root (LRV) or (LRX) -->> A B +
@@ -8,9 +12,13 @@ post-order traversal : left right root (LRV) or (LRX) -->> A B +
                    / \
                   A   B
 
-Pre-order traversal  : A B C D E F
-In-order traversal   : C B D A E F
-post-order traversal : C D B F E A
+
+               ****************
+               
+Pre-order traversal   : A B C D E F
+In-order traversal    : C B D A E F
+post-order traversal  : C D B F E A
+level-order traversal : A B E C D F
 
                    A
                  /   \
@@ -20,7 +28,7 @@ post-order traversal : C D B F E A
              
 */
 
-void preorder (node *p)
+void preorder (node* p)
 {
     if(p != nullptr)
     {
@@ -30,7 +38,7 @@ void preorder (node *p)
     }
 }
 
-void inorder (node *p)
+void inorder (node* p)
 {
     if(p != nullptr)
     {
@@ -40,12 +48,31 @@ void inorder (node *p)
     }
 }
 
-void postorder (node *p)
+void postorder (node* p)
 {
     if(p != nullptr)
     {
         postorder(p->left);
         postorder(p->right);
         cout<<p->item;
+    }
+}
+
+void levelorder (node* p)
+{
+    if(p == nullptr)
+      return;
+  
+    queue<Node*>q;
+    q.push_back(p);
+    while(!q.empty())
+    {
+        node* cur=q.front();
+        cout<<cur->item;
+        if(cur->left!=nullptr)
+           cur.push_back(cur->left);
+        if(cur->right!=nullptr)
+           cur.push_back(cur->right);
+        q.pop();
     }
 }
