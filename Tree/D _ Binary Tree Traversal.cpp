@@ -69,9 +69,9 @@ void levelorder (node* p)
         node* cur=q.front();
         cout<<cur->item;
         if(cur->left!=nullptr)
-           cur.push_back(cur->left);
+           q.push_back(cur->left);
         if(cur->right!=nullptr)
-           cur.push_back(cur->right);
+           q.push_back(cur->right);
         q.pop();
     }
 }
