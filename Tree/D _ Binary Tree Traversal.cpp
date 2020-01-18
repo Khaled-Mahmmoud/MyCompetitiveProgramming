@@ -60,18 +60,19 @@ void postorder (node* p)
 
 void levelorder (node* p)
 {
-    if(p == nullptr)
-      return;
-    queue<Node*>q;
-    q.push_back(p);
-    while(!q.empty())
+    if(p != nullptr)
     {
-        node* cur=q.front();
-        cout<<cur->item;
-        if(cur->left!=nullptr)
-           q.push_back(cur->left);
-        if(cur->right!=nullptr)
-           q.push_back(cur->right);
-        q.pop();
+        queue<Node*>q;
+        q.push_back(p);
+        while(!q.empty())
+        {
+           node* cur=q.front();
+           cout<<cur->item;
+           if(cur->left!=nullptr)
+              q.push_back(cur->left);
+           if(cur->right!=nullptr)
+              q.push_back(cur->right);
+           q.pop();
+        }
     }
 }
