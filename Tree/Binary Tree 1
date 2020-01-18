@@ -1,0 +1,53 @@
+Binary Tree is a tree data structure in which each node has at most two children 
+which are referred to as the left child and the right child
+in programming
+struct node
+{
+     Type item;
+     node* left;
+     node* right;
+};
+
+Full(strictly) Binary Tree
+if every node has zero or two children
+
+           O
+         /   \
+        O     O
+      /   \
+     O     O
+         /   \
+        O     O
+        
+Complete Binary Tree
+1) all levels is completely filled except the last level
+2) all Nodes as left as possible in the last level
+
+           O
+         /   \
+        O     O
+      /   \
+     O     O
+   
+   
+This below binary trees is not complete binary tree
+           O            
+         /   \
+        O     O
+      /   \     \
+     O     O     O
+     
+           O            
+         /   \
+        O     O
+            /   \
+           O     O
+           
+Perfect Binary tree
+1) every node has two children except leaves
+2) all leaves are at the same level
+            O            
+         /     \
+        O       O
+      /   \   /   \
+     O     O O     O
