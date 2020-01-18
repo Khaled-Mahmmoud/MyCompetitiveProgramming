@@ -111,5 +111,14 @@ private:
             }
         }
     }
+    void clear(node* p)
+    {
+        if(p!=nullptr)
+        {
+            clear(p->left);
+            clear(p->right);
+            delete p;
+        }
+    }
     
 };
