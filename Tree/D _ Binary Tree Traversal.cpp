@@ -20,16 +20,6 @@ post-order traversal : C D B F E A
              
 */
 
-void inorder (node *p)
-{
-    if(p != nullptr)
-    {
-        inorder(p->left);
-        cout<<p->item;
-        inorder(p->right);
-    }
-}
-
 void preorder (node *p)
 {
     if(p != nullptr)
@@ -37,6 +27,16 @@ void preorder (node *p)
         cout<<p->item;
         preorder(p->left);
         preorder(p->right);
+    }
+}
+
+void inorder (node *p)
+{
+    if(p != nullptr)
+    {
+        inorder(p->left);
+        cout<<p->item;
+        inorder(p->right);
     }
 }
 
