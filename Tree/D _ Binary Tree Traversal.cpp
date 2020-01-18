@@ -98,15 +98,15 @@ private:
         if(p!=nullptr)
         {
             queue<node*>q;
-            q.push_back(p);
+            q.push(p);
             while(!q.empty())
             {
                 node* cur=q.front();
                 cout<<cur->item<<' ';
                 if(cur->left!=nullptr)
-                    q.push_back(cur->left);
+                    q.push(cur->left);
                 if(cur->right!=nullptr)
-                    q.push_back(cur->right);
+                    q.push(cur->right);
                 q.pop();
             }
         }
