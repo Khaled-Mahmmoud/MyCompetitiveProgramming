@@ -1,4 +1,16 @@
 
+
+Perfect Binary tree
+1) every node has two children except leaves
+2) all leaves are at the same level
+            O            
+         /     \
+        O       O
+      /   \   /   \
+     O     O O     O
+
+
+
 Balanced Binary Tree
 1) the height of tree = O(log2(n))
 2) | height(left subtree) - height(right subtree) | <= 1   //   {1,0,-1}
