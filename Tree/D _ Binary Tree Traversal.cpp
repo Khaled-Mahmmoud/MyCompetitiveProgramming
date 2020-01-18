@@ -29,3 +29,23 @@ void inorder (node *p)
         inorder(p->right);
     }
 }
+
+void preorder (node *p)
+{
+    if(p != nullptr)
+    {
+        cout<<p->item;
+        preorder(p->left);
+        preorder(p->right);
+    }
+}
+
+void postorder (node *p)
+{
+    if(p != nullptr)
+    {
+        postorder(p->left);
+        postorder(p->right);
+        cout<<p->item;
+    }
+}
