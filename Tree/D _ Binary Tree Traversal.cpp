@@ -62,7 +62,6 @@ void levelorder (node* p)
 {
     if(p == nullptr)
       return;
-  
     queue<Node*>q;
     q.push_back(p);
     while(!q.empty())
