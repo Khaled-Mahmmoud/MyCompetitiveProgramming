@@ -36,15 +36,15 @@ struct node
     node* left;
     node* right;
 };
-class BST
+class BinaryTree
 {
     node* root;
 public:
-    BST()
+    BinaryTree()
     {
         root=nullptr;
     }
-    ~BST()
+    ~BinaryTree()
     {
         clear(root);
     }
