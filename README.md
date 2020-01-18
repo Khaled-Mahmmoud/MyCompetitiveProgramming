@@ -40,9 +40,6 @@
 
 ### Strings
 - [KMP](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/String/KMP)
-	- [KMP](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/KMP/KMP.pdf)
-	- [KMP Apps](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/KMP/KMP%20Apps.pdf)
-- [Z-Algorithm](https://github.com/OmarBazaraa/Competitive-Programming/tree/master/src/strings/z_algorithm)
 - [Trie](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/String/Trie)
 	- [Abstraction](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/Trie/Abstraction.pdf)
 	- [Implemented with static memory allocation](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/Trie/Trie_Static.cpp)
