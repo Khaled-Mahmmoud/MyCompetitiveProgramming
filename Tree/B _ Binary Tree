@@ -52,11 +52,3 @@ This below binary trees is not complete binary tree
             /   \
            O     O
            
-Perfect Binary tree
-1) every node has two children except leaves
-2) all leaves are at the same level
-            O            
-         /     \
-        O       O
-      /   \   /   \
-     O     O O     O
