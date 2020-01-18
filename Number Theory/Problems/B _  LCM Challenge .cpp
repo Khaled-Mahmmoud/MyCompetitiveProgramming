@@ -1,5 +1,5 @@
 /*
-
+ the maximum possible LCM of three not necessarily distinct positive integers that are not greater than n
 codeforces problem link : https://codeforces.com/contest/235/problem/A
 */
 #include <bits/stdc++.h>
