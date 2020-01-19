@@ -4,8 +4,6 @@ have to re-compute them when needed later. This simple optimization reduces time
 For example, if we write simple recursive solution for Fibonacci Numbers, we get exponential time complexity and if we optimize it 
 by storing solutions of subproblems, time complexity reduces to polynomial (linear)
 
-
-
   Recursion : Exponentail
 
 int fib(int n)
@@ -13,7 +11,6 @@ int fib(int n)
     if(n<2)return n;
     return fib(n-1) + fib(n-2);
 }
-
 
 
   Dynamic Programming : Polynomial
@@ -26,7 +23,6 @@ int fib(int n)
     return dp[n] = fib(n-1) + fib(n-2);
 }
 
-
 **************  Tabulation vs Memoization   ***************
 There are following two different ways to store the values so that the values of a sub-problem can be reused
 Here, will discuss two patterns of solving DP problem:
@@ -34,6 +30,9 @@ Here, will discuss two patterns of solving DP problem:
 Tabulation   : Bottom Up
 Memoization  : Top Down
 
+
+                      Tabulation Method – Bottom Up Dynamic Programming 
+                      
 As the name itself suggests starting from the bottom and cumulating answers to the top
 Let’s describe a state for our DP problem to be dp[x] with dp[0] as base state and dp[n] as our destination state. 
 So, we need to find the value of destination state i.e dp[n].
