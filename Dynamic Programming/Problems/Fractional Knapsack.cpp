@@ -43,7 +43,7 @@ bool cmp(struct item a,struct item b)
     return r1>r2;
     
 }
-int fraction(int w,struct item arr[],int n)
+double fraction(int w,struct item arr[],int n)
 {
     sort(arr,arr+n,cmp);
     int curweight = 0;
