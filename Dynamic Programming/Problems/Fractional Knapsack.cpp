@@ -59,6 +59,7 @@ double fraction(int w,struct item arr[],int n)
         {
             double remain = w - curweight;
             finalvalue+= arr[i].value * (remain/arr[i].weight);
+            break;
         }
     }
     return finalvalue;
