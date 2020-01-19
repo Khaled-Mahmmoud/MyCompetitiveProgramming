@@ -1,0 +1,74 @@
+
+
+Tree is special form of graph , Tree is an undirected graph
+
+  O ==>> vertices , nodes , points
+  
+____ ==>> edges , arcs , lines
+
+  4 ---> 6
+  |
+  v
+  3 <----5
+  
+  V = {3,4,5,6}   E = { {4,6} , {4,3} , {5,3} }
+  
+
+Types of graph
+1) Directed graph       A ---> B       E = { (A,B) }
+2) Undirected graph     A ---- B       E = { (A,B) , (B,A) }
+
+                           4 
+1) Directed Weighted    A ---> B
+
+                           2
+2) Undirected Weighted  A ---- B  
+
+
+1) Connected Graph ( if from any node in graph , we can reach to all nodes)
+
+     A ←-- D
+     ↓     ↑
+     B --→ C
+     
+2) Disconnected Graph ( if above condition is not met )
+
+     A --→ D
+     ↓     ↑
+     B --→ C
+     ↓
+     E
+     
+     Adjacent vertices(A) = {B,D} 
+     Adjacent vertices(C) = {D}
+     Adjacent edges(A,B)  = { (A,D) , (B,C) , (B,E) }
+     
+
+         Loop                  A
+  B ←-- A --→                 ↑↓ Parallel edges
+        ↑ ← ↓                  B
+Adjacent vertices(A) = {B,A}
+
+if graph doesn't contain any loop or parallel graph it's called Simple graph otherwise it's called not simple graph
+
+
+A cyclic graph is a graph containing at least one graph cycle. A graph that is not cyclic is said to be acyclic
+Cyclic graphs are not trees
+     A ←-- D
+     ↓     ↑
+     B --→ C
+     ↓
+     E ←-- F
+
+Loop at any node not present graph cycle
+A cycle in a directed graph is a path of at least 2 length such that the first vertax on the path is the same as last one
+(if the path is simple , then cyclic is a simple cyclic)
+
+                  A
+                  ↑↓ 
+                  B
+
+A cycle in a undirected graph is a path of at least 3 length such that the first vertax on the path is the same as last one
+                 A __ B
+                 \   /
+                   C
