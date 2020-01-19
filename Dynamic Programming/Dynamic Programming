@@ -1,14 +1,12 @@
-/*
 Dynamic Programming is mainly an optimization over plain recursion . Wherever we see a recursive solution that has repeated calls for 
 same inputs , we can optimize it using Dynamic Programming . The idea is to simply store the results of subproblems, so that we do not
 have to re-compute them when needed later. This simple optimization reduces time complexities from exponential to polynomial.
 For example, if we write simple recursive solution for Fibonacci Numbers, we get exponential time complexity and if we optimize it 
 by storing solutions of subproblems, time complexity reduces to polynomial (linear)
-*/
 
 
 
-//  Recursion : Exponentail
+  Recursion : Exponentail
 
 int fib(int n)
 {
@@ -18,7 +16,7 @@ int fib(int n)
 
 
 
-//  Dynamic Programming : Polynomial
+  Dynamic Programming : Polynomial
 
 vector<int>dp(1e7);
 int fib(int n)
@@ -28,7 +26,7 @@ int fib(int n)
     return dp[n] = fib(n-1) + fib(n-2);
 }
 
-/*
+
 **************  Tabulation vs Memoization   ***************
 There are following two different ways to store the values so that the values of a sub-problem can be reused
 Here, will discuss two patterns of solving DP problem:
@@ -36,5 +34,12 @@ Here, will discuss two patterns of solving DP problem:
 Tabulation   : Bottom Up
 Memoization  : Top Down
 
+As the name itself suggests starting from the bottom and cumulating answers to the top
+Let’s describe a state for our DP problem to be dp[x] with dp[0] as base state and dp[n] as our destination state. 
+So, we need to find the value of destination state i.e dp[n].
+If we start our transition from our base state i.e dp[0] and follow our state transition relation to reach our destination state dp[n]
+we call it Bottom Up approach as it is quite clear that we started our transition from the bottom base state and reached the top most 
+desired state
 
-*/
+Now, Why do we call it tabulation method?
+
