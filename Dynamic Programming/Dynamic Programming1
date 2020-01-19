@@ -42,4 +42,17 @@ we call it Bottom Up approach as it is quite clear that we started our transitio
 desired state
 
 Now, Why do we call it tabulation method?
+To know this let’s first write some code to calculate the factorial of a number using bottom up approach
+Once, again as our general procedure to solve a DP we first define a state. 
+In this case, we define a state as dp[x], where dp[x] is to find the factorial of x
+Now, it is quite obvious that dp[x+1] = dp[x] * (x+1)
 
+// Tabulated version to find factorial x.
+int dp[MAXN];
+
+// base case
+int dp[0] = 1;
+for (int i = 1; i< =n; i++)
+{
+    dp[i] = dp[i-1] * i;
+}
