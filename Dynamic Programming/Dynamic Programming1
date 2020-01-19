@@ -55,3 +55,25 @@ for (int i = 1; i< =n; i++)
 {
     dp[i] = dp[i-1] * i;
 }
+
+
+
+                     Memoization Method – Top Down Dynamic Programming 
+Here, we start our journey from the top most destination state and compute its answer by taking in count the values of states that can
+reach the destination state, till we reach the bottom most base state.
+
+Once again, let’s write the code for the factorial problem in the top-down fashion
+
+// Memoized version to find factorial x.
+// To speed up we store the values
+// of calculated states
+
+int dp[MAXN];
+int solve(int x)
+{
+    if (x==0)
+        return 1;
+    if (dp[x])
+        return dp[x];
+    return dp[x] = x * solve(x-1);
+}
