@@ -14,7 +14,20 @@ GeeksfroGeeks problem link : https://practice.geeksforgeeks.org/problems/0-1-kna
 1 ≤ wt[i] ≤ 1000
 1 ≤ val[i] ≤ 1000
 */
+// Memoization Method – Top Down Dynamic Programming 
+const int MAX = 1009;
+int dp[MAX][MAX];
+int knapSack(int w, int wt[], int val[], int n)
+{
+      if (n == 0 || w == 0)
+          return 0;
+      if(dp[n][w])return dp[n][w];
 
+      if (wt[n-1] > w)
+         return dp[n][w] = knapSack(w, wt, val, n-1);
+      else
+        return dp[n][w] = max( val[n-1] + knapSack(w-wt[n-1], wt, val, n-1),knapSack(w, wt, val, n-1) );
+}
 /*
 Tabulation Method – Bottom Up Dynamic Programming 
 ------------------------------------------
