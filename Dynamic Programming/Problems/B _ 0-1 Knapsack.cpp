@@ -16,7 +16,7 @@ GeeksfroGeeks problem link : https://practice.geeksforgeeks.org/problems/0-1-kna
 */
 // Memoization Method – Top Down Dynamic Programming 
 const int MAX = 1009;
-int dp[MAX][MAX];
+int dp[MAX][MAX];     // please do not use vector , it's runtime 
 int knapSack(int w, int wt[], int val[], int n)
 {
       if (n == 0 || w == 0)
