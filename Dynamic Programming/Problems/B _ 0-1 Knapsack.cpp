@@ -21,8 +21,8 @@ int knapSack(int w, int wt[], int val[], int n)
 {
       if (n == 0 || w == 0)
           return 0;
-      if(dp[n][w])return dp[n][w];
-
+      if(dp[n][w])
+          return dp[n][w];
       if (wt[n-1] > w)
          return dp[n][w] = knapSack(w, wt, val, n-1);
       else
