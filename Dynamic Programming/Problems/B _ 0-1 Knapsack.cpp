@@ -56,8 +56,8 @@ int main()
             dp[i][j] = 0;
         else
             {
-                if(j<w[i-1])dp[i][j]=dp[i-1][j];
-                else dp[i][j]=max(dp[i-1][j],v[i-1]+dp[i-1][j-w[i-1]]);
+                if(j<wt[i-1])dp[i][j]=dp[i-1][j];
+                else dp[i][j]=max(dp[i-1][j],val[i-1]+dp[i-1][j-wt[i-1]]);
             }
     }
     cout<<dp[n][w];
