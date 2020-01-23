@@ -49,3 +49,62 @@ swap(l[0],l[2])           || O(1) || Sawp two elements
 l.clear()            || Linear in size || Removes all elements from the list , leaving the list with a size of 0
 ********************* Member functions *******************************
 l1.operator=(l2) || Linear in size (v1+v2) || Assigns new contents , replacing its current contents, and modifying its size   
+
+********************* Operations *******************************
+splice() : transfers the elements from list y into a list x at position and this leads to the altering the sizes of both the list
+x.splice(iterator, y); // transfer all elements of y to x ,size of x will increase by size of y , size of y will be zero // operation(1)
+x.splice(iterator, y, iterator pos1);  // only one element that transferred // operation(2)
+x.splice(iterator, y, iterator first, iterator last);  // operation(3)
+Assume that the number of elements that transferred is k , the size of x become x+k and the size of y become y-k
+Complexity :for operation(1) and operation(2) constant and for operation(3) linear in the number of elements transferred
+
+l.remove(val) : Removes from the list all the elements that compare equal to val
+Complexity : Linear in container size
+
+l.remove_if(function of conditon) : Removes from the list all the elements for which Predicate pred returns true
+// a predicate implemented as a function:
+bool single_digit (const int& value) { return (value<10); }
+
+// a predicate implemented as a class:
+struct is_odd {
+  bool operator() (const int& value) { return (value%2)==1; }
+};
+int main()
+{
+     list<int>l={34,5,87,50,2,79};
+     l.remove_if (single_digit);        // 5 2
+     l.remove_if (is_odd()); // 87 79
+}
+Complexity : Linear in list size
+
+
+l.unique()  OR unique(pred) // removes all the duplicate elements present consecutively from the list 
+
+bool pred( float x,float y)  
+{  
+    return(int(x)==int(y));  
+}  
+list<int>l={2,2.5,2.3,4,4,4,3,3,4,3}
+l.unique()   // l becomes 2 , 2.5 , 2.3 , 4, 3 , 4 , 3
+l.unique(pred)  // l becomes 2  , 4, 3 , 4 , 3
+Complexity : Linear in container size 
+
+l.merge() // merges two sorted list in an increasing order.It merges y list into 
+the given list container and this removes all the elements from y
+list1.merge(list2);  
+list1.merge(list2,compare);  
+
+bool compare(int first, int second)  
+{    
+    return first<second;  
+}  
+list<int> li={1,2,3,4};  
+list<int> li1={5,6,7,8};  
+li.merge(li1);  OR li.merge(li1,compare);
+Complexity :  linear in the sum of both container sizes 
+
+l.sort() OR l.sort(compare)// arranges the elements of a given list in an increasing order
+Complexity : NlogN where N is the container size
+
+l.reverse() // Reverses the order of the elements in the list container
+Complexity : Linear in list size
