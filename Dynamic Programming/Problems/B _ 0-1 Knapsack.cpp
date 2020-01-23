@@ -70,7 +70,8 @@ int main()
     vector<int>val(n),wt(n);
     for(auto &z:wt)cin>>z;
     for(auto &z:val)cin>>z;
-    vector<vector<int>>dp(n+1,vector<int>(w+1,0));
+    //vector<vector<int>>dp(n+1,vector<int>(w+1,0));
+    int dp[n+1][w+1];  // please do not 2d-vector in dp , it's slower
     for(int i=0;i<=n;i++)
     for(int j=0;j<=w;j++)
     {
