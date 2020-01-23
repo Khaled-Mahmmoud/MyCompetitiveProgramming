@@ -10,6 +10,15 @@ For example, if the coins are {2,3,5} and the desired sum is 9, there are 8 ways
 2+2+3+2
 2+3+2+2
 3+2+2+2
+
+n <= 100
+x <= 10^6
+a[i] <= 10^6
+
+CSES problem link : https://cses.fi/problemset/task/1635
+Solution :
+dp[x] = number of ways to make value x
+The complexity : O(nx)
 */
 int main()
 {
