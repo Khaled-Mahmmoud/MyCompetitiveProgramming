@@ -31,6 +31,14 @@
 ### Two Pointers
 - [Two pointers .pdf](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Two%20Pointers/Two%20pointers%20.pdf)
 - [Largest Sum Contiguous](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Two%20Pointers/Largest%20Sum%20Contiguous)
+### Dynamic Programming
+- [Dynamic Programming1](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Dynamic%20Programming1)
+- [Dynamic Programming2](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Dynamic%20Programming2)
+- [Problems](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Dynamic%20Programming/Problems)
+	- [Fractional Knapsack](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/A%20_%20Fractional%20Knapsack.cpp)
+	- [0-1 Knapsack](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/B%20_%200-1%20Knapsack.cpp)
+	- [Edit Distance](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/C%20_%20Edit%20Distance.cpp)
+	- [Cutting a Rod](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/D%20_%20Cutting%20a%20Rod%20.cpp)
 
 ### Number Theory
 - [Count trailing zeroes N!](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Number%20Theory/Count%20trailing%20zeroes%20N!)
