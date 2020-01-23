@@ -26,8 +26,7 @@
 ### Two Pointers
 - [Largest Sum Contiguous](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Two%20Pointers/Largest%20Sum%20Contiguous)
 ### Dynamic Programming
-- [Dynamic Programming1](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Dynamic%20Programming1)
-- [Dynamic Programming2](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Dynamic%20Programming2)
+- [Dynamic Programming](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Dynamic%20Programming)
 - [Problems](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Dynamic%20Programming/Problems)
 	- [Fractional Knapsack](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/A%20_%20Fractional%20Knapsack.cpp)
 	- [0-1 Knapsack](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/B%20_%200-1%20Knapsack.cpp)
