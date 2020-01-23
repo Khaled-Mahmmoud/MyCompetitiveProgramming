@@ -43,12 +43,16 @@ int main ()
 
    str.assign(base,10,9);
    cout << str << '\n';           // "brown fox"
-
-  str.assign("pangrams are cool",7);
-  cout << str << '\n';            // "pangram"
+   
+   str.assign(base,9);
+   cout << str << '\n';           // "The quick"
 
   str.assign("c-string");
   cout << str << '\n';            // "c-string"
+  
+  str.assign("pangrams are cool",7);
+  cout << str << '\n';            // "pangram"
+
 
   str.assign(10,'*');
   cout << str << '\n';         // "**********"
