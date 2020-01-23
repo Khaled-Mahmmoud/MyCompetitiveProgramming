@@ -72,11 +72,11 @@ n <= 1000
 */
     int n;
     cin>>n;
-    vector<vector<char>>v(n,vector<char>(n,'0'));
-    for(auto &z:v)
-        for(auto &y:z)
-            cin>>y;
-    vector<vector<int>>dp(n,vector<int>(n,0));
+    char v[n][v];
+    for(int i=0;i<n;i++)
+        for(int j=0;j<n;j++)
+            cin>>v[i][j];
+    int dp[n][n];
     for(int i=0; i<n; i++)
         if(v[i][0]=='*')
             break;
