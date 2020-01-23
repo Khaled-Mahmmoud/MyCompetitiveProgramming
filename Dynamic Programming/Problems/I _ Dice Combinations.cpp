@@ -9,11 +9,13 @@ For example, if n=3, there are 4 ways:
 CSES problem link : https://cses.fi/problemset/task/1633
 n <= 10^6
 Print the number of ways modulo 10^9+7
+Solution
+dp[x] = number of ways to make sum x using numbers from 1 to 6
+Summing over the possibilities gives dp[x] = dp[x-1] + dp[x-2] + dp[x-3] + dp[x-4] + dp[x-5] + dp[x-6]
+We initialize by dp[0] = 1, saying there is one way with sum zero 
+The complexity is O(n)
 */
-#include<bits/stdc++.h>
-#define ll long long
-#define mod 1000000007
-using namespace std;
+
 int main()
 {
     ios::sync_with_stdio(false);
