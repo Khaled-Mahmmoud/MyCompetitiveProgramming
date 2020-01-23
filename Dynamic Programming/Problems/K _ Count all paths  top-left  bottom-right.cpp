@@ -19,6 +19,9 @@ There are three paths
 1<=M<=1000
 1<=N<=1000
 */
+
+// << Memoization Method – Top Down Dynamic Programming >>
+// Complexity : O(mn)
 int dp[1009][1009];
 int path(int m,int n)
 {
@@ -37,3 +40,57 @@ int main()
     }
     return 0;
 }
+// << Tabulation Method – Bottom Up Dynamic Programming >>
+// Complexity : O(mn)
+int path(int m,int n)
+{
+    int dp[m][n];
+    for(int i=0;i<m;i++)
+    dp[i][0] = 1;
+    for(int i=0;i<n;i++)
+    dp[0][i] = 1;
+    
+    for(int i=1;i<m;i++)
+    for(int j=1;j<n;j++)
+    {
+        dp[i][j]=dp[i-1][j]+dp[i][j-1];
+    } 
+    return dp[m-1][n-1];
+}
+
+
+/*
+Consider an n×n grid whose squares may have traps. It is not allowed to move to a square with a trap
+Your task is to calculate the number of paths from the upper-left square to the lower-right square where
+you only can move right or down
+4
+....
+.*..
+...*
+*...
+n <= 1000
+*/
+    int n;
+    cin>>n;
+    vector<vector<char>>v(n,vector<char>(n,'0'));
+    for(auto &z:v)
+        for(auto &y:z)
+            cin>>y;
+    vector<vector<int>>dp(n,vector<int>(n,0));
+    for(int i=0; i<n; i++)
+        if(v[i][0]=='*')
+            break;
+        else
+            dp[i][0]=1;
+    for(int j=0; j<n; j++)
+        if(v[0][j]=='*')
+            break;
+        else
+           dp[0][j]=1;
+    for(int i=1; i<n; i++)
+        for(int j=1; j<n; j++)
+            if(v[i][j]=='*')
+                dp[i][j]=0;
+            else
+                dp[i][j]=(dp[i-1][j]+dp[i][j-1])%mod;
+    cout<<dp[n-1][n-1];
