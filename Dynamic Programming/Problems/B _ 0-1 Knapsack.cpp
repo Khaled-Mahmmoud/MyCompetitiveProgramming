@@ -33,6 +33,8 @@ wt[] = {1, 1, 1}, W = 2, val[] = {10, 20, 30}
 K(0,2)  K(0,1)  K(0,1)  K(0,0)  K(0,1)   K(0,0)
 Recursion tree for Knapsack capacity 2 units and 3 items of 1 unit weight
 
+Complexity : O(mn)
+
 */
 const int MAX = 1009;
 int dp[MAX][MAX];     // please do not use vector , it's runtime 
@@ -58,6 +60,7 @@ val  wt | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
 (7)  5  | 0 | 1 | 1 | 4 | 5 | 7 | 8 | 9 |
 ------------------------------------------
 
+Complexity : O(mn)
 
 */
 int main()
