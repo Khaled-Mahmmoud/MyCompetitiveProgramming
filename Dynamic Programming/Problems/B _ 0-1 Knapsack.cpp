@@ -14,7 +14,26 @@ GeeksfroGeeks problem link : https://practice.geeksforgeeks.org/problems/0-1-kna
 1 ≤ wt[i] ≤ 1000
 1 ≤ val[i] ≤ 1000
 */
-// Memoization Method – Top Down Dynamic Programming 
+/*
+<< Memoization Method – Top Down Dynamic Programming >>
+In the following recursion tree, K() refers to knapSack().
+The two parameters indicated in the following recursion tree are n and W.  
+The recursion tree is for following sample inputs.
+wt[] = {1, 1, 1}, W = 2, val[] = {10, 20, 30}
+
+                       K(3, 2)         ---------> K(n, W)
+                   /            \ 
+                 /                \               
+            K(2,2)                  K(2,1)
+          /       \                  /    \ 
+        /           \              /        \
+       K(1,2)      K(1,1)        K(1,1)     K(1,0)
+       /  \         /   \          /   \
+     /      \     /       \      /       \
+K(0,2)  K(0,1)  K(0,1)  K(0,0)  K(0,1)   K(0,0)
+Recursion tree for Knapsack capacity 2 units and 3 items of 1 unit weight
+
+*/
 const int MAX = 1009;
 int dp[MAX][MAX];     // please do not use vector , it's runtime 
 int knapSack(int w, int wt[], int val[], int n)
@@ -29,7 +48,7 @@ int knapSack(int w, int wt[], int val[], int n)
         return dp[n][w] = max( val[n-1] + knapSack(w-wt[n-1], wt, val, n-1),knapSack(w, wt, val, n-1) );
 }
 /*
-Tabulation Method – Bottom Up Dynamic Programming 
+<< Tabulation Method – Bottom Up Dynamic Programming >>
 ------------------------------------------
 val  wt | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
 (0)  0  | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
