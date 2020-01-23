@@ -24,7 +24,6 @@
 - [Iterator](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/STL/Iterator)
 
 ### Two Pointers
-- [Two pointers .pdf](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Two%20Pointers/Two%20pointers%20.pdf)
 - [Largest Sum Contiguous](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Two%20Pointers/Largest%20Sum%20Contiguous)
 ### Dynamic Programming
 - [Dynamic Programming1](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Dynamic%20Programming1)
