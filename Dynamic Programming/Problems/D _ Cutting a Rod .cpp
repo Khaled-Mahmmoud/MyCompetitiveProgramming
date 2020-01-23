@@ -13,5 +13,83 @@ length   | 1   2   3   4   5   6   7   8
 --------------------------------------------
 price    | 3   5   8   9  10  17  17  20
 
-
 */
+
+
+/*
+<< Memoization Method – Top Down Dynamic Programming >>
+Complexity : O(nn)
+Considering the above implementation, following is recursion tree for a Rod of length 4
+cR() ---> cutRod() 
+
+                             cR(4)
+                  /        /      \      \    
+                 /        /        \      \ 
+             cR(3)       cR(2)     cR(1)   cR(0)
+            /            /            \
+           /            /              \  
+ cR(2) cR(1) cR(0)    cR(1) cR(0)    cR(0)
+  /         \          \
+ /           \          \   
+ cR(1) cR(0)  cR(0)      cR(0)
+   /
+  /
+CR(0)
+*/
+int dp[10001];
+vector<int>price;
+int cut(int n)
+{
+    if(n<=0)
+        return 0;
+    int m = INT_MIN;
+    if(dp[n])return dp[n];
+    for(int i=0;i<n;i++)
+        m = max(m,price[i]+cut(n-(i+1)));
+    return dp[n] = m;
+}
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(0);cout.tie(0);
+    int t;cin>>t;while(t--)
+    {
+        int n;cin>>n;
+        price = vector<int>(n+1);
+        for(int i=0;i<n;i++)
+            cin>>price[i];
+        cout<<cut(n)<<'\n';
+
+    }
+    return 0;
+}
+// << Tabulation Method – Bottom Up Dynamic Programming >>
+// Complexity : O(nn)
+using namespace std;
+vector<int>price;
+int cut(int n)
+{
+    int dp[n+1];dp[0]=0;
+    for(int i=1;i<=n;i++)
+    {
+        int m = INT_MIN;
+        for(int j=0;j<i;j++)
+        m = max(m,price[j]+dp[i-(j+1)]);
+        dp[i]=m;
+    }
+    return dp[n];
+}
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(0);cout.tie(0);
+    int t;cin>>t;while(t--)
+    {
+        int n;cin>>n;
+        price = vector<int>(n+1);
+        for(int i=0;i<n;i++)
+            cin>>price[i];
+        cout<<cut(n)<<'\n';
+    }
+    return 0;
+}
