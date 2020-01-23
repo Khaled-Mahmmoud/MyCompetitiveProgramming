@@ -32,6 +32,13 @@
 	- [0-1 Knapsack](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/B%20_%200-1%20Knapsack.cpp)
 	- [Edit Distance](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/C%20_%20Edit%20Distance.cpp)
 	- [Cutting a Rod](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/D%20_%20Cutting%20a%20Rod%20.cpp)
+	-[Maximize The Cut Segments](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/E%20_%20Maximize%20The%20Cut%20Segments.cpp)
+	-[Longest Common Subsequence](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/F%20_%20Longest%20Common%20Subsequence.cpp)
+	-[Longest Increasing Subsequence](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/G%20_%20Longest%20Increasing%20Subsequence.cpp)
+	-[Longest Palindromic Subsequence](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/H%20_%20Longest%20Palindromic%20Subsequence.cpp)
+	-[Dice Combinations](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/I%20_%20Dice%20Combinations.cpp)
+	-[Coin Combinations](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/J%20_%20Coin%20Combinations.cpp)
+	-[Count all paths top-left bottom-right](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/K%20_%20Count%20all%20paths%20%20top-left%20%20bottom-right.cpp)
 
 ### Number Theory
 - [Count trailing zeroes N!](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Number%20Theory/Count%20trailing%20zeroes%20N!)
