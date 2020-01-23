@@ -4,6 +4,8 @@ Given two sequences, find the length of longest subsequence present in both of t
 */
 
 // << Memoization Method – Top Down Dynamic Programming >>
+// Complexity : O(mn)
+
 int dp[1009][1009];
 string s1,s2; int m,n;
 int lcs(int i,int j)
@@ -28,6 +30,7 @@ int main()
 }
 
 // << Tabulation Method – Bottom Up Dynamic Programming >>
+// Complexity : O(mn)
 
 int lcs(string s1, string s2, int m, int n )  
 {  
