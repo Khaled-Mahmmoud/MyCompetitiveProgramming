@@ -22,7 +22,7 @@ There are three paths
 int dp[1009][1009];
 int path(int m,int n)
 {
-    if(m==1||n==1)return 1;
+    if(!m||!n)return 1;
     int &rt = dp[m][n];
     if(rt)return rt;
     return rt = path(m-1,n) + path(m,n-1);
@@ -33,7 +33,7 @@ int main()
     {
         memset(dp,0,sizeof(dp));
         int m,n;cin>>m>>n;
-        cout<<path(m,n)<<'\n';
+        cout<<path(m-1,n-1)<<'\n';
     }
     return 0;
 }
