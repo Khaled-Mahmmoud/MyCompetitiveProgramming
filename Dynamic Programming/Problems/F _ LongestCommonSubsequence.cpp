@@ -35,11 +35,9 @@ int main()
 int lcs(string s1, string s2, int m, int n )  
 {  
     int dp[m + 1][n + 1];  
-    int i, j; 
-    
-    for (i = 0; i <= m; i++)  
+    for (int i = 0; i <= m; i++)  
     {  
-        for (j = 0; j <= n; j++)  
+        for (int j = 0; j <= n; j++)  
         {  
         if (i == 0 || j == 0)  
             dp[i][j] = 0;  
