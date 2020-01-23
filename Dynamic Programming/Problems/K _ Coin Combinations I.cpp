@@ -25,7 +25,7 @@ int main()
     int n,x;cin>>n>>x;
     vector<int>v(n);
     for(auto& z:v)cin>>z;
-    vector<int>dp(n+1,1e9);
+    vector<int>dp(n+1,0);
     dp[0]=1;
     for(int i=1;i<=x;i++)
     for(int j=0;j<n;j++)
