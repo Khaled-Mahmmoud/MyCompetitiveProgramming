@@ -21,6 +21,7 @@
 	- [Unordered_set & Unordered_multiset2](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/Unordered%20Associative%20Containers/A2%20_%20Unordered_set%20%26%20Unordered_multiset)
 	- [Unordered_map & Unordered_multimap1](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/Unordered%20Associative%20Containers/B1%20_%20Unordered_map%20%26%20Unordered_multimap)
 	- [Unordered_map & Unordered_multimap2](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/Unordered%20Associative%20Containers/B2%20_%20Unordered_map%20%26%20Unordered_multimap)
+- [String](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Containers/String)
 - [Container adaptors](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/Container%20adaptors)
 - [Bitset](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/Bitset)
 
