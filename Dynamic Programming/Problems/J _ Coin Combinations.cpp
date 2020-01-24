@@ -20,8 +20,8 @@ int main()
     for(int i=1;i<=x;i++)
     for(int j=0;j<n;j++)
     {
-        if(i-a[i]>=0)
-        dp[i] = min(dp[i],dp[i-a[i]]+1);
+        if(i-a[j]>=0)
+        dp[i] = min(dp[i],dp[i-a[j]]+1);
     }
     if(dp[x]==1e9)
         cout<<-1;
@@ -61,8 +61,8 @@ int main()
     for(int i=1;i<=x;i++)
     for(int j=0;j<n;j++)
     {
-        if(i-a[i]>=0)
-        dp[i] = + dp[i-a[i]];
+        if(i-a[j]>=0)
+        dp[i] = + dp[i-a[j]];
     }
     if(dp[x]==1e9)
         cout<<-1;
