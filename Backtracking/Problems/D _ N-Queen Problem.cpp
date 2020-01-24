@@ -71,8 +71,8 @@ bool solve(int board[10][10],int col)
         if(save(board,i,col))
         {
             board[i][col]=1;
-            res = solve(board,col+1)||res;
-            board[i][col]=0;
+            res = solve(board,col+1)||res;  // please remember that solve(..) before res
+            board[i][col]=0;            // if we said res = res || solve(..) , this gives wrong answer
         }
     }
     return res;
