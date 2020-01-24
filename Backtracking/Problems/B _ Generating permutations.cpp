@@ -64,7 +64,7 @@ Rearranges the elements in the range [first,last) into the next lexicographicall
 A permutation is each one of the N! possible arrangements the elements can take
 Complexity of next_permutation linear in half the distance between first and last
 */
-void  heapPermutation(int a[],int n)
+void  Permutation(int a[],int n)
 {
     do
     {
