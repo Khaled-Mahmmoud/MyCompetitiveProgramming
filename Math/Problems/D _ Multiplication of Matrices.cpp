@@ -26,3 +26,4 @@ int main()
            cout<<c[i][j]<<" ";
            cout<<'\n';}
  }
+// Complexity : O(r1.c2.c1)
