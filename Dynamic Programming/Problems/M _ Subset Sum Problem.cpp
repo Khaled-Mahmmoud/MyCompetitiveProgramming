@@ -13,7 +13,7 @@ bool subset(int n,int sum)
     if(!sum)return true;
     if(!n)return false;
     int &rt = dp[n][sum];
-    if(rt)return rt;
+    if(~rt)return rt;
     if(v[n-1]>sum)
         return rt = subset(n-1,sum);
     return subset(n-1,sum)||subset(n-1,sum-v[n-1]);
@@ -22,6 +22,7 @@ int main()
 {
     int n,sum;cin>>n>>sum;v.resize(n);
     for(int i=0;i<n;i++)cin>>v[i];
+    memset(dp,-1,sizeof(dp));
     if(subset(n,sum))
         cout<<"YES";
     else
