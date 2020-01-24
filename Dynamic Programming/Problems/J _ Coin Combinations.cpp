@@ -102,10 +102,9 @@ The complexity : O(nx)
         for (int j = 0; j <= x; j++)
         {
             dp[i][j] = dp[i-1][j];
-            int left = j-v[i-1];
-            if (left >= 0)
+            if (j-v[i-1] >= 0)
             {
-                (dp[i][j] += dp[i][left]) %= mod;
+                (dp[i][j] += dp[i][j-v[i-1]]) %= mod;
             }
         }
     }
