@@ -14,6 +14,8 @@ If we are to have two subsets of equal sum, they must sum to half the total sum 
 the answer is zero (no possibilities). Otherwise we get the number of ways to reach n(n+1)/4 using subsets of the numbers 1..n-1
 Why n-1? Because by only considering numbers up to n-1, we always put n in the second set, and therefore only count each pair of 
 sets once (otherwise we count every pair of sets twice)
+
+Complexity : O(nx)
 */
 
 int main()
@@ -21,7 +23,7 @@ int main()
     int n,mod=1e9+7;
     cin>>n;
     int x=n*(n+1)/2;
-    if(x%2){cout<<0;return 0;}
+    if(x & 2){cout<<0;return 0;}
     x/=2;
     int dp[n][x+1];
     memset(dp,0,sizeof(dp));
