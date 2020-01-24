@@ -9,6 +9,8 @@ A number spiral is an infinite grid whose upper-left square has number 1. Here a
               
 Your task is to find out the number in row y and column x
 
+CSES problem link : https://cses.fi/problemset/task/1071/
+
 1 <= t <= 10^5
 1 <= x,y <= 10^9
 
