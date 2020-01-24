@@ -76,7 +76,7 @@ n <= 1000
     for(int i=0;i<n;i++)
         for(int j=0;j<n;j++)
             cin>>v[i][j];
-    int dp[n][n];
+    int dp[n][n];memset(dp,0,sizeof(dp));
     for(int i=0; i<n; i++)
         if(v[i][0]=='*')
             break;
