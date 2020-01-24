@@ -58,3 +58,7 @@ A ∆ (B ∪ C) = (A ∆ B) ∪ C
 and ==>> ∧ 
 or ==>>  v
 xor ==>> ⊕
+
+A x B ( cartesian product ) 
+A = { 1,2,3 } , B = { a,b }
+A x B = { (1,a) , (2,a) , (3,a) , (1,b) , (2,b) , (3,b) }
