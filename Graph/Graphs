@@ -72,3 +72,66 @@ A cycle in a undirected graph is a path of at least 3 length such that the first
                  A __ B
                  \   /
                    C
+
+                   
+            **************
+             
+             (A,C) is connected vertices
+             (C,A) is disconnectd vertices
+                   A --→ B
+                         ↓
+                         C
+            **************
+             Path : A , B , F is simple path
+             Path : A , B , C , D , E , B , F is not simple path (repetition)
+             Path : B , C , D , E , B is simple path
+                 A
+                 ↓
+           F ←-- B --→ C
+                 ↑     ↓
+                 E ←-- D
+           
+           indegree(D) = 1 (inEdges)
+           indegree(B) = 2
+           indegree(A) = 0
+                 
+           outdegree(A) = 1 (outEdges)
+           outdegree(F) = 0
+           outdegree(B) = 2
+           
+           incident edges(A) = 1 (outEdges)
+           incident edges(F) = 0
+           incident edges(B) = 2
+           
+           
+           degree (D) = 2 ( inEdges + outEdges)
+           degree (B) = 4
+           degree (F) = 1
+           
+           
+           B ←-- A --→                 
+                 ↑ ← ↓      degree(A) = 3
+        
+        
+        
+        A --- B ---- C    
+        number of edges at a undirected graph = 2
+        number of edges at a directed graph = 4
+        
+        **************
+        
+        Complete graph ( if from any node in graph , we can reach to all nodes but path = 1)
+        
+                  A
+               /  |  \
+              B---|---C
+               \  |  /
+                  D 
+                  
+         **************
+         
+         number of edges = E
+         number of nodes = V
+         
+         E = V^2 the graph is dense
+         E = V   the graph is sparse
