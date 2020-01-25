@@ -1,7 +1,42 @@
-#include <bits/stdc++.h>
-#define ll long long
-#define N  1000000
-using namespace std;
+/*
+Binary Search Tree is a node-based binary tree data structure which has the following properties
+1) The left subtree of a node contains only nodes with keys lesser than the node’s key
+2) The right subtree of a node contains only nodes with keys greater than the node’s key
+3) The left and right subtree each must also be a binary search tree
+
+
+                              8
+                            /   \
+                           3     10
+                         /   \     \
+                        1     6     14
+                            /   \
+                           4     7
+                          
+
+***********  Find Successor  ************
+
+1) node has right subtree 
+we find mimimum node at right subtree
+successor(3) = 4 , successor(8) = 10
+
+2) node doesn't have a right subtree 
+Travel up using the parent pointer until you see a node which is left child of it’s parent.The parent of such a node is the successor
+successor(7) = 8 , successor(14) = NULL , successor(1) = 3 , successor(4) = 6
+
+
+
+
+***********  Find Predecessor  ************
+  
+1) node has left subtree 
+we find maximum node at left subtree
+predecessor(3) = 1 , predecessor(8) = 7
+
+2) node doesn't have a left subtree
+Travel up using the parent pointer until you see a node which is right child of it’s parent.The parent of such a node is the predecessor
+predecessor(4) = 3 , predecessor(14) = 10 , predecessor(1) = NULL
+*/
 struct node
 {
     int   item;
