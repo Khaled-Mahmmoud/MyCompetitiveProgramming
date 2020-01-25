@@ -1,0 +1,238 @@
+********************** copy or move *************************
+Copies the elements in the range [first,last] into the range beginning at result
+case 1:
+    vector<int>v={3,4,4,5,6,5},v1(3);
+    copy(v.begin(),v.end(),v1.begin()); or move(v.begin(),v.end(),v1.begin());
+    for(int z:v1)cout<<z<<' '; // 3 4 4
+case 2:
+    vector<int>v={3,4,4,5,6,5},v1(0);
+    copy(v.begin(),v.end(),v1.begin());
+    for(int z:v1)cout<<z<<' '; // run error
+case 3:
+    vector<int>v={3,4,4,5,6,5},v1;
+    copy(v.begin(),v.end(),v1.begin());
+    for(int z:v1)cout<<z<<' '; // run error
+case 4:
+    vector<int>v={3,4,4,5,6,5},v1(10);
+    copy(v.begin(),v.end(),v1.begin()+2);
+    for(int z:v1)cout<<z<<' '; // 0 0 3 4 4 5 6 5
+case 5:
+    vector<int>v={3,4,4,5,6,5},v1(10);
+    auto it=v1.end();it--;
+    copy(v.begin(),v.end(),it);
+    for(int z:v1)cout<<z<<' '; // run error
+Complexity : linear in the distance between first and last
+********************** copy_n *************************
+copy(first1 itr, n,first2 itr)
+Copies the first n elements from the range beginning at first into the range beginning at result
+Complexity : linear in the distance between first and last O(n)
+********************** copy_if *************************
+Copies the elements in the range [first,last] for which pred returns true to the range beginning at result
+copy_if(first1 itr,last1 itr,first2 itr,pred)
+Complexity : linear in the distance between first and last
+
+********************** copy_backward or move_backward *************************
+Copies the elements in the range [first,last] starting from the end into the range terminating at result
+
+    vector<int>v={3,4,4,5,6,7},v1(10);
+    copy_backward(v.begin(),v.end(),v1.begin()+3);
+    for(int z:v1)cout<<z<<' '; // 5 6 7 0 0 0 0 0 0 0
+ Complexity : linear in the distance between first and last
+********************** swap *************************
+Exchanges the values of a and b
+swap(a,b)
+ Complexity : Constant
+ 
+ ********************** swap_ranges *************************
+ swap_ranges(first1,last1,first2)
+ Exchanges the values of each of the elements in the range [first1,last1] with those of their respective elements 
+ in the range beginning at first2
+ Complexity : linear in the distance between first and last
+ 
+  ********************** iter_swap *************************
+Exchange values of objects pointed to by two iterators
+iter_swap( itr1, itr2)
+ Complexity : Constant
+
+********************** transform *************************
+
+is used in two different ways :
+ 
+1.unary operation : This method performs unary operation op on the elements in range [first1, last1] and stores the result 
+in range starting from result
+[x1,x2,x3,x4] ===>>> [f(x1),f(x2),f(x3),f(x4)]
+
+2.Binary operation:- This method performs binary operation binary_op on the elements in range [first1, last1] with the elements 
+in the range starting with iterator first2 and stores the result in range starting from result
+[x1,x2,x3,x4] , [y1,y2,y3,y4] ===>>> [f(x1,y1),f(x2,y2),f(x3,y3),f(x4,y4)]
+
+int op_increase (int i) { return ++i; }
+int main () 
+{
+  vector<int> foo,bar;
+  
+  for (int i=1; i<6; i++)
+    foo.push_back (i*10);                         // foo: 10 20 30 40 50
+
+  bar.resize(foo.size());                         // allocate space
+
+  transform (foo.begin(), foo.end(), bar.begin(), op_increase);    // bar: 11 21 31 41 51
+                                                
+  // std::plus adds together its two arguments:
+  transform (foo.begin(), foo.end(), bar.begin(), foo.begin(), plus<int>());    // foo: 21 41 61 81 101
+                               
+  return 0;
+}
+Complexity : linear in the distance between first and last
+
+********************** replace *************************
+Assigns new_value to all the elements in the range [first,last]that compare equal to old_value
+
+vector<int>v= {10,20,30,30,20,10,10,20}
+replace (v.begin(), v.end(), 20, 99); // 10 99 30 30 99 10 10 99
+
+Complexity : linear in the distance between first and last
+
+********************** replace_if *************************
+Assigns new_value to all the elements in the range [first,last]for which pred returns true
+
+struct myclass
+{
+     int operator()(int i){ return i%2;}
+}isodd;
+vector<int>v= {35,20,3,30,20,17,10,29};
+replace (v.begin(), v.end(), isodd, 0); // 0 20 0 30 20 0 10 0
+
+Complexity : linear in the distance between first and last
+
+********************** replace_copy *************************
+Copies the elements in the range [first,last] to the range beginning at result, replacing the appearances of old_value by new_value
+
+  int myints[] = { 10, 20, 30, 30, 20, 10, 10, 20 };
+  vector<int> myvector (8);
+  replace_copy (myints, myints+8, myvector.begin(), 20, 99); // 10 99 30 30 99 10 10 99
+   
+Complexity : linear in the distance between first and last
+
+********************** replace_copy_if *************************
+Copies the elements in the range [first,last] to the range beginning at result, replacing those for which pred returns true by new_value
+
+bool isodd (int i) { return i%2; }
+vector<int> foo,bar;
+// set some values:
+for (int i=1; i<10; i++) foo.push_back(i);          // 1 2 3 4 5 6 7 8 9
+bar.resize(foo.size());   // allocate space
+replace_copy_if (foo.begin(), foo.end(), bar.begin(), IsOdd, 0);// 0 2 0 4 0 6 0 8 0
+                                                        
+Complexity : linear in the distance between first and last
+
+********************** fill *************************
+Assigns val to all the elements in the range [first,last]
+fill(first itr,last itr,val)
+Complexity : linear in the distance between first and last
+********************** fill_n *************************
+Assigns val to the first n elements of the sequence pointed by first
+fill(first itr, n ,val)
+Complexity : linear in n
+********************** generate *************************
+Assigns the value returned by successive calls to gen to the elements in the range [first,last]
+generate(first itr, last itr, pred)
+
+int pred()
+{
+    static int i=0;
+     return ++i;
+}
+vector<int>v={3,4,8,9,2,3,5,2}
+generate(v.begin(),v.end(),pred); // 1 2 3 4 5 6 7 8
+
+Complexity : linear in the distance between first and last
+
+********************** generate_n *************************
+Assigns the value returned by successive calls to gen to the first n elements of the sequence pointed by first
+generate(first itr, n , pred)
+Complexity : linear in n
+
+********************** for_each *************************
+Applies function fn to each of the elements in the range [first,last]
+void myfunction (int i) 
+{  
+  cout << ' ' << i;
+}
+struct myclass 
+{          
+  void operator() (int i) {cout << ' ' << i;}
+} myobject;
+int main ()
+{
+  vector<int> myvector={10,20,30};
+  cout << "myvector contains:";
+  for_each (myvector.begin(), myvector.end(), myfunction);
+  cout << '\n';
+
+  cout << "myvector contains:";
+  for_each (myvector.begin(), myvector.end(), myobject);
+  cout << '\n';
+
+  return 0;
+}
+// Another Example
+struct myclass
+{
+  void operator() (int &i) {i++;}
+} myobject;
+vector<int> myvector={10,20,30};
+cout << "myvector contains:";
+for_each (myvector.begin(), myvector.end(), myobject);
+cout << '\n';
+for(int z:myvector)cout<<z<<' '; // 11 21 31
+Complexity : linear in the distance between first and last
+
+********************** remove *************************
+Remove elements from range that equal to val and returns an iterator to the new end of that range
+auto it = remove(first iterator , last iterator , val)
+Complexity : linear in the distance between first and last
+
+********************** remove_if *************************
+Remove elements from range for which pred returns true and returns an iterator to the new end of that range
+auto it = remove(first iterator , last iterator , pred)
+bool isodd (int i) { return ((i%2)==1); }
+vector<int>v={2,3,4,5,6,7,8} ;
+vector<int>::iterator = remove(v.begin(),v.end(),isodd) ; // 2 4 5 6 8
+Complexity : linear in the distance between first and last
+
+********************** remove_copy *************************
+Copies the elements in the range [first,last] to the range beginning at result, except those elements that compare equal to val
+remove_copy(first1,last1,first2,val)
+int myints[] = {10,20,30,30,20,10,10,20};               // 10 20 30 30 20 10 10 20
+  vector<int> myvector (8);
+  remove_copy (myints,myints+8,myvector.begin(),20); // 10 30 30 10 10 0 0 0
+Complexity : linear in the distance between first and last
+
+********************** remove_copy_if *************************
+Copies the elements in the range [first,last] to the range beginning at result , except those elements for which pred returns true
+
+bool isodd (int i) { return ((i%2)==1); }
+int main () {
+  int myints[] = {1,2,3,4,5,6,7,8,9};
+       vector<int> myvector (9);
+       remove_copy_if (myints,myints+9,myvector.begin(),IsOdd);  // 2 4 6 8 0 0 0 0 0
+Complexity : linear in the distance between first and last
+
+********************** unique *************************
+Removes all but the first element from every consecutive group of equivalent elements in the range [first,last] and returns an iterator 
+to the new end of that range
+auto it = unique(first,last)  OR  auto it = unique(first,last,pred)
+int myints[] = {10,20,20,20,30,30,20,20,10};           
+  vector<int> myvector (myints,myints+9);
+  vector<int>::iterator it = unique (myvector.begin(), myvector.end());   // 10 20 30 20 10 ?  ?  ?  ?
+                                                                                                 ^
+^ refers to it ( the new end of range)
+myvector.resize( distance(myvector.begin(),it) ); // 10 20 30 20 10
+Complexity : linear in the distance between first and last
+
+********************** unique_copy *************************
+Copies the elements in the range [first,last] to the range beginning at result, except consecutive duplicates and returns an iterator 
+to the new end of that range
+auto it = unique_copy(first1,last1,first2)  OR  auto it = unique_copy(first1,last1,first2,pred)
+Complexity : linear in the distance between first and last
