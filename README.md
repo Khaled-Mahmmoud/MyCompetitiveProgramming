@@ -23,6 +23,10 @@
 - [Algorithm](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/STL/Algorithm)
 - [Iterator](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/STL/Iterator)
 
+### Adhoc
+- [Adhoc & Greedy & Implementation](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Adhoc/Adhoc%20%26%20Greedy%20%26%20Implementation)
+- [Adhoc Problems](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Adhoc/Adhoc%20Problems)
+	- [Find Second largest element](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Adhoc/Adhoc%20Problems/A%20_%20Find%20Second%20largest%20element%20.cpp)
 ### Two Pointers
 - [Largest Sum Contiguous](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Two%20Pointers/Largest%20Sum%20Contiguous)
 ### Dynamic Programming
