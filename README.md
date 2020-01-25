@@ -45,9 +45,18 @@
 	- [Count all paths top-left bottom-right](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/K%20_%20Count%20all%20paths%20%20top-left%20%20bottom-right.cpp)
 
 ### Number Theory
-- [Count trailing zeroes N!](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Number%20Theory/Count%20trailing%20zeroes%20N!)
+- [Check Integer Primality](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Check%20Integer%20Primality.cpp)
+- [GenerateDivisors](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/GenerateDivisors.cpp)
+- [Modular Arithmetic](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Modular%20Arithmetic)
+- [Prime Factors](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Prime%20Factors.cpp)
 - [Number System](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Number%20System)
-
+- [Count trailing zeroes N!](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Number%20Theory/Count%20trailing%20zeroes%20N!)
+	- [leadingZeroBase10 & doubleFactorial](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Count%20trailing%20zeroes%20N!/A%20_%20leadingZeroBase10%20%26%20doubleFactorial.cpp)
+	- [SmallestNumberHasNTrailingZero](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Count%20trailing%20zeroes%20N!/B%20_%20SmallestNumberHasNTrailingZero.cpp)
+	- [TrailingZeroBase16&BaseB](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Count%20trailing%20zeroes%20N!/C%20%20_%20TrailingZeroBase16%26BaseB.cpp)
+	- [TrailingBinary&productOfarray](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Count%20trailing%20zeroes%20N!/D%20_%20TrailingBinary%26productOfarray.cpp)
+- [Problems](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Number%20Theory/Problems)
+	- [Enlarge GCD](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Problems/A%20_%20Enlarge%20GCD.cpp)
 
 ### Strings
 - [KMP](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/String/KMP)
