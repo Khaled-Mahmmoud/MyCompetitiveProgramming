@@ -29,10 +29,6 @@ solution to this problem
 
 */
 
-#include <bits/stdc++.h>
-#define ll long long
-#define mod  1000000007
-using namespace std;
 struct item
 {
     int value,weight;
@@ -45,7 +41,7 @@ bool cmp(struct item a,struct item b)
     return r1>r2;
     
 }
-double fraction(int w,struct item arr[],int n)
+double fraction(struct item arr[],int w,int n)
 {
     sort(arr,arr+n,cmp);
     int curweight = 0;
@@ -68,11 +64,9 @@ double fraction(int w,struct item arr[],int n)
 }
 int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(0);cout.tie(0);
     int w = 50;
     item arr[] = {{60,10},{100,20},{120,30}};
     int n = sizeof(arr)/sizeof(arr[0]);
-    cout<<fraction(w,arr,n);
+    cout<<fraction(arr,w,n);
     return 0;
 }
