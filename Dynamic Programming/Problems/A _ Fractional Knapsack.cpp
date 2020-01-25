@@ -36,8 +36,8 @@ struct item
 };
 bool cmp(struct item a,struct item b)
 {
-    double r1 = (double)a.value/a.weight;
-    double r2 = (double)b.value/b.weight;
+    double r1 = (double)a.value / a.weight;
+    double r2 = (double)b.value / b.weight;
     return r1>r2;
     
 }
@@ -48,15 +48,15 @@ double fraction(struct item arr[],int w,int n)
     double finalvalue = 0.0;
     for(int i=0;i<n;i++)
     {
-        if(curweight+arr[i].weight<=w)
+        if(curweight + arr[i].weight <= w)
         {
-            curweight+=arr[i].weight;
-            finalvalue+=arr[i].value;
+            curweigh t+=arr[i].weight;
+            finalvalue +=arr[i].value;
         }
         else
         {
             double remain = w - curweight;
-            finalvalue+= arr[i].value * (remain/arr[i].weight);
+            finalvalue += arr[i].value * (remain/arr[i].weight);
             break;
         }
     }
