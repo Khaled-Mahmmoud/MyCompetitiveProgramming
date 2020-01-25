@@ -80,16 +80,17 @@
 
 
 ### Math
-- [Greatest Common Divisor (GCD)](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Greatest%20Common%20Divisor.cpp)
-- [Least Common Multiple (LCM)](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Least%20Common%20Multiple.cpp)
-- [GCD & LCM & Matrix](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM%20%26%20Matrix.pdf)
+- [Power](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Power.cpp)
+- [Basics of Math](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Math/Basics%20of%20Math)
+	- [Elementary](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Basics%20of%20Math/Elementary)
+	- [Functions](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Basics%20of%20Math/Functions.cpp)
+	- [Logarithms](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Basics%20of%20Math/Logarithms)
+	- [Logic](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Basics%20of%20Math/Logic)
+	- [Sequence](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Basics%20of%20Math/Sequence)
+	- [Series](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Basics%20of%20Math/Series)
 - [Set Theory](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Math/Set%20Theory)
 	- [Sets and Operations](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Set%20Theory/Sets%20and%20Operations)
 	- [Table of set theory symbols](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Math/Set%20Theory/Table%20of%20set%20theory%20symbols)
-- [Sequence](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Sequence)
-- [Permutations and Combinations](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Permutations%20and%20Combinations)
-- [Euclidean Algorithm](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Euclidean%20Algorithm)
-- [Check Integer Primality](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Check%20Integer%20Primality.cpp)
 	
 ### Graph
 - [Graphs](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Graph/Graphs)
