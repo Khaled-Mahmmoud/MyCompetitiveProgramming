@@ -105,6 +105,12 @@
 - [Shortest Path](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Graph/Shortest%20Path)
 	- [Dijkstra](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Graph/Shortest%20Path/Dijkstra.cpp)
 
+### Tree
+- [Trees](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Tree/A%20_%20Trees)
+- [Binary Tree](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Tree/B%20_%20Binary%20Tree)
+- [Binary Tree Traversal](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Tree/C%20_%20Binary%20Tree%20Traversal.cpp)
+- [Binary Search Tree](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Tree/D%20_%20Binary%20Search%20Tree.cpp)
+
 ### General
 - [Binary Search](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Binary%20Search.cpp)
 - [Cumulative Sum.pdf](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Cumulative%20Sum.pdf)
