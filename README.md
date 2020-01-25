@@ -82,6 +82,19 @@
 - [Euclidean Algorithm](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Euclidean%20Algorithm)
 - [Check Integer Primality](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Check%20Integer%20Primality.cpp)
 	
+### Graph
+- [Graphs](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Graph/Graphs)
+- [Graph Traversal and Representation](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Graph/Graph%20Traversal%20and%20Representation)
+	- [BFS](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Graph/Graph%20Traversal%20and%20Representation/BFS.cpp)
+	- [DFS](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Graph/Graph%20Traversal%20and%20Representation/DFS.cpp)
+- [Topological Sort](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Graph/Topological%20Sort)
+	- [BFS](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Graph/Topological%20Sort/BFS.cpp)
+	- [DFS](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Graph/Topological%20Sort/DFS.cpp)
+- [Lowest Common Ancestor](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Graph/Lowest%20Common%20Ancestor)
+	- [Lowest Common Ancestor](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Graph/Lowest%20Common%20Ancestor/Lowest%20Common%20Ancestor)
+- [Shortest Path](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Graph/Shortest%20Path)
+	- [Dijkstra](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Graph/Shortest%20Path/Dijkstra.cpp)
+
 ### General
 - [Binary Search](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Binary%20Search.cpp)
 - [Cumulative Sum.pdf](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Cumulative%20Sum.pdf)
