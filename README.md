@@ -92,7 +92,12 @@
 - [Set Theory](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Math/Set%20Theory)
 	- [Sets and Operations](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Set%20Theory/Sets%20and%20Operations)
 	- [Table of set theory symbols](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Math/Set%20Theory/Table%20of%20set%20theory%20symbols)
-	
+- [GCD & LCM](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Math/GCD%20%26%20LCM)
+	- [GCD & LCM](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/GCD%20%26%20LCM.cpp)
+	- [GCD & LCM & Matrix](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/GCD%20%26%20LCM%20%26%20Matrix.pdf)
+	- [Extended Euclidean Algorithm](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Extended%20Euclidean%20Algorithm.cpp)
+	- [Problems](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Math/GCD%20%26%20LCM/Problems)
+		- [GCD & LCM of array](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/A%20_%20GCD%20%26%20LCM%20of%20array.cpp)
 ### Graph
 - [Graphs](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Graph/Graphs)
 - [Graph Traversal and Representation](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Graph/Graph%20Traversal%20and%20Representation)
