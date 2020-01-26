@@ -1,0 +1,20 @@
+********************** pow **********************
+Returns base raised to the power exponent : pow(a,b)
+pow(7 , 3)        =   343.000000
+pow(4.73 , 12)    =   125410439.217423
+pow(32.01 , 1.54) =   208.036691
+Time complexity O(log b)
+
+********************** sqrt **********************
+Returns the square root of x : sqrt(x)
+sqrt(4) = 2
+sqrt(7) = 2.64575
+sqrt(9) = 3
+Time complexity O(log x)
+
+********************** cbrt **********************
+Returns the cubic root of x : cbrt(x)
+cbrt(8) = 2
+cbrt(27) = 3
+cbrt(43) = 3.5033
+Time complexity O(log x)
