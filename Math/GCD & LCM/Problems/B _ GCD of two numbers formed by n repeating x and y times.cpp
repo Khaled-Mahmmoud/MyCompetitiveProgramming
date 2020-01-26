@@ -1,6 +1,6 @@
 /*
 Given three positive integer n, x, y. The task is to print Greatest Common Divisor of numbers formed by n repeating x times 
-and number formed by n repeating y times.    0 <= n, x, y <= 1000000000
+and number formed by n repeating y times.    0 <= n, x, y <= 10^9
 
 Input : n = 123, x = 2, y = 3.
 Output : 123
