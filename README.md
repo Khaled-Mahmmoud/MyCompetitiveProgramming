@@ -98,6 +98,10 @@
 	- [Extended Euclidean Algorithm](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Extended%20Euclidean%20Algorithm.cpp)
 	- [Problems](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Math/GCD%20%26%20LCM/Problems)
 		- [GCD & LCM of array](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/A%20_%20GCD%20%26%20LCM%20of%20array.cpp)
+		- [GCD of two numbers formed by n repeating x and y times](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20&%20LCM/Problems/B%20_%20GCD%20of%20two%20numbers%20formed%20by%20n%20repeating%20x%20and%20y%20times.cpp)
+		- [GCD(long long ,string)](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/C%20_%20GCD(long%20long%20%2Cstring).cpp)
+		- [Product of given N fractions](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/D%20_%20Product%20of%20given%20N%20fractions.cpp)
+		- [LCM Challenge](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/E%20_%20LCM%20Challenge%20.cpp)
 ### Graph
 - [Graphs](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Graph/Graphs)
 - [Graph Traversal and Representation](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Graph/Graph%20Traversal%20and%20Representation)
