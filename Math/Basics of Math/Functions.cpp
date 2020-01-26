@@ -1,4 +1,4 @@
-/*                                                                               _   _
+/*                                                                             _   _
 The function |_ x _| rounds the number x down to an integer, and the function |  x  | rounds the number x up to an integer
                                 _   _
 For example  |_ 3/2 _| = 1 and | 3/2 | = 2 
