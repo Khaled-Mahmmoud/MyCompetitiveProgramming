@@ -69,8 +69,13 @@
 
 ### Strings
 - [KMP](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/String/KMP)
+	- [Terminology](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/KMP/A%20_%20Terminology)
+	- [Failure Function](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/KMP/B%20_%20Failure%20Function.cpp)
+	- [KMP](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/KMP/C%20_%20KMP.cpp)
+	- [Palindrome & Failure Function](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/KMP/D%20_%20Palindrome%20%26%20Failure%20Function)
+	- [Repetition & Failure Function](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/KMP/E%20_%20Repetition%20%26%20Failure%20Function)
+	- [Frequency & Failure Function](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/KMP/F%20_%20Frequency%20%26%20Failure%20Function)
 - [Trie](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/String/Trie)
-	- [Abstraction](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/Trie/Abstraction.pdf)
 	- [Implemented with static memory allocation](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/Trie/Trie_Static.cpp)
 	- [Implemented with dynamic memory allocation](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/Trie/Trie_dynamic.cpp)
 
