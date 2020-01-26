@@ -1,10 +1,11 @@
-#include <bits/stdc++.h>
-using namespace std;
-void fast()
-{
-    ios::sync_with_stdio(false);
-    cin.tie(0);
-}
+/* 
+Computes the shortest path between the given source node and
+ * all the other nodes in a weighted graph using the Dijkstra's algorithm,
+ * and fills the results in the global "dis" and "par" arrays.
+ * (i.e. Single-Source Shortest Path (SSSP))
+ * 
+ * Complexity: O((n+m)log(n))
+  */
 vector<vector<pair<int,int>>>adj;
 vector<int>par;
 int n,m;
