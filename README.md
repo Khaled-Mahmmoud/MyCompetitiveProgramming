@@ -55,7 +55,11 @@
 	- [Longest Palindromic Subsequence](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/H%20_%20Longest%20Palindromic%20Subsequence.cpp)
 	- [Dice Combinations](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/I%20_%20Dice%20Combinations.cpp)
 	- [Coin Combinations](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/J%20_%20Coin%20Combinations.cpp)
-	- [Count all paths top-left bottom-right](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/K%20_%20Count%20all%20paths%20%20top-left%20%20bottom-right.cpp)
+	- [paths top-left bottom-right](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/K%20_%20Count%20all%20paths%20%20top-left%20%20bottom-right.cpp)
+	- [Rectangle Cutting](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/L%20_%20Rectangle%20Cutting.cpp)
+	- [Subset Sum Problem](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/M%20_%20Subset%20Sum%20Problem.cpp)
+	- [Removal Game](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/N%20_%20Removal%20Game.cpp)
+	- [Two Sets](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/O%20_%20Two%20Sets.cpp)
 
 ### Number Theory
 - [Check Integer Primality](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Check%20Integer%20Primality.cpp)
