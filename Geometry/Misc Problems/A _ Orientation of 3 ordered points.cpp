@@ -41,11 +41,11 @@ void orientation(Point p1, Point p2, Point p3)
     int val = (p2.y - p1.y) * (p3.x - p2.x) - (p2.x - p1.x) * (p3.y - p2.y); 
   
     if (val == 0)
-        cout<<colinear 
+        cout<<"colinear";
     else if(val>0)
         cout<<"clockwise";
     else 
-        cout<<" counterclockwise";
+        cout<<"counterclockwise";
 } 
 int main() 
 { 
