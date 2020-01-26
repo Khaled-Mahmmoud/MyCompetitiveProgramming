@@ -21,13 +21,13 @@
 
 ### STL
 - [Structures](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/STL/Structures.cpp)
+- [Pointers](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/STL/Pointers.cpp)
 - [Algorithm](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/STL/Algorithm)
 	- [Modifying sequence](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/STL/Algorithm/Modifying%20sequence)
 	- [Modifying sequence1](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/STL/Algorithm/Modifying%20sequence1)
 	- [Non-modifying sequence](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/STL/Algorithm/Non-modifying%20sequence)
 	- [Partitions](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/STL/Algorithm/Partitions)
 	- [Sorting and Binary Search](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/STL/Algorithm/Sorting%20and%20Binary%20Search)
-- [Iterator](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/STL/Iterator)
 - [Cmath](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/STL/Cmath)
 	- [Power functions](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/STL/Cmath/Power%20functions)
 	- [Rounding and remainder functions](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/STL/Cmath/Rounding%20and%20remainder%20functions)
