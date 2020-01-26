@@ -13,7 +13,7 @@ Input: a = 1221
 Output: 3
 
 Solution : In the given problem, we can see that first number ‘a’ can be handled by long long int data type but second number ‘b’
-can not be handled by any int data type. Here we read second number as a string and we will try to make it less than and equal to ‘a’ 
+can not be handled by any int data type. Here we read second number as a string and we will try to make it less than or equal to ‘a’ 
 by taking it’s modulo with ‘a’.
 */
 
