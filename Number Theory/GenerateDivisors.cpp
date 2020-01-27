@@ -38,7 +38,7 @@ void generateDivisors(int n) {
 
 // =====================================================================================
 /*
-Given an array of integers and you have to find the index of the number witch has the maximum number of divisors, 
+Given an array of integers and you have to find the index of the number which has the maximum number of divisors, 
 if there many answers print the smallest index
 N <= 10^6
 a[i] <= 10^6
