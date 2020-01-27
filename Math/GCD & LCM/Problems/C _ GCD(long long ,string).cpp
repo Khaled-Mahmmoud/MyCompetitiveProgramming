@@ -17,9 +17,7 @@ can not be handled by any int data type. Here we read second number as a string 
 by taking it’s modulo with ‘a’.
 */
 
-#include <bits/stdc++.h>
-#define ll long long
-using namespace std;
+
 ll gcd(ll a,ll b)
 {
     if(!b)return a;
@@ -29,13 +27,11 @@ ll reduce(int a,string b)
 {
     ll mod=0;
     for(int i=0;b[i];i++)
-        mod=(mod*10+b[i]-'0')%a;
+        mod=(mod*10+(b[i]-'0'))%a;
     return mod;
 }
 int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(0);cout.tie(0);
     ll a;string b;cin>>a>>b;
     int c = reduce(a,b);
     cout<<gcd(a,c);
