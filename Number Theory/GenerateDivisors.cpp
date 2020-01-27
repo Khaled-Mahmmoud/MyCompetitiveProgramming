@@ -43,15 +43,11 @@ if there many answers print the smallest index
 N <= 10^6
 a[i] <= 10^6
 */
-#include <bits/stdc++.h>
-#define ll long long
+
 #define N  1000000
-using namespace std;
 vector<int>d(N);
 int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(0);cout.tie(0);
     for (int i = 1; i < N; ++i)
         for (int j = i; j < N; j += i)
             d[j]++;
