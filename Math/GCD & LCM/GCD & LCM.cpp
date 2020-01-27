@@ -39,10 +39,7 @@ Below is a recursive function to evaluate gcd using Euclidean’s algorithm
 
 O(log min(a,b))
 */
-#include <bits/stdc++.h>
-#define ll long long
 #define N 50000000
-using namespace std;
 int gcd(int a,int b)
 {
     if(b==0)
@@ -51,8 +48,6 @@ int gcd(int a,int b)
 }
 int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(0);cout.tie(0);
     int a,b;cin>>a>>b;
     cout<<gcd(a,b);
     return 0;
@@ -67,10 +62,7 @@ if gcd(a,b) = 1
 
 
 // LCM (Least Common Multiple) 
-#include <bits/stdc++.h>
-#define ll long long
 #define N 50000000
-using namespace std;
 int gcd(int a,int b)
 {
     if(b==0)
@@ -83,8 +75,6 @@ int lcm(int a,int b)
 }
 int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(0);cout.tie(0);
     int a,b;cin>>a>>b;
     cout<<lcm(a,b);
     return 0;
