@@ -38,11 +38,11 @@ int phi(int n)
         { 
             while (n % p == 0) 
                 n /= p; 
-            result *= (1 - (1.0 / p)); 
+            result *= (1 - (1 / (double)p)); 
         } 
     } 
     if (n > 1) 
-        result *= (1 - (1.0 / n)); 
+        result *= (1 - (1 / (double)n)); 
   
     return (int)result; 
 } 
