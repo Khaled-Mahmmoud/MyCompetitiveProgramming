@@ -7,16 +7,16 @@ i.e., the numbers whose GCD (Greatest Common Divisor) with n is 1
 ?(1) = 1  
 gcd(1, 1) is 1
 ?(2) = 1
-gcd(1, 2) is 1, but gcd(2, 2) is 2.
+gcd(2, 1) is 1, but gcd(2, 2) is 2.
 ?(3) = 2
-gcd(1, 3) is 1 and gcd(2, 3) is 1
+gcd(3, 1) is 1 and gcd(3, 2) is 1
 ?(4) = 2
-gcd(1, 4) is 1 and gcd(3, 4) is 1
+gcd(4, 1) is 1 and gcd(4, 3) is 1
 ?(5) = 4
-gcd(1, 5) is 1, gcd(2, 5) is 1, 
-gcd(3, 5) is 1 and gcd(4, 5) is 1
+gcd(5, 1) is 1, gcd(5, 2) is 1, 
+gcd(5, 3) is 1 and gcd(5, 4) is 1
 ?(6) = 2
-gcd(1, 6) is 1 and gcd(5, 6) is 1
+gcd(6, 1) is 1 and gcd(6, 5) is 1
 A simple solution is to iterate through all numbers from 1 to n-1 and count numbers with gcd with n as 1
 Complexity : O(n)
 Below is a Better Solution. The idea is based on Euler’s product formula which states that value of totient functions 
