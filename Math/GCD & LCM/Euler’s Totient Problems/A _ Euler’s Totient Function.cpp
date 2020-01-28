@@ -20,8 +20,11 @@ gcd(6, 1) is 1 and gcd(6, 5) is 1
 A simple solution is to iterate through all numbers from 1 to n-1 and count numbers with gcd with n as 1
 Complexity : O(nlog(n))
 Below is a Better Solution. The idea is based on Euler’s product formula which states that value of totient functions 
-is below product over all prime factors p of n.
- ϕ(n) = n sum(p|n)(1-1/p)
+is below product over all prime factors p of n
+
+ ϕ(n) = n II (1-1/p)
+          p|n
+          
 The formula basically says that the value of ?(n) is equal to n multiplied by product of (1 – 1/p) for all prime factors p of n
 For example value of ?(6) = 6 * (1-1/2) * (1 – 1/3) = 2
 */
