@@ -24,15 +24,12 @@
 	- [Algorithm](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/Libraries/Algorithm)
 	- [Cmath](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/Libraries/Cmath)
 
-### Adhoc
-- [Adhoc & Greedy & Implementation](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Adhoc/Adhoc%20%26%20Greedy%20%26%20Implementation)
-- [Adhoc Problems](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Adhoc/Adhoc%20Problems)
-	- [Find Second largest element](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Adhoc/Adhoc%20Problems/A%20_%20Find%20Second%20largest%20element%20.cpp)
 	
 ### Two Pointers
 - [Two Pointers Technique](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Two%20Pointers/Two%20Pointers%20Technique.cpp)
 - [Problems](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Two%20Pointers/Problems)
 	- [Maximum subarray sum](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Two%20Pointers/Problems/A%20_%20Maximum%20subarray%20sum.cpp)
+
 
 ### Dynamic Programming
 - [Dynamic Programming](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Dynamic%20Programming)
@@ -53,6 +50,7 @@
 	- [Removal Game](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/N%20_%20Removal%20Game.cpp)
 	- [Two Sets](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/O%20_%20Two%20Sets.cpp)
 
+
 ### Number Theory
 - [Check Integer Primality](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Check%20Integer%20Primality.cpp)
 - [GenerateDivisors](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/GenerateDivisors.cpp)
@@ -66,18 +64,6 @@
 	- [TrailingBinary&productOfarray](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Count%20trailing%20zeroes%20N!/D%20_%20TrailingBinary%26productOfarray.cpp)
 - [Problems](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Number%20Theory/Problems)
 	- [Enlarge GCD](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Problems/A%20_%20Enlarge%20GCD.cpp)
-
-### Strings
-- [KMP](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/String/KMP)
-	- [Terminology](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/KMP/A%20_%20Terminology)
-	- [Failure Function](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/KMP/B%20_%20Failure%20Function.cpp)
-	- [KMP](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/KMP/C%20_%20KMP.cpp)
-	- [Palindrome & Failure Function](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/KMP/D%20_%20Palindrome%20%26%20Failure%20Function)
-	- [Repetition & Failure Function](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/KMP/E%20_%20Repetition%20%26%20Failure%20Function)
-	- [Frequency & Failure Function](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/KMP/F%20_%20Frequency%20%26%20Failure%20Function)
-- [Trie](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/String/Trie)
-	- [Implemented with static memory allocation](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/Trie/Trie_Static.cpp)
-	- [Implemented with dynamic memory allocation](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/Trie/Trie_dynamic.cpp)
 
 
 ### Math
@@ -107,6 +93,21 @@
 		- [Minimum gcd operations to make all array elements one](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/G%20_%20Minimum%20gcd%20operations%20to%20make%20all%20array%20elements%20one.cpp)
 		- [Largest Subset with GCD 1](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/J%20_%20Largest%20Subset%20with%20GCD%201.cpp)
 		- [GCD of all elements except in range](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/K%20_%20GCD%20of%20all%20elements%20except%20in%20range.cpp)
+		
+
+### Strings
+- [KMP](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/String/KMP)
+	- [Terminology](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/KMP/A%20_%20Terminology)
+	- [Failure Function](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/KMP/B%20_%20Failure%20Function.cpp)
+	- [KMP](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/KMP/C%20_%20KMP.cpp)
+	- [Palindrome & Failure Function](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/KMP/D%20_%20Palindrome%20%26%20Failure%20Function)
+	- [Repetition & Failure Function](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/KMP/E%20_%20Repetition%20%26%20Failure%20Function)
+	- [Frequency & Failure Function](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/KMP/F%20_%20Frequency%20%26%20Failure%20Function)
+- [Trie](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/String/Trie)
+	- [Implemented with static memory allocation](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/Trie/Trie_Static.cpp)
+	- [Implemented with dynamic memory allocation](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/String/Trie/Trie_dynamic.cpp)
+
+
 ### Graph
 - [Graphs](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Graph/Graphs)
 - [Graph Traversal and Representation](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Graph/Graph%20Traversal%20and%20Representation)
@@ -120,11 +121,14 @@
 - [Shortest Path](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Graph/Shortest%20Path)
 	- [Dijkstra](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Graph/Shortest%20Path/Dijkstra.cpp)
 
+
 ### Tree
 - [Trees](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Tree/A%20_%20Trees)
 - [Binary Tree](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Tree/B%20_%20Binary%20Tree)
 - [Binary Tree Traversal](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Tree/C%20_%20Binary%20Tree%20Traversal.cpp)
 - [Binary Search Tree](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Tree/D%20_%20Binary%20Search%20Tree.cpp)
+
+
 
 ### General
 - [Binary Search](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Binary%20Search.cpp)
@@ -132,4 +136,10 @@
 - [Cumulative Sum.cpp](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Cumulative%20Sum.cpp)
 - [Frequency Array](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Frequency%20Array)
 
+
+### Adhoc
+- [Adhoc & Greedy & Implementation](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Adhoc/Adhoc%20%26%20Greedy%20%26%20Implementation)
+- [Adhoc Problems](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Adhoc/Adhoc%20Problems)
+	- [Find Second largest element](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Adhoc/Adhoc%20Problems/A%20_%20Find%20Second%20largest%20element%20.cpp)
+	
 ## Thanks
