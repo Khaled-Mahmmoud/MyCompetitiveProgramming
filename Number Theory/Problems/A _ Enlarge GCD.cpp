@@ -13,10 +13,6 @@ of integers can be divided by this prime. If all integers are 1 (after dividing 
 
 */
 
-#include <bits/stdc++.h>
-#define ll long long
-#define N  15000009
-using namespace std;
 int gcd(int a,int b)
 {
     if(!b)return a;
@@ -25,17 +21,17 @@ int gcd(int a,int b)
 vector<int>spf(N);
 void sieve()
 {
-    for(int i=0;i<N;i++)
-        if(i&1)spf[i]=i;else spf[i]=2;
-    for(int i=3;i<=sqrt(N);i+=2)
-    if(spf[i]==i)
-        for(int j=i*i;j<N;j+=i)
-        if(spf[j]==j)spf[j]=i;
+    for(int i=2;i*i<N;i++)
+    if(!spf[i])
+        for(int j=i;j<N;j+=i)
+        spf[j] = i;
+    for(int i=1;i<N;i++)
+        if(!spf[i])
+        spf[i] = i;
 }
 int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(0);cout.tie(0);sieve();
+    sieve();
     map<int,int>m;
     int n,g=0;cin>>n;int a[n];
     for(int i=0;i<n;i++)
