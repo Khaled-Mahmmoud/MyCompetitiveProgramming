@@ -21,22 +21,18 @@ void primeFactors(int n)
 
 // using Sieve of Eratosthenes
 // O(n.log(log(n)))
-#define N 10000009
+
 vector<int>spf(N);
 void sieve()
 {
-    for(int i=0;i<N;i++)
-    if( i & 1 )
+    for(int i=2;i*i<N;i++)
+    if(!spf[i])
+        for(int j=i;j<N;j+=i)
+        spf[j] = i;
+    for(int i=1;i<N;i++)
+        if(!spf[i])
         spf[i] = i;
-    else 
-        spf[i] = 2;
-    
-    for(int i=3 ; i*i<=N ; i+=2)
-        if(spf[i]==i)
-            for(int j=i*i;j<N;j+=i)
-              if(spf[j]==j)
-                spf[j]=i;
-} 
+}
 
 // O(log2(n))
 vector<int> primeFactors(int x) 
