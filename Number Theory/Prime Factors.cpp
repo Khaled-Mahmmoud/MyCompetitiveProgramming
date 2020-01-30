@@ -35,7 +35,7 @@ void sieve()
         spf[i] = i;
 }
 
-// O(log2(n))
+// O(log(n))
 vector<int> primeFactors(int x) 
 { 
     vector<int> res; 
