@@ -28,7 +28,8 @@ void sieve()
     for(int i=2;i*i<N;i++)
     if(!spf[i])
         for(int j=i;j<N;j+=i)
-        spf[j] = i;
+          spf[j] = i;
+    
     for(int i=1;i<N;i++)
         if(!spf[i])
         spf[i] = i;
