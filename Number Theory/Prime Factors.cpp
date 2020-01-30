@@ -21,6 +21,7 @@ void primeFactors(int n)
 
 // using Sieve of Eratosthenes
 // O(n.log(log(n)))
+// Auxiliary space : O(MAX)
 
 vector<int>spf(N);
 void sieve()
