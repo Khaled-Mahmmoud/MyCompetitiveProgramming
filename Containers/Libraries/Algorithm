@@ -20,6 +20,23 @@ auto it = upper_bound(first,last,val)   OR   auto it = upper_bound(first,last,va
 Complexity : log2(N) where N is the distance between first and last
 
 ********************** binary_search *************************
-Returns true if any element in the range [first,last) is equivalent to val, and false otherwise.
+Returns true if any element in the range [first,last] is equivalent to val, and false otherwise.
 binary_search(first,last,val)   OR  binary_search(first,last,val,pred)
+Complexity :  the distance between first and last
+
+********************** min *************************
+min(a,b) OR min(a,b,cmp)          O(1)
+Returns the smallest of a and b. If both are equivalent, a is returned.
+********************** max *************************
+max(a,b) OR max(a,b,cmp)          O(1)
+Returns the largest of a and b. If both are equivalent, a is returned.
+********************** min_element *************************
+min_element(first,last) OR min_element(first,last,cmp)
+Returns an iterator pointing to the element with the smallest value in the range [first,last].
+int a[7] = {8,9,2,5,1,6,2}
+cout<<*min_element(a,a+7); // 1
+Complexity :  the distance between first and last
+********************** max_element *************************
+max_element(first,last) OR max_element(first,last,cmp)
+Returns an iterator pointing to the element with the largest value in the range [first,last].
 Complexity :  the distance between first and last
