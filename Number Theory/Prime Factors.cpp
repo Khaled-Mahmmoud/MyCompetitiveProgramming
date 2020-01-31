@@ -22,7 +22,7 @@ void primeFactors(int n)
 // using Sieve of Eratosthenes
 // O(n.log(log(n)))
 // Auxiliary space : O(MAX)
-
+#define N 10000009 
 vector<int>spf(N);
 void sieve()
 {
@@ -47,3 +47,19 @@ vector<int> primeFactors(int x)
     } 
     return res; 
 } 
+
+// Store all prime numbers in vector primes  less than and equal to 10^7
+#define N 10000009 
+vector<int>primes;
+void sieve()
+{
+    bool iscomposite[N];
+    for(int i=2;i*i<N;i++)
+    if(!iscomposite[i])
+        for(int j=2*i;j<N;j+=i) // notice that we start from 2*i
+          iscomposite[j] = true;
+    
+    for(int i=1;i<N;i++)
+        if(!iscomposite[i])
+           primes.push_back(i);
+}
