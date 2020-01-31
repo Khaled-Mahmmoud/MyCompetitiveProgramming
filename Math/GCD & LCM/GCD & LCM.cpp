@@ -93,7 +93,6 @@ int main()
 #include <boost/math/common_factor.hpp> 
 int main() 
 { 
-    cout << "LCM(10,20) = " << boost::math::lcm(10,20)  
-         << endl; 
+    cout << "LCM(10,20) = " << boost::math::lcm(10,20) << endl; 
     return 0; 
 } 
