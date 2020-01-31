@@ -92,7 +92,14 @@
 		- [First N divided into 2 sets with difference m and co-prime sums](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/F%20_%20First%20N%20divided%20into%202%20sets%20with%20difference%20m%20and%20co-prime%20sums.cpp)
 		- [Minimum gcd operations to make all array elements one](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/G%20_%20Minimum%20gcd%20operations%20to%20make%20all%20array%20elements%20one.cpp)
 		- [Largest Subset with GCD 1](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/J%20_%20Largest%20Subset%20with%20GCD%201.cpp)
+		- [Largest subsequence with GCD > 1](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/K%20_%20Largest%20subsequence%20with%20GCD%20%3E%201.cpp)
 		- [GCD of all elements except in range](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/K%20_%20GCD%20of%20all%20elements%20except%20in%20range.cpp)
+		- [Count number of pairs (A <= N, B <= N) such that gcd (A , B) is B](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/M%20_%20Count%20number%20of%20pairs%20(A%20%3C%3D%20N%2C%20B%20%3C%3D%20N)%20such%20that%20gcd%20(A%20%2C%20B)%20is%20B.cpp)
+		- [Pair with maximum GCD from two arrays](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/N%20_%20Pair%20with%20maximum%20GCD%20from%20two%20arrays.cpp)
+		- [Find GCD and LCM of rational numbers](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/O%20_%20Find%20GCD%20and%20LCM%20of%20rational%20numbers.cpp)
+		- [Maximum sum of distinct numbers with LCM as N](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/P%20_%20Maximum%20sum%20of%20distinct%20numbers%20with%20LCM%20as%20N.cpp)
+		- [Least Common Denominator](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/Q%20_%20Least%20Common%20Denominator.cpp)
+		- [Find max of two Rational numbers](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/R%20_%20Find%20max%20of%20two%20Rational%20numbers.cpp)
 		
 
 ### Strings
