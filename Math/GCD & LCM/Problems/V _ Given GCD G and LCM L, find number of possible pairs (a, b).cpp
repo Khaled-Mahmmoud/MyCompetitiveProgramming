@@ -95,3 +95,4 @@ int countPairs(int G, int L)
     int div = L/G; 
     return (1 << totalPrimeFactors(div)); 
 } 
+// Time Complexity : O(sqrt(L/G) * log(L/G)).
