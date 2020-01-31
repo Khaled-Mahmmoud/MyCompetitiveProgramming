@@ -100,6 +100,14 @@
 		- [Maximum sum of distinct numbers with LCM as N](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/P%20_%20Maximum%20sum%20of%20distinct%20numbers%20with%20LCM%20as%20N.cpp)
 		- [Least Common Denominator](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/Q%20_%20Least%20Common%20Denominator.cpp)
 		- [Find max of two Rational numbers](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/R%20_%20Find%20max%20of%20two%20Rational%20numbers.cpp)
+		- [Smallest number divisible by n and has at-least k trailing zeros](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/S%20_%20Smallest%20number%20divisible%20by%20n%20and%20has%20at-least%20k%20trailing%20zeros.cpp)
+		- [is right angled triangle?](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/T%20_%20is%20right%20angled%20triangle%3F.cpp)
+		- [Minimum steps to come back to starting point in a circular tour](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/U%20_%20Minimum%20steps%20to%20come%20back%20to%20starting%20point%20in%20a%20circular%20tour.cpp)
+		- [Given GCD G and LCM L, find number of possible pairs (a, b)](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/V%20_%20Given%20GCD%20G%20and%20LCM%20L%2C%20find%20number%20of%20possible%20pairs%20(a%2C%20b).cpp)
+		- [if LCM of array is divisible by K](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/W%20_%20if%20LCM%20of%20array%20is%20divisible%20by%20K.cpp)
+		- [Elements of array can be equal by multiplying prime numbers](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/X%20_%20Elements%20of%20array%20can%20be%20equal%20by%20multiplying%20prime%20numbers.cpp)
+		- [N-th multiple in sorted list of multiples of two numbers](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/Y%20_%20N-th%20multiple%20in%20sorted%20list%20of%20multiples%20of%20two%20numbers.cpp)
+		- [Smallest number to multiply to convert floating point to natural](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/Z%20_%20Smallest%20number%20to%20multiply%20to%20convert%20floating%20point%20to%20natural.cpp)
 		
 
 ### Strings
