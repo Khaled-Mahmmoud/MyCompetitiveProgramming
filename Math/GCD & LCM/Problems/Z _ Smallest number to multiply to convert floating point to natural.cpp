@@ -22,15 +22,9 @@ we convert into fraction as 3025/100. This can be easily done by finding the pos
 Finally to get the answer, we divide the denominator of the converted fraction by GCD of denominator and numerator
 For example, GCD of 3025 and 100 is 25. We divide 100 by 25 and get the answer as 4.
 
-
 */
 
-int gcd(int a, int b) 
-{ 
-    if (b == 0) 
-        return a; 
-    return gcd(b, a%b); 
-} 
+
 int findnum(string &str) 
 { 
     int n = str.length(); 
@@ -50,8 +44,8 @@ int findnum(string &str)
     } 
     if (dot_seen == false) 
        return 1; 
-    int dem = (int)pow(10, count_after_dot); 
-    return (dem / gcd(num, dem)); 
+    int dem = pow(10, count_after_dot); 
+    return (dem / __gcd(num, dem)); 
 } 
 int main() 
 { 
