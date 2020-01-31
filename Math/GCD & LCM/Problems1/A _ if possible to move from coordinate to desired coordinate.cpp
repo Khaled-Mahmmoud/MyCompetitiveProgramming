@@ -32,14 +32,6 @@ we can reach to (a, b) if and only if GCD of ‘a’ and ‘b’ is also gcd.
 
 */
 
-int gcd(int i, int j) 
-{ 
-    if (i == j) 
-        return i; 
-    if (i > j) 
-        return gcd(i - j, j); 
-    return gcd(i, j - i); 
-} 
   
 bool ispossible(int x, int y, int a, int b) 
 { 
