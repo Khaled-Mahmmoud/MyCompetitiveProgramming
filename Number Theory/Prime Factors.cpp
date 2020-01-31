@@ -48,7 +48,7 @@ vector<int> primeFactors(int x)
     return res; 
 } 
 
-// Store all prime numbers in vector primes  less than and equal to 10^7
+// Store all prime numbers in vector primes  less than 10^7
 #define N 10000009 
 vector<int>primes;
 void sieve()
