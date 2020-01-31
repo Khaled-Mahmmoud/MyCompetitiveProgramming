@@ -45,15 +45,10 @@ Output : 3/6
          So, 2/6  +  1/6 = 3/6
 Note* These answers can be further simplified by Anomalous cancellation.
 */
-int gcd(int a, int b) 
-{ 
-    if (a == 0) 
-        return b; 
-    return gcd(b % a, a); 
-} 
+
 int lcm(int a, int b) 
 { 
-    return (a * b) / gcd(a, b); 
+    return (a * b) / __gcd(a, b); 
 } 
 void printSum(int num1, int den1, int num2, int den2) 
 { 
