@@ -8,8 +8,6 @@ gcd(a, b, c) = gcd(a, gcd(b, c))
              = gcd(gcd(a, b), c) 
              = gcd(gcd(a, c), b)
 */
-#include <bits/stdc++.h>
-using namespace std;
 int gcd(int a,int b)
 {
     if(b==0)return a;
@@ -17,8 +15,6 @@ int gcd(int a,int b)
 }
 int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(0);cout.tie(0);
     int n;cin>>n;int a[n];
     for(int i=0;i<n;i++)cin>>a[i];
     int g=0;
@@ -27,7 +23,7 @@ int main()
     cout<<"GCD is : "<<g;
     return 0;
 }
-
+// Complexity : nlog(max(a[i]))
 
 
 /*
@@ -40,8 +36,6 @@ LCM = a*b / gcd(a,b)
 The above relation only holds for two numbers
 LCM != a*b*c / gcd(a,b,c)
 */
-#include <bits/stdc++.h>
-using namespace std;
 int gcd(int a,int b)
 {
     if(b==0)return a;
@@ -49,8 +43,6 @@ int gcd(int a,int b)
 }
 int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(0);cout.tie(0);
     int n;cin>>n;int a[n];
     for(int i=0;i<n;i++)cin>>a[i];
     int lcm = a[0];
@@ -59,3 +51,4 @@ int main()
     cout<<"LCM is : "<<lcm;
     return 0;
 }
+// Complexity : nlog(max(a[i]))
