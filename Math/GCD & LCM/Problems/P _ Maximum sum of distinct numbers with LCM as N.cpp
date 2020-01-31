@@ -1,6 +1,6 @@
 /*
 Given a number N
-the task is to find out maximum sum of distinct numbers such that the Least Common Multiple of all these numbers is N.
+the task is to find out maximum sum of distinct numbers such that the Least Common Multiple of all these numbers is N
 
 Input  : N = 12
 Output : 28
@@ -8,9 +8,8 @@ Maximum sum which we can achieve is,
 1 + 2 + 3 + 4 + 6 + 12 = 28
 
 Solution :
-We can solve this problem by observing some cases, As N needs to be LCM of all numbers
-all of them will be divisors of N but because a number can be taken only once in sum, all taken numbers should be distinct
-The idea is to take every divisor of N once in sum to maximize the result
+As the LCM of all the numbers is N
+So all the numbers must be the divisors of N and all the numbers are distinct so answer must be the sum of all the divisors of N
 */
 int getsum(int n)
 {
