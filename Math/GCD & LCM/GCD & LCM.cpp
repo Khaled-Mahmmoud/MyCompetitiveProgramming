@@ -81,3 +81,19 @@ int main()
 }
 //           GCD(LCM (x, y), LCM (x, z)) = LCM(x, GCD(y, z))
 //gengeral   GCD(f(x,y),f(x,z)) = f(x,GCD(y,z))   where f is fuction
+
+
+// inbuilt function for finding GCD in c++
+int main() 
+{ 
+    cout << "gcd(6, 20) = " << __gcd(6, 20) << endl; 
+}
+
+// inbuilt function for finding LCM in c++
+#include <boost/math/common_factor.hpp> 
+int main() 
+{ 
+    cout << "LCM(10,20) = " << boost::math::lcm(10,20)  
+         << endl; 
+    return 0; 
+} 
