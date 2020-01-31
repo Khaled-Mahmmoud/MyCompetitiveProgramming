@@ -1,4 +1,4 @@
-// O(sqrt(n))
+// O(sqrt(n)*log(n))
 void primeFactors(int n)  
 {  
     while (!(n & 1))  
