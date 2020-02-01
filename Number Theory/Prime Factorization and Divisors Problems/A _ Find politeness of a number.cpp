@@ -19,7 +19,7 @@ There are two ways of representation:
 9 = 2 + 3 + 4
 9 = 4 + 5
 Naive approach is to run a loop one inside another and find the sum of every consecutive integers up to n
-Time complexity of this approach will be O(n2) which will not be sufficient for large value of n.
+Time complexity of this approach will be O(n^2) which will not be sufficient for large value of n.
 
 Efficient approach is to use factorization. We factorize the number n and count the number of odd factors
 Total number of odd factors (except 1) is equal to politeness of the number. Refer this for proof of this fact
