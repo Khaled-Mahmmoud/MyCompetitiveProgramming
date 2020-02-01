@@ -79,12 +79,10 @@ int politness(int n)
 int main() 
 { 
     int n = 90; 
-    cout << "Politness of " << n << " = "
-         << politness(n) << "\n"; 
+    cout << "Politness of " << n << " = "<< politness(n) << "\n"; 
   
     n = 15; 
-    cout << "Politness of " << n << " = "
-         << politness(n) << "\n"; 
+    cout << "Politness of " << n << " = "<< politness(n) << "\n"; 
     return 0; 
 } 
 Output:
