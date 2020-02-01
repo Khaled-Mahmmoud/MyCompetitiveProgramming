@@ -85,7 +85,9 @@ int main()
     cout << "Politness of " << n << " = "<< politness(n) << "\n"; 
     return 0; 
 } 
+/*
 Output:
 Politness of 90 = 5
 Politness of 15 = 3
 Time complexity: O(sqrt(n))
+*/
