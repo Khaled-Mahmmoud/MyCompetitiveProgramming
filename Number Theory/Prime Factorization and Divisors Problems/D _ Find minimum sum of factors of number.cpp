@@ -20,9 +20,23 @@ To minimize sum, we must factorize factors as long as possible. With this proces
 So to find minimum sum of product of number, we find sum of prime factors of product.
 
 */
-
+int isprime(int n)
+{
+    if(n==1)return 0;
+    if(n%2==0)
+    return n==2;
+    for(int i=3;i<=sqrt(n);i+=2)
+    {
+        if(n%i==0)
+        return 0;
+    }
+    return 1;
+}
 int findMinSum(int num) 
 { 
+    if(isprime(num))
+    return num+1;
+    
     int sum = 0; 
     for (int i = 2; i * i <= num; i++) 
     { 
@@ -36,3 +50,7 @@ int findMinSum(int num)
     sum += num; 
     return sum; 
 } 
+/*
+input : 11       
+output : 12 (not 11 because 11 * 1 = 11 + 1 = 12)
+*/
