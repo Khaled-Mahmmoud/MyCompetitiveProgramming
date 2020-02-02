@@ -54,3 +54,45 @@ int sumofFactors(int n)
         res *= (1 + n); 
     return res; 
 } 
+/*
+Find sum of odd factors of a number
+Given a number n, the task is to find the odd factor sum.
+
+Input : n = 30
+Output : 24
+Odd dividers sum 1 + 3 + 5 + 15 = 24 
+
+Input : 18
+Output : 13
+Odd dividers sum 1 + 3 + 9 = 13
+
+To find sum of odd factors, we simply need to ignore even factors and their powers. For example, consider n = 18
+It can be written as 2132 and sun of all factors is (1)*(1 + 2)*(1 + 3 + 32). Sum of odd factors (1)*(1+3+32) = 13.
+
+To remove all even factors, we repeatedly divide n while it is divisible by 2
+After this step, we only get odd factors. Note that 2 is the only even prime
+
+*/
+
+int sumofoddFactors(int n) 
+{ 
+    int res = 1; 
+    while (n % 2 == 0) 
+        n = n / 2; 
+    for (int i = 3; i <= sqrt(n); i++)  
+    { 
+        int curr_sum = 1 , curr_term = 1; 
+        while (n % i == 0) 
+        { 
+            n = n / i; 
+            curr_term *= i; 
+            curr_sum += curr_term; 
+        } 
+  
+        res *= curr_sum; 
+    } 
+    if (n >= 2) 
+        res *= (1 + n); 
+  
+    return res; 
+} 
