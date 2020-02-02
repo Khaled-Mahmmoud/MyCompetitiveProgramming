@@ -13,8 +13,12 @@ Geometric Progression (GP) :: is a sequence of numbers where the ratio between a
 n ==>> number of elements , a ==>> first element , b ==>> last element , r ==>> ratio between any two consecutive numbers
 a + a*r + a*r*r + a*r*r*r + .... + b
 3 , 6 , 12 , 24 , 48 , 96 , 192
+
 i'th term = a * r^(n-1)
-The sum = (br-a)/(r-1) = a*(r^n-1)/(r-1)
+
+           (br-a)   a*(r^n-1)
+The sum =  ------ = ---------
+           (r-1)     (r-1)
 
 This formula can be derived as follows
 S = a + a*r + a*r*r +··· + b
