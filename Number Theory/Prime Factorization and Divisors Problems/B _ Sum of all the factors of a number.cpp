@@ -31,7 +31,7 @@ int divSum(int n)
     } 
     return result ; 
 } 
-
+// Time Complexity : O(sqrt(n))
 /*
 An efficient solution is to use below formula
 Let p1, p2, … pk be prime factors of n. Let a1, a2, .. ak be highest powers of p1, p2, .. pk respectively 
@@ -91,3 +91,8 @@ int sumofFactors(int n)
   
     return res; 
 } 
+// Time Complexity : O(sqrt(n)*log(n))
+/*
+Further Optimization.
+If there are multiple queries, we can use Sieve to find prime factors and their powers  log(n)
+*/
