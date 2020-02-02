@@ -22,7 +22,9 @@ Naive approach is to run a loop one inside another and find the sum of every con
 Time complexity of this approach will be O(n^2) which will not be sufficient for large value of n
 
 Efficient approach is to use factorization. We factorize the number n and count the number of odd factors
-Total number of odd factors (except 1) is equal to politeness of the number. 
+Total number of odd factors (except 1) is equal to politeness of the number
+
+
 In general if a number can be represented as a^p * b^q * c^r … where a, b, c, … are prime factors of n
 If a = 2 (even) then discard it and count total number of odd factors which can be written 
 as [(q + 1) * (r + 1) * …] – 1 (Here 1 is subtracted because single term in representation is not allowed)
