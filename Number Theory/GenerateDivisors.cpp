@@ -60,3 +60,12 @@ int main()
     cout<<idx;
     return 0;
 }
+/*
+we should know that only perfect square numbers have odd number of divisors 
+ 4 (Divisors 1, 2, 4)
+ 9 (Divisors 1, 3, 9)
+ 25 (Divisors 1, 5, 25)
+ 49 (1, 7 and 49)
+ 36 (1, 2, 3, 4, 6, 9, 12, 18, 36)
+ 100 (1, 2, 4, 5, 10, 20, 25, 50, 100)
+*/
