@@ -49,3 +49,18 @@ void printStatusOfDoors(int n)
     } 
 } 
 // Time complexity : O(n)
+
+/*
+To know Number Of Open Doors
+it's answer if floor(sqrt(n))
+because we find number of odd factors between 1 and n 
+more effcient number of perfect square between 1 and n
+it's sqrt(n) 
+example 
+n = 16
+it's answer = floor(sqrt(16)) = 4
+1 --> it's perfect square is 1 , exists between 1 and n
+2 --> it's perfect square is 4 , exists between 1 and n
+3 --> it's perfect square is 9 , exists between 1 and n
+4 --> it's perfect square is 16 , exists between 1 and n
+5 --> it's perfect square is 25 , not exists between 1 and n
