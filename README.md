@@ -44,7 +44,7 @@
 	- [Longest Palindromic Subsequence](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/H%20_%20Longest%20Palindromic%20Subsequence.cpp)
 	- [Dice Combinations](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/I%20_%20Dice%20Combinations.cpp)
 	- [Coin Combinations](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/J%20_%20Coin%20Combinations.cpp)
-	- [paths top-left bottom-right](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/K%20_%20Count%20all%20paths%20%20top-left%20%20bottom-right.cpp)
+	- [paths top-left bottom-right](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/K%20_%20paths%20%20top-left%20%20bottom-right.cpp)
 	- [Rectangle Cutting](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/L%20_%20Rectangle%20Cutting.cpp)
 	- [Subset Sum Problem](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/M%20_%20Subset%20Sum%20Problem.cpp)
 	- [Removal Game](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Dynamic%20Programming/Problems/N%20_%20Removal%20Game.cpp)
@@ -108,6 +108,8 @@
 		- [Elements of array can be equal by multiplying prime numbers](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/X%20_%20Elements%20of%20array%20can%20be%20equal%20by%20multiplying%20prime%20numbers.cpp)
 		- [N-th multiple in sorted list of multiples of two numbers](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/Y%20_%20N-th%20multiple%20in%20sorted%20list%20of%20multiples%20of%20two%20numbers.cpp)
 		- [Smallest number to multiply to convert floating point to natural](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems/Z%20_%20Smallest%20number%20to%20multiply%20to%20convert%20floating%20point%20to%20natural.cpp)
+	- [Problems1](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Math/GCD%20%26%20LCM/Problems1)
+		- [if possible to move from coordinate to desired coordinate](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/GCD%20%26%20LCM/Problems1/A%20_%20if%20possible%20to%20move%20from%20coordinate%20to%20desired%20coordinate.cpp)
 		
 
 ### Strings
@@ -154,7 +156,9 @@
 
 ### Adhoc
 - [Adhoc & Greedy & Implementation](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Adhoc/Adhoc%20%26%20Greedy%20%26%20Implementation)
-- [Adhoc Problems](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Adhoc/Adhoc%20Problems)
-	- [Find Second largest element](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Adhoc/Adhoc%20Problems/A%20_%20Find%20Second%20largest%20element%20.cpp)
+- [Problems](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Adhoc/Problems)
+	- [Find Second largest element](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Adhoc/Problems/A%20_%20Find%20Second%20largest%20element%20.cpp)
+	- [Array Sharpening](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Adhoc/Problems/B%20_%20Array%20Sharpening.cpp)
+	
 	
 ## Thanks
