@@ -26,8 +26,9 @@ Output : open closed closed open closed
 Note: Sequence of open/closed is displayed in increasing door number 
 
  Solution :
- Approach : It is mathematical and logical approach. If we observe it properly, then we find that the final status 
- of a door numbered i is open if ‘i’ has odd number of factors and status is closed if ‘i’ has even number of factors
+ Approach : It is mathematical and logical approach. If we observe it properly, then we find 
+ that the final status of a door numbered i is open if ‘i’ has odd number of factors and status 
+ is closed if ‘i’ has even number of factors
 */
 
 bool hasEvenNumberOfFactors(int n) 
@@ -47,5 +48,4 @@ void printStatusOfDoors(int n)
             cout << "open" << " "; 
     } 
 } 
-
 // Time complexity : O(n)
