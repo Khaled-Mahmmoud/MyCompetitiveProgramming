@@ -62,10 +62,10 @@ int main()
 }
 /*
 we should know that only perfect square numbers have odd number of divisors 
- 4 (Divisors 1, 2, 4)
- 9 (Divisors 1, 3, 9)
- 25 (Divisors 1, 5, 25)
- 49 (1, 7 and 49)
- 36 (1, 2, 3, 4, 6, 9, 12, 18, 36)
- 100 (1, 2, 4, 5, 10, 20, 25, 50, 100)
+ 4 (1, 2, 4) has 3 divisors
+ 9 (1, 3, 9) has 3 divisors
+ 25 (1, 5, 25) has 3 divisors
+ 49 (1, 7 and 49)  has 3 divisors
+ 36 (1, 2, 3, 4, 6, 9, 12, 18, 36) has 9 divisors
+ 100 (1, 2, 4, 5, 10, 20, 25, 50, 100) has 9 divisors
 */
