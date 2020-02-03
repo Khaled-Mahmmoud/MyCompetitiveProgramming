@@ -62,9 +62,16 @@
 	- [SmallestNumberHasNTrailingZero](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Count%20trailing%20zeroes%20N!/B%20_%20SmallestNumberHasNTrailingZero.cpp)
 	- [TrailingZeroBase16&BaseB](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Count%20trailing%20zeroes%20N!/C%20%20_%20TrailingZeroBase16%26BaseB.cpp)
 	- [TrailingBinary&productOfarray](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Count%20trailing%20zeroes%20N!/D%20_%20TrailingBinary%26productOfarray.cpp)
+- [Prime Factorization and Divisors Problems](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Number%20Theory/Prime%20Factorization%20and%20Divisors%20Problems)
+	- [Find politeness of a number](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Prime%20Factorization%20and%20Divisors%20Problems/A%20_%20Find%20politeness%20of%20a%20number.cpp)
+	- [Sum of all the factors of a number](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Prime%20Factorization%20and%20Divisors%20Problems/B%20_%20Sum%20of%20all%20the%20factors%20of%20a%20number.cpp)
+	- [Find sum of even factors and sum of odd factors of a number](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Prime%20Factorization%20and%20Divisors%20Problems/C%20_%20Find%20sum%20of%20even%20factors%20and%20sum%20of%20odd%20factors%20of%20a%20number.cpp)
+	- [Find minimum sum of factors of number](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Prime%20Factorization%20and%20Divisors%20Problems/D%20_%20Find%20minimum%20sum%20of%20factors%20of%20number.cpp)
+	- [Finding power of prime number p in n!](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Prime%20Factorization%20and%20Divisors%20Problems/E%20_%20Finding%20power%20of%20prime%20number%20p%20in%20n!.cpp)
+	- [Find sum of divisors of all the divisors of number](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Prime%20Factorization%20and%20Divisors%20Problems/F%20_%20Find%20sum%20of%20divisors%20of%20all%20the%20divisors%20of%20number.cpp)
 - [Problems](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Number%20Theory/Problems)
 	- [Enlarge GCD](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Problems/A%20_%20Enlarge%20GCD.cpp)
-
+	
 
 ### Math
 - [Power](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Power.cpp)
