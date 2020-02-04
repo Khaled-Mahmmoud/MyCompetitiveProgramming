@@ -1,0 +1,26 @@
+
+Given a positive integers ‘q’ and ‘n’. For each query ‘q’ find whether a number ‘n’ have exactly four distinct divisors or not
+If the number have exactly four divisors then print ‘Yes’ else ‘No’.1 <= q, n <= 106
+
+Input:
+2
+10
+12
+Output:
+Yes
+No
+
+Explanation:
+For 1st query, n = 10 has exactly four divisor i.e., 1, 2, 5, 10.
+For 2nd query, n = 12 has exactly six divisor i.e., 1, 2, 3, 4, 6, 12.
+
+Simple approach is to count factors by generating all divisors of a number by using this approach
+after that check whether the count of all factors are equal to ‘4’ or not. Time complexity of this approach is O(sqrt(n)).
+
+Better approach is to use Number theory. For a number to be have four factors, it must satisfy the following conditions
+1) If number is a product of exactly two prime numbers(say p, q). Thus we can assure that it will have four factors i.e, 1, p, q, n
+2) If a number is cube of a prime number (or cube root of the number is prime). For example, let’s say n = 8, cube root = 2 that
+means ‘8’ can be written as 2*2*2 hence four factors are:- 1, 2, 4 and 8.
+We can use sieve of Eratosthenes such that we will pre-calculate all the prime factor from 1 to 10^6
+After that we can easily answer each query in O(1) time
+
