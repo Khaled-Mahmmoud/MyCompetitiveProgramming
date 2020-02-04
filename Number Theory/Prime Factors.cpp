@@ -53,7 +53,7 @@ vector<int> primeFactors(int x)
 vector<int>primes;
 void sieve()
 {
-    bool iscomposite[N];
+    vector<bool>iscomposite(N,false);
     for(int i=2;i*i<N;i++)
     if(!iscomposite[i])
         for(int j=2*i;j<N;j+=i) // notice that we start from 2*i
