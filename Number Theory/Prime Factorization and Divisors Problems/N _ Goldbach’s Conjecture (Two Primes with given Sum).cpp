@@ -24,10 +24,12 @@ vector <int> primes;
 void sieveEratosthenes() 
 { 
      vector<bool>pr(MAX,false);
+     
      for(int i=2 ; i*i<MAX ; i++)
      if(!pr[i])
      for(int j=2*i ; j<MAX ; j+=i)
      pr[j] = true;
+   
      for(int i=2;i<MAX;i++)
      if(!pr[i]) primes.push_back(i);
 } 
