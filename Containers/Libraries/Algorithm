@@ -40,3 +40,14 @@ Complexity :  the distance between first and last
 max_element(first,last) OR max_element(first,last,cmp)
 Returns an iterator pointing to the element with the largest value in the range [first,last].
 Complexity :  the distance between first and last
+
+
+****************** find *****************
+Searches the container for an element equivalent to val and returns an iterator to it if found
+otherwise it returns an iterator to container::end
+it = s.find(3) // where s is set
+it = find(v.begin,v.end(),3)  // where v is vector
+Complexity : linear for sequence conainers
+Logarithmic for associative conainers , unordered_associative containers 
+
+Logarithmic in size for(bid
