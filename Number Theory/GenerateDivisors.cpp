@@ -61,6 +61,29 @@ int main()
     return 0;
 }
 /*
+Count all perfect divisors of a number
+Given a number n, count total perfect divisors of n.
+Perfect divisors are those divisors which are square of some integer
+For example a perfect divisor of 8 is 4.
+Examples:
+
+Input  : n = 16 
+Output : 3
+Explanation : There are only 5 divisor of 16:
+1, 2, 4, 8, 16. Only three of them are perfect 
+squares: 1, 4, 16. Therefore the answer is 3
+*/
+int perfectDiv[MAX]; 
+void precomputeCounts() 
+{ 
+    for (int i=1; i*i < MAX; ++i) 
+    { 
+        for (int j=i*i; j < MAX; j += i*i) 
+              perfectDiv[j]++; 
+    } 
+} 
+  
+/*
 we should know that only perfect square numbers have odd number of divisors 
  4 (1, 2, 4) has 3 divisors
  9 (1, 3, 9) has 3 divisors
