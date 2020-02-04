@@ -1,0 +1,9 @@
+proper divisors of number :: is all divisors of number excluding the number itself
+For instance, 6 has divisors 1, 2, 3 and 6 but it's proper divisors is 1, 2, 3
+
+perfect number :: is a positive integer that is equal to the sum of its proper divisors
+For instance, 6 has divisors 1, 2 and 3 (excluding itself), and 1 + 2 + 3 = 6, so 6 is a perfect number
+
+square number or perfect square :: is an integer that is the square of an integer , in other words
+it is the product of some integer with itself. For example, 9 is a square number, since it can be written as 3 × 3
+
