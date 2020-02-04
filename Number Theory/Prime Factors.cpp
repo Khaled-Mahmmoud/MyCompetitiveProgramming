@@ -59,7 +59,7 @@ void sieve()
         for(int j=2*i;j<N;j+=i) // notice that we start from 2*i
           iscomposite[j] = true;
     
-    for(int i=1;i<N;i++)
+    for(int i=2;i<N;i++)
         if(!iscomposite[i])
            primes.push_back(i);
 }
