@@ -35,8 +35,8 @@ unsigned getNthUglyNo(unsigned n)
        next_ugly_no = min(next_multiple_of_2,
                       min(next_multiple_of_3,
                          next_multiple_of_5)); 
-       ugly[i] = next_ugly_no; 
         
+       ugly[i] = next_ugly_no; 
        if (next_ugly_no == next_multiple_of_2) 
        { 
            i2 = i2+1; 
