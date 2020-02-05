@@ -5,7 +5,7 @@ Arithmetic Progression (AP) :: is a sequence of numbers where the difference bet
 n ==>> number of elements , a ==>> first element , b ==>> last element , d ==>> difference between any two consecutive numbers
 a , a+d , a+2d , a+3d , ..... , b
 3 , 7 , 11 , 15 , 19 , 23 , 27
-i'th term = a + (n-1) * d
+i'th term = a + (i-1) * d
 
           n*(a+b)     n*(2a+(n-1)*d)
 The sum =--------- = ----------------
@@ -17,7 +17,7 @@ n ==>> number of elements , a ==>> first element , b ==>> last element , r ==>> 
 a , a*r , a*r*r , a*r*r*r , .... , b
 3 , 6 , 12 , 24 , 48 , 96 , 192
 
-i'th term = a * r^(n-1)
+i'th term = a * r^(i-1)
 
            (br-a)   a*(r^n-1)
 The sum =  ------ = ---------
