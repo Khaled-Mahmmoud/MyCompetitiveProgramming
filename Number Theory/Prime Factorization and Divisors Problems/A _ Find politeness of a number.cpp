@@ -29,22 +29,8 @@ In general if a number can be represented as a^p * b^q * c^r … where a, b, c, 
 If a = 2 (even) then discard it and count total number of odd factors which can be written 
 as [(q + 1) * (r + 1) * …] – 1 (Here 1 is subtracted because single term in representation is not allowed)
 
-How does above formula work? The fact is, if a number is expressed as a^p * b^q * c^r … where a, b, c, … are prime factors of n
-then number of divisors is (p+1)*(q+1)*(r+1) ……To simplify, let there be one factor and number is expressed as a^p
-Divisors are 1, a, a^2, …. a^p . The count of divisors is p+1
-Now let us take a slightly more complicated case a^p b^p
-The divisors are :
-1, a, a^2, …. a^p
-b, ba, ba^2, …. ba^p
-b^2, b^2a, b^2a^2, …. b^2a^p
-…………….
-…………….
-b^q, b^qa, b^qa^2, …. b^qa^p
-
-The count of above terms is (p+1)*(q+1). Similarly, we can prove for more prime factors.
-
 Illustration : For n = 90, decomposition of prime factors will be as follows:-
-=> 90 = 2 * 32 * 51. The power of odd prime factors 3, 5 are 2 and 1 respectively
+=> 90 = 2 * 3^2 * 5^1. The power of odd prime factors 3, 5 are 2 and 1 respectively
 Apply above formula as: (2 + 1) * (1 + 1) -1 = 5. Hence 5 will be the answer. We can crosscheck it
 All odd factors are 3, 5, 9, 15 and 45
 
