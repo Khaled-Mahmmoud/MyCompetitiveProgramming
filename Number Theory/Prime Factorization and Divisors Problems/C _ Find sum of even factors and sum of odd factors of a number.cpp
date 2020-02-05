@@ -67,7 +67,7 @@ Output : 13
 Odd dividers sum 1 + 3 + 9 = 13
 
 To find sum of odd factors, we simply need to ignore even factors and their powers. For example, consider n = 18
-It can be written as 2132 and sun of all factors is (1)*(1 + 2)*(1 + 3 + 32). Sum of odd factors (1)*(1+3+32) = 13.
+It can be written as 2^1 3^2 and sum of all factors is (1)*(1 + 2)*(1 + 3 + 32). Sum of odd factors (1)*(1+3+32) = 13.
 
 To remove all even factors, we repeatedly divide n while it is divisible by 2
 After this step, we only get odd factors. Note that 2 is the only even prime
@@ -98,6 +98,7 @@ int sumofoddFactors(int n)
 } 
 // assume we have 60 = 2^2 * 3 * 5 = 2^p * 3^q * 5^r
 // factors of 60 = 1 2 3 4 5 6 10 12 20 15 30 60
+// to count number of factors = (p+1) * (q+1) * (r+1)
 // to count number of odd factors = (q+r) * (r+1) = 2 * 2 = 4 (we ignore higest power of 2)
 // to count number of even factors = (p+1) * (q+r) * (r+1) - (q+r) * (r+1) = 12 - 4 = 8  (notice it's not (p+1) = 3)
 // to count sum of even factors = (2^1 + 2^2) * (3^0 + 3^1) * (5^0 + 5^1) = 144  (we ignore 2^0)
