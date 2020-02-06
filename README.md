@@ -75,7 +75,6 @@
 	
 
 ### Math
-- [Power](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Power.cpp)
 - [Basics of Math](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Math/Basics%20of%20Math)
 	- [Elementary](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Basics%20of%20Math/Elementary)
 	- [Functions](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Basics%20of%20Math/Functions.cpp)
@@ -83,6 +82,8 @@
 	- [Logic](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Basics%20of%20Math/Logic)
 	- [Sequence](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Basics%20of%20Math/Sequence)
 	- [Series](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Basics%20of%20Math/Series)
+- [Power](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Power.cpp)
+- [Ugly Numbers](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Ugly%20Numbers.cpp)
 - [Set Theory](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Math/Set%20Theory)
 	- [Sets and Operations](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Math/Set%20Theory/Sets%20and%20Operations)
 	- [Table of set theory symbols](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Math/Set%20Theory/Table%20of%20set%20theory%20symbols)
