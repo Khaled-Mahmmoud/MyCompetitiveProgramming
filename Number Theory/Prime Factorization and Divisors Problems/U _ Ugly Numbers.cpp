@@ -34,7 +34,7 @@ unsigned getNthUglyNo(unsigned n)
     { 
        next_ugly_no = min(next_multiple_of_2,
                       min(next_multiple_of_3,
-                         next_multiple_of_5)); 
+                          next_multiple_of_5)); 
         
        ugly[i] = next_ugly_no; 
        if (next_ugly_no == next_multiple_of_2) 
@@ -55,3 +55,4 @@ unsigned getNthUglyNo(unsigned n)
     } 
     return next_ugly_no; 
 } 
+// Time Complexity: O(n)
