@@ -170,11 +170,14 @@
 - [Binary Search Tree](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Tree/D%20_%20Binary%20Search%20Tree.cpp)
 
 
-
 ### General
 - [Binary Search](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Binary%20Search.cpp)
 - [Prefix Sum](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Cumulative%20Sum.cpp)
 - [Frequency Array](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Frequency%20Array)
+- [Input and output](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Input%20and%20output)
+- [Overflow and Casting and Floating](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Overflow%20and%20Casting%20and%20Floating)
+- [Time Complexity](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Time%20Complexity)
+- [Sorting](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Sorting)
 
 
 ### Adhoc
