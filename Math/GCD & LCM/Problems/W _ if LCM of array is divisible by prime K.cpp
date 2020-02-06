@@ -12,7 +12,7 @@ Solution :
 One simple solution is to first find LCM of array elements, then check if LCM is divisible by k or not
 Complexity : O(nlog(max(a[i])))
 
-Here, we can find that LCM of the an array of number is divisible by a prime number k or not
+Here, we can find that LCM of array of number is divisible by a prime number k or not
 If any number of the array is divisible by prime number k
 then the LCM of the number is also divisible by prime number k
 */
