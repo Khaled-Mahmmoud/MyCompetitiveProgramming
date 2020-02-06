@@ -172,7 +172,7 @@
 
 ### General
 - [Binary Search](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Binary%20Search.cpp)
-- [Prefix Sum](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Cumulative%20Sum.cpp)
+- [Prefix Sum](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Prefix%20sum.cpp)
 - [Frequency Array](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Frequency%20Array)
 - [Input and output](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Input%20and%20output)
 - [Overflow and Casting and Floating](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/General/Overflow%20and%20Casting%20and%20Floating)
