@@ -7,10 +7,10 @@ efficient CPU cache usage i.e. This implementation generates the primes below 10
  n    Prime Count 	Segmented byte sieve
 10^7	    664,579	          	0.03s
 10^8	    5,761,455	        	0.11s
-10^9	    50,847,534	      	0.65s
+10^9	    50,847,534	         	0.65s
 10^10	  455,052,511	        	7.25s
-10^11  	4,118,054,813	      	88.47s
-10^12  	37,607,912,018	    	1104.0s
+10^11  	4,118,054,813	        	88.47s
+10^12  	37,607,912,018	        	1104.0s
 
 */
 void simpleSieve(int limit, vector<int> &prime)
