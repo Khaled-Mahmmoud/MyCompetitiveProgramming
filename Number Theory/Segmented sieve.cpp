@@ -56,7 +56,7 @@ void segmentedSieve(int n)
 		memset(mark, true, sizeof(mark));
 		for (int i = 0; i < prime.size(); i++)
 		{
-			int loLim = floor(low/prime[i]) * prime[i];
+			int loLim = (low/prime[i]) * prime[i];
 			if (loLim < low)
 				loLim += prime[i];
 			for (int j=loLim; j<high; j+=prime[i])
