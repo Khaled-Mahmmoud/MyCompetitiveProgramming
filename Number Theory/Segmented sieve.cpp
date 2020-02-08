@@ -4,7 +4,28 @@ of Eratosthenes that generates the primes below n using O(n log log n) operation
 It runs significantly faster than  a traditional sieve of Eratosthenes implementation due to its more 
 efficient CPU cache usage i.e. This implementation generates the primes below 10^9 in just 0.8 seconds 
 
- n    Prime Count 	Segmented byte sieve
+Problems with Simple Sieve:
+The Sieve of Eratosthenes looks good, but consider the situation
+when n is large the Simple Sieve faces following issues
+An array of size Θ(n) may not fit in memory
+
+The simple Sieve is not cache friendly even for slightly bigger n
+The algorithm traverses the array without locality of reference Segmented Sieve
+The idea of segmented sieve is to divide the range [0..n-1] in different segments 
+and compute primes in all segments one by one
+This algorithm first uses Simple Sieve to find primes smaller than or equal to √(n)
+
+
+Below are steps used in Segmented Sieve
+Use Simple Sieve to find all primes upto square root of ‘n’ and store these primes in an array “prime[]”
+Store the found primes in an array ‘prime[]’. We need all primes in range [0..n-1]
+We divide this range in different segments such that size of every segment is at-most √n
+Do following for every segment [low..high]
+Create an array mark[high-low+1]. Here we need only O(x) space where x is number of elements in given range.
+Iterate through all primes found in step 1. For every prime, mark its multiples in given range [low..high].
+
+
+  n       Prime Count 	         Segmented byte sieve
 10^7	    664,579	          	0.03s
 10^8	    5,761,455	        	0.11s
 10^9	    50,847,534	         	0.65s
