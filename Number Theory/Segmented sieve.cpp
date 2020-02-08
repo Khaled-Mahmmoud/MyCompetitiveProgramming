@@ -2,7 +2,7 @@
 This page contains a step by step explanation of simple but fast C++ implementation of segmented sieve 
 of Eratosthenes that generates the primes below n using O(n log log n) operations and O(sqrt(n)) space
 It runs significantly faster than  a traditional sieve of Eratosthenes implementation due to its more 
-efficient CPU cache usage i.e. This implementation generates the primes below 10^9 in just 0.8 seconds 
+efficient CPU cache usage 
 
 Problems with Simple Sieve:
 The Sieve of Eratosthenes looks good, but consider the situation
@@ -22,16 +22,7 @@ Store the found primes in an array ‘prime[]’. We need all primes in range [0
 We divide this range in different segments such that size of every segment is at-most √n
 Do following for every segment [low..high]
 Create an array mark[high-low+1]. Here we need only O(x) space where x is number of elements in given range.
-Iterate through all primes found in step 1. For every prime, mark its multiples in given range [low..high].
-
-
-  n       Prime Count 	         Segmented byte sieve
-10^7	    664,579	          	0.03s
-10^8	    5,761,455	        	0.11s
-10^9	    50,847,534	         	0.65s
-10^10	  455,052,511	        	7.25s
-10^11  	4,118,054,813	        	88.47s
-10^12  	37,607,912,018	        	1104.0s
+Iterate through all primes found in step 1. For every prime, mark its multiples in given range [low..high]
 
 */
 void simpleSieve(int limit, vector<int> &prime)
