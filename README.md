@@ -92,6 +92,9 @@
 	- [Maximum number of unique prime factors](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Prime%20Factorization%20and%20Divisors%20Problems/T%20_%20Maximum%20number%20of%20unique%20prime%20factors.cpp)
 	- [Number of elements with odd factors in given range](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Prime%20Factorization%20and%20Divisors%20Problems/U%20_%20Number%20of%20elements%20with%20odd%20factors%20in%20given%20range.cpp)
 	- [Common Divisors of Two Numbers](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Prime%20Factorization%20and%20Divisors%20Problems/V%20_%20Common%20Divisors%20of%20Two%20Numbers.cpp)
+- [Segmented sieve Problems](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Number%20Theory/Segmented%20sieve%20Problems)
+	- [Segmented Sieve (Print Primes in a Range)](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Segmented%20sieve%20Problems/A%20_%20%20Segmented%20Sieve%20(Print%20Primes%20in%20a%20Range).cpp)
+	- [n distinct prime factor numbers from a to b](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Segmented%20sieve%20Problems/B%20_%20n%20distinct%20prime%20factor%20numbers%20from%20a%20to%20b.cpp)
 - [Problems](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Number%20Theory/Problems)
 	- [Enlarge GCD](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Problems/A%20_%20Enlarge%20GCD.cpp)
 	
