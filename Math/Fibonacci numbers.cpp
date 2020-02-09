@@ -10,17 +10,9 @@ In mathematical terms, the sequence Fn of Fibonacci numbers is defined by the re
     Fn = Fn-1 + Fn-2
 with seed values   F0 = 0 and F1 = 1
 
-F(n) = [(1+sqrt(5))/2]^n / sqrt(5)
 */
 
-int fib(int n) 
-{ 
-  double phi = (1 + sqrt(5)) / 2; 
-  return round(pow(phi, n) / sqrt(5)); 
-}
-// Complexity : O(1)
-// Notice , we can use pow but we can't use Power bcause phi is double
-// but if answer modulo mod , we use this code
+
 vector<ll> f(10000);
 ll fib(ll n)
 {
