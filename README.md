@@ -61,6 +61,7 @@
 - [Number System](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Number%20System)
 - [Terminology](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Terminology)
 - [Theorems](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Theorems.cpp)
+- [Legendre’s formula](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Legendre%E2%80%99s%20formula.cpp)
 - [Segmented sieve](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Segmented%20sieve.cpp)
 - [Count trailing zeroes N!](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Number%20Theory/Count%20trailing%20zeroes%20N!)
 	- [leadingZeroBase10 & doubleFactorial](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Count%20trailing%20zeroes%20N!/A%20_%20leadingZeroBase10%20%26%20doubleFactorial.cpp)
