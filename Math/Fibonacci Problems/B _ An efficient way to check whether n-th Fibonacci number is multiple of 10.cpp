@@ -45,3 +45,13 @@ int main()
         printf("No\n"); 
     return 0; 
 } 
+
+/*
+Factors of Fibonacci number : On careful observation, we can observe the following thing :
+
+Every 3-rd Fibonacci number is a multiple of 2
+Every 4-th Fibonacci number is a multiple of 3
+Every 5-th Fibonacci number is a multiple of 5
+Every 6-th Fibonacci number is a multiple of 8
+
+*/
