@@ -10,7 +10,7 @@ In mathematical terms, the sequence Fn of Fibonacci numbers is defined by the re
     Fn = Fn-1 + Fn-2
 with seed values   F0 = 0 and F1 = 1
 
-
+F(n) = [(1+sqrt(5))/2]^n / sqrt(5)
 */
 
 int fib(int n) 
