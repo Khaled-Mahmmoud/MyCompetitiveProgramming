@@ -28,6 +28,7 @@ Now using this segmented sieve we check each number from a to b to have exactly 
 vector<int> primes;
 void segmentedSieve() 
 { 
+	int limit = 10000;
    	bool mark[limit+1];
 	   memset(mark, true, sizeof(mark));
 
@@ -41,7 +42,6 @@ void segmentedSieve()
 }  
 int Nfactors(int a, int b, int n) 
 { 
-    segmentedSieve(); 
     int result = 0; 
     for (int i=a; i<=b; i++) 
     { 
@@ -65,7 +65,9 @@ int Nfactors(int a, int b, int n)
 } 
 int main() 
 { 
+    segmentedSieve(); 
+    int t;cin>>t;while(t--){
     int a = 1, b = 100, n = 3; 
-    cout << Nfactors(a, b, n); 
+    cout << Nfactors(a, b, n)<<'\n';}
     return 0; 
 } 
