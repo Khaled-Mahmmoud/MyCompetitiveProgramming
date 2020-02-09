@@ -57,6 +57,7 @@
 - [GenerateDivisors](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/GenerateDivisors.cpp)
 - [Modular Arithmetic](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Modular%20Arithmetic)
 - [Prime Factors](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Prime%20Factors.cpp)
+- [Legendre’s formula](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Legendre%E2%80%99s%20formula.cpp)
 - [Number System](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Number%20System)
 - [Terminology](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Terminology)
 - [Theorems](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Theorems.cpp)
