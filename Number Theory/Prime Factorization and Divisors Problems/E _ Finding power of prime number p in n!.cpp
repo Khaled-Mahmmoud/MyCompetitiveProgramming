@@ -1,4 +1,6 @@
 /*
+
+// Legendre’s formula
 Finding power of prime number p in n!
 Given a number ‘n’ and a prime number ‘p’. We need to find out the power of ‘p’ in the prime factorization of n!
 
