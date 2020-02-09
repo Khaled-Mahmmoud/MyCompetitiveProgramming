@@ -21,7 +21,6 @@ Input:  n = 30
 Output: 21 8 1
 21, 8 and 1 are non-consecutive Fibonacci Numbers
 and sum of them is 30.
-We strongly recommend you to minimize your browser and try this yourself first.
 
 The idea is to use Greedy Algorithm.
 
