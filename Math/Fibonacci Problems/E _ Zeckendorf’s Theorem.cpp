@@ -32,6 +32,8 @@ The idea is to use Greedy Algorithm.
      b) n = n - f 
      
 */
+
+
 int nearestSmallerEqFib(int n) 
 { 
     if (n == 0 || n == 1) 
