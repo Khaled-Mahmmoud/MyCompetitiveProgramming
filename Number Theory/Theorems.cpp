@@ -18,7 +18,7 @@ Some solutions for n = 2 are,
 
 
 Lemoine’s Conjecture Theorem
-Any odd integer greater than 5 can be expressed as a sum of an odd prime (all primesother than 2 are odd)
+Any odd integer greater than 5 can be expressed as a sum of an odd prime (all primes other than 2 are odd)
 and an even semiprime. A semiprime number is a product of two prime numbers
 
 7 = 3 + (2 × 2),
