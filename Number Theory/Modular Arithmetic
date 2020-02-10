@@ -44,7 +44,7 @@ next = ( 3 + 40 ) % 7 = 43 % 7 = 1
 
 What day was it 40 days ago?
 
-prev = ( day - n ) % 7
+prev = ( n - day ) % 7
 prev = ( 3 - 40 ) % 7 = -37 % 7 = -2 ==> 5
 
 If the result is negative, add m
