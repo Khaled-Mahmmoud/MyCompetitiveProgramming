@@ -57,19 +57,19 @@ void modInverse(int a, int m)
 } 
 int gcd(int a, int b, int *x, int *y)
 {
-    if(!b)
-    {
-        x=1;
-        y=0;
-        z=a;
-    }
-    else
-    {
-        gcd(b,a%b,x,y);
-        int temp = x;
-        x = y;
-        y = temp - y*(a/b);
-    }
+    if (a == 0)  
+    {  
+        *x = 0;  
+        *y = 1;  
+        return b;  
+    }  
+  
+    int x1, y1;  
+    int gcd = gcdExtended(b%a, a, &x1, &y1);   
+    *x = y1 - (b/a) * x1;  
+    *y = x1;  
+  
+    return gcd; 
 }
 int main() 
 { 
