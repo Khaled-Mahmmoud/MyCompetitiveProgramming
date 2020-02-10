@@ -12,8 +12,7 @@ Output: gcd = 5
         x = 1, y = -2
 (Note that 35*1 + 15*(-2) = 5)
 */
-#include <bits/stdc++.h>
-using namespace std;
+
 int x,y,z;
 void gcd(int a,int b)
 {
@@ -33,8 +32,6 @@ void gcd(int a,int b)
 }
 int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(0);cout.tie(0);
     int a,b;cin>>a>>b;
     gcd(a,b);
     cout<<"X is : "<<x<<"    Y is : "<<y;
