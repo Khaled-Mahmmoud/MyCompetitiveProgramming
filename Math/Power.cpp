@@ -35,4 +35,4 @@ T power(T a, T b, T mod)
     return ans;
 }
 
-// time complexity : O(n)
+// time complexity : O(log(n))
