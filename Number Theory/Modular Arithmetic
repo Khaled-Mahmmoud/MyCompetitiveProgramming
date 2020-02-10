@@ -73,11 +73,3 @@ Other applications: Clock arithmetic, circles, bottle rotation, ...
 int sum = 0;
 for(int i = 0; i < n; i++)
     sum = (sum + a[i]%m)%m;
-
-****************************************************
-                     _   _
-                    |  a  |
-if we want to find  | --- |
-                    |  b  |
-                    
-we can do        a = (a+b-1) / b 
