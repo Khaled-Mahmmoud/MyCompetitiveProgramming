@@ -1,3 +1,24 @@
+
+
+int power(int x, unsigned int y) 
+{ 
+    if (y == 0) 
+        return 1; 
+    else if (y % 2 == 0) 
+        return power(x, y / 2) * power(x, y / 2); 
+    else
+        return x * power(x, y / 2) * power(x, y / 2); 
+} 
+
+
+/*
+
+The recursive solutions are generally not preferred as they require space on
+call stack and they involve function call overhead
+
+*/
+
+// this is the best solution
 template<class T>
 T power(T a, T b, T mod)
 {
@@ -14,20 +35,4 @@ T power(T a, T b, T mod)
     return ans;
 }
 
-        OR
-
-template<class T>
-T power(T a, T b,T mod)
-{
-    if(!b)return a;
-    T t=power(a,b/2)%mod;
-    t=(t*t)%mod;
-    if(b&1)
-        return (a*t)%mod;
-    else 
-        return t;
-}
-
-//  O(log b)
-// int x=3,y=2;   cout<<power(x,y,1000);
-// ll a=2,b=3;    cout<<power(a,b,1000ll);
+// time complexity : O(n)
