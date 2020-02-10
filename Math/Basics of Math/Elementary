@@ -21,3 +21,11 @@ even (op) odd  = even
 odd  (op) odd  = even
 
 op could be * (multiplication) , / (division)
+
+****************************************************
+                     _   _
+                    |  a  |
+if we want to find  | --- |
+                    |  b  |
+                    
+we can do        a = (a+b-1) / b 
