@@ -1,21 +1,23 @@
 /*
-Modular Division
-Given three positive numbers a, b and m. Compute a/b under modulo m
-The task is basically to find a number c such that (b * c) % m = a % m
 
-Input  : a  = 8, b = 4, m = 5
+Modular Division
+Given three positive numbers a, c and m. Compute a/c under modulo m
+The task is basically to find a number x such that 
+a * x = c (mod m)
+
+Input  : a  = 4, c = 8, m = 5
 Output : 2
 
-Input  : a  = 8, b = 3, m = 5
+Input  : a  = 3, c = 8, m = 5
 Output : 1
 Note that (1*3)%5 is same as 8%5
 
-Input  : a  = 11, b = 4, m = 5
+Input  : a  = 4, c = 11, m = 5
 Output : 4
 Note that (4*4)%5 is same as 11%5
 
     
-    c % m = (a/b) % m
+    x % m = (c/a) % m
     
 Can we always do modular division?
 The answer is “NO”. First of all, like ordinary arithmetic, division by 0 is not defined
@@ -28,33 +30,33 @@ When does inverse exist? inverse a number ‘a’ exists under modulo ‘m’ if
 
 How to find modular division?
 
-The task is to compute a/b under modulo m.
-1) First check if inverse of b under modulo m exists or not. 
-    a) If inverse doesn't exists (GCD of b and m is not 1), 
+The task is to compute c/a under modulo m.
+1) First check if inverse of a under modulo m exists or not. 
+    a) If inverse doesn't exists (GCD of a and m is not 1), 
           print "Division not defined"
-    b) Else return  "(inverse * a) % m" 
+    b) Else return  "(inverse * c) % m" 
 
 */
 
 
 int gcdExtended(int a, int b, int *x, int *y); 
-int modInverse(int b, int m) 
+int modInverse(int a, int m) 
 { 
     int x, y; 
-    int g = gcdExtended(b, m, &x, &y); 
+    int g = gcdExtended(a, m, &x, &y); 
     if (g != 1) 
         return -1; 
     return (x%m + m) % m; 
 } 
 
-void modDivide(int a, int b, int m) 
+void modDivide(int a, int c, int m) 
 { 
-    a = a % m; 
-    int inv = modInverse(b, m); 
+    c = c % m; 
+    int inv = modInverse(a, m); 
     if (inv == -1) 
        cout << "Division not defined"; 
     else
-       cout << "Result of division is " << (inv * a) % m; 
+       cout << "Result of division is " << (inv * c) % m; 
 } 
 int gcdExtended(int a, int b, int *x, int *y) 
 { 
@@ -73,7 +75,7 @@ int gcdExtended(int a, int b, int *x, int *y)
 } 
 int main() 
 { 
-    int  a  = 8, b = 3, m = 5; 
-    modDivide(a, b, m); 
+    int  a  = 3, c = 8, m = 5; 
+    modDivide(a, c, m); 
     return 0; 
 } 
