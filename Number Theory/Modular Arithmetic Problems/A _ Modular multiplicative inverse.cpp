@@ -20,8 +20,8 @@ Since (10*12) mod 17 = 1, 12 is modulo inverse of 3
 
 Method 1 (Naive)
 A Naive method is to try all numbers from 1 to m
-For every number x, check if (a*x)%m is 1. 
-Time Complexity of this method is O(m).
+For every number x, check if (a*x)%m is 1 
+Time Complexity of this method is O(m)
 
 Method 2 (Works when m and a are coprime)
 The idea is to use Extended Euclidean algorithms that takes two integers ‘a’ and ‘b’
@@ -77,3 +77,4 @@ int main()
     modInverse(a, m); 
     return 0; 
 } 
+// Time Complexity of this method is O(log min(a,m))
