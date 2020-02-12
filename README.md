@@ -63,6 +63,7 @@
 - [Theorems](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Theorems.cpp)
 - [Legendre’s formula](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Legendre%E2%80%99s%20formula.cpp)
 - [Segmented sieve](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Segmented%20sieve.cpp)
+- [Euler’s criterion](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Euler%E2%80%99s%20criterion.cpp)
 - [Count trailing zeroes N!](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Number%20Theory/Count%20trailing%20zeroes%20N!)
 	- [leadingZeroBase10 & doubleFactorial](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Count%20trailing%20zeroes%20N!/A%20_%20leadingZeroBase10%20%26%20doubleFactorial.cpp)
 	- [SmallestNumberHasNTrailingZero](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Count%20trailing%20zeroes%20N!/B%20_%20SmallestNumberHasNTrailingZero.cpp)
@@ -95,6 +96,10 @@
 - [Segmented sieve Problems](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Number%20Theory/Segmented%20sieve%20Problems)
 	- [Segmented Sieve (Print Primes in a Range)](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Segmented%20sieve%20Problems/A%20_%20%20Segmented%20Sieve%20(Print%20Primes%20in%20a%20Range).cpp)
 	- [n distinct prime factor numbers from a to b](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Segmented%20sieve%20Problems/B%20_%20n%20distinct%20prime%20factor%20numbers%20from%20a%20to%20b.cpp)
+- [Modular Arithmetic Problems](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Number%20Theory/Modular%20Arithmetic%20Problems)
+	- [Modular multiplicative inverse](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Modular%20Arithmetic%20Problems/A%20_%20Modular%20multiplicative%20inverse.cpp)
+	- [Modular Division](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Modular%20Arithmetic%20Problems/B%20_%20Modular%20Division.cpp)
+	- [Multiplicative order](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Modular%20Arithmetic%20Problems/C%20_%20Multiplicative%20order.cpp)
 - [Problems](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Number%20Theory/Problems)
 	- [Enlarge GCD](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Problems/A%20_%20Enlarge%20GCD.cpp)
 	
