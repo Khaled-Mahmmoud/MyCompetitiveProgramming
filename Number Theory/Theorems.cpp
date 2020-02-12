@@ -1,4 +1,21 @@
 /*
+
+Fermat's Little Theorem:
+If n is a prime number, then for every a, 1 < a < n-1,
+
+a^(n-1) ≡ 1 (mod n)
+ OR 
+a^(n-1) % n = 1 
+ 
+
+Example: Since 5 is prime, 2^4 ≡ 1 (mod 5) [or 2^4%5 = 1],
+         3^4 ≡ 1 (mod 5) and 4^4 ≡ 1 (mod 5) 
+
+         Since 7 is prime, 2^6 ≡ 1 (mod 7),
+         3^6 ≡ 1 (mod 7), 4^6 ≡ 1 (mod 7) 
+         5^6 ≡ 1 (mod 7) and 6^6 ≡ 1 (mod 7) 
+         
+         
 Fermat’s Last Theorem
 According to Fermat’s Last Theorem, no three positive integers a, b, c satisfy the equation
 a^n + b^n = c^n for any integer value of n greater than 2
