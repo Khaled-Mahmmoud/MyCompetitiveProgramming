@@ -79,5 +79,7 @@ Since p is a prime, from Fermet's theorem, we can say that
 
 Therefore,
   n(p-1)/2 ? 1 mod p  
+  
 Time complexity of this Euler Criterion based method is O(Log p)
+
 */
