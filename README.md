@@ -63,7 +63,6 @@
 - [Theorems](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Theorems.cpp)
 - [Legendre’s formula](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Legendre%E2%80%99s%20formula.cpp)
 - [Segmented sieve](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Segmented%20sieve.cpp)
-- [Euler’s criterion](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Euler%E2%80%99s%20criterion.cpp)
 - [Count trailing zeroes N!](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Number%20Theory/Count%20trailing%20zeroes%20N!)
 	- [leadingZeroBase10 & doubleFactorial](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Count%20trailing%20zeroes%20N!/A%20_%20leadingZeroBase10%20%26%20doubleFactorial.cpp)
 	- [SmallestNumberHasNTrailingZero](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Count%20trailing%20zeroes%20N!/B%20_%20SmallestNumberHasNTrailingZero.cpp)
@@ -100,6 +99,8 @@
 	- [Modular multiplicative inverse](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Modular%20Arithmetic%20Problems/A%20_%20Modular%20multiplicative%20inverse.cpp)
 	- [Modular Division](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Modular%20Arithmetic%20Problems/B%20_%20Modular%20Division.cpp)
 	- [Multiplicative order](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Modular%20Arithmetic%20Problems/C%20_%20Multiplicative%20order.cpp)
+	- [Euler’s criterion](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Modular%20Arithmetic%20Problems/D%20_%20Euler%E2%80%99s%20criterion.cpp)
+	- [Find Square Root under Modulo p (When p is in form of 4*i + 3)](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Modular%20Arithmetic%20Problems/E%20_%20Find%20Square%20Root%20under%20Modulo%20p%20(When%20p%20is%20in%20form%20of%204*i%20%2B%203).cpp)
 - [Problems](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Number%20Theory/Problems)
 	- [Enlarge GCD](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Number%20Theory/Problems/A%20_%20Enlarge%20GCD.cpp)
 	
