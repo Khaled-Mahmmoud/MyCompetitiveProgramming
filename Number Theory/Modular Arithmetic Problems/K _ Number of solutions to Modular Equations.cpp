@@ -1,3 +1,4 @@
+/*
 Number of solutions to Modular Equations
 Given A and B, the task is to find the number of possible values that X
 can take such that the given modular equation (A mod X) = B holds good
