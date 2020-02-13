@@ -1,3 +1,5 @@
+/*
+
 Find power of power under mod of a prime
 Given four numbers A, B, C and M, where M is prime number. Our task is to find ABC (mod M)
 
