@@ -48,7 +48,7 @@ But as we know A mod X would result in values from (0 to X – 1) we must take a
 Thus, we can conclude by saying that the number of divisors of (A – B) greater than B
 are the all possible values X can take to satisfy A mod X = B
 
-/*
+*/
 
 int calculateDivisors(int A, int B) 
 { 
