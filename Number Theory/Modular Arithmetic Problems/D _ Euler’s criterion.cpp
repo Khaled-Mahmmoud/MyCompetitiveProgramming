@@ -2,7 +2,7 @@
 
 Euler’s criterion (Check if square root under modulo p exists)
 Given a number ‘n’ and a prime p, find if square root of n under modulo p exists or not
-A number x is square root of n under modulo p if (x*x)%p = n%p.
+A number x is square root of n under modulo p if (x*x)%p = n%p
 Examples :
 Input:   n = 2, p = 5
 Output:  false
@@ -11,10 +11,11 @@ There doesn't exist a number x such that
 Input:   n = 2, p = 7
 Output:  true
 There exists a number x such that (x*x)%7 is
-2.  The number is 3.
+2.  The number is 3
 A Naive Method is to try every number x where x varies from 2 to p-1
 For every x, check if (x * x) % p is equal to n % p
-Time Complexity of this method is O(p).
+Time Complexity of this method is O(p)
+
 Euler’s criterion states that
 Square root of n under modulo p exists if and only if
 n^(p-1)/2 % p = 1
