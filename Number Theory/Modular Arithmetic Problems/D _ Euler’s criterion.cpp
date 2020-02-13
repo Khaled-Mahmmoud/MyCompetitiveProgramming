@@ -58,16 +58,16 @@ If p is a prime, then it must be an odd number and (p-1)
 must be an even, i.e., (p-1)/2 must be an integer.
 Suppose a square root of n under modulo p exists, then
 there must exist an integer x such that,
-      x2 % p = n % p 
+      x^2 % p = n % p 
 or, 
-     x2 ? n mod p
+     x^2 ? n mod p
 Raising both sides to power (p-1)/2,
-      (x2)(p-1)/2 ? n(p-1)/2 mod p           
-      xp-1 ? n(p-1)/2 mod p
+      (x^2)(p-1)/2 ? n^(p-1)/2 mod p           
+      x^p-1 ? n^(p-1)/2 mod p
 Since p is a prime, from Fermet's theorem, we can say that 
-   xp-1 ? 1 mod p
+   x^p-1 ? 1 mod p
 Therefore,
-  n(p-1)/2 ? 1 mod p  
+  n^(p-1)/2 ? 1 mod p  
   
 Time complexity of this Euler Criterion based method is O(Log p)
 
