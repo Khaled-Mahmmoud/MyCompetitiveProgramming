@@ -62,7 +62,7 @@ there must exist an integer x such that,
 or, 
      x^2 ? n mod p
 Raising both sides to power (p-1)/2,
-      (x^2)(p-1)/2 ? n^(p-1)/2 mod p           
+      (x^2)^(p-1)/2 ? n^(p-1)/2 mod p           
       x^p-1 ? n^(p-1)/2 mod p
 Since p is a prime, from Fermet's theorem, we can say that 
    x^p-1 ? 1 mod p
