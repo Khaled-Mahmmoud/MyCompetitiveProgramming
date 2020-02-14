@@ -14,12 +14,10 @@ Output: 3 or 4
 
 Input:  n = 2, p = 5
 Output: Square root doesn't exist
+
 We have discussed Euler’s criterion to check if square root exists or not
 We have also discussed a solution that works only when p is in form of 4*i + 3
-
 In this post, Shank Tonelli’s algorithm is discussed that works for all types of inputs.
-
-
 
 Algorithm steps to find modular square root using shank Tonelli’s algorithm :
 
