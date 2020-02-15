@@ -21,7 +21,7 @@ In this post, Shank Tonelli’s algorithm is discussed that works for all types 
 
 Algorithm steps to find modular square root using shank Tonelli’s algorithm :
 
-1) Calculate n ^ ((p – 1) / 2) (mod p), it must be 1 or p-1, if it is p-1
+1) Calculate n ^ ((p – 1) / 2)) (mod p), it must be 1 or p-1, if it is p-1
 then modular square root is not possible.
 
 2) Then after write p-1 as (s * 2^e) for some integer s and e
@@ -30,7 +30,7 @@ where s must be an odd number and both s and e should be positive.
 3) Then find a number q such that q ^ ((p – 1) / 2) (mod p) = -1
 
 4) Initialize variable x, b, g and r by following values
-   x = n ^ ((s + 1) / 2 (first guess of square root)
+   x = n ^ ((s + 1) / 2) (first guess of square root)
    b = n ^ s                
    g = q ^ s
    r = e   (exponent e will decrease after each updation) 
