@@ -30,13 +30,12 @@ where s must be an odd number and both s and e should be positive.
 3) Then find a number q such that q ^ ((p – 1) / 2) (mod p) = -1
 
 4) Initialize variable x, b, g and r by following values
-
    x = n ^ ((s + 1) / 2 (first guess of square root)
    b = n ^ s                
    g = q ^ s
    r = e   (exponent e will decrease after each updation) 
-5) Now loop until m > 0 and update value of x, which will be our final answer.
-
+   
+5) Now loop until m > 0 and update value of x, which will be our final answer
    Find least integer m such that b^(2^m) = 1(mod p)  and  0 <= m <= r – 1 
    If m = 0, then we found correct answer and return x as result
    Else update x, b, g, r as below
