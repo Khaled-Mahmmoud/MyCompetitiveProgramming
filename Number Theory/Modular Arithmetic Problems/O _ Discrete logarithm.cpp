@@ -1,3 +1,4 @@
+/*
 Discrete logarithm
 Given three integers a, b and m. Find an integer k such that 
 a^k = b (mod m) then k is discrete logarithm of m
@@ -23,3 +24,119 @@ Output: -1
 A Naive approach is to run a loop from 0 to m to cover all possible values of k and check for which value of k
 the above relation satisfies. If all the values of k exhausted, print -1. Time complexity of thuis approach is O(m)
 
+An efficient approach is to use baby-step, giant-step algorithm by using meet in the middle trick
+
+Baby-step giant-step algorithm
+Given a cyclic group G of order ‘m’, a generator ‘a’ of the group and a group element ‘b’, the problem is to find 
+an integer ‘k’ such that a^k = b (mod m) So what we are going to do(according to Meet in the middle trick) 
+is to split the problem in two parts of sqrt{m} each and solve them individually and then find the collision
+
+Now according to the baby-step giant-step algorithm
+we can write 'k' as k=i * n - j with n = sqrt{m} 
+and 0 <= i < n and 0 <= j< n
+Therefore, we have: a^{i * n - j} = b (mod m)
+ a^{i * n} = a^{j} * b mod m
+Therefore in order to solve, we precompute a^{i * n} for different values of 'i'
+Then fix 'b' and tries values of 'j' , In RHS of the congruence relation above
+It tests to see if congruence is satisfied for any value of 'j', using precomputed values of LHS.  
+
+First of all we have to write k = i * n - j, where n = sqrt{m} 
+and 0 <= i < n and 0 <= j< n
+
+Replace the ‘k’ in above equality, we get
+a^k = b (mod m)
+a^{i * n - j} = b (mod m)
+a^{i * n} = a^j * b (mod m)
+
+The term of left and right can take only n distinct values as i, j belong to [0, n)
+Therefore we need to generate all these terms for either left or right part of equality and store them in array 
+or data structure like map/unordered_map in C/C++ or Hashmap in java . Suppose we have stored all values of LHS
+Now iterate over all possible terms on the RHS for different values of j and check which value satisfies the LHS equality
+If no value satisfies in above step for any candidate of j, print -1.
+
+*/
+
+int powmod(int x, int y, int p) 
+{ 
+    int res = 1; 
+    x = x % p;  
+    while (y > 0) 
+    { 
+        if (y & 1) 
+            res = (res*x) % p; 
+      
+        y = y>>1; // y = y/2 
+        x = (x*x) % p; 
+    } 
+    return res; 
+} 
+int discreteLogarithm(int a, int b, int m)
+{ 
+    int n = (int) sqrt (m) + 1; 
+    unordered_map<int, int> value; 
+  
+    for (int i = n; i >= 1; --i) 
+        value[ powmod (a, i * n, m) ] = i; 
+  
+    for (int j = 0; j < n; ++j) 
+    { 
+        int cur = (powmod (a, j, m) * b) % m; 
+        if (value[cur]) 
+        { 
+            int ans = value[cur] * n - j; 
+            if (ans < m) 
+                return ans; 
+        } 
+    } 
+    return -1; 
+} 
+int main() 
+{ 
+    int a = 2, b = 3, m = 5; 
+    cout << discreteLogarithm(a, b, m) << endl; 
+} 
+
+/*
+Time complexity: O(sqrt(m)*log(b))
+Auxiliary space: O(sqrt(m))
+
+A possible improvement is to get rid of binary exponentiation or log(b) factor in the second phase of the algorithm
+This can be done by keeping a variable that multiplies by ‘a’ each time as ‘an’. Let’s see the program to understand more.
+
+*/
+
+int discreteLogarithm(int a, int b, int m)  
+{ 
+    int n = (int) sqrt (m) + 1; 
+    int an = 1; 
+    for (int i = 0; i<n; ++i) 
+        an = (an * a) % m; 
+  
+    unordered_map<int, int> value; 
+    for (int i = 1, cur = an; i<= n; ++i) 
+    { 
+        if (! value[ cur ]) 
+            value[ cur ] = i; 
+        cur = (cur * an) % m; 
+    } 
+  
+    for (int i = 0, cur = b; i<= n; ++i) 
+    { 
+        if (value[cur]) 
+        { 
+            int ans = value[cur] * n - i; 
+            if (ans < m) 
+                return ans; 
+        } 
+        cur = (cur * a) % m; 
+    } 
+    return -1; 
+} 
+int main() 
+{ 
+    int a = 2, b = 3, m = 5; 
+    cout << discreteLogarithm(a, b, m) << endl; 
+} 
+/*
+Time complexity: O(sqrt(m))
+Auxiliary space: O(sqrt(m))
