@@ -1,0 +1,27 @@
+A matrix is a rectangular arrangement of numbers into rows and columns
+For example, matrix A has two rows and three columns
+
+             3 Columns
+             
+           | -2  5  6 |
+      A =  |          | 2 Rows
+           |  5  2  7 |
+           
+           
+Matrix dimensions
+The dimensions of a matrix tells its size : the number of rows and columns of the matrix, in that order
+Since matrix A has two rows and three columns , we write its dimensions as 2 x 3 , pronounced "two by three"
+When working with matrix dimensions, remember row x columns
+
+Matrix elements
+A matrix element is simply a matrix entry
+Each element in a matrix is identified by naming the row and column in which it appears
+
+the element g(2,1) is the entry in the second row and the first column
+
+        |4  14 -7|
+    G = |18  5 13|
+        |-20 4 22|
+  in this case , g(2,1) = 18
+  
+in general , the element in row i and column j of matrix A is denoted as a(i,j)
