@@ -96,3 +96,27 @@ int main()
     cout << "LCM(10,20) = " << boost::math::lcm(10,20) << endl; 
     return 0; 
 } 
+
+/*
+        GCD & LCM
+find GCD and LCM between (504,540)
+504 | 2           540 | 2
+252 | 2           270 | 2
+126 | 2           135 | 3
+63  | 3           45  | 3
+21  | 3           15  | 3
+7   | 7           5   | 5
+    | 1               | 1
+    
+        504 = 2^3 * 3^2 * 5^0 * 7^1
+        540 = 2^2 * 3^3 * 5^1 * 7^0
+        
+GCD(504,540) = 2^2 * 3^2 * 5^0 * 7^0    --> Least power
+LCM(504,540) = 2^3 * 3^3 * 5^1 * 7^1    --> highest power
+
+Note : to get GCD of two numbers , we take the least power 
+to get LCM of two numbers , we take the highest power
+
+       LCM(a,b) = a * b / GCD(a,b)
+
+*/
