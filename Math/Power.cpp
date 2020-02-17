@@ -10,12 +10,26 @@ int power(int x, unsigned int y)
         return x * power(x, y / 2) * power(x, y / 2); 
 } 
 
-
 /*
+Time Complexity: O(n)
+Above function can be optimized to O(logn) by calculating power(x, y/2) only once and storing it
+*/
 
+int power(int x, unsigned int y) 
+{ 
+    int temp; 
+    if( y == 0) 
+        return 1; 
+    temp = power(x, y/2); 
+    if (y%2 == 0) 
+        return temp*temp; 
+    else
+        return x*temp*temp; 
+} 
+/*
+Time Complexity of optimized solution: O(logn)
 The recursive solutions are generally not preferred as they require space on
 call stack and they involve function call overhead
-
 */
 
 // this is the best solution
