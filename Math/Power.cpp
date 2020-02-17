@@ -21,10 +21,10 @@ int power(int x, unsigned int y)
     if( y == 0) 
         return 1; 
     temp = power(x, y/2); 
-    if (y%2 == 0) 
-        return temp*temp; 
+    if (y & 1) 
+        return x*temp*temp;
     else
-        return x*temp*temp; 
+        return temp*temp;
 } 
 /*
 Time Complexity of optimized solution: O(logn)
