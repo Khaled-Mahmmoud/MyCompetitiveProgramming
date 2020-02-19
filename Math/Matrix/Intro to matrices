@@ -9,7 +9,7 @@ For example, matrix A has two rows and three columns
 Matrix dimensions
 The dimensions of a matrix tells its size : the number of rows and columns of the matrix, in that order
 Since matrix A has two rows and three columns , we write its dimensions as 2 x 3 , pronounced "two by three"
-When working with matrix dimensions, remember row x columns
+When working with matrix dimensions, remember row x columns  // A ( 2 x 3 )
 
 Matrix elements
 A matrix element is simply a matrix entry
