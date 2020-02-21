@@ -57,7 +57,8 @@ matrix power_itr(matrix a, ll k)
 	while (k)
         {
 		if (k & 1)rt = multiply(rt, a);
-		a = multiply(a, a); k >>= 1;
+		k >>= 1;
+		a = multiply(a, a);
 	}
 	return rt;
 }
