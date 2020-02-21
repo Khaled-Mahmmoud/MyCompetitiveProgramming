@@ -14,14 +14,16 @@ matrix initial(int n, int m, int val = 0)
 matrix identity(int n) 
 {
 	matrix rt = initial(n, n);
-	for (int i = 0; i < n; i++)rt[i][i] = 1;
+	for (int i = 0; i < n; i++)
+		rt[i][i] = 1;
 	return rt;
 }
 
 matrix addIdentity(const matrix& a) 
 {
 	matrix rt = a;
-	for (int i = 0; i < sz(a); i++)rt[i][i] += 1;
+	for (int i = 0; i < sz(a); i++)
+		rt[i][i] += 1;
 	return rt;
 }
 
@@ -29,7 +31,7 @@ matrix add(const matrix& a, const matrix& b)
 {
 	matrix rt = initial(sz(a), sz(a[0]));
 	for(int i = 0; i < sz(a); i++)
-  for(int j = 0; j < sz(a[0]); j++)
+             for(int j = 0; j < sz(a[0]); j++)
 		rt[i][j] = a[i][j] + b[i][j];
 	return rt;
 }
@@ -37,10 +39,10 @@ matrix add(const matrix& a, const matrix& b)
 matrix multiply(const matrix& a, const matrix& b) 
 {
 	matrix rt = initial(sz(a), sz(b[0]));
-  for(i=0;i<sz(a);i++)
-     for(j=0;j<sz(b[0]);j++)
-        for(k=0;k<sz(a[0]);k++)
-            rt[i][j]+=a[i][k]*b[k][j];
+        for(i=0;i<sz(a);i++)
+          for(j=0;j<sz(b[0]);j++)
+             for(k=0;k<sz(a[0]);k++)
+                rt[i][j]+=a[i][k]*b[k][j];
 	return rt;
 }
 matrix power(const matrix& a, ll k)
@@ -53,7 +55,7 @@ matrix power_itr(matrix a, ll k)
 {
 	matrix rt = identity(sz(a));
 	while (k)
-  {
+        {
 		if (k & 1)rt = multiply(rt, a);
 		a = multiply(a, a); k >>= 1;
 	}
