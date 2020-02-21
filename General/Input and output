@@ -1,3 +1,5 @@
+
+
 1)
 Input and output is sometimes a bottleneck in the program
 The following lines at the beginning of the code make input and output more efficient
@@ -24,8 +26,9 @@ getline(cin, s);
 
 4)
 If the amount of data is unknown, the following loop is useful:
-while (cin >> x) {
-// code
+while (cin >> x) 
+{
+    // code
 }
 
 
@@ -35,7 +38,9 @@ while (cin >> x) {
 In some contest systems, files are used for input and output. An easy solution
 for this is to write the code as usual using standard streams, but add the following
 lines to the beginning of the code:
+
 freopen("input.txt", "r", stdin);
 freopen("output.txt", "w", stdout);
+
 After this, the program reads the input from the file ”input.txt” and writes the
 output to the file ”output.txt”
