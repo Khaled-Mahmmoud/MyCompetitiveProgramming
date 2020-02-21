@@ -1,7 +1,5 @@
-The most used integer type in competitive programming is int, which is a 32-bit type with a value range of −2 * 10^31 . . .(2 * 10^31)−1 
-OR about −2 * 10^9 . . . 2 * 10^9
-If the type int is not enough, the 64-bit type long long can be used. It has a value range of −2 * 10^63 . . . (2 * 10^63)-1
-OR about −9 * 10^18 . . . 9 * 10^18
+The most used integer type in competitive programming is int, which is a 32-bit type with a value −2 * 10^9 . . . 2 * 10^9
+If the type int is not enough, the 64-bit type long long can be used . It has a value range of −9 * 10^18 . . . 9 * 10^18
 
 cout<< 8380238475ll ;
 The suffix ll means that the type of the number is long long
@@ -29,7 +27,8 @@ int a = 123456789;
 long long b = a*a;
 cout << b << "\n"; // -1757895751
 
-Even though the variable b is of type long long, both numbers in the expression a * a are of type int and the result is also of type int 
+Even though the variable b is of type long long
+both numbers in the expression a * a are of type int and the result is also of type int 
 Because of this, the variable b will contain a wrong result (Casting)
 The problem can be solved by changing the type of a to long long or by changing the expression to (long long)a*a
 
@@ -49,12 +48,14 @@ printf("%.20f\n", x); // 0.99999999999999988898
 
 It is risky to compare floating point numbers with the == operator, because it is possible that the values should be equal 
 but they are not because of precision errors
-A better way to compare floating point numbers is to assume that two numbers are equal if the difference between them is less than ε
-where ε is a small number
+
+A better way to compare floating point numbers is to assume that two numbers are equal if the difference between them 
+is less than ε where ε is a small number
 In practice, the numbers can be compared as follows (ε = 10^−9)
 
-if (abs(a-b) < 1e-9) {
-// a and b are equal
+if (abs(a-b) < 1e-9) 
+{
+    // a and b are equal
 }
 
 
