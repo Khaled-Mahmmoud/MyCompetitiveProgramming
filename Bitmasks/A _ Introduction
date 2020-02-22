@@ -49,3 +49,42 @@ Form : x >> y
 shift number x in binary times y to the right
 Ex. int x=10; // 1010
 int y=x>>2; // 0010
+
+check if bit i is set in the bitmask m 
+find the result of m & 1 shift left i times
+if the result is zero then the bit is clear otherwise the bit is set
+Ex. int m=5; // 101
+int r=m&(1<<2) // 101 & 100 = 100 so is set
+
+set bit 
+how to set bit with index i in a bitmask m ?
+we can shit 1 to the left times i and OR it with m
+m = m | (1<<i)
+Ex. int a = 11 // 1011
+set bit 2
+a = a || (1<<2) = 1011 | 100 = 1111
+
+clear bit
+how to clear bit with index i in a bitmask m ?
+we can shit 1 to the left times i and not it and AND it with m
+m = m & ~(1<<i)
+EX. int a = 11 // 1011
+clear bit 3
+m = m & ~(1<<3) = 1011 & 0111 =0011
+
+Multple by 2 (faster)
+we can use shift left to multiple by 2
+Ex. int a = 5 // 101
+int a = a << 1 = 10 // 1010
+
+Divide by 2 (faster)
+we can use shift right to divide by 2
+Ex. int a = 10 // 1010
+a = a >> 1 = 5 // 0101
+
+check if number is even or odd (faster)
+we have only one bit with odd value ( bit 0 ) 
+so we can check if bit 0 is set then the number is odd otherwise is even
+Ex. x = 5 // 101
+Ex. x = 4 // 100
+if(n&1)cout<<"odd";else cout<<"even";
