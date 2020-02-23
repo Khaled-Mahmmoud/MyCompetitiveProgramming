@@ -1,25 +1,3 @@
-// len = 3: 000, 001, 010, 011, 100, 101, 110, 111
-// Remember we did it recursively! This is much SIMPLER!
-void printNumber(int n, int len)
-{
-	if(!len)return;
-	printNumber(n>>1, len-1);	// remove last bit
-	cout<<(n&1);		       //  print last bit
-}
-void printAllSubsets(int len)	
-{
-	for (int i = 0; i < (1<<len); ++i)
-		{printNumber(i,len);cout<<' ';}
-}
-
-// For reversed order. Either reverse each item or work from big to small
-void printAllSubsets(int len)	
-{
-	for (int i = (1<<len)-1; i >= 0 ; --i)
-  	       {printNumber(i, len);cout<<' ';}
-}
-
-
 
 /*
 Gray Code:  is a binary numeral system where two successive values differ in only one bit
