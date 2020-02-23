@@ -1,5 +1,6 @@
 # اللَّهُمَّ انْفَعْنِي بِمَا عَلَّمْتَنِي، وَعَلِّمْنِي مَا يَنْفَعُنِي، وَزِدْنِي عِلْمًا
 
+
 ### Containers
 - [Containers](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/Containers)     
 - [Iterators](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/Iterators)
@@ -25,11 +26,17 @@
 	- [Cmath](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/Libraries/Cmath)
 	- [Iterator](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/Libraries/Iterator)
 
-	
+
 ### Two Pointers
 - [Two Pointers Technique](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Two%20Pointers/Two%20Pointers%20Technique.cpp)
 - [Problems](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/tree/master/Two%20Pointers/Problems)
 	- [Maximum subarray sum](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Two%20Pointers/Problems/A%20_%20Maximum%20subarray%20sum.cpp)
+
+
+### Bitmasks
+- [Introduction](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Bitmasks/A%20_%20Introduction)
+- [Bit Manipulation](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Bitmasks/B%20_%20Bit%20Manipulation.cpp)
+- [Gray Code](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Bitmasks/C%20_%20Gray%20Code.cpp)
 
 
 ### Dynamic Programming
