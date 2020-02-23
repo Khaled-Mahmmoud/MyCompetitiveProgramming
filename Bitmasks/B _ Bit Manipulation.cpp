@@ -1,4 +1,4 @@
-
+/*
 Why using Bit Manipulation ?
 1) better time order
 2) better memory order
@@ -33,7 +33,7 @@ Even test
 	if( n%2 == 1)		-> Fails of n is negative
 	if( n&1 == 1)     	-> Works always
 
-
+*/
 
 void printNumber(int n)
 {
@@ -76,7 +76,7 @@ X & (X-1) 	= 011010000000		first bit from right removed
 
 X & ~(X-1) 	= 011010010000 
                 & 100101110000 = 000000010000	value of 1<<SmaintestBitIdx
-
+*/
 int countNumBits2(int mask) 
 {	
          // O(bits Count)	__builtin_popcount(n)
@@ -87,4 +87,25 @@ int countNumBits2(int mask)
 		++ret;	// Simply remove the last bit and so on
 	}
 	return ret;
+}
+
+// len = 3: 000, 001, 010, 011, 100, 101, 110, 111
+// Remember we did it recursively! This is much SIMPLER!
+void printNumber(int n, int len)
+{
+	if(!len)return;
+	printNumber(n>>1, len-1);	// remove last bit
+	cout<<(n&1);		       //  print last bit
+}
+void printAllSubsets(int len)	
+{
+	for (int i = 0; i < (1<<len); ++i)
+		{printNumber(i,len);cout<<' ';}
+}
+
+// For reversed order. Either reverse each item or work from big to small
+void printAllSubsets(int len)	
+{
+	for (int i = (1<<len)-1; i >= 0 ; --i)
+  	       {printNumber(i, len);cout<<' ';}
 }
