@@ -50,6 +50,7 @@ shift number x in binary times y to the right
 Ex. int x=10; // 1010
 int y=x>>2; // 0010
 
+get bit
 check if bit i is set in the bitmask m 
 find the result of m & 1 shift left i times
 if the result is zero then the bit is clear otherwise the bit is set
