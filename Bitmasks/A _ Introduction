@@ -54,22 +54,31 @@ get bit
 check if bit i is set in the bitmask m 
 find the result of m & 1 shift left i times
 if the result is zero then the bit is clear otherwise the bit is set
-Ex. int m=5; // 101
-int r=m&(1<<2) // 101 & 100 = 100 so is set
+Ex. int m = 5; // 101
+int r=m & (1<<2) // 101 & 100 = 100 so is set
 
 set bit 
 how to set bit with index i in a bitmask m ?
 we can shit 1 to the left times i and OR it with m
 m = m | (1<<i)
-Ex. int a = 11 // 1011
+Ex. int m = 11 // 1011
 set bit 2
-a = a || (1<<2) = 1011 | 100 = 1111
+m = m | (1<<2) = 1011 | 100 = 1111
 
 clear bit
 how to clear bit with index i in a bitmask m ?
 we can shit 1 to the left times i and not it and AND it with m
 m = m & ~(1<<i)
-EX. int a = 11 // 1011
+EX. int m = 11 // 1011
 clear bit 3
 m = m & ~(1<<3) = 1011 & 0111 =0011
 
+flip bit
+how to flip bit with index i in a bitmask m ?
+we can shit 1 to the left times i and XOR it with m
+ m ^ (1<<i);
+EX. int m = 11  // 1011
+flib bit 2
+m = m ^ (1<<2) = 1011 ^ 100 = 1111
+flib bit 1
+m = m ^ (1<<1) = 1011 ^ 10 = 1001
