@@ -109,3 +109,8 @@ void printAllSubsets(int len)
 	for (int i = (1<<len)-1; i >= 0 ; --i)
   	       {printNumber(i, len);cout<<' ';}
 }
+
+// Be careful with operators precedence problems
+// X & 7 == 1 		is interpreted as 	X & (7 == 1)	        --> (X & 7) == 1
+// 1<<10 -1 		is interpreted as	= 1<<9			--> (1<<10) - 1
+// 1 << 60 Fails        1 is 32 bitInteger (overflow)          	  	--> 1LL << 60
