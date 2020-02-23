@@ -24,7 +24,7 @@ basic bitwise operations
 Ex. a=5 , b=4
 int c=a&b; // 101 & 100 = 100
 
-<<<<< OR operator (|)
+<<<<< OR operator (|) >>>>>
 Ex. a=5 , b=4
 int c= a | b; // 101 & 100 = 101
  
