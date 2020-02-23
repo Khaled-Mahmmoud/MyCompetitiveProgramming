@@ -76,3 +76,15 @@ X & (X-1) 	= 011010000000		first bit from right removed
 
 X & ~(X-1) 	= 011010010000 
                 & 100101110000 = 000000010000	value of 1<<SmaintestBitIdx
+
+int countNumBits2(int mask) 
+{	
+         // O(bits Count)	__builtin_popcount(n)
+	int ret = 0;
+	while (mask) 	
+	{
+		mask &= (mask-1);
+		++ret;	// Simply remove the last bit and so on
+	}
+	return ret;
+}
