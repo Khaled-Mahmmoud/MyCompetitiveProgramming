@@ -10,7 +10,10 @@ matrix initial(int n, int m, int val = 0)
 {
 	return matrix(n, row(m, val));
 }
-
+matrix zero(int n,int m)
+{
+	return initial(n,m);
+}
 matrix identity(int n) 
 {
 	matrix rt = initial(n, n);
