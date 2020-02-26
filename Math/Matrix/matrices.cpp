@@ -87,7 +87,7 @@ sum of diagonal values
 0   0   30
 Trace = 10 + 20 +30 = 60
 */
-int matrixTrace(int a,int b)
+int matrixTrace(const matrix& a)
 {
 	int ret = 0;
 	for(int i=0;i<sz(a);i++)ret += a[i][i];
