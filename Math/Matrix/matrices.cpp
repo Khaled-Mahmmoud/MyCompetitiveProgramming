@@ -1,13 +1,11 @@
+#include<bits/stdc++.h>
+using namespace std;
 #define ll long long
 #define sz(v) (int)(v.size())
 
 typedef vector<int> row;
 typedef vector<row> matrix;
 
-matrix initial(int n, int m, int val = 0)
-{
-	return matrix(n, row(m, val));
-}
 /*
 Zero Matrix 
 matrix with all values are zero
@@ -15,9 +13,9 @@ matrix with all values are zero
 |0 0 0|
 |0 0 0|
 */
-matrix zero(int n,int m)
+matrix zero(int n, int m, int val = 0)
 {
-	return initial(n,m);
+	return matrix(n, row(m, val));
 }
 /*
 identity matrix
