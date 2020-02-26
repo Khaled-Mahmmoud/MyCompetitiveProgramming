@@ -61,29 +61,3 @@ Add one row to another    |2 5 3|  --> | 2    5    3 |
   
 Matrix row operations can be used to solve systems of equations 
 but before we look at why, let's practice these skills
-
-
-           Matrix multiplication dimensions
-The dimensions of a matrix give the number of rows and columns of the matrix in that order
-Since matrix A has 2 rows and 3 columns, it is called 2 * 3 matrix
-
-When is matrix multiplication defined?
-In order for matrix multiplication to be defined, the number of columns in the first matrix must 
-be equal to the number of rows in the second matrix
-
-          (m X n).(n X k)
-    product matrix is dimension of m X k
-    
-Definition of identity matrix
-The n X n, identity matrix, denoted I_n 
-The entries on the diagonal from the upper left to the bottom right are all 1's, and all other entries are 0
- 
- 
- I2 = |1  0|               |1  0  0|
-      |0  1|          I3 = |0  1  0|                    |1  0  0  0|
-                           |0  0  1|               I4 = |0  1  0  0|
-                                                        |0  0  1  0|
-                                                        |0  0  0  1|
-                           
-The product of any square matrix and the appropriate identity matrix is always the original matrix
-regardless of the order in which the multiplication was performed! In other words, A.I = I.A = A
