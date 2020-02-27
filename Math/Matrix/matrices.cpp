@@ -46,7 +46,13 @@ matrix addIdentity(const matrix& a)
 		rt[i][i] += 1;
 	return rt;
 }
-
+/*
+Matrix Addition 
+1) Same dimensions for two matrices
+2) Sum is for corresponing cells
+ 1  2  3      1  5  3     2  7  6
+ 4  0  0  +   0  7  9  =  4  7  9
+*/
 matrix add(const matrix& a, const matrix& b) 
 {
 	matrix rt = zero(sz(a), sz(a[0]));
@@ -67,6 +73,10 @@ be equal to the number of rows in the second matrix
           (m X n).(n X k)
     product matrix is dimension of m X k
     
+1  2       1  2  3  4       11  14  17  20
+3  4   *                =   23  30  37  44
+5  6       5  6  7  8       35  46  57  68
+    
 */
 matrix multiply(const matrix& a, const matrix& b) 
 {
@@ -80,9 +90,9 @@ matrix multiply(const matrix& a, const matrix& b)
 /*
 Matrix Trace
 sum of diagonal values
-10  1   2
+ 10  1   2
 -5  20  7
-0   0   30
+ 0   0   30
 Trace = 10 + 20 +30 = 60
 */
 int matrixTrace(const matrix& a)
