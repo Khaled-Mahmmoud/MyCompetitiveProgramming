@@ -33,7 +33,7 @@ regardless of the order in which the multiplication was performed! In other word
 */
 matrix identity(int n) 
 {
-	matrix rt = initial(n, n);
+	matrix rt = zero(n, n);
 	for (int i = 0; i < n; i++)
 		rt[i][i] = 1;
 	return rt;
