@@ -49,7 +49,7 @@ matrix addIdentity(const matrix& a)
 
 matrix add(const matrix& a, const matrix& b) 
 {
-	matrix rt = initial(sz(a), sz(a[0]));
+	matrix rt = zero(sz(a), sz(a[0]));
 	for(int i = 0; i < sz(a); i++)
              for(int j = 0; j < sz(a[0]); j++)
 		rt[i][j] = a[i][j] + b[i][j];
@@ -70,7 +70,7 @@ be equal to the number of rows in the second matrix
 */
 matrix multiply(const matrix& a, const matrix& b) 
 {
-	matrix rt = initial(sz(a), sz(b[0]));
+	matrix rt = zero(sz(a), sz(b[0]));
         for(i=0;i<sz(a);i++)
           for(j=0;j<sz(b[0]);j++)
              for(k=0;k<sz(a[0]);k++)
