@@ -101,20 +101,3 @@ int matrixTrace(const matrix& a)
 	for(int i=0;i<sz(a);i++)ret += a[i][i];
 	return ret;
 }
-matrix power(const matrix& a, ll k)
-{
-	if (k == 0)return identity(sz(a));
-	if (k & 1)return multiply(a, power(a, k - 1));
-	return power(multiply(a, a), k >> 1);
-}
-matrix power_itr(matrix a, ll k) 
-{
-	matrix rt = identity(sz(a));
-	while (k)
-        {
-		if (k & 1)rt = multiply(rt, a);
-		k >>= 1;
-		a = multiply(a, a);
-	}
-	return rt;
-}
