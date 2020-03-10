@@ -18,7 +18,7 @@ Matrix Reflection
  1  7  4           4  7  1
  0  9  4    -->    4  9  0
  */
-matrix rotate(matrix v)
+matrix Reflect(matrix v)
 {
 	  matrix r = zero(sz(v),sz(v[0]));
     for(int i=0;i<sz(v);i++)
