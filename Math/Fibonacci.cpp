@@ -60,8 +60,8 @@ int fib(int n)
   } 
   return b; 
 } 
-/*
 
+/*
 Method 4 
 Below is one more interesting recurrence formula that can be used to 
 find n’th Fibonacci Number in O(Log n) time
