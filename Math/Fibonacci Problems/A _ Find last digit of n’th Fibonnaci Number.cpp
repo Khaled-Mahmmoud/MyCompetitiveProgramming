@@ -1,5 +1,6 @@
 /*
-Given a number ‘n’, write a function that prints the last digit of n’th (‘n’ can also be a large number) Fibonacci number
+
+Given a number ‘n’, write a function that prints the last digit of n’th Fibonacci number 
 
 Input : n = 0
 Output : 0
@@ -14,18 +15,22 @@ Output : 3
 Method 1 : (Naive Method)
 Simple approach is to calculate the n’th Fibonacci number and printing the last digit
 
-
 */
 
-int f[1009];
-int fib(ll n)
+ll fibonacciMatrix(ll n) 
 {
-    if(n<2)return n;
-    if(n==2)return 1;
-    if(f[n])return f[n];
-    int k = (n&1)?(n+1)/2:n/2;
-    return f[n] = (n&1)?(fib(k)*fib(k)+fib(k-1)*fib(k-1))%mod
-    :(((2*fib(k-1)+fib(k))*fib(k)))%mod;
+	if (n <= 1)return n;
+	/*
+	
+	transition matrix
+	0 1
+	1 1
+	
+	*/
+	matrix transition = zero(2, 2);
+	transition[0][1] = transition[1][0] = transition[1][1] = 1;
+        transition = power(transition, n );
+	return transition[0][1];
 }
 int main()
 {
