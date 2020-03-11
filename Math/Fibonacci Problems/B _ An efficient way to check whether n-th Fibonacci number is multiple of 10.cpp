@@ -18,13 +18,14 @@ Moreover, we can check without finding fibonacci number by looking on the patter
 If number is divisible by 10, then it must have to be divisible by 5 and 2 both.
 
 Multiples of 2 in Fibonacci Series :
+      _     _       _         _           _             _
 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 ….
-The number shown in bold are divisible by 2. On careful observation, we finds that every 3rd number is divisible by 2.
+On careful observation, we finds that every 3rd number is divisible by 2.
 
 Multiples of 5 in Fibonacci Series :
+          _            _                  _
 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 ……
-
-The number shown in bold are divisible by 5. On careful observation, we find that every 5-th number is divisible by 5.
+On careful observation, we find that every 5-th number is divisible by 5.
 
 Now LCM of 3 and 5 is 15. So, every 15-th Fibonacci number will be divisible by 10
 So, we don’t need to find Fibonacci number, just we have to check if n is divisible by 15 or not
