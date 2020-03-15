@@ -150,7 +150,30 @@ matrix multiply(const matrix& a, const matrix& b)
                 rt[i][j]+=a[i][k]*b[k][j];
 	return rt;
 }
+matrix power(const matrix& a, ll k) 
+{	
+	if (k == 0)return identity(sz(a));	
+	if (k & 1)return multiply(a, power(a, k - 1));	
+	return power(multiply(a, a), k >> 1);	
+}	
 
+matrix power_itr(matrix a, ll k) 
+{	
+	matrix rt = identity(sz(a));	
+	while (k)
+	{	
+		if (k & 1)rt = multiply(rt, a);	
+		a = multiply(a, a); k >>= 1;	
+	}	
+	return rt;	
+}	
+// a^1 + a^2 + a^3 + ..... + a^k
+matrix sumPower(const matrix& a, ll k)
+{	
+	if (k == 0)return initial(sz(a), sz(a));	
+	if (k & 1)return multiply(a, addIdentity(sumPower(a, k - 1)));	
+	return multiply(sumPower(a, k >> 1), addIdentity(power(a, k >> 1)));	
+}	
 /*
 Matrix Trace
 sum of diagonal values
