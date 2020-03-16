@@ -1,0 +1,33 @@
+You are given two positive numbers M and N
+The task is to print greatest common divisor of M’th and N’th Fibonacci Numbers.
+
+The first few Fibonacci Numbers are 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ….
+Note that 0 is considered as 0’th Fibonacci Number.
+
+Input  : M = 3, N = 6
+Output :  2
+Fib(3) = 2, Fib(6) = 8
+GCD of above two numbers is 2
+
+Input  : M = 8, N = 12
+Output :  3
+Fib(8) = 21, Fib(12) = 144
+GCD of above two numbers is 3
+
+A Simple Solution is to follow below steps
+1) Find M’th Fibonacci Number.
+2) Find N’th Fibonacci Number.
+3) Return GCD of two numbers.
+
+A Better Solution is based on below identity
+
+GCD(Fib(M), Fib(N)) = Fib(GCD(M, N))
+
+The above property holds because Fibonacci Numbers follow
+Divisibility Sequence, i.e., if M divides N, then Fib(M)
+also divides N. For example, Fib(3) = 2 and every third
+third Fibonacci Number is even.
+
+The steps are:
+1) Find GCD of M and N. Let GCD be g.
+2) Return Fib(g).
