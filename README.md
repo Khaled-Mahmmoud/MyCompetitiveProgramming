@@ -1,5 +1,5 @@
 # اللَّهُمَّ انْفَعْنِي بِمَا عَلَّمْتَنِي، وَعَلِّمْنِي مَا يَنْفَعُنِي، وَزِدْنِي عِلْمًا
-# Khaled Mahmoud ranks 1'th at CP
+# Khaled Mahmoud ranks 1'th at Competitive Programming
 - [March 2020](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/March%202020)
 ### Containers
 - [Containers](https://github.com/Khaled-M-Fawzi/MyCompetitiveProgramming/blob/master/Containers/Containers)     
