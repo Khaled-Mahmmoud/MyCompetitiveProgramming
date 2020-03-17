@@ -12,7 +12,7 @@ we can sort in O(n^2)
           
 In this section we will see how to use the C++ sort function. The following code sorts a vector in increasing order
 vector<int> v = {4,2,5,3,5,8,3};
-sort(v.begin(),v.end());
+sort(v.begin(),v.end());   // O(nlogn)
 After the sorting, the contents of the vector will be [2,3,3,4,5,5,8]
 a reverse order is possible as follows:
 sort(v.rbegin(),v.rend());          OR       sort(v.begin(),v.end(),greater<int>())
