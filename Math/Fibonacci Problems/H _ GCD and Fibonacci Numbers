@@ -15,9 +15,9 @@ Fib(8) = 21, Fib(12) = 144
 GCD of above two numbers is 3
 
 A Simple Solution is to follow below steps
-1) Find M’th Fibonacci Number.
-2) Find N’th Fibonacci Number.
-3) Return GCD of two numbers.
+1) Find M’th Fibonacci Number
+2) Find N’th Fibonacci Number
+3) Return GCD of two numbers
 
 A Better Solution is based on below identity
 
