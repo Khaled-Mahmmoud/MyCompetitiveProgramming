@@ -30,4 +30,4 @@ third Fibonacci Number is even.
 
 The steps are:
 1) Find GCD of M and N. Let GCD be g.
-2) Return Fib(g).
+2) Return Fib(g)
