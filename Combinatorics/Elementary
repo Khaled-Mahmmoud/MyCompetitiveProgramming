@@ -11,4 +11,4 @@ Any Task
         2/ order is not important (Combination)
                   nCr = C(n,r) = n! / (n-r)! * r!
                   Ex. Picking a team of 3 people from a group of 10 = 10C3 = 10! / (10-3)! * 3!
-                  
+                  nCr = nC(n – r)
