@@ -53,6 +53,65 @@ int binomialCoeff(int n, int k)
         return 1;  
     return binomialCoeff(n - 1, k - 1) + binomialCoeff(n - 1, k);  
 }  
+/*
+2) Overlapping Subproblems
+It should be noted that the above function computes the same subproblems again and again
+See the following recursion tree for n = 5 an k = 2. The function C(3, 1) is called two times
+For large values of n, there will be many common subproblems.
 
+                             C(5, 2)
+                    /                      \
+           C(4, 1)                           C(4, 2)
+            /   \                          /           \
+       C(3, 0)   C(3, 1)             C(3, 1)               C(3, 2)
+                /    \               /     \               /     \
+         C(2, 0)    C(2, 1)      C(2, 0) C(2, 1)          C(2, 1)  C(2, 2)
+                   /        \              /   \            /    \
+               C(1, 0)  C(1, 1)      C(1, 0)  C(1, 1)   C(1, 0)  C(1, 1)
+Since same suproblems are called again, this problem has Overlapping Subproblems property
+So the Binomial Coefficient problem has both properties (see this and this) of a dynamic programming problem
+Like other typical Dynamic Programming(DP) problems, re-computations of same subproblems can be avoided by 
+constructing a temporary array C[][] in bottom up manner. Following is Dynamic Programming based implementation
 
- 
+*/
+
+int binomialCoeff(int n, int k) 
+{ 
+    int C[n + 1][k + 1]; 
+    int i, j;
+    for (i = 0; i <= n; i++) 
+    { 
+        for (j = 0; j <= min(i, k); j++) 
+        { 
+            if (j == 0 || j == i) 
+                C[i][j] = 1; 
+            else
+                C[i][j] = C[i - 1][j - 1] + C[i - 1][j]; 
+        } 
+    } 
+  
+    return C[n][k]; 
+} 
+// Time Complexity: O(n*k)
+// Auxiliary Space: O(n*k)
+
+/**
+ * Computes the number of distinct sets of size "r" chosen from "n" items.
+ *
+ * Note that C(n, r) = C(n, n - r).
+ * So call the function with nCr(n, min(r, n-r)) for better performance.
+ *
+ * Complexity: O(r)
+ *
+ * @return "n" choose "r".
+ */
+int nCr(int n, int r) 
+{
+    if (n < r)
+        return 0;
+
+    if (r == 0)
+        return 1;
+
+    return n * nCr(n - 1, r - 1) / r;
+}
