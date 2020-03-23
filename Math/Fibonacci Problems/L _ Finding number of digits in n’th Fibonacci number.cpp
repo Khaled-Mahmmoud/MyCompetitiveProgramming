@@ -1,7 +1,8 @@
 /*
 
 Finding number of digits in n’th Fibonacci number
-Given a number n, find number of digits in n’th Fibonacci Numbers. First few Fibinacci numbers are 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ….
+Given a number n, find number of digits in n’th Fibonacci Numbers. First few Fibinacci numbers are 0, 1, 1, 2, 3, 5, 
+8, 13, 21, 34, 55, 89, 144, ….
 
 Input : n = 6
 Output : 1
