@@ -53,14 +53,16 @@ EFx = 4EFx-1 + EFx-2
 
 */
 
+int dp[1000];
 long int evenFib(int n) 
 { 
     if (n < 1) 
     return n; 
     if (n == 1)  
     return 2; 
-  
-     return ((4 * evenFib(n-1)) + evenFib(n-2));  
+    if(dp[n])
+     return dp[n];
+    return return dp[n] = ((4 * evenFib(n-1)) + evenFib(n-2));  
 } 
 int main () 
 { 
@@ -68,3 +70,4 @@ int main ()
     cout << evenFib(n);  
     return 0; 
 } 
+// Complexity : O(n)
