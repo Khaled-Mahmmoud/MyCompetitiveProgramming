@@ -56,8 +56,8 @@ EFx = 4EFx-1 + EFx-2
 int dp[1000];
 long int evenFib(int n) 
 { 
-    if (n < 1) 
-    return n; 
+    if (n == 0) 
+    return 0; 
     if (n == 1)  
     return 2; 
     if(dp[n])
