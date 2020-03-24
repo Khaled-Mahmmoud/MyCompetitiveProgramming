@@ -46,5 +46,8 @@ int main()
     int n;
     string s;
     cin>>s>>n;
-    cout<<countDecoding(s,n);
+    if(s=="0")
+        cout<<0;
+    else
+        cout<<countDecoding(s,n);
 }
