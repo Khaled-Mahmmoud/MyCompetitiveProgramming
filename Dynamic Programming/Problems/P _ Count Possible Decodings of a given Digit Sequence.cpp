@@ -43,9 +43,9 @@ int countDecoding(string digits, int n)
 } 
 int main()
 {
-    int n;
     string s;
-    cin>>s>>n;
+    cin>>s;
+    int n = s.size();
     if(s=="0")
         cout<<0;
     else
