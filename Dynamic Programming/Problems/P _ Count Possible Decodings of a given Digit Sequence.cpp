@@ -24,7 +24,8 @@ add the result to total count
 
 */
 
-int countDecoding(char *digits, int n) 
+int dp[100000];
+int countDecoding(string digits, int n) 
 { 
     if (n == 0 || n == 1) 
         return 1; 
