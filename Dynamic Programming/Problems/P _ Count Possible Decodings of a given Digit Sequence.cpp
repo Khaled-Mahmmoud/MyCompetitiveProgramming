@@ -41,3 +41,10 @@ int countDecoding(string digits, int n)
   
     return dp[n] = count; 
 } 
+int main()
+{
+    int n;
+    string s;
+    cin>>s>>n;
+    cout<<countDecoding(s,n);
+}
