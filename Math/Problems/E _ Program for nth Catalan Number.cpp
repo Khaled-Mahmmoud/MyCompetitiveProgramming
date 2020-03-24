@@ -26,12 +26,14 @@ int catalan(int n)
 } 
 // Complexity : O(n^2)
 
-
+/*
 
 Using Binomial Coefficient
 We can also use the below formula to find nth catalan number in O(n) time
 catalan(n) = nCr(2n,n) / (n+1)
 We have discussed a O(n) approach to find binomial coefficient nCr
+
+*/
 
 int binomialCoeff(int n,int r)
 {
