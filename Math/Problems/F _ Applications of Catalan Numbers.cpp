@@ -35,7 +35,7 @@ Input: n = 2
 Output: 2
 It can be cut into 2 triangles by using either pair of opposite vertices
 
-5) Given a number N . Number of Permutations of 1 to N such that no Three Terms forms Increasing Subsequence
+5) Given a number N . The task is to Find Number of Permutations of 1 to N such that no Three Terms forms Increasing Subsequence
 Input : N = 3
 Output : 5
 Valid permutations : 132, 213, 231, 312 and 321 and not 123
