@@ -60,3 +60,39 @@ for n = 2  -->>   O              O
              /   \                /   \
             O     O              O     O
             
+7) Enumeration of Binary Trees
+A Binary Tree is labeled if every node is assigned a label and a Binary Tree is unlabeled if nodes are not assigned any label
+
+Below two are considered same unlabeled trees
+    o                 o
+  /   \             /   \ 
+ o     o           o     o 
+
+Below two are considered different labeled trees
+    A                C
+  /   \             /  \ 
+ B     C           A    B 
+How many different Unlabeled Binary Trees can be there with n nodes?
+
+For n  = 1, there is only one tree
+   o
+
+For n  = 2, there are two trees
+   o      o
+  /        \  
+ o          o
+
+For n  = 3, there are five trees
+    o      o           o         o      o
+   /        \         /  \      /         \
+  o          o       o    o     o          o
+ /            \                  \        /
+o              o                  o      o
+
+Number of Labeled Tees = (Number of unlabeled trees) * n!
+                       = [(2n)! / (n+1)!n!]  × n!
+                       
+8) Number of ways to insert n pairs of parentheses in a word of n+1 letters
+e.g., for n=2 there are 2 ways: ((ab)c) or (a(bc))
+For n=3 there are 5 ways, ((ab)(cd)), (((ab)c)d), ((a(bc))d), (a((bc)d)), (a(b(cd)))
+
