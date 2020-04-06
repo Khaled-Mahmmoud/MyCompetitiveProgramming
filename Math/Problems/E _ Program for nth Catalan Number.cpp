@@ -43,8 +43,7 @@ int binomialCoeff(int n,int r)
 }
 int catalan(int n)
 {
-    int c = binomialCoeff(2*n, n);
-    return c/(n+1);
+    return binomialCoeff(2*n, n) / (n+1);
 }
 int main()
 {
