@@ -68,6 +68,7 @@ int phi(int n)
         result -= result / n; 
     return result; 
 } 
+// Complexity : O(sqrt(n)) 
 /*
 Some Interesting Properties of Euler’s Totient Function
 1) For prime number p , ?(p) is p-1
