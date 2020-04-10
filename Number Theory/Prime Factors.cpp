@@ -1,4 +1,3 @@
-// O(sqrt(n)*log(n))
 void primeFactors(int n)  
 {  
     while (!(n & 1))  
@@ -17,6 +16,7 @@ void primeFactors(int n)
     if (n > 1)  
         cout << n << " ";  
 } 
+// O(sqrt(n))
 
 
 // using Sieve of Eratosthenes
