@@ -16,7 +16,7 @@ is also 1, but 15 is not in ring {0, 1, 2, ... 10}, so not valid
 
 Input:  a = 10, m = 17
 Output: 12
-Since (10*12) mod 17 = 1, 12 is modulo inverse of 3
+Since (10*12) mod 17 = 1, 12 is modulo inverse of 10
 
 Method 1 (Naive)
 A Naive method is to try all numbers from 1 to m
