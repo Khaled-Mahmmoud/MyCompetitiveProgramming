@@ -75,8 +75,7 @@ int main()
     cout<<lcm(a,b);
     return 0;
 }
-//           GCD(LCM (x, y), LCM (x, z)) = LCM(x, GCD(y, z))
-//gengeral   GCD(f(x,y),f(x,z)) = f(x,GCD(y,z))   where f is fuction
+//           GCD(f(x,y),f(x,z)) = f(x,GCD(y,z))   where f is fuction
 //           GCD(f(y),f(z)) = f(GCD(y,z))
 
 
