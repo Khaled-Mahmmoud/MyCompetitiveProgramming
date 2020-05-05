@@ -47,18 +47,6 @@ Let us take below example to understand the solution
 
 */
 
-int modInverse(int a, int m) 
-{ 
-    int x, y; 
-    int g = gcd(a, m, &x, &y); 
-    if (g != 1) 
-        cout << "Inverse doesn't exist"; 
-    else
-    { 
-        int res = (x%m + m) % m; 
-        return  res; 
-    } 
-} 
 int gcdExtended(int a, int b, int *x, int *y)
 {
     if (a == 0)  
@@ -75,6 +63,18 @@ int gcdExtended(int a, int b, int *x, int *y)
   
     return g; 
 }
+int modInverse(int a, int m) 
+{ 
+    int x, y; 
+    int g = gcdExtended(a, m, &x, &y); 
+    if (g != 1) 
+        cout << "Inverse doesn't exist"; 
+    else
+    { 
+        int res = (x%m + m) % m; 
+        return  res; 
+    } 
+} 
 int findMinX(int num[], int rem[], int k) 
 { 
     int prod = 1; 
