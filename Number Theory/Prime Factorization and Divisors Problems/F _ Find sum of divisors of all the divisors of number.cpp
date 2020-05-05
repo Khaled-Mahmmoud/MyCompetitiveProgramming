@@ -1,8 +1,6 @@
 /*
 Given a natural number n, the task is to find sum of divisors of all the divisors of n.
 
-Examples:
-
 Input : n = 54
 Output : 232
 Divisors of 54 = 1, 2, 3, 6, 9, 18, 27, 54.
