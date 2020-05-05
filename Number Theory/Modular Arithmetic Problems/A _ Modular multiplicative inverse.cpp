@@ -41,20 +41,6 @@ We can remove the second term on left side as ‘my (mod m)’ would always be 0
 So the ‘x’ that we can find using Extended Euclid Algorithm is multiplicative inverse of ‘a’
 
 */
-
-int gcd(int a, int b, int *x, int *y); 
-void modInverse(int a, int m) 
-{ 
-    int x, y; 
-    int g = gcd(a, m, &x, &y); 
-    if (g != 1) 
-        cout << "Inverse doesn't exist"; 
-    else
-    { 
-        int res = (x%m + m) % m; 
-        cout << "Modular multiplicative inverse is " << res; 
-    } 
-} 
 int gcdExtended(int a, int b, int *x, int *y)
 {
     if (a == 0)  
@@ -71,6 +57,18 @@ int gcdExtended(int a, int b, int *x, int *y)
   
     return g; 
 }
+void modInverse(int a, int m) 
+{ 
+    int x, y; 
+    int g = gcd(a, m, &x, &y); 
+    if (g != 1) 
+        cout << "Inverse doesn't exist"; 
+    else
+    { 
+        int res = (x%m + m) % m; 
+        cout << "Modular multiplicative inverse is " << res; 
+    } 
+} 
 int main() 
 { 
     int a = 3, m = 11; 
