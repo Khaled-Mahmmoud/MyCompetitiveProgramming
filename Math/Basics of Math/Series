@@ -29,7 +29,12 @@ By multiplying both sides by r , we get
 S*r = a*r + a*r*r + a*r*r*r +··· + b*r
 and solving the equation
 S*r − S = b*r − a
+S*(r-1) = b*r - a
 
+    b*r - a
+S = -------
+     (r-1)
+  
 A special case of a sum of a geometric progression is the formula
   1   +   2   +   4   +  8   + ... + 2^(n-1) = 2^n -1 
 2^(0) + 2^(1) + 2^(2) +2^(3) + ... + 2^(n-1) = 2^n -1
