@@ -5,8 +5,7 @@ Input  : n = 4, p = 2
 Output : 3
          Power of 2 in the prime factorization
          of 2 in 4! = 24 is 3
-Input  : n = 24, p = 2
-Output : 22
+
 Naive approach
 The naive approach is to find the power of p in each number from 1 to n and add them
 Because we know that during multiplication power are added
