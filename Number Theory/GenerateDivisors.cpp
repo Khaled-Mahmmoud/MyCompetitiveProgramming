@@ -93,11 +93,7 @@ we should know that only perfect square numbers have odd number of divisors
  100 (1, 2, 4, 5, 10, 20, 25, 50, 100) has 9 divisors
  
 Check whether a number has exactly three distinct factors or not
-According to property of perfect square, “Every perfect square(x^2) always have only odd numbers of factors“.
+According to property of perfect square, “Every perfect square(x^2) always have only odd numbers of factors“
 If the square root of given number(say x^2) is prime then it must have exactly three distinct factors 
-
-A number 1 of course.
-Square root of a number i.e., x(prime number).
-Number itself i.e., x^2.
 
 */
