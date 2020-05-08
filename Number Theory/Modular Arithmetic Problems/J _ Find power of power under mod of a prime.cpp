@@ -15,9 +15,9 @@ An Efficient approach is to reduce the B^C to a smaller value by using the Ferma
 and then apply Modular exponential
 
 According the Fermat's little
-a(M - 1) = 1 (mod M) if M is a prime.
+a^(M - 1) = 1 (mod M) if M is a prime.
 
-So if we rewrite BC as x*(M-1) + y, then the
+So if we rewrite B^C as x*(M-1) + y, then the
 task of computing ABC becomes Ax*(M-1) + y
 which can be written as Ax*(M-1)*Ay.
 From Fermat's little theorem, we know Ax*(M-1) = 1.
