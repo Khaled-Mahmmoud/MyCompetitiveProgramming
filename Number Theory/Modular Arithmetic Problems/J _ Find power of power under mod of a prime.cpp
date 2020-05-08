@@ -1,19 +1,18 @@
 /*
 
 Find power of power under mod of a prime
-Given four numbers A, B, C and M, where M is prime number. Our task is to find ABC (mod M)
+Given four numbers A, B, C and M, where M is prime number. Our task is to find A^(B^C) (mod M)
 
 Input  : A = 2, B = 4, C = 3, M = 23
 Output : 6
-243(mod 23) = 6
-Recommended: Please try your approach on {IDE} first, before moving on to the solution.
-A Naive Approach is to calculate res = BC and then calculate Ares % M by modular exponential
-The problem of this approach is that we can’t apply directly mod M on BC so we have to calculate
+2^(4^3)(mod 23) = 6
+A Naive Approach is to calculate res = B^C and then calculate res % M by modular exponential
+The problem of this approach is that we can’t apply directly mod M on B^C so we have to calculate
 this value without mod M But if we solve it directly then we will come up with the large value
 of exponent of A which will definitely overflow in final answer
 
-An Efficient approach is to reduce the BC to a smaller value by using the Fermat’s Little Theorem
-and then apply Modular exponential.
+An Efficient approach is to reduce the B^C to a smaller value by using the Fermat’s Little Theorem
+and then apply Modular exponential
 
 According the Fermat's little
 a(M - 1) = 1 (mod M) if M is a prime.
