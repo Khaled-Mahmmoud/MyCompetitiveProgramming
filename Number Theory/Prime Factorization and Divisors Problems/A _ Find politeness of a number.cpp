@@ -77,4 +77,7 @@ Output:
 Politness of 90 = 5
 Politness of 15 = 3
 Time complexity: O(sqrt(n))
-*/
+
+
+In general if a number can be represented as a^p * b^q * c^r … where a, b, c, … are prime factors of n
+count total number of factors = [(p + 1) * (q + 1) * (r + 1) * …] 
