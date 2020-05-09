@@ -13,16 +13,16 @@ a.cend()     || O(1) || Returns a const_iterator pointing to the last element in
 a.crbegin()  || O(1) || Returns a const_reverse_iterator pointing to the last element in the array
 a.crend()    || O(1) || Returns a const_reverse_iterator pointing to the first element in the array
 ********************* Element Access **************************
-v.front()    || O(1) || Returns a reference pointing to the first element in the vector
-v.back()     || O(1) || Returns a reference pointing to the last element in the vector
-v.at(pos)    || O(1) || Returns a reference to the element at position pos in the vector (O-Indexed)
-operator[pos]|| O(1) || Returns a reference to the element at position pos in the vector (O-Indexed)
-v.data()     || O(1) || Returns a pointer to the first element in the vector
+a.front()    || O(1) || Returns a reference pointing to the first element in the Array
+a.back()     || O(1) || Returns a reference pointing to the last element in the Array
+a.at(pos)    || O(1) || Returns a reference to the element at position pos in the Array (O-Indexed)
+operator[pos]|| O(1) || Returns a reference to the element at position pos in the Array (O-Indexed)
+a.data()     || O(1) || Returns a pointer to the first element in the Array
 ********************* Capacity ********************************
-v.size()     || O(1) || Returns the number of elements in the vector
-v.max_size() || O(1) || Returns the maximum number of elements that the vector can hold
-v.empty()    || O(1) || Returns whether the vector is empty 
+a.size()     || O(1) || Returns the number of elements in the Array
+a.max_size() || O(1) || Returns the maximum number of elements that the Array can hold
+a.empty()    || O(1) || Returns whether the Array is empty 
 ********************* Modifiers *******************************
-v1.swap(v2)         || O(1) || Sawp two vectors
-swap(v[0],v[2])     || O(1) || Sawp two elements
+a1.swap(a2)         || O(1) || Sawp two Arrays
+swap(a[0],a[2])     || O(1) || Sawp two elements in Array
 a.fill(val)   || Linear on the size of array || Fill array with value val
