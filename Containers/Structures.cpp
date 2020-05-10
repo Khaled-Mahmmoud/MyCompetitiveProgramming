@@ -12,7 +12,8 @@ struct myproject
 // How to create a structure ?
 // The ‘struct’ keyword is used to create a structure . The general syntax to create a structure is as shown below :
 
-struct structureName{
+struct structureName
+{
     member1;
     member2;
     member3;
@@ -65,10 +66,8 @@ int main()
 // How to access structure elements?
 // Structure members are accessed using dot (.) operator
 
-#include <iostream> 
-using namespace std; 
-  
-struct Point { 
+struct Point 
+{ 
     int x, y; 
 }; 
   
@@ -85,10 +84,9 @@ int main()
 // What is an array of structures?
 // Like other primitive data types, we can create an array of structures.
 
-#include <iostream> 
-using namespace std; 
-  
-struct Point { 
+
+struct Point
+{ 
     int x, y; 
 }; 
   
