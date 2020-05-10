@@ -58,9 +58,9 @@ but not exist at multimap container
 Complexity : Logarithmic in size
 
 
-auto it = m.find(val)
+auto it = m.find(k)
 Searches the container for an element with a key equivalent to k and returns an iterator to it if found
-otherwise it returns an iterator to map::end.
+otherwise it returns an iterator to map::end
 
 int main ()
 {
