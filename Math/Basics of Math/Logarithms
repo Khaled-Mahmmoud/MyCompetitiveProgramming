@@ -1,5 +1,5 @@
 The logarithm of a number x is denoted logk(x), where k is the base of the logarithm
-According to the definition, logk(x) = a exactly when k^a = x
+According to the definition, logk(x) = a exactly when x = k^a 
 A useful property of logarithms is that logk(x) equals the number of times we have to divide x by k before we reach the number 1
 For example, log2(32) = 5 because 5 divisions are needed
 32 → 16 → 8 → 4 → 2 → 1
@@ -27,7 +27,7 @@ Another useful formula is
 and using this, it is possible to calculate logarithms to any base if there is a way
 to calculate logarithms to some fixed base
 
-The natural logarithm ln(x) of a number x is a logarithm whose base is
+The natural logarithm ln(x) = loge(x) of a number x is a logarithm whose base is
 e ≈ 2,71828
 
 Another property of logarithms is that the number of digits of an integer x in base b is [ logb(x) + 1 ]
