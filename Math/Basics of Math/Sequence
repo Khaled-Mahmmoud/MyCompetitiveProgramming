@@ -1,9 +1,9 @@
-Sequence : is an collection of objects in which repetitions are allowed and order does matter 
+Sequence : is a collection of objects in which repetitions are allowed and order is important
 The number of elements (possibly infinite) of the sequenc is called the length of the sequence
 
 Difference between set and sequence ?
-set ==>> no order , no reaption
-sequence ==>> order and reaption are important
+set ==>> no order , no repetition
+sequence ==>> order and repetition are important
 
 sequenc 1,2,3 is not the same as sequenc 1,3,2
 sequenc 1,2,2 is not the same as sequenc 1,1,2
@@ -25,10 +25,10 @@ depends on the previous element
 3! = 3 * 2!
 2! = 2 * 1!
 1! = 1
-F(1) =1 , F(n) = n * F(n-1)
+F(1) = 1 , F(n) = n * F(n-1)
 
 Ex S = 1, 1, 2, 3, 5, 8,...
-S(1)=1 , S(2)=1 , S(n)=S(n-1)+S(n-2)
+S(1) = 1 , S(2) = 1 , S(n) = S(n-1) + S(n-2)
 
 String sequence : a,b,c,3,5,'',""
 .letters , numbers and special letters
