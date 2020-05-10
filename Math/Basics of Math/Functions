@@ -19,4 +19,3 @@ The Fibonacci numbers arise in many situations. They can be defined recursively 
                              F(n) = F(n−1) + F(n−2)
 
 The first Fibonacci numbers are   0,1,1,2,3,5,8,13,21,34,55,...
-F(n) = [(1+sqrt(5))/2]^n / sqrt(5)
