@@ -9,19 +9,6 @@ Any integer , it's double is even
 even ==>> 2k      where k is even number
 odd  ==>> 2k+1    where k is even number
 
-even (op) even = even
-even (op) odd  = odd
-odd  (op) even = odd
-odd  (op) odd  = even
-
-op could be + (additon) , - (subtraction)
-
-even (op) even = even
-even (op) odd  = even
-odd  (op) odd  = even
-
-op could be * (multiplication) , / (division)
-
 ****************************************************
                      _   _
                     |  a  |
