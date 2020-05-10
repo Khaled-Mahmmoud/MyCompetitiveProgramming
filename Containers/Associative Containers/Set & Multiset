@@ -27,11 +27,8 @@ st.erase(first iterator , last iterator) Complexity : number of elements erased 
 st.emplace(val) || Insert a new element O(log n)   (faster)
 st.emplace_hint(iterator,val) || Insert a new element with a pointer hint O(log n) (faster than st.emplace)
  
-st1.swap(m2)         || O(1) || Swap two container
-st.clear()  || Linear in size || Removes all elements , leaving the vector with a size of 0
-
-Multisets are containers that store elements following a specific order, and where multiple elements can have equivalent values
-and it has the some properties of map
+st1.swap(st2)         || O(1) || Swap two container
+st.clear()  || Linear in size || Removes all elements , leaving the container with a size of 0
 
 ********************* Operations *******************************
 int cnt = st.count(val);
@@ -103,3 +100,7 @@ Complexity : Logarithmic in size
   cout << "the upper bound points to: " << *ret.second << '\n'; // 5
 
 Complexity : Logarithmic in size
+
+********************* Multiset *******************************
+Multisets are containers that store elements following a specific order, and where multiple elements can have equivalent values
+and it has the some properties of map
