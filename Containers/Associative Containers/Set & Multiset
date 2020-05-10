@@ -103,4 +103,4 @@ Complexity : Logarithmic in size
 
 ********************* Multiset *******************************
 Multisets are containers that store elements following a specific order, and where multiple elements can have equivalent values
-and it has the some properties of map
+and it has the some properties of set
