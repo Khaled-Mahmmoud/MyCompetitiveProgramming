@@ -45,8 +45,10 @@ Value of *ptr = 100
 address of ptr = 0x7ffcae30c714
 Value of *ptr = 200
 address of ptr = 0x7ffcae30c718
+
 Array Name as Pointers
 An array name acts like a pointer constant. The value of this pointer constant is the address of the first element
+
 */
 void geeks() 
 { 
