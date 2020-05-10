@@ -49,7 +49,7 @@ m.bucket_count() // Returns the number of buckets in the container // O(1)
 m.max_bucket_count() // Returns the maximum number of buckets that container can have// O(1)
 
 m.bucket_size(n) // Returns the number of elements in bucket n // O(bucket size)
-m.bucket(n) // Returns the bucket number where the element with value k is located // O(1)
+m.bucket(k) // Returns the bucket number where the element with value k is located // O(1)
 Assume that the number of buckets in any container is n , the first bucket = 0 , the second = 1 ,...., the last bucket = n-1
 
 st.rehash(n) // Sets the number of buckets in the container to n or more & n should be greater than bucket.count() to avoid drawbackets
