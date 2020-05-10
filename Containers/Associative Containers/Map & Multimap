@@ -52,7 +52,7 @@ if the element not found , the key k wouldn't add at the container
     cout<<m[2]<<' '<<m[4]<<endl; // 3  0
     for(auto x:m)
         cout<<x.first<<' '<<x.second<<endl; //  2  3
-                                                4   0
+                                                4  0
         
 but not exist at multimap container
 Complexity : Logarithmic in size
