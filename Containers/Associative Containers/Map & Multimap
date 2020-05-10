@@ -34,10 +34,6 @@ swap(m[0],m[2])     || O(1) || Sawp two vals
 m.clear()  || Linear in size || Removes all elements , leaving the vector with a size of 0
 ********************* Member functions *******************************
 m1.operator=(m2) OR m1=m2|| Linear in size || Assigns new contents , replacing its current contents, and modifying its size   
-********************multimap******************
-Multimaps store elements formed by a combination of a key value and a mapped value, following a specific order
-multimap is a map that allows duplicated keys but not sorted
-multimap has properties of map except (at,[]) because Random access is not supported 
 
 ********************* Operations *******************************
 int cnt = m.count(val);
@@ -127,5 +123,9 @@ Complexity : Logarithmic in size
 
   return 0;
 }
-
 Complexity : Logarithmic in size
+
+********************multimap******************
+Multimaps store elements formed by a combination of a key value and a mapped value, following a specific order
+multimap is a map that allows duplicated keys but not sorted
+multimap has properties of map except (at,[]) because Random access is not supported 
