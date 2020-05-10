@@ -142,5 +142,5 @@ Complexity : Logarithmic in size
 
 ********************multimap******************
 Multimaps store elements formed by a combination of a key value and a mapped value, following a specific order
-multimap is a map that allows duplicated keys but not sorted
+multimap is a map that allows duplicated keys but it's values not sorted
 multimap has properties of map except (at,[]) because Random access is not supported 
