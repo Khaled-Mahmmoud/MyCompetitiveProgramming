@@ -41,6 +41,6 @@ For example, ∀x(∃y(y < x))
 means that for each element x in the set, there is an element y in the set such that y is smaller than x 
 This is true in the set of integers, but false in the set of natural numbers
 Using the notation described above, we can express many kinds of logical propositions
-For example  ∀x((x > 1∧ ¬P(x)) ⇒ (∃a(∃b(x = ab ∧ a > 1∧ b > 1))))
+For example  ∀x((x > 1 ∧ ¬P(x)) ⇒ (∃a(∃b(x = ab ∧ a > 1 ∧ b > 1))))
 means that if a number x is larger than 1 and not a prime number, then there are
 numbers a and b that are larger than 1 and whose product is x. This proposition is true in the set of integers
