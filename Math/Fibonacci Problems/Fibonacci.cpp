@@ -111,6 +111,8 @@ ll fibonacciMatrix(ll n)
 	Initial = multiply(Initial, transition);
 	return Initial[0][1];
 }
+// We care only with first row in initial matrix 
+// first row in initial matrix same as first row in transition matrix
 // So instead : initial x transition^(n-1) , we use transition^n
 ll fibonacciMatrix(ll n) 
 {
