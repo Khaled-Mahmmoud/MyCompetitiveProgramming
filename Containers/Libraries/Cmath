@@ -43,9 +43,9 @@ round(2)   = 2
 round(2.3) = 2
 round(2.5) = 3            
 round(2.7) = 3   
-floor(-5.2)= -5
-floor(-5.5)= -6
-floor(-5.8)= -6
+round(-5.2)= -5
+round(-5.5)= -6
+round(-5.8)= -6
 
 round   ==>> int
 llround ==>> long long int
