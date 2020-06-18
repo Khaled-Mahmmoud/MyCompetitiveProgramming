@@ -11,6 +11,11 @@ i'th term = a + (i-1) * d
 The sum =--------- = ----------------
              2             2
 
+for Arithmetic Progression 2 5 8 where a=2 , b=8 , d=3
+2   5   8
+8   5   2
+---------
+10  10  10
 
 Geometric Progression (GP) :: is a sequence of numbers where the ratio between any two consecutive numbers is constant
 n ==>> number of elements , a ==>> first element , b ==>> last element , r ==>> ratio between any two consecutive numbers
