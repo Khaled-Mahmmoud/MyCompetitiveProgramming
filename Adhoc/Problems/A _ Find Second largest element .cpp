@@ -1,4 +1,4 @@
-/*
+/**
 Given an array of integers, our task is to write a program that efficiently 
 finds the second largest element present in the array
 Input : arr[] = {12, 35, 1, 10, 34, 1}
