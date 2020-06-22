@@ -13,7 +13,7 @@ Input : n = 12
 Output : 3
 12'th Fibonacci number is 144 and it has 
 3 digits.
-Recommended: Please solve it on “PRACTICE ” first, before moving on to the solution.
+
 A simple solution is to find n’th Fibonacci Number and then count number of digits in it
 This solution may lead to overflow problems for large values of n.
 
