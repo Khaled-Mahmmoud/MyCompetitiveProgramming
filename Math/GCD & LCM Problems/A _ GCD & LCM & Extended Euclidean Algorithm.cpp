@@ -165,7 +165,7 @@ And x1 and y1 are results for inputs b%a and a
    (b%a).x1 + a.y1 = gcd   
                     
 When we put b%a = (b - (⌊b/a⌋).a) in above, 
-we get following. Note that ⌊b/a⌋ is floor(a/b)
+we get following. Note that ⌊b/a⌋ is floor(b/a)
    (b - (⌊b/a⌋).a).x1 + a.y1  = gcd
 Above equation can also be written as below
    b.x1 + a.(y1 - (⌊b/a⌋).x1) = gcd      ---(2)
