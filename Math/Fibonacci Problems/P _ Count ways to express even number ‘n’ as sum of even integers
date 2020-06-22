@@ -14,7 +14,7 @@ as sum of even integers:
 4. 6
 Input: 8
 Output: 8
-Recommended: Please try your approach on {IDE} first, before moving on to the solution.
+
 Approach is to find pattern or recursive function whichever is possible
 The approach would be the same as already discussed in “Count ways to express ‘n’ as sum of odd integers“
 Here the given number is even that means even sum can only be achieved by adding the (n-2)th number as two times
