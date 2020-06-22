@@ -1,6 +1,6 @@
 Count ways to express even number ‘n’ as sum of even integers
 Given an positive even integer ‘n’. Count total number of ways to express ‘n’ as sum of even positive integers
-Output the answer in modulo 109 + 7
+Output the answer in modulo 10^9 + 7
 
 Input: 6
 Output: 4
@@ -26,14 +26,14 @@ Let the total number of ways to write ‘n’ be ways(n). The value of ‘ways(n
 ways(n) = ways(n-2) + ways(n-2)
 ways(n) = 2 * ways(n-2)
 
-ways(2) = 1 = 20
-ways(4) = 2 = 21
-ways(6) = 4 = 22
-ways(8) = 8 = 23
+ways(2) = 1 = 2^0
+ways(4) = 2 = 2^1
+ways(6) = 4 = 2^2
+ways(8) = 8 = 2^3
 ''
 ''
 ''
-ways(2 * n) = 2n-1
+ways(2 * n) = 2^n-1
 
 Replace n by (m / 2)
 => ways(m) = 2^(m/2 - 1)
