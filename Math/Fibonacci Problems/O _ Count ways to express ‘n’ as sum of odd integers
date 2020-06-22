@@ -14,7 +14,7 @@ as sum of odd integers:
 
 Input: 5
 Output: 5
-Recommended: Please try your approach on {IDE} first, before moving on to the solution.
+
 Simple approach is to find recursive nature of problem. The number ‘n’ can be written as 
 sum of odd integers from either (n-1)th number or (n-2)th number. Let the total number
 of ways to write ‘n’ be ways(n). The value of ‘ways(n)’ can be written by recursive formula as follows:
