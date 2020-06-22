@@ -11,7 +11,6 @@ Explanation : 0 + 1 + 1 + 2  = 4
 Input  :  n = 4
 Output :  7
 Explanation : 0 + 1 + 1 + 2 + 3  = 7
-Recommended: Please solve it on “PRACTICE” first, before moving on to the solution.
  
 
 Method 1 (O(n))
