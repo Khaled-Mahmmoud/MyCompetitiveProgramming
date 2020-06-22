@@ -12,7 +12,7 @@ Explanation : 2 + 8 = 10
 Input : limit = 400;
 Output : 188.
 Explanation : 2 + 8 + 34 + 144 = 188.
-Recommended: Please solve it on “PRACTICE ” first, before moving on to the solution.
+
 A simple solution is to iterate through all prime numbers while the next number is less than or equal to given limit
 For every number, check if it is even. If the number is even, add it to the result.
 
