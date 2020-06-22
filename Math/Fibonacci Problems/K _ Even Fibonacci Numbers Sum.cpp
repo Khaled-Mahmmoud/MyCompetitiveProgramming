@@ -13,7 +13,7 @@ Input : limit = 400;
 Output : 188.
 Explanation : 2 + 8 + 34 + 144 = 188.
 
-A simple solution is to iterate through all prime numbers while the next number is less than or equal to given limit
+A simple solution is to iterate through all Fibonacci numbers while the next number is less than or equal to given limit
 For every number, check if it is even. If the number is even, add it to the result.
 
 An efficient solution is based on the below recursive formula for even Fibonacci Numbers
@@ -24,10 +24,8 @@ with seed values
      EF0 = 0 and EF1 = 2.
 
 EFn represents n'th term in Even Fibonacci sequence.
-Refer this more details of above formula.
 
 So while iterating over Fibonacci numbers, we only generate even Fibonacci numbers
-
 
 */
 
