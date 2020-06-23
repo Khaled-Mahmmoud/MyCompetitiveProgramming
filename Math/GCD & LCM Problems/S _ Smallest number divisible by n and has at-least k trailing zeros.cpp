@@ -10,13 +10,13 @@ by n.
 Input : n = 375, k = 4.
 Output : 30000
 Method 1 :
-The brute force approach is to start with result = 10k. Check if result is divided by n
-If yes, it’s the answer, else increase it by 10k
-Method 2 : The efficient approach is to calculate the LCM of 10k and n.
+The brute force approach is to start with result = 10^k. Check if result is divided by n
+If yes, it’s the answer, else increase it by 10^k
+Method 2 : The efficient approach is to calculate the LCM of 10^k and n.
 Suppose, n = 375, k = 4.
 result = 10000.
 Now, LCM of 375 and 10000 is the lowest number divided by both of them.
-It will contain k or more zeros (because it is multiple of 10k) and will be a multiple of n as well.
+It will contain k or more zeros (because it is multiple of 10^k) and will be a multiple of n as well.
 */
 
 long long getRounding(long long n, long long k) 
