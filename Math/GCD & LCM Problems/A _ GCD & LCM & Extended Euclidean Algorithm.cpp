@@ -75,8 +75,14 @@ int main()
     cout<<lcm(a,b);
     return 0;
 }
+
 //           GCD(f(x,y),f(x,z)) = f(x,GCD(y,z))   where f is fuction
 //           GCD(f(y),f(z)) = f(GCD(y,z))
+
+            Examples
+            
+//          GCD(LCM(x,y),LCM(x,z)) = LCM(x,GCD(y,z))   
+//          GCD(Fibonacci(x), Fibonacci(z)) = Fibonacci(GCD(x, z))
 
 
 // inbuilt function for finding GCD in c++
