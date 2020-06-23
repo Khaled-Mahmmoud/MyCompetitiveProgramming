@@ -18,7 +18,7 @@ void SieveOfEratosthenes()
     for (int i = 2; i * i < MAX; ++i) 
     { 
         if (!prime[i]) 
-            for (int j = i * 2; j < MAX; j += i) 
+            for (int j = i ; j < MAX; j += i) 
                 prime[j] = i; 
     } 
   
