@@ -53,16 +53,18 @@ EFx = 4EFx-1 + EFx-2
 
 */
 
-int dp[1000];
-long int evenFib(int n) 
+int evenFib(int n) 
 { 
-    if (n == 0) 
-    return 0; 
-    if (n == 1)  
-    return 2; 
-    if(dp[n])
-     return dp[n];
-    return return dp[n] = ((4 * evenFib(n-1)) + evenFib(n-2));  
+    int ef1 = 0, ef2 = 2, ef3;  
+    if(n==0)
+      return ef1;
+    for(int i=2;i<=n;i++)
+    { 
+        ef3 = 4*ef2 + ef1; 
+        ef1 = ef2; 
+        ef2 = ef3; 
+    } 
+    return ef2; 
 } 
 int main () 
 { 
