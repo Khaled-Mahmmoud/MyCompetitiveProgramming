@@ -15,7 +15,7 @@ all such elements must contain common prime factor greater than 1 which evenly d
 int prime[MAX], countdiv[MAX]; 
 void SieveOfEratosthenes() 
 { 
-    for (int i = 2; i * i <= MAX; ++i) 
+    for (int i = 2; i * i < MAX; ++i) 
     { 
         if (!prime[i]) 
             for (int j = i * 2; j <= MAX; j += i) 
