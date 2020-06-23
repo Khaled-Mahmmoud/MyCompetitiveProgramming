@@ -1,3 +1,5 @@
+
+
 **************   Subarray   **************
 A subarray is a slice from the array which is contiguous (i.e. occupy consecutive positions) and inherently maintains the order of 
 elements. For example, the subarrays of the array {1, 2, 3} are {1}, {1, 2}, {1, 2, 3}, {2}, {2, 3}, and {3}.
@@ -23,16 +25,31 @@ For example, {A, C, E} is a subsequence of {A, B, C, D, E}, but not a substring 
 For example , the subsequence of { 1 , 2 , 3 , 4 } are { 1 } , { 1 , 2 } , { 1 , 2 , 3 } , { 1 , 2 , 3 , 4 } , { 2 } , { 2 , 3 } ,
 { 2 , 3 , 4 } , { 3 } , { 3 , 4 } , { 4 } ,      { 1 , 3 } ,{ 1 , 3 , 4 } , { 1 , 2 , 4 } , { 1 , 4 } , { 2 , 4 }
 
-Please note that a Subsequence can be in context of both arrays and string and there is not sebsequence empty.
-Generating all subsequences of an array/string is equivalent to generating power set of the array/string. 
-For a given set S, the power set equals 2^n - 1 
+Please note that a Subsequence can be in context of both arrays and string and there is not empty sebsequence.
+Generating all subsequences of an array/string is equivalent to generating power set of the array/string - 1. 
+For a given set S, the number of subsequences equals 2^n - 1 
 
 
 **************   Subset   **************
 A subset is any possible combination of the original set. The term subset is often used for subsequence but this is wrong.
-A subsequence always maintain the relative order of elements of the array (i.e. increasing index) but there is no such restriction on 
-a subset. For example {3, 1} is a valid subset of {1, 2, 3, 4, 5} but it is neither a subsequence or a subarray. 
+A subsequence always maintain the relative order of elements of the array (i.e. increasing index) but there is no such 
+restriction on a subset. For example {3, 1} is a valid subset of {1, 2, 3, 4, 5} but it is neither a subsequence or a subarray. 
 It is worth noting that all subarrays are subsequences and all subsequences are subset but the reverse is not true. 
 For instance, the subarray {1, 2} of the array {1, 2, 3, 4, 5} is also a subsequence and a subset. 
 
-For example, 
+For example, all subsets of { 1 , 2 , 3 } is { } , { 1 } , { 1 , 2 } , { 2 , 1 } , { 2 } , { 2 , 3 } , { 3 , 2 } ,
+{ 3 } , { 1 , 3 } , { 3 , 1 } , { 1 , 2 , 3 } , { 1 , 3 , 2 } , { 2 , 1 , 3 } , { 2 , 3 , 1 } , { 3 , 1 , 2 } , { 3 , 2 , 1 }
+but subset {1,2} as same subset {2,1}
+so , we can announce that sebsets of { 1 , 2 , 3 } is {}, {1}, {2}, {3}, {1, 2}, {2, 3}, {3, 1}, {1, 2, 3}.
+
+Please note that there is empty subset 
+Generating all subsequences of an array/string is equivalent to generating power set of the array/string. 
+For a given set S, the number of subsets equals the power set 2^n 
+
+**************   Summary   **************
+
+A subarray/substring has Order and Continuity.
+
+A subsequence has Order but not Continuity.
+
+A subset does not Order nor Continuity.
