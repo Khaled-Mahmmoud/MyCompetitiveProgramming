@@ -48,8 +48,8 @@ For a given set S, the number of subsets equals the power set 2^n
 
 **************   Summary   **************
 
-A subarray/substring has Order and Continuity.
+A subarray/substring has Order and Continuity.    n*(n+1)/2
 
-A subsequence has Order but not Continuity.
+A subsequence has Order but not Continuity.       2^n - 1 
 
-A subset does not Order nor Continuity.
+A subset does not Order nor Continuity.           2^n 
