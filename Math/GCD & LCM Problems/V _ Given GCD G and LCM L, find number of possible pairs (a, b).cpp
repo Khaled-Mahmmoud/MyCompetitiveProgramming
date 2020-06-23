@@ -74,7 +74,7 @@ int totalPrimeFactors(int n)
                 n /= i; 
         } 
     } 
-    if (n > 2) 
+    if (n > 1) 
         count++; 
   
     return count; 
