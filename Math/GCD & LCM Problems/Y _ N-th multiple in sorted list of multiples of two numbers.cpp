@@ -1,7 +1,8 @@
 /*
+
 N-th multiple in sorted list of multiples of two numbers
-Given three positive integers a, b and n. Consider a list that has all multiples of ‘a’ and ‘b’
-the list is sorted sorted and duplicates are removed. The task is to find n-th element of the list.
+Given three positive integers a, b and n. Consider a list that has all multiples of ‘a’ and ‘b’ is sorted and duplicates are removed. 
+The task is to find n-th element of the list.
 Examples :
 Input :  a = 3, b = 5, n = 5
 Output : 10
@@ -15,8 +16,11 @@ Output : 9
 Solution :
 f(a, b, x) :  Count of number that are less than x and multiples of a and b
 f(a, b, x) = (x/a) + (x/b) - (x/lcm(a, b))
-where (x/a) define number of multiples of a
-(x/b) define number of multiple of b (x/lcm(a, b)) define the number of common multiples  of a and b
+where 
+(x/a) define number of multiples of a
+(x/b) define number of multiple of b 
+(x/lcm(a, b)) define the number of common multiples  of a and b
+
 */
 
 int nthElement(int a, int b, int n) 
