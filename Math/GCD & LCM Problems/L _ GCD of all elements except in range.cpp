@@ -30,10 +30,8 @@ void FillPrefixSuffix(int prefix[], int arr[], int suffix[], int n)
         suffix[i] = __gcd(suffix[i+1], arr[i]); 
 } 
   
-int GCDoutsideRange(int l, int r, int prefix[], 
-                           int suffix[], int n) 
+int GCDoutsideRange(int l, int r, int prefix[], int suffix[], int n) 
 { 
-
     if (l==0) 
         return suffix[r+1]; 
     if (r==n-1) 
