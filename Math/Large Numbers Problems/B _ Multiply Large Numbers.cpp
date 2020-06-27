@@ -17,13 +17,16 @@ We traverse all digits first and second numbers in a loop and add the result at 
 */
 
 
-string multiply(string num1, string num2) 
+string multiply(string str1, string str2) 
 { 
-    int len1 = num1.size(); 
-    int len2 = num2.size(); 
-    if (len1 == 0 || len2 == 0) 
+    int n1 = str1.length(); 
+    int n2 = str2.length(); 
+        
+    if (n1 == 0 || n2 == 0) 
     return "0"; 
+        
     vector<int> result(len1 + len2, 0); 
+        
     int i_n1 = 0;  
     int i_n2 = 0;  
     for (int i=len1-1; i>=0; i--) 
