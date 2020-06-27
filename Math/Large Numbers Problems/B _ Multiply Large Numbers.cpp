@@ -25,19 +25,20 @@ string multiply(string str1, string str2)
     if (n1 == 0 || n2 == 0) 
     return "0"; 
         
-    vector<int> result(len1 + len2, 0); 
+    vector<int> result(n1 +n2, 0); 
         
     int i_n1 = 0;  
     int i_n2 = 0;  
-    for (int i=len1-1; i>=0; i--) 
+        
+    for (int i=n1-1; i>=0; i--) 
     { 
         int carry = 0; 
-        int n1 = num1[i] - '0'; 
+        int m1 = str1[i] - '0'; 
         i_n2 = 0;       
-        for (int j=len2-1; j>=0; j--) 
+        for (int j=n2-1; j>=0; j--) 
         { 
-            int n2 = num2[j] - '0'; 
-            int sum = n1*n2 + result[i_n1 + i_n2] + carry; 
+            int m2 = str2[j] - '0'; 
+            int sum = m1*m2 + result[i_n1 + i_n2] + carry; 
             carry = sum/10; 
             result[i_n1 + i_n2] = sum % 10; 
             i_n2++; 
@@ -52,11 +53,11 @@ string multiply(string str1, string str2)
     if (i == -1) 
     return "0"; 
     
-    string s = ""; 
+    string str = ""; 
     while (i >= 0) 
-        s += std::to_string(result[i--]); 
+        str += to_string(result[i--]); 
   
-    return s; 
+    return str; 
 } 
 int main() 
 { 
