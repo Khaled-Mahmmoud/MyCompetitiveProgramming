@@ -55,7 +55,7 @@ string multiply(string str1, string str2)
     
     string str = ""; 
     while (i >= 0) 
-        str += to_string(result[i--]); 
+        str += to_string(result[i--]+'0'); 
   
     return str; 
 } 
