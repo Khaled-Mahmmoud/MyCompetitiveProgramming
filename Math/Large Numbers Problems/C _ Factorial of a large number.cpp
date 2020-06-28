@@ -93,7 +93,7 @@ int multiply(int x, int res[], int res_size)
 } 
 void f() 
 { 
-    int res[5000]; 
+    int res[3000];  // size of factorial(1000) equals 2568
 
     res[0] = 1; 
     int res_size = 1; 
