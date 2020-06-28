@@ -6,49 +6,48 @@ Given an integer, the task is to find factorial of the number
 
 // first solution
 vector<string>v(1009,"*");
-string multiply(string s1,string s2)
-{
-    int len1 = s1.size();
-    int len2 = s2.size();
-    if(!len1||!len2)
-    return "0";
-    vector<int>result(len1+len2,0);
-    int i_n1 = 0;
-    int i_n2 = 0;
-    for(int i=len1-1;i>=0;i--)
-    {
-        int carry = 0;
-        int n1 = s1[i] - '0';
-        i_n2 = 0;
-        for(int j=len2-1;j>=0;j--)
-        {
-            int n2 = s2[j] - '0';
-            int sum = n1*n2 + result[i_n1+i_n2] + carry;
-            carry = sum / 10;
-            result[i_n1+i_n2] = sum % 10;
-            i_n2++;
-        }
-        if(carry>0)
-        result[i_n1+i_n2] += carry;
-        i_n1++;
-    }
-    int i = result.size() - 1;
-    while(i>=0&&result[i]==0)i--;
-    if(i==-1)return "0";
-    string s;
-    while(i>=0)
-    s+=to_string(result[i--]);
-    return s;
-}
-void f()
-{
-    string res = "1";
-    for(int i=1;i<=1000;i++)
-    {
-       res = multiply(res,to_string(i));
-       v[i] = res;
-    }
-}
+string multiply(string str1, string str2) 
+{ 
+    int n1 = str1.length(); 
+    int n2 = str2.length(); 
+        
+    if (n1 == 0 || n2 == 0) 
+    return "0"; 
+        
+    vector<int> result(n1 +n2, 0); 
+        
+    int i_n1 = 0;  
+    int i_n2 = 0;  
+        
+    for (int i=n1-1; i>=0; i--) 
+    { 
+        int carry = 0; 
+        int m1 = str1[i] - '0'; 
+        i_n2 = 0;       
+        for (int j=n2-1; j>=0; j--) 
+        { 
+            int m2 = str2[j] - '0'; 
+            int sum = m1*m2 + result[i_n1 + i_n2] + carry; 
+            carry = sum/10; 
+            result[i_n1 + i_n2] = sum % 10; 
+            i_n2++; 
+        } 
+        if (carry > 0) 
+            result[i_n1 + i_n2] += carry; 
+        i_n1++; 
+    } 
+    int i = result.size() - 1; 
+    while (i>=0 && result[i] == 0) 
+    i--; 
+    if (i == -1) 
+    return "0"; 
+    
+    string str = ""; 
+    while (i >= 0) 
+        str.push_back(result[i--]+'0'); 
+  
+    return str; 
+} 
 int main()
 {
     f();
