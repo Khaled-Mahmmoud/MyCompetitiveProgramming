@@ -73,7 +73,6 @@ int main()
 
 #include<bits/stdc++.h>
 using namespace std;
-#define MAX 5000
 vector<string>v(1009);
 int multiply(int x, int res[], int res_size) 
 { 
@@ -94,7 +93,7 @@ int multiply(int x, int res[], int res_size)
 } 
 void f() 
 { 
-    int res[MAX]; 
+    int res[5000]; 
 
     res[0] = 1; 
     int res_size = 1; 
