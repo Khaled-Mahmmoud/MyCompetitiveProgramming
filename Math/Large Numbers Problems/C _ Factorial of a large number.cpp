@@ -71,6 +71,8 @@ int main()
 //                                                   second solution
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+#include<bits/stdc++.h>
+using namespace std;
 #define MAX 5000
 vector<string>v(1009);
 int multiply(int x, int res[], int res_size) 
@@ -99,9 +101,9 @@ void f()
   
     for (int x=1; x<=1000; x++) 
     {
-        res_size = multiply(x, res, res_size); 
+        res_size = multiply(x, res, res_size);
         for (int i=res_size-1; i>=0; i--) 
-        v[i].push_back(res[i]-'0'); 
+        v[x].push_back(res[i]+'0'); 
     }
 } 
 int main()
