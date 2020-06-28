@@ -115,3 +115,4 @@ int main()
     }
 	return 0;
 }
+// Time Complexity of first Solution = 2 * Time Complexity of second Solution
