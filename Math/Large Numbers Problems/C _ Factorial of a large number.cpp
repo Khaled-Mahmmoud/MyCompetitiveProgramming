@@ -85,9 +85,8 @@ int multiply(int x, int res[], int res_size)
     } 
     while (carry) 
     { 
-        res[res_size] = carry%10; 
+        res[res_size++] = carry%10; 
         carry = carry/10; 
-        res_size++; 
     } 
     return res_size; 
 } 
