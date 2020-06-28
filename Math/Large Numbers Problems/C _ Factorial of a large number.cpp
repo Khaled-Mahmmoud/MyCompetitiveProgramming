@@ -5,7 +5,7 @@ Given an integer, the task is to find factorial of the number
 */
 
 // first solution
-vector<string>v(1009,"*");
+vector<string>v(1009);
 string multiply(string str1, string str2) 
 { 
     int n1 = str1.length(); 
@@ -48,6 +48,15 @@ string multiply(string str1, string str2)
   
     return str; 
 } 
+void f()
+{
+    string res = "1";
+    for(int i=1;i<=1000;i++)
+    {
+        res = multiply(res,to_string(i));
+        v[i] = res;
+    }
+}
 int main()
 {
     f();
@@ -63,6 +72,7 @@ int main()
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #define MAX 5000
+vector<string>v(1009);
 int multiply(int x, int res[], int res_size) 
 { 
     int carry = 0; 
@@ -80,26 +90,27 @@ int multiply(int x, int res[], int res_size)
     } 
     return res_size; 
 } 
-void factorial(int n) 
+void f() 
 { 
     int res[MAX]; 
 
     res[0] = 1; 
     int res_size = 1; 
   
-    for (int x=2; x<=n; x++) 
+    for (int x=1; x<=1000; x++) 
+    {
         res_size = multiply(x, res, res_size); 
-
-    for (int i=res_size-1; i>=0; i--) 
-        cout << res[i]; 
+        for (int i=res_size-1; i>=0; i--) 
+        v[i].push_back(res[i]-'0'); 
+    }
 } 
 int main()
 {
+    f();
     int t;cin>>t;while(t--)
     {
         int n;cin>>n;
-        factorial(n);
-        cout<<'\n';
+        cout<<v[n]<<'\n';
     }
 	return 0;
 }
