@@ -1,9 +1,7 @@
 /*
 
 Find sum of modulo K of first N natural number
-Given two integer N ans K, the task is to find sum of modulo K of first N natural numbers i.e 1%K + 2%K + ….. + N%K.
-
-Examples :
+Given two integer N and K, the task is to find sum of modulo K of first N natural numbers i.e 1%K + 2%K + ….. + N%K.
 
 Input : N = 10 and K = 2.
 Output : 5
