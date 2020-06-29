@@ -16,11 +16,8 @@ Naive Solution : Try all numbers from 2 to p-1. And for every number x
 check if x is square root of n under modulo p
 Time Complexity of this solution is O(p)
 
-Direct Method : If p is in the form of 3*i + 4, then there exist a Quick way of finding square root
-If n is in the form 4*i + 3 with i >= 1 (OR p % 4 = 3)
-And 
-If Square root of n exists, then it must be
-        ±n^[(p + 1)/4]
+Direct Method : If p is in the form 4*i + 3 with i >= 1 (OR p % 4 = 3)
+And If Square root of n exists, then it must be  ±n^[(p + 1)/4]
 Time Complexity of this solution is O(Log p)
 
 */
