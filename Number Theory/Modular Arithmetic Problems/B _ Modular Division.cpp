@@ -3,7 +3,9 @@
 Modular Division
 Given three positive numbers a, c and m. Compute c/a under modulo m
 The task is basically to find a number x such that 
-a * x = c (mod m)
+
+  (c/a) = x (mod m)
+  a * x = c (mod m)
 
 Input  : a  = 4, c = 8, m = 5
 Output : 2
