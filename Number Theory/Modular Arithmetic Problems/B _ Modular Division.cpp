@@ -39,7 +39,21 @@ The task is to compute c/a under modulo m.
 */
 
 
-int gcdExtended(int a, int b, int *x, int *y); 
+int gcdExtended(int a, int b, int *x, int *y) 
+{ 
+    if (a == 0) 
+    { 
+        *x = 0, *y = 1; 
+        return b; 
+    } 
+  
+    int x1, y1; 
+    int gcd = gcdExtended(b%a, a, &x1, &y1); 
+    *x = y1 - (b/a) * x1; 
+    *y = x1; 
+  
+    return gcd; 
+} 
 int modInverse(int a, int m) 
 { 
     int x, y; 
@@ -57,21 +71,6 @@ void modDivide(int a, int c, int m)
        cout << "Division not defined"; 
     else
        cout << "Result of division is " << (inv * c) % m; 
-} 
-int gcdExtended(int a, int b, int *x, int *y) 
-{ 
-    if (a == 0) 
-    { 
-        *x = 0, *y = 1; 
-        return b; 
-    } 
-  
-    int x1, y1; 
-    int gcd = gcdExtended(b%a, a, &x1, &y1); 
-    *x = y1 - (b/a) * x1; 
-    *y = x1; 
-  
-    return gcd; 
 } 
 int main() 
 { 
