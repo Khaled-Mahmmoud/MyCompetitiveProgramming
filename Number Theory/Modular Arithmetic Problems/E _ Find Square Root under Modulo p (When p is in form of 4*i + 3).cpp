@@ -62,20 +62,21 @@ void squareRoot(int n, int p)
     cout << "Square root doesn't exist "; 
 } 
 /*
+
 How does this work?
 We have discussed Euler’s Criterion in the previous post.
 
 As per Euler's criterion, if square root exists, then 
 following condition is true
- n(p-1)/2 % p = 1
+ n^(p-1)/2 % p = 1
 
 Multiplying both sides with n, we get
- n(p+1)/2 % p = n % p  ------ (1)
+ n^(p+1)/2 % p = n % p  ------ (1)
 
 Let x be the modulo square root. We can write,
   (x * x) ≡ n mod p
-  (x * x) ≡ n(p+1)/2  [Using (1) given above]
-  (x * x) ≡ n(2i + 2) [Replacing n = 4*i + 3]
-        x ≡ ±n(i + 1)  [Taking Square root of both sides]
-        x ≡ ±n(p + 1)/4 [Putting 4*i + 3 = p or i = (p-3)/4]
+  (x * x) ≡ n^(p+1)/2  [Using (1) given above]
+  (x * x) ≡ n^(2i + 2) [Replacing p = 4*i + 3]
+        x ≡ ±n^(i + 1)  [Taking Square root of both sides]
+        x ≡ ±n^(p + 1)/4 [Putting 4*i + 3 = p or i = (p-3)/4]
 */
