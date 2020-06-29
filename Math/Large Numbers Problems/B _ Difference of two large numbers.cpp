@@ -29,7 +29,7 @@ bool smaller(string str1,string str2)
     while(i<n1-1&&str1[i]=='0')i++;
     a=a.substr(i);
         
-    // if str1 = 000 it will be 0
+    // if str2 = 000 it will be 0
     i=0;
     while(i<n2-1&&str2[i]=='0')i++;
     b=b.substr(i);
