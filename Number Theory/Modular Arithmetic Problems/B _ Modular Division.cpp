@@ -1,7 +1,7 @@
 /*
 
 Modular Division
-Given three positive numbers a, c and m. Compute a/c under modulo m
+Given three positive numbers a, c and m. Compute c/a under modulo m
 The task is basically to find a number x such that 
 a * x = c (mod m)
 
