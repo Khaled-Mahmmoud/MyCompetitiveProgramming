@@ -21,6 +21,23 @@ and keep track of carry as 1 if it’s positive then carry is 0.
 
 bool smaller(string str1,string str2)
 {
+    int n1=str1.length();
+    int n2=str2.length();
+        
+    // if str1 = 003234 it will be 3234
+    int i=0;
+    while(i<n1-1&&str1[i]=='0')i++;
+    a=a.substr(i);
+        
+    // if str1 = 000 it will be 0
+    i=0;
+    while(i<n2-1&&str2[i]=='0')i++;
+    b=b.substr(i);
+        
+    // resize length of a and b
+    n1=a.length();
+    n2=b.length();
+        
     if(n1<n2)
         return false;
     if(n1>n2)
