@@ -1,0 +1,15 @@
+************** to_string ****************
+Returns a string with the representation of val
+
+// to_string example
+#include <iostream>   // std::cout
+#include <string>     // std::string, std::to_string
+using namespace std;
+int main ()
+{
+    int m = 1593;
+    string s = to_string(m);
+    cout<<s;                     //  1593
+    return 0;
+}
+
