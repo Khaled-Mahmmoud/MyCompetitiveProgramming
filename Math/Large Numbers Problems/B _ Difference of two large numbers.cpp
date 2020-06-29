@@ -18,6 +18,7 @@ append the diff if it’s positive to end of result. If difference(diff) is nega
 and keep track of carry as 1 if it’s positive then carry is 0.
 3) Finally reverse the result.
 */
+
 bool smaller(string str1,string str2)
 {
     if(n1<n2)
@@ -74,3 +75,4 @@ string findDiff(string str1,string str2)
     return str;
 
 }
+// Time complexity : O(n1 + n2)
