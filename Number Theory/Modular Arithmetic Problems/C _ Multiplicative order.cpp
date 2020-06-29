@@ -1,8 +1,8 @@
 /*
 
 Multiplicative order
-In number theory, given an integer a and positive integer m with gcd( a , m) = 1
-the multiplicative order of a modulo m is the smallest positive integer k with  ( 0 < K < N )
+In number theory, given an integer a and positive integer m with gcd(a , m) = 1
+the multiplicative order of a modulo m is the smallest positive integer k with  (0 < K < m)
 
     a^x = 1  (mod m)
 
