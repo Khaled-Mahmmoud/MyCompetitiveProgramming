@@ -57,6 +57,12 @@ If n % 9 == 0
 Else               
     digSum(n) = n % 9 
 
+
+How does the above logic works?
+A number can be of the form 9x or 9x + k. 
+For the first case, answer is always 9. For the second case, and is always k.
+
+
 */
 
 int digSum(int n) 
