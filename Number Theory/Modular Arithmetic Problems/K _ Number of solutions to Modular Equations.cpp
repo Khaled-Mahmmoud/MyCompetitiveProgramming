@@ -17,7 +17,8 @@ Explanation
 X can be equal to any of {8, 16} as A modulus 
 any of these values equals 5 i.e. (21 mod 
 8) = (21 mod 16) = 5
-Recommended: Please try your approach on {IDE} first, before moving on to the solution
+
+
 If we carefully analyze the equation A mod X = B its easy to note that if (A = B) 
 then there are infinitely many values greater than A that X can take. In the Case when (A < B)
 there cannot be any possible value of X for which the modular equation holds
