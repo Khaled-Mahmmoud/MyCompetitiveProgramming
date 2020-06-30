@@ -29,9 +29,8 @@ Extended Euclidean algorithm finds integer coefficients x and y such that:
 Let us put b = prime, we get
   ax + prime * y = gcd(a, prime)
 
-We know gcd(a, prime) = 1 because
-on of the numbers is prime. So we
-know
+We know gcd(a, prime) = 1 because on of the numbers is prime. So we know
+
   ax + prime * y = 1
 
 Since prime * y is a multiple of prime,
@@ -42,14 +41,13 @@ x is modular multiplicative inverse of a.
 We can recursively find x using below expression (see extended Euclid algorithm for details).
 
 The extended Euclidean algorithm updates results of gcd(a, b) using the results calculated by recursive call gcd(b%a, a)
-Let values of x and y calculated by the recursive call be xprev and yprev. x and y are updated using below expressions.
+Let values of x and y calculated by the recursive call be x1 and y1. x and y are updated using below expressions.
 
-x = yprev - ⌊prime/a⌋ * xprev
-y = xprev
+x = y1 - ⌊prime/a⌋ * x1
+y = x1
 We use above relation to compute inverse using previously computed values.
 
-inverse(a) = (inverse(prime % a) *
-              (prime - prime/a)) % prime
+inverse(a) = (inverse(prime % a) *(prime - prime/a)) % prime
 We use Dynamic Programming approach that uses above recursive structure.
 
 Dynamic Approach :
