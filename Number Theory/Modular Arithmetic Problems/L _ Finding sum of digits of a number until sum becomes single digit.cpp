@@ -44,6 +44,7 @@ int main()
     return 0; 
 } 
 
+//  Time Complexity : log10(n)
 /*
 
 There exists a simple and elegant O(1) solution for this too. The ans is given by simply :-
