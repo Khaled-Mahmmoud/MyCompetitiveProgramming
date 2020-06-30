@@ -33,7 +33,7 @@ int unitDigitXRaisedY(int x, int y)
   
     return res; 
 } 
-  
+// Time Complexity : O(y)
 /*
 
 Further Optimizations: We can compute modular power in Log y.
@@ -64,3 +64,4 @@ int unitnumber(int x, int y)
         y = y % 4 + 4; 
     return (((int)(pow(x, y))) % 10); 
 } 
+// Time Complexity : O(log y)
