@@ -26,33 +26,14 @@ the above relation satisfies. If all the values of k exhausted, print -1. Time c
 
 An efficient approach is to use baby-step, giant-step algorithm by using meet in the middle trick
 
-Baby-step giant-step algorithm
-Given a cyclic group G of order ‘m’, a generator ‘a’ of the group and a group element ‘b’, the problem is to find 
-an integer ‘k’ such that a^k = b (mod m) So what we are going to do(according to Meet in the middle trick) 
-is to split the problem in two parts of sqrt{m} each and solve them individually and then find the collision
-
-Now according to the baby-step giant-step algorithm
-we can write 'k' as k=i * n - j with n = sqrt{m} 
-and 0 <= i < n and 0 <= j< n
-Therefore, we have: a^{i * n - j} = b (mod m)
- a^{i * n} = a^{j} * b mod m
-Therefore in order to solve, we precompute a^{i * n} for different values of 'i'
-Then fix 'b' and tries values of 'j' , In RHS of the congruence relation above
-It tests to see if congruence is satisfied for any value of 'j', using precomputed values of LHS.  
-
-First of all we have to write k = i * n - j, where n = sqrt{m} 
-and 0 <= i < n and 0 <= j< n
+Baby-step giant-step algorithm 
+First of all we have to write k = i * n - j
+where n = sqrt{m} and 0 <= i,j < n 
 
 Replace the ‘k’ in above equality, we get
 a^k = b (mod m)
 a^{i * n - j} = b (mod m)
 a^{i * n} = a^j * b (mod m)
-
-The term of left and right can take only n distinct values as i, j belong to [0, n)
-Therefore we need to generate all these terms for either left or right part of equality and store them in array 
-or data structure like map/unordered_map in C/C++ or Hashmap in java . Suppose we have stored all values of LHS
-Now iterate over all possible terms on the RHS for different values of j and check which value satisfies the LHS equality
-If no value satisfies in above step for any candidate of j, print -1.
 
 */
 
