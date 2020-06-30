@@ -66,6 +66,8 @@ void modInverse(int a, int m)
     else
     { 
         int res = (x%m + m) % m; 
+     // Notice that we modify x. The resulting x from the extended Euclidean algorithm may be negative
+     // so x % m might also be negative and we first have to add m to make it positive
         cout << "Modular multiplicative inverse is " << res; 
     } 
 } 
