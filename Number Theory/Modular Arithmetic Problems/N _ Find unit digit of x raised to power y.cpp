@@ -14,7 +14,7 @@ Explanation
 4^2 = 16 so units digit is 6.
 
 
-Method 1 (Simple) Compute value of xy and find its last digit
+Method 1 (Simple) Compute value of x^y and find its last digit
 This method causes overflow for slightly larger values of x and y.
 
 Method 2 (Efficient)
@@ -26,6 +26,7 @@ Method 2 (Efficient)
 
 int unitDigitXRaisedY(int x, int y) 
 {  
+    x = x % 10;
     int res = 1; 
     for (int i = 0; i < y; i++) 
         res = (res * x) % 10; 
