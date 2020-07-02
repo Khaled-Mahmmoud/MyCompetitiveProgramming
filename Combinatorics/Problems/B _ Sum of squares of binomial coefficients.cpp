@@ -20,16 +20,16 @@ nC0^2 + nC1^2 + nC2^2 + .... + nCn-1^2 + nCn^2
 
 Proof
 We know,
-(1 + x)n = nC0 + nC1 x + nC2 x2 + ......... + nCn-1 xn-1 + nCn-1 xn
+(1 + x)n = nC0 + nC1 x + nC2 x^2 + ......... + nCn-1 x^n-1 + nCn x^n
 Also,
-(x + 1)n = nC0 xn + nC1 xn-1 + nC2 xn-2 + ......... + nCn-1 x + nCn
+(x + 1)n = nC0 x^n + nC1 x^n-1 + nC2 x^n-2 + ......... + nCn-1 x + nCn
 
 Multiplying above two equations,
-(1 + x)2n = [nC0 + nC1 x + nC2 x2 + ......... + nCn-1 xn-1 + nCn-1 xn] X 
-            [nC0 xn + nC1 xn-1 + nC2 xn-2 + ......... + nCn-1 x + nCn]
+(1 + x)^2n = [nC0 + nC1 x + nC2 x^2 + ......... + nCn-1 x^n-1 + nCn x^n] X 
+            [nC0 x^n + nC1 x^n-1 + nC2 x^n-2 + ......... + nCn-1 x + nCn]
 
-Equating coefficients of xn on both sides, we get
-2nCn = nC02 + nC12 + nC22 + nC32 + ......... + nCn-22 + nCn-12 + nCn2
+Equating coefficients of x^n on both sides, we get
+2nCn = nC0^2 + nC1^2 + nC2^2 + nC3^2 + ......... + nCn-2^2 + nCn-1^2 + nCn^2
 
 Hence, sum of the squares of coefficients = 2nCn = (2n)!/(n!)2
 
