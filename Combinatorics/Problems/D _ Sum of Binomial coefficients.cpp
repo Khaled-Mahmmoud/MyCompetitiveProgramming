@@ -10,6 +10,13 @@ The idea is to evaluate each binomial coefficient term i.e nCr, where 0 <= r <= 
 Method 2 (Using Formula):
 nC0 + nC1 + nC2 + ……. + nCn-1 + nCn = 2^n
 
+Proof :
+We know,
+(1 + x)^n = nC0 + nC1 x + nC2 x2 + ..... + nCn x^n
+we put x = -1
+(1 + 1)^n = nC0 + nC1 + nC2 + ..... + nCn 
+2^n = nC0 + nC1 + nC2 + ..... + nCn 
+
 */
 
 int binomialCoeffSum(int n) 
