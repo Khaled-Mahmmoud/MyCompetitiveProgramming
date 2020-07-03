@@ -170,7 +170,7 @@ matrix power_itr(matrix a, ll k)
 // a^1 + a^2 + a^3 + ..... + a^k
 matrix sumPower(const matrix& a, ll k)
 {	
-	if (k == 0)return initial(sz(a), sz(a));	
+	if (k == 0)return zero(sz(a), sz(a));	
 	if (k & 1)return multiply(a, addIdentity(sumPower(a, k - 1)));	
 	return multiply(sumPower(a, k >> 1), addIdentity(power(a, k >> 1)));	
 }	
