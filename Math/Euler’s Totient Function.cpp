@@ -77,7 +77,7 @@ This is obvious, gcd of all numbers from 1 to p-1 will be 1 because p is a prime
 2) For two numbers a and b, if gcd(a, b) is 1, then ?(ab) = ?(a) * ?(b)
 For example ?(5) is 4 and ?(6) is 2, so ?(30) must be 8 as 5 and 6 are relatively prime.
 3) For any two prime numbers p and q, ?(pq) = (p-1)*(q-1). This property is used in RSA algorithm.
-4) If p is a prime number, then ?(p^k) = p^k – p^k-1.
+4) If p is a prime number, then ?(p^k) = p^k – p^(k-1).
 5) Sum of values of totient functions of all divisors of n is equal to n.
 For example, n = 6, the divisors of n are 1, 2, 3 and 6. According to Gauss, sum of ?(1) + ?(2) + ?(3) + ?(6) should be 6
 We can verify the same by putting values, we get (1 + 1 + 2 + 2) = 6
