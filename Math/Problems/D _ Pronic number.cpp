@@ -25,9 +25,10 @@ bool checkPronic(int x)
 } 
 int main(void) 
 { 
-    for (int i = 0; i <= 100; i++)  
-        if (checkPronic(i)) 
-            cout << i << " "; 
+    int n;
+    cin>>n;
+    cout << checkPronic(n) << " "; 
       
     return 0; 
 } 
+// Time Complexity : O(sqrt(n))
