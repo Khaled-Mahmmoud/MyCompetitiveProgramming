@@ -31,15 +31,16 @@ void simpleSieve(int limit, vector<int> &prime)
 	memset(mark, true, sizeof(mark));
 
 	for (int i=2; i*i<limit; i++)
-		if (mark[i])
-			for (int j=i*2; j<limit; j+=i)
-				mark[j] = false;
+	if (mark[i])
+	    for (int j=i*2; j<limit; j+=i)
+		mark[j] = false;
+	
 	for (int i=2; i<limit; i++)
-		if (mark[i])
-		{
-			prime.push_back(i);
-			cout << i << " ";
-		}
+	if (mark[i])
+	{
+		prime.push_back(i);
+		cout << i << " ";
+	}
 }
 void segmentedSieve(int n)
 {
