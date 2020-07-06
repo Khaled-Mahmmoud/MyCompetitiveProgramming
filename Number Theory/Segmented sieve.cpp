@@ -60,6 +60,8 @@ void segmentedSieve(int n)
 			int loLim = (low/prime[i]) * prime[i];
 			if (loLim < low)
 				loLim += prime[i];
+			if(loLim == prime[i])
+		                loLim += prime[i];
 			for (int j=loLim; j<high; j+=prime[i])
 				mark[j-low] = false;
 		}
