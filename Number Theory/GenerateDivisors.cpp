@@ -27,6 +27,7 @@ vector<int> divs[N];
  *
  * Complexity: O(n.log(n))
  for this code only
+ n=10^4 -->> 0.8s
  n=10^5 -->> 2s
  n=10^6 -->> 19s
  */
