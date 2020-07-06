@@ -53,13 +53,16 @@ vector<int> primeFactors(int x)
 vector<int>primes;
 void sieve()
 {
-    vector<bool>iscomposite(N,false);
-    for(int i=2;i*i<N;i++)
-    if(!iscomposite[i])
-        for(int j=2*i;j<N;j+=i) // notice that we start from 2*i
-          iscomposite[j] = true;
-    
-    for(int i=2;i<N;i++)
-        if(!iscomposite[i])
-           primes.push_back(i);
+	vector<bool>(N,true);
+	for (int i=2; i*i<limit; i++)
+	if (mark[i])
+	    for (int j=i*2; j<limit; j+=i)
+		mark[j] = false;
+	
+	for (int i=2; i<limit; i++)
+	if (mark[i])
+	{
+		prime.push_back(i);
+		cout << i << " ";
+	}
 }
