@@ -53,7 +53,7 @@ vector<int> primeFactors(int x)
 vector<int>primes;
 void sieve()
 {
-	vector<bool>(N,true);
+	vector<bool>mark(N,true);
 	for (int i=2; i*i<limit; i++)
 	if (mark[i])
 	    for (int j=i*2; j<limit; j+=i)
