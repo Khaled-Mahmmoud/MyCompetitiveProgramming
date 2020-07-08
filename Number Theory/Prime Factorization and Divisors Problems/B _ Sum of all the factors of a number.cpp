@@ -91,7 +91,7 @@ int sumofFactors(int n)
   
     return res; 
 } 
-// Time Complexity : O(sqrt(n)*log(n))
+// Time Complexity : O(sqrt(n))
 /*
 Further Optimization.
 If there are multiple queries, we can use Sieve to find prime factors and their powers  log(n)
