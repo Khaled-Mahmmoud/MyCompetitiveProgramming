@@ -21,7 +21,7 @@ void primeFactors(int n)
 
 // using Sieve of Eratosthenes (Simple Sieve)
 // O(n.log(log(n)))
-// Auxiliary space : O(MAX)
+// Auxiliary space : O(MAX)   MAX = 10^7 (vector)
 #define N 10000009 
 vector<int>spf(N); // Smallest Prime Factor
 void sieve()
