@@ -17,8 +17,8 @@ using formula LCM(a, b) = (a * b) / gcd(a, b) i.e., lcm = (lcm * arr[i]) / gcd(l
 After finding LCM of all n elements we can calculate all prime factors of LCM.
 
 Since here constraint are large, we can not implement above method to solve this problem because while 
-calculating LCM(a, b) we need to calculate a*b and if a,b both are of value 10^12 so it will exceed t
-he limit of integer size , We proceed for this problem in another way using sieve of sundaram and 
+calculating LCM(a, b) we need to calculate a*b and if a,b both are of value 10^12 so it will exceed
+the limit of integer size , We proceed for this problem in another way using sieve of sundaram and 
 prime factorization of a number
 As we know if LCM(a,b) = k so any prime factor of a or b will also be the prime factor of ‘k’
 */
