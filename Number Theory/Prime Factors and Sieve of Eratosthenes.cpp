@@ -19,7 +19,7 @@ void primeFactors(int n)
 // O(sqrt(n))
 
 
-// using Sieve of Eratosthenes
+// using Sieve of Eratosthenes (Simple Sieve)
 // O(n.log(log(n)))
 // Auxiliary space : O(MAX)
 #define N 10000009 
