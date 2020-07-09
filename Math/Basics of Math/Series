@@ -1,6 +1,8 @@
 sum(x=1,n) x   = 1 + 2 + 3 + ... + n = n*(n+1)/2
 sum(x=1,n) x^2 = 1 + 4 + 9 + ... + n*n = n*(n+1)*(2n+1)/6
 
+
+******************* Arithmetic Progression (AP) ********************
 Arithmetic Progression (AP) :: is a sequence of numbers where the difference between any two consecutive numbers is constant
 n ==>> number of elements , a ==>> first element , b ==>> last element , d ==>> difference between any two consecutive numbers
 a , a+d , a+2d , a+3d , ..... , b
@@ -17,6 +19,8 @@ for Arithmetic Progression 2 5 8 where a=2 , b=8 , d=3 , n=3 , a+b=10
 ---------
 10  10  10
 
+
+******************* Geometric Progression (GP) ********************
 Geometric Progression (GP) :: is a sequence of numbers where the ratio between any two consecutive numbers is constant
 n ==>> number of elements , a ==>> first element , b ==>> last element , r ==>> ratio between any two consecutive numbers
 a , a*r , a*r*r , a*r*r*r , .... , b
@@ -53,9 +57,7 @@ log(k+1)=log(2^n)
 n = log(k+1) // log(base 2)
 
 
-
-
-
+******************* Harmonic Series ********************
 Harmonic Series :: is a sum of the form
 sum(x=1,n) 1/x = 1 + 1/2 + 1/3 + 1/4 + ... + 1/n
 
