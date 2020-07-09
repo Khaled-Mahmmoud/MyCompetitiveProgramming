@@ -66,3 +66,19 @@ void sieve()
 		cout << i << " ";
 	}
 }
+/*
+How is the time complexity of Sieve of Eratosthenes is n*log(log(n))?
+What is Sieve of Eratosthenes algorithm?
+In order to analyze it, let’s take a number n and the task is to print the prime numbers less than n.
+Therefore, by definition of Sieve of Eratosthenes, for every prime number, it has to check the multiples of the prime and mark it as composite.
+This process continues until a value p which is the highest prime number less than n.
+
+Understanding the n*log(log n) time complexity of Sieve of Eratosthenes
+If it is assumed that the time taken to mark a number as composite is constant, then the number of times the loop runs is equal to:
+n/2 + n/3 + n/5 + n/7 + ...... p
+
+On taking n common from the above equation, the above equation can be rewritten as:
+n * ( 1/2 + 1/3 + 1/5 + 1/7 + ...... p)
+
+It can be proved as below with the help of Harmonic Progression of the sum of primes
+( 1/2 + 1/3 + 1/5 + 1/7 + ...... p) = log(log n)
