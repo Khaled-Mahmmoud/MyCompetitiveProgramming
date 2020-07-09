@@ -1,7 +1,4 @@
 /*
-
-
-Exactly n distinct prime factor numbers from a to b
 You are given two numbers a and b (1 <= a,b <= 10^8 ) and n
 The task is to find all numbers between a and b inclusively having 
 exactly n distinct prime factors. The solution should be designed 
