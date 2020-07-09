@@ -23,7 +23,7 @@ void primeFactors(int n)
 // O(n.log(log(n)))
 // Auxiliary space : O(MAX)
 #define N 10000009 
-vector<int>spf(N);
+vector<int>spf(N); // Smallest Prime Factor
 void sieve()
 {
     for(int i=2;i*i<N;i++)
