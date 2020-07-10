@@ -35,7 +35,7 @@ Divisors of 30 is 1 2 3 5 6 10 15 30
 Now, the divisors of any p^a, for p as prime, are p^0, p^1,……, p^a
 And sum of diviors will be (p^(a+1) – 1)/(p -1), let it define by f(p).
 So, sum of divisors of all divisor will be,
-= (f(p1^0) + f(p1^1) +…+ f(p1^k1)) x (f(p2^0) + f(p2^1) +…+ f(p2^k2))
+= [f(p1^0) + f(p1^1) +…+ f(p1^k1)] x [f(p2^0) + f(p2^1) +…+ f(p2^k2)]
 So, given a number n, by prime factorization we can find the sum of divisors of all the divisors.
 
 */
