@@ -27,7 +27,7 @@ sumOfLargePrimeFactor(n)
     Initialize sum = 0
     max = n / 2
  
-    for p = 2 to max
+    for p = 2 to sqrt(n)
         if prime[p] == 0 then
             i = p*2
             while i <= n
@@ -48,8 +48,8 @@ int sumOfLargePrimeFactor(int n)
 { 
     int prime[n+1], sum = 0; 
     memset(prime, 0, sizeof(prime)); 
-    int max = n / 2; 
-    for (int p=2; p<=max; p++) 
+
+    for (int p=2; p<=sqrt(n); p++) 
     { 
         if (prime[p] == 0) 
         { 
