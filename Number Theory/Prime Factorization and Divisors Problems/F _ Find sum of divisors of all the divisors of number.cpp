@@ -20,6 +20,18 @@ Using the fact that any number n can be expressed as product of prime factors, n
 where p1, p2, … are prime numbers.
 All the divisors of n can be expressed as p1^a x p2^b x …, where 0 <= a <= k1 and 0 <= b <= k2.
 
+Divisors of 30 is 1 2 3 5 6 10 15 30
+30 = 2^1 * 3^1 * 5^1
+
+2^0 * 3^0 * 5^0 = 1
+2^1 * 3^0 * 5^0 = 2
+2^0 * 3^1 * 5^0 = 3
+2^0 * 3^0 * 5^1 = 5
+2^1 * 3^2 * 5^0 = 6
+2^1 * 3^0 * 5^1 = 10
+2^0 * 3^1 * 5^1 = 15
+2^1 * 3^1 * 5^1 = 30
+
 Now, the divisors of any p^a, for p as prime, are p^0, p^1,……, p^a
 And sum of diviors will be (p^(a+1) – 1)/(p -1), let it define by f(p).
 So, sum of divisors of all divisor will be,
