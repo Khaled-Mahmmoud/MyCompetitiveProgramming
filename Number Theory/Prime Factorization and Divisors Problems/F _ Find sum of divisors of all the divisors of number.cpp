@@ -63,7 +63,7 @@ int sumFactorsofFactors(int n)
         } 
         res *= curr_sum; 
     } 
-    if (n >= 2) 
+    if (n > 1) 
        res *= (1 + (1+n));
   
     return res; 
