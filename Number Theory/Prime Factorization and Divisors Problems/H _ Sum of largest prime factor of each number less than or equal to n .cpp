@@ -29,7 +29,7 @@ sumOfLargePrimeFactor(n)
  
     for p = 2 to sqrt(n)
         if prime[p] == 0 then
-            i = p*2
+            i = p
             while i <= n
                 prime[i] = p
                 i = i + p
@@ -53,7 +53,7 @@ int sumOfLargePrimeFactor(int n)
     { 
         if (prime[p] == 0) 
         { 
-             for (int i=p*2; i<=n; i += p) 
+             for (int i=p; i<=n; i += p) 
                 prime[i] = p; 
         } 
     } 
