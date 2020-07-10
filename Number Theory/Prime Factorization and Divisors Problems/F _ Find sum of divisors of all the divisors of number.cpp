@@ -19,6 +19,13 @@ Overall sum = 1 + 3 + 6 + 18 = 28
 Using the fact that any number n can be expressed as product of prime factors, n = p1^k1 x p2^k2 x …
 where p1, p2, … are prime numbers.
 All the divisors of n can be expressed as p1^a x p2^b x …, where 0 <= a <= k1 and 0 <= b <= k2.
+Now sum of divisors will be sum of all power of p1 ( p1^0, p1^1,…., p1^k1 ) multiplied by all power of p2 (p2^0, p2^1,…., p2^k1)
+
+Sum of Divisor of n
+= (p1^0 x p2^0) + (p1^1 x p2^0) +…..+ (p1^k1 x p2^0) +….+ (p1^0 x p2^1) + (p1^1 x p2^1) +…..+ (p1^k1 x p2^1) +……..+
+   (p1^0 x p2^k2) + (p1^1 x p2^k2) +……+ (p1^k1 x p2^k2).
+= (p1^0 + p1^1 +…+ p1^k1) x p2^0 + (p1^0 + p1^1 +…+ p1^k1) x p2^1 +…….+ (p1^0 + p1^1 +…+ p1^k1) x p2^k2.
+= (p1^0 + p1^1 +…+ p1^k1) x (p2^0 + p2^1 +…+ p2^k2).
 
 Divisors of 30 is 1 2 3 5 6 10 15 30
 30 = 2^1 * 3^1 * 5^1
