@@ -37,29 +37,12 @@ An efficient solution is to use below formula
 Let p1, p2, … pk be prime factors of n. Let a1, a2, .. ak be highest powers of p1, p2, .. pk respectively 
 that divide n, i.e., we can write n as n = (p1^a1)*(p2^a2)* … (pk^ak).
 
-Using the fact that any number n can be expressed as product of prime factors, n = p1^k1 x p2^k2 x …
-where p1, p2, … are prime numbers.
-All the divisors of n can be expressed as p1^a x p2^b x …, where 0 <= a <= k1 and 0 <= b <= k2.
-Divisors of 30 is 1 2 3 5 6 10 15 30
-
-30 = 2^1 * 3^1 * 5^1
-
-2^0 * 3^0 * 5^0 = 1
-2^1 * 3^0 * 5^0 = 2
-2^0 * 3^1 * 5^0 = 3
-2^0 * 3^0 * 5^1 = 5
-2^1 * 3^1 * 5^0 = 6
-2^1 * 3^0 * 5^1 = 10
-2^0 * 3^1 * 5^1 = 15
-2^1 * 3^1 * 5^1 = 30
-
 Sum of divisors = (1 + p1 + p1^2 ... p1^a1) * 
                   (1 + p2 + p2^2 ... p2^a2) *
                   .............................................
                   (1 + pk + pk^2 ... pk^ak) 
 
-2^0 * 3^0 * 5^0 + 2^1 * 3^0 * 5^0 + 2^0 * 3^1 * 5^0 + 2^0 * 3^0 * 5^1 + 2^1 * 3^1 * 5^0 
-+ 2^1 * 3^0 * 5^1 + 2^0 * 3^1 * 5^1 + 2^1 * 3^1 * 5^1 = (2^0+2^1) * (3^0+3^1) * (5^0+5^1)
+
 
 We can notice that individual terms of above formula are Geometric Progressions (GP)
 We can rewrite the formula as.
