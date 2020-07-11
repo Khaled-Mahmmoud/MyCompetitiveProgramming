@@ -1,6 +1,6 @@
 
 Given a positive integers ‘q’ and ‘n’. For each query ‘q’ find whether a number ‘n’ have exactly four distinct divisors or not
-If the number have exactly four divisors then print ‘Yes’ else ‘No’.1 <= q, n <= 106
+If the number have exactly four divisors then print ‘Yes’ else ‘No’.1 <= q, n <= 10^6
 
 Input:
 2
