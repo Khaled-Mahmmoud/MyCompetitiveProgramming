@@ -38,7 +38,7 @@ int sumOfDiv(int x)
   
 int countPairs(int arr[], int n) 
 { 
-    unordered_set<int> s; 
+    set<int> s; 
     int count = 0; 
     for (int i = 0; i < n; i++) 
         s.insert(arr[i]); 
