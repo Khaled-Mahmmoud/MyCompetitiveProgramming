@@ -33,7 +33,7 @@ const int N = 1e6;
 vector<bool> fourDiv(N,false);  
 void fourDistinctFactors() 
 { 
-    vector<bool> primeAll(N,false);   
+    vector<bool> primeAll(N,true);   
     for (int p = 2; p * p <= N; p++)
     { 
         if (primeAll[p] == true)  
