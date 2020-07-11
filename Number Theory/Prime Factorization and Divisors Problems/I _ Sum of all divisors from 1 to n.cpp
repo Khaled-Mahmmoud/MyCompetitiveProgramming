@@ -24,7 +24,7 @@ is to traverse for every number(1 to n), find all divisors and keep updating the
 Time complexity: O(n.sqrt(n))
 */
 
-int divisorSum(int n) i
+int divisorSum(int n) 
 { 
     int sum = 0; 
   
@@ -53,6 +53,7 @@ void sieve()
     for(int i=2;(long long)i*i<N;i++)
     if(!spf[i])
     for(int j=i;j<N;j+=i)
+    if(!spf[j])
     spf[j] = i;
     
     for(int i=3;i<N;i+=2)
