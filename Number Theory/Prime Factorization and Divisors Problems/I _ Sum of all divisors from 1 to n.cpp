@@ -97,11 +97,12 @@ and o(n) for each test case
 */
 
 #define N 1000009
+vector<int>d(N);
 void solve()
 {
     for(int i=1;i<N;i++)
     for(int j=i;j<N;j+=i)
-    d[j]+=i;
+    d[j]++;
 }
 int main()
 {
