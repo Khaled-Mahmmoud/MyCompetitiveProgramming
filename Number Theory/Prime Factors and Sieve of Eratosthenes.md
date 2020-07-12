@@ -1,3 +1,7 @@
+Prime factor is the factor of the given number which is a prime number. Factors are the numbers you multiply together to get another number. 
+Example: The prime factors of 15 are 3 and 5 (because 3×5=15, and 3 and 5 are prime numbers).
+time complexity for below algorithm :  O(sqrt(n))
+```cpp
 void primeFactors(int n)  
 {  
     while (!(n & 1))  
@@ -16,12 +20,13 @@ void primeFactors(int n)
     if (n > 1)  
         cout << n << " ";  
 } 
-// O(sqrt(n))
+```
 
 
-// using Sieve of Eratosthenes (Simple Sieve)
-// O(n.log(log(n)))
-// Auxiliary space : O(MAX)   MAX = 10^7 (vector)
+using Sieve of Eratosthenes (Simple Sieve)
+time complexity : O(n.log(log(n)))
+Auxiliary space : O(MAX)   MAX = 10^7 (vector)
+```cpp
 #define N 10000009 
 vector<int>spf(N); // Smallest Prime Factor
 void sieve()
@@ -48,8 +53,10 @@ vector<int> primeFactors(int x)
     } 
     return res; 
 } 
+```
 
-// Store all prime numbers in vector primes  less than 10^7
+Store all prime numbers in vector primes  less than 10^7
+```cpp
 #define N 10000009 
 vector<int>primes;
 void sieve()
@@ -67,7 +74,8 @@ void sieve()
 		cout << i << " ";
 	}
 }
-/*
+```
+
 How is the time complexity of Sieve of Eratosthenes is n*log(log(n))?
 What is Sieve of Eratosthenes algorithm?
 In order to analyze it, let’s take a number n and the task is to print the prime numbers less than n.
