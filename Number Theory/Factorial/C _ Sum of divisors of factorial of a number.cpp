@@ -59,6 +59,7 @@ int factorialDivisors(int n)
         } 
   
         // Using the divisor function to calculate 
+        // go to MyCompetitiveProgramming/Number Theory/Prime Factorization and Divisors Problems/B _ Sum of all the factors of a number.cpp
         result = result*(pow(allPrimes[i], exp+1)-1)/(allPrimes[i]-1); 
     } 
     return result; 
