@@ -8,13 +8,18 @@ Given a number n. The task is to find the smallest number whose factorial contai
 |2|10|
 |6|25|
     
-1!, 2!, 3!, 4! does not contain trailing zero.
-5! = 120, which contains one trailing zero.
+1!, 2!, 3!, 4! does not contain trailing zero. 5! = 120, which contains one trailing zero.
+
 5!  has 1 trailing zeroes  ==>>  [All numbers from 6 to 9 have 1 trailing zero]
+
 10! has 2 trailing zeroes  ==>>  [All numbers from 11 to 14 have 2 trailing zeroes]
+
 15! to 19! have 3 trailing zeroes
+
 20! to 24! have 4 trailing zeroes
+
 25! to 29! have 6 trailing zeroes
+
 We can notice that, the minimum value whose factorial contain n trailing zeroes is 5*n
 
 ```cpp
