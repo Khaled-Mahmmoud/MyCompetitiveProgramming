@@ -21,7 +21,8 @@ Let these values be exp1, exp2, exp3, .. Using the above formula, we get below v
 The largest power of 2 that divides 6!, exp1 = 4.
 The largest power of 3 that divides 6!, exp2 = 2.
 The largest power of 5 that divides 6!, exp3 = 1.
-The result is based on the Divisor Function.
+6! = 2^4 * 3^2 * 5^1
+The result = (2^0 + 2^1 + 2^2 + 2^3 + 2^4) * (3^0 + 3^1 + 3^2) * (5^0 + 5^1)
 
 */
 
