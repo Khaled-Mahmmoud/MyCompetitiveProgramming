@@ -5,7 +5,7 @@ We change the symbol, compute the number of opening and closing brackets that we
 If we find do suitable position, then this sequence is already the maximal possible one, and there is no answer.
 
 
-```
+``` cpp
 bool next_balanced_sequence(string & s) {
     int n = s.size();
     int depth = 0;
