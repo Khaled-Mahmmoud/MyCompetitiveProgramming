@@ -1,5 +1,5 @@
 
-## Sum of divisors of factorial of a number
+# Sum of divisors of factorial of a number
 Given a number n, we need to calculate the sum of divisors of factorial of the number
 
 Input : 4
