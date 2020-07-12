@@ -14,16 +14,11 @@ We can use Sieve of Euler to factor all integers Then we find the prime that can
 of integers can be divided by this prime. If all integers are 1 (after dividing their GCD), there is no solution
 
 input
-
 3
-
 1 2 4
-
 output : 1
 
-
 input
-
 4
 
 6 9 15 30
