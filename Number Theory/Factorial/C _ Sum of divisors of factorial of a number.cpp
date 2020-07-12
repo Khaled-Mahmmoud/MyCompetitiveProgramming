@@ -15,7 +15,7 @@ An efficient solution is based on Legendre’s formula. Below are the steps.
 Find all prime numbers less than or equal to n (input number). We can use Sieve Algorithm for this. Let n be 6
 All prime numbers less than 6 are {2, 3, 5}.
 For each prime number p find the largest power of it that divides n!. We use below Legendre’s formula formula for this purpose
-The value of largest power that divides p is floor value of each term n/p + n/(p2) + n/(p3) + ……
+The value of largest power that divides p is floor value of each term n/p + n/(p^2) + n/(p^3) + ……
 Let these values be exp1, exp2, exp3, .. Using the above formula, we get below values for n = 6.
 
 The largest power of 2 that divides 6!, exp1 = 4.
