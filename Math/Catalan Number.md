@@ -124,7 +124,6 @@ For n=3 there are 5 ways, ((ab)(cd)), (((ab)c)d), ((a(bc))d), (a((bc)d)), (a(b(c
 
 9) Number of noncrossing partitions of the set {1, …, 2n} in which every block is of size 2
 A partition is noncrossing if and only if in its planar diagram, the blocks are disjoint (i.e. don’t cross)
-
 Consider a circle with 4 points
     1
 2        3
