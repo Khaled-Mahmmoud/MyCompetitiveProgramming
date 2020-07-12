@@ -1,9 +1,11 @@
 # leading Zero Base 10 and double Factorial
 
 **Leading Zero** :: is any 0 digit that comes before the first nonzero digit in a number string in positional notation.
+
 0070009 ==>> has 2 leading zero , 000402 has 3 leading zero
 
 **Trailing Zeros** ::  is any 0 digit that comes after the last nonzero digit in a number string in positional notation.
+
 910034050000 ==>> The number has {4} trailing zeros 
 
 
@@ -36,17 +38,17 @@ For example, 7! has one 5, 10! has two 5s. It is done yet
 Numbers like 25, 125, etc have more than expected because 
 | num | 5s |
 |---|---|
-| 5  | 5*1 |
+| 5  | 5 * 1 |
 
-| 10 | 5*2 |
+| 10 | 5 * 2 |
 
-| 15 | 5*3 |
+| 15 | 5 * 3 |
 
-| 20  | 5*4 |
+| 20  | 5 * 4 |
 
-| 25 | 5*5 | 
+| 25 | 5 * 5 | 
 
-| 125 | 5*5*5 |
+| 125 | 5 * 5 * 5 |
 
     
 ```cpp
