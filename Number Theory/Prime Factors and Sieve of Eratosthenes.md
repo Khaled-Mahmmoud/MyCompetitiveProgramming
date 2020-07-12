@@ -3,7 +3,7 @@
 Prime factor is the factor of the given number which is a prime number. Factors are the numbers you multiply together to get another number. 
 Example: The prime factors of 15 are 3 and 5 (because 3×5=15, and 3 and 5 are prime numbers).
 
-time complexity for below algorithm :  O(sqrt(n))
+Time complexity for below algorithm :  O(sqrt(n))
 ```cpp
 void primeFactors(int n)  
 {  
@@ -27,7 +27,7 @@ void primeFactors(int n)
 
 Using **Sieve of Eratosthenes** (Simple Sieve)
 
-time complexity : O(n.log(log(n)))
+Time complexity : O(n.log(log(n)))
 
 Auxiliary space : O(MAX)   MAX = 10^7 (vector)
 
