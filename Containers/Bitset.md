@@ -97,7 +97,7 @@ Returns an unsigned long with the integer value that has the same bits set as th
 **(to_ullong)**
 
 Returns an unsigned long long with the integer value that has the same bits set as the bitset
-
+```cpp
   bitset<4> foo;         // foo: 0000
   foo.set();              // foo: 1111
   cout << foo << " as a long long is: " << foo.to_ullong() << '\n';   // O(n)
