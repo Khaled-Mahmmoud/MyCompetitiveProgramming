@@ -1,4 +1,5 @@
-/*
+# Trailing Zero Base 16 & Base B
+
 Number of trailing zeroes in base 16 representation of N!
 Given an integer N, the task is to find the number of trailing zeroes in the base 16 representation of the factorial of N
 Input: N = 6
@@ -13,7 +14,7 @@ observe it's 0 when n % 16 == 0
 Number of trailing zeroes would be the highest power of 16 in the factorial of N in base 10
 We know that 16 = 2^4. So, the highest power of 16 is equal to the highest power 2 in the factorial of N divided by 4
 n <= 1e18
-*/
+```cpp
 void solve(ll n)
 {
     ll cnt=0;
@@ -24,6 +25,7 @@ void solve(ll n)
     }
     cout<<cnt/4;
 }
+```
 // Time Complexity : O(log2(n))
 /*
 Given two positive integers B and N . The task is to find the number of trailing zeroes in b-ary (base B) representation of N!
@@ -33,9 +35,8 @@ not easy to get highest power of 10 , so we get highest power of 10's prime fact
 but 10 = 2 * 5 , so we answer is minimum between the highest power of 2 and the highest power of 5
 Hence, problem reduces to finding the highest power of B in N!
 n <= 1e18 & b <= 1e12
-codeforce problem link : https://codeforces.com/contest/1114/problem/C
-*/
 
+```cpp
 vector<pair<ll,ll>>v;
 ll solve(ll n,ll p)
 {
@@ -81,3 +82,4 @@ int main()
     cout<<ans;
     return 0;
 }
+```
