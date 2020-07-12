@@ -1,7 +1,13 @@
-/*
+# Smallest Number has N Trailing Zero
+
 Given a number n. The task is to find the smallest number whose factorial contains at least n trailing zeroes.
-Input : n = 1
-Output : 5 
+    
+| Input | Output |
+|---|---|
+| 1 | 5 |
+|2|10|
+|6|25|
+    
 1!, 2!, 3!, 4! does not contain trailing zero.
 5! = 120, which contains one trailing zero.
 5!  has 1 trailing zeroes  ==>>  [All numbers from 6 to 9 have 1 trailing zero]
@@ -10,8 +16,8 @@ Output : 5
 20! to 24! have 4 trailing zeroes
 25! to 29! have 6 trailing zeroes
 We can notice that, the minimum value whose factorial contain n trailing zeroes is 5*n
-*/
 
+```cpp
 bool valid(ll mid)
 {
     ll cnt=0;
@@ -35,4 +41,5 @@ void solve()
     }
     cout<<l;
 }
-// Time Complexity : O( log2(n) * log5(n) )
+```
+Time Complexity : O( log2(n) * log5(n) )
