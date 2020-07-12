@@ -18,10 +18,15 @@ For each prime number p find the largest power of it that divides n!. We use bel
 The value of largest power that divides p is floor value of each term n/p + n/(p^2) + n/(p^3) + ……
 Let these values be exp1, exp2, exp3, .. Using the above formula, we get below values for n = 6.
 
+
 The largest power of 2 that divides 6!, exp1 = 4.
+
 The largest power of 3 that divides 6!, exp2 = 2.
+
 The largest power of 5 that divides 6!, exp3 = 1.
+
 6! = 2^4 * 3^2 * 5^1
+
 [the sum of divisors](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/Number%20Theory/Prime%20Factorization%20and%20Divisors%20Problems/B%20_%20Sum%20of%20all%20the%20factors%20of%20a%20number.cpp) of 6! = (2^0 + 2^1 + 2^2 + 2^3 + 2^4) * (3^0 + 3^1 + 3^2) * (5^0 + 5^1)
 
 ```cpp
