@@ -7,15 +7,15 @@ Output : 60
 Factorial of 4 is 24. Divisors of 24 are
 1 2 3 4 6 8 12 24, sum of these is 60.
 
-A Simple Solution is to first compute factorial of given number, then count sum divisors of the factorial
+A **Simple Solution** is to first compute factorial of given number, then count sum divisors of the factorial
 This solution is not efficient and may cause overflow due to factorial computation
 
-An efficient solution is based on [Legendre’s formula](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/Number%20Theory/Factorial/B%20_%20Legendre%E2%80%99s%20formula.cpp). Below are the steps.
+An **efficient solution** is based on [Legendre’s formula](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/Number%20Theory/Factorial/B%20_%20Legendre%E2%80%99s%20formula.cpp). Below are the steps.
 
-Find all prime numbers less than or equal to n (input number). We can use Sieve Algorithm for this. Let n be 6
+Find all prime numbers less than or equal to n. We can use [Sieve Algorithm](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/Number%20Theory/Prime%20Factors%20and%20Sieve%20of%20Eratosthenes.cpp) for this. Let n be 6
 All prime numbers less than 6 are {2, 3, 5}.
-For each prime number p find the largest power of it that divides n!. We use below Legendre’s formula formula for this purpose
-The value of largest power that divides p is floor value of each term n/p + n/(p^2) + n/(p^3) + ……
+For each prime number p find the largest power of it that divides n!. We use below Legendre’s formula for this purpose
+The value of largest power that divides p is floor value of each term `n/p + n/(p^2) + n/(p^3) + ……`
 Let these values be exp1, exp2, exp3, .. Using the above formula, we get below values for n = 6.
 
 
@@ -25,9 +25,9 @@ The largest power of 3 that divides 6!, exp2 = 2.
 
 The largest power of 5 that divides 6!, exp3 = 1.
 
-6! = 2^4 * 3^2 * 5^1
+`6! = 2^4 * 3^2 * 5^1`
 
-[the sum of divisors](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/Number%20Theory/Prime%20Factorization%20and%20Divisors%20Problems/B%20_%20Sum%20of%20all%20the%20factors%20of%20a%20number.cpp) of 6! = (2^0 + 2^1 + 2^2 + 2^3 + 2^4) * (3^0 + 3^1 + 3^2) * (5^0 + 5^1)
+[the sum of divisors](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/Number%20Theory/Prime%20Factorization%20and%20Divisors%20Problems/B%20_%20Sum%20of%20all%20the%20factors%20of%20a%20number.cpp) of `6! = (2^0 + 2^1 + 2^2 + 2^3 + 2^4) * (3^0 + 3^1 + 3^2) * (5^0 + 5^1)`
 
 ```cpp
 
