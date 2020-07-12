@@ -1,4 +1,5 @@
-/*
+# leading Zero Base 10 and double Factorial
+
 Leading Zero :: is any 0 digit that comes before the first nonzero digit in a number string in positional notation
 0070009 ==>> has 2 leading zero , 000402 has 3 leading zero
 
