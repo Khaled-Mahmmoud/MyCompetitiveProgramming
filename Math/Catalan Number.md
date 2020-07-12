@@ -1,12 +1,12 @@
-/*
-Program for nth Catalan Number
-Catalan numbers are a sequence of natural numbers that occurs in many interesting counting problems like following
-The first few Catalan numbers for n = 0, 1, 2, 3, … are 1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, …
- Catalan Number = (2n)! / (n!*(n + 1)!)
- Catalan numbers satisfy the following recursive formula
-C0 = 1 , C(n) = sum(i=0,n-1) Ci Cn-i-1 , n >= 1
-*/
+# Program for nth Catalan Number
 
+Catalan numbers are a sequence of natural numbers that occurs in many interesting counting problems like following
+The first few Catalan numbers for n = 0, 1, 2, 3, … are `1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, …`
+ `Catalan Number = (2n)! / (n!*(n + 1)!)`
+ Catalan numbers satisfy the following recursive formula
+`C0 = 1 , C(n) = sum(i=0,n-1) Ci Cn-i-1 , n >= 1`
+
+```cpp
 int catalan[10000];
 int catalan(int n) 
 { 
@@ -18,16 +18,16 @@ int catalan(int n)
   
     return catalan[n] = res; 
 } 
-// Complexity : O(n^2)
+```
+Complexity : O(n^2)
 
-/*
-Using Binomial Coefficient
+**Using Binomial Coefficient**
+
 We can also use the below formula to find nth catalan number in O(n) time
-catalan(n) = nCr(2n,n) / (n+1)
+`catalan(n) = nCr(2n,n) / (n+1)`
 We have discussed a O(n) approach to find binomial coefficient nCr
 
-*/
-
+```cpp
 int binomialCoeff(int n,int r)
 {
     if (n < r)
@@ -48,9 +48,9 @@ int main()
         cout<<catalan(i)<<' ';
 	return 0;
 }
+```
+# Applications of Catalan Numbers
 
-/*
-     Applications of Catalan Numbers
 1) Number of paths on a rectangular grid from bottom left to top right
 i.e., (n-1, 0) to (0, n-1) that lies above the main diagonal
 
@@ -75,7 +75,7 @@ for N = 3, there are 5 possible BSTs
 
 Total number of possible Binary Trees with n different keys (countBT(n)) = countBST(n) * n!
 
-4) Given a convex polygon with n+2 sides . The task is to calculate the number of ways 
+4) Given a [convex polygon](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Math/convex-concave.jpg) with n+2 sides . The task is to calculate the number of ways 
 in which triangles can be formed by connecting vertices with non-crossing line segments
 
 Input: n = 1
@@ -161,11 +161,3 @@ non-crossing ways to connect
 Note that {{2, 3}, {1, 4}} is invalid
 as it would cause a cross
 
-Input : n = 1
-Output : 1
-
-Input : n = 2
-Output : 2
-
-Input : n = 3
-Output : 5
