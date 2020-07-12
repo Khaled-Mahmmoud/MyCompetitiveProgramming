@@ -1,15 +1,16 @@
 # leading Zero Base 10 and double Factorial
 
-Leading Zero :: is any 0 digit that comes before the first nonzero digit in a number string in positional notation
+**Leading Zero** :: is any 0 digit that comes before the first nonzero digit in a number string in positional notation.
 0070009 ==>> has 2 leading zero , 000402 has 3 leading zero
 
-Trailing Zeros ::  is any 0 digit that comes after the last nonzero digit in a number string in positional notation
+**Trailing Zeros** ::  is any 0 digit that comes after the last nonzero digit in a number string in positional notation.
 910034050000 ==>> The number has {4} trailing zeros 
 
 
 The number of trailing zeros in a non-zero base-b integer n equals the exponential of the highest power of b that divides n
 For example, 14000 has three trailing zeros and is therefore divisible by 1000 = 10^3
 
+**Problem**
 
 Given an integer n, write a function that returns count of trailing zeroes in N!
 OR Given an integer N, the task is to find the number of trailing zeroes in the base 10 representation of the factorial of N
@@ -18,10 +19,9 @@ Output: 1
 Factorial of 5 is 120 which has one trailing 0.
 Input: n = 20
 Output: 4
-Factorial of 20 is 2432902008176640000 which has
-4 trailing zeroes
+Factorial of 20 is 2432902008176640000 which has 4 trailing zeroes
 
-Solution
+**Solution**
 A trailing zero is always produced by prime factors 2 and 5 . If we can count the number of 5s and 2s , our task is done
 n = 5  : There is one 5s and three 2s in prime factors of 5! (5*(2*2)*3*2*1) . So count of trailing 0s is 1
 n = 11 : There are two 5s and eight 2s in prime factors of 11! (11*(5*2)*(3*3)*(2*2*2)*7*(2*3)*5*(2*2)*3*2*1)
