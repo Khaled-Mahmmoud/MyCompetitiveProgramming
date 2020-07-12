@@ -10,13 +10,13 @@ Given an integer N, the task is to find the number of trailing zeroes in the bas
 
 (720)10 = ( 2D0 )16
 
-16   |   720           ٨
+16   |   720           
 
-16   |   45     0      |  720 % 16 = 0
+16   |   45   |  0        720 % 16 = 0
 
-16   |   2      D      |
+16   |   2    |  D      
 
-16   |   0      2      |
+16   |   0    |  2      
 
 observe it's 0 when n % 16 == 0
 
@@ -35,11 +35,10 @@ void solve(ll n)
     cout<<cnt/4;
 }
 ```
-// Time Complexity : O(log2(n))
-/*
+Time Complexity : O(log2(n))
+
 Given two positive integers B and N . The task is to find the number of trailing zeroes in b-ary (base B) representation of N!
-6! = (720)10 = (880)9 = (246)7
-Suppose, the base is 10 i.e., decimal then we’ll have to calculate the highest power of 10 that divides N! 
+`6! = (720)10 = (880)9 = (246)7`. Suppose, the base is 10 i.e., decimal then we’ll have to calculate the highest power of 10 that divides N! 
 not easy to get highest power of 10 , so we get highest power of 10's prime factors 
 but 10 = 2 * 5 , so we answer is minimum between the highest power of 2 and the highest power of 5
 Hence, problem reduces to finding the highest power of B in N!
