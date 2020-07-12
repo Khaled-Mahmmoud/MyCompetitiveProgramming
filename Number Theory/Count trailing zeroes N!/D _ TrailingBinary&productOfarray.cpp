@@ -1,12 +1,15 @@
-/*
-Count number of trailing zeros in Binary representation of a number using Bitset
 
-Input : N = 16
-Output : 3
+# Count number of trailing zeros in Binary representation of a number using Bitset
+
+|Input |Output|
+|---|---|
+|8| 3|
+|6|1|
+    
 Binary representation of N is 1000 . Therefore,
 number of zeroes at the end is 3
 
-*/
+```cpp
 int CountTrailingZeros(int n) 
 { 
     bitset<64> bit; 
@@ -16,7 +19,8 @@ int CountTrailingZeros(int n)
         if (bit[i]) break; else cnt++;
     return cnt; 
 } 
-/*
+```
+
 Given a array size of n, we need to find the total number of trailing zeros in the product of array
 
 A solution is based on the fact that zeros are formed by a combination of 2 and 5 
