@@ -12,7 +12,7 @@ This solution is not efficient and may cause overflow due to factorial computati
 
 An **efficient solution** is based on [Legendre’s formula](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/Number%20Theory/Factorial/B%20_%20Legendre%E2%80%99s%20formula.cpp). Below are the steps.
 
-Find all prime numbers less than or equal to n. We can use [Sieve Algorithm](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/Number%20Theory/Prime%20Factors%20and%20Sieve%20of%20Eratosthenes.cpp) for this. Let n be 6
+Find all prime numbers less than or equal to n. We can use [Sieve Algorithm](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/Number%20Theory/Prime%20Factors%20and%20Sieve%20of%20Eratosthenes.md) for this. Let n be 6
 All prime numbers less than 6 are {2, 3, 5}.
 For each prime number p find the largest power of it that divides n!. We use below Legendre’s formula for this purpose
 The value of largest power that divides p is floor value of each term `n/p + n/(p^2) + n/(p^3) + ……`
