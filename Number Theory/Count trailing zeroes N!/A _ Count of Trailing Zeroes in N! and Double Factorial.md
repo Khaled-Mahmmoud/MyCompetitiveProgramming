@@ -1,4 +1,4 @@
-# leading Zero Base 10 and double Factorial
+# Count of Trailing Zeroes in N! and Double Factorial
 
 **Leading Zero** :: is any 0 digit that comes before the first nonzero digit in a number string in positional notation.
 
@@ -70,10 +70,14 @@ int f(int n)
 ```
 if n = 1e18 , time = 0,042s
 
-Double Factorial Problem
+**Double Factorial Problem**
+
 F(n) = 1 if(n<2)
+
 F(n) = n * f(n-2) if(n>=2)
+
 Given is an integer n , Find the number of trailing zeros of F(n)
+
 n <= 1e18    
 
 ```cpp
