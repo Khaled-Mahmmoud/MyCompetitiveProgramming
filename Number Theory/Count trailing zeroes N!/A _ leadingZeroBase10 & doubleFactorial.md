@@ -37,6 +37,8 @@ For example, 7! has one 5, 10! has two 5s. It is done yet
 
 Numbers like 25, 125, etc have more than expected because 
 
+| num | 5s |
+|---|---|
 | 5  | 5 * 1 |
 | 10 | 5 * 2 |
 | 15 | 5 * 3 |
