@@ -59,14 +59,14 @@ Constraints: K > 1
 |n = 7, k = 2|4|
 |n = 10, k = 9|2|
 
-Explanation : 7! = 5040
 The largest power of 2 that
-divides 5040 is 24.
+divides 7! is 24.
+
 The largest power of 9 that
 divides 10! is 92.
 
 Now to find the power of any non-prime number k in n!, we first find all the prime factors of the number k along with the count of number of their occurrences. 
-Then for each prime factor, we count occurrences using Legendre’s formula which states that the largest possible power of a prime number p in n is `⌊n/p⌋ + ⌊n/(p2)⌋ + ⌊n/(p3)⌋ + ……`
+Then for each prime factor, we count occurrences using [Legendre’s formula](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/Number%20Theory/Factorial/B%20_%20Legendre%E2%80%99s%20formula.md) which states that the largest possible power of a prime number p in n is `⌊n/p⌋ + ⌊n/(p2)⌋ + ⌊n/(p3)⌋ + ……`
 
 Over all the prime factors p of K, the one with the minimum value of `findPowerOfK(n, p)/count` will be our answer where count is number of occurrences of p in k.
 
