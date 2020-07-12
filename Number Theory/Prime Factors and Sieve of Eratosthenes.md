@@ -1,5 +1,6 @@
 Prime factor is the factor of the given number which is a prime number. Factors are the numbers you multiply together to get another number. 
 Example: The prime factors of 15 are 3 and 5 (because 3×5=15, and 3 and 5 are prime numbers).
+
 time complexity for below algorithm :  O(sqrt(n))
 ```cpp
 void primeFactors(int n)  
@@ -22,10 +23,12 @@ void primeFactors(int n)
 } 
 ```
 
+Using Sieve of Eratosthenes (Simple Sieve)
 
-using Sieve of Eratosthenes (Simple Sieve)
 time complexity : O(n.log(log(n)))
+
 Auxiliary space : O(MAX)   MAX = 10^7 (vector)
+
 ```cpp
 #define N 10000009 
 vector<int>spf(N); // Smallest Prime Factor
@@ -56,6 +59,7 @@ vector<int> primeFactors(int x)
 ```
 
 Store all prime numbers in vector primes  less than 10^7
+
 ```cpp
 #define N 10000009 
 vector<int>primes;
@@ -84,10 +88,13 @@ This process continues until a value p which is the highest prime number less th
 
 Understanding the n*log(log n) time complexity of Sieve of Eratosthenes
 If it is assumed that the time taken to mark a number as composite is constant, then the number of times the loop runs is equal to:
-n/2 + n/3 + n/5 + n/7 + ...... p
+
+`n/2 + n/3 + n/5 + n/7 + ...... p`
 
 On taking n common from the above equation, the above equation can be rewritten as:
-n * ( 1/2 + 1/3 + 1/5 + 1/7 + ...... p)
+
+`n * ( 1/2 + 1/3 + 1/5 + 1/7 + ...... p)`
 
 It can be proved as below with the help of Harmonic Progression of the sum of primes
-( 1/2 + 1/3 + 1/5 + 1/7 + ...... p) = log(log n)
+
+`( 1/2 + 1/3 + 1/5 + 1/7 + ...... p) = log(log n)`
