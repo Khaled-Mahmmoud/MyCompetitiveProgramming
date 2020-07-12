@@ -38,6 +38,7 @@ void solve(ll n)
 Time Complexity : O(log2(n))
 
 Given two positive integers B and N . The task is to find the number of trailing zeroes in b-ary (base B) representation of N!
+
 `6! = (720)10 = (880)9 = (246)7`. Suppose, the base is 10 i.e., decimal then we’ll have to calculate the highest power of 10 that divides N! 
 not easy to get highest power of 10 , so we get highest power of 10's prime factors 
 but 10 = 2 * 5 , so we answer is minimum between the highest power of 2 and the highest power of 5
