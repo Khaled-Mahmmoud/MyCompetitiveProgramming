@@ -4,8 +4,7 @@ Given two integer numbers, the task is to find count of all common divisors of g
 
 Input : a = 12, b = 24
 Output: 6
-// all common divisors are 1, 2, 3, 
-// 4, 6 and 12
+// all common divisors are 1, 2, 3, 4, 6 and 12
 
 Input : a = 3, b = 17
 Output: 1
@@ -16,7 +15,7 @@ Output: 3
 // all common divisors are 1, 2, 4
 
 A simple solution is to first find all divisors of first number and store them in an array or hash
-Then find common divisors of second number and store them. Finally print common elements of two stored arrays or hash.
+Then find common divisors of second number and store them. Finally print count common elements of two stored arrays or hash.
 
 A better solution is to calculate the greatest common divisor (gcd) of given two numbers
 and then count divisors of that gcd
