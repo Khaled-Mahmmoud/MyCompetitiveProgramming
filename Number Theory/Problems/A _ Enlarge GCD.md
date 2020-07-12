@@ -10,8 +10,11 @@ First we divide all numbers by GCD of them. Then we should find a subset with ma
 We can enumerate a prime p that GCD of the remaining integers can be divided by. And the number of integers can be divided by p is 
 the maximum size of the subset.
 
-We can use Sieve of Euler to factor all integers Then we find the prime that can divide most integers . The answer is n minus the number 
+We can use [Sieve of Euler](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/Number%20Theory/Prime%20Factors%20and%20Sieve%20of%20Eratosthenes.cpp) to factor all integers Then we find the prime that can divide most integers . The answer is n minus the number 
 of integers can be divided by this prime. If all integers are 1 (after dividing their GCD), there is no solution
+
+Input: The first line contains an integer n (2≤n≤10^5) 
+The second line contains n integers, a1,a2,…,an (1≤a[i]≤10^7).
 
 input : 3 1 2 4  output : 1
 
