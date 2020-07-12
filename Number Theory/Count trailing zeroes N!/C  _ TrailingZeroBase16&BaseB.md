@@ -2,7 +2,9 @@
 # Number of trailing zeroes in base 16 representation of N!
 
 Given an integer N, the task is to find the number of trailing zeroes in the base 16 representation of the factorial of N
+
 |Input|Output|
+|---|---|
 |6|1|
 
 6! = 720 (base 10) = 2D0 (base 16)
