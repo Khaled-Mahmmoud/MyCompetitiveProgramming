@@ -6,7 +6,7 @@ bitset <object_size> object_name;
 
 A bitset stores bits
 
-** Access **
+**Access**
 
 operator[i]   || O(1) || Returns a reference to the element at position i  (O-Indexed)
 
@@ -23,7 +23,7 @@ bool f = b.none()      || O(n) || Returns whether none of the bits is set
 bool f = b.all()       || O(n) || Returns whether all of the bits in the bitset are set
 
 
-** Bit operations **
+**Bit operations**
 
 **(Sets bits)**
 
@@ -111,7 +111,7 @@ Returns an unsigned long long with the integer value that has the same bits set 
     
 ```
     
-** applicable operators **
+**applicable operators**
 
 ```cpp
   std::bitset<4> foo (std::string("1001"));
