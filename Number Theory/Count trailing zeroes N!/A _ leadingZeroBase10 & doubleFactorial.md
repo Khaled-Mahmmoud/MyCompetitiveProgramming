@@ -40,8 +40,9 @@ Numbers like 25, 125, etc have more than expected because
 20 ===>>> 5*4
 25 ===>>> 5*5
 125 ===>>> 5*5*5
-*/
 
+    
+```cpp
 int f(int n)
 {
     int cnt=0;
@@ -51,7 +52,9 @@ int f(int n)
         n/=5;
     }
 }
-//OR
+```
+OR
+```cpp
 int f(int n) 
 { 
     int cnt=0;  
@@ -59,18 +62,16 @@ int f(int n)
         cnt+=n/i; 
     return cnt; 
 } 
+```
 if n = 1e18 , time = 0,042s
 
-
-/*
 Double Factorial Problem
 F(n) = 1 if(n<2)
 F(n) = n * f(n-2) if(n>=2)
 Given is an integer n , Find the number of trailing zeros of F(n)
 n <= 1e18    
-*/
 
-
+```cpp
 #define ll long long
 ll f(ll n)
 {
@@ -86,3 +87,4 @@ int main()
     cout<<(n%2?0:f(n));
     return 0;
 }
+```
