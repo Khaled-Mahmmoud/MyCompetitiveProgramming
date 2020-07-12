@@ -62,7 +62,6 @@ For n = 3, possible expressions are ((())), ()(()), ()()(), (())(), (()())
 3) Number of possible Binary Search Trees with n keys 
 (countBST(n)) = Catalan number Cn = (2n)! / ((n + 1)! * n!)
 [see this](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Math/BSTcatalan_number.png)
-
 Total number of possible Binary Trees with n different keys (countBT(n)) = countBST(n) * n!
 
 4) Given a [convex polygon](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Math/convex-concave.jpg) with n+2 sides . The task is to calculate the number of ways in which triangles can be formed by connecting vertices with non-crossing line segments
@@ -79,7 +78,6 @@ for n =4 Valid permutations : 1432, 2143, 2413, 2431, 3142, 3214, 3241, 3412, 34
 7) Enumeration of Binary Trees
 A Binary Tree is labeled if every node is assigned a label and a Binary Tree is unlabeled if nodes are not assigned any label
 [See this](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Math/Enumeration_binary_tree%20catalan%20number.png)
-
 Number of Labeled Tees = (Number of unlabeled trees) * n!= [(2n)! / (n+1)!n!]  × n!
                        
 8) Number of ways to insert n pairs of parentheses in a word of n+1 letters
@@ -89,6 +87,5 @@ For n=3 there are 5 ways, ((ab)(cd)), (((ab)c)d), ((a(bc))d), (a((bc)d)), (a(b(c
 9) Number of noncrossing partitions of the set {1, …, 2n} in which every block is of size 2
 A partition is noncrossing if and only if in its planar diagram, the blocks are disjoint (i.e. don’t cross)
 Consider a circle with 4 points
-
 In [diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Math/noncrossing_partitions%20catalan_number.png), there are two non-crossing ways to connect{{1, 2}, {3, 4}} and {{1, 3}, {2, 4}}.Note that {{2, 3}, {1, 4}} is invalid as it would cause a cross
 
