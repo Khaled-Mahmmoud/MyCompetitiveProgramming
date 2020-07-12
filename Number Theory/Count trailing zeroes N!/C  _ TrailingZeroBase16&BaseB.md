@@ -11,7 +11,7 @@ Given an integer N, the task is to find the number of trailing zeroes in the bas
 
 (720)10 = ( 2D0 )16
 
-16   |   720           
+16   |   720  | )( |
 16   |   45   |  0  |
 16   |   2    |  D  |    
 16   |   0    |  2 |     
