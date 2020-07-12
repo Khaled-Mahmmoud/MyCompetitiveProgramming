@@ -1,6 +1,5 @@
-# Trailing Zero Base 16 & Base B
 
-Number of trailing zeroes in base 16 representation of N!
+# Number of trailing zeroes in base 16 representation of N!
 
 Given an integer N, the task is to find the number of trailing zeroes in the base 16 representation of the factorial of N
 |Input|Output|
@@ -37,6 +36,8 @@ void solve(ll n)
 ```
 Time Complexity : O(log2(n))
 
+# find the number of trailing zeroes in b-ary (base B) representation of N!
+
 Given two positive integers B and N . The task is to find the number of trailing zeroes in b-ary (base B) representation of N!
 
 `6! = (720)10 = (880)9 = (246)7`. Suppose, the base is 10 i.e., decimal then we’ll have to calculate the highest power of 10 that divides N! 
@@ -44,6 +45,30 @@ not easy to get highest power of 10 , so we get highest power of 10's prime fact
 but 10 = 2 * 5 , so we answer is minimum between the highest power of 2 and the highest power of 5
 Hence, problem reduces to finding the highest power of B in N!
 n <= 1e18 & b <= 1e12
+
+OR 
+
+# Largest power of k in n! (factorial) where k may not be prime
+
+Given two numbers k and n, find the largest power of k that divides n!
+
+Constraints: K > 1 
+
+|Input |Output|
+|---|---|
+|n = 7, k = 2|4|
+|n = 10, k = 9|2|
+
+Explanation : 7! = 5040
+The largest power of 2 that
+divides 5040 is 24.
+The largest power of 9 that
+divides 10! is 92.
+
+Now to find the power of any non-prime number k in n!, we first find all the prime factors of the number k along with the count of number of their occurrences. 
+Then for each prime factor, we count occurrences using Legendre’s formula which states that the largest possible power of a prime number p in n is `⌊n/p⌋ + ⌊n/(p2)⌋ + ⌊n/(p3)⌋ + ……`
+
+Over all the prime factors p of K, the one with the minimum value of `findPowerOfK(n, p)/count` will be our answer where count is number of occurrences of p in k.
 
 ```cpp
 vector<pair<ll,ll>>v;
