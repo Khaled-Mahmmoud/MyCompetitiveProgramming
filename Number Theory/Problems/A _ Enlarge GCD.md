@@ -1,8 +1,8 @@
-/*
+# Enlarge GCD
+
 you are given an array of n integers
 Your task is to calculate the minimum number of integers you need to remove so that the greatest common divisor of
 the remaining integers is bigger than that of all integers
-codeforces problem link : https://codeforces.com/problemset/problem/1034/A
 
 Solution 
 First we divide all numbers by GCD of them. Then we should find a subset with maximum number of integers GCD of which is bigger than 1
@@ -11,8 +11,7 @@ the maximum size of the subset
 We can use Sieve of Euler to factor all integers Then we find the prime that can divide most integers . The answer is n minus the number 
 of integers can be divided by this prime. If all integers are 1 (after dividing their GCD), there is no solution.
 
-*/
-
+```cpp
 int gcd(int a,int b)
 {
     if(!b)return a;
@@ -64,3 +63,4 @@ int main()
     }
     return 0;
 }
+```
