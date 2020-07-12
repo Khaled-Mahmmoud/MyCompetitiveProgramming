@@ -1,7 +1,7 @@
 # Bitset
-
+```cpp
 #include <bitset>
-
+```
 bitset <object_size> object_name;
 
 A bitset stores bits
