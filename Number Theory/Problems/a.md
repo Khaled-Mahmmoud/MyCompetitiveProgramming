@@ -1,5 +1,5 @@
 
-When we meet an opening brackets, we will decrement $\text{depth}$, and when we meet a closing bracket, we increase it.
+When we *meet an opening brackets, we will decrement $\text{depth}$, and when we meet a closing bracket, we increase it.
 If we are at some point meet an opening bracket, and the balance after processing this symbol is positive, then we have found the rightmost position that we can change.
 We change the symbol, compute the number of opening and closing brackets that we have to add to the right side, and arrange them in the lexicographically minimal way.
 If we find do suitable position, then this sequence is already the maximal possible one, and there is no answer.
