@@ -1,6 +1,6 @@
 # Bitset
 
-#include<bitset>
+#include <bitset>
 
 bitset <object_size> object_name;
 
