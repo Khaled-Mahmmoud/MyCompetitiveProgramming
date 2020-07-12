@@ -4,6 +4,7 @@ Catalan numbers are a sequence of natural numbers that occurs in many interestin
 The first few Catalan numbers for n = 0, 1, 2, 3, … are `1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, …`
 
  `Catalan Number = (2n)! / (n!*(n + 1)!)`
+ 
  Catalan numbers satisfy the following recursive formula
 `C0 = 1 , C(n) = sum(i=0,n-1) Ci Cn-i-1 , n >= 1`
 
