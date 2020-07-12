@@ -13,26 +13,11 @@ the maximum size of the subset.
 We can use Sieve of Euler to factor all integers Then we find the prime that can divide most integers . The answer is n minus the number 
 of integers can be divided by this prime. If all integers are 1 (after dividing their GCD), there is no solution
 
-input
-3
-1 2 4
-output : 1
+input : 3 1 2 4  output : 1
 
-input
-4
+input: 4 6 9 15 30  output : 2
 
-6 9 15 30
-
-output : 2
-
-
-input
-
-3
-
-1 1 1
-
-output : -1
+input : 3 1 1 1  output : -1
 
 
 ```cpp
