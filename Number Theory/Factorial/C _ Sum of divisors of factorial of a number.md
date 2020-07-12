@@ -1,5 +1,3 @@
-/*
-
 Given a number n, we need to calculate the sum of divisors of factorial of the number
 
 Input : 4
@@ -24,11 +22,8 @@ The largest power of 5 that divides 6!, exp3 = 1.
 6! = 2^4 * 3^2 * 5^1
 the sum of divisors of 6! = (2^0 + 2^1 + 2^2 + 2^3 + 2^4) * (3^0 + 3^1 + 3^2) * (5^0 + 5^1)
 
-*/
+```cpp
 
-#include<bits/stdc++.h> 
-#include<math.h> 
-using namespace std; 
 vector<int> allPrimes; 
 void sieve(int n) 
 { 
@@ -70,3 +65,4 @@ int main()
     cout << factorialDivisors(4); 
     return 0; 
 } 
+```
