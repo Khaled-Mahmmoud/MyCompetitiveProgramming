@@ -9,7 +9,7 @@ By calculating the time complexity we can find out whether the algorithm is fast
 **Calculation rules**
 
 The time complexity of an algorithm is denoted O(···) where the three dots represent some function
-O(n)   Usually, the variable n denotes the maximum size of the input
+O(n)   Usually, the variable n denotes the maximum size of the input.
 For example, if the input is an array of numbers, n will be the size of the array
 and if the input is a string, n will be the length of the string
 
@@ -33,9 +33,10 @@ for (int i = 1; i <= n; i++) {
      }
 }
 ```
+
 **Order of magnitude**
 A time complexity does not tell us the exact number of times the code inside a loop is executed
-but it only shows the order of magnitude In the following examples
+but it only shows the order of magnitude. In the following examples
 the code inside the loop is executed [3n] ,[n+5] and [n/2] times, but the time complexity of each code is O(n)
 ```cpp
 for (int i = 1; i <= 3*n; i++) {
@@ -51,15 +52,16 @@ for (int i = 1; i <= n; i += 2) {
 As another example, the time complexity of the following code is O(n^2)
 ```cpp
 for (int i = 1; i <= n; i++) {
-for (int j = i+1; j <= n; j++) {
+for (int j = i; j <= n; j++) {
 // code
 }
 }
 ```
+
 **Phases**
 
-If the algorithm consists of consecutive phases, the total time complexity is the largest time complexity of a single phase
-The reason for this is that the slowest phase is usually the bottleneck of the code
+If the algorithm consists of consecutive phases, the total time complexity is the largest time complexity of a single phase.
+The reason for this is that the slowest phase is usually the bottleneck of the code.
 For example, the following code consists of three phases with time complexities O(n), O(n^2) and O(n)
 Thus, the total time complexity is O(n^2)
 ```cpp
@@ -75,9 +77,10 @@ for (int i = 1; i <= n; i++) {
 // code
 }
 ```
+
 **Several variables**
 Sometimes the time complexity depends on several factors. In this case
-the time complexity formula contains several variables
+the time complexity formula contains several variables.
 For example, the time complexity of the following code is O(nm):
 ```cpp
 for (int i = 1; i <= n; i++) {
@@ -86,6 +89,7 @@ for (int i = 1; i <= n; i++) {
    }
 }
 ```
+
 **Recursion**
 The time complexity of a recursive function depends on the number of times 
 the function is called and the time complexity of 
@@ -110,12 +114,16 @@ g(n-1);
 ```
 In this case each function call generates two other calls, except for n = 1
 Hence, the call g(n) causes the following calls:
-parameter      number of calls
-g(n)                 1
-g(n−1)               2
-··· ···
-g(1)                2^(n−1)
-Based on this, the time complexity is 1+2+4+··· +2^(n-1)  = O(2^n)-1
+
+|parameter|     number of calls|
+|---|---|
+|g(n)       |          1|
+|g(n−1)    |           2|
+|g(n-2) | 4|
+|··· |···|
+|g(1)    |            2^(n−1)|
+
+Based on this, the time complexity is `1+2+4+··· +2^(n-1)  = O(2^n-1)`
 
 
 
