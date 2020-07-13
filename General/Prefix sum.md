@@ -5,8 +5,8 @@ For example, the cumulative sums of the sequence (a, b, c, …) are (a, a+b, a+b
 
 Complexity:
 1) Building the array
-         One-dimensional array: O(n)
-         Two-dimensional array: O(n*m)
+         - One-dimensional array: O(n)
+         - Two-dimensional array: O(n*m)
 2) Answering each query: O(1)
                 
 Building one-dimensional prefix sum array and printing the prefix sum between to indices for each query
