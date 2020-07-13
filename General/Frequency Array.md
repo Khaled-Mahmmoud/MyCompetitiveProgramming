@@ -31,7 +31,7 @@ And for uppercase characters, we subtract ‘A’. And for numbers (as character
 
     string s ; cin >> s;
     for (int i = 0 ; i < s.size() ; i++)
-        freq[s[i]-'a']++;                   //freq[x]=freq[x]+1
+        freq[s[i]-'a']++;                  
     
     for (int i=0;i<25;i++)
         if (freq[i])
