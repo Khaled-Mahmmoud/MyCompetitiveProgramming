@@ -79,7 +79,7 @@ Constructs a basic_string object that represents the bits in the bitset as a suc
     bitset<4> mybits;          // mybits: 0000
     mybits.set();              // mybits: 1111
 
-    string mystring = mybits.to_string<char,string::traits_type,string::allocator_type>();  //  O(n)
+    string mystring = mybits.to_string();  //  O(n)
     cout << "mystring: " << mystring << '\n';
 ```
 
@@ -134,4 +134,19 @@ Returns an unsigned long long with the integer value that has the same bits set 
   std::cout << (foo&bar) << '\n';        // 0010
   std::cout << (foo|bar) << '\n';        // 0111
   std::cout << (foo^bar) << '\n';        // 0101
+```
+
+```cpp
+
+int main()
+{
+    int n=6;
+    bitset<64> bit;
+    bit = n;
+    cout<<bit<<endl;    // 0000000000000000000000000000000000000000000000000000000000000110
+    for (int i = 0; i < 64; i++)
+        cout<<bit[i];    // 0110000000000000000000000000000000000000000000000000000000000000
+    string s = bit.to_string();
+    cout<<endl<<s;      // 0000000000000000000000000000000000000000000000000000000000000110
+}
 ```
