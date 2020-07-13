@@ -4,12 +4,16 @@ than answering each query by brute force. A cumulative sum is a sequence of part
 For example, the cumulative sums of the sequence (a, b, c, …) are (a, a+b, a+b+c, …)
 
 Complexity:
+
 1) Building the array
-         - One-dimensional array: O(n)
-         - Two-dimensional array: O(n*m)
+
+One-dimensional array: O(n)
+
+Two-dimensional array: O(n*m)
+
 2) Answering each query: O(1)
                 
-Building one-dimensional prefix sum array and printing the prefix sum between to indices for each query
+Building one-dimensional prefix sum array and printing the prefix sum between two indices for each query
 ```cpp
     int n;cin>>n;
     vector<int>v(n),prefix_sum(n+1);
@@ -22,7 +26,7 @@ Building one-dimensional prefix sum array and printing the prefix sum between to
         cout<<prefix_sum[r]-prefix_sum[l-1]<<endl;
     }
 ```
-Building two-dimensional prefix sum array and printing the prefix sum between two indices for each query
+Building [two-dimensional prefix sum](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/General/Two-dimensional%20array%20prefix_sum.jpg) array and printing the prefix sum between two indices for each query
 ```cpp
 int n,m;cin>>n>>m;
     vector<vector<int>>v(n,vector<int>(m));
