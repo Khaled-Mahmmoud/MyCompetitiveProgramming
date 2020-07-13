@@ -25,7 +25,7 @@ Complexity : O(n^2)
         }
         cout<<*max_element(lis,lis+n);
 ```        
-**Printing longest increasing subsequence**
+# Printing longest increasing subsequence
 
 Complexity : O(nlogn)
 ```cpp
