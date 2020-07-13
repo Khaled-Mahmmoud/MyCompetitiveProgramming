@@ -1,7 +1,7 @@
 # Fractional Knapsack Problem
 
 Given weights and values of n items, we need to put these items in a knapsack
-of capacity W to get the maximum total value in the knapsack
+of capacity W to get the maximum total value in the knapsack.
 
 Input:
 Items as (value, weight) pairs
@@ -12,7 +12,7 @@ Output:
 Maximum possible value = 220
 by taking items of weight 20 and 30 kg
   
-In Fractional Knapsack, we can break items for maximizing the total value of knapsack
+In **Fractional Knapsack**, we can break items for maximizing the total value of knapsack.
 This problem in which we can break an item is also called the fractional knapsack problem
 
 Input : 
@@ -23,8 +23,8 @@ Maximum possible value = 240,
 By taking full items of 10 kg, 20 kg and 
 2/3rd of last item of 30 kg
    
-An efficient solution is to use Greedy approach. The basic idea of the greedy approach is 
-to calculate the ratio value/weight for each item and sort the item on basis of this ratio
+An **efficient solution** is to use **Greedy** approach. The basic idea of the greedy approach is 
+to calculate the `ratio value/weight` for each item and sort the item on basis of this ratio
 Then take the item with the highest ratio and add them until we can’t add the next item as
 a whole and at the end add the next item as much as we can. Which will always be the optimal
 solution to this problem
@@ -51,7 +51,7 @@ double fraction(struct item arr[],int w,int n)
     {
         if(curweight + arr[i].weight <= w)
         {
-            curweigh t+=arr[i].weight;
+            curweight+=arr[i].weight;
             finalvalue +=arr[i].value;
         }
         else
