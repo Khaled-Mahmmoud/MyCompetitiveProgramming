@@ -1,11 +1,15 @@
-Frequency Array is an array used to find the frequency of some elements in a range of elements 
-for(int i = 0 ; i < 10 ; ++i)
+Frequency Array is an array that used to find the frequency of some elements in a range of elements.
+
+```cpp
+
+   for(int i = 0 ; i < 10 ; ++i)
         frequency[a[i]]++;
     
     for(int i = 0 ; i <= MAX_INTEGER ; ++i)
         if(frequency[i])
             cout << "Number " << i << " frequency is " << frequency[i] << endl;
-        
+```
+
 In case we want to make a frequency array code for lowercase and uppercase characters and numbers in strings:
 
 Each character has an ASCII code (ex: ‘a’=97,’A’=65,’0’=48).
@@ -23,6 +27,7 @@ The answer is just subtracting ‘a’(the ASCII value) from each character we w
 ‘z’-‘a’=25 --> 122-97=25
 
 And for uppercase characters, we subtract ‘A’. And for numbers (as characters), we subtract ‘0’
+```cpp
 
     string s ; cin >> s;
     for (int i = 0 ; i < s.size() ; i++)
@@ -33,3 +38,4 @@ And for uppercase characters, we subtract ‘A’. And for numbers (as character
             cout <<"The frequency of "<< char(i+'a') << " in the given string = " <<freq[i]<<endl;
         }
     }
+```
