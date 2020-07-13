@@ -58,7 +58,8 @@ as a callback function. For example, the following comparison function sorts
 strings primarily by length and secondarily by alphabetical order
 ```cpp
 bool pred(string a, string b) {
-if (a.size() != b.size()) return a.size() < b.size();
+if (a.size() != b.size()) 
+   return a.size() < b.size();
 return a < b;
 }
 // Now a vector of strings can be sorted as follows:
