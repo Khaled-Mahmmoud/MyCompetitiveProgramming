@@ -1,10 +1,12 @@
-/*
+ # Maximize The Cut Segments
+ 
 Given an integer N denoting the Length of a line segment. you need to cut the line segment in such a way that the cut length of a line 
 segment each time is integer either x , y or z. and after performing all cutting operation the total number of cutted segments must be 
 maximum.
+    
 1<=n,x,y,z<=4000
-*/
-
+    
+```cpp
 int dp[4009];
 int cut(int n,int x,int y,int z)
 {
@@ -24,3 +26,4 @@ int main()
     }
     return 0;
 }
+```
