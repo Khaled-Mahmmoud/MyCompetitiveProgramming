@@ -56,7 +56,7 @@ int lcs(string s1, string s2, int m, int n )
 }  
 ```
 
-Printing Longest Common Subsequence
+# Printing Longest Common Subsequence
 ```cpp
 void lcs(string s1, string s2, int m, int n )
 {
@@ -75,7 +75,8 @@ void lcs(string s1, string s2, int m, int n )
         }
     }
     int index = dp[m][n];
-    string s;s.assign(index,' ');
+    string s;
+    s.assign(index,' ');
     i=m;j=n;
     while(i&&j)
     {
