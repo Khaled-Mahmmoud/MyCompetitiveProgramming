@@ -1,58 +1,61 @@
 The most used integer type in competitive programming is int, which is a 32-bit type with a value −2 * 10^9 . . . 2 * 10^9
-If the type int is not enough, the 64-bit type long long can be used . It has a value range of −9 * 10^18 . . . 9 * 10^18
 
+If the type int is not enough, the 64-bit type long long can be used . It has a value range of −9 * 10^18 . . . 9 * 10^18
+```cpp
 cout<< 8380238475ll ;
+```
 The suffix ll means that the type of the number is long long
 
 int (op) int = int 
+
 int (op) long long = long long
 
 op could be + (addition) , - (subtraction) , * (multiplication) , / (division)
 
-***** Overflow and casting ****
-Concept of overflow:
- 11111111
-+
- 00000001
-=
-100000000
+###Overflow and casting
 
->>> Overflow happens because of the limited capacity of our data type
+Concept of overflow:
+
+11111111 + 00000001 = 100000000
+
+Overflow happens because of the limited capacity of our data type
 
 
 A common mistake when using the type long long is that the type int is still used somewhere in the code
-For example, the following code contains a subtle-error
 
+For example, the following code contains a subtle-error
+```cpp
 int a = 123456789;
 long long b = a*a;
 cout << b << "\n"; // -1757895751
-
-Even though the variable b is of type long long
+```
+Even though the variable b is of type long long.
 both numbers in the expression a * a are of type int and the result is also of type int 
-Because of this, the variable b will contain a wrong result (Casting)
+Because of this, the variable b will contain a wrong result (Casting).
 The problem can be solved by changing the type of a to long long or by changing the expression to (long long)a*a
-
+```cpp
 int a = 1e9 , b = 1e9 ;
 cout<<a * b ;             // -148668157543         // Overflow 
 long long c = a*b ;       // c = -148668157543     // Casting
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+```
 
 Do not use float in competitive programming , only double
 
 A difficulty when using floating point numbers is that some numbers cannot be represented accurately as floating point numbers
-and there will be rounding errors
+and there will be rounding errors.
+
 For example, the result of the following code is surprising:
+```cpp
 double x = 0.3*3+0.1;
 printf("%.20f\n", x); // 0.99999999999999988898
-
+```
 It is risky to compare floating point numbers with the == operator, because it is possible that the values should be equal 
-but they are not because of precision errors
+but they are not because of precision errors.
 
-A better way to compare floating point numbers is to assume that two numbers are equal if the difference between them 
-is less than ε where ε is a small number
+A **better way** to compare floating point numbers is to assume that two numbers are equal if the difference between them 
+is less than ε where ε is a small number.
 In practice, the numbers can be compared as follows (ε = 10^−9)
-
+```cpp
 if (abs(a-b) < 1e-9) 
 {
     // a and b are equal
@@ -60,6 +63,7 @@ if (abs(a-b) < 1e-9)
 
 
 to print a floating point numbers with n digits after the decimal point , we use
-
+```cpp
 #include<iomanip>
 cout<< fixed << showpoint << setprecision(n) ;
+```
