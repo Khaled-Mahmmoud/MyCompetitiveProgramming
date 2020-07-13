@@ -33,9 +33,14 @@ And for uppercase characters, we subtract ‘A’. And for numbers (as character
     for (int i = 0 ; i < s.size() ; i++)
         freq[s[i]-'a']++;                  
     
-    for (int i=0;i<25;i++)
+    for (int i=0;i<26;i++)
         if (freq[i])
             cout <<"The frequency of "<< char(i+'a') << " in the given string = " <<freq[i]<<endl;
-    
+            
+      // OR
+      
+      for (char i='a';i<='z';i++)
+          if (freq[i-'a'])
+            cout <<"The frequency of "<< i << " in the given string = " <<freq[i-'a']<<endl;
         
 ```
