@@ -32,10 +32,10 @@ int knapSack(int w, int wt[], int val[], int n)
         return dp[n][w] = max( val[n-1] + knapSack(w-wt[n-1], wt, val, n-1),knapSack(w, wt, val, n-1) );
 }
 ```
-/*
-<< Tabulation Method – Bottom Up Dynamic Programming >>
 
-[see this table](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Dynamic%20Programming/table%200-1%20knapsack.png)
+**Tabulation Method – Bottom Up Dynamic Programming**
+
+[See This Table](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Dynamic%20Programming/table%200-1%20knapsack.png)
 
 Complexity : O(wn)
 
