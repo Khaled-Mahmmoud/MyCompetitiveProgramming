@@ -62,7 +62,7 @@ if (abs(a-b) < 1e-9)
 }
 ```
 
-``to print a floating point numbers with n digits after the decimal point , we use``
+to print a floating point numbers with n digits after the decimal point , we use
 ```cpp
 #include<iomanip>
 cout<< fixed << showpoint << setprecision(n) ;
