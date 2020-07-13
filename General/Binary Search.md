@@ -1,10 +1,7 @@
-/*
+# Binary Search
 Binary Search is a searching algorithm in which you can find an element in a sorted big range of possible solutions but in each iteration
 we erase half of the range . Such solution takes no more than O(logn) which is really small even for really big numbers
-*/
-#include <bits/stdc++.h>
-using namespace std;
-
+```cpp
 // Check if the given value fulfills a certain criteria or not.
 // The function must be a monotonic function matching the binary search type (min or max).
 bool valid(int m) {
@@ -26,3 +23,4 @@ int binarySearch()
       }
       return l;
 }
+```
