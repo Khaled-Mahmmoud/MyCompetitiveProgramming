@@ -1,3 +1,4 @@
+# Sorting
 It is almost never a good idea to use a self-made sorting algorithm in a contest
 because there are good implementations available in programming languages.
 For example, the C++ standard library contains the function sort that can be easily used for sorting arrays and other data structures.
