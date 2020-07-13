@@ -31,11 +31,11 @@ And for uppercase characters, we subtract ‘A’. And for numbers (as character
 
     string s ; cin >> s;
     for (int i = 0 ; i < s.size() ; i++)
-        freq[s[i]-'a']++;//freq[x]=freq[x]+1
+        freq[s[i]-'a']++;                   //freq[x]=freq[x]+1
     
-    for (int i=0;i<25;i++){
-        if (freq[i]){// if there is an occurrence for the character (i+'a') in the given numbers print the character and it's frequency
+    for (int i=0;i<25;i++)
+        if (freq[i])
             cout <<"The frequency of "<< char(i+'a') << " in the given string = " <<freq[i]<<endl;
-        }
-    }
+    
+        
 ```
