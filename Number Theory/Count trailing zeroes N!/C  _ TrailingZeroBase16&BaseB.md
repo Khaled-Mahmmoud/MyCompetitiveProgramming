@@ -19,7 +19,7 @@ Given an integer N, the task is to find the number of trailing zeroes in the bas
 
 observe it's 0 when n % 16 == 0
 
-Number of trailing zeroes would be the highest power of 16 in the factorial of N in base 10
+Number of trailing zeroes would be `the highest power of 16 in the factorial of N in base 10`
 We know that 16 = 2^4. So, the highest power of 16 is equal to the highest power 2 in the factorial of N divided by 4
 (n <= 1e18) 
 ```cpp
