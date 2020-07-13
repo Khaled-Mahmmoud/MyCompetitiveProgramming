@@ -62,7 +62,7 @@ if (abs(a-b) < 1e-9)
 {
     // a and b are equal
 }
-
+```
 
 to print a floating point numbers with n digits after the decimal point , we use
 ```cpp
