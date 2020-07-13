@@ -21,6 +21,8 @@ int CountTrailingZeros(int n)
 } 
 ```
 
+# find the number of trailing zeros in the product of array
+
 Given a array size of n, we need to find the total number of trailing zeros in the product of array
 
 A solution is based on the fact that zeros are formed by a combination of 2 and 5 
