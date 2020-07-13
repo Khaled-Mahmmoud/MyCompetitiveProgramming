@@ -1,25 +1,31 @@
-/*
-***************** Fractional Knapsack Problem *****************
+# Fractional Knapsack Problem
+
 Given weights and values of n items, we need to put these items in a knapsack
 of capacity W to get the maximum total value in the knapsack
 
-  Input:
-  Items as (value, weight) pairs
-  arr[] = {{60, 10}, {100, 20}, {120, 30}}
-  Knapsack Capacity, W = 50;
-  Output:
-  Maximum possible value = 220
-  by taking items of weight 20 and 30 kg
+Input:
+
+Items as (value, weight) pairs
+arr[] = {{60, 10}, {100, 20}, {120, 30}}
+Knapsack Capacity, W = 50;
+
+Output:
+
+Maximum possible value = 220
+by taking items of weight 20 and 30 kg
   
 In Fractional Knapsack, we can break items for maximizing the total value of knapsack
 This problem in which we can break an item is also called the fractional knapsack problem
 
-   Input : 
-   Same as above
-   Output :
-   Maximum possible value = 240
-   By taking full items of 10 kg, 20 kg and 
-   2/3rd of last item of 30 kg
+Input : 
+
+Same as above
+   
+Output :
+   
+Maximum possible value = 240,
+By taking full items of 10 kg, 20 kg and 
+2/3rd of last item of 30 kg
    
 An efficient solution is to use Greedy approach. The basic idea of the greedy approach is 
 to calculate the ratio value/weight for each item and sort the item on basis of this ratio
@@ -27,8 +33,7 @@ Then take the item with the highest ratio and add them until we can’t add the 
 a whole and at the end add the next item as much as we can. Which will always be the optimal
 solution to this problem
 
-*/
-
+```cpp
 struct item
 {
     int value,weight;
@@ -70,3 +75,4 @@ int main()
     cout<<fraction(arr,w,n);
     return 0;
 }
+```
