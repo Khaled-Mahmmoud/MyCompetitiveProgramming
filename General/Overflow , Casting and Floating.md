@@ -41,7 +41,7 @@ cout<<a * b ;             // -148668157543         // Overflow
 long long c = a*b ;       // c = -148668157543     // Casting
 ```
 
-Do not use float in competitive programming , only double
+`Do not use float in competitive programming , only double`
 
 A difficulty when using floating point numbers is that some numbers cannot be represented accurately as floating point numbers
 and there will be rounding errors.
