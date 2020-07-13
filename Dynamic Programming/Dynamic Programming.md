@@ -94,10 +94,9 @@ Like Divide and Conquer, Dynamic Programming combines solutions to sub-problems.
 when solutions  of same subproblems are needed again and again. In dynamic programming, computed solutions to 
 subproblems are stored in a table so that these don’t have to be recomputed. So Dynamic Programming is not useful
 when there are no common (overlapping)  subproblems because there is no point storing the solutions if they are not
-needed again. For example, Binary Search doesn’t have common subproblems If we take an example of following recursive
+needed again. For example, Binary Search doesn’t have common subproblems. If we take an example of following recursive
 program for Fibonacci Numbers, there are many subproblems which are solved again and again
 ```cpp
-/* simple recursive program for Fibonacci numbers */
 int fib(int n) 
 { 
    if ( n <= 1 ) 
@@ -107,13 +106,8 @@ int fib(int n)
 ```
 [Recursion tree](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Dynamic%20Programming/Recursion%20tree%20fib(5).png) for execution of fib(5)
 
-
 We can see that the function fib(3) is being called 2 times. If we would have stored the value of fib(3)
-then instead of computing it  again, we could have reused the old stored value
-There are following two different ways to store the values so that these 
-values can be reused:
-a) Memoization (Top Down)
-b) Tabulation (Bottom Up)
+then instead of computing it  again, we could have reused the old stored value.
 
 **Optimal Substructure**
 
@@ -127,7 +121,7 @@ Shortest Path algorithms like Floyd–Warshall and Bellman–Ford are typical ex
 
 On the other hand, the Longest Path problem doesn’t have the Optimal Substructure property. Here by Longest Path 
 we mean longest  simple path (path without cycle) between two nodes. Consider the following unweighted graph given 
-in the CLRS book. There are two longest paths from q to t: q→r→t and q→s→t. Unlike shortest paths, these longest
-paths do not have the optimal substructure property For example, the longest path q→r→t is not a combination of 
+in the CLRS book. There are two [longest paths]((https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Dynamic%20Programming/longest%20path%20.png)) from q to t: q→r→t and q→s→t. Unlike shortest paths, these longest
+paths do not have the optimal substructure propertym, For example, the longest path q→r→t is not a combination of 
 longest path from q to r and longest path from r to t, because the longest path from q to r is q→s→t→r and 
-[the longest path](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Dynamic%20Programming/longest%20path%20.png) from r to t is r→q→s→t.    
+the longest path from r to t is r→q→s→t.    
