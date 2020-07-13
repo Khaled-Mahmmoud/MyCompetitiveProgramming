@@ -12,7 +12,7 @@ Ex. you forgot your password but you know it consists of 3 letters of this set A
 
 2) **without repetition**
 
-1/ **order is important** (Permutation)
+**order is important** (Permutation)
 
 **Permutation** : It is the different arrangements of a given number of elements taken one by one, or some, or all at a time
 
@@ -22,7 +22,7 @@ For example, if we have two elements A and B, then there are two possible arrang
                  
 Ex. you forgot your password but you know it consists of 3 distinct letters of this set A={a,b,e,i,p} so number of ways is 5P3 = 5! / (5-3)!
 
-2/ **order is not important** (Combination)
+**order is not important** (Combination)
 
 **Combination** : It is the different selections of a given number of elements taken one by one, or some, or all at a time
 
