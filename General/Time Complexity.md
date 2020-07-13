@@ -1,10 +1,10 @@
-The efficiency of algorithms is important in competitive programming
+The efficiency of algorithms is important in competitive programming. 
 Usually, it is easy to design an algorithm that solves the problem slowly
-but the real challenge is to invent a fast algorithm
-If the algorithm is too slow, it will get only partial points or no points at all
-The time complexity of an algorithm estimates how much time the algorithm will use for some input
+but the real challenge is to invent a fast algorithm.
+If the algorithm is too slow, it will get only partial points or no points at all.
+The time complexity of an algorithm estimates how much time the algorithm will use for some input.
 The idea is to represent the efficiency as an function whose parameter is the maximum size of the input
-By calculating the time complexity we can find out whether the algorithm is fast enough without implementing it
+By calculating the time complexity we can find out whether the algorithm is fast enough without implementing it.
 
 **Calculation rules**
 
