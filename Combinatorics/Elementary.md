@@ -2,7 +2,7 @@
 
 Any Task 
 
-1) **with repetition**
+### with repetition
 
 n^r
 
@@ -10,7 +10,7 @@ Ex. you have 5 pens and you want to write 3 tasks so number of ways is 5^3
 
 Ex. you forgot your password but you know it consists of 3 letters of this set A={a,b,e,i,p} so number of ways is 5^3
 
-2) **without repetition**
+### without repetition
 
 **order is important** (Permutation)
 
