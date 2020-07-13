@@ -1,3 +1,4 @@
+# Time Complexity
 The efficiency of algorithms is important in competitive programming. 
 Usually, it is easy to design an algorithm that solves the problem slowly
 but the real challenge is to invent a fast algorithm.
@@ -127,7 +128,8 @@ Based on this, the time complexity is `1+2+4+··· +2^(n-1)  = O(2^n-1)`
 
 
 
-**Complexity classes**
+### Complexity classes
+
 The following list contains common time complexities of algorithms
 **O(1)**
 constant time
