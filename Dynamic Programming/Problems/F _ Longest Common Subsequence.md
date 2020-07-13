@@ -1,11 +1,13 @@
-/*
+# Longest Common Subsequence
+
 Given two sequences, find the length of longest subsequence present in both of them
+
 1<=size(str1),size(str2)<=1000
-*/
 
-// << Memoization Method – Top Down Dynamic Programming >>
-// Complexity : O(mn)
+**Memoization Method – Top Down Dynamic Programming**
 
+Complexity : O(mn)
+```cpp
 int dp[1009][1009];
 string s1,s2; int m,n;
 int lcs(int i,int j)
@@ -28,10 +30,11 @@ int main()
     }
     return 0;
 }
+```
+**Tabulation Method – Bottom Up Dynamic Programming**
 
-// << Tabulation Method – Bottom Up Dynamic Programming >>
-// Complexity : O(mn)
-
+Complexity : O(mn)
+```cpp
 int lcs(string s1, string s2, int m, int n )  
 {  
     int dp[m + 1][n + 1];  
@@ -51,11 +54,10 @@ int lcs(string s1, string s2, int m, int n )
     }  
     return dp[m][n];  
 }  
-  
+```
 
-
-// Printing Longest Common Subsequence
-
+Printing Longest Common Subsequence
+```cpp
 void lcs(string s1, string s2, int m, int n )
 {
     int dp[m + 1][n + 1],i,j;
@@ -88,3 +90,4 @@ void lcs(string s1, string s2, int m, int n )
     }
     cout<<s;
 }
+```
