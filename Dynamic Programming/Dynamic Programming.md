@@ -25,6 +25,7 @@ int fib(int n)
     return dp[n] = fib(n-1) + fib(n-2);
 }
 ```
+
 **Tabulation vs Memoization**
 
 There are following two different ways to store the values so that the values of a sub-problem can be reused
@@ -34,7 +35,7 @@ Tabulation   : Bottom Up
 Memoization  : Top Down
 
 
-                      **Tabulation Method – Bottom Up Dynamic Programming**
+**Tabulation Method – Bottom Up Dynamic Programming**
                       
 As the name itself suggests starting from the bottom and cumulating answers to the top
 Let’s describe a state for our DP problem to be dp[x] with dp[0] as base state and dp[n] as our destination state. 
@@ -60,7 +61,8 @@ for (int i = 1; i< =n; i++)
     dp[i] = dp[i-1] * i;
 }
 ```
-                     **Memoization Method – Top Down Dynamic Programming** 
+
+**Memoization Method – Top Down Dynamic Programming** 
 Here, we start our journey from the top most destination state and compute its answer by taking in count 
 the values of states that can reach the destination state, till we reach the bottom most base state.
 
