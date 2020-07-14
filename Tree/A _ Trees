@@ -135,7 +135,8 @@ A degenerate (or Pathological) tree
                O
                 \
                  O
-////////////////////////////////////////////
+
+
 
          Max no. of nodes at level L = 2^L
          Max no. of nodes in binary tree = 2^(h+1) - 1 (where h is height of tree)   //  as perfect tree
