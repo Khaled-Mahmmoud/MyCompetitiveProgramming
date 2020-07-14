@@ -5,7 +5,9 @@ Binary Search Tree is a node-based binary tree data structure which has the foll
 1) The left subtree of a node contains only nodes with keys lesser than the node’s key
 2) The right subtree of a node contains only nodes with keys greater than the node’s key
 3) The left and right subtree each must also be a binary search tree
-                          
+
+See This [diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Tree/binary%20search%20tree.png)
+
 **Find Successor**
 
 1) node has right subtree 
@@ -14,7 +16,6 @@ successor(3) = 4 , successor(8) = 10
 
 2) node doesn't have a right subtree 
 Travel up using the parent pointer until you see a node which is left child of it’s parent.The parent of such a node is the successor
-
 successor(7) = 8 , successor(14) = NULL , successor(1) = 3 , successor(4) = 6
 
 **Find Predecessor**
