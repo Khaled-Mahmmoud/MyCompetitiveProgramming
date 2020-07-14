@@ -23,7 +23,7 @@ Tree types
 
 root      -->> A
 parent    -->> A , B , F
-children  -->> B,E,F  C,D  G,H,I
+child  -->> B,E,F  C,D  G,H,I
 leaves    -->> C,D  E  G,H,I
 
      I         root (root is also an internal node, unless it is leaf)
@@ -52,16 +52,14 @@ Parenthetical notation = A(B(CD)EF(GHI))
 
 
 ************** Binary Tree ****************
-is a tree data structure in which each node has at most two children 
-which are referred to as the left child and the right child
-in programming
-struct node
-{
-     Type item;
-     node* left;
-     node* right;
-};
-      
+A binary tree is a structure comprising nodes, where each node has the following 3 components:
+
+1) Data element : Stores any kind of data in the node
+2) Left pointer : Points to the tree on the left side of node
+3) Right pointer : Points to the tree on the right side of the node
+
+If a tree is empty, it is represented by a null pointer.
+
                             (left,item,right)
                            /                \
                           /                  \
@@ -70,7 +68,16 @@ struct node
                 /                 \                     \
         (left,item,right)    (left,item,right)    (left,item,right)
         
-        
+
+struct node
+{
+     Type item;
+     node* left;
+     node* right;
+};
+
+Creating nodes --->  struct node root;
+    
 Full(strictly) Binary Tree
 if every node has zero or two children
 
