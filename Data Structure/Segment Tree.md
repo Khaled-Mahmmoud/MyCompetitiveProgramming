@@ -31,7 +31,7 @@ Segment tree provides two operations:
 ### Implementation
 
 Since a Segment Tree is a binary tree, a simple linear array can be used to represent the Segment Tree. 
-Before building the Segment Tree, one must figure**what needs to be stored in the Segment Tree's node?**.
+Before building the Segment Tree, one must figure **what needs to be stored in the Segment Tree's node?**.
 For example, if the question is to find the sum of all the elements in an array from indices L to R, then at each node (except leaf nodes) 
 the sum of its children nodes is stored.
 
