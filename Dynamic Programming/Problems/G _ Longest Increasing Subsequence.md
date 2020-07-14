@@ -28,6 +28,9 @@ Complexity : O(n^2)
 # Printing longest increasing subsequence
 
 Complexity : O(nlogn)
+
 using segment tree
+
 [problem1](https://www.spoj.com/problems/LMIS/)
+
 [problem2](https://www.spoj.com/problems/ELIS/)
