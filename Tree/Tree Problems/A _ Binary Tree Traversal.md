@@ -21,7 +21,7 @@ See This [diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/b
 using namespace std;
 struct node
 {
-    int   item;
+    int item;
     node* left;
     node* right;
 };
