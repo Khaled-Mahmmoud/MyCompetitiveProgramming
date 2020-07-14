@@ -134,15 +134,15 @@ And if the range represented by a node is partially inside and partially outside
 ```cpp
 int query(int node, int start, int end, int l, int r)
 {
-    if(r < start || end < l)
-    {
-        // range represented by a node is completely outside the given range
-        return 0;
-    }
-    if(l <= start and end <= r)
+    if(start >= l and end <= r)
     {
         // range represented by a node is completely inside the given range
         return tree[node];
+    }
+    if(start > r || end < l)
+    {
+        // range represented by a node is completely outside the given range
+        return 0;
     }
     // range represented by a node is partially inside and partially outside the given range
     // or or the given range is completely inside Range represented by a
