@@ -1,17 +1,24 @@
-/*
+# Coin Combinations
+
 Consider a money system consisting of n coins . Each coin has a positive integer value
 Your task is to produce a sum of money x using the available coins in such a way that 
-the number of coins is minimal
+the number of coins is minimal.
+    
 For example, if the coins are {1,5,7} and the desired sum is 11, an optimal solution 
 is 5+5+1 which requires 3 coins.
+    
 n <= 100
+    
 x <= 10^6
+
 a[i] <= 10^6
-CSES problem link : https://cses.fi/problemset/task/1634
-Solution :
+
+**Solution**
+
 dp[x] = minimum number of coins with sum x
 The complexity : O(nx)
-*/
+    
+```cpp
 int main()
 {
     int n,x;cin>>n>>x;
@@ -31,29 +38,40 @@ int main()
         cout<<dp[x];
     return 0;
 }
-
-
-/*
+```
 Consider a money system consisting of n coins. Each coin has a positive integer value
 Your task is to calculate the number of distinct ways you can produce a money sum x 
-using the available coins
+using the available coins.
+    
 For example, if the coins are {2,3,5} and the desired sum is 9, there are 8 ways:
+
 2+2+5
+    
 2+5+2
+    
 5+2+2
+    
 3+3+3
+    
 2+2+2+3
+    
 2+2+3+2
+    
 2+3+2+2
+    
 3+2+2+2
+    
 n <= 100
 x <= 10^6
 a[i] <= 10^6
-CSES problem link : https://cses.fi/problemset/task/1635
-Solution :
+
+**Solution**
+
 dp[x] = number of ways to make value x
+
 The complexity : O(nx)
-*/
+    
+```cpp
 int main()
 {
     int n,x;cin>>n>>x;
@@ -73,25 +91,31 @@ int main()
         cout<<dp[x];
     return 0;
 }
-
-/*
+```
 Consider a money system consisting of n coins. Each coin has a positive integer value
 Your task is to calculate the number of  distinct ordered ways you can produce a money 
-sum x using the available coins
+sum x using the available coins.
+    
 For example, if the coins are {2,3,5} and the desired sum is 9, there are 3 ways:
+
 2+2+5
+    
 3+3+3
+    
 2+2+2+3
 
 n <= 100
+    
 x <= 10^6
+
 a[i] <= 10^6
-CSES problem link : https://cses.fi/problemset/task/1636
-Solution :
+
+**Solution**
+
 dp[i][x] = number of ways to make value x using the first i coins
 The complexity : O(nx)
-*/
-
+    
+```cpp
     int mod = 1e9+7;
     int n, x;
     cin >> n >> x;
@@ -113,3 +137,4 @@ The complexity : O(nx)
         }
     }
     cout << dp[n][x] << endl;
+```
