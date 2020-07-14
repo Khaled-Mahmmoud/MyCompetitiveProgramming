@@ -39,7 +39,8 @@ int main()
     return 0;
 }
 ```
-Consider a money system consisting of n coins. Each coin has a positive integer value
+Consider a money system consisting of n coins. Each coin has a positive integer value.
+
 Your task is to calculate the number of distinct ways you can produce a money sum x 
 using the available coins.
     
@@ -92,7 +93,8 @@ int main()
     return 0;
 }
 ```
-Consider a money system consisting of n coins. Each coin has a positive integer value
+Consider a money system consisting of n coins. 
+Each coin has a positive integer value.
 Your task is to calculate the number of  distinct ordered ways you can produce a money 
 sum x using the available coins.
     
