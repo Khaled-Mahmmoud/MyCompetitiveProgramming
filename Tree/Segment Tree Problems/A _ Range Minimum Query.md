@@ -48,3 +48,87 @@ q 1 5
 2
 
 1
+
+
+
+```cpp
+#include <bits/stdc++.h>
+#define N 1000009  // 10^6 + 9
+using namespace std;
+int a[N],tree[N];
+void build(int node,int s,int e)
+{
+    if(s==e)
+    {
+        tree[node] = a[s];
+        return;
+    }
+    else
+    {
+        int mid = (s+e)/2;
+        build(2*node,s,mid);
+        build(2*node+1,mid+1,e);
+        tree[node] = min(tree[2*node],tree[2*node+1]);
+    }
+}
+void updata(int node,int s,int e,int idx,int val)
+{
+    if(s==e)
+    {
+        //a[idx] = val;
+        tree[node] = val;
+        return;
+    }
+
+    int mid = (s+e)/2;
+
+    if(idx<=mid)
+        updata(2*node,s,mid,idx,val);
+    else
+        updata(2*node+1,mid+1,e,idx,val);
+
+    tree[node] = min(tree[2*node],tree[2*node+1]);
+
+}
+int query(int node,int s,int e,int l,int r)
+{
+    if(s>=l&&e<=r)
+        return tree[node];
+    if(s>r||e<l)
+        return INT_MAX;
+
+    int mid = (s+e)/2;
+    return min(query(2*node,s,mid,l,r),query(2*node+1,mid+1,e,l,r));
+}
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);cout.tie(0);
+	int n,q;cin>>n>>q;
+	for(int i=0;i<n;i++)
+        cin>>a[i];
+    build(1,0,n-1);
+    while(q--)
+    {
+        char c;
+        cin>>c;
+        if(c=='u')
+        {
+            int idx,val;
+            cin>>idx>>val;
+            idx--;
+            updata(1,0,n-1,idx,val);
+
+        }
+        else 
+        {
+            int l,r;
+            cin>>l>>r;
+            l--,r--;
+            cout<<query(1,0,n-1,l,r)<<'\n';
+        }
+
+    }
+    return 0;
+}
+```
