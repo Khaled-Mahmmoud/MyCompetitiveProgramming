@@ -145,7 +145,7 @@ private:
             delete p;
         }
     }
-    int height(node* p)
+    int height(node* p)      // O(n)
     {
         if(p==nullptr)
             return 0;
