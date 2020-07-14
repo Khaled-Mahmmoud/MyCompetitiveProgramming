@@ -13,7 +13,7 @@ In-order traversal   : left root right (LVR) or (LXR)-->> A + B
 
 post-order traversal : left right root (LRV) or (LRX) -->> A B +
 
-See This [diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Tree/binary%20search%20tree.png)
+See This [diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Tree/binary%20tree%20traversal.png)
              
 
 ```cpp
