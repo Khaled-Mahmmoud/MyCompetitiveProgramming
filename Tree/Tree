@@ -49,6 +49,8 @@ Parenthetical notation = A(B(CD)EF(GHI))
           /  \     is subtree of above tree
          C    D
 
+
+
 ************** Binary Tree ****************
 is a tree data structure in which each node has at most two children 
 which are referred to as the left child and the right child
