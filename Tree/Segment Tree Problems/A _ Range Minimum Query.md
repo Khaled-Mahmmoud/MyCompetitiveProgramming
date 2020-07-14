@@ -53,9 +53,11 @@ q 1 5
 
 ```cpp
 #include <bits/stdc++.h>
-#define N 1000009  // 10^6 + 9
+#define N 100009  // 10^5
 using namespace std;
-int a[N],tree[N];
+int a[N];
+int tree[2 * N - 1];   // please note that number of nodes = 2*n-1
+                       // there was wrong answer of tree[N] because input n may equal 10^5
 void build(int node,int s,int e)
 {
     if(s==e)
@@ -102,10 +104,8 @@ int query(int node,int s,int e,int l,int r)
 }
 int main()
 {
-    ios::sync_with_stdio(0);
-    cin.tie(0);cout.tie(0);
-	int n,q;cin>>n>>q;
-	for(int i=0;i<n;i++)
+    int n,q;cin>>n>>q;
+    for(int i=0;i<n;i++)
         cin>>a[i];
     build(1,0,n-1);
     while(q--)
