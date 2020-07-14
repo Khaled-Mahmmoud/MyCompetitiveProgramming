@@ -147,3 +147,27 @@ A degenerate (or Pathological) tree
       /   \   /   \
      O     O O     O    Max no. of nodes at level 2 = 4 = 2^2
      
+     
+     
+Breadth-first traversal
+level-order  -->> + A B
+Depth-first traversal
+Pre-order traversal  : root left right (VLR) or (XLR) -->> + A B
+In-order traversal   : left root right (LVR) or (LXR)-->> A + B
+post-order traversal : left right root (LRV) or (LRX) -->> A B +
+                    +
+                   / \
+                  A   B
+               ****************
+               
+Pre-order traversal   : A B C D E F
+In-order traversal    : C B D A E F
+post-order traversal  : C D B F E A
+level-order traversal : A B E C D F
+                   A
+                 /   \
+                B     E
+              /  \     \
+             C    D     F
+             
+             go to C _ Binary Tree Traversal.cpp
