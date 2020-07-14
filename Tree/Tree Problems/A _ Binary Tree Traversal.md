@@ -29,11 +29,11 @@ class BinaryTree
 {
     node* root;
 public:
-    BinaryTree()
+    BinaryTree()  // constructor
     {
         root=nullptr;
     }
-    ~BinaryTree()
+    ~BinaryTree()   // destructor
     {
         clear(root);
     }
