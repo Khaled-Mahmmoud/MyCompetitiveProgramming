@@ -25,7 +25,13 @@ root      -->> A
 parent    -->> A , B , F
 children  -->> B,E,F  C,D  G,H,I
 leaves    -->> C,D  E  G,H,I
-internal nodes (is parent and children at the same time)  -->> B , F
+
+     I         root (root is also an internal node, unless it is leaf)
+   /   \
+  I     I      internal nodes
+ /     / \
+o     o   o    external nodes (or leaves)
+
 Siblings  -->> {B,E,F}  {C,D}   {G,H,I}
 Ancestor  -->> C{A,B}  E{A}    I{A,F}
 Depth(C) = 2 (path from root to C) , Depth(E) = 1 , Depth(A) = 0
