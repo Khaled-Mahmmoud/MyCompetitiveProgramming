@@ -147,44 +147,8 @@ int query(int node, int start, int end, int l, int r)
     // range represented by a node is partially inside and partially outside the given range
     // or or the given range is completely inside Range represented by a
     int mid = (start + end) / 2;
-    int p1 = query(2*node, start, mid, l, r);
-    int p2 = query(2*node+1, mid+1, end, l, r);
-    return (p1 + p2);
+    return query(2*node, start, mid, l, r) + query(2*node+1, mid+1, end, l, r);
 }
 ```
 Time Complexity of query will be O(log n).
 
-The main function
-```cpp
-int A[max_size];
-int main()
-{
-    int n,x;
-    cin>>n;
-    for(int i=0;i<n;i++)
-    cin>>a[i];
-    build(1,0,n-1);
-    int q;
-    cin>>q;
-    while(q--)
-    {
-        char c;
-        cin>>c;
-        if(c=='q')
-        {
-            int l,r;
-            cin>>l>>r;
-            l--;r--;
-            cout<<query(1,0,n-1,l,r)<<' ';
-        }
-        else if(c=='u')
-        {
-            int idx,val;
-            cin>>idx>>val;
-            idx--;
-            update(1,0,n-1,idx,val);
-        }
-    }
-    return 0;
-}
-```
