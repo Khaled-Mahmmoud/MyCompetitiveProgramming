@@ -13,11 +13,11 @@ Consider an array A of size N and a corresponding Segment Tree T:
 2) Each leaf in the Segment Tree T will represent a single element A[i] such that 0 <= i <= N-1.
 3) The internal nodes in the Segment Tree T represents the union of elementary intervals A[i : j] where 0 <= i < j <= N-1.
 
-The Segment Tree of [array A of size 7](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Segment%20Tree/segment%20tree%20size%207.jpg)
+The Segment Tree of [array A of size 7](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Tree/segment%20tree%20size%207.jpg)
 
-The Segment tree represented as [linear array](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Segment%20Tree/segment%20tree%20linear%20array.jpg)
+The Segment tree represented as [linear array](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Tree/segment%20tree%20linear%20array.jpg)
 
-The root of the Segment Tree is broken down into [two half intervals](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/upload) or segments and the two children of the root 
+The root of the Segment Tree is broken down into [two half intervals](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Tree/two%20half%20intervals.png) or segments and the two children of the root 
 in turn represent the `A[0 : (N-1)/2]` and `A[(N-1)/2+1 : (N-1)]`. So in each step, the segment is divided into half and the two children represent those two halves.
 So the height of the segment tree will be Log2 N. There are N leaves representing the `N` elements of the array. The number of internal nodes is `N-1`. 
 So, a total number of nodes are `2 * N - 1`.
@@ -89,7 +89,7 @@ From the leaves, go back to the root and update all the nodes in the path. **nod
 Since Segment Tree is a binary tree. **2 * node** will represent the left node and **2 * node + 1** will represent the right node. **start** and **end** represents
 the interval represented by the node. (Time Complexity of **build()** is O(n). There are total 2n-1 nodes, and value of every node is calculated only once in tree construction).
 
-[Segment tree for A = {1,3,5,7,9,11}](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Segment%20Tree/segment%20tree%20for%20A.jpg)
+[Segment tree for A = {1,3,5,7,9,11}](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Tree/segment%20tree%20for%20A.jpg)
 
 
 To update an element, look at the interval in which the element is present and recurse accordingly on the left or the right child.
@@ -123,7 +123,7 @@ void update(int node, int start, int end, int idx, int val)
 ```
 Time Complexity of update will be O(log n).
 
-To query on a given range, check 3 conditions as [diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Segment%20Tree/segment%20tree%20query.png).
+To query on a given range, check 3 conditions as [diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Tree/segment%20tree%20query.png).
 
 1) Range represented by a node is completely inside the given range
 2) Range represented by a node is completely outside the given range
