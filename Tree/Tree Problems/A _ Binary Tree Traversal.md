@@ -1,11 +1,16 @@
 # Binary Tree Traversal
 
-/*
-Breadth-first traversal
+
+**Breadth-first traversal**
+
 level-order  -->> + A B
-Depth-first traversal
+
+**Depth-first traversal**
+
 Pre-order traversal  : root left right (VLR) or (XLR) -->> + A B
+
 In-order traversal   : left root right (LVR) or (LXR)-->> A + B
+
 post-order traversal : left right root (LRV) or (LRX) -->> A B +
 
 See This [diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Segment%20Tree/binary%20search%20tree.png)
