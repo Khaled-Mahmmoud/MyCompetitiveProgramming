@@ -159,7 +159,7 @@ The main function
 int A[max_size];
 int main()
 {
-	int n,x;
+    int n,x;
     cin>>n;
     for(int i=0;i<n;i++)
     cin>>a[i];
