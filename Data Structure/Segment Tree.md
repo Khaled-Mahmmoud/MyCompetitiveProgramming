@@ -154,6 +154,40 @@ int query(int node, int start, int end, int l, int r)
 ```
 Time Complexity of query will be O(log n).
 
+The main function
+```cpp
+int A[max_size];
+int main()
+{
+	int n,x;
+    cin>>n;
+    for(int i=0;i<n;i++)
+    cin>>a[i];
+    build(1,0,n-1);
+    int q;
+    cin>>q;
+    while(q--)
+    {
+        char c;
+        cin>>c;
+        if(c=='q')
+        {
+            int l,r;
+            cin>>l>>r;
+            l--;r--;
+            cout<<query(1,0,n-1,l,r)<<' ';
+        }
+        else if(c=='u')
+        {
+            int idx,val;
+            cin>>idx>>val;
+            idx--;
+            update(1,0,n-1,idx,val);
+        }
+    }
+    return 0;
+}
+```
 
 
 
