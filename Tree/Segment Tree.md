@@ -70,6 +70,7 @@ void build(int node, int start, int end)
     {
         // Leaf node will have a single element
         tree[node] = A[start];
+        return;
     }
     else
     {
@@ -100,6 +101,7 @@ void update(int node, int start, int end, int idx, int val)
         // Leaf node
         A[idx] += val;
         tree[node] += val;
+        return;
     }
     else
     {
