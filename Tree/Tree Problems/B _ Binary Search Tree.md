@@ -120,6 +120,10 @@ public:
                 cur = cur->right;
         }
     }
+    void print()
+    {
+        pre_order(root);
+    }
 
 private:
 
@@ -200,6 +204,14 @@ private:
             delete cur;
         }
     }
+    void pre_order(node *p)
+    {
+        if(p == nullptr)
+            return;
+        cout<<p->item<<' ';
+        prin(p->left);
+        prin(p->right);
+    }
 };
 int main()
 {
@@ -207,6 +219,7 @@ int main()
     b.insert(10);
     b.insert(20);
     b.insert(5);
+    b.print();
     b.remove(10);
     b.tree_search(20);
     return 0;
