@@ -170,9 +170,9 @@ private:
     {
         if(p == nullptr)
             return 0;
-        if(p->item == n)
+        if(n == p->item)
             return true;
-        if(p->item > n)
+        if(n <= p->item)
             return search(p->left,n);
         return search(p->right,n);
     }
