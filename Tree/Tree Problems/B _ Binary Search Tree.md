@@ -29,8 +29,6 @@ Travel up using the parent pointer until you see a node which is right child of 
 predecessor(4) = 3 , predecessor(14) = 10 , predecessor(1) = NULL
 
 ```cpp
-#include <bits/stdc++.h>
-using namespace std;
 struct node
 {
     int   item;
