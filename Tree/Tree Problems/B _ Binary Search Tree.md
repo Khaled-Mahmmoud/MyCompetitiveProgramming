@@ -114,7 +114,7 @@ public:
         {
             if(cur->item == n)
                 delete_from_tree(cur);
-            else if(cur->item > n)
+            else if(n <= cur->item)
                 cur = cur->left;
             else
                 cur = cur->right;
