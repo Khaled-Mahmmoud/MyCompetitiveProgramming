@@ -59,7 +59,7 @@ public:
     {
         return node_count(root);
     }
-    int tree_leave_scount()
+    int tree_leaves_count()
     {
         return leaves_count(root);
     }
