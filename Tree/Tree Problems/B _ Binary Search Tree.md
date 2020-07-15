@@ -136,15 +136,7 @@ public:
     }
 
 private:
-    void clear(node* p)
-    {
-        if(p!=nullptr)
-        {
-            clear(p->left);
-            clear(p->right);
-            delete p;
-        }
-    }
+
     int height(node* p)      // O(n)
     {
         if(p==nullptr)
@@ -164,6 +156,15 @@ private:
         if(p->left==nullptr&&p->right==nullptr)
             return 1;
         return leaves_count(p->left)+leaves_count(p->right);
+    }
+    void clear(node* p)
+    {
+        if(p!=nullptr)
+        {
+            clear(p->left);
+            clear(p->right);
+            delete p;
+        }
     }
     bool search(node* p,int n)
     {
