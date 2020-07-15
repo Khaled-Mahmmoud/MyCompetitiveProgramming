@@ -71,20 +71,6 @@ public:
     {
         return search(root,n);
     }
-    bool search_plus(int n)
-    {
-        node* cur=root;
-        while(cur!=nullptr)
-        {
-            if(cur->item == n)
-                return true;
-            else if(cur->item > n)
-                cur = cur->left;
-            else
-                cur = cur->right;
-        }
-        return false;
-    }
     void insert(int n)
     {
         node* cur;
@@ -222,6 +208,7 @@ int main()
     b.insert(20);
     b.insert(5);
     b.remove(10);
+    b.tree_search(20);
     return 0;
 }
 ```
