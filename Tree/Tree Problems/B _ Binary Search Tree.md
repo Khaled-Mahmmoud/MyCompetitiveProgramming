@@ -96,12 +96,12 @@ public:
                     cout<<"duplicates are not allowed"<<endl;
                     return;
                 }
-                else if(cur->item > n)
+                else if(n <= cur->item)
                     cur = cur->left;
                 else
                     cur = cur->right;
             }
-            if(trailcur->item > n)
+            if(n <= trailcur->item)
                 trailcur->left = newnode;
             else
                 trailcur->right = newnode;
