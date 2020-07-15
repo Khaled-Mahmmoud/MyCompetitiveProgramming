@@ -29,6 +29,8 @@ Travel up using the parent pointer until you see a node which is right child of 
 predecessor(4) = 3 , predecessor(14) = 10 , predecessor(1) = NULL
 
 ```cpp
+#include <bits/stdc++.h>
+using namespace std;
 struct node
 {
     int   item;
@@ -209,8 +211,8 @@ private:
         if(p == nullptr)
             return;
         cout<<p->item<<' ';
-        prin(p->left);
-        prin(p->right);
+        pre_order(p->left);
+        pre_order(p->right);
     }
 };
 int main()
