@@ -39,39 +39,39 @@ class BinarySearchTree
 {
     node* root;
 public:
-    BinarySearchTree()
+    BinarySearchTree() // constructor
     {
         root=nullptr;
     }
-    ~BinarySearchTree()
+    ~BinarySearchTree()  // destructor
     {
         clear(root);
     }
-    bool isempty()
+    bool is_empty()
     {
         return root == nullptr;
     }
-    int treehight()
+    int tree_height()
     {
         return height(root);
     }
-    int treenodecount()
+    int tree_node_count()
     {
-        return nodecount(root);
+        return node_count(root);
     }
-    int treeleavescount()
+    int tree_leave_scount()
     {
-        return leavescount(root);
+        return leaves_count(root);
     }
-    void cleartree()
+    void clear_tree()
     {
         return clear(root);
     }
-    bool treesearch(int n)
+    bool tree_search(int n)
     {
         return search(root,n);
     }
-    bool searchplus(int n)
+    bool search_plus(int n)
     {
         node* cur=root;
         while(cur!=nullptr)
@@ -127,7 +127,7 @@ public:
         while(cur!=nullptr)
         {
             if(cur->item == n)
-                deletefromtree(cur);
+                delete_from_tree(cur);
             else if(cur->item > n)
                 cur = cur->left;
             else
@@ -151,19 +151,19 @@ private:
             return 0;
         return 1 + max(height(p->left),height(p->right));
     }
-    int nodecount(node* p)
+    int node_count(node* p)
     {
         if(p==nullptr)
             return 0;
-        return 1 + nodecount(p->left) + nodecount(p->right);
+        return 1 + node_count(p->left) + node_count(p->right);
     }
-    int leavescount(node* p)
+    int leaves_count(node* p)
     {
         if(p==nullptr)
             return 0;
         if(p->left==nullptr&&p->right==nullptr)
             return 1;
-        return leavescount(p->left)+leavescount(p->right);
+        return leaves_count(p->left)+leaves_count(p->right);
     }
     bool search(node* p,int n)
     {
@@ -175,7 +175,7 @@ private:
             return search(p->left,n);
         return search(p->right,n);
     }
-    void deletefromtree(node *p)
+    void delete_from_tree(node *p)
     {
         node* cur;
         node* trailcur;
@@ -216,14 +216,11 @@ private:
 };
 int main()
 {
-    binarySearchTreeType b;
+    BinarySearchTree b;
     b.insert(10);
     b.insert(20);
     b.insert(5);
-	b.remove(10);
-	b.inorderTraversal();
-	b.postorderTraversal();
-	b.preorderTraversal();
-	return 0;
+    b.remove(10);
+    return 0;
 }
 ```
