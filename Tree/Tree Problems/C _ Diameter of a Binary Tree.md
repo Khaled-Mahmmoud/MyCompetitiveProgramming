@@ -18,21 +18,13 @@ String consists of only L or R. L denotes left child and R denotes right child.
 
 5 1
 
-L
+L 2
 
-2
+R 3
 
-R
+LL 4
 
-3
-
-LL
-
-4
-
-LR
-
-5
+LR 5
 
 **SAMPLE OUTPUT**
 
@@ -102,6 +94,13 @@ int main()
     }
     for(auto x:m)
         root = insert(root,x.second,x.first,0);
+    // INPUT may be
+    // 3 1
+    // LLL 4
+    // LL 2
+    // L 3
+    // So , we used map to store it Sorted 
+    // m[L] = 3; m[LL] = 2; m[LLL] = 4;
     cout<<diameter(root);
     return 0; 
 }
