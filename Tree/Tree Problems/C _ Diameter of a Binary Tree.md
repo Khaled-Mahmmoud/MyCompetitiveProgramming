@@ -73,13 +73,13 @@ struct Node* newNode(int data)
     return (node); 
 } 
   
-int height(Node* root, int& ans, Node*(&k), int& lh, int& rh, int& f) 
+int height(Node* root, int& ans, Node*(&k), int& lh, int& rh) 
 { 
     if (root == NULL) 
         return 0; 
   
-    int left_height = height(root->left, ans, k, lh, rh, f); 
-    int right_height = height(root->right, ans, k, lh, rh, f); 
+    int left_height = height(root->left, ans, k, lh, rh); 
+    int right_height = height(root->right, ans, k, lh, rh); 
     if (ans < 1 + left_height + right_height) 
     { 
   
@@ -133,10 +133,9 @@ void diameter(Node* root)
     if (root == NULL) 
         return; 
     int ans = INT_MIN, lh = 0, rh = 0; 
-    int f = 0; 
     Node* k; 
-    int height_of_tree = height(root, ans, k, lh, rh, f); 
-    int lPath[100], pathlen = 0; 
+    int height_of_tree = height(root, ans, k, lh, rh); 
+    int lPath[100], pathlen = 0,f = 0; 
     printPathsRecur(k->left, lPath, pathlen, lh, f); 
     cout<<k->data<<' '; 
     int rPath[100]; 
