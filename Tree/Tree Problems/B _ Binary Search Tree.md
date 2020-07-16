@@ -110,11 +110,22 @@ public:
     void remove(int n)
     {
         node* cur = root;
+        node* trailcur = root;
         while(cur!=nullptr)
         {
             if(cur->item == n)
-                delete_from_tree(cur);
-            else if(n <= cur->item)
+            {
+                if(cur->left==nullptr&&cur->right==nullptr)
+                {
+                    trailcur->left = trailcur->right = nullptr;
+                    delete cur;
+                }
+                else
+                    delete_from_tree(cur);
+                return;
+            }
+            trailcur = cur;
+            if(n <= cur->item)
                 cur = cur->left;
             else
                 cur = cur->right;
@@ -170,20 +181,14 @@ private:
     {
         node* cur;
         node* trailcur;
-        node* temp;
-        if(p->left==nullptr&&p->right==nullptr)
-            delete p;
-        else if(p->left==nullptr)
+
+        if(p->left==nullptr)
         {
-            temp = p;
-            p = p->right;
-            delete temp;
-        }
-        else if(p->right==nullptr)
-        {
-            temp = p;
-            p = p->left;
-            delete temp;
+            cur = p;
+            cur = cur->right;
+            p->item = cur->item;
+            p->right = cur->right;
+            delete cur;
         }
         else
         {
@@ -200,7 +205,6 @@ private:
                 p->left = cur->left;
             else
                 trailcur->right = cur->left;
-
             delete cur;
         }
     }
