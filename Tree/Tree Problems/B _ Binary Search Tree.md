@@ -111,6 +111,11 @@ public:
     {
         node* cur = root;
         node* trailcur = root;
+        if(n == root->item&&root->left==nullptr&&root->right==nullptr)
+        {
+            root = nullptr;
+            return;
+        }
         while(cur!=nullptr)
         {
             if(cur->item == n)
