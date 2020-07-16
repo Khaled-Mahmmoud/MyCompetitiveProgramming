@@ -184,7 +184,7 @@ bool is_empty()
 }
 void preorder(node* p)
 {
-    if(p!=nullptr)
+    if(p)
     {
         cout<<p->item<<' ';
         preorder(p->left);
@@ -193,7 +193,7 @@ void preorder(node* p)
 }
 void inorder(node* p)
 {
-    if(p!=nullptr)
+    if(p)
     {
         inorder(p->left);
         cout<<p->item<<' ';
@@ -202,7 +202,7 @@ void inorder(node* p)
 }
 void postorder(node* p)
 {
-    if(p!=nullptr)
+    if(p)
     {
         postorder(p->left);
         postorder(p->right);
@@ -211,7 +211,7 @@ void postorder(node* p)
 }
 void levelorder(node* p)
 {
-    if(p!=nullptr)
+    if(p)
     {
         queue<node*>q;
         q.push(p);
