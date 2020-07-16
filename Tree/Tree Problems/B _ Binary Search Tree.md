@@ -117,7 +117,10 @@ public:
             {
                 if(cur->left==nullptr&&cur->right==nullptr)
                 {
-                    trailcur->left = trailcur->right = nullptr;
+                    if(trailcur->left->item == n)
+                         trailcur->left = nullptr;
+                    else 
+                         trailcur->right = nullptr;
                     delete cur;
                 }
                 else
