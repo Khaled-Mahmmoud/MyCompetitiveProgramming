@@ -9,7 +9,7 @@ The [diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/m
  Diameter of a tree can be calculated by only using the height function, because the diameter of a tree is nothing but maximum value of 
  `(left_height + right_height + 1)` for each node. So we need to calculate this value for each node and update the result. 
  
- Time complexity : O(n)
+ Time complexity : O(n)     where N is the number of nodes in the tree.
 
 ```cpp
 struct Node
