@@ -96,12 +96,12 @@ void printArray(int ints[], int len, int f)
     int i; 
     if (f == 0) { 
         for (i = len - 1; i >= 0; i--) { 
-            printf("%d ", ints[i]); 
+            cout<<ints[i]<<' ';
         } 
     } 
     else if (f == 1) { 
         for (i = 0; i < len; i++) { 
-            printf("%d ", ints[i]); 
+            cout<<ints[i]<<' ';
         } 
     } 
 } 
@@ -113,14 +113,17 @@ void printPathsRecur(Node* node, int path[], int pathLen,int max, int& f)
     path[pathLen] = node->data; 
     pathLen++; 
   
-    if (node->left == NULL && node->right == NULL) {  
-        if (pathLen == max && (f == 0 || f == 1)) { 
+    if (node->left == NULL && node->right == NULL) 
+    {  
+        if (pathLen == max && (f == 0 || f == 1))
+        { 
             printArray(path, pathLen, f); 
             f = 2; 
         } 
     } 
   
-    else { 
+    else 
+    { 
         printPathsRecur(node->left, path, pathLen, max, f); 
         printPathsRecur(node->right, path, pathLen, max, f); 
     } 
@@ -135,7 +138,7 @@ void diameter(Node* root)
     int height_of_tree = height(root, ans, k, lh, rh, f); 
     int lPath[100], pathlen = 0; 
     printPathsRecur(k->left, lPath, pathlen, lh, f); 
-    printf("%d ", k->data); 
+    cout<<k->data<<' '; 
     int rPath[100]; 
     f = 1; 
     printPathsRecur(k->right, rPath, pathlen, rh, f); 
