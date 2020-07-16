@@ -68,7 +68,7 @@ node* insert(node* root, int k)
     if (root == NULL)
         return newNode(k);
 
-    if (k < root->item)
+    if (k <= root->item)
         root->left = insert(root->left, k);
     else
         root->right = insert(root->right, k);
