@@ -191,6 +191,7 @@ private:
             cur = cur->right;
             p->item = cur->item;
             p->right = cur->right;
+            p->left = cur->left;
             delete cur;
         }
         else
