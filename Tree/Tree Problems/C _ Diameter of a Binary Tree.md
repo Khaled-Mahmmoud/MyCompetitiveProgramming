@@ -4,12 +4,48 @@ The diameter of a tree is the number of nodes on the longest path between two le
 The [diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Tree/Diameter-of-Binary-Tree.png) shows two trees each with diameter nine, the leaves that form the ends of the longest path are colored
 (note that there may be more than one path in the tree of the same diameter).
 
+**Input**
+
+First line contains two integers, N and K, number of nodes in the tree and value of the root.
+
+Next  lines contain details of nodes.
+
+Each detail of node contains two lines. First lines contains a string and second line contains an integer, which denotes the path of the node and the value of the node respectively.
+
+String consists of only L or R. L denotes left child and R denotes right child.
+
+**SAMPLE INPUT**
+
+5 1
+
+L
+
+2
+
+R
+
+3
+
+LL
+
+4
+
+LR
+
+5
+
+**SAMPLE OUTPUT**
+
+4
+
 **Solution**
 
  Diameter of a tree can be calculated by only using the height function, because the diameter of a tree is nothing but maximum value of 
  `(left_height + right_height + 1)` for each node. So we need to calculate this value for each node and update the result. 
  
  Time complexity : O(n)     where N is the number of nodes in the tree.
+ 
+ 
 
 ```cpp
 struct Node
@@ -24,6 +60,17 @@ Node* newNode(int data)
     node->left = node->right = NULL;
     return (node); 
 } 
+node* insert(node* root,int k,string s,int i)
+{
+    if(root == nullptr)
+        return newNode(k);
+    if(s[i]=='R')
+        root->right = insert(root->right,k,s,++i);
+    else
+        root->left = insert(root->left,k,s,++i);
+    return root;
+
+}
 int height(Node* root, int& ans) 
 { 
     if (root == NULL) 
@@ -43,12 +90,19 @@ int diameter(Node* root)
 } 
 int main() 
 { 
-    Node* root = newNode(1); 
-    root->left = newNode(2); 
-    root->right = newNode(3); 
-    root->left->left = newNode(4); 
-    root->left->right = newNode(5); 
-    cout<<diameter(root)); 
+    int n,k;
+    cin>>n>>k;
+    node* root = newNode(k);
+    n--;map<string,int>m;
+    while(n--)
+    {
+        string s;
+        cin>>s>>k;
+        m[s]=k;
+    }
+    for(auto x:m)
+        root = insert(root,x.second,x.first,0);
+    cout<<diameter(root);
     return 0; 
 }
 ```
