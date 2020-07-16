@@ -58,10 +58,10 @@ struct node
 };
 node* newNode(int k)
 {
-    node* temp = new node;
-    temp->item = k;
-    temp->left = temp->right = NULL;
-    return temp;
+    node* root = new node;
+    root->item = k;
+    root->left = root->right = NULL;
+    return root;
 }
 node* insert(node* root, int k)
 {
