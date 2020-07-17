@@ -1,3 +1,5 @@
+# Terminology
+
 **proper divisors of number**
 
 is all divisors of number excluding the number itself
