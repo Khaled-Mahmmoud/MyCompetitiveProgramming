@@ -37,6 +37,12 @@ sk1.swap(sk2)  || O(1) || Sawp two container
 
 ### Queue
 
+Queues are data structures that follow **the First In First Out (FIFO)** i.e. the first element that is added to the queue is the first one to be removed.
+
+Elements are always added to the back and removed from the front. Think of it as a line of people waiting for a bus. The person who is at the beginning of the line is the first one to enter the bus.
+
+A stack can be [visualized](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Containers/queue.png) as follows:
+
 ```cpp
 #include <queue>  
 queue<object_type>object_name;
