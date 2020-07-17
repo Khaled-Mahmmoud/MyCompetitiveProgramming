@@ -25,6 +25,7 @@ Other popular name: Prefix Function.
 
 Then F[] = {0, 0, 1, 2, 0, 1, 2, 3}
 
+for example : akaka. then f[] = {0,0,1,2,3}
 
 Time Complexity O(m)
 
