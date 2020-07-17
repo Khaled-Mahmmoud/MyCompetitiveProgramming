@@ -28,30 +28,11 @@ Segment tree provides two operations:
 1) **Update** : To update the element of the array A and reflect the corresponding change in the Segment tree.
 2) **Query** : In this operation we can query on an interval or segment and return the answer to the problem (say minimum/maximum/summation in the particular segment).
 
-### Implementation
-
-Since a Segment Tree is a binary tree, a simple linear array can be used to represent the Segment Tree. 
-Before building the Segment Tree, one must figure **what needs to be stored in the Segment Tree's node?**.
-For example, if the question is to find the sum of all the elements in an array from indices L to R, then at each node (except leaf nodes) 
-the sum of its children nodes is stored.
-
-A Segment Tree can be built using **recursion (bottom-up approach)**. Start with the leaves and go up to the root and update the corresponding changes
-in the nodes that are in the path from leaves to root. Leaves represent a single element. In each step, the data of two children nodes are used to 
-form an internal parent node. Each internal node will represent a union of its children’s intervals. Merging may be different for different questions. 
-So, recursion will end up at the root node which will represent the whole array.
-
-For **update()**, search the leaf that contains the element to update. This can be done by going to either on the left child or the right child depending on 
-the interval which contains the element. Once the leaf is found, it is updated and again use the bottom-up approach to update the corresponding change 
-in the path from that leaf to the root.
-
-To make a **query()** on the Segment Tree, select a range from L to R (which is usually given in the question). Recurse on the tree starting from the root 
-and check if the interval represented by the node is completely in the range from L to R. If the interval represented by a node is completely in the range from L to R,
-return that node’s value.
-
 Take an example. Given an array A of size N and some queries. There are two types of queries:
 
-1) **Update** : Given Idx and Val, update array element A[Idx] as A[Idx] = A[Idx] + Val.
-2) **Query** : Given L and R return the value of `A[L]+A[L+1]+A[L+2]+....+A[R-1]+A[R]` such that 0 <= L <= R <= N-1
+Update : Given Idx and Val, update array element A[Idx] as A[Idx] = A[Idx] + Val.
+
+Query : Given L and R return the value of `A[L]+A[L+1]+A[L+2]+....+A[R-1]+A[R]` such that 0 <= L <= R <= N-1
 
 **Naive Algorithm** :
 This is the most basic approach. For every query, run a loop from L to R and calculate the sum of all the elements. So each query will take O(n) time.
