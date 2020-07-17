@@ -1,13 +1,14 @@
 # Failure Function
 
-failure function expresses longest proper prefix that is a suffix
+failure function expresses longest proper prefix that is a suffix.
 
-Given String P of length m, define an array F[m]
+Given String P of length m, define an array F[m].
 
-⦁	Let t = P[0..i].
-⦁	F[i] = length of longest proper prefix of t that is suffix of t.
+Let t = P[0..i].
 
-Other popular name: Prefix Function
+F[i] = length of longest proper prefix of t that is suffix of t.
+
+Other popular name: Prefix Function.
 
 Time Complexity O(m)
 
