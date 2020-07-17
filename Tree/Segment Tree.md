@@ -28,7 +28,9 @@ Segment tree provides two operations:
 1) **Update** : To update the element of the array A and reflect the corresponding change in the Segment tree.
 2) **Query** : In this operation we can query on an interval or segment and return the answer to the problem (say minimum/maximum/summation in the particular segment).
 
-Take an example. Given an array A of size N and some queries. There are two types of queries:
+### Example
+
+Given an array A of size N and some queries. There are two types of queries:
 
 Update : Given Idx and Val, update array element A[Idx] as A[Idx] = A[Idx] + Val.
 
