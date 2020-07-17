@@ -27,6 +27,8 @@ Then F[] = {0, 0, 1, 2, 0, 1, 2, 3}
 
 for example : akaka. then f[] = {0,0,1,2,3}
 
+for example : aaaaa. then f[] = {0,1,2,3,4}
+
 Time Complexity O(m)
 
 ```cpp
