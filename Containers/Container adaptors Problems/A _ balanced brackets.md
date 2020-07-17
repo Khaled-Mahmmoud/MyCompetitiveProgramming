@@ -1,7 +1,6 @@
 # balanced brackets
 
 Given an expression string exp. Examine whether the pairs and the orders of “{“,”}”,”(“,”)”,”[“,”]” are correct in exp.
-For example, the program should print 'balanced' for exp = “[()]{}{[()()]()}” and 'not balanced' for exp = “[(])”
 
 **Input**
 
@@ -36,42 +35,23 @@ balanced
 not balanced
 
 ```cpp
-bool areParanthesisBalanced(string expr) 
+bool areParanthesisBalanced(string s) 
 { 
-    stack<char> s; 
-    char x; 
-    for (int i = 0; i < expr.length(); i++) 
+    stack<char> sk; 
+    for (int i = 0; i < s.length(); i++) 
     { 
-        if (expr[i] == '(' || expr[i] == '[' || expr[i] == '{')
+        if (s[i] == '(' || s[i] == '[' || s[i] == '{')
         { 
-            s.push(expr[i]); 
+            sk.push(s[i]); 
             continue; 
         } 
-        if (s.empty()) 
+        if (sk.empty()) 
             return false; 
-        switch (expr[i]) 
-        { 
-        case ')': 
-              x = s.top(); 
-            s.pop(); 
-            if (x == '{' || x == '[') 
-                return false; 
-            break; 
-  
-        case '}': 
-              x = s.top(); 
-            s.pop(); 
-            if (x == '(' || x == '[') 
-                return false; 
-            break; 
-  
-        case ']': 
-              x = s.top(); 
-            s.pop(); 
-            if (x == '(' || x == '{') 
-                return false; 
-            break; 
-       } 
+        
+        if(s[i]==')'&&sk.top()=='('||s[i]==']'&&sk.top()=='['||s[i]=='}'&&sk.top()=='{')
+            sk.pop();
+        else 
+            return false;
     } 
     return (s.empty()); 
 } 
