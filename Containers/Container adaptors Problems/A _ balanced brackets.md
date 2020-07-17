@@ -48,14 +48,13 @@ bool areParanthesisBalanced(string s)
         if (sk.empty()) 
             return false; 
         
-        if(s[i]==')'&&sk.top()=='('||s[i]==']'&&sk.top()=='['||s[i]=='}'&&sk.top()=='{')
+        if((s[i]==')'&&sk.top()=='(')||(s[i]==']'&&sk.top()=='[')||(s[i]=='}'&&sk.top()=='{'))
             sk.pop();
         else 
             return false;
     } 
-    return (s.empty()); 
+    return (sk.empty()); 
 } 
-  
 int main() 
 { 
     string s;
