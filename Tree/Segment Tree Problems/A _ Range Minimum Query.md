@@ -58,6 +58,7 @@ using namespace std;
 int a[N];
 int tree[2 * N - 1];   // please note that number of nodes = 2*n-1
                        // there was wrong answer of tree[N] because input n may equal 10^5
+                       // It is better to make it tree[4*N]
 void build(int node,int s,int e)
 {
     if(s==e)
