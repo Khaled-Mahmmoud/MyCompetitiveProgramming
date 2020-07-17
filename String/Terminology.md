@@ -1,0 +1,23 @@
+Given string s = abcd
+
+**Prefix**
+
+Any string that start from first character
+such that : a , ab , abc , abcd
+
+**Proper Prefix**
+
+Any prefix of S except S itself
+such that : a , ab , abc.
+then string of 1 letter , has no proper prefix
+
+**Suffix**
+
+Any string that ends at last character
+such that : d , cd , bcd , abcd
+
+**Proper Suffix**
+
+Any suffix of S except S itself
+such that : d , cd , bcd.
+then string of 1 letter , has no proper suffix
