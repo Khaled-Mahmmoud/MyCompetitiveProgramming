@@ -82,8 +82,7 @@ Time Complexity O(n)
 Given a string , what is minimum characters to add to convert string to palindrome ?
 aaaa ==>> aaaa
 abc  ==>> abcba
-abcdeffe  ==>> abdcdeffedcba
-
+abcdeffe  ==>> abdcdeffedcba.
 let's k = longest suffix that is palidrome
 answer = length of string - k.
 Time Complexity O(n)
