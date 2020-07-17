@@ -92,23 +92,23 @@ A subset does not Order nor Continuity :          `2^n`
 
 Given string s = abcd
 
-**Prefix**
+**Prefix** (n prefixes)
 
 Any string that start from first character
 such that : a , ab , abc , abcd
 
-**Proper Prefix**
+**Proper Prefix** (n-1 prefixes)
 
 Any prefix of S except S itself
 such that : a , ab , abc.
 then string of 1 letter , has no proper prefix
 
-**Suffix**
+**Suffix** (n suffixes)
 
 Any string that ends at last character
 such that : d , cd , bcd , abcd
 
-**Proper Suffix**
+**Proper Suffix** (n-1 suffixes)
 
 Any suffix of S except S itself
 such that : d , cd , bcd.
