@@ -110,7 +110,7 @@ int main()
 
 Now for the node which has the maximum value of (left_height + right_height + 1), we find the longest root to leaf path on the left side and similarly on the right side. Finally, we print left side path, root and right side path.
 
-Time Complexity is O(N). N is the number of nodes in the tree.
+Time Complexity is O(n). N is the number of nodes in the tree.
 ```cpp
 struct Node { 
     int data; 
