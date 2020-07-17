@@ -68,7 +68,7 @@ Now problem , find longest prefix that is suffix .
 Failure functiong can answer that easily : F[size-1] is answer
 Time Complexity O(n)
 
-******************************************************************************************************************************************************************
+*************************************************************************************************************************
 
 OR reverse the problem
 Given a string what is the longest suffix that is palindrome ?
@@ -77,7 +77,7 @@ we reverse that string
 Now problem , find the longest prefix that is palindrome .
 Time Complexity O(n)
 
-******************************************************************************************************************************************************************
+*************************************************************************************************************************
 
 Given a string , what is minimum characters to add to convert string to palindrome ?
 aaaa ==>> aaaa
