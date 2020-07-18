@@ -117,17 +117,22 @@ So all what we need. To generate N. use 0N + 1N' where N' is reverse list
 
 If we built the list incrementally including from N=2 we got
 
-|Binary  | Gray Code | decimal of gray code|
-|---|---|---|---|
-|0|0000|0000|	0|
-|1|0001	|0001|1|
-|2|0010	|	0011|	2|
-|3|0011	|	0010|	1|
-|4|0100	|	0110|	2|
-|5|0101	|	0111|	3|
-|6|0110	|	0101|	2|
-|7|0111	|	0100|	1|
-|8|1000	|	1100|	2|
+Binary        Gray Code decimal
+0000		0000	0
+0001		0001	1
+0010		0011	2
+0011		0010	3
+0100		0110	4
+0101		0111	5
+0110		0101	6
+0111		0100	7
+1000		1100	8
+1001		1101	9
+1010		1111	10
+1011		1110	11
+1100		1010	12
+1101		1011	13
+1110		1001	14
 
 
 By observation, in gray code, every bit is Xor of its bit and last one
