@@ -20,7 +20,7 @@ let string s=concatenate(abcd,5) = abcdabcdabcdabcdabcd
 let's divide string for 5 blocks ABCDE
 //////////////////////////////////////////////////
 F[len-1]=16 , which means first 16 = last 16
-or first 4 blocks = last 5 blocks
+or first 4 blocks = last 4 blocks
 ABCD = BCDE Then A = B , B = C , C = D , D = E
 a b c d g h k m a b c d
 0 0 0 0 0 0 0 0 1 2 3 4
