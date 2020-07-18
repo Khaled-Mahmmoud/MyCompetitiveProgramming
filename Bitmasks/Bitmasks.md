@@ -217,6 +217,7 @@ X & ~(X-1) 	= 011010010000
                 & 100101110000 = 000000010000	value of 1<<SmaintestBitIdx
 
 ```cpp
+// to count number of sets in mask
 int countNumBits2(int mask) 
 {	
          // O(bits Count)	
@@ -229,6 +230,12 @@ int countNumBits2(int mask)
 	 }
 	 return ret;
 }
+```
+
+// to get [least significant bit](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Bitmask/most%20significant%20bit.jpg) that is set
+```cpp
+template<class Int>	
+Int leastBit(Int num) { return (num & -num); }	
 ```
 len = 3: 000, 001, 010, 011, 100, 101, 110, 111
 
