@@ -158,7 +158,7 @@ int main()
     string pat;cin>>pat;
     vector<int>prefix=getprefix(pat);
     int n=pat.size();
-    vector<int>freq(n+1,1);
+    vector<int>freq(n+1);
     for(int i=0;i<n;i++)
         freq[prefix[i]]++;
     for(int i=n-1;i>0;i--)
@@ -169,16 +169,3 @@ int main()
     return 0;
 }
 ```
-Given string P , for each prefix of P, count its frequency in string T
-let's k = length of P
-construct a string P#T where # is character that won't appear in P or T
-Now get frequency of string P#T and the answer is first k elements of freq 
-//////////////////////////////
-Count # of distinct substring
-abc => has a, b, c, ab, bc, abc
-aaa => has a, aa, aaa
-aabab => a, b, aa, ab, ba, aab, aba, bab, aaba, abab, aabab
-Think Incrementally: If we know the answer for the first N letters…Could we know for the N+1?
-When we add the N+1 character, we have N+1 suffix. We need only the unique suffixes of them.
-For each prefix P	=> O(n^2)
-Count += CountUniquePrefixes( reverse(P) )
