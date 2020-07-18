@@ -130,3 +130,55 @@ a b c d g h k m a b c d
 len-F[len-1] = 8   12 % 8 != 0
 
 what does this mean ? first 4 = last 4 , but in between is not like them
+
+# Frequency & Failure Function
+
+Given string P , for each prefix , count its frequency
+
+Ex. aabbaaab ==>> 5 3 2 1 1 1 1
+
+```cpp
+vector<int>getprefix(string pat)
+{
+    int m=pat.size();
+    vector<int>prefix(m);
+    for(int i=1,k=0;i<m;i++)
+    {
+        while(k>0&&pat[i]!=pat[k])
+            k=prefix[k-1];
+        if(pat[i]==pat[k])
+            prefix[i]=++k;
+        else
+            prefix[i]=k;
+    }
+    return prefix;
+}
+int main()
+{
+    string pat;cin>>pat;
+    vector<int>prefix=getprefix(pat);
+    int n=pat.size();
+    vector<int>freq(n+1,1);
+    for(int i=0;i<n;i++)
+        freq[prefix[i]]++;
+    for(int i=n-1;i>0;i--)
+        freq[prefix[i-1]]+=freq[i];
+    freq.erase(freq.begin());
+    for(int i=0;i<freq.size();i++)
+        cout<<freq[i]<<' ';
+    return 0;
+}
+```
+Given string P , for each prefix of P, count its frequency in string T
+let's k = length of P
+construct a string P#T where # is character that won't appear in P or T
+Now get frequency of string P#T and the answer is first k elements of freq 
+//////////////////////////////
+Count # of distinct substring
+abc => has a, b, c, ab, bc, abc
+aaa => has a, aa, aaa
+aabab => a, b, aa, ab, ba, aab, aba, bab, aaba, abab, aabab
+Think Incrementally: If we know the answer for the first N letters…Could we know for the N+1?
+When we add the N+1 character, we have N+1 suffix. We need only the unique suffixes of them.
+For each prefix P	=> O(n^2)
+Count += CountUniquePrefixes( reverse(P) )
