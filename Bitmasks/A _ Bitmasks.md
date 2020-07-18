@@ -7,9 +7,7 @@ bit 31 for sign
 
 we can use first 31 bits (bit 0 to bit 30) to avoid issues with 2's complement 
 
-31                             0
-
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+31 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 0
 
 **64-bit Integers**
 
@@ -19,9 +17,7 @@ bit 63 for sign
 
 we can use first 63 bits (bit 0 to bit 62) to avoid issues with 2's complement 
 
-63                                                             0
-
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+63 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 0
 
 
 bitmask is any integer
