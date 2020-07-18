@@ -26,13 +26,4 @@ a b c d g h k m a b c d
 0 0 0 0 0 0 0 0 1 2 3 4
 len-F[len-1] = 8   12 % 8 != 0
 what does this mean ? first 4 = last 4 , but in between is not like them
-//////////////////////////////////////////////////
-Another Way , using KMP itself
- let string input P = abcdabcdabcd
- let S = P + P = abcdabcdabcdabcdabcdabcd
- Now when we try to find P in S , it shoud match in 0 , k , 2k and so on
- So 2nd match is enough for answer
- abcdabcdabcdabcdabcdabcd ==>> 2nd match
-     abcdabcdabcd
- and here i = 4
- answer = len / i
+
