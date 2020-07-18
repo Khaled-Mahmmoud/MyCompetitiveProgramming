@@ -1,14 +1,7 @@
-//Given string P , for each prefix , count its frequency
-//Ex. aabbaaab ==>> 5 3 2 1 1 1 1
-#include <bits/stdc++.h>
-#define mod 1000000007
-#define ll long long
-using namespace std;
-void fast()
-{
-    ios::sync_with_stdio(false);
-    cin.tie(0);
-}
+Given string P , for each prefix , count its frequency
+
+Ex. aabbaaab ==>> 5 3 2 1 1 1 1
+```cpp
 vector<int>getprefix(string pat)
 {
     int m=pat.size();
@@ -26,7 +19,6 @@ vector<int>getprefix(string pat)
 }
 int main()
 {
-    fast();
     string pat;cin>>pat;
     vector<int>prefix=getprefix(pat);
     int n=pat.size();
@@ -40,6 +32,7 @@ int main()
         cout<<freq[i]<<' ';
     return 0;
 }
+```
 Given string P , for each prefix of P, count its frequency in string T
 let's k = length of P
 construct a string P#T where # is character that won't appear in P or T
