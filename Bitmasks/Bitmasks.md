@@ -252,8 +252,6 @@ bool isPowerOfTwo(Int num) { return (num & (num - 1) ) == 0; }
 
 len = 3: 000, 001, 010, 011, 100, 101, 110, 111
 
-Remember we did it recursively! This is much SIMPLER!
-
 ```cpp
 void printNumber(int n, int len)
 {
@@ -263,11 +261,11 @@ void printNumber(int n, int len)
 }
 void printAllSubsets(int len)	
 {
-	for (int i = 0; i < (1<<len); ++i)
-		{
-     printNumber(i,len);
-     cout<<' ';
-  }
+   for (int i = 0; i < (1<<len); ++i)
+   {
+        printNumber(i,len);
+        cout<<' ';
+   }
 }
 ````
 
@@ -276,7 +274,7 @@ For reversed order. Either reverse each item or work from big to small
 ```cpp
 void printAllSubsets(int len)	
 {
-	 for (int i = (1<<len)-1; i >= 0 ; --i)
+  for (int i = (1<<len)-1; i >= 0 ; --i)
   {
       printNumber(i, len);
       cout<<' ';
