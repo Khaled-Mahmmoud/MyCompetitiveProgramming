@@ -1,4 +1,4 @@
-concatenate(abcd,3)=abcdabcdabcdabcd
+concatenate(abcd,3)=abcdabcdabcd
 Given string concatenated , find minimum N
 Ex. abcabcabc ==>> 3
 Ex. abababab  ==>> 2
