@@ -11,11 +11,17 @@ search(word) can search a literal word or a regular expression string containing
 A `.` means it can represent any one letter.
 
 addWord("bad")
+
 addWord("dad")
+
 addWord("mad")
+
 search("pad") -> false
+
 search("bad") -> true
+
 search(".ad") -> true
+
 search("b..") -> true
 
 ```cpp
