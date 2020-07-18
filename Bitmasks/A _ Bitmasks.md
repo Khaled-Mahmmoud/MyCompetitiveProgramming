@@ -1,85 +1,136 @@
 
-****** 32-bit Integers ******
+**32-bit Integers**
+
 4 Bytes ( 1 Byte = 8 bits )
+
 bit 31 for sign 
+
 we can use first 31 bits (bit 0 to bit 30) to avoid issues with 2's complement 
+
 31                             0
+
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-****** 64-bit Integers ******
+**64-bit Integers**
+
 8 Bytes
+
 bit 63 for sign 
+
 we can use first 63 bits (bit 0 to bit 62) to avoid issues with 2's complement 
+
 63                                                             0
+
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
 bitmask is any integer
+
 set : bit with value 1
+
 clear : bit with value 0
 
-basic bitwise operations
+### basic bitwise operations
 
-****** AND operator (&) ******
-Ex. a=5 , b=4
-int c=a&b; // 101 & 100 = 100
+**AND operator (&)**
 
-****** OR operator (|) ******
-Ex. a=5 , b=4
-int c= a | b; // 101 & 100 = 101
+Ex. a=5 , b=4, int c = a & b; // 101 & 100 = 100
+
+**OR operator (|)**
+
+Ex. a=5 , b=4, int c= a | b; // 101 & 100 = 101
  
-****** XOR operator (^) ******
+**XOR operator (^)**
+
 Ex. a=5 , b=4
+
 int c= a ^ b; // 101 & 100 = 001
 
-****** NOT operator (~) ******
+**NOT operator (~)**
+
 flip each bit
+
 int a=10 ; // 1010
+
 int b=~a=~(1010)=0101
 
-****** Shift Left ******
+**Shift Left**
+
 operator : <<
+
 Form : x << y
-shift number x in binary times y to the left
+
+Shift number x in binary times y to the left
+
 Ex. int x=10; // 1010
+
 int y=x<<2; // 101000
 
-****** Shift Right ******
+**Shift Right**
+
 operator : >>
+
 Form : x >> y
-shift number x in binary times y to the right
+
+Shift number x in binary times y to the right
+
 Ex. int x=10; // 1010
+
 int y=x>>2; // 0010
 
-****** get bit  ******
-check if bit i is set in the bitmask m 
+**get bit**
+
+check if bit i is set in the bitmask m. 
 find the result of m & 1 shift left i times
 if the result is zero then the bit is clear otherwise the bit is set
-Ex. int m = 5; // 101
-int r=m & (1<<2) // 101 & 100 = 100 so is set
 
-****** set bit ******
+Ex. int m = 5; // 101
+
+check set bit 2 
+int r = m & (1<<2) // 101 & 100 = 100 so is set
+
+**set bit**
+
 how to set bit with index i in a bitmask m ?
+
 we can shit 1 to the left times i and OR it with m
+
 m = m | (1<<i)
+
 Ex. int m = 11 // 1011
+
 set bit 2
+
 m = m | (1<<2) = 1011 | 100 = 1111
 
-****** clear bit ******
+**clear bit**
+
 how to clear bit with index i in a bitmask m ?
+
 we can shit 1 to the left times i and not it and AND it with m
+
 m = m & ~(1<<i)
+
 EX. int m = 11 // 1011
+
 clear bit 3
+
 m = m & ~(1<<3) = 1011 & 0111 =0011
 
-****** flip bit ******
+**flip bit**
+
 how to flip bit with index i in a bitmask m ?
+
 we can shit 1 to the left times i and XOR it with m
+
  m ^ (1<<i);
+ 
 EX. int m = 11  // 1011
+
 flib bit 2
+
 m = m ^ (1<<2) = 1011 ^ 100 = 1111
+
 flib bit 1
+
 m = m ^ (1<<1) = 1011 ^ 10 = 1001
