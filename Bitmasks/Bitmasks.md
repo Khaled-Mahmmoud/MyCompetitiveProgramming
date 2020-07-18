@@ -242,8 +242,14 @@ num % mod, mod is a power of 2
 
 ```cpp
 template<class Int>	
-Int Mod(Int num, Int mod) { return (num & mod - 1); }	
+Int Mod(Int num, Int mod) { return (num & (mod - 1) ); }	
 ```
+
+```cpp
+template<class Int>	
+bool isPowerOfTwo(Int num) { return (num & (num - 1) ) == 0; }
+```
+
 len = 3: 000, 001, 010, 011, 100, 101, 110, 111
 
 Remember we did it recursively! This is much SIMPLER!
