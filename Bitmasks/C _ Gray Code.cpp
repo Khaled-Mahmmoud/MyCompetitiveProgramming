@@ -67,7 +67,7 @@ So all what we need. To generate N. use 0N + 1N' where N' is reverse list
 (valid)
 
 If we built the list incrementally including from N=2 we got
-Binary        Gray Code
+Binary        Gray Code decimal
 0000		0000	0
 0001		0001	1
 0010		0011	2
