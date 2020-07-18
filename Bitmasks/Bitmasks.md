@@ -237,6 +237,13 @@ int countNumBits2(int mask)
 template<class Int>	
 Int leastBit(Int num) { return (num & ~(num-1)); }	
 ```
+
+num % mod, mod is a power of 2	
+
+```cpp
+template<class Int>	
+Int Mod(Int num, Int mod) { return (num & mod - 1); }	
+```
 len = 3: 000, 001, 010, 011, 100, 101, 110, 111
 
 Remember we did it recursively! This is much SIMPLER!
