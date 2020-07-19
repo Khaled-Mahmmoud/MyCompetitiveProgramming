@@ -214,7 +214,7 @@ Observe: At h = 8, every suffix has a different group. We can stop processing.
 ```cpp
 const int MAXLENGTH = 5000;
 
-char str[MAXLENGTH + 1];      //the string we are building its suffix array
+sring str;
 int suf[MAXLENGTH + 1];//the sorted array of suffix indices
 int group[MAXLENGTH + 1];//In ith iteration: what is the group of the suffix index
 int sorGroup[MAXLENGTH + 1];//temp array to build grouping of ith iteration
@@ -240,7 +240,7 @@ void print_suffix(int suf_pos, int n)
 
 void buildSuffixArray() 
 {
-  int n;  //number of suffixes = 1+strlen(str)
+  int n = str.size() + 1;
   //Initially assume that the group index is the ASCII
   for (n = 0; n - 1 < 0 || str[n - 1]; n++)
   suf[n] = n, group[n] = str[n];//code of the first char in the suffix
