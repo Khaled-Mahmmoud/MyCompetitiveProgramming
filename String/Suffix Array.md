@@ -31,5 +31,13 @@ Let S = abracadabra (length = 11)
 | (1) bracadabra  | (10) a|
 | (2) racadabra | (7) abra|
 | (3) acadabra | (0) abracadabra|
+| (4) cadabra | (3) acadabra|
+| (5) adabra  | (5) adabra|
+| (6) dabra  | (8) bra |
+| (7) abra | (1) bracadabra  |
+| (8) bra | (4) cadabra |
+| (9) ra  | (6) dabra  |
+| (10) a  | (9) ra  | 
+| (11) #  | (2) racadabra |
 
 int suffix_array[] = {11,10, 7, 0, 3, 5, 8, 1, 4, 6, 9, 2}
