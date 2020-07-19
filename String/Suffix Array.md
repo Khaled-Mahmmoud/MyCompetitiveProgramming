@@ -222,23 +222,24 @@ int sorGroup[MAXLENGTH + 1];//temp array to build grouping of ith iteration
 struct comp//compare to suffixes on the first 2h chars
 {
   int h;
-  comp(int h)
-  : h(h) {
-  }
+  comp(int h): h(h) {}
 
-  bool operator()(int i, int j) {
+  bool operator()(int i, int j) 
+  {
     if (group[i] != group[j])     // previous h-groups are different
     return group[i] < group[j];
     return group[i + h] < group[j + h];
   }
 };
 
-void print_suffix(int suf_pos, int n) {
+void print_suffix(int suf_pos, int n)
+{
   for (int j = suf_pos; j < n - 1; ++j)  // n-1 is string length NOT n
     cout << str[j];
 }
 
-void buildSuffixArray() {
+void buildSuffixArray() 
+{
   int n;  //number of suffixes = 1+strlen(str)
   //Initially assume that the group index is the ASCII
   for (n = 0; n - 1 < 0 || str[n - 1]; n++)
@@ -248,7 +249,8 @@ void buildSuffixArray() {
   sorGroup[0] = sorGroup[n - 1] = 0;
 
   //loop until the number of groups=number of suffixes
-  for (int h = 1; sorGroup[n - 1] != n - 1; h <<= 1) {
+  for (int h = 1; sorGroup[n - 1] != n - 1; h <<= 1)
+  {
     sort(suf, suf + n, comp(h));  //sort the array using the first 2h chars
 
     for (int i = 1; i < n; i++)//compute the 2h group data given h group data
@@ -258,10 +260,11 @@ void buildSuffixArray() {
     group[suf[i]] = sorGroup[i];
 
 
-    if (true) {  // For print
-      for (int i = 0; i < n; i++) {
+    if (true)
+    {  
+      for (int i = 0; i < n; i++) 
+      {
         print_suffix(suf[i], n);
-
         cout << "\t" << suf[i] << "\n";
       }
       cout << "\n";
