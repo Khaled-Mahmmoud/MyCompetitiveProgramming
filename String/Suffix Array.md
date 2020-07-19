@@ -113,6 +113,7 @@ Assume suffixes are sorted based on the first 2 letters
 ◼ This O(logn) steps * ordering first **h letters**
 
 **Sorted suffixes on first 2 letters**
+
 |suffix(2)|index|group|
 |:---|:---:|---:|
 | # | 11 | 0 |
@@ -133,3 +134,55 @@ same length prefixes. E.g. index 0 and 7 starts with ab. So both assigned same g
 
 This can be trivially computed. Your group = previous group + 1 if
 different prefixes at first h=2 letters. E.g. group(acadabra) = group(abra) + (ac!= ab) = 2 + 1 = 3
+
+**Sorting 4 letters from 2 letters**
+
+**Compare(abra, bra)**
+
+g(abra) = 2, group(bra) = 5. Actually on 2 letters, they are different. So in new ordering abra < bra (4 letters)
+
+**Compare(bracadabra, bra)**
+
+g(bracadabra) = 5, group(bra) = 5. Same group (= first 2 letters)
+
+We need to compare next 2 letters. How to do that fast?
+Remember next 2 letters are suffixes
+
+bracadabra
+
+We need to ignore first 2 letters. acadabra, find its group. group(acadabra) = 3
+
+bra
+
+We need to ignore first 2 letters. a, find its group. group(a) = 1
+
+Then Compare(bracadabra, bra), bra < bracadabra 
+
+How to get the acadabra efficiently?
+
+index(bracadabra) = 1
+
+index( racadabra) = 2
+
+index( acadabra) = 3 (1 + h = 2)
+
+index( cadabra) = 4 .. and so on
+
+Then group[idx + h] is h shift from group[idx]
+
+|suffix(2)|index|group|..........|suffix(4)|index|group|..........|suffix(8)|index|group|
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|---:|
+| # | 11 | 0 |..........| # | 11 | 0 |..........| # | 11 | 0 |
+
+
+| a | 10 | 1 |
+| abracadabra | 0 | 2| 
+|abra|7|2|
+|acadabra|3|3|
+|adabra|5|4|
+|bracadabra|1|5|
+|bra|8|5|
+|cadabra|4|6|
+|dabra|6|7|
+|racadabra|2|8|
+|ra|9|8|
