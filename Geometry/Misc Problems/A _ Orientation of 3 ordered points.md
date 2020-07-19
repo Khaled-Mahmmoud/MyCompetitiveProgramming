@@ -6,7 +6,7 @@ Orientation of an ordered triplet of points in the plane can be
 2) counterclockwise
 3) colinear
 
-The following [diagram shows](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/orientations.png) different possible orientations of (a, b, c)
+The following [diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/orientations.png) shows different possible orientations of (a, b, c)
 
 If orientation of (p1, p2, p3) is collinear, then orientation of (p3, p2, p1) is also collinear.
     
