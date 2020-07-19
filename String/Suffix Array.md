@@ -25,7 +25,7 @@ Let S = abracadabra (length = 11)
 2- Sort based on string (alphabetically)
 3- The new indices ordering is called **suffix array**
 
-|suffixes|suffix array|
+|Suffixes|Suffix Array|
 |---|---|
 | (0) abracadabra | (11) #|
 | (1) bracadabra  | (10) a|
