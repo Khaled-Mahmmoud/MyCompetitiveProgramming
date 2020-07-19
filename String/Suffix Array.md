@@ -4,7 +4,7 @@ Prefix and Suffix of a string
 
 let the string is abbab
 
-| Prefixes | Suffixes|7
+| Prefixes | Suffixes|
 |---|---|
 |#|abbab|
 |a|bbab|
@@ -26,6 +26,7 @@ Let S = abracadabra (length = 11)
 3- The new indices ordering is called **suffix array**
 
 |suffixes|suffix array|
+|---|---|
 | (0) abracadabra | (11) #|
 | (1) bracadabra  | (10) a|
 | (2) racadabra | (7) abra|
