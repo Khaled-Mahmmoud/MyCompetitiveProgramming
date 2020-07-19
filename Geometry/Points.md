@@ -18,6 +18,6 @@ theta = tan^-1 (y/x);
 
 **Rotatet**
 
-x_  = cos(theta) -sin(theta) * x
+x_  = cos(theta) - sin(theta) * x
 
 y_  = sin(theta) - cos(theta) * y
