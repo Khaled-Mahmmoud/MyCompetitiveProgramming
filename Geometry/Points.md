@@ -14,10 +14,10 @@ y = r * sin(theta);
  
 r = sqrt(x^2  + y^2);
 
-O = tan^-1 (y/x);
+theta = tan^-1 (y/x);
 
 **Rotatet**
 
-x_  = cos(O) -sin(O) * x
+x_  = cos(theta) -sin(theta) * x
 
-y_  = sin(O) - cos(O) * y
+y_  = sin(theta) - cos(theta) * y
