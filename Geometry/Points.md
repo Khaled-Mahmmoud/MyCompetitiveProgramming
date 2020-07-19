@@ -24,10 +24,10 @@ y_  = sin(theta) - cos(theta) * y
 
 Two vectors are perpendicular if and only if their angle is a right angle
 
-A . B = |A| |B| cos(O) = x1*x2 + y1*y2
+A . B = |A| |B| cos(theta) = x1*x2 + y1*y2
 
 if A and B are orthogonal, then the angle between them is 90  A.B = 0
 
 if they are codirectional, then the angle between them is 0   A.B = |A| |B|
 
-if (O)  > 90 then A.B <0  and if(O) < 90 then A.B > 0 if (O) = 90 the A.B = 0
+if (theta)  > 90 then A.B <0  and if(theta) < 90 then A.B > 0 if (theta) = 90 the A.B = 0
