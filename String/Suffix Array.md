@@ -97,3 +97,13 @@ They are suffixes of ONE string, not random strings. How to use this fact to bui
 Algorithms based on Suffix tree
 
 O(N) algorithms (e.g. [SA-IS algorithm](https://sites.google.com/site/indy256/algo_cpp/suffix_array_lcp))
+
+**Incremental Sortings**
+
+Assume suffixes are sorted based on the first 2
+letters
+◼ Can we sort it efficiently based on 4 letters?
+◼ Then, sort it based on 8 letters?
+◼ Then sort it based on 16 letters?
+◼ And so on?
+◼ This O(logn) steps * ordering first h letters
