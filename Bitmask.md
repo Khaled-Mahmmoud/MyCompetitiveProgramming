@@ -296,18 +296,15 @@ X & 7 == 1 		is interpreted as 	X & (7 == 1)	        --> (X & 7) == 1
 
 Gray Code :  is a binary numeral system where two successive values differ in only one bit
 
-
-If we built the list incrementally including from N=2 we got
-
-|Binary|        Gray Code |decimal|
+|Binary|Gray Code|decimal|
 |:---|:---:|---:|
-|0000	|	0000|	0|
-|0001	|	0001|	1|
-|0010	|	0011|	2|
-|0011	|	0010|	3|
-|0100	|	0110|	4|
-|0101	|	0111|	5|
-|0110	|	0101|	6|
+|0000|0000|0|
+|0001|0001|1|
+|0010|0011|2|
+|0011|0010|3|
+|0100|0110|4|
+|0101|0111|5|
+|0110|0101|6|
 
 
 By observation, in gray code, every bit is Xor of its bit and last one
