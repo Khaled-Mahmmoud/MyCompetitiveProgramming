@@ -75,6 +75,7 @@ int main()
   
     return 0; 
 } 
+```
 
 ### check if point m lies on segment pq
 
