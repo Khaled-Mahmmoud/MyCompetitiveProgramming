@@ -38,14 +38,14 @@ vector<int>getprefix(string pat)
 {
     int m=pat.size();
     vector<int>prefix(m);
-    for(int i=1,k=0;i<m;i++)
+    for(int i=1,len=0;i<m;i++)
     {
-        while(k>0&&pat[i]!=pat[k])
-            k=prefix[k-1];
-        if(pat[i]==pat[k])
-            prefix[i]=++k;
+        while(len>0&&pat[i]!=pat[len])
+            len=prefix[k-1];
+        if(pat[i]==pat[len])
+            prefix[i]=++len;
         else
-            prefix[i]=k;
+            prefix[i]=len;
     }
     return prefix;
 }
@@ -144,14 +144,14 @@ vector<int>getprefix(string pat)
 {
     int m=pat.size();
     vector<int>prefix(m);
-    for(int i=1,k=0;i<m;i++)
+    for(int i=1,len=0;i<m;i++)
     {
-        while(k>0&&pat[i]!=pat[k])
-            k=prefix[k-1];
-        if(pat[i]==pat[k])
-            prefix[i]=++k;
+        while(len>0&&pat[i]!=pat[len])
+            len=prefix[k-1];
+        if(pat[i]==pat[len])
+            prefix[i]=++len;
         else
-            prefix[i]=k;
+            prefix[i]=len;
     }
     return prefix;
 }
