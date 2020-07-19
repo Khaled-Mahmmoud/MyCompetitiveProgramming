@@ -33,7 +33,7 @@ vector<int>getprefix(string pat)
     for(int i=1,len=0;i<m;i++)
     {
         while(len>0&&pat[i]!=pat[len])
-            len=prefix[k-1];
+            len=prefix[len-1];
         if(pat[i]==pat[len])
             prefix[i]=++len;
         else
