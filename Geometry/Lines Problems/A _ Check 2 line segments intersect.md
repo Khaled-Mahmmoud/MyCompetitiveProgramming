@@ -18,6 +18,7 @@ Two segments (p1,q1) and (p2,q2) intersect if and only if one of the following t
 
 [Examples](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/linesegments%20special%20case.png)
 
+
 ```cpp
 struct Point 
 { 
@@ -76,6 +77,7 @@ int main()
     return 0; 
 } 
 ```
+Time complexity : O(1)
 
 ### check if point m lies on segment pq
 
