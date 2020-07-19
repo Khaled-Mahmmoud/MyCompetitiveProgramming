@@ -212,21 +212,20 @@ Observe: At h = 8, every suffix has a different group. We can stop processing.
 
 
 ```cpp
-const int MAXLENGTH = 5000;
-
+const int MAX = 5000;
 sring str;
-int suf[MAXLENGTH + 1];//the sorted array of suffix indices
-int group[MAXLENGTH + 1];//In ith iteration: what is the group of the suffix index
-int sorGroup[MAXLENGTH + 1];//temp array to build grouping of ith iteration
+int suf[MAX + 1];
+int group[MAX + 1];
+int sorGroup[MAX + 1];
 
-struct comp//compare to suffixes on the first 2h chars
+struct comp
 {
   int h;
   comp(int h): h(h) {}
 
   bool operator()(int i, int j) 
   {
-    if (group[i] != group[j])     // previous h-groups are different
+    if (group[i] != group[j])     
     return group[i] < group[j];
     return group[i + h] < group[j + h];
   }
@@ -234,29 +233,27 @@ struct comp//compare to suffixes on the first 2h chars
 
 void print_suffix(int suf_pos, int n)
 {
-  for (int j = suf_pos; j < n - 1; ++j)  // n-1 is string length NOT n
+  for (int j = suf_pos; j < n - 1; ++j)  
     cout << str[j];
 }
 
 void buildSuffixArray() 
 {
   int n = str.size() + 1;
-  //Initially assume that the group index is the ASCII
   for (n = 0; n - 1 < 0 || str[n - 1]; n++)
-  suf[n] = n, group[n] = str[n];//code of the first char in the suffix
+  suf[n] = n, group[n] = str[n];
 
-  sort(suf, suf + n, comp(0));//sort the array the suf on the first char only
+  sort(suf, suf + n, comp(0));
   sorGroup[0] = sorGroup[n - 1] = 0;
 
-  //loop until the number of groups=number of suffixes
   for (int h = 1; sorGroup[n - 1] != n - 1; h <<= 1)
   {
-    sort(suf, suf + n, comp(h));  //sort the array using the first 2h chars
+    sort(suf, suf + n, comp(h));  
 
-    for (int i = 1; i < n; i++)//compute the 2h group data given h group data
+    for (int i = 1; i < n; i++)
     sorGroup[i] = sorGroup[i - 1] + comp(h)(suf[i - 1], suf[i]);
 
-    for (int i = 0; i < n; i++)//copy the computed groups to the group array
+    for (int i = 0; i < n; i++)
     group[suf[i]] = sorGroup[i];
 
 
