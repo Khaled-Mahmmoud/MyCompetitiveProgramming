@@ -188,3 +188,84 @@ Then group[idx + h] is h shift from group[idx]
 Observe: Sorted suffix and its group never go upper. Either same position or lower.
 
 Observe: At h = 8, every suffix has a different group. We can stop processing.
+
+
+**Initialization**
+
+◼ At 1st iteration (h = 1), we need to sort on first letter
+
+◼ Then we should depend on ascii letter
+
+◼ Create length+1 suffixes
+
+◼ Assign group of suffix = ascii of first letter
+
+◼ Sort in O(nlogn)
+
+◼ Process for h = {1, 2, 4, 8, 16…}
+
+◼ Sort 2h letters based on h letters => O(nlogn)
+
+◼ Comparing now is 2 checkings on the group index only
+
+◼ Order: O(logn) * O(nlogn)
+
+
+```cpp
+const int MAXLENGTH = 5000;
+
+char str[MAXLENGTH + 1];      //the string we are building its suffix array
+int suf[MAXLENGTH + 1];//the sorted array of suffix indices
+int group[MAXLENGTH + 1];//In ith iteration: what is the group of the suffix index
+int sorGroup[MAXLENGTH + 1];//temp array to build grouping of ith iteration
+
+struct comp//compare to suffixes on the first 2h chars
+{
+  int h;
+  comp(int h)
+  : h(h) {
+  }
+
+  bool operator()(int i, int j) {
+    if (group[i] != group[j])     // previous h-groups are different
+    return group[i] < group[j];
+    return group[i + h] < group[j + h];
+  }
+};
+
+void print_suffix(int suf_pos, int n) {
+  for (int j = suf_pos; j < n - 1; ++j)  // n-1 is string length NOT n
+    cout << str[j];
+}
+
+void buildSuffixArray() {
+  int n;  //number of suffixes = 1+strlen(str)
+  //Initially assume that the group index is the ASCII
+  for (n = 0; n - 1 < 0 || str[n - 1]; n++)
+  suf[n] = n, group[n] = str[n];//code of the first char in the suffix
+
+  sort(suf, suf + n, comp(0));//sort the array the suf on the first char only
+  sorGroup[0] = sorGroup[n - 1] = 0;
+
+  //loop until the number of groups=number of suffixes
+  for (int h = 1; sorGroup[n - 1] != n - 1; h <<= 1) {
+    sort(suf, suf + n, comp(h));  //sort the array using the first 2h chars
+
+    for (int i = 1; i < n; i++)//compute the 2h group data given h group data
+    sorGroup[i] = sorGroup[i - 1] + comp(h)(suf[i - 1], suf[i]);
+
+    for (int i = 0; i < n; i++)//copy the computed groups to the group array
+    group[suf[i]] = sorGroup[i];
+
+
+    if (true) {  // For print
+      for (int i = 0; i < n; i++) {
+        print_suffix(suf[i], n);
+
+        cout << "\t" << suf[i] << "\n";
+      }
+      cout << "\n";
+    }
+  }
+}
+```
