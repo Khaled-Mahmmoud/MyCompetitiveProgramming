@@ -51,7 +51,7 @@ string, it can be used in several string
 processing tasks such as queries on all
 available substrings or pattern search
 
-**Brute Force Approach**
+### Brute Force Approach
 
 1) Generate the suffixes
 2) Sort them
@@ -83,3 +83,17 @@ void buildSuffixArray(string str)
     cout << suffixes[i] << "\t" << suffix_array[suffixes[i]] << "\n";
 }
 ```
+
+### Faster approaches
+
+**Main observation**
+
+They are suffixes of ONE string, not random strings. How to use this fact to build efficient solutions?
+
+**O(N(logn)^2) solution**
+
+**O(Nlogn) solution improvement**
+
+Algorithms based on Suffix tree
+
+O(N) algorithms (e.g. [SA-IS algorithm](https://sites.google.com/site/indy256/algo_cpp/suffix_array_lcp))
