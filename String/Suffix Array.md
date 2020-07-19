@@ -173,16 +173,14 @@ Then group[idx + h] is h shift from group[idx]
 |suffix(2)|index|group|..........|suffix(4)|index|group|..........|suffix(8)|index|group|
 |:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|---:|
 | # | 11 | 0 |..........| # | 11 | 0 |..........| # | 11 | 0 |
-
-
-| a | 10 | 1 |
-| abracadabra | 0 | 2| 
-|abra|7|2|
-|acadabra|3|3|
-|adabra|5|4|
-|bracadabra|1|5|
-|bra|8|5|
-|cadabra|4|6|
-|dabra|6|7|
-|racadabra|2|8|
-|ra|9|8|
+| a | 10 | 1 |..........|a|10|1|..........|a|10|1|
+| abracadabra | 0 | 2|..........|abracadabra|0|2|..........|abra|7|2|
+|abra|7|2|..........|abra|7|2|..........|abracadabra|0|3|
+|acadabra|3|3|..........|acadabra|3|3|..........|acadabra|3|4|
+|adabra|5|4|..........|adabra|5|4|..........|adabra|5|5|
+|bracadabra|1|5|..........|bra|8|5|..........|bra|8|6|
+|bra|8|5|..........|bracadabra|1|6|..........|bracadabra|1|7|
+|cadabra|4|6|..........|cadabra|4|7|..........|cadabra|4|8|
+|dabra|6|7|..........|dabra|6|8|..........|dabra|6|9|
+|racadabra|2|8|..........|ra|9|9|..........|ra|9|10|
+|ra|9|8|..........|racadabra|2|10|..........|racadabra|2|11|
