@@ -1,37 +1,43 @@
-/*
+# A Orientation of 3 ordered points
+
 Orientation of an ordered triplet of points in the plane can be
-1) counterclockwise
-2) clockwise
+
+1) clockwise
+2) counterclockwise
 3) colinear
 
 If orientation of (p1, p2, p3) is collinear, then orientation of (p3, p2, p1) is also collinear.
-If orientation of (p1, p2, p3) is clockwise, then orientation of (p3, p2, p1) is counterclockwise and vice versa is also true
+    
+If orientation of (p1, p2, p3) is clockwise, then orientation of (p3, p2, p1) is counterclockwise and vice versa 
 
 Given three points p1, p2 and p3, find orientation of (p1, p2, p3).
-Example:
 
 Input:   p1 = {0, 0}, p2 = {4, 4}, p3 = {1, 2}
+
 Output:  CounterClockWise
 
 Input:   p1 = {0, 0}, p2 = {4, 4}, p3 = {1, 1}
+
 Output:  Colinear
 
-How to compute Orientation?
+**How to compute Orientation?**
+
 The idea is to use slope.  
 
 Slope of line segment (p1, p2): σ = (y2 - y1)/(x2 - x1)
+    
 Slope of line segment (p2, p3): τ = (y3 - y2)/(x3 - x2)
 
 If  σ > τ, the orientation is clockwise (right turn)
 
 Using above values of σ and τ, we can conclude that, 
-the orientation depends on sign of  below expression: 
+the orientation depends on sign of below expression: 
 
 (y2 - y1)*(x3 - x2) - (y3 - y2)*(x2 - x1)
 
 Above expression is negative when σ < τ, i.e.,  counterclockwise
-*/
 
+```cpp
 struct Point 
 { 
     int x, y; 
@@ -53,3 +59,4 @@ int main()
     orientation(p1, p2, p3); 
     return 0; 
 } 
+```
