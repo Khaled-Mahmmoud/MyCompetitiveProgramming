@@ -112,5 +112,24 @@ Assume suffixes are sorted based on the first 2 letters
 
 ◼ This O(logn) steps * ordering first **h letters**
 
-| kaf |ieija|ieaji|ieas|
-|:---|:---:|:---:|---:|
+**Sorted suffixes on first 2 letters**
+|suffix(2)|index|group|
+|:---|:---:|---:|
+| # | 11 | 0 |
+| a | 10 | 1 |
+| abracadabra | 0 | 2| 
+|abra|7|2|
+|acadabra|3|3|
+|adabra|5|4|
+|bracadabra|1|5|
+|bra|8|5|
+|cadabra|4|6|
+|dabra|6|7|
+|racadabra|2|8|
+|ra|9|8|
+
+A **group** is a new array that group equal
+same length prefixes. E.g. index 0 and 7 starts with ab. So both assigned same group = 2
+
+This can be trivially computed. Your group = previous group + 1 if
+different prefixes at first h=2 letters. E.g. group(acadabra) = group(abra) + (ac!= ab) = 2 + 1 = 3
