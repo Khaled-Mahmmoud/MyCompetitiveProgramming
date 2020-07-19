@@ -247,7 +247,6 @@ void buildSuffixArray()
     }
 
   sort(suf, suf + n, comp(0));
-  sorGroup[0] = sorGroup[n - 1] = 0;
 
   for (int h = 1; sorGroup[n - 1] != n - 1; h <<= 1)
   {
