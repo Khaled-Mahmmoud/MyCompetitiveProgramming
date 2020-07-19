@@ -184,5 +184,7 @@ Then group[idx + h] is h shift from group[idx]
 |dabra|6|7|..........|dabra|6|8|..........|dabra|6|9|
 |racadabra|2|8|..........|ra|9|9|..........|ra|9|10|
 |ra|9|8|..........|racadabra|2|10|..........|racadabra|2|11|
+
 Observe: Sorted suffix and its group never go upper. Either same position or lower.
+
 Observe: At h = 8, every suffix has a different group. We can stop processing.
