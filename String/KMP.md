@@ -30,14 +30,14 @@ vector<int>getprefix(string pat)
 {
     int m=pat.size();
     vector<int>prefix(m);
-    for(int i=1,k=0;i<m;i++)
+    for(int i=1,len=0;i<m;i++)
     {
-        while(k>0&&pat[i]!=pat[k])
-            k=prefix[k-1];
-        if(pat[i]==pat[k])
-            prefix[i]=++k;
+        while(len>0&&pat[i]!=pat[len])
+            len=prefix[k-1];
+        if(pat[i]==pat[len])
+            prefix[i]=++len;
         else
-            prefix[i]=k;
+            prefix[i]=len;
     }
     return prefix;
 }
@@ -45,15 +45,15 @@ void kmp(string str,string pat)
 {
     int n=str.size(),m=pat.size();
     vector<int>prefix=getprefix(pat);
-    for(int i=0,k=0;i<n;i++)
+    for(int i=0,len=0;i<n;i++)
     {
-        while(k>0&&str[i]!=pat[k])
-            k=prefix[k-1];
-        if(str[i]==pat[k])k++;
-        if(k==m)
+        while(len>0&&str[i]!=pat[len])
+            len=prefix[len-1];
+        if(str[i]==pat[len])len++;
+        if(len==m)
         {
             cout<<i-m+1<<' ';
-            k=prefix[k-1];
+            len=prefix[len-1];
         }
     }
 }
