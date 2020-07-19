@@ -1,6 +1,6 @@
 # Suffix Array
 
-Prefix and Suffix of a string
+**Prefix and Suffix of a string**
 
 let the string is abbab
 
@@ -21,9 +21,11 @@ Remember: 6 suffixes of different lengths
 
 Let S = abracadabra (length = 11)
 
-1- Generate 12 suffixes
-2- Sort based on string (alphabetically)
-3- The new indices ordering is called **suffix array**
+**Generate suffixes and sort**
+
+1) Generate 12 suffixes
+2) Sort based on string (alphabetically)
+3) The new indices ordering is called **suffix array**
 
 |Suffixes|Suffix Array|
 |---|---|
