@@ -53,7 +53,15 @@ void kmp(string str,string pat)
         if(len==m)
         {
             cout<<i-m+1<<' ';
-            len=prefix[len-1];
+            len=prefix[len-1]; // for override
+            // len = 0    for not override
+            /*
+            
+            Example : ababakaba
+            len = prefix[len-1]  --> 0 2 6
+            len = 0  --> 0 6
+            
+            */
         }
     }
 }
