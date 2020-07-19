@@ -1,6 +1,12 @@
-# KMP (Knuth-Morris-Pratt)
+# KMP 
 
-**KMP is Pattern Matching**
+KMP Algorithm is one of the most popular **patterns matching** algorithms and it stands for **Knuth Morris Pratt**
+
+KMP algorithm was the first linear time complexity algorithm for string matching.
+
+KMP algorithm is one of the string matching algorithms used to find a Pattern in a Text.
+
+This algorithm compares character by character from left to right, But whenever a mismatch occurs, it uses a preprocessed table called **Prefix Table** to skip characters comparison while matching.
 
 Given a string S, pattern P, find all P in S , S = abababcabaddd, P = aba
 
