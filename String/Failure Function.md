@@ -2,6 +2,8 @@
 
 failure function expresses longest proper prefix that is a suffix.
 
+Sometimes prefix table is also known as LPS Table. Here LPS stands for **Longest proper Prefix which is also Suffix**
+
 Given String P of length m, define an array F(m).
 
 Let t = P[0..i].
