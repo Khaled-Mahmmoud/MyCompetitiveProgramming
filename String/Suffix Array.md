@@ -111,3 +111,6 @@ Assume suffixes are sorted based on the first 2 letters
 ◼ And so on?
 
 ◼ This O(logn) steps * ordering first **h letters**
+
+| kaf |ieija|ieaji|ieas|
+|:---|:---:|:---:|---:|
