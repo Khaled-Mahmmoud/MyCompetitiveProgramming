@@ -43,3 +43,43 @@ Let S = abracadabra (length = 11)
 | (11) #  | (2) racadabra |
 
 int suffix_array[] = {11,10, 7, 0, 3, 5, 8, 1, 4, 6, 9, 2}
+
+
+A **suffix array** is a sorted array of all suffixes
+of a string. Given that it considers every position in the
+string, it can be used in several string
+processing tasks such as queries on all
+available substrings or pattern search
+
+**Brute Force Approach**
+
+1) Generate the suffixes
+2) Sort them
+3) nlogn for sorting algorithm
+4) comparing 2 strings is O(n)
+5) total O(n^2 logn) = So slow
+
+**Code**
+
+1) Generate N+1 suffixes put in vector
+2) Create map from suffix to its original index
+3) Sort the vector
+4) Now we can use map to know idx of i'th sorted suffix
+
+```cpp
+void buildSuffixArray(string str) 
+{
+  map<string, int> suffix_array;
+  vector<string> suffixes;
+
+  for (int i = 0; i <= str.size(); i++)
+  {
+    string suffix = str.substr(i, str.size() - i);
+    suffix_array[suffix] = i;
+    suffixes.push_back(suffix);
+  }
+  sort(suffixes.begin(), suffixes.end());
+  for (int i = 0; i <= suffixes.size(); i++)
+    cout << suffixes[i] << "\t" << suffix_array[suffixes[i]] << "\n";
+}
+```
