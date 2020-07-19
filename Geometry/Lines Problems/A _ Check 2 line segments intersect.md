@@ -1,4 +1,4 @@
-# check if two given line segments intersect?
+# Check if two given line segments intersect?
 
 Two segments (p1,q1) and (p2,q2) intersect if and only if one of the following two conditions is verified
 
