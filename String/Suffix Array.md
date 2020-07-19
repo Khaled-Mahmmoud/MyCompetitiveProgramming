@@ -258,16 +258,13 @@ void buildSuffixArray()
     for (int i = 0; i < n; i++)
     group[suf[i]] = sorGroup[i];
 
-
-    if (true)
-    {  
+ 
       for (int i = 0; i < n; i++) 
       {
         print_suffix(suf[i], n);
         cout << "\t" << suf[i] << "\n";
       }
       cout << "\n";
-    }
   }
 }
 ```
