@@ -216,7 +216,6 @@ const int MAX = 5000;
 sring str;
 int suf[MAX + 1];
 int group[MAX + 1];
-int sorGroup[MAX + 1];
 
 struct comp
 {
@@ -240,8 +239,11 @@ void print_suffix(int suf_pos, int n)
 void buildSuffixArray() 
 {
   int n = str.size() + 1;
-  for (n = 0; n - 1 < 0 || str[n - 1]; n++)
-  suf[n] = n, group[n] = str[n];
+  for (int i = 0; i < n; ++i) 
+  {
+        suf[i] = i;
+        group[i] = str[i];
+    }
 
   sort(suf, suf + n, comp(0));
   sorGroup[0] = sorGroup[n - 1] = 0;
