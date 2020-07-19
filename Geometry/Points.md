@@ -32,7 +32,7 @@ if they are codirectional, then the angle between them is 0   A.B = |A| |B|
 
 if (theta)  > 90 then A.B <0  and if(theta) < 90 then A.B > 0 if (theta) = 90 the A.B = 0
 
-convert degree to radian
+**convert degree to radian**
 ```cpp
 double toRadian(double degree) 
 {
