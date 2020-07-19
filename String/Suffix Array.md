@@ -216,6 +216,7 @@ const int MAX = 5000;
 sring str;
 int suf[MAX + 1];
 int group[MAX + 1];
+int sorGroup[MAX + 1];
 
 struct comp
 {
