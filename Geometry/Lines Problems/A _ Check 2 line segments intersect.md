@@ -75,3 +75,7 @@ int main()
   
     return 0; 
 } 
+
+### check if point m lies on segment pq
+
+m lies on segment pq if orientation(p,q,m) is colinear and `m.x <= max(p.x,q.x) && m.x >= min(p.x,q.x) && m.y <= max(p.y,q.y) && m.y >= min(p.y,q.y)`
