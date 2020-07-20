@@ -247,19 +247,16 @@ void buildSuffixArray()
   n = str.size() + 1;
   for (int i = 0; i < n; ++i)
   {
-        suf[i] = i;
-        group[i] = str[i];
-    }
-
+    suf[i] = i;
+    group[i] = str[i];
+  }
   sort(suf, suf + n, comp(0));
 
   for (int h = 1; sorGroup[n - 1] != n - 1; h <<= 1)
   {
     sort(suf, suf + n, comp(h));
-
     for (int i = 1; i < n; i++)
     sorGroup[i] = sorGroup[i - 1] + comp(h)(suf[i - 1], suf[i]);
-
     for (int i = 0; i < n; i++)
     group[suf[i]] = sorGroup[i];
   }
@@ -311,7 +308,6 @@ void buildSuffixArray()
     {
       groupStart[++numGroup] = j;
       int cur = sorGroup[i];
-
       while (cur != -1)
       {
         suf[j++] = cur;
