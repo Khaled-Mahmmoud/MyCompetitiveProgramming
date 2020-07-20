@@ -281,12 +281,12 @@ int n;
 
 void print_suffix()
 {
-  for (int i = 0; i < n; i++) 
+   for (int i = 0; i < n; i++) 
    {
-     for (int j = suf[i]; j < n - 1; j++)  
-         cout << str[j];
-     cout << "\t" << suf[i] << "\n";
-   }
+       for (int j = s[i]; j < n - 1; ++j)  
+           cout << str[j];
+       cout << "\t" << suf[i] << "\t" << group[suf[i]] << "\t" << groupStart[group[suf[i]]] << "\n";
+    }
 }
 void buildSuffixArray() 
 {
@@ -316,14 +316,6 @@ void buildSuffixArray()
 
   for (int h = 1; sorGroup[n - 1] != n - 1; h <<= 1) 
   {
-    if (true) {  
-      for (int i = 0; i < n; i++) 
-      {
-        print_suffix(suf[i]);
-        cout << "\t" << suf[i] << "\t" << group[suf[i]] << "\t" << groupStart[group[suf[i]]] << "\n";
-      }
-      cout << "\n";
-    }
     for (int i = 0; i < n; i++)
     {  
       int j = suf[i] - h;
