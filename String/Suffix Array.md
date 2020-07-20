@@ -279,8 +279,7 @@ int main()
 [Suffix array algorithms(nlogn)](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/String/String_Processing_Suffix_Array_2_O(nlogn).pdf)
 
 ```cpp
-#include <bits/stdc++.h>
-using namespace std;
+
 const int MAX = 5000;
 string str;
 int suf[MAX + 1];
