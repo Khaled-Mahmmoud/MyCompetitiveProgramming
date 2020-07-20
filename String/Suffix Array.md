@@ -290,10 +290,10 @@ void print_suffix()
 }
 void buildSuffixArray() 
 {
-  n = 0;
+  n = str.size() + 1;
   memset(sorGroup, -1, (sizeof sorGroup[0]) * 128);
-  for (n = 0; n - 1 < 0 || str[n - 1]; n++)
-    newSuf[n] = sorGroup[str[n]], sorGroup[str[n]] = n;
+  for (int i=0;i<n;i++)
+    newSuf[i] = sorGroup[str[i]], sorGroup[str[i]] = i;
   int numGroup = -1, j = 0;
   for (int i = 0; i < 128; i++) 
   {
