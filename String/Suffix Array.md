@@ -214,9 +214,9 @@ Observe: At h = 8, every suffix has a different group. We can stop processing.
 ```cpp
 const int MAX = 5000;
 string str;
-int suf[MAX + 1];
-int group[MAX + 1];
-int sorGroup[MAX + 1];
+int suf[MAX];
+int group[MAX];
+int sorGroup[MAX];
 int n;
 
 struct comp
@@ -279,11 +279,11 @@ int main()
 
 const int MAX = 5000;
 string str;
-int suf[MAX + 1];
-int group[MAX + 1];
-int sorGroup[MAX + 1];
-int groupStart[MAX + 1];
-int newSuf[MAX + 1];
+int suf[MAX];
+int group[MAX];
+int sorGroup[MAX];
+int groupStart[MAX];
+int newSuf[MAX];
 int n;
 
 void print_suffix()
