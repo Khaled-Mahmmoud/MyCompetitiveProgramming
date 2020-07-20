@@ -213,7 +213,7 @@ Observe: At h = 8, every suffix has a different group. We can stop processing.
 
 ```cpp
 const int MAX = 5000;
-sring str;
+string str;
 int suf[MAX + 1];
 int group[MAX + 1];
 int sorGroup[MAX + 1];
@@ -271,7 +271,7 @@ void buildSuffixArray()
 
 ```cpp
 const int MAX = 5000;
-sring str;
+string str;
 int suf[MAX + 1];
 int group[MAX + 1];
 int sorGroup[MAX + 1];
