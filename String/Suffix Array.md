@@ -268,3 +268,34 @@ void buildSuffixArray()
 ### O(nlogn) solution
 
 [Suffix array algorithms(nlogn)](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/String/String_Processing_Suffix_Array_2_O(nlogn).pdf)
+
+```cpp
+const int MAX = 5000;
+sring str;
+int suf[MAX + 1];
+int group[MAX + 1];
+int sorGroup[MAX + 1];
+
+struct comp
+{
+  int h;
+  comp(int h): h(h) {}
+
+  bool operator()(int i, int j) 
+  {
+    if (group[i] != group[j])     
+    return group[i] < group[j];
+    return group[i + h] < group[j + h];
+  }
+};
+
+void print_suffix()
+{
+  for (int i = 0; i < n; i++) 
+   {
+     for (int j = suf[i]; j < n - 1; j++)  
+         cout << str[j];
+     cout << "\t" << suf[i] << "\n";
+   }
+}
+```
