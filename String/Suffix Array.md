@@ -263,6 +263,13 @@ void buildSuffixArray()
     group[suf[i]] = sorGroup[i];
   }
 }
+int main()
+{
+    str = "abracadabra";
+    buildSuffixArray();
+    print_suffix();
+    return 0;
+}
 ```
 
 ### O(nlogn) solution
@@ -270,61 +277,63 @@ void buildSuffixArray()
 [Suffix array algorithms(nlogn)](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/String/String_Processing_Suffix_Array_2_O(nlogn).pdf)
 
 ```cpp
+#include <bits/stdc++.h>
+using namespace std;
 const int MAX = 5000;
 string str;
 int suf[MAX + 1];
 int group[MAX + 1];
 int sorGroup[MAX + 1];
-int groupStart[MAXLENGTH + 1]; 
-int newSuf[MAXLENGTH + 1];  
-int n;  
+int groupStart[MAX + 1];
+int newSuf[MAX + 1];
+int n;
 
 void print_suffix()
 {
-   for (int i = 0; i < n; i++) 
+   for (int i = 0; i < n; i++)
    {
-       for (int j = s[i]; j < n - 1; ++j)  
+       for (int j = suf[i]; j < n - 1; j++)
            cout << str[j];
        cout << "\t" << suf[i] << "\t" << group[suf[i]] << "\t" << groupStart[group[suf[i]]] << "\n";
     }
 }
-void buildSuffixArray() 
+void buildSuffixArray()
 {
   n = str.size() + 1;
   memset(sorGroup, -1, (sizeof sorGroup[0]) * 128);
   for (int i=0;i<n;i++)
     newSuf[i] = sorGroup[str[i]], sorGroup[str[i]] = i;
   int numGroup = -1, j = 0;
-  for (int i = 0; i < 128; i++) 
+  for (int i = 0; i < 128; i++)
   {
-    if (sorGroup[i] != -1) 
+    if (sorGroup[i] != -1)
     {
       groupStart[++numGroup] = j;
-      int cur = sorGroup[i];  
+      int cur = sorGroup[i];
 
       while (cur != -1)
       {
         suf[j++] = cur;
         group[cur] = numGroup;
-        cur = newSuf[cur];  
+        cur = newSuf[cur];
       }
     }
   }
 
-  sorGroup[0] = sorGroup[n - 1] = 0;  
-  newSuf[0] = suf[0];  
+  sorGroup[0] = sorGroup[n - 1] = 0;
+  newSuf[0] = suf[0];
 
-  for (int h = 1; sorGroup[n - 1] != n - 1; h <<= 1) 
+  for (int h = 1; sorGroup[n - 1] != n - 1; h <<= 1)
   {
     for (int i = 0; i < n; i++)
-    {  
+    {
       int j = suf[i] - h;
       if (j < 0)
         continue;
       newSuf[groupStart[group[j]]++] = j;
     }
-    for (int i = 1; i < n; i++) 
-    {  
+    for (int i = 1; i < n; i++)
+    {
       bool newgroup = (group[newSuf[i - 1]] < group[newSuf[i]]) ||
       (group[newSuf[i - 1]] == group[newSuf[i]] && group[newSuf[i - 1] + h] < group[newSuf[i] + h]);
       sorGroup[i] = sorGroup[i - 1] + newgroup;
@@ -332,7 +341,7 @@ void buildSuffixArray()
         groupStart[sorGroup[i]] = i;
     }
     for (int i = 0; i < n; i++)
-    {  
+    {
       suf[i] = newSuf[i];
       group[suf[i]] = sorGroup[i];
     }
