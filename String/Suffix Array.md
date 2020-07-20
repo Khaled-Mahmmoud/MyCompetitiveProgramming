@@ -130,7 +130,7 @@ Assume suffixes are sorted based on the first 2 letters
 |ra|9|8|
 
 A **group** is a new array that group equal
-same length prefixes. E.g. index 0 and 7 starts with ab. So both assigned same group = 2
+same prefixes. E.g. index 0 and 7 starts with ab. So both assigned same group = 2
 
 This can be trivially computed. Your group = previous group + 1 if
 different prefixes at first h=2 letters. E.g. group(acadabra) = group(abra) + (ac!= ab) = 2 + 1 = 3
