@@ -231,10 +231,14 @@ struct comp
   }
 };
 
-void print_suffix(int suf_pos, int n)
+void print_suffix()
 {
-  for (int j = suf_pos; j < n - 1; ++j)  
-    cout << str[j];
+  for (int i = 0; i < n; i++) 
+   {
+     for (int j = suf[i]; j < n - 1; j++)  
+         cout << str[j];
+     cout << "\t" << suf[i] << "\n";
+   }
 }
 
 void buildSuffixArray() 
@@ -257,14 +261,6 @@ void buildSuffixArray()
 
     for (int i = 0; i < n; i++)
     group[suf[i]] = sorGroup[i];
-
- 
-      for (int i = 0; i < n; i++) 
-      {
-        print_suffix(suf[i], n);
-        cout << "\t" << suf[i] << "\n";
-      }
-      cout << "\n";
   }
 }
 ```
