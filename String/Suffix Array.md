@@ -275,6 +275,9 @@ sring str;
 int suf[MAX + 1];
 int group[MAX + 1];
 int sorGroup[MAX + 1];
+int groupStart[MAXLENGTH + 1]; 
+int newSuf[MAXLENGTH + 1];  
+int n;  
 
 struct comp
 {
@@ -297,5 +300,62 @@ void print_suffix()
          cout << str[j];
      cout << "\t" << suf[i] << "\n";
    }
+}
+void buildSuffixArray() 
+{
+  n = 0;
+  memset(sorGroup, -1, (sizeof sorGroup[0]) * 128);
+  for (n = 0; n - 1 < 0 || str[n - 1]; n++)
+    newSuf[n] = sorGroup[str[n]], sorGroup[str[n]] = n;
+  int numGroup = -1, j = 0;
+  for (int i = 0; i < 128; i++) 
+  {
+    if (sorGroup[i] != -1) 
+    {
+      groupStart[++numGroup] = j;
+      int cur = sorGroup[i];  
+
+      while (cur != -1)
+      {
+        suf[j++] = cur;
+        group[cur] = numGroup;
+        cur = newSuf[cur];  
+      }
+    }
+  }
+
+  sorGroup[0] = sorGroup[n - 1] = 0;  
+  newSuf[0] = suf[0];  
+
+  for (int h = 1; sorGroup[n - 1] != n - 1; h <<= 1) 
+  {
+    if (true) {  
+      for (int i = 0; i < n; i++) 
+      {
+        print_suffix(suf[i]);
+        cout << "\t" << suf[i] << "\t" << group[suf[i]] << "\t" << groupStart[group[suf[i]]] << "\n";
+      }
+      cout << "\n";
+    }
+    for (int i = 0; i < n; i++)
+    {  
+      int j = suf[i] - h;
+      if (j < 0)
+        continue;
+      newSuf[groupStart[group[j]]++] = j;
+    }
+    for (int i = 1; i < n; i++) 
+    {  
+      bool newgroup = group[newSuf[i - 1]] < group[newSuf[i]] || (group[newSuf[i - 1]] == group[newSuf[i]] && group[newSuf[i - 1] + h] < group[newSuf[i] + h]);
+      sorGroup[i] = sorGroup[i - 1] + newgroup;
+      if (newgroup)
+        groupStart[sorGroup[i]] = i;
+    }
+    for (int i = 0; i < n; i++)
+    {  
+      suf[i] = newSuf[i];
+      group[suf[i]] = sorGroup[i];
+    }
+  }
 }
 ```
