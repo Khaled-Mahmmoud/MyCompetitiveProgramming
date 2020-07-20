@@ -346,7 +346,8 @@ void buildSuffixArray()
     }
     for (int i = 1; i < n; i++) 
     {  
-      bool newgroup = group[newSuf[i - 1]] < group[newSuf[i]] || (group[newSuf[i - 1]] == group[newSuf[i]] && group[newSuf[i - 1] + h] < group[newSuf[i] + h]);
+      bool newgroup = (group[newSuf[i - 1]] < group[newSuf[i]]) ||
+      (group[newSuf[i - 1]] == group[newSuf[i]] && group[newSuf[i - 1] + h] < group[newSuf[i] + h]);
       sorGroup[i] = sorGroup[i - 1] + newgroup;
       if (newgroup)
         groupStart[sorGroup[i]] = i;
