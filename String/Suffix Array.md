@@ -217,15 +217,16 @@ string str;
 int suf[MAX + 1];
 int group[MAX + 1];
 int sorGroup[MAX + 1];
+int n;
 
 struct comp
 {
   int h;
   comp(int h): h(h) {}
 
-  bool operator()(int i, int j) 
+  bool operator()(int i, int j)
   {
-    if (group[i] != group[j])     
+    if (group[i] != group[j])
     return group[i] < group[j];
     return group[i + h] < group[j + h];
   }
@@ -233,18 +234,18 @@ struct comp
 
 void print_suffix()
 {
-  for (int i = 0; i < n; i++) 
+  for (int i = 0; i < n ; i++)
    {
-     for (int j = suf[i]; j < n - 1; j++)  
+     for (int j = suf[i]; j < n - 1; j++)
          cout << str[j];
      cout << "\t" << suf[i] << "\n";
    }
 }
 
-void buildSuffixArray() 
+void buildSuffixArray()
 {
-  int n = str.size() + 1;
-  for (int i = 0; i < n; ++i) 
+  n = str.size() + 1;
+  for (int i = 0; i < n; ++i)
   {
         suf[i] = i;
         group[i] = str[i];
@@ -254,7 +255,7 @@ void buildSuffixArray()
 
   for (int h = 1; sorGroup[n - 1] != n - 1; h <<= 1)
   {
-    sort(suf, suf + n, comp(h));  
+    sort(suf, suf + n, comp(h));
 
     for (int i = 1; i < n; i++)
     sorGroup[i] = sorGroup[i - 1] + comp(h)(suf[i - 1], suf[i]);
@@ -270,6 +271,7 @@ int main()
     print_suffix();
     return 0;
 }
+
 ```
 
 ### O(nlogn) solution
