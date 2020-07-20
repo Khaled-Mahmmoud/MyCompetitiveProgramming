@@ -279,19 +279,6 @@ int groupStart[MAXLENGTH + 1];
 int newSuf[MAXLENGTH + 1];  
 int n;  
 
-struct comp
-{
-  int h;
-  comp(int h): h(h) {}
-
-  bool operator()(int i, int j) 
-  {
-    if (group[i] != group[j])     
-    return group[i] < group[j];
-    return group[i + h] < group[j + h];
-  }
-};
-
 void print_suffix()
 {
   for (int i = 0; i < n; i++) 
