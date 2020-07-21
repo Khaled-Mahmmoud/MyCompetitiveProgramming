@@ -97,3 +97,5 @@ On taking n common from the above equation, the above equation can be rewritten 
 
 It can be proved as below with the help of Harmonic Progression of the sum of primes
 `( 1/2 + 1/3 + 1/5 + 1/7 + ...... p) = log(log n)`
+
+So `n/2 + n/3 + n/5 + n/7 + ...... p = nlog(logn)`
