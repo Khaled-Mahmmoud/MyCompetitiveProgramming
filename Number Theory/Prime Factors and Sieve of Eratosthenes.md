@@ -102,7 +102,7 @@ So `n/2 + n/3 + n/5 + n/7 + ...... p = nlog(logn)`
 
 ### + more 
 
-log(n!) = Θ(n·log(n))
+Θ(log(n!)) = Θ(n·log(n))
 
 log(n!) = log(1) + log(2) + ... + log(n-1) + log(n)
 
