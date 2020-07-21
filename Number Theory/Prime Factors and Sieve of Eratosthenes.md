@@ -99,3 +99,12 @@ It can be proved as below with the help of Harmonic Progression of the sum of pr
 `( 1/2 + 1/3 + 1/5 + 1/7 + ...... p) = log(log n)`
 
 So `n/2 + n/3 + n/5 + n/7 + ...... p = nlog(logn)`
+
+### + more 
+
+log(n!) = Θ(n·log(n))
+
+log(n!) = log(1) + log(2) + ... + log(n-1) + log(n)
+
+log(1) + log(2) + ... + log(n) <= log(n) + log(n) + ... + log(n) = n*log(n)
+
