@@ -212,6 +212,8 @@ Observe: At h = 8, every suffix has a different group. We can stop processing.
 
 
 ```cpp
+#include <bits/stdc++.h>
+using namespace std;
 int n;
 vector<int> suf, group, tmp;
 int getGroup(int a)
