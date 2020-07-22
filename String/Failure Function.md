@@ -112,6 +112,8 @@ Now for abcdabcdabcd
 
 here abcdabcd (first 2 blocks) = abcdabcd (last 2 blocks)
 
+F[size - 1] = 8
+
 so we can get the block easily len-f[len-1]=12-8=4
 
 if(len%(len-f[len-1])==0)
