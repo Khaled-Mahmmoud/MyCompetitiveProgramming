@@ -347,7 +347,8 @@ Explanation: The substrings are ["a", "ab", "aba", "abab", "b", "ba", "bab"]. Th
 
 LCP[i] = longest common prefixes in suffix array (suffix[i], suffix[i-1])
 
-Time Complexity : O(n)
+[Better Solution](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/String/String_Processing_Suffix_Array_3_LCP-converted.pdf) : Time Complexity : O(n)
+
 
 ```cpp
 vector<int> LCP(string s) 	
