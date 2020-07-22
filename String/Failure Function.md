@@ -175,3 +175,23 @@ int main()
     return 0;
 }
 ```
+
+Given String, count number of suffixes that don’t appear again
+as substring….Or problem reverse Given String, count number of unique prefixes 
+
+we can use above code ,calculate freq and count number of freq[i] = 1
+
+Count # of distinct substring
+
+abc => has a, b, c, ab, bc, abc
+
+aaa => has a, aa, aaa
+
+Think Incrementally: If we know the answer for the first N letters…Could we know for the N+1?
+
+When we add the N+1 character, we have N+1 suffix. We
+need only the unique suffixes of them.
+
+For each prefix P, Count += CountUniquePrefixes( reverse(P) )
+
+ Complexity : O(n^2)
