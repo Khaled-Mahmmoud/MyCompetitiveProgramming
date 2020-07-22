@@ -1,4 +1,6 @@
-[codeforces Problem](https://codeforces.com/contest/205/problem/D)
+# Little Elephant and Cards
+
+[codeforces Problem Link](https://codeforces.com/contest/205/problem/D)
 
 ```cpp
 #include <bits/stdc++.h>
