@@ -345,7 +345,7 @@ Explanation: The substrings are ["a", "ab", "aba", "abab", "b", "ba", "bab"]. Th
 
 ### Longest Common Prefixes 
 
-LCP[i] = longest common prefixes (suffix[i], suffix[i-1])
+LCP[i] = longest common prefixes in suffix array (suffix[i], suffix[i-1])
 
 Time Complexity : O(n)
 
