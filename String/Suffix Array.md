@@ -51,7 +51,7 @@ string, it can be used in several string
 processing tasks such as queries on all
 available substrings or pattern search
 
-### Brute Force Approach
+**Brute Force Approach**
 
 1) Generate the suffixes
 2) Sort them
@@ -65,6 +65,8 @@ available substrings or pattern search
 2) Create map from suffix to its original index
 3) Sort the vector
 4) Now we can use map to know idx of i'th sorted suffix
+
+### O(n^2 logn)
 
 ```cpp
 void buildSuffixArray(string str) 
@@ -210,6 +212,7 @@ Observe: At h = 8, every suffix has a different group. We can stop processing.
 
 ◼ Order: O(logn) * O(nlogn)
 
+### O(n log^2 n)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -264,7 +267,7 @@ int main()
 
 ```
 
-### O(nlogn) solution
+### O(nlogn) 
 
 ```cpp
 #include <bits/stdc++.h>
@@ -340,7 +343,7 @@ Explanation: The substrings are ["a", "ab", "aba", "abab", "b", "ba", "bab"]. Th
 
 1 <= s.length <= 4 * 10^5
 
-#  longest common prefixes
+### Longest Common Prefixes 
 
 LCP[i] = longest common prefixes (suffix[i], suffix[i-1])
 
