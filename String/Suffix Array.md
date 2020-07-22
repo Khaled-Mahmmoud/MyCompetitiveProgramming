@@ -212,60 +212,53 @@ Observe: At h = 8, every suffix has a different group. We can stop processing.
 
 
 ```cpp
-const int MAX = 5000;
-string str;
-int suf[MAX];
-int group[MAX];
-int sorGroup[MAX];
 int n;
-
+vector<int> suf, group, tmp;
+int getGroup(int a)
+{
+	return (a < group.size() ? group[a] : 0);
+}
 struct comp
 {
-  int h;
-  comp(int h): h(h) {}
-
-  bool operator()(int i, int j)
-  {
-    if (group[i] != group[j])
-    return group[i] < group[j];
-    return group[i + h] < group[j + h];
-  }
+	int len;
+	comp(int len) :len(len) {}
+	bool operator ()(const int& a, const int& b) const
+	{
+		if (group[a] != group[b])
+			return group[a] < group[b];
+		return getGroup(a + len) < getGroup(b + len);
+	}
 };
 
-void print_suffix()
+// n*log(n)
+void suffixArray(string s)
 {
-  for (int i = 0; i < n ; i++)
-   {
-     for (int j = suf[i]; j < n - 1; j++)
-         cout << str[j];
-     cout << "\t" << suf[i] << "\n";
-   }
-}
-
-void buildSuffixArray()
-{
-  n = str.size() + 1;
-  for (int i = 0; i < n; ++i)
-  {
-    suf[i] = i;
-    group[i] = str[i];
-  }
-  sort(suf, suf + n, comp(0));
-
-  for (int h = 1; sorGroup[n - 1] != n - 1; h <<= 1)
-  {
-    sort(suf, suf + n, comp(h));
-    for (int i = 1; i < n; i++)
-    sorGroup[i] = sorGroup[i - 1] + comp(h)(suf[i - 1], suf[i]);
-    for (int i = 0; i < n; i++)
-    group[suf[i]] = sorGroup[i];
-  }
+	n = s.size() + 1;
+	vector<int> sorGroup(n);
+	for (int i = 0; i < n; i++)
+	{
+		suf.push_back(i);
+		tmp.push_back(s[i]);
+	}
+	sort(tmp.begin(),tmp.end());
+	for (int i = 0; i < n; i++)
+		group.push_back(lower_bound(tmp.begin(),tmp.end(), s[i]) - tmp.begin());
+	for (int len = 1; sorGroup.back() != n - 1; len <<= 1)
+	{
+		sort(suf.begin(),suf.end(), comp(len));
+		for (int i = 1; i < n; i++)
+			sorGroup[i] = sorGroup[i - 1] + comp(len)(suf[i - 1], suf[i]);
+		for (int i = 0; i < n; i++)
+			group[suf[i]] = sorGroup[i];
+	}
 }
 int main()
 {
-    str = "abracadabra";
-    buildSuffixArray();
-    print_suffix();
+    string str = "abracadabra";
+    suffixArray(str);
+    for(int i=0;i<n;i++){
+        for(int j=suf[i];j<n-1;j++)
+        cout<<str[j];cout<<endl;}
     return 0;
 }
 
@@ -276,71 +269,68 @@ int main()
 [Suffix array algorithms(nlogn)](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/String/String_Processing_Suffix_Array_2_O(nlogn).pdf)
 
 ```cpp
-
-const int MAX = 5000;
-string str;
-int suf[MAX];
-int group[MAX];
-int sorGroup[MAX];
-int groupStart[MAX];
-int newSuf[MAX];
+#include <bits/stdc++.h>
+using namespace std;
 int n;
-
-void print_suffix()
+vector<int> suf, group, tmp;
+int getGroup(int a)
 {
-   for (int i = 0; i < n; i++)
-   {
-       for (int j = suf[i]; j < n - 1; j++)
-           cout << str[j];
-       cout << "\t" << suf[i] << "\t" << group[suf[i]] << "\t" << groupStart[group[suf[i]]] << "\n";
-    }
+	return (a < group.size() ? group[a] : 0);
 }
-void buildSuffixArray()
+void radix_sort(int k)
 {
-  n = str.size() + 1;
-  memset(sorGroup, -1, (sizeof sorGroup[0]) * 128);
-  for (int i=0;i<n;i++)
-    newSuf[i] = sorGroup[str[i]], sorGroup[str[i]] = i;
-  int numGroup = -1, j = 0;
-  for (int i = 0; i < 128; i++)
-  {
-    if (sorGroup[i] != -1)
-    {
-      groupStart[++numGroup] = j;
-      int cur = sorGroup[i];
-      while (cur != -1)
-      {
-        suf[j++] = cur;
-        group[cur] = numGroup;
-        cur = newSuf[cur];
-      }
-    }
-  }
-  sorGroup[0] = sorGroup[n - 1] = 0;
-  newSuf[0] = suf[0];
-  for (int h = 1; sorGroup[n - 1] != n - 1; h <<= 1)
-  {
-    for (int i = 0; i < n; i++)
-    {
-      int j = suf[i] - h;
-      if (j < 0)
-        continue;
-      newSuf[groupStart[group[j]]++] = j;
-    }
-    for (int i = 1; i < n; i++)
-    {
-      bool newgroup = (group[newSuf[i - 1]] < group[newSuf[i]]) ||
-      (group[newSuf[i - 1]] == group[newSuf[i]] && group[newSuf[i - 1] + h] < group[newSuf[i] + h]);
-      sorGroup[i] = sorGroup[i - 1] + newgroup;
-      if (newgroup)
-        groupStart[sorGroup[i]] = i;
-    }
-    for (int i = 0; i < n; i++)
-    {
-      suf[i] = newSuf[i];
-      group[suf[i]] = sorGroup[i];
-    }
-  }
+	vector<int> frq(n);
+	for (auto& it : suf) frq[getGroup(it + k)]++;
+	for (int i = 1; i < n; i++)
+		frq[i] += frq[i - 1];
+	for (int i = n - 1; i >= 0; i--)
+		tmp[--frq[getGroup(suf[i] + k)]] = suf[i];
+	suf = tmp;
+}
+struct comp
+{
+	int len;
+	comp(int len) :len(len) {}
+	bool operator ()(const int& a, const int& b) const
+	{
+		if (group[a] != group[b])
+			return group[a] < group[b];
+		return getGroup(a + len) < getGroup(b + len);
+	}
+};
+
+// n*log(n)
+void suffixArray(string s)
+{
+	n = s.size() + 1;
+	vector<int> sorGroup(n);
+	for (int i = 0; i < n; i++)
+	{
+		suf.push_back(i);
+		tmp.push_back(s[i]);
+	}
+	sort(tmp.begin(),tmp.end());
+	for (int i = 0; i < n; i++)
+		group.push_back(lower_bound(tmp.begin(),tmp.end(), s[i]) - tmp.begin());
+	for (int len = 1; sorGroup.back() != n - 1; len <<= 1)
+	{
+		// sort(suf.begin(),suf.end(), comp(len));
+		radix_sort(len);
+		radix_sort(0);
+		for (int i = 1; i < n; i++)
+			sorGroup[i] = sorGroup[i - 1] + comp(len)(suf[i - 1], suf[i]);
+		for (int i = 0; i < n; i++)
+			group[suf[i]] = sorGroup[i];
+	}
+}
+int main()
+{
+    string str = "abracadabra";
+    suffixArray(str);
+    for(int i=0;i<n;i++){
+        for(int j=suf[i];j<n-1;j++)
+        cout<<str[j];cout<<endl;}
+    return 0;
 }
 ```
 
