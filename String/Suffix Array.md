@@ -231,8 +231,6 @@ struct comp
 		return getGroup(a + len) < getGroup(b + len);
 	}
 };
-
-// n*log(n)
 void suffixArray(string s)
 {
 	n = s.size() + 1;
