@@ -108,7 +108,9 @@ As we match longest proper prefix NOT longest prefix
 
 That is if string is 10 times concatenated , the first 9 blocks = the last 9 blocks
 
-here abcdabcd = abcdabcd ( 8 letters)
+Now for abcdabcdabcd
+
+here abcdabcd (first 2 blocks) = abcdabcd (last 2 blocks)
 
 so we can get the block easily len-f[len-1]=12-8=4
 
