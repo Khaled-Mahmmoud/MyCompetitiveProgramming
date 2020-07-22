@@ -268,8 +268,6 @@ int main()
 
 ### O(nlogn) solution
 
-[Suffix array algorithms(nlogn)](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/String/String_Processing_Suffix_Array_2_O(nlogn).pdf)
-
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -300,8 +298,6 @@ struct comp
 		return getGroup(a + len) < getGroup(b + len);
 	}
 };
-
-// n*log(n)
 void suffixArray(string s)
 {
 	n = s.size() + 1;
