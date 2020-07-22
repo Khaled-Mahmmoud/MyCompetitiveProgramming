@@ -175,13 +175,16 @@ int main()
     return 0;
 }
 ```
+*************************************************************************************************************************
 
 Given String, count number of suffixes that don’t appear again
 as substring….Or problem reverse Given String, count number of unique prefixes 
 
 we can use above code ,calculate freq and count number of freq[i] = 1
 
-Count # of distinct substring
+*************************************************************************************************************************
+
+Count number of distinct substring
 
 abc => has a, b, c, ab, bc, abc
 
