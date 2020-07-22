@@ -339,3 +339,31 @@ Output: "bab"
 Explanation: The substrings are ["a", "ab", "aba", "abab", "b", "ba", "bab"]. The lexicographically maximum substring is "bab".
 
 1 <= s.length <= 4 * 10^5
+
+#  longest common prefixes
+
+LCP[i] = longest common prefixes (suffix[i], suffix[i-1])
+
+Time Complexity : O(n)
+
+```cpp
+vector<int> LCP(string s) 	
+{	
+	suffixArray(s);	
+	vector<int> rank(n), lcp(n);	
+	for (int i = 0; i < n; i++)	
+		rank[suf[i]] = i;	
+	int c = 0;	
+	for (int i = 0; i < n; i++)	
+	{	
+		if (rank[i]) 	
+		{	
+			int j = suf[rank[i] - 1];	
+			while (s[i + c] == s[j + c])c++;	
+		}	
+		lcp[rank[i]] = c;	
+		if(c)c--;	
+	}	
+	return lcp;	
+}
+```
