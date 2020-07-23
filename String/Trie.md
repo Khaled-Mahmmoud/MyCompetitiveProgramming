@@ -166,9 +166,7 @@ private:
         if(root==nullptr)
             return ;
         for(int i=0;i<N;i++)
-        {
             destroy(root->edge[i]);
-        }
         delete root;
     }
 };
