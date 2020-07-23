@@ -107,12 +107,12 @@ public:
         root = new node();
         sz=d=0;
     }
-    void insert(const char* s)
+    void insert(string str)
     {
         node* cur = root;
-        for(int i=0;s[i];i++)
+        for(int i=0;str[i];i++)
         {
-            cur->cnt++;int c=s[i]-'a';
+            cur->cnt++;int c=str[i]-'a';
             if(cur->edge[c]==nullptr)
             {
                 cur->edge[c]=new node();
@@ -123,12 +123,12 @@ public:
         cur->cnt++;
         d+=(++cur->en==1);
     }
-    void remove(const char* s)
+    void remove(string str)
     {
         node* cur = root;
-        for(int i=0;s[i];i++)
+        for(int i=0;str[i];i++)
         {
-            cur->cnt--;int c=s[i]-'a';
+            cur->cnt--;int c=str[i]-'a';
             node* nx = cur->edge[c];
             if(nx->cnt==1)
             {
@@ -142,12 +142,12 @@ public:
         cur->cnt--;
         cur->en--;
     }
-    int search(const char* str)const
+    int search(string str)
     {
         node* cur = reach(str);
         return cur != nullptr ? cur->en: 0;
     }
-    int getprefix(const char* str)const
+    int getprefix(string str)
     {
         node* cur = reach(str);
         return cur != nullptr ? cur->cnt: 0;
@@ -157,12 +157,12 @@ public:
         return d;
     }
 private:
-    node* reach(const char* s)const
+    node* reach(string str)
     {
         node* cur = root;
-        for(int i=0;s[i];i++)
+        for(int i=0;str[i];i++)
         {
-            int c=s[i]-'a';
+            int c=str[i]-'a';
             node* nx = cur->edge[c];
             if(nx==nullptr)
                 return nullptr;
