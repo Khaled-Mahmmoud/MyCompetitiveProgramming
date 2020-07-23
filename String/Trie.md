@@ -88,25 +88,10 @@ struct node
 };
 class trie
 {
-    node* root;
+    node* root = new node();
     int sz=0,d=0;
 
 public:
-    trie()
-    {
-        root=new node();
-        sz=d=0;
-    }
-    ~trie()
-    {
-        destroy(root);
-    }
-    void clear()
-    {
-        destroy(root);
-        root = new node();
-        sz=d=0;
-    }
     void insert(string str)
     {
         node* cur = root;
@@ -155,6 +140,12 @@ public:
     int getdistinct() const
     {
         return d;
+    }
+    void clear()
+    {
+        destroy(root);
+        root = new node();
+        sz=d=0;
     }
 private:
     node* reach(string str)
