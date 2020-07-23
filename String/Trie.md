@@ -97,7 +97,8 @@ public:
         node* cur = root;
         for(int i=0;str[i];i++)
         {
-            cur->cnt++;int c=str[i]-'a';
+            cur->cnt++;
+            int c=str[i]-'a';
             if(cur->edge[c]==nullptr)
             {
                 cur->edge[c]=new node();
@@ -113,7 +114,8 @@ public:
         node* cur = root;
         for(int i=0;str[i];i++)
         {
-            cur->cnt--;int c=str[i]-'a';
+            cur->cnt--;
+            int c=str[i]-'a';
             node* nx = cur->edge[c];
             if(nx->cnt==1)
             {
