@@ -16,7 +16,7 @@ Adjacency matrix provides constant time access (O(1) ) to determine if there is 
 
 The adjacency matrix of [the following graph](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/adjacency%20matrix%20undirected%20graph.jpg) is:
 
-# : 1 2 3 4
+$ : 1 2 3 4
 
 1 : 0 1 0 1
 
@@ -28,7 +28,7 @@ The adjacency matrix of [the following graph](https://github.com/Khaled-Mahmmoud
 
 The adjacency matrix of [the following graph](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/adjacency%20matrix%20directed%20graph.jpg) is:
 
-# : 1 2 3 4
+$ : 1 2 3 4
 
 1 : 0 1 0 0
 
@@ -99,3 +99,4 @@ int main()
 }
 
 ```
+
