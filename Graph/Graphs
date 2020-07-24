@@ -47,7 +47,7 @@ Types of graph
          Loop                  A
   B ←-- A --→                 ↑↓ Parallel edges
         ↑ ← ↓                  B
-Adjacent vertices(A) = {B,A}
+Adjacent vertices(A) = {A,B}
 
 if graph doesn't contain any loop or parallel graph it's called Simple graph otherwise it's called not simple graph
 
