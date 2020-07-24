@@ -102,7 +102,7 @@ int main()
 
 # Graph Traversal
 
-### Depth-First Search
+### Depth-First Search (DFS)
 
 The DFS algorithm is a recursive algorithm that uses the idea of backtracking. It involves exhaustive searches of all the nodes by going ahead, if possible, else by backtracking.
 
@@ -135,4 +135,90 @@ int main()
     return 0;
 }
 ```
-Time complexity : O(V+E)  the number of nodes and edges in the graph
+The time complexity of DFS is O(V + E), where V is the number of nodes and E is the number of edges.
+
+**Applications**
+
+How to find connected components using DFS?
+
+A graph is said to be disconnected if it is not connected, i.e. if two nodes exist in the graph such that there is no edge in between those nodes. In an undirected graph, a connected component is a set of vertices in a graph that are linked to each other by paths.
+
+Consider the example given in [the diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/connected%20components.jpg). Graph G is a disconnected graph and has the following 3 connected components.
+
+First connected component is 1 -> 2 -> 3 as they are linked to each other
+
+Second connected component 4 -> 5
+
+Third connected component is vertex 6
+
+In DFS, if we start from a start node it will mark all the nodes connected to the start node as visited. Therefore, if we choose any node in a connected component and run DFS on that node it will mark the whole connected component as visited.
+
+```cpp
+for(int i = 1;i <= nodes;++i) 
+{
+    if(visited[i] == false)     
+    {
+         dfs(i);
+         counter-connected-components++;
+    }
+}
+```
+
+
+### Breadth-First Search (BFS)
+
+There are many ways to traverse graphs. BFS is the most commonly used approach.
+
+BFS is a traversing algorithm where you should start traversing from a selected node (source or starting node) and traverse the graph layerwise thus exploring the neighbour nodes (nodes which are directly connected to source node). You must then move towards the next-level neighbour nodes.
+
+As the name BFS suggests, you are required to traverse the graph breadthwise as follows:
+
+1) First move horizontally and visit all the nodes of the current layer
+2) Move to the next layer
+
+consider the following [diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/Breadth%20first%20search.jpg).
+
+**Traversing child nodes**
+
+A graph can contain cycles, which may bring you to the same node again while traversing the graph. To avoid processing of same node again, use a boolean array which marks the node after it is processed. While visiting the nodes in the layer of a graph, store them in a manner such that you can traverse the corresponding child nodes in a similar order.
+
+In the earlier diagram, start traversing from 0 and visit its child nodes 1, 2, and 3. Store them in the order in which they are visited. This will allow you to visit the child nodes of 1 first (i.e. 4 and 5), then of 2 (i.e. 6 and 7), and then of 3 (i.e. 7) etc.
+
+To make this process easy, use a queue to store the node and mark it as 'visited' until all its neighbours (vertices that are directly connected to it) are marked. The queue follows the First In First Out (FIFO) queuing method, and therefore, the neigbors of the node will be visited in the order in which they were inserted in the node i.e. the node that was inserted first will be visited first, and so on.
+
+```cpp
+vector<vector<int>>adj;
+vector<bool>vis;
+void bfs(int u) 
+{
+    queue<int> q;
+    q.push(u);
+    while (!q.empty()) 
+    {
+        u = q.front();
+        vis[u] = true;
+        q.pop();
+        for(int z:adj[u]) 
+          if(!vis[z]) 
+             q.push(z);
+    }
+}
+int main()
+{
+    int n,m;cin>>n>>m;
+    adj.resize(n+1);
+    vis.resize(n+1);
+    while(m--)
+    {
+        int u,v;
+        cin>>u>>v;
+        adj[u].push_back(v);
+        adj[v].push_back(u);
+    }
+    for(int i=1;i<=n;i++)
+      if(!vis[i])bfs(i);
+    return 0;
+}
+```
+The time complexity of BFS is O(V + E), where V is the number of nodes and E is the number of edges.
+
