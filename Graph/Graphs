@@ -69,6 +69,7 @@ A cycle in a directed graph is a path of at least 2 length such that the first v
                   B
 
 A cycle in a undirected graph is a path of at least 3 length such that the first vertax on the path is the same as last one
+
                  A __ B
                  \   /
                    C
@@ -81,7 +82,11 @@ A cycle in a undirected graph is a path of at least 3 length such that the first
                    A --→ B
                          ↓
                          C
+                         
             **************
+            
+             Simple Path : A path that repeats vertex, except that the first and last may be the same vertex.
+             
              Path : A , B , F is simple path
              Path : A , B , C , D , E , B , F is not simple path (repetition)
              Path : B , C , D , E , B is simple path
