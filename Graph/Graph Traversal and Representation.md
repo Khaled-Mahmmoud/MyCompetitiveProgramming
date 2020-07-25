@@ -223,3 +223,46 @@ int main()
 ```
 The time complexity of BFS is O(V + E), where V is the number of nodes and E is the number of edges.
 
+**Applications**
+
+1. How to determine the level of each node in the given tree?
+
+by [diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/level%20of%20node.jpg), As you know in BFS, you traverse level wise. You can also use BFS to determine the level of each node.
+
+```cpp
+vector<vector<int>>adj;
+vector<bool>vis;
+void bfs(int u,int level)
+{
+    queue<pair<int,int>>q;
+    q.push({u,level});
+    while(!q.empty())
+    {
+        u = q.front().first;
+        level = q.front().second;
+        vis[u] = true;
+        cout<<u<<' '<<level<<endl;
+        q.pop();
+        for(int z:adj[u])
+          if(!vis[z])
+            q.push({z,level+1});
+    }
+}
+int main()
+{
+    int n;
+    cin>>n;
+    adj.resize(n+1);
+    vis.resize(n+1);
+    n--;
+    while(n--)
+    {
+        int a,b;
+        cin>>a>>b;
+        adj[a].push_back(b);
+        adj[b].push_back(a);
+    }
+    bfs(1,0);
+    return 0;
+}
+```
