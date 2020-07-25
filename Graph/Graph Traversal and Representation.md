@@ -223,7 +223,7 @@ The time complexity of BFS is O(V + E), where V is the number of nodes and E is 
 
 **Applications**
 
-1. How to determine the level of each node in the given tree?
+**1. How to determine the level of each node in the given tree?**
 
 by [diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/level%20of%20node.jpg), As you know in BFS, you traverse level wise. You can also use BFS to determine the level of each node.
 
