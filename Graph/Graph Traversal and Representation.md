@@ -28,6 +28,7 @@ $ : 1 2 3 4
 
 The adjacency matrix of [the following graph](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/adjacency%20matrix%20directed%20graph.jpg) is:
 
+
 $ : 1 2 3 4
 
 1 : 0 1 0 0
