@@ -18,7 +18,7 @@ for(int i = 1;i <= nodes;++i)
     if(visited[i] == false)     
     {
          dfs(i);
-         counter-connected-components++;
+         cnt_component++;
     }
 }
 ```
