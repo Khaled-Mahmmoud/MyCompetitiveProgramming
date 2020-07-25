@@ -197,9 +197,9 @@ void bfs(int u)
         u = q.front();
         vis[u] = true;
         q.pop();
-        for(int z:adj[u]) 
-          if(!vis[z]) 
-             q.push(z);
+        for(int v:adj[u]) 
+          if(!vis[v]) 
+             q.push(v);
     }
 }
 int main()
@@ -241,9 +241,9 @@ void bfs(int u,int level)
         vis[u] = true;
         cout<<u<<' '<<level<<endl;
         q.pop();
-        for(int z:adj[u])
-          if(!vis[z])
-            q.push({z,level+1});
+        for(int v:adj[u])
+          if(!vis[v])
+            q.push({v,level+1});
     }
 }
 int main()
@@ -255,10 +255,10 @@ int main()
     n--;
     while(n--)
     {
-        int a,b;
-        cin>>a>>b;
-        adj[a].push_back(b);
-        adj[b].push_back(a);
+        int u,v;
+        cin>>u>>v;
+        adj[u].push_back(v);
+        adj[v].push_back(u);
     }
     bfs(1,0);
     return 0;
