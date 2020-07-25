@@ -138,33 +138,6 @@ int main()
 ```
 The time complexity of DFS is O(V + E), where V is the number of nodes and E is the number of edges.
 
-**Applications**
-
-How to find connected components using DFS?
-
-A graph is said to be disconnected if it is not connected, i.e. if two nodes exist in the graph such that there is no edge in between those nodes. In an undirected graph, a connected component is a set of vertices in a graph that are linked to each other by paths.
-
-Consider the example given in [the diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/connected%20components.jpg). Graph G is a disconnected graph and has the following 3 connected components.
-
-First connected component is 1 -> 2 -> 3 as they are linked to each other
-
-Second connected component 4 -> 5
-
-Third connected component is vertex 6
-
-In DFS, if we start from a start node it will mark all the nodes connected to the start node as visited. Therefore, if we choose any node in a connected component and run DFS on that node it will mark the whole connected component as visited.
-
-```cpp
-for(int i = 1;i <= nodes;++i) 
-{
-    if(visited[i] == false)     
-    {
-         dfs(i);
-         counter-connected-components++;
-    }
-}
-```
-
 
 ### Breadth-First Search (BFS)
 
@@ -220,47 +193,3 @@ int main()
 }
 ```
 The time complexity of BFS is O(V + E), where V is the number of nodes and E is the number of edges.
-
-**Applications**
-
-**1. How to determine the level of each node in the given tree?**
-
-by [diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/level%20of%20node.jpg), As you know in BFS, you traverse level wise. You can also use BFS to determine the level of each node.
-
-```cpp
-vector<vector<int>>adj;
-vector<bool>vis;
-void bfs(int u,int level)
-{
-    queue<pair<int,int>>q;
-    q.push({u,level});
-    while(!q.empty())
-    {
-        u = q.front().first;
-        level = q.front().second;
-        vis[u] = true;
-        cout<<u<<' '<<level<<endl;
-        q.pop();
-        for(int v:adj[u])
-          if(!vis[v])
-            q.push({v,level+1});
-    }
-}
-int main()
-{
-    int n;
-    cin>>n;
-    adj.resize(n+1);
-    vis.resize(n+1);
-    n--;
-    while(n--)
-    {
-        int u,v;
-        cin>>u>>v;
-        adj[u].push_back(v);
-        adj[v].push_back(u);
-    }
-    bfs(1,0);
-    return 0;
-}
-```
