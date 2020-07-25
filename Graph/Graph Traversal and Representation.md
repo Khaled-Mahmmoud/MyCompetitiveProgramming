@@ -177,8 +177,6 @@ As the name BFS suggests, you are required to traverse the graph breadthwise as 
 1) First move horizontally and visit all the nodes of the current layer
 2) Move to the next layer
 
-consider the following [diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/Breadth%20first%20search.jpg).
-
 **Traversing child nodes**
 
 A graph can contain cycles, which may bring you to the same node again while traversing the graph. To avoid processing of same node again, use a boolean array which marks the node after it is processed. While visiting the nodes in the layer of a graph, store them in a manner such that you can traverse the corresponding child nodes in a similar order.
