@@ -15,7 +15,7 @@ Output : For each query of the third type, print the answer.
 
 SAMPLE INPUT 
 
-10
+6
 
 3
 
@@ -25,17 +25,9 @@ SAMPLE INPUT
 
 2 4
 
-2 8
-
-2 3
-
-1 10
-
-1 3
+1 5
 
 3
-
-2 1
 
 SAMPLE OUTPUT 
 
