@@ -217,8 +217,8 @@ X & (X-1) 	= 011010000000		first bit from right removed
 X & ~(X-1) 	= 011010010000 
                 & 100101110000 = 000000010000	value of 1<<SmaintestBitIdx
 
+to count number of sets in mask
 ```cpp
-// to count number of sets in mask
 int countNumBits2(int mask) 
 {	
          // O(bits Count)	
@@ -233,6 +233,12 @@ int countNumBits2(int mask)
 }
 ```
 
+to check whether N is power of 2 or not
+```cpp
+    long long n;
+    cin>>n;
+    cout<<(n&(n-1)?"NO":"YES");
+```
 // to get [least significant bit](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Bitmask/most%20significant%20bit.jpg) that is set
 ```cpp
 template<class Int>	
