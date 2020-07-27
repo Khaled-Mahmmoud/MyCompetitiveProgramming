@@ -45,7 +45,7 @@ vector<int>getprefix(string pat)
         if(pat[i]==pat[len])
             prefix[i]=++len;
         else
-            prefix[i]=len;
+            prefix[i]=len;  // OR prefix[i] = 0;
     }
     return prefix;
 }
