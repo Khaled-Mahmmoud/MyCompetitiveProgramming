@@ -11,7 +11,7 @@ Asterix chose the substring t so as to please all his companions. Besides, from 
 You know the string s. Find the substring t or determine that such substring does not exist and all that's been written above is just a nice legend.
 
 Input :
-You are given the string s whose length can vary from 1 to 106 (inclusive), consisting of small Latin letters.
+You are given the string s whose length can vary from 1 to 10^6 (inclusive), consisting of small Latin letters.
 
 Output :
 Print the string t. If a suitable t string does not exist, then print "Just a legend" without the quotes.
