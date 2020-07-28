@@ -8,7 +8,7 @@ Your task is to write the program, that given two compressed string t and s find
 
 Note that the way to represent the string in compressed form may not be unique. For example string "aaaa" may be given as [(4,a)] , [(3,a),(1,a)] , [(2,a),(2,a)]
 
-Input
+**Input**
 
 The first line of the input contains two integers n and m (1 ≤ n, m ≤ 200 000) — the number of blocks in the strings t and s, respectively.
 
@@ -16,7 +16,9 @@ The second line contains the descriptions of n parts of string t in the format "
 
 The second line contains the descriptions of m parts of string s in the format " li- ci" (1 ≤ li ≤ 1 000 000) — the length of the i-th part and the corresponding lowercase English letter.
 
-Output : Print a single integer — the number of occurrences of s in t.
+**Output**
+
+Print a single integer — the number of occurrences of s in t.
 
 ```cpp
 vector<int> getprefix(string pat)
