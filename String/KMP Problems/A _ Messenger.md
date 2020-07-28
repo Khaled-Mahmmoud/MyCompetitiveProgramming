@@ -56,3 +56,74 @@ output
 
 0
 
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int n,m;
+pair<long long,char> str[200100],pat[200100];
+int prefix[200100];
+void getprefix()
+{
+    for(int i=1,len=0;i<m;i++)
+    {
+        while(len>0&&pat[i]!=pat[len])
+            len = prefix[len-1];
+        if(pat[i]==pat[len])
+            prefix[i] = ++len;
+        else
+            prefix[i] = len;
+    }
+}
+int kmp()
+{
+    getprefix();int ans = 0;
+    for(int i=0,len=0;i<n;i++)
+    {
+        bool flag = ((len==0||len==m-1)&&str[i].second==pat[len].second&&pat[len].first<str[i].first);
+        while(len>0&&str[i]!=pat[len]&&!flag)
+            len = prefix[len-1];
+        if(str[i]==pat[len]||flag)
+            len++;
+        if(len==m)
+        {
+            len = prefix[len-2];
+            i--;
+            ans++;
+        }
+    }
+    return ans;
+}
+int main()
+{
+    int a,b;
+    scanf("%d%d",&a,&b);
+    int x;char c;
+    for(int i=0;i<a;i++)
+    {
+        scanf("%d-%c",&x,&c);
+        if(!n||c!=str[n-1].second)
+            str[n++] = {x,c};
+        else
+            str[n-1].first += x;
+    }
+    for(int i=0;i<b;i++)
+    {
+        scanf("%d-%c",&x,&c);
+        if(!m||c!=pat[m-1].second)
+            pat[m++] = {x,c};
+        else
+            pat[m-1].first += x;
+    }
+    if(m!=1)
+        printf("%d",kmp());
+    else
+    {
+        long long ans = 0;
+        for(int i=0;i<n;i++)
+            if(str[i].second==pat[0].second)
+                ans += max(0ll,str[i].first-pat[0].first+1);
+        printf("%lld",ans);
+    }
+    return 0;
+}
+```
