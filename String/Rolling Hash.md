@@ -8,13 +8,13 @@
 #define mod 2123456789ll
 #define base 53ll
 using namespace std;
-ll power(ll num,ll p)
+ll power(ll a,ll b)
 {
     ll ans = 1;
     num %= mod;
-    while(p)
+    while(b)
     {
-        if(p&1)
+        if(b&1)
             ans = (ans * a) % mod;
         b >>= 1;
         a = (a * a) % mod;
@@ -63,3 +63,4 @@ void pattern_search(string str,string pat)
     }
 }
 ```
+Time Complexity : O(n log m) where n is length of string str, m is length of string pat
