@@ -62,10 +62,4 @@ void pattern_search(string str,string pat)
             cout<< (i+1) - pat.size() + 1 <<'\n';
     }
 }
-int main()
-{
-    
-    return 0;
-}
-
 ```
