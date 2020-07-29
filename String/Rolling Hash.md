@@ -1,6 +1,6 @@
 # Rolling Hash
 
-[Tutorial](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/String/String_Processing_Suffix_Array_3_LCP-converted.pdf)
+[Tutorial](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/String/Rolling_Hash.pdf)
 
 ```cpp
 #include <bits/stdc++.h>
