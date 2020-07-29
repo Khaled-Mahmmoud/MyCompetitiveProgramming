@@ -1,8 +1,10 @@
-/*
-10^8 = (10^2)^4 = (10^4)^2
-10^9 = 10 * 10^8
-*/
+# Power 
 
+10^8 = (10^2)^4 = (10^4)^2
+
+10^9 = 10 * 10^8
+
+```coo
 int power(int x, unsigned int y) 
 { 
     if (y == 0) 
@@ -12,12 +14,12 @@ int power(int x, unsigned int y)
     else
         return x * power(x, y / 2) * power(x, y / 2); 
 } 
-
-/*
+```
 Time Complexity: O(n)
+    
 Above function can be optimized to O(logn) by calculating power(x, y/2) only once and storing it
-*/
 
+```cpp
 int power(int x, unsigned int y) 
 { 
     int temp; 
@@ -29,13 +31,13 @@ int power(int x, unsigned int y)
     else
         return temp*temp;
 } 
-/*
+```
 Time Complexity of optimized solution: O(logn)
 The recursive solutions are generally not preferred as they require space on
 call stack and they involve function call overhead
-*/
 
-// this is the best solution
+Here the Best Solution
+```cpp
 template<class T>
 T power(T a, T b, T mod)
 {
@@ -51,5 +53,5 @@ T power(T a, T b, T mod)
 
     return ans;
 }
-
-// time complexity : O(log(n))
+```
+Time complexity : O(log(n))
