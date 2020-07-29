@@ -27,7 +27,7 @@ ll remove(ll code,ll idx,ll val)
 }
 ll insert(ll code,ll idx,ll val)
 {
-    return (code - (val * power(base,idx))%mod + mod) % mod;
+    return (code + (val * power(base,idx))%mod + mod) % mod;
 }
 ll shiftleft(ll code)
 {
