@@ -15,9 +15,9 @@ int power(int x, unsigned int y)
         return x * power(x, y / 2) * power(x, y / 2); 
 } 
 ```
-Time Complexity: O(n)
+Time Complexity: O(y)
     
-Above function can be optimized to O(logn) by calculating power(x, y/2) only once and storing it
+Above function can be optimized to O(log y) by calculating power(x, y/2) only once and storing it
 
 ```cpp
 int power(int x, unsigned int y) 
@@ -32,7 +32,7 @@ int power(int x, unsigned int y)
         return temp*temp;
 } 
 ```
-Time Complexity of optimized solution: O(logn)
+Time Complexity of optimized solution: O(log y)
 The recursive solutions are generally not preferred as they require space on
 call stack and they involve function call overhead
 
@@ -54,4 +54,4 @@ T power(T a, T b, T mod)
     return ans;
 }
 ```
-Time complexity : O(log(n))
+Time complexity : O(log(y))
