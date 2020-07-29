@@ -1,6 +1,6 @@
 # Input and output
 
-1) Input and output is sometimes a bottleneck in the program.
+1) Input and output is sometimes a bottleneck in the program. So you should use `scanf` and `printf` or
 The following lines at the beginning of the code make input and output more efficient
 ```cpp
 ios_base::sync_with_stdio(0);    // do not use scanf or printf with this, it will gives you many wrong answer
