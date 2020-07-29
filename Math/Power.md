@@ -4,7 +4,7 @@
 
 10^9 = 10 * 10^8
 
-```coo
+```cpp
 int power(int x, unsigned int y) 
 { 
     if (y == 0) 
