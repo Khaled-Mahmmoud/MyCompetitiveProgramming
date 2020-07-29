@@ -49,20 +49,17 @@ void pattern_search(string str,string pat)
     ll patcode = rolling_hash(pat);
     
     ll subcode = 0;
-    string sub_str;
     
     for(int i=0;i<str.size();i++)
     {
         if(i-n>=0)
-        {
             subcode = remove(subcode,n-1,str[i-n]);
-            sub_str.erase(sub_str.end()-1);
-        }
+            
         subcode = shiftleft(subcode);
         subcode = insert(subcode,0,str[i]);
-        sub_str.insert(sub_str.begin(),str[i]);
+        
         if(patcode == subcode)
-            cout<<subcode<<'\t'<<sub_str<<'\n';
+            cout<< (i+1) - pat.size() + 1 <<'\n';
     }
 }
 int main()
