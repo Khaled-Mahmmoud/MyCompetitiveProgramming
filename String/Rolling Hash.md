@@ -33,7 +33,7 @@ ll shiftleft(ll code)
 {
     return (base * code) % mod;
 }
-ll hash(string pat)
+ll rolling_hash(string pat)
 {
     ll patcode = 0;
     for(int i=0;i<pat.size();i++)
@@ -46,7 +46,7 @@ ll hash(string pat)
 void pattern_search(string str,string pat)
 {
     int n = pat.size();
-    ll patcode = hash(pat);
+    ll patcode = rolling_hash(pat);
     
     ll subcode = 0;
     string sub_str;
