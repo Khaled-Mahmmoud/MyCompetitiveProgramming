@@ -1,12 +1,18 @@
-/*
-Given a set of non-negative integers, and a value sum, determine if there is a subset of the given set with sum equal to given sum
-Input:  set[] = {3, 34, 4, 12, 5, 2}, sum = 9
-Output:  True  //There is a subset (4, 5) with sum 9.
-*/
+# Subset Sum Problem
 
-// << Memoization Method – Top Down Dynamic Programming >>
-// Complexity : O(n.sum)
+Given a set of non-negative integers, and a value sum, determine if there is a subset of the given set with sum equal to given sum.
+    
+Input:  set[] = {3, 34, 4, 12, 5, 2}, sum = 9.
+    
+Output:  True.  
 
+There is a subset (4, 5) with sum 9.
+    
+<< Memoization Method – Top Down Dynamic Programming >>
+    
+Complexity : O(n.sum)
+
+```cpp
 vector<int>v;int dp[1000][1000];
 bool subset(int n,int sum)
 {
@@ -29,10 +35,12 @@ int main()
         cout<<"NO";
     return 0;
 }
+```
+<< Tabulation Method – Bottom Up Dynamic Programming >>
+    
+Complexity : O(n.sum)
 
-// << Tabulation Method – Bottom Up Dynamic Programming >>
-// Complexity : O(n.sum)
-
+```cpp
 vector<int>v;
 bool subset(int set[], int n, int sum) 
 { 
@@ -62,3 +70,4 @@ int main()
         cout<<"NO";
     return 0;
 }
+```
