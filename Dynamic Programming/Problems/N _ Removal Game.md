@@ -31,9 +31,11 @@ long long get(int i,int j)
 }
 int main()
 {
-    int n;cin>>n;
+    int n;
+    cin>>n;
     v.resize(n);
-    for(int i=0;i<n;i++)cin>>v[i];
+    for(int i=0;i<n;i++)
+    cin>>v[i];
     cout<<get(0,n-1)<<'\n';
     return 0;
 }
