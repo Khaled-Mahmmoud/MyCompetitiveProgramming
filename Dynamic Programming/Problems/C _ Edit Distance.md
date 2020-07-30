@@ -54,15 +54,16 @@ m , n <= 1000
 **Memoization Method – Top Down Dynamic Programming**
 ```cpp
 int dp[1009][1009];
-int ed(string s1,string s2,int m,int n)
+string s1,s2;
+int ed(int m,int n)
 {
     if(m==0)return n;
     if(n==0)return m;
     if(dp[m][n])return dp[m][n];
 
     if(s1[m-1]==s2[n-1])
-        return dp[m][n] = ed(s1,s2,m-1,n-1);
-    return dp[m][n] = 1 + min(ed(s1,s2,m-1,n),min(ed(s1,s2,m,n-1),ed(s1,s2,m-1,n-1)));
+        return dp[m][n] = ed(m-1,n-1);
+    return dp[m][n] = 1 + min(ed(m-1,n),min(ed(m,n-1),ed(m-1,n-1)));
 }
 ```
 Complexity : O(mn)
