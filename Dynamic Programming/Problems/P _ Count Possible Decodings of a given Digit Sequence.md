@@ -18,6 +18,8 @@ It may be assumed that the input contains valid digits from 0 to 9 and there are
 
 no extra trailing 0’s and no two or more consecutive 0’s.
 
+**Solution**
+
 This problem is recursive and can be broken in sub-problems. We start from end of the given digit sequence.
     
 We initialize the total count of decodings as 0. We recur for two subproblems.
