@@ -40,7 +40,7 @@ output
 
 -1 -1
 
-```cpp;
+```cpp
 void solve()
 {
 	int l, r;
