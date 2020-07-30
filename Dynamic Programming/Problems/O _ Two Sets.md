@@ -16,7 +16,7 @@ Print the answer modulo 10^9+7.
 1 <= n <= 500
 
 **Solution** :
-If we are to have two subsets of equal sum, they must sum to half the total sum each. This means if the total sum n(n+1)/2 is odd
+If we are have two subsets of equal sum, they must sum to half the total sum each. This means if the total sum n(n+1)/2 is odd
 the answer is zero (no possibilities). Otherwise we get the number of ways to reach n(n+1)/4 using subsets of the numbers 1..n-1
 Why n-1? Because by only considering numbers up to n-1, we always put n in the second set, and therefore only count each pair of 
 sets once (otherwise we count every pair of sets twice).
