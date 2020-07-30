@@ -1,23 +1,29 @@
-/*
-Your task is to count the number of ways numbers 1,2,…,n can be divided into two sets of equal sum
+# Two Sets
+
+Your task is to count the number of ways numbers 1,2,…,n can be divided into two sets of equal sum.
+    
 For example, if n=7, there are four solutions:
+
 {1,3,4,6} and {2,5,7}
+
 {1,2,5,6} and {3,4,7}
+
 {1,2,4,7} and {3,5,6}
+
 {1,6,7} and {2,3,4,5}
 
-Print the answer modulo 10^9+7
+Print the answer modulo 10^9+7.
 1 <= n <= 500
 
-solution :
+**Solution** :
 If we are to have two subsets of equal sum, they must sum to half the total sum each. This means if the total sum n(n+1)/2 is odd
 the answer is zero (no possibilities). Otherwise we get the number of ways to reach n(n+1)/4 using subsets of the numbers 1..n-1
 Why n-1? Because by only considering numbers up to n-1, we always put n in the second set, and therefore only count each pair of 
-sets once (otherwise we count every pair of sets twice)
+sets once (otherwise we count every pair of sets twice).
 
 Complexity : O(nx)
-*/
 
+```cpp
 int main()
 {
     int n,mod=1e9+7;
@@ -38,3 +44,4 @@ int main()
     cout<<dp[n-1][x];
     return 0;
 }
+```
