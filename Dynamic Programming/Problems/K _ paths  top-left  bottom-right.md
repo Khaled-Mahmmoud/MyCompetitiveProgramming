@@ -1,27 +1,39 @@
-/*
+# paths top-left bottom-right
+
 Count all possible paths from top left to bottom right of a mXn matrix
 The problem is to count all the possible paths from top left to bottom right of a mXn matrix with the constraints that from each cell
 you can either move only to right or down
 
 Input :  m = 2, n = 2;
+
 Output : 2
+    
 There are two paths
+
 (0, 0) -> (0, 1) -> (1, 1)
+    
 (0, 0) -> (1, 0) -> (1, 1)
 
 Input :  m = 2, n = 3;
+
 Output : 3
+    
 There are three paths
+
 (0, 0) -> (0, 1) -> (0, 2) -> (1, 2)
 (0, 0) -> (0, 1) -> (1, 1) -> (1, 2)
 (0, 0) -> (1, 0) -> (1, 1) -> (1, 2)
 
 1<=M<=1000
+    
 1<=N<=1000
-*/
+    
 
-// << Memoization Method – Top Down Dynamic Programming >>
-// Complexity : O(mn)
+<< Memoization Method – Top Down Dynamic Programming >>
+
+Complexity : O(mn)
+    
+```cpp
 int dp[1009][1009];
 int path(int m,int n)
 {
@@ -40,8 +52,13 @@ int main()
     }
     return 0;
 }
-// << Tabulation Method – Bottom Up Dynamic Programming >>
-// Complexity : O(mn)
+```
+
+<< Tabulation Method – Bottom Up Dynamic Programming >>
+    
+Complexity : O(mn)
+    
+```cpp
 int path(int m,int n)
 {
     int dp[m][n];
@@ -53,19 +70,24 @@ int path(int m,int n)
     } 
     return dp[m-1][n-1];
 }
-
-
-/*
+```
 Consider an n×n grid whose squares may have traps. It is not allowed to move to a square with a trap
 Your task is to calculate the number of paths from the upper-left square to the lower-right square where
-you only can move right or down
+you only can move right or down.
+    
 4
+    
 ....
+    
 .*..
+    
 ...*
+
 *...
+    
 n <= 1000
-*/
+    
+```cpp
     int n;
     cin>>n;
     char v[n][v];
@@ -90,3 +112,4 @@ n <= 1000
             else
                 dp[i][j]=(dp[i-1][j]+dp[i][j-1])%mod;
     cout<<dp[n-1][n-1];
+```
