@@ -15,13 +15,6 @@ Output : 5
     
 Explanation : 1 (squares of size 4x4) + 4 (squares of size 1x1)
 
-We know that if we want to cut minimum number of squares from the paper then we would have to cut largest square possible from 
-the paper first and largest square will have same side as smaller side of the paper.
-    
-For example if paper have the size 13 x 29, then maximum square will be of side 13.
-so we can cut 2 square of size 13 x 13 (29/13 = 2). Now remaining paper will have size 3 x 13.
-Similarly we can cut remaining paper by using 4 squares of size 3 x 3 and 3 squares of 1 x 1.
-So minimum 9 squares can be cut from the Paper of size 13 x 29.
     
 m,n < 1000
     
