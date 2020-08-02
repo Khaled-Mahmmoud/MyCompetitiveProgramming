@@ -33,6 +33,10 @@ ll shiftleft(ll code)
 {
     return (base * code) % mod;
 }
+ll shiftright(ll code)
+{
+    return (code * power(base,mod-2)) % mod;
+}
 ll rolling_hash(string pat)
 {
     ll patcode = 0;
