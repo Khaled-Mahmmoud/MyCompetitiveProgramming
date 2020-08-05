@@ -227,7 +227,7 @@ struct comp
 {
 	int len;
 	comp(int len) :len(len) {}
-	bool operator ()(const int& a, const int& b) const
+	bool operator ()(int a,int b) 
 	{
 		if (group[a] != group[b])
 			return group[a] < group[b];
@@ -281,7 +281,7 @@ int getGroup(int a)
 void radix_sort(int k)
 {
 	vector<int> frq(n);
-	for (auto& it : suf) frq[getGroup(it + k)]++;
+	for (auto it : suf) frq[getGroup(it + k)]++;
 	for (int i = 1; i < n; i++)
 		frq[i] += frq[i - 1];
 	for (int i = n - 1; i >= 0; i--)
@@ -292,7 +292,7 @@ struct comp
 {
 	int len;
 	comp(int len) :len(len) {}
-	bool operator ()(const int& a, const int& b) const
+	bool operator ()(int a,int b) 
 	{
 		if (group[a] != group[b])
 			return group[a] < group[b];
