@@ -332,7 +332,7 @@ int main()
     return 0;
 }
 ```
-
+### Example
 Given a string s, return the last substring of s in lexicographical order.
 
 Input: "abab"
