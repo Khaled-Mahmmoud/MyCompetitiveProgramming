@@ -30,16 +30,13 @@ bool dfs(int u = 1)
     {
         if (color[v] == color[u]) 
             return false;
-
         if (color[v] == -1) 
         {
             color[v] = 1 - color[u];
-
             if (!dfs(v)) 
                 return false;
         }
     }
-
     return true;
 }
 bool isBipartiteGraph() 
