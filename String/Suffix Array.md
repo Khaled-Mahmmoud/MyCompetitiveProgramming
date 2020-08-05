@@ -354,7 +354,7 @@ LCP[i] = longest common prefixes in suffix array (suffix[i], suffix[i-1])
 vector<int> LCP(string s) 	
 {	
 	suffixArray(s);	
-	vector<int> rank(n), lcp(n);	
+	vector<int> rank(n), lcp(n);	where n = s.size() + 1;
 	for (int i = 0; i < n; i++)	
 		rank[suf[i]] = i;	
 	int c = 0;	
