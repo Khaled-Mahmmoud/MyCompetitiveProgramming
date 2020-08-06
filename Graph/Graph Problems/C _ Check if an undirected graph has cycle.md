@@ -1,4 +1,4 @@
-# Check if graph has cycle
+# Check if an undirected graph has cycle
 
 ```cpp
 vector<vector<int>>adj;
