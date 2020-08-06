@@ -44,11 +44,9 @@ struct comp
 		return getGroup(a + len) < getGroup(b + len);
 	}
 };
-class Solution {
-public:
-    string lastSubstring(string s) 
-    {
-    n = s.size() + 1;
+void suffixArray(string s)
+{
+	n = s.size() + 1;
 	vector<int> sorGroup(n);
 	for (int i = 0; i < n; i++)
 	{
@@ -58,15 +56,22 @@ public:
 	sort(tmp.begin(),tmp.end());
 	for (int i = 0; i < n; i++)
 		group.push_back(lower_bound(tmp.begin(),tmp.end(), s[i]) - tmp.begin());
-	for (int len = 1; sorGroup[n-1] != n - 1; len <<= 1)
+	for (int len = 1; sorGroup.back() != n - 1; len <<= 1)
 	{
-	    radix_sort(len);
-		  radix_sort(0);
+		radix_sort(len);
+		radix_sort(0);
 		for (int i = 1; i < n; i++)
 			sorGroup[i] = sorGroup[i - 1] + comp(len)(suf[i - 1], suf[i]);
 		for (int i = 0; i < n; i++)
 			group[suf[i]] = sorGroup[i];
 	}
+}
+class Solution {
+public:
+    string lastSubstring(string s) 
+    {
+        suffixArray(s);
+	
         string ans;
         for(int i=suf[n-1];i<n-1;i++)
             ans+=s[i];
@@ -74,6 +79,7 @@ public:
         suf.clear();
         tmp.clear();
         group.clear();
+	
         return ans;
     }
 };
