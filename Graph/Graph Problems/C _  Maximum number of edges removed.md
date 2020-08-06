@@ -37,22 +37,17 @@ int cnt;
 void dfs(int u)
 {
     vis[u] = 1;
-    vector<int>newadj;
     for(auto v:adj[u])
     if(vis[v])
     {
         if(parent[u]!=v)
             cnt++;
-        else
-            newadj.push_back(v);
     }
     else
     {
         parent[v] = u;
-        newadj.push_back(v);
         dfs(v);
     }
-    adj[u] = newadj;
 }
 int main()
 {
@@ -82,5 +77,30 @@ int main()
         cout<<cnt+(k-cnt_component);
     }
     return 0;
+}
+```
+
+To remove edges for the graph
+
+```cpp
+void dfs(int u)
+{
+    vis[u] = 1;
+    vector<int>newadj;
+    for(auto v:adj[u])
+    if(vis[v])
+    {
+        if(parent[u]!=v)
+            cnt++;
+        else
+            newadj.push_back(v);
+    }
+    else
+    {
+        parent[v] = u;
+        newadj.push_back(v);
+        dfs(v);
+    }
+    adj[u] = newadj;
 }
 ```
