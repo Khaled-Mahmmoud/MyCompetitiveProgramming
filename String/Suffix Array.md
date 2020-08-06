@@ -332,16 +332,6 @@ int main()
     return 0;
 }
 ```
-### Example
-Given a string s, return the last substring of s in lexicographical order.
-
-Input: "abab"
-
-Output: "bab"
-
-Explanation: The substrings are ["a", "ab", "aba", "abab", "b", "ba", "bab"]. The lexicographically maximum substring is "bab".
-
-1 <= s.length <= 4 * 10^5
 
 ### Longest Common Prefixes 
 
