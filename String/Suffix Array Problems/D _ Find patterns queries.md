@@ -2,19 +2,22 @@
 
 Given string str and set of patterns, check wether pattern exist or not
 
-for buildSuffixArray --> O(n logn)
+buildSuffixArray --> O(n logn)
 
-for queries -->  O(m logn)
+queries -->  O(q * m logn)
 
 ```cpp
 void find_patterns_queries() 
 {
+  string str , q;
   cin >> str;
+  cin>>q;
   buildSuffixArray(str);
 
   start_again:
-  while (cin >> pat) 
+  while (q--) 
   {  
+    cin >> pat
     int m = strlen(pat); 
 
     int l = 0, r = n - 1;
