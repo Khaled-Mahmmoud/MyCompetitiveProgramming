@@ -80,7 +80,7 @@ int main()
 }
 ```
 
-To remove edges for the graph
+To remove edges from the graph
 
 ```cpp
 void dfs(int u)
