@@ -1,3 +1,4 @@
+
 #include<string>
 string s = "ksimuye"
 ********************* Iterators *****************************
@@ -190,7 +191,7 @@ Complexity : linear in the new string length
 
 ************************* operations **************************
 
- substr
+ ### substr ###
  std::string str="We think in generalities, but we live in details.";
                                            // (quoting Alfred N. Whitehead)
 
@@ -203,3 +204,22 @@ Complexity : linear in the new string length
   std::cout << str2 << ' ' << str3 << '\n';  // think live in details.
   
 Complexity : linear in the new string length
+
+
+#### strncmp ####
+
+int x = strncmp (str1, str2, num);
+str1 : C string to be compared.
+str2 : C string to be compared.
+num : Maximum number of characters to compare.
+
+Returns an integral value indicating the relationship between the strings:
+return value                	indicates
+   <0	                 the first character that does not match has a lower value in str1 than in str2
+    0	                 the contents of both strings are equal
+   >0	                 the first character that does not match has a greater value in str1 than in str2
+
+int x = strncmp ("sol", "kmsol" , 3); return 8
+int x = strncmp ("sol", "kmsol" + 2 , 3); return 0
+int x = strncmp ("hsol" + 1 , "kmsol" + 2 , 3); return 0
+
