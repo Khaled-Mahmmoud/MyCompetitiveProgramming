@@ -125,7 +125,8 @@ if graph doesn't contain any loop or parallel graph it's called Simple graph oth
                          
             **************
             
-             Simple Path : A path that repeats vertex, except that the first and last may be the same vertex.
+             A simple path from v to w is a path from v to w with no repeated vertices,
+             except that the first and last may be the same vertex.
              
              Path : A , B , F is simple path
              Path : A , B , C , D , E , B , F is not simple path (repetition)
