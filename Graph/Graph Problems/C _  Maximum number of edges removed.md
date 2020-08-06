@@ -1,20 +1,16 @@
 # Maximum number of edges removed
 
-Once a upon time a problem setter offered a problem to Arpa. Like always Arpa said "eaaasy", but after a time Arpa said this problem is so NP.
-
-Solve this problem to prove Arpa is always right and his first opinion is correct.
-
 You are given a graph with  nodes and  edges.
-Calculate maximum number of edges that can be removed from the graph so that it contains exactly  connected components.
+Calculate maximum number of edges that can be removed from the graph so that it contains exactly K connected components.
 
-Input : The first line contains (in order).
-The next m lines have  number, and  that showS there is an edge between those nodes.
+Input : 
+The first line contains n , m , k, the next m lines have two number,u and v that show there is an edge between those nodes.
+
 It is guaranteed that input is valid(no multiple edges and no loops).
 
-Output : Maximum number of edges that can be removed from the graph such that it contains exactly  connected components.
-If the graph intially has more than  components print . 
+Output : Maximum number of edges that can be removed from the graph such that it contains exactly K connected components.
 
-Constraints
+If the graph intially has more than K components print -1. 
 
 1 <= n,m <= 100 000 
 1 <= k <=n
@@ -31,7 +27,7 @@ SAMPLE INPUT
 
 SAMPLE OUTPUT : 1
 
-Explanation : Initially, the graph has  connected components, hence we can remove only  edge.
+Explanation : Initially, the graph has one connected components, hence we can remove only one edge.
 
 ```cpp
 vector<vector<int>>adj;
