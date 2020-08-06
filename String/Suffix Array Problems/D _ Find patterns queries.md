@@ -1,3 +1,5 @@
+# Find patterns queries
+
 Given string str and set of patterns, check wether pattern exist or nor
 
 for buildSuffixArray --> O(n logn)
