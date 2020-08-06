@@ -37,6 +37,5 @@ void find_patterns_queries()
     }
     cout << "Pattern not found\n";
   }
-  exit(0);
 }
 ```
