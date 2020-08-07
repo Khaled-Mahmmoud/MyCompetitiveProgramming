@@ -14,7 +14,7 @@ input :
 
 1 2 3 2 1 1
 
-5
+4
 
 2 +
 
@@ -24,8 +24,6 @@ input :
 
 1 - 
 
-3 +
-
 output :
 
 2
@@ -34,10 +32,46 @@ output :
 
 1
 
-2
-
 3
 
 ```cpp
+int main()
+{
+    int n,x;
+    cin>>n;
+    set<pair<int,int>>st;
+    map<int,int>m;
+    for(int i=0;i<n;i++)
+    {
+        cin>>x;
+        if(m[x])
+        {
+            st.erase({m[x],x});
+            st.insert({m[x]+1,x});
+        }
+        else
+        st.insert({1,x});
+        m[x]++;
+    }
+
+    int q;cin>>q;
+    while(q--)
+    {
+        char c;
+        cin>>x>>c;
+        if(st.find({m[x],x})!=st.end())
+        st.erase({m[x],x});
+        if(c=='+')
+            m[x]++;
+        else
+            m[x]--;
+        if(m[x])
+        st.insert({m[x],x});
+        auto it = st.end();
+        it--;
+        cout<<it->second<<endl;
+    }
+    return 0;
+}
 
 ```
