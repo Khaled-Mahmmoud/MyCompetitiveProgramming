@@ -4,9 +4,9 @@ given an array of integers, and q queries, print the most number repeated in arr
 
 query has two types:
 
-+ X : means add number x into array
+X + : means add number x into array
 
-- X : means remove number x from array
+X - : means remove number x from array
 
 input :
 
