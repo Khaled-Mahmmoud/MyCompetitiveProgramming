@@ -11,7 +11,7 @@ using namespace std;
 ll power(ll a,ll b)
 {
     ll ans = 1;
-    num %= mod;
+    a %= mod;
     while(b)
     {
         if(b&1)
