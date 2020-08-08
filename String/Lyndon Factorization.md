@@ -1,4 +1,4 @@
-# Lyndon factorization
+# Lyndon Factorization
 
 A string is called simple (or a Lyndon word), if it is strictly smaller than any of its own proper suffixes.
 Examples of simple strings are: a, b, ab, aab, abb, ababb, abcd.
