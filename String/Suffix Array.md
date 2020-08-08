@@ -281,8 +281,8 @@ int getGroup(int a)
 void radix_sort(int k)
 {
 	vector<int> frq(n);
-	for (auto it : suf) 
-	     frq[getGroup(it + k)]++;
+	for (int i = 0; i<n ;i++) 
+	     frq[getGroup(suf[i] + k)]++;
 	for (int i = 1; i < n; i++)
 	     frq[i] += frq[i - 1];
 	for (int i = n - 1; i >= 0; i--)
