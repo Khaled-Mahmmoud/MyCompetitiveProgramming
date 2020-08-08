@@ -223,3 +223,13 @@ int x = strncmp ("sol", "kmsol" , 3); return 8
 int x = strncmp ("sol", "kmsol" + 2 , 3); return 0
 int x = strncmp ("hsol" + 1 , "kmsol" + 2 , 3); return 0
 
+int main() 
+{ 
+    string su = "Jatin Goyal"; 
+  
+    transform(su.begin(), su.end(), su.begin(), ::toupper);  // JATIN GOYAL
+  
+    transform(su.begin(), su.end(), su.begin(), ::tolower);  // jatin goyal
+  
+    return 0; 
+} 
