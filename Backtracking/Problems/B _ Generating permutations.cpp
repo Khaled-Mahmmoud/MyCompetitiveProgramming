@@ -56,6 +56,7 @@ output :
 notice , it's not sorted 
 */
 // Complexity : O(!n)
+// number of purmutaions = !n / !(n-r) where r = n , it's !n / !0 = !n
 
 OR
 /*
