@@ -42,3 +42,17 @@ Idx: 21		3 1 2 0
 Idx: 22		3 2 0 1
 Idx: 23		3 2 1 0
 ```
+How to iteratively generat Permutations ?
+
+```cpp
+void  Permutation(int a[],int n)
+{
+    do
+    {
+        for(int i=0;i<n;i++)
+            cout<<a[i]<<' ';
+        cout<<'\n';
+    }
+    while(next_permutation(a,a+n));
+}
+```
