@@ -63,3 +63,6 @@ int main()
     return 0; 
 } 
 ```
+Complexity : O(!n)
+
+number of purmutaions = !n / !(n-r) where r = n , it's !n / !0 = !n
