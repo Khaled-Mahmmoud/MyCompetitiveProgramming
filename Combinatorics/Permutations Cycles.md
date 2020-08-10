@@ -3,7 +3,7 @@
 ```
 For vector {0, 1, 2} -> we have 3! = 6
 
-Idx: 0		0 1 2		-> Sorted		{			Block of length 2! = 2
+Idx: 0		0 1 2		-> Sorted	     	{			Block of length 2! = 2
 Idx: 1		0 2 1					    	}
 
 Idx: 2		1 0 2
