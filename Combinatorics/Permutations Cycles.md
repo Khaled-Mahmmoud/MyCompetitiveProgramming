@@ -55,4 +55,11 @@ void  Permutation(int a[],int n)
     }
     while(next_permutation(a,a+n));
 }
+int main() 
+{ 
+    int a[] = {0, 1, 2}; 
+    int n = sizeof(a)/sizeof(a[0]); 
+    Permutation(a, n); 
+    return 0; 
+} 
 ```
