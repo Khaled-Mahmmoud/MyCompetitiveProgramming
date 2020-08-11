@@ -1,4 +1,5 @@
-/*
+# N-Queen Problem
+
 The N Queen is the problem of placing N chess queens on an N×N chessboard so that no two 
 queens attack each other
 
@@ -11,6 +12,7 @@ row and column as part of the solution. If we do not find such a row due to clas
 then we backtrack and return false
 
 1) Start in the leftmost column
+    
 2) If all queens are placed
     return true
 3) Try all rows in the current column.  Do following
@@ -26,8 +28,8 @@ then we backtrack and return false
        and go to step (a) to try other rows.
 3) If all rows have been tried and nothing worked, 
    return false to trigger backtracking
-*/
 
+```cpp
 int n;int board[10][10];
 void print(int board[10][10])
 {
@@ -88,3 +90,4 @@ int main()
         cout<<"Solution does not exist";
     return 0;
 }
+```
