@@ -1,27 +1,38 @@
-/*
+# Rat in a Maze Problem
+
 Consider a rat placed at (0, 0) in a square matrix m[][] of order n and has to reach the destination at (n-1, n-1)
 Your task is to complete the function printPath() which returns a sorted array of strings denoting all the possible directions 
-which the rat can take to reach the destination at (n-1, n-1)
+which the rat can take to reach the destination at (n-1, n-1).
 The directions in which the rat can move are 'U'(up), 'D'(down), 'L' (left), 'R' (right).
 
 Constraints:
+
 1 <= T <= 10
+    
 2 <= n <= 10
+    
 0 <= m[][] <= 1
 
-Example
 Input:
+
 2
+    
 4
+    
 1 0 0 0 1 1 0 1 0 1 0 0 0 1 1 1
+    
 4
+    
 1 0 0 0 1 1 0 1 1 1 0 0 0 1 1 1
 
 Output:
-DRDDRR
-DDRDRR DRDDRR
-*/
 
+DRDDRR
+
+DDRDRR DRDDRR
+
+
+```cpp
 void solve(int x,int y,string s,vector<string>&res,int n,int m[MAX][MAX])
 {
     if(!m[x][y]||x>=n||y>=n||x<0||y<0||m[x][y]==100)
@@ -42,3 +53,4 @@ vector<string> printPath(int m[MAX][MAX], int n)
     sort(res.begin(),res.end());
     return res;
 }
+```
