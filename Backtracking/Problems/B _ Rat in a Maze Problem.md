@@ -2,7 +2,7 @@
 
 Consider a rat placed at (0, 0) in a square matrix m[][] of order n and has to reach the destination at (n-1, n-1)
 Your task is to complete the function printPath() which returns a sorted array of strings denoting all the possible directions 
-which the rat can take to reach the destination at (n-1, n-1).
+which the rat can take to reach the destination at (n-1, n-1). Value 0 at a cell in the matrix represents that it is blocked and cannot be crossed while value 1 at a cell in the matrix represents that it can be travelled through.
 The directions in which the rat can move are 'U'(up), 'D'(down), 'L' (left), 'R' (right).
 
 Constraints:
