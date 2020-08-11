@@ -85,7 +85,7 @@ bool solve(int board[10][10],int col)
 int main()
 {
     cin>>n;
-    memset(board,0,sizeof(board[0][0]*n*n));
+    memset(board,0,sizeof(board[0][0])*n*n);
     if(!solve(board,0))
         cout<<"Solution does not exist";
     return 0;
