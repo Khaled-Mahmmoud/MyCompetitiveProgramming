@@ -1,5 +1,8 @@
 # Terminology
-
+```
+K#*8w
+W8#m+3*(u(-
+```
 **proper divisors of number**
 
 is all divisors of number excluding the number itself
