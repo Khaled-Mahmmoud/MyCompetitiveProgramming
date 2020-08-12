@@ -139,20 +139,23 @@ Say we are given P1 and P2, and we would like to evaluate p1 * p2^k, where k = 1
 	
 Check above, Permutation is similar in that for Numbers.
 		
-E.g. how do you calculate a^16? we use divide and conquer: a^16 = a^8 * a^8. Calculate a^8 and square it! SAME for Permutation
+E.g. how do you calculate a^16 ? we use divide and conquer: a^16 = a^8 * a^8. Calculate a^8 and square it! SAME for Permutation
 
 ```cpp
 typedef vector<int> perm;
 perm pow(perm inp, perm apply, int k)
 {
-    if(k == 0) // won't apply permutation, so same as input
+    if(k == 0) 
         return inp;
     if(k == 1)
-        return applyPerm(inp, apply);	// implement: (0 1 2 3) * (2 0 1 3) = 2 0 1 3
+        return applyPerm(inp, apply);	
+	
+    if(k%2 == 1)	
+    cur = applyPerm(cur, perm);
+	
     perm = pow(inp, apply, k/2);
-        cur = applyPerm(cur, cur);
-    if(k%2 == 1)	// we have odd power
-        cur = applyPerm(cur, perm);
+    cur = applyPerm(cur, cur);
+	
     return cur;
 }
 ```
