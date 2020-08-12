@@ -72,16 +72,16 @@ Given a permutation length, what is the ith permutation ?
 ```cpp
 vector<int> nthPerm(int len, int nth) 
 {
-	vector<int> identity(len), perm(len);
-	for(int i=0;i<len;i++)
-        identity[i] = i;
-	for (int i = len - 1; i >= 0; --i)
+    vector<int> identity(len), perm(len);
+    for(int i=0;i<len;i++)
+    identity[i] = i;
+    for (int i = len - 1; i >= 0; --i)
     {
-		ll p = nth / Fact[i];
-		perm[len - i - 1] = identity[p];
-		identity.erase(identity.begin() + p);
-		nth %= Fact[i];
-	}
-	return perm;
+        ll p = nth / Fact[i];
+	perm[len - i - 1] = identity[p];
+	identity.erase(identity.begin() + p);
+	nth %= Fact[i];
+    }
+    return perm;
 }
 ```
