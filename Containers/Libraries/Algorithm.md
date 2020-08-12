@@ -86,6 +86,16 @@ st.insert(make_pair(4,5));
 st.insert(make_pair(7,8));
 
 auto it = find_if(st.begin(),st.end(),[](const pair<int,int>& p ){ return p.first == 1;});
+
+OR 
+
+bool pred (const pair<int,int>&p)
+{
+     return p.first == k;
+}
+auto it = find_if(st.begin(),st.end(),pred);
+
+
 ```
 
 ### reverse 
