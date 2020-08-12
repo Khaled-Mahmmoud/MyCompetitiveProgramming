@@ -1,26 +1,36 @@
-/*
+# Print all combinations of factors
 
-Print all combinations of factors (Ways to factorize)
+Print all combinations of factors (Ways to factorize).
 Write a program to print all the combinations of factors of given number n.
 
 Input : 16
-Output :2 2 2 2 
-        2 2 4 
-        2 8 
-        4 4 
+        
+Output :
+
+2 2 2 2 
+        
+2 2 4 
+        
+2 8 
+        
+4 4 
 
 Input : 12
-Output : 2 2 3
-         2 6
-         3 4
+        
+Output : 
+
+2 2 3
+         
+2 6
+         
+3 4
 
 To solve this problem we take one array of array of integers or list of list of integers to store 
 all the factors combination possible for the given n. So , to achieve this we can have one 
 recursive function which can store the factors combination in each of its iteration
 And each of those list should be stored in the final result list
-*/
 
-
+```cpp
 vector<vector<int>>resultant; 
 void factorsListFunc (int first, int each_prod, int n, vector<int>single_result_list)  
 {  
@@ -60,3 +70,4 @@ int main()
     } 
     return 0; 
 }   
+```
