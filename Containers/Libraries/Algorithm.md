@@ -89,7 +89,7 @@ auto it = find_if(st.begin(),st.end(),[](const pair<int,int>& p ){ return p.firs
 
 OR 
 
-bool pred (const pair<int,int>&p)
+bool pred(const pair<int,int>&p)
 {
      return p.first == k;
 }
