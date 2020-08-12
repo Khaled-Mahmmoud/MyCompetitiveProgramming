@@ -77,7 +77,7 @@ vector<int> nthPerm(int len, int nth)
     identity[i] = i;
     for (int i = len - 1; i >= 0; --i)
     {
-        ll p = nth / Fact[i];
+        int p = nth / Fact[i];
 	perm[len - i - 1] = identity[p];
 	identity.erase(identity.begin() + p);
 	nth %= Fact[i];
