@@ -53,6 +53,7 @@ Returns an iterator pointing to the element with the smallest value in the range
 ```cpp
 int a[7] = {8,9,2,5,1,6,2}
 cout<<*min_element(a,a+7); // 1
+cout<<*max_element(v.begin(),v.end());
 ```
 Complexity :  the distance between first and last.
 
