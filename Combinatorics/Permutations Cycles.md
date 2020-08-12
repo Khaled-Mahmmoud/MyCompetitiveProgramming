@@ -85,3 +85,20 @@ vector<int> nthPerm(int len, int nth)
     return perm;
 }
 ```
+
+Given a permutation, what is its index ?
+```cpp
+int PermToIndex(vector<int> perm)
+{
+	int idx = 0;
+	int n = perm.size();
+	for (int i = 0; i < n; ++i)
+	{
+		// Remove first, and Renumber the remaining elements to remove gaps
+		idx += Fact[n-1-i] * perm[i];
+		for(int j = i+1; j < n; j++)
+			perm[j] -= perm[j] > perm[i];
+	}
+	return idx;
+}
+```
