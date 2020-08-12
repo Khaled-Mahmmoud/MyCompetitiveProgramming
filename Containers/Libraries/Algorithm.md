@@ -2,7 +2,7 @@
 
 ### lower_bound
 
-Returns an iterator pointing to the first element in the range [first,last] which greater than or equal val
+Returns an iterator pointing to the first element in the range [first,last] which **greater than or equal val**
 if no such element , it's return iterator pointing to the end of the range
 ```cpp
 auto it =lower_bound(first,last,val)   OR   auto it =lower_bound(first,last,val,pred)
@@ -11,7 +11,7 @@ Complexity : log2(N) where N is the distance between first and last
 
 ### upper_bound 
 
-Returns an iterator pointing to the first element in the range [first,last] which compares greater than val
+Returns an iterator pointing to the first element in the range [first,last] which compares **greater than val**
 if no such element , it's return iterator pointing to the end of the range
 
 ```cpp
