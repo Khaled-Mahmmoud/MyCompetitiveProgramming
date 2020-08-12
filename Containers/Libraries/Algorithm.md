@@ -3,16 +3,16 @@
 ### lower_bound
 
 Returns an iterator pointing to the first element in the range [first,last] which **greater than or equal val**
-if no such element , it's return iterator pointing to the end of the range
+if no such element , it's return iterator pointing to the end of the range. and this range should be sorted
 ```cpp
 auto it =lower_bound(first,last,val)   OR   auto it =lower_bound(first,last,val,pred)
 ```
-Complexity : log2(N) where N is the distance between first and last
+Complexity : log2(N) where N is the distance between first and last.
 
 ### upper_bound 
 
 Returns an iterator pointing to the first element in the range [first,last] which compares **greater than val**
-if no such element , it's return iterator pointing to the end of the range
+if no such element , it's return iterator pointing to the end of the range. and this range should be sorted.
 
 ```cpp
     vector<int>v={2,3,4,5,6};
@@ -27,7 +27,7 @@ Complexity : log2(N) where N is the distance between first and last
 
 ### binary_search 
 
-Returns true if any element in the range [first,last] is equivalent to val, and false otherwise.
+Returns true if any element in the range [first,last] is equivalent to val, and false otherwise. and this range should be sorted.
 ```cpp
 binary_search(first,last,val)   OR  binary_search(first,last,val,pred)
 ```
