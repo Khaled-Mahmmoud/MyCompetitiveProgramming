@@ -105,41 +105,41 @@ int PermToIndex(vector<int> perm)
 
 ### Permutations Application
 
-	Say we have a permutation: 	2 0 1 3
+Say we have a permutation: 	2 0 1 3
 	
-		Applying a permutation on other, aka multiplication, means to map its values according to the permutation.
+Applying a permutation on other, aka multiplication, means to map its values according to the permutation.
 		
-		So 2 0 1 3 MEANS: 0 -map-> 2	1 -map-> 0		2 -map-> 1		3 -map-> 3
+So 2 0 1 3 MEANS: 0 -map-> 2	1 -map-> 0		2 -map-> 1		3 -map-> 3
 		
-	Then
+Then
 	
-		(0 1 2 3) * (2 0 1 3) = 2 0 1 3
+(0 1 2 3) * (2 0 1 3) = 2 0 1 3
 		
-		(2 3 1 0) * (2 0 1 3) = 1 3 0 2
+(2 3 1 0) * (2 0 1 3) = 1 3 0 2
 		
-		(3 2 0 1) * (2 0 1 3) = 3 1 2 0
+(3 2 0 1) * (2 0 1 3) = 3 1 2 0
 		
-		(3 2 0 1) * (2 0 1 3) * (2 0 1 3) = (3 1 2 0) * (2 0 1 3) = 3 0 1 2
+(3 2 0 1) * (2 0 1 3) * (2 0 1 3) = (3 1 2 0) * (2 0 1 3) = 3 0 1 2
 		
-	Permutation Multiplication is associative, like numbers Multiplication, e.g. doesn't matter what to apply first
+Permutation Multiplication is associative, like numbers Multiplication, e.g. doesn't matter what to apply first
 	
-		For Numbers: 3 * 5 * 7 = (3 * 5) * 7 = 3 * (5 * 7)
+For Numbers: 3 * 5 * 7 = (3 * 5) * 7 = 3 * (5 * 7)
 		
-		Then for Some Permutations: P1 * p2 * p3 * p4 = P1 * (p2 * p3 * p4) = (P1 * p2) * (p3 * p4) and so on.
+Then for Some Permutations: P1 * p2 * p3 * p4 = P1 * (p2 * p3 * p4) = (P1 * p2) * (p3 * p4) and so on.
 		
-	Permutation Multiplication is NOT Commutative, like numbers subtraction, e.g. order matter
+Permutation Multiplication is NOT Commutative, like numbers subtraction, e.g. order matter
 	
-		For numbers: 3-5 ~= 5-3
+For numbers: 3-5 ~= 5-3
 		
-		Then for Permutations = (0 1 2 3) * (2 0 1 3) ~= (2 0 1 3) * (0 1 2 3)
+Then for Permutations = (0 1 2 3) * (2 0 1 3) ~= (2 0 1 3) * (0 1 2 3)
 		
-	P^k means apply Permutation k times, e.g. (3 2 0 1) * (2 0 1 3) * (2 0 1 3) is written as: p1 * p2^2
+P^k means apply Permutation k times, e.g. (3 2 0 1) * (2 0 1 3) * (2 0 1 3) is written as: p1 * p2^2
 	
-	Say we are given P1 and P2, and we would like to evaluate p1 * p2^k, where k = 10^9?!!
+Say we are given P1 and P2, and we would like to evaluate p1 * p2^k, where k = 10^9?!!
 	
-		Check above, Permutation is similar in that for Numbers.
+Check above, Permutation is similar in that for Numbers.
 		
-		E.g. how do you calculate a^16? we use divide and conquer: a^16 = a^8 * a^8. Calculate a^8 and square it! SAME for Permutation
+E.g. how do you calculate a^16? we use divide and conquer: a^16 = a^8 * a^8. Calculate a^8 and square it! SAME for Permutation
 
 ```cpp
 typedef vector<int> perm;
