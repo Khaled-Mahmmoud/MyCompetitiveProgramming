@@ -1,8 +1,9 @@
-************** to_string ****************
+### to_string
+
 Returns a string with the representation of val
-// to_string example
-#include <iostream>   // std::cout
-#include <string>     // std::string, std::to_string
+```cpp
+#include <iostream>   
+#include <string>     
 using namespace std;
 int main ()
 {
@@ -11,12 +12,14 @@ int main ()
     cout<<s;                     //  1593
     return 0;
 }
+```
 
+### stoi 
 
-************** stoi ****************
 converts the string to an integer
-#include <iostream>   // std::cout
-#include <string>     // std::string, std::stoi
+```cpp
+#include <iostream>  
+#include <string>     
 using namespace std;
 int main ()
 {
@@ -24,10 +27,13 @@ int main ()
      int m = stoi(s);   // 1593
      cout<< m + 1;      //  1594
 }
+```
 Complexity :: Unspecified, but generally linear in the number of characters interpreted.
 
-************** stof ****************
+### stof 
+
 converts the string to float
+```cpp
 #include <iostream>   // std::cout
 #include <iomanip>
 #include <string>     // std::string, std::stoi
@@ -40,12 +46,14 @@ int main ()
      cout<< m + 1;      //  90614.524
 }
 Complexity :: Unspecified, but generally linear in the number of characters interpreted.
+```
 
+### stol 
 
-************** stol ****************
 converts the string to long long
-#include <iostream>   // std::cout
-#include <string>     // std::string, std::stoi
+```cpp
+#include <iostream>   
+#include <string>     
 using namespace std;
 int main ()
 {
@@ -53,14 +61,16 @@ int main ()
      long long m = stol(s);   // 1987520892
      cout<< m + 1;      //  1987520893
 }
+```
 Complexity :: Unspecified, but generally linear in the number of characters interpreted.
 
 
-************** stold ****************
+### stold
 converts the string to double
-#include <iostream>   // std::cout
+```cpp
+#include <iostream> 
 #include <iomanip>
-#include <string>     // std::string, std::stoi
+#include <string>     
 using namespace std;
 int main ()
 {
@@ -69,4 +79,5 @@ int main ()
      cout<<fixed<<showpoint<<setprecision(8);
      cout<< m + 1;      //  90614.30536524
 }
+```
 Complexity :: Unspecified, but generally linear in the number of characters interpreted.
