@@ -81,3 +81,25 @@ int main ()
 }
 ```
 Complexity :: Unspecified, but generally linear in the number of characters interpreted.
+
+
+### memset
+
+Sets the first num bytes of the block of memory pointed by ptr to the specified value
+
+memset is function of library string in c language
+```cpp
+#include<iostream>
+#include<string.h>
+using namespace std;
+int main()
+{
+    int a[3];                    // one-d array
+    memset(a,0,sizeof(a));
+    int a[n][m];                // two-d array
+    memset(a,0,sizeof(a)*n*m); 
+    string str = "programmer know memset!";  // string
+    memset (str,'-',6);  //  ------mmer know memset
+    return 0;
+}
+```
