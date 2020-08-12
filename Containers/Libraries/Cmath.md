@@ -1,7 +1,7 @@
 ### pow 
 
 Returns base raised to the power exponent : pow(a,b)
-```cpp
+```
 pow(7 , 3)        =   343.000000
 pow(4.73 , 12)    =   125410439.217423
 pow(32.01 , 1.54) =   208.036691
@@ -23,7 +23,7 @@ Time complexity O(log x)
 ### cbrt 
 
 Returns the cubic root of x : cbrt(x)
-```cpp
+```
 cbrt(8) = 2
 cbrt(27) = 3
 cbrt(43) = 3.5033
@@ -33,7 +33,7 @@ Time complexity O(log x)
 ### ceil 
 
 Rounds x upward, returning the smallest integral value that is not less than x   O(1)
-```cpp
+```
 ceil(2.3) = 3
 ceil(2.5) = 3
 ceil(2.8) = 3
@@ -44,7 +44,7 @@ ceil(-5.5)= -5
 ### floor 
 
 Rounds x downward, returning the largest integral value that is not greater than x   O(1)
-```cpp
+```
 floor(2.3) = 2
 floor(2.5) = 2
 floor(2.8) = 2
@@ -55,7 +55,7 @@ floor(-5.5)= -6
 ### round/llround 
 
 Returns the integral value that is nearest to x, with halfway cases rounded away from zero   O(1)
-```cpp
+```
 round(2)   = 2
 round(2.3) = 2
 round(2.5) = 3            
