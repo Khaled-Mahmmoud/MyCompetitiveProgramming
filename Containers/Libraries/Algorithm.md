@@ -1,5 +1,5 @@
 
-********************** lower_bound *************************
+### lower_bound
 
 Returns an iterator pointing to the first element in the range [first,last] which greater than or equal val
 if no such element , it's return iterator pointing to the end of the range
@@ -8,7 +8,7 @@ auto it =lower_bound(first,last,val)   OR   auto it =lower_bound(first,last,val,
 ```
 Complexity : log2(N) where N is the distance between first and last
 
-********************** upper_bound *************************
+### upper_bound 
 
 Returns an iterator pointing to the first element in the range [first,last] which compares greater than val
 if no such element , it's return iterator pointing to the end of the range
@@ -24,7 +24,7 @@ if no such element , it's return iterator pointing to the end of the range
 
 Complexity : log2(N) where N is the distance between first and last
 
-********************** binary_search *************************
+### binary_search 
 
 Returns true if any element in the range [first,last] is equivalent to val, and false otherwise.
 ```cpp
@@ -32,19 +32,19 @@ binary_search(first,last,val)   OR  binary_search(first,last,val,pred)
 ```
 Complexity :  the distance between first and last
 
-********************** min *************************
+### min 
 ```cpp
 min(a,b) OR min(a,b,cmp)          O(1)
 ```
 Returns the smallest of a and b. If both are equivalent, a is returned.
 
-********************** max *************************
+### max
 ```cpp
 max(a,b) OR max(a,b,cmp)          O(1)
 ```
 Returns the largest of a and b. If both are equivalent, a is returned.
 
-********************** min_element *************************
+### min_element 
 ```cpp
 min_element(first,last) OR min_element(first,last,cmp)
 ```
@@ -55,7 +55,7 @@ cout<<*min_element(a,a+7); // 1
 ```
 Complexity :  the distance between first and last.
 
-********************** max_element *************************
+### max_element 
 ```cpp
 max_element(first,last) OR max_element(first,last,cmp)
 ```
@@ -64,7 +64,7 @@ Returns an iterator pointing to the element with the largest value in the range 
 Complexity :  the distance between first and last
 
 
-****************** find *****************
+### find 
 
 Searches the container for an element equivalent to val and returns an iterator to it if found
 otherwise it returns an iterator to container::end.
@@ -86,7 +86,7 @@ st.insert(make_pair(7,8));
 auto it = find_if(st.begin(),st.end(),[](const pair<int,int>& p ){ return p.first == 1;});
 ```
 
-****************** reverse *****************
+### reverse 
 
 Reverses the order of the elements in the range [first,last]
 ```cpp
