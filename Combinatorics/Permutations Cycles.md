@@ -90,15 +90,73 @@ Given a permutation, what is its index ?
 ```cpp
 int PermToIndex(vector<int> perm)
 {
-	int idx = 0;
-	int n = perm.size();
-	for (int i = 0; i < n; ++i)
-	{
-		// Remove first, and Renumber the remaining elements to remove gaps
-		idx += Fact[n-1-i] * perm[i];
-		for(int j = i+1; j < n; j++)
-			perm[j] -= perm[j] > perm[i];
-	}
-	return idx;
+    int idx = 0;
+    int n = perm.size();
+    for (int i = 0; i < n; ++i)
+    {
+        // Remove first, and Renumber the remaining elements to remove gaps
+        idx += Fact[n-1-i] * perm[i];
+        for(int j = i+1; j < n; j++)
+           perm[j] -= perm[j] > perm[i];
+    }
+    return idx;
 }
 ```
+
+### Permutations Application
+
+	Say we have a permutation: 	2 0 1 3
+	
+		Applying a permutation on other, aka multiplication, means to map its values according to the permutation.
+		
+		So 2 0 1 3 MEANS: 0 -map-> 2	1 -map-> 0		2 -map-> 1		3 -map-> 3
+		
+	Then
+	
+		(0 1 2 3) * (2 0 1 3) = 2 0 1 3
+		
+		(2 3 1 0) * (2 0 1 3) = 1 3 0 2
+		
+		(3 2 0 1) * (2 0 1 3) = 3 1 2 0
+		
+		(3 2 0 1) * (2 0 1 3) * (2 0 1 3) = (3 1 2 0) * (2 0 1 3) = 3 0 1 2
+		
+	Permutation Multiplication is associative, like numbers Multiplication, e.g. doesn't matter what to apply first
+	
+		For Numbers: 3 * 5 * 7 = (3 * 5) * 7 = 3 * (5 * 7)
+		
+		Then for Some Permutations: P1 * p2 * p3 * p4 = P1 * (p2 * p3 * p4) = (P1 * p2) * (p3 * p4) and so on.
+		
+	Permutation Multiplication is NOT Commutative, like numbers subtraction, e.g. order matter
+	
+		For numbers: 3-5 ~= 5-3
+		
+		Then for Permutations = (0 1 2 3) * (2 0 1 3) ~= (2 0 1 3) * (0 1 2 3)
+		
+	P^k means apply Permutation k times, e.g. (3 2 0 1) * (2 0 1 3) * (2 0 1 3) is written as: p1 * p2^2
+	
+	Say we are given P1 and P2, and we would like to evaluate p1 * p2^k, where k = 10^9?!!
+	
+		Check above, Permutation is similar in that for Numbers.
+		
+		E.g. how do you calculate a^16? we use divide and conquer: a^16 = a^8 * a^8. Calculate a^8 and square it! SAME for Permutation
+
+```cpp
+typedef vector<int> perm;
+perm pow(perm inp, perm apply, int k)
+{
+    if(k == 0) // won't apply permutation, so same as input
+        return inp;
+    if(k == 1)
+        return applyPerm(inp, apply);	// implement: (0 1 2 3) * (2 0 1 3) = 2 0 1 3
+    perm = pow(inp, apply, k/2);
+        cur = applyPerm(cur, cur);
+    if(k%2 == 1)	// we have odd power
+        cur = applyPerm(cur, perm);
+    return cur;
+}
+```
+
+Order? N for applyPerm * logk for depth -> O(nlogk)
+
+Could we do better? YES, a bit more code, but we can do it! Using Permutation Cycle Notation
