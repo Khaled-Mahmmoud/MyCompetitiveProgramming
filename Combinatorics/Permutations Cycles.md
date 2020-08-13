@@ -220,3 +220,21 @@ Let's think again in our problem: how to solve p1 * p2^k	and k = 10^9? Simply,
 1) Generate Permutation Cycles (aka disjoint cycle decomposition) -> O(n)
 2) For each cycle length M, apply cycle M%N times, which is just a rotation
 3) Cleverly, implement all in O(n)
+
+**Effect of permutation applying over cycle length**
+
+Say we have permutation p = 3 0 1 2 5 6 4
+
+then we have cycle of length 4 = (3 0 1 2), and cycle of length 3 (5 6 4)
+	
+How is applying it over itself? p*p
+
+p' = 2 3 0 1 6 4 5
+
+then we have cycle of length 2 = (2 0), and 2 (3 1) and cycle of length 3 (6 4 5)
+
+Conclusion: Applying a permutation ONCE on a cycle, divide even to 2 cycles of length, cycleLen/2 and odd cycle remain same.
+
+More application is not deterministic for even cycle, but same for odd cycles.
+
+The elements of the original disjoint cycles will never be mixed.
