@@ -93,16 +93,3 @@ int main()
     return 0;
 }
 ```
-
-```cpp
-int t;cin>>t;
-while(t--)
-{
-   long long a,b,m,x;
-   cin>>a>>b;
-   m=max(a,b);
-   if(m & 1) x = -1;
-   else x = 1;
-   cout<<(a-b)*x+m*m-m+1<<'\n';
-}
-```
