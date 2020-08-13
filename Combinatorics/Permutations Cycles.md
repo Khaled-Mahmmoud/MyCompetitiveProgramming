@@ -109,7 +109,7 @@ Say we have a permutation: 	2 0 1 3
 	
 Applying a permutation on other, aka multiplication, means to map its values according to the permutation.
 		
-So 2 0 1 3 MEANS: 0 -map-> 2	1 -map-> 0		2 -map-> 1		3 -map-> 3
+So 2 0 1 3 MEANS:`  0 -map-> 2       1 -map-> 0	      2 -map-> 1	  3 -map-> 3`
 		
 Then
 	
