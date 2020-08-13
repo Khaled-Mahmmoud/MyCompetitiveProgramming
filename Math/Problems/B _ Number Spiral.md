@@ -3,9 +3,9 @@
 A number spiral is an infinite grid whose upper-left square has number 1. Here are the first eight layers of the spiral:
 
 
-              1    2    `9`    10    25   26   49   50
+1    2    `9`    10    25   26   49   50
               
-              4    3    8    11    24   27   48   51
+4    3    8    11    24   27   48   51
               
               5    6    7    12    23   28   47   52
               16   15   14   13    22   29   46   53
