@@ -238,3 +238,22 @@ Conclusion: Applying a permutation ONCE on a cycle, divide even to 2 cycles of l
 More application is not deterministic for even cycle, but same for odd cycles.
 
 The elements of the original disjoint cycles will never be mixed.
+
+
+**Permutation Order**
+
+We said that, if we have a cycle of length N, applying permutation N times, back it to original.
+
+What about whole string, after how many perm it back to its original? This is called Permutation Order.
+	
+Let say that we have ONLY one cycle of length 4 -> Then string back to its original after 4 steps.
+
+what about 2 cycles of length 4, and 8
+
+Then after 8 steps: I am 2*4 and 8, so both of us are backed to same
+
+what about 2 cycles of length 6, and 9
+	
+Then after 18 step: I am 3*6 and 2*9, so both of us are divisble by number of steps.
+
+Then we need LCM between cycles length, to know when we all back to original in same time.
