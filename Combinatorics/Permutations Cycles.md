@@ -199,7 +199,7 @@ let's apply it many times over a perm p: 0 1 2 3
 (0 1 2 3) * (3 0 1 2)^1 = 3 0 1 2
 (0 1 2 3) * (3 0 1 2)^2 = 2 3 0 1	Notice, the rotation of the cycle
 (0 1 2 3) * (3 0 1 2)^3 = 1 2 3 0
-(0 1 2 3) * (3 0 1 2)^3 = 0 1 2 3	We backed again!
+(0 1 2 3) * (3 0 1 2)^4 = 0 1 2 3	We backed again!
 
 Think in that, a cycle of length N, if applied N times, it backs to is origin!
 
