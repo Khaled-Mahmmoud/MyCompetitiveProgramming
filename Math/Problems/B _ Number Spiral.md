@@ -57,6 +57,43 @@ Output:
                                             \
 |64|  63   62     61     60    59    58     57
 ```
+
+we can see that on every odd-numbered y on first row, there a square number. and on every even-numbered x on first column, there a square number
+
+```cpp
+int main()
+{
+    int t;cin>>t;
+    while(t--)
+    {
+        long long x,y;
+        cin>>x>>y;
+        if(y>x)
+        {
+            if(y%2==1)
+              cout<<y*y - x + 1;
+            else
+            {
+                y--;
+                cout<<y*y + x;
+            }
+        }
+        else
+        {
+            if(x%2==0)
+                cout<<x*x-y+1;
+            else
+            {
+                x--;
+                cout<<x*x + y;
+            }
+        }
+        cout<<'\n';
+    }
+    return 0;
+}
+```
+
 ```cpp
 int t;cin>>t;
 while(t--)
