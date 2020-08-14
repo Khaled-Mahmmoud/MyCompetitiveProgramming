@@ -22,8 +22,10 @@ sort(v.begin(),v.end());   // O(nlogn)
 // a reverse order is possible as follows:
 sort(v.rbegin(),v.rend());          OR       sort(v.begin(),v.end(),greater<int>())
 // An ordinary array a can be sorted as follows:
-sort(a,a+n);   where n is the size of array
-The following code sorts the string s:
+sort(a,a+n);  // where n is the size of array
+// a reverse order is possible as follows:
+sort(a,a+n,greater<int>());
+//The following code sorts the string s:
 string s = "monkey";
 sort(s.begin(), s.end());
 ```
