@@ -16,18 +16,24 @@ we can sort in O(n^2)
 In this section we will see how to use the C++ sort function. 
 The following code sorts a vector in increasing order.
 ```cpp
-vector<int> v = {4,2,5,3,5,8,3};
+
 sort(v.begin(),v.end());   // O(nlogn)
 // After the sorting, the contents of the vector will be [2,3,3,4,5,5,8]
 // a reverse order is possible as follows:
 sort(v.rbegin(),v.rend());          OR       sort(v.begin(),v.end(),greater<int>())
+
+
 // An ordinary array a can be sorted as follows:
 sort(a,a+n);  // where n is the size of array
 // a reverse order is possible as follows:
 sort(a,a+n,greater<int>());
 //The following code sorts the string s:
+
+
 string s = "monkey";
-sort(s.begin(), s.end());
+sort(str.begin(), str.end());
+// a reverse order is possible as follows:
+sort(str.rbegin(),str.rend());          OR       sort(str.begin(),str.end(),greater<int>())
 ```
 
 Sorting a string means that the characters of the string are sorted. For example, the string ”monkey” becomes ”ekmnoy”
