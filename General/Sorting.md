@@ -27,9 +27,13 @@ sort(v.rbegin(),v.rend());          OR       sort(v.begin(),v.end(),greater<int>
 sort(a,a+n);  // where n is the size of array
 // a reverse order is possible as follows:
 sort(a,a+n,greater<int>());
+// but if there 
+long long a[n];
+// we can sort it by:
+sort(a,a+n,greater<long long>());
+
+
 //The following code sorts the string s:
-
-
 string s = "monkey";
 sort(str.begin(), str.end());
 // a reverse order is possible as follows:
