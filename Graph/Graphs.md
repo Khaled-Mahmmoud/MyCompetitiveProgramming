@@ -145,7 +145,7 @@ In the above shown graph, there is only one vertex ‘a’ with no other edges. 
 
 if graph doesn't contain any loop or parallel graph it's called Simple graph otherwise it's called not simple graph
 
-**Complete graph** 
+10) **Complete graph** 
 
 ( if from any node in graph , we can reach to all nodes but path = 1)
 ```
