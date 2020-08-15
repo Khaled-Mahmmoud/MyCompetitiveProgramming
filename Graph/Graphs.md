@@ -61,7 +61,9 @@ As you can see each edge has a weight/cost assigned to it. If you want to go fro
 1 -> 3
 1 -> 4 -> 3
 ```
-Therefore the total cost of each path will be as follows: - The total cost of 1 -> 2 -> 3 will be (1 + 2) i.e. 3 units 
+Therefore the total cost of each path will be as follows: 
+
+- The total cost of 1 -> 2 -> 3 will be (1 + 2) i.e. 3 units 
 
 - The total cost of 1 -> 3 will be 1 unit - The total cost of 1 -> 4 -> 3 will be (3 + 2) i.e. 5 units
 
