@@ -1,3 +1,5 @@
+# Graphs
+
 **Graphs** are mathematical structures that represent pairwise relationships between objects. 
 It can be visualized by using the following two basic components:
 
