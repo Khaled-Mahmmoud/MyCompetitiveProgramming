@@ -40,13 +40,20 @@ These nodes only have ancestor nodes. They can have any number of incoming edges
 
  ### Types of graph 
 
-1) **Directed graph**  :  A directed graph is a graph in which all the edges are uni-directional i.e. the edges point in a single direction.
+
+1) **Directed graph**  
+
+A directed graph is a graph in which all the edges are uni-directional i.e. the edges point in a single direction.
 A ---> B       E = { (A,B) }
 
-2) **Undirected graph**  :  An undirected graph is a graph in which all the edges are bi-directional i.e. the edges do not point in any specific direction.
+2) **Undirected graph**  
+
+An undirected graph is a graph in which all the edges are bi-directional i.e. the edges do not point in any specific direction.
 A ---- B       E = { (A,B) , (B,A) }
 
-3) **Weighted graph** : In a weighted graph, each edge is assigned a weight or cost. Consider a graph of 4 nodes as in the diagram below.
+3) **Weighted graph** 
+
+In a weighted graph, each edge is assigned a weight or cost. Consider a graph of 4 nodes as in the diagram below.
 As you can see each edge has a weight/cost assigned to it. If you want to go from vertex 1 to vertex 3, you can take one of the following 3 paths:
 ```
        1
@@ -67,7 +74,9 @@ Therefore the total cost of each path will be as follows:
 
 - The total cost of 1 -> 3 will be 1 unit - The total cost of 1 -> 4 -> 3 will be (3 + 2) i.e. 5 units
 
-4) **Cyclic graph** : A graph is cyclic if the graph comprises a path that starts from a vertex and ends at the same vertex. That path is called a cycle.
+4) **Cyclic graph** 
+
+A graph is cyclic if the graph comprises a path that starts from a vertex and ends at the same vertex. That path is called a cycle.
 
 An acyclic graph is a graph that has no cycle.
 ```
@@ -93,13 +102,17 @@ A cycle in a undirected graph is a path of at least 3 length such that the first
 Loop at any node not present graph cycle
 
   
-5) **Connected Graph** ( if from any node in graph , we can reach to all nodes)
+5) **Connected Graph**
+
+( if from any node in graph , we can reach to all nodes)
 ```
      A ←-- D
      ↓     ↑
      B --→ C
 ```
-6) **Disconnected Graph** ( if above condition is not met )
+6) **Disconnected Graph**
+
+( if above condition is not met )
 ```
      A --→ D
      ↓     ↑
@@ -108,6 +121,7 @@ Loop at any node not present graph cycle
      E
 ```
 7) **Null Graph**
+
 A graph having no edges is called a Null Graph.
 
 ```
@@ -120,6 +134,7 @@ A graph having no edges is called a Null Graph.
 In the above graph, there are three vertices named ‘a’, ‘b’, and ‘c’, but there are no edges among them. Hence it is a Null Graph. 
 
 8) **Trivial Graph**
+
 A graph with only one vertex is called a Trivial Graph.
 ```
         A
@@ -127,9 +142,19 @@ A graph with only one vertex is called a Trivial Graph.
 In the above shown graph, there is only one vertex ‘a’ with no other edges. Hence it is a Trivial graph.
 
 9) **Simple graph**
+
 if graph doesn't contain any loop or parallel graph it's called Simple graph otherwise it's called not simple graph
 
+**Complete graph** 
 
+( if from any node in graph , we can reach to all nodes but path = 1)
+```
+                  A
+               /  |  \
+              B---|---C
+               \  |  /
+                  D 
+```
 
 Adjacent vertices(A) = {B,D} 
 
@@ -213,14 +238,7 @@ Adjacent vertices(A) = {A,B}
         number of edges at a directed graph = 4
         
         
-**Complete graph** ( if from any node in graph , we can reach to all nodes but path = 1)
-```
-                  A
-               /  |  \
-              B---|---C
-               \  |  /
-                  D 
-```
+
          
          number of edges = E
          
