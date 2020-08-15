@@ -93,13 +93,13 @@ A cycle in a undirected graph is a path of at least 3 length such that the first
 Loop at any node not present graph cycle
 
   
-5) Connected Graph ( if from any node in graph , we can reach to all nodes)
+5) **Connected Graph** ( if from any node in graph , we can reach to all nodes)
 ```
      A ←-- D
      ↓     ↑
      B --→ C
 ```
-6) Disconnected Graph ( if above condition is not met )
+6) **Disconnected Graph** ( if above condition is not met )
 ```
      A --→ D
      ↓     ↑
@@ -107,6 +107,30 @@ Loop at any node not present graph cycle
      ↓
      E
 ```
+7) **Null Graph**
+A graph having no edges is called a Null Graph.
+
+```
+          A
+     
+     
+   B             C
+   
+```
+In the above graph, there are three vertices named ‘a’, ‘b’, and ‘c’, but there are no edges among them. Hence it is a Null Graph. 
+
+8) **Trivial Graph**
+A graph with only one vertex is called a Trivial Graph.
+```
+        A
+```
+In the above shown graph, there is only one vertex ‘a’ with no other edges. Hence it is a Trivial graph.
+
+9) **Simple graph**
+if graph doesn't contain any loop or parallel graph it's called Simple graph otherwise it's called not simple graph
+
+
+
 Adjacent vertices(A) = {B,D} 
 
 Adjacent vertices(C) = {D}
@@ -117,10 +141,7 @@ Adjacent edges(A,B)  = { (A,D) , (B,C) , (B,E) }
   B ←-- A --→                 ↑↓ Parallel edges
         ↑ ← ↓                  B
 ```
-Adjacent vertices(A) = {A,B} 
-
-if graph doesn't contain any loop or parallel graph it's called **Simple graph** otherwise it's called **not simple graph**
-                   
+Adjacent vertices(A) = {A,B}                    
             
 ```
                    A --→ B
