@@ -147,9 +147,35 @@ In the above shown graph, there is only one vertex ‘a’ with no other edges. 
 
 if graph doesn't contain any loop or parallel graph it's called Simple graph otherwise it's called not simple graph
 
+The maximum number of edges possible in a single graph with ‘n’ vertices is `nC2` where nC2 = n(n – 1)/2
+
+The number of simple graphs possible with ‘n’ vertices is `2^nC2` where 2^nC2 = 2^(n(n-1)/2)
+
+In the following graph, there are 3 vertices with 3 edges which is maximum excluding the parallel edges and loops. This can be proved by using the above formule.
+```
+          A
+        /   \
+       B     C
+```       
+The maximum number of edges with n=3 vertices −
+
+nC2 = n(n–1)/2
+   = 3(3–1)/2
+   = 6/2
+   = 3 edges
+   
+The maximum number of simple graphs with n=3 vertices −
+
+2nC2 = 2^(n(n-1)/2)
+   = 2^(3(3-1)/2)
+   = 2^3
+   = 8
+   
+These 8 graphs are as [shown](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/simple%20graph.jpg)
+
 10) **Complete graph** 
 
-( if from any node in graph , we can reach to all nodes but path = 1)
+(if from any node in graph , we can reach to all nodes but path = 1)
 ```
                   A
                /  |  \
