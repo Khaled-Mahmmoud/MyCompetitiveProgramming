@@ -243,6 +243,11 @@ In general, a complete bipartite graph is not a complete graph.
 
 The maximum number of edges in a bipartite graph with n vertices is n^2 / 4
              
+14) **Star Graph**
+
+A complete bipartite graph of the form K1, n-1 is a star graph with n-vertices. A star graph is a complete bipartite graph if a single vertex belongs to one set and all the remaining vertices belong to the other set.
+
+In [this graphs](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/star_graph.jpg), out of ‘n’ vertices, all the ‘n–1’ vertices are connected to a single vertex. Hence it is in the form of K1, n-1 which are star graphs.
                    
 **A simple path** from v to w is a path from v to w with no repeated vertices, except that the first and last may be the same vertex.
 ```
