@@ -173,7 +173,19 @@ The maximum number of simple graphs with n=3 vertices −
    
 These 8 graphs are as [shown](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/simple%20graph.jpg)
 
-10) **Complete graph** 
+10) **Regular Graph**
+
+A graph G is said to be regular, if all its vertices have the same degree. In a graph, if the degree of each vertex is ‘k’, then the graph is called a ‘k-regular graph’.
+
+In the following graphs, all the vertices have the same degree. So these graphs are called regular graphs.
+```
+         A            P_____Q
+       /   \          |     |
+      B     C         R_____S
+```
+In both the graphs, all the vertices have degree 2. They are called 2-Regular Graphs.
+
+11) **Complete graph** 
 
 (if from any node in graph , we can reach to all nodes but path = 1)
 ```
