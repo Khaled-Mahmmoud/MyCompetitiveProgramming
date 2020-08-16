@@ -195,12 +195,12 @@ In both the graphs, all the vertices have degree 2. They are called 2-Regular Gr
                \  |  /
                   D 
 ```
-
 Adjacent vertices(A) = {B,D} 
 
 Adjacent vertices(C) = {D}
 
 Adjacent edges(A,B)  = { (A,D) , (B,C) , (B,E) }  
+
 ```
          Loop                  A
   B ←-- A --→                 ↑↓ Parallel edges
@@ -217,9 +217,33 @@ Adjacent vertices(A) = {A,B}
              
 (C,A) is disconnectd vertices
 
-                         
-            
-            
+12) **Bipartite Graph**
+
+A simple graph G = (V, E) with vertex partition V = {V1, V2} is called a bipartite graph if every edge of E joins a vertex in V1 to a vertex in V2.
+
+In general, a Bipertite graph has two sets of vertices, let us say, V1 and V2, and if an edge is drawn, it should connect any vertex in set V1 to any vertex in set V2.
+
+In [this graph](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/bipartite_graph.jpg), you can observe two sets of vertices − V1 and V2. Here, two edges named ‘ae’ and ‘bd’ are connecting the vertices of two sets V1 and V2.
+
+13) **Complete Bipartite Graph**
+
+A bipartite graph ‘G’, G = (V, E) with partition V = {V1, V2} is said to be a complete bipartite graph if every vertex in V1 is connected to every vertex of V2.
+
+In general, a complete bipartite graph connects each vertex from set V1 to each vertex from set V2.
+
+[The following graph](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/complete_bipartite_graph.jpg) is a complete bipartite graph because it has edges connecting each vertex from set V1 to each vertex from set V2.
+
+If |V1| = m and |V2| = n, then the complete bipartite graph is denoted by Km, n.
+
+Km,n has (m+n) vertices and (mn) edges.
+
+Km,n is a regular graph if m=n.
+
+In general, a complete bipartite graph is not a complete graph.
+
+The maximum number of edges in a bipartite graph with n vertices is n^2 / 4
+             
+                   
 **A simple path** from v to w is a path from v to w with no repeated vertices, except that the first and last may be the same vertex.
 ```
                  A
