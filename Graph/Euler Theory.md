@@ -1,6 +1,9 @@
 # Euler Theory
 
 [Euler Theory](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/Theory%20Euler.pdf)
+
+[Eulerian Path](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/Eulerian%20path.png)
+
 ```cpp
 vector<vector<int>>adj;
 vector<int>tour;
