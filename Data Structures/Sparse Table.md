@@ -27,18 +27,18 @@ More formally, **_ST[j][i]_** holds the value of **_Q(i, i + (2^j) - 1)_**
 We can build the sparse table easily in **_O(n.log(n))_** as follows (having **_Q()_** equals **_min()_** as an example):
 
 ```C++
-for (int i = 0; i < n; ++i) {
-    ST[0][i] = a[i];
+for (int j= 0; j < n; j++) 
+{
+    ST[0][j] = a[j];
 }
+for (int i = 1; (1 << i) <= n; i++) 
+{
+    for (int j = 0; (j + (1 << i)) <= n; j++) 
+    {
+        int x = ST[i - 1][j];
+        int y = ST[i - 1][j + (1 << (i - 1))];
 
-// Note that (1 << j) is equivalent to pow(2, j)
-
-for (int j = 1; (1 << j) <= n; ++j) {
-    for (int i = 0; (i + (1 << j)) <= n; ++i) {
-        int x = ST[j - 1][i];
-        int y = ST[j - 1][i + (1 << (j - 1))];
-
-        ST[j][i] = min(x, y);
+        ST[i][j] = min(x, y);
     }
 }
 ```
