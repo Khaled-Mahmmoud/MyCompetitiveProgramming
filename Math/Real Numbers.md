@@ -7,3 +7,6 @@
 - 1/12 = 0.08333333333 .. 3 repeats for ever
 - 5/7 = 0.714285714285714285…. 714285 repeat forever
 - ⅙ = 0.1(6), 1/12 = 0.08(3). 5/7 = 0.(71428), ½ = 0.5(0)
+
+How to know number of digits of cycle of a/b?
+- [Programming](https://vjudge.net/problem/UVA-202)? mark reminders of long division
