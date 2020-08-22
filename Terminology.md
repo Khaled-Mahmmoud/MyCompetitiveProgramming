@@ -118,4 +118,3 @@ such that : d , cd , bcd.
 then string of 1 letter , has no proper suffix
 
 ******************************************************************************************************************************************************
-**Rational Numbers** : can be represented as **fraction** : 1/6 , 7/2. **Irrational** : pi = 3.1415 , sqrt(2)
