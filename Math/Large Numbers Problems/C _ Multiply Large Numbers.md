@@ -1,22 +1,28 @@
-/*
-Multiply Large Numbers represented as Strings
+# Multiply Large Numbers represented as Strings
+
 Given two numbers as strings. The numbers may be very large (may not fit in long long int)
+        
 the task is to find product of these two numbers.
+        
 Input : num1 = 4154  
+        
         num2 = 51454
+        
 Output : 213739916 
+        
 Input :  num1 = 654154154151454545415415454  
+        
          num2 = 63516561563156316545145146514654 
+        
 Output : 41549622603955309777243716069997997007620439937711509062916
+        
 The idea is based on school mathematics multiplication
 We start from last digit of second number multiply it with first number
 Then we multiply second last digit of second number with first number, and so on
 We add all these multiplications. While adding, we put i-th multiplication shifted
 The approach used in below solution is to keep only one array for result
 We traverse all digits first and second numbers in a loop and add the result at appropriate position.
-*/
-
-
+```cpp
 string multiply(string str1, string str2) 
 { 
     int n1 = str1.length(); 
@@ -82,4 +88,5 @@ int main()
     cout << multiply(str1, str2); 
     return 0; 
 } 
-// Time Complexity: O(m*n), where m and n are length of two number that need to be multiplied
+```
+Time Complexity: O(m*n), where m and n are length of two number that need to be multiplied
