@@ -106,8 +106,7 @@ some other facts :
 
 - x%10 [get the last digit]. x/10 [remove last digit]
 
--(a^b) % n => assume b even and x = b/2
-     - ( (a^x) % n * (a^x) % n)%n
+-(a^b) % n => assume b even and x = b/2 then ( (a^x) % n * (a^x) % n) % n
      
 - (1/a) % n ? modular multiplicative inverse
 
