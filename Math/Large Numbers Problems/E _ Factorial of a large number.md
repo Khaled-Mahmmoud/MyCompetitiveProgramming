@@ -1,10 +1,14 @@
-/*
-Given an integer, the task is to find factorial of the number
-1 ≤ T ≤ 100
-1 ≤ N ≤ 1000
-*/
+#  Factorial of a large number
 
-// first solution
+Given an integer, the task is to find factorial of the number
+
+1 ≤ T ≤ 100
+	
+1 ≤ N ≤ 1000
+
+
+_**First Solution**_
+```cpp
 vector<string>v(1009);
 string multiply(string str1, string str2) 
 { 
@@ -67,12 +71,9 @@ int main()
     }
 	return 0;
 }
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//                                                   second solution
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-#include<bits/stdc++.h>
-using namespace std;
+```
+_**Second Solution**_
+```cpp
 vector<string>v(1009);
 int multiply(int x, int res[], int res_size) 
 { 
@@ -114,4 +115,5 @@ int main()
     }
 	return 0;
 }
-// Time Complexity of first Solution = 2 * Time Complexity of second Solution
+```
+Time Complexity of first Solution = 2 * Time Complexity of second Solution
