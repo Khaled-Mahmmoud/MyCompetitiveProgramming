@@ -9,10 +9,4 @@ Any integer , it's double is even
 even ==>> 2k      where k is even number
 odd  ==>> 2k+1    where k is even number
 
-****************************************************
-                     _   _
-                    |  a  |
-if we want to find  | --- |
-                    |  b  |
-                    
-we can do        a = (a+b-1) / b 
+
