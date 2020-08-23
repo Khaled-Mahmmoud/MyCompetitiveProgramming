@@ -41,6 +41,8 @@ ceil(2)   = 2
 ceil(-3.2)= -3
 ceil(-5.5)= -5
 ```
+ceil(x,y) = `(x+y-1)/y`
+
 ### floor 
 
 Rounds x downward, returning the largest integral value that is not greater than x   O(1)
