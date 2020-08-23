@@ -47,9 +47,9 @@ _**Applications**_
 
 If today is Tuesday, what day will it be after 40 days?
 
->>> Represent each day with a number from 0 to 6
+Represent each day with a number from 0 to 6
 
->>> Let Tuesday be 3
+Let Tuesday be 3
 
 next = ( day + n ) % 7
 
