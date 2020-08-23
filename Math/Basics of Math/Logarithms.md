@@ -46,7 +46,7 @@ k = [10, e, 2] => (common, natural, binary) log
 - In c++: log10(x), log(x), log2(x)
 
 
-Another property of logarithms is that the number of digits of an integer x in base b is `[ logb(x) + 1 ]`
+Another property of logarithms is that the number of digits of an integer x in base b is `[ floor(logb(x)) + 1 ]`
 
 For example, the representation of 123 in base 2 is 1111011 and [ log2(123) + 1 ] = 7
 ```
