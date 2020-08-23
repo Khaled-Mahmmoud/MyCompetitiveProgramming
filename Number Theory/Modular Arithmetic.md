@@ -91,3 +91,22 @@ int sum = 0;
 for(int i = 0; i < n; i++)
     sum = (sum + a[i]%m)%m;
 ```
+
+` |a%n| has n-1: 0, 1, ...n-1
+
+- (n ^ x) % n = 0 for any x >= 0
+
+- -a%n != a%n (3 %12 = 3 vs -3 %12 = 9)
+
+- ((-a%n)+(a%n))%n = 0
+
+- x % (a+b) != x % a + x %b
+
+- x%10 [get the last digit]. x/10 [remove last digit]
+
+-(a^b) % n => assume b even and x = b/2
+     - ( (a^x) % n * (a^x) % n)%n
+     
+- (1/a) % n ? modular multiplicative inverse
+
+- ((a*b) % n * (1/a)%n) %n = b % n
