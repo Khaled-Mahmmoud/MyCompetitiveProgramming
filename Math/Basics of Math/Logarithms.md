@@ -41,6 +41,11 @@ The natural logarithm ln(x) = loge(x) of a number x is a logarithm whose base is
 
 e ≈ 2,71828
 
+k = [10, e, 2] => (common, natural, binary) log
+- Math notations: lg(x), ln(x), lb(x)
+- In c++: log10(x), log(x), log2(x)
+
+
 Another property of logarithms is that the number of digits of an integer x in base b is `[ logb(x) + 1 ]`
 
 For example, the representation of 123 in base 2 is 1111011 and [ log2(123) + 1 ] = 7
