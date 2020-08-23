@@ -29,11 +29,11 @@ N % 5  =   0 1 2 3 4 0 1 2 3 4 0  1  2  3  ...   //   Periodic
 
 `a % b = a - (a/b) * b`
 
-( a + b ) % m = ( a % m + b % m ) % m
+`( a + b ) % m = ( a % m + b % m ) % m`
 
-( a - b ) % m = ( a % m - b % m ) % m
+`( a - b ) % m = ( a % m - b % m ) % m`
 
-( a * b ) % m = ( a % m * b % m ) % m
+`( a * b ) % m = ( a % m * b % m ) % m`
 
 ( a / b ) % m may NOT be same as ( (a % m) / (b % m) ) % m
 
