@@ -92,6 +92,8 @@ for(int i = 0; i < n; i++)
     sum = (sum + a[i]%m)%m;
 ```
 
+some other facts : 
+
 ` |a%n| has n-1: 0, 1, ...n-1
 
 - (n ^ x) % n = 0 for any x >= 0
@@ -115,3 +117,11 @@ for(int i = 0; i < n; i++)
 
 - a % 0 is undefined
 
+```cpp
+boo is_odd(int n)
+{
+    return (n % 2 == 1);     //  this wrong because if n is negative then n % 2 = -1 
+    return (n % 2 == 1) || (n % 2 == -1);   // this correct
+    retunr (n % 2 != 0);   // this correct
+}
+```
