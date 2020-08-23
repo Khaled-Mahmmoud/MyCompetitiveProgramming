@@ -25,6 +25,21 @@ We traverse all digits first and second numbers in a loop and add the result at 
 ```cpp
 string multiply(string str1, string str2) 
 { 
+    if(str1.at(0) == '-' && str2.at(0)!='-') 
+    { 
+         str1 = str1.substr(1); 
+         cout<<"-";
+    } 
+    else if(str1.at(0) != '-' && str2.at(0) == '-') 
+    { 
+         str2 = str2.substr(1); 
+         cout<<"-";
+    } 
+    else if(str1.at(0) == '-' && str2.at(0) == '-') 
+    { 
+         str1 = str1.substr(1); 
+         str2 = str2.substr(1); 
+    } 
     int n1 = str1.length(); 
     int n2 = str2.length(); 
         
@@ -69,22 +84,7 @@ int main()
 { 
     string str1 = "1235421415454545454545454544"; 
     string str2 = "1714546546546545454544548544544545"; 
-  
-       if(str1.at(0) == '-' && str2.at(0)!='-') 
-        { 
-            str1 = str1.substr(1); 
-               cout<<"-";
-        } 
-        else if(str1.at(0) != '-' && str2.at(0) == '-') 
-        { 
-            str2 = str2.substr(1); 
-                cout<<"-";
-        } 
-        else if(str1.at(0) == '-' && str2.at(0) == '-') 
-        { 
-            str1 = str1.substr(1); 
-            str2 = str2.substr(1); 
-        } 
+    
     cout << multiply(str1, str2); 
     return 0; 
 } 
