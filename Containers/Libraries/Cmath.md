@@ -67,3 +67,14 @@ round(-5.8)= -6
 round   ==>> int
 
 llround ==>> long long int
+
+### trunc
+
+return rounds x toward zero
+
+trunc(2.3)  =  2.0
+trunc(3.8)  =  3.0
+trunc(5.5)  =  5.0
+trunc(-2.3) =  -2.0
+trunc(-3.8) =  -3.0
+trunc(-5.5) =  -5.0
