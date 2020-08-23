@@ -109,4 +109,9 @@ for(int i = 0; i < n; i++)
      
 - (1/a) % n ? modular multiplicative inverse
 
-- ((a*b) % n * (1/a)%n) %n = b % n
+- ((a * b) % n * (1/a)%n) %n = b % n
+
+- a % (2^n) = a & (n-1) => E.g. a%4 = a&3
+
+- a % 0 is undefined
+
