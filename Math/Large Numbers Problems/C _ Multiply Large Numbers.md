@@ -23,7 +23,7 @@ We add all these multiplications. While adding, we put i-th multiplication shift
 The approach used in below solution is to keep only one array for result
 We traverse all digits first and second numbers in a loop and add the result at appropriate position.
 ```cpp
-void multiply(string str1, string str2) 
+string multiply(string str1, string str2) 
 { 
     if(str1.at(0) == '-' && str2.at(0)!='-') 
     { 
