@@ -23,7 +23,7 @@ We add all these multiplications. While adding, we put i-th multiplication shift
 The approach used in below solution is to keep only one array for result
 We traverse all digits first and second numbers in a loop and add the result at appropriate position.
 ```cpp
-string multiply(string str1, string str2) 
+void multiply(string str1, string str2) 
 { 
     if(str1.at(0) == '-' && str2.at(0)!='-') 
     { 
@@ -85,7 +85,7 @@ int main()
     string str1 = "1235421415454545454545454544"; 
     string str2 = "1714546546546545454544548544544545"; 
     
-    cout << multiply(str1, str2); 
+    multiply(str1, str2); 
     return 0; 
 } 
 ```
