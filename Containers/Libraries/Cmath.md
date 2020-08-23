@@ -72,6 +72,11 @@ llround ==>> long long int
 
 round(x, y) = (x+y/2)/y [if x > 0] and (x-y/2)/y [x < 0]
 
+To round to multiple of a specified amount
+- round(x, m) = round(x / m) * m
+- round(48.2 seconds, 15) = 45 seconds
+- round(2.1784 dollars, 0.01 (1 cent) ) = 2.18 dollars
+
 ### trunc
 
 return rounds x toward zero
