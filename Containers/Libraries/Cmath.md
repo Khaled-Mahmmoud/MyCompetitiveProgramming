@@ -70,6 +70,8 @@ round   ==>> int
 
 llround ==>> long long int
 
+round(x, y) = (x+y/2)/y [if x > 0] and (x-y/2)/y [x < 0]
+
 ### trunc
 
 return rounds x toward zero
