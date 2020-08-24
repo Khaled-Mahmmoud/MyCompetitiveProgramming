@@ -207,11 +207,11 @@ Double exponential time (2^2^poly(n)) : 2^2^n
 
 ### Difference between Order and Exactly number
 
-if n == 10^3
+if n = 10^3
 
-Order = O(n^3) = 10^9 (wrong answer)
+_**Order**_ = O(n^3) = 10^9 (wrong answer)
 
-Exactly number = 167167000 = 10^8 (Accept)
+_**Exactly number**_ = 167167000 = 10^8 (Accept)
 
 ```cpp
 void threeloops2(int n)	// O(n^3)
