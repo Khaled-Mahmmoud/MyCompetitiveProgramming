@@ -1,4 +1,4 @@
-# Generate_Divisors
+# Generate Divisors
 
 Computes all the divisors of a positive integer.
 ```cpp
