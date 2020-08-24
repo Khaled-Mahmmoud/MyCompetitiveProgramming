@@ -204,3 +204,26 @@ Exponential time (2^Poly(n)) : 2^n , 2^(n^2)
 Double exponential time (2^2^poly(n)) : 2^2^n
 
 2^(log n) ===>> Polynomial time
+
+### Difference between Order and Exactly number
+
+if n == 10^3
+
+Order = O(n^3) = 10^9 (wrong answer)
+
+Exactly number = 167167000 = 10^8 (Accept)
+
+```cpp
+void threeloops2(int n)	// O(n^3)
+{
+	for (int i = 0; i < n; ++i) 
+	{
+		for (int j = i; j < n; ++j) 
+		{
+			for (int k = j; k < n; ++k)
+			{
+				// some code
+			}
+		}
+	}
+```
