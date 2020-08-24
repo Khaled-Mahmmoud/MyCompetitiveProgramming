@@ -116,3 +116,45 @@ If the square root of given number(say x^2) is prime then it must have exactly t
 1) A number 1 of course.
 2) Square root of a number i.e., x(prime number).
 3) Number itself i.e., x^2.
+
+ ### Counting the divisors
+ 
+ 2^4 has 5 divisors 2^0, 2^1...2^4
+ 
+ p^n has n+1 divisors for any p prime number
+ 
+ what about p1^a  p1^b  	(a+1) * (b+1)
+ 
+ E.g. 12 2^2  3^1	has 3  2 divisors.
+ 
+ 12 = 2^0  3^0
+ 
+ 12 = 2^0  3^1
+ 
+ 12 = 2^1  3^0
+ 
+ 12 = 2^1  3^1
+ 
+ 12 = 2^2  3^0
+ 
+ 12 = 2^2  3^1
+ 
+ So if we modified factorization to return (p1^a, p2^b...)
+ 
+ We could develop a simple RECURSIVE code to build the divisors.
+ 
+ Simply pick a power from current prime, and move to next prime number
+ 
+ Any iterative code is also possible, but a bit challenging
+ 
+ what about Factorizing n^power
+ 
+ Simply if 	n   = p1^a 		 p2^b 		 p3^c
+ 
+ Then      	n^z = p1^az 	 p2^bz 	 p3^cz
+
+ Divisors of 	n   = (a+1) 	* (b+1) 	* (c+1)
+ 
+ Divisors of 	n^z = (az+1) 	* (bz+1) 	* (cz+1)
+ 
+ 
