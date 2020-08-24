@@ -1,6 +1,9 @@
-// prime numbers : numbers which are only divisible by themselves and one
-// Complexity: O(sqrt(n))
+# Check Integer Primality
 
+prime numbers : numbers which are only divisible by themselves and one
+
+Complexity: O(sqrt(n))
+```cpp
 bool isprime(int n)
 {
      if (n < 2)
@@ -21,3 +24,4 @@ int main()
         cout<<"not prime";
     return 0;
 }
+```
