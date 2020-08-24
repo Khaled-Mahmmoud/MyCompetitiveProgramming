@@ -64,7 +64,7 @@ int main()
     return 0;
 }
 ```
-# Count all perfect divisors of a number
+### Count all perfect divisors of a number
 
 Given a number n, count total perfect divisors of n.
     
@@ -108,7 +108,7 @@ we should know that only perfect square numbers have odd number of divisors
 
 100 (1, 2, 4, 5, 10, 20, 25, 50, 100) has 9 divisors
  
-Check whether a number has exactly three distinct factors or not?
+### Check whether a number has exactly three distinct factors or not?
     
 According to property of perfect square, “Every perfect square(x^2) always have only odd numbers of factors“
 If the square root of given number(say x^2) is prime then it must have exactly three distinct factors i.e,
