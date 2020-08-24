@@ -59,8 +59,24 @@ vector<int> primeFactors(int x)
 } 
 ```
 
-Store all prime numbers in vector primes  less than 10^7
+### Store all prime numbers in vector primes  less than 10^7
 
+_**Forward thinking**_
+
+O(n * sqrt(n))
+```cpp
+int primes(int n)	
+{	
+	vector<int> ans;
+	for(int i = 1; i <= n; ++i)
+		if( isprime(i) )
+			ans.push_back(i);
+	return ans;
+}
+```
+_**Backward thinking**_
+
+O(n log long n)
 ```cpp
 #define N 10000009 
 vector<int>primes;
