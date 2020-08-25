@@ -30,7 +30,7 @@ The largest power of 5 that divides 6!, exp3 = 1.
 
 `6! = 2^4 * 3^2 * 5^1`
 
-[the sum of divisors](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/Number%20Theory/Factorial/A%20_%20Legendre%E2%80%99s%20formula.md) of `6! = (2^0 + 2^1 + 2^2 + 2^3 + 2^4) * (3^0 + 3^1 + 3^2) * (5^0 + 5^1)`
+[the sum of divisors](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/Number%20Theory/Prime%20Factorization%20and%20Divisors%20Problems/B%20_%20Sum%20of%20all%20the%20factors%20of%20a%20number.md) of `6! = (2^0 + 2^1 + 2^2 + 2^3 + 2^4) * (3^0 + 3^1 + 3^2) * (5^0 + 5^1)`
 
 ```cpp
 
