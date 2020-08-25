@@ -98,3 +98,14 @@ pow(10, log10(X) ) = X
 log(a * b) = log(a)+log(b)
 
 log(n!) = log(1) + log(2) .... log(n)
+
+
+### What about calc gcd(m, n!)
+
+Let m =  2^3 * 5^7
+
+Let n! =  2^10 * 5^3 * 11^3
+
+then gcd is min of each power
+
+gcd = 2 ^ min(3, 10) * 5 ^ min(7, 3) * 11 ^ min(0, 3)
