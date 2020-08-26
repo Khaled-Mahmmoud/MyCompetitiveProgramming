@@ -66,7 +66,7 @@ The largest power of 9 that
 divides 10! is 92.
 
 Now to find the power of any non-prime number k in n!, we first find all the prime factors of the number k along with the count of number of their occurrences. 
-Then for each prime factor, we count occurrences using [Legendre’s formula](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/Number%20Theory/Factorial/B%20_%20Legendre%E2%80%99s%20formula.md) which states that the largest possible power of a prime number p in n is `⌊n/p⌋ + ⌊n/(p2)⌋ + ⌊n/(p3)⌋ + ……`
+Then for each prime factor, we count occurrences using [Legendre’s formula](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/Number%20Theory/Factorial%20Problems/A%20_%20Legendre%E2%80%99s%20formula.md) which states that the largest possible power of a prime number p in n is `⌊n/p⌋ + ⌊n/(p^2)⌋ + ⌊n/(p^3)⌋ + ……`
 
 Over all the prime factors p of K, the one with the minimum value of `findPowerOfK(n, p)/count` will be our answer where count is number of occurrences of p in k.
 
