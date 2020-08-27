@@ -65,6 +65,8 @@ int main()
 two integers a and b are said to be relatively prime, mutually prime, or coprime 
 if gcd(a,b) = 1
 
+Assume gcd(a,b) = g then (a+b)%g = 0 and (a-b)%g = 0 as (a+b)%g = (a%g+b%g)%g = (0+0)%g = 0
+
 ### LCM (Least Common Multiple) 
 
 LCM(a,b) = a * b / GCD(a,b)
