@@ -161,12 +161,15 @@ what about lcm ? we need max
 lcm = 2^max(3, 5) * 7^max(6, 2)
 
 given a, b, and gcd(a, b) how to get lcm(a, b)
-```
-what about 		 a*b = 2^(3+5) 		* 7^(6+2)
-and we know that gcd = 2^3       	* 7^2
-so by division we substrct powers and get lcm = 2^5  * 7^6
+
+what about a*b = 2^(3+5) 7^(6+2)
+
+and we know that gcd = 2^3 7^2
+
+so by division we substrct powers and get lcm = 2^5 7^6
+
 then lcm = a*b / gcd
-```       
+```
 ### Extended Euclidean Algorithm   
 
 Extended Euclidean algorithm also finds integer coefficients x and y such that:
