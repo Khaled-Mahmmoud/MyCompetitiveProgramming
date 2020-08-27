@@ -55,3 +55,27 @@ T power(T a, T b, T mod)
 }
 ```
 Time complexity : O(log(y))
+
+### calc a^1 + a^2 + a^3 + ..... + a^k
+```
+(a^1+a^2+a^3+a^4+a^5+a^6)       = (a^1+a^2+a^3)+(a^1*a^3+a^2*a^3+a^3*a^3)
+(a^1+a^2+a^3)+a^3*(a^1+a^2+a^3) = (a^1+a^2+a^3)*(1+a^3)
+(a^1+a^2+a^3)+a^3*(a^1+a^2+a^3) = (a^1+a^2+a^3)*(1+ a^1+a^2+a^3 - (a^1+a^2))
+
+what about odd n
+(a^1+a^2+a^3+a^4+a^5+a^6+a^7)   = a + a*(a^1+a^2+a^3+a^4+a^5+a^6) = a(1+(a^1+a^2+a^3+a^4+a^5+a^6))
+```
+```cpp
+ll sumPower(ll a, int k) 
+{ 
+	if (k == 0)
+		return 0;
+
+	if (k % 2 == 1)
+		return a * (1 + sumPower(a, k - 1));
+
+	ll half = sumPower(a, k / 2);
+	return half * (1 + half - sumPower(a, k / 2 - 1));
+}
+```
+Time Complexity : O(k)
