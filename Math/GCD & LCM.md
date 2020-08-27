@@ -65,7 +65,17 @@ int main()
 two integers a and b are said to be relatively prime, mutually prime, or coprime 
 if gcd(a,b) = 1
 
-Assume gcd(a,b) = g then (a+b)%g = 0 and (a-b)%g = 0 as (a+b)%g = (a%g+b%g)%g = (0+0)%g = 0
+Assume gcd(a,b) = g then `(a+b)%g = 0` and `(a-b)%g = 0` as (a+b)%g = (a%g+b%g)%g = (0+0)%g = 0
+
+this fact could be used as :
+
+gcd(45, 10) = gcd(35, 10) = gcd(25, 10) = gcd(15, 10) = gcd(5, 10) = 5
+
+gcd(10, 5) = gcd(5, 5) = gcd(5, 0) = 5
+
+Wait: We just keep reaming the small from the big, the big number turn to be the smaller, and then do reverse
+
+How to do this switch fast? gcd(45, 10) = gcd(45%10, 10)	-> simply remove the smaller cycles in 1 step
 
 ### LCM (Least Common Multiple) 
 
@@ -138,7 +148,25 @@ Note : to get GCD of two numbers , we take the least power
 
 to get LCM of two numbers , we take the highest power
 
-       
+let's do some prime representation for numbers a, b
+
+a = 2^3 * 7^6
+
+b = 2^5 * 7^2
+
+gcd = 2^min(3, 5) * 7^min(6, 2)
+
+what about lcm ? we need max
+
+lcm = 2^max(3, 5) * 7^max(6, 2)
+
+given a, b, and gcd(a, b) how to get lcm(a, b)
+```
+what about 		 a*b = 2^(3+5) 		* 7^(6+2)
+and we know that gcd = 2^3       	* 7^2
+so by division we substrct powers and get lcm = 2^5  * 7^6
+then lcm = a*b / gcd
+```       
 ### Extended Euclidean Algorithm   
 
 Extended Euclidean algorithm also finds integer coefficients x and y such that:
