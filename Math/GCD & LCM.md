@@ -169,7 +169,7 @@ and we know that gcd = 2^3 7^2
 so by division we substrct powers and get lcm = 2^5 7^6
 
 then lcm = a*b / gcd
-```
+
 ### Extended Euclidean Algorithm   
 
 Extended Euclidean algorithm also finds integer coefficients x and y such that:
