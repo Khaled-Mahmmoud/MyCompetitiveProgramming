@@ -1,52 +1,61 @@
-/*
-A matrix is a rectangular arrangement of numbers into rows and columns
-For example, matrix A has two rows and three columns
+# Matrices
 
+A matrix is a rectangular arrangement of numbers into rows and columns
+
+For example, matrix A has two rows and three columns
+```
               3 Columns
      A  =   | -2  5  6 | 2 Rows
             |  5  2  7 |
+```        
            
-           
-Matrix dimensions
+**Matrix dimensions**
+
 The dimensions of a matrix tells its size : the number of rows and columns of the matrix, in that order
+
 Since matrix A has two rows and three columns , we write its dimensions as 2 x 3 , pronounced "two by three"
+	
 When working with matrix dimensions, remember row x columns  // A ( 2 x 3 )
 
-Matrix elements
-A matrix element is simply a matrix entry
+**Matrix elements**
+
+A matrix element is simply a matrix entry.
 Each element in a matrix is identified by naming the row and column in which it appears
 
 the element g(2,1) is the entry in the second row and the first column
-
+```
         |4  14 -7|
     G = |18  5 13|
         |-20 4 22|
   in this case , g(2,1) = 18
-  
+```
 in general , the element in row i and column j of matrix A is denoted as a(i,j)
 
 Matrices can be used to solve systems of equations 
 But first, we must learn how to represent systems with matrices
-Representing a linear system with matrices
+
+**Representing a linear system with matrices**
+
 A system of equations can be represented by an augmented matrix
 
 system of equations :  2x + 5y = 10
+	
 system of equations :  3x + 4y = 24
-
+```
                      x   y  constants
 Augmented matrix   | 2   5   10 | --> Eq : 1
                    | 3   4   24 | --> Eq : 2
-                   
+```
 In an augmented matrix, each row represents one equation in the system and each column represents a variable 
 or the constant terms In this way, we can see that augmented matrices are a shorthand way of writing systems 
-of equations , The organization of the numbers into the matrix makes it unnecessary to write various symbols 
-like x, y, and = equals yet all of the information is still there!
+of equations, The organization of the numbers into the matrix makes it unnecessary to write various symbols 
+like x, y, and = equals yet all of the information is still there!.
 
 
+**Matrix row operations**
 
-Matrix row operations
 The following table summarizes the three elementary matrix row operations
-
+```
 Matrix row operation	          Example
 Switch any two rows        |2 5 3|  --> |3 4 6|
                            |3 4 6|  --> |2 5 3|
@@ -59,19 +68,14 @@ a nonzero constant        |3 4 6|  --> | 3    4    6 |
 Add one row to another    |2 5 3|  --> | 2    5    3 |
                           |3 4 6|  --> |3+2  4+5  6+3|
                      (Row 2 becomes the sum of rows 2 and 1)
-  
+```
 Matrix row operations can be used to solve systems of equations 
 but before we look at why, let's practice these skills
 
-*/
-#include<bits/stdc++.h>
-using namespace std;
-#define ll long long
+```cpp
 #define sz(v) (int)(v.size())
-
 typedef vector<int> row;
 typedef vector<row> matrix;
-
 /*
 Zero Matrix 
 matrix with all values are zero
@@ -215,3 +219,4 @@ matrix Reflect(matrix v)
             r[i][sz(v[0])-j-1] = v[i][j];
     return r;
 }
+```
