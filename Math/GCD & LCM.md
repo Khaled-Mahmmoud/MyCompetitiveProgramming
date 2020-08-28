@@ -254,3 +254,5 @@ The extended Euclidean algorithm is particularly useful when a and b are coprime
 Since x is the modular multiplicative inverse of “a modulo b”, and y is the modular multiplicative inverse of “b modulo a”
 
 In particular, the computation of the modular multiplicative inverse is an essential step in RSA public-key encryption method.
+
+[Extended Euclidean and Bézout's identity](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Math/Extended_Euclidean_Bezout's%20_identity.pdf)
