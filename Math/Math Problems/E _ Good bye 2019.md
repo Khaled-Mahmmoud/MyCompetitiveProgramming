@@ -2,7 +2,7 @@
 
 For an array a of integers let's denote its maximal element as max(a), and minimal as min(a). 
 
-We will call an array a of k integers interesting if `max(a)−min(a)≥k`.
+We will call an array a of k integers interesting if `max(a)−min(a) ≥ k`.
 
 For example, array [1,3,4,3] isn't interesting as max(a)−min(a)=4−1=3<4 while array [7,3,0,4,3] is as max(a)−min(a)=7−0=7≥5 is interesting.
 
