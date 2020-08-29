@@ -111,7 +111,7 @@ bool find_any_solution(int a, int b, int c, int &x, int &y)
 
 From one solution (x,y), we can obtain all the solutions of the given equation.
 
-Let g=gcd(a,b) and let x,y be integers which satisfy the following: `a⋅x0+b⋅y0=c`
+Let g=gcd(a,b) and let x,y be integers which satisfy the following: a⋅x + b⋅y = c
 
 Now, we should see that adding b/g to x, and at the same time subtracting a/g from y will not break the equality:
 
