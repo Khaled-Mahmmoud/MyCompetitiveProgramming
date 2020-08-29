@@ -24,3 +24,26 @@ IF ax ≡ ay (mod n) SAME as x ≡ y (mod n) THEN d = 1, Reverse doesn’t need 
 
 - If a ≡ b (mod m) and c ≡ d (mod m), then a + c ≡ b + d (mod m) OR a - c ≡ b - d (mod m)
 
+- If a ≡ b (mod m) and c ≡ d (mod m), then ac ≡ bd (mod m) 
+
+- IF a ≡ b (mod m)  a + c ≡ b + c (mod m) 
+
+- IF a ≡ b (mod m)  ac ≡ bc (mod m) 
+
+- From last one, ax ≡ b (mod n) same as x ≡ ba^-1 (mod n) 
+
+### Find answer of 3^5555 % 80
+
+Hint: Think how to reduce the large power?!
+
+Hint: 3^4 ≡ 1 (% 80) and 5555 = 4 * 1388 + 3
+
+Then, 3^5555 % 80 = 3^3 % 80 = 27
+
+**Find answer of (3^1000 + 3) % 28**
+
+Hint: 3^3 = 27 = -1 (% 28) and 1000 = 3*333+1
+
+Then equation = [(-1 * 3) + 3] (% 28) = 0
+
+prove that 2^(5n+1) + 5^(n+2) ≡ 0 (mod 27)
