@@ -8,8 +8,8 @@ Given three positive numbers a, c and m. Compute c/a under modulo m.
 The task is basically to find a number x such that 
 
 `(c/a) ≡ x (mod m)`
-
- `a * x ≡ c (mod m)`
+ 
+ `a * x ≡ c (mod m)` ==>> Linear Congruence Equation
 
 
 Input  : a  = 3, c = 8, m = 5
