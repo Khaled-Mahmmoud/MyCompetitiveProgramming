@@ -1,5 +1,8 @@
 # Modular Division
 
+### Linear Congruence Equation
+
+
 Given three positive numbers a, c and m. Compute c/a under modulo m.
   
 The task is basically to find a number x such that 
@@ -102,3 +105,11 @@ It is clear that this x′ will also be a solution of the original equation. How
 Xi = (x′+i⋅m′) (mod m)for i = 0 .... g−1
 
 Summarizing, we can say that the number of solutions of the linear congruence equation is equal to either g = gcd(a,n) or to zero.
+
+### Solution with the Extended Euclidean Algorithm
+
+We can rewrite the linear congruence to the following Diophantine equation:
+
+a⋅x + n⋅k = b, where x and k are unknown integers.
+
+The method of solving this equation is described in the corresponding article Linear Diophantine equations and it consists of applying the Extended Euclidean Algorithm.
