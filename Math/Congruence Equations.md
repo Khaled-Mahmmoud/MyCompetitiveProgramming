@@ -1,6 +1,6 @@
 # Congruence Equations
 
-'a ≡ b (mod n)'
+`a ≡ b (mod n)`
 
 called a and b congruent modulo n, It means a%n = b%n = x, this means (a-b) % n = 0
 
