@@ -30,10 +30,11 @@ For example, 4/0 is not allowed. In modular arithmetic, 4%0 is not allowed
 
 Modular division is defined when modular inverse of the divisor exists.
   
-(The inverse of an integer ‘x’ is a another integer ‘y’ such that (x*y) % m = 1 where m is the modulus
+(The inverse of an integer ‘x’ is a another integer ‘y’ such that (x * y) % m = 1 where m is the modulus
+
 When does inverse exist? inverse a number ‘a’ exists under modulo ‘m’ if ‘a’ and ‘m’ are co-prime )
 
-How to find modular division?
+**How to find modular division?**
 
 The task is to compute c/a under modulo m.
   
@@ -84,3 +85,4 @@ int main()
     return 0; 
 } 
 ```
+Now consider the case where a and m are not coprime (gcd(a,m)≠1). Then the solution will not exist (for example 2⋅x=1 (mod 4) has no solution).
