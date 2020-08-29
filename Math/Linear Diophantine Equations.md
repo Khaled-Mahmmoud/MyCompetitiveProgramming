@@ -53,7 +53,7 @@ bool isPossible(int a, int b, int c)
 Let GCD of ‘a’ and ‘b’ be ‘g’. g divides a and b. This implies g also divides (ax + by) (if x and y are integers).
 This implies gcd also divides ‘c’ using the relation that ax + by = c. 
 
-# Finding a solution of equation ax + by = c
+### Finding a solution of equation ax + by = c
 
 **The degenerate case** : A degenerate case that need to be taken care of is when a = b = 0. It is easy to see that we either have no solutions or infinitely many solutions, depending on whether c = 0 or not. In the rest of this article, we will ignore this case.
 
@@ -106,3 +106,24 @@ bool find_any_solution(int a, int b, int c, int &x, int &y)
     return true;
 }
 ```
+
+### Getting all solutions of equation ax + by = c
+
+From one solution (x,y), we can obtain all the solutions of the given equation.
+
+Let g=gcd(a,b) and let x,y be integers which satisfy the following: `a⋅x0+b⋅y0=c`
+
+Now, we should see that adding b/g to x, and at the same time subtracting a/g from y will not break the equality:
+
+a * (x+b/g) + b * (y+a/g) = c
+
+Obviously, this process can be repeated again, so all the numbers of the form:
+
+x = x + k * (b/g)
+
+y = y + k * (a/g)
+
+are solutions of the given Diophantine equation.
+
+Moreover, this is the set of all possible solutions of the given Diophantine equation.
+
