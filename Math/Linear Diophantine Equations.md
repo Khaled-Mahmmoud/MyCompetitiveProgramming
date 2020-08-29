@@ -75,26 +75,26 @@ The above idea still works when a or b or both of them are negative. We only nee
 
 Finally, we can implement this idea as follows (note that this code does not consider the case a = b = 0)
 ```cpp
-int gcd(int a, int b, int *x, int *y)  
-{  
-    if (a == 0)  
-    {  
-        *x = 0;  
-        *y = 1;  
-        return b;  
-    }  
-  
-    int x1, y1;  
-    int gcd = gcd(b%a, a, &x1, &y1);   
-    *x = y1 - (b/a) * x1;  
-    *y = x1;  
-  
-    return gcd;  
-} 
+int gcd(int a, int b, int *x, int *y)
+{
+    if (a == 0)
+    {
+        *x = 0;
+        *y = 1;
+        return b;
+    }
+
+    int x1, y1;
+    int g = gcd(b%a, a, &x1, &y1);
+    *x = y1 - (b/a) * x1;
+    *y = x1;
+
+    return g;
+}
 bool find_any_solution(int a, int b, int c, int &x, int &y)
 {
     int g, xg, yg;
-    g = gcd(abs(a), abs(b), xg, yg);
+    g = gcd(abs(a), abs(b), &xg, &yg);
     if (c % g)
     {
         return false;
