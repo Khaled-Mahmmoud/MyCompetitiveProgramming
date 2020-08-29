@@ -101,8 +101,8 @@ bool find_any_solution(int a, int b, int c, int &x, int &y)
     }
     x = xg * (c / g);
     y = yg * (c / g);
-    if (a < 0) x = -xg;
-    if (b < 0) y = -yg;
+    if (a < 0) x *= -1;
+    if (b < 0) y *= -1;
     return true;
 }
 ```
