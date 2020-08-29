@@ -22,5 +22,5 @@ IF ax ≡ ay (mod n) SAME as x ≡ y (mod n) THEN d = 1, Reverse doesn’t need 
 
 - If a ≡ b (mod m) and b ≡ c (mod m), then a ≡ c (mod m)
 
-- If a ≡ b (mod m) and c ≡ d (mod m), then a + c ≡ b + d (mod m)
+- If a ≡ b (mod m) and c ≡ d (mod m), then a + c ≡ b + d (mod m) OR a - c ≡ b - d (mod m)
 
