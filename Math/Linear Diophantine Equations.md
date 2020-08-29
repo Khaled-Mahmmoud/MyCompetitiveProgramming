@@ -107,7 +107,7 @@ bool find_any_solution(int a, int b, int c, int &x, int &y)
 }
 ```
 
-### Getting all solutions of equation ax + by = c
+### Getting all solutions of equation ax + by = c using Bézout's identity
 
 From one solution (x,y), we can obtain all the solutions of the given equation.
 
