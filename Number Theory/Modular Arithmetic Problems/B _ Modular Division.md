@@ -110,6 +110,6 @@ Summarizing, we can say that the number of solutions of the linear congruence eq
 
 We can rewrite the linear congruence to the following Diophantine equation:
 
-a⋅x + n⋅k = b, where x and k are unknown integers.
+a⋅x + m⋅k = b, where x and k are unknown integers.
 
 The method of solving this equation is described in the corresponding article Linear Diophantine equations and it consists of applying the Extended Euclidean Algorithm.
