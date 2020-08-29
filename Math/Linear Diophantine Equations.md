@@ -52,3 +52,57 @@ bool isPossible(int a, int b, int c)
 
 Let GCD of ‘a’ and ‘b’ be ‘g’. g divides a and b. This implies g also divides (ax + by) (if x and y are integers).
 This implies gcd also divides ‘c’ using the relation that ax + by = c. 
+
+# Finding a solution of equation ax + by = c
+
+**The degenerate case** : A degenerate case that need to be taken care of is when a = b = 0. It is easy to see that we either have no solutions or infinitely many solutions, depending on whether c = 0 or not. In the rest of this article, we will ignore this case.
+
+To find one solution of the Diophantine equation with 2 unknowns, you can use the Extended Euclidean algorithm. First, assume that a and b are non-negative. When we apply Extended Euclidean algorithm for a and b, we can find their greatest common divisor g and 2 numbers xg and yg such that: a.xg + b.yg = g
+
+If c is divisible by g = gcd(a,b), then the given Diophantine equation has a solution, otherwise it does not have any solution. 
+
+Now supposed that c is divisible by g, then we multiply the equation by c/g:
+
+a.xg.c/g + b.yg.c/g = c
+
+Therefore one of the solutions of the Diophantine equation is:
+
+x = xg.c/g
+
+y = yg.c/g
+
+The above idea still works when a or b or both of them are negative. We only need to change the sign of x and y when necessary.
+
+Finally, we can implement this idea as follows (note that this code does not consider the case a = b = 0)
+```cpp
+int gcd(int a, int b, int *x, int *y)  
+{  
+    if (a == 0)  
+    {  
+        *x = 0;  
+        *y = 1;  
+        return b;  
+    }  
+  
+    int x1, y1;  
+    int gcd = gcdExtended(b%a, a, &x1, &y1);   
+    *x = y1 - (b/a) * x1;  
+    *y = x1;  
+  
+    return gcd;  
+} 
+bool find_any_solution(int a, int b, int c, int &x, int &y)
+{
+    int g, xg, yg;
+    g = gcd(abs(a), abs(b), xg, yg);
+    if (c % g)
+    {
+        return false;
+    }
+    x = xg * (c / g);
+    y = yg * (c / g);
+    if (a < 0) x = -xg;
+    if (b < 0) y = -yg;
+    return true;
+}
+```
