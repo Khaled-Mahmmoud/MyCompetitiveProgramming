@@ -104,12 +104,12 @@ It is clear that this x′ will also be a solution of the original equation. How
 
 Xi = (x′+i⋅m′) (mod m)for i = 0 .... g−1
 
-Summarizing, we can say that the number of solutions of the linear congruence equation is equal to either g = gcd(a,n) or to zero.
+Summarizing, we can say that the number of solutions of the linear congruence equation is equal to either g = gcd(a,m) or to zero.
 
 ### Solution with the Extended Euclidean Algorithm
 
 We can rewrite the linear congruence to the following Diophantine equation:
 
-a⋅x + m⋅k = b, where x and k are unknown integers.
+a⋅x + m⋅k = c, where x and k are unknown integers.
 
-The method of solving this equation is described in the corresponding article Linear Diophantine equations and it consists of applying the Extended Euclidean Algorithm.
+The method of solving this equation is described in [Linear Diophantine equations](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/Math/Linear%20Diophantine%20Equations.md) and it consists of applying the Extended Euclidean Algorithm.
