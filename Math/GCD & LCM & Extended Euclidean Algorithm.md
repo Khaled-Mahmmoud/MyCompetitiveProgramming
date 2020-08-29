@@ -218,7 +218,10 @@ int gcdExtended(int a, int b, int *x, int *y)
 int main()  
 {  
     int x, y, a = 35, b = 15;  
-    int g = gcdExtended(a, b, &x, &y);  
+    int g = gcdExtended(abs(a), abs(b), &x, &y); 
+    // The above idea still works when a or b or both of them are negative. We only need to change the sign of x and y when necessary.
+    if (a < 0) x *= -1;
+    if (b < 0) y *= -1;
     cout<<g<<' '<<x<<' '<<y;  // 5  1  -2
     return 0;  
 }  
