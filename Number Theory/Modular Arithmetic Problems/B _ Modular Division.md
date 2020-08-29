@@ -89,4 +89,16 @@ Now consider the case where a and m are not coprime (gcd(a,m)≠1). Then the sol
 
 Let g=gcd(a,m), i.e. the greatest common divisor of a and m (which in this case is greater than one).
 
-Then, if b is not divisible by g, there is no solution. In fact, for any x the left side of the equation a⋅x(mod m) , is always divisible by g, while the right-hand side is not divisible by it, hence it follows that there are no solutions.
+Then, if c is not divisible by g, there is no solution. In fact, for any x the left side of the equation a⋅x(mod m) , is always divisible by g, while the right-hand side is not divisible by it, hence it follows that there are no solutions.
+
+If g divides c, then by dividing both sides of the equation by g (i.e. dividing a, c and m by g), we receive a new equation:
+
+a′⋅x=c′(mod m′)
+
+in which a′ and m′ are already relatively prime, and we have already learned how to handle such an equation. We get x′ as solution for x.
+
+It is clear that this x′ will also be a solution of the original equation. However it will not be the only solution. It can be shown that the original equation has exactly g solutions, and they will look like this:
+
+Xi = (x′+i⋅m′) (mod m)for i = 0 .... g−1
+
+Summarizing, we can say that the number of solutions of the linear congruence equation is equal to either g = gcd(a,n) or to zero.
