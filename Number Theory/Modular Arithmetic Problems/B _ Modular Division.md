@@ -86,3 +86,7 @@ int main()
 } 
 ```
 Now consider the case where a and m are not coprime (gcd(a,m)≠1). Then the solution will not exist (for example 2⋅x=1 (mod 4) has no solution).
+
+Let g=gcd(a,m), i.e. the greatest common divisor of a and m (which in this case is greater than one).
+
+Then, if b is not divisible by g, there is no solution. In fact, for any x the left side of the equation a⋅x(mod m) , is always divisible by g, while the right-hand side is not divisible by it, hence it follows that there are no solutions.
