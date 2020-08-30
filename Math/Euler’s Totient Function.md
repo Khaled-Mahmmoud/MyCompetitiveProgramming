@@ -68,7 +68,7 @@ We can avoid floating point calculations in above method
 The idea is to count all prime factors and their multiples
 and subtract this count from n to get the totient function value
 (Prime factors and multiples of prime factors won’t have gcd as 1)
-```
+```cpp
 int phi(int n) 
 { 
     int result = n; 
@@ -89,7 +89,8 @@ int phi(int n)
 ```
 Complexity : O(sqrt(n)) 
 
-Some Interesting Properties of Euler’s Totient Function
+**Some Interesting Properties of Euler’s Totient Function**
+
 1) For prime number p , ?(p) is p-1
 For example ?(5) is 4, ?(7) is 6 and ?(13) is 12
 This is obvious, gcd of all numbers from 1 to p-1 will be 1 because p is a prime.
