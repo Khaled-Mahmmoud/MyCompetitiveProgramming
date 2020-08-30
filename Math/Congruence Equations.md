@@ -12,17 +12,6 @@ called a and b congruent modulo n
 
 Note that a ≡ 0 (mod m) if and only if m | a . Thus, modular arithmetic gives you another way of dealing with divisibility relations. Another way of saying this is: Mod m any multiple of m is 0.
 
-Example.
-
-(a) Reduce 101 (mod 3) to a number in the range {0, 1, 2}.
-
-(b) Reduce -101 (mod 3) to a number in the range {0, 1, 2}.
-
-(a) 101 = 2 (mod 3) , because 3 | 101 - 2 = 99.
-
-(b) -101 = 1 (mod 3) , because 3 | -101 - 1 = -102 .
-
-
 
 ### Congruence Facts
 
@@ -36,9 +25,40 @@ Example.
 
 - If a ≡ b (mod m) and b ≡ c (mod m), then a ≡ c (mod m)
 
+proof : there are two integers j and k such that
+
+a - b = jm , b - c = km 
+
+add two equations a - c = jm + km 
+
+this implies that a ≡ c (mod m)
+
 - If a ≡ b (mod m) and c ≡ d (mod m), then a + c ≡ b + d (mod m) OR a - c ≡ b - d (mod m)
 
+proof : m | a - b and m | c - d
+
+then m | (a-b) + (c-d) = m | (a+c) - (b+d)
+
+tis implies a+c ≡ b+d (mod m)
+
 - If a ≡ b (mod m) and c ≡ d (mod m), then ac ≡ bd (mod m) 
+
+proof : there are two integers j and k such that
+
+a ≡ b+jm   and   c ≡ d+km
+
+Multiplying these two equations, I obtain
+
+ac ≡ (b+jm) * (d+km)
+
+ac ≡ bd + bkm + jmd + jmkm
+
+ac - bd ≡ m (bk + jd + jkm)
+
+m | ac - bd 
+
+this implies ac ≡ bd (mod m)
+
 
 - IF a ≡ b (mod m)  a + c ≡ b + c (mod m) 
 
