@@ -2,19 +2,24 @@
 
 `a ≡ b (mod n)`
 
-called a and b congruent modulo n, It means a%n = b%n = x, this means (a-b) % n = 0
+called a and b congruent modulo n
+
+- It means a%n = b%n = x,
+
+- this means (a-b)%n = 0 and (b-a)%n = 0
+
+- a = b+qn for some q integer (a-b = qn)
 
 57 ≡ 37 (mod 10) AND 57 - 37 = 20
 
 57%10 = 37% 10 = 7, Also 20 % 10 = 0
 
-More importantly: a = b+qn for some q integer (a-b = qn)
-
-If ax ≡ ay (mod n) and gcd(a,n) = d, then the congruence is equivalent x ≡ y (mod n/d)
-
-IF ax ≡ ay (mod n) SAME as x ≡ y (mod n) THEN d = 1, Reverse doesn’t need this condition.
 
 ### Congruence Facts
+
+- If ax ≡ ay (mod n) and gcd(a,n) = d, then the congruence is equivalent x ≡ y (mod n/d)
+
+- If ax ≡ ay (mod n) SAME as x ≡ y (mod n) THEN d = 1, Reverse doesn’t need this condition.
 
 - IF a ≡ b (mod m)  a^n ≡ b^n (mod m) for all  n>= 1
 
