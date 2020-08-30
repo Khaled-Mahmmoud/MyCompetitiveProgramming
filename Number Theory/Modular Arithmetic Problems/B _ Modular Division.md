@@ -1,7 +1,4 @@
-# Modular Division
-
-## Linear Congruence Equation
-
+# Modular Division or Linear Congruence Equation
 
 Given three positive numbers a, c and m. Compute c/a under modulo m.
   
@@ -20,7 +17,7 @@ Input  : a  = 4, c = 11, m = 5
 Output : 4
 Note that (4*4)%5 is same as 11%5
 
-### Solution by finding the inverse element
+## Solution by finding the inverse element
     
  x % m = (c/a) % m
     
@@ -88,6 +85,8 @@ int main()
     return 0; 
 } 
 ```
+## Solution with the Extended Euclidean Algorithm
+
 Now consider the case where a and m are not coprime (gcd(a,m)≠1). Then the solution will not exist (for example 2⋅x=1 (mod 4) has no solution).
 
 Let g=gcd(a,m), i.e. the greatest common divisor of a and m (which in this case is greater than one).
@@ -105,8 +104,6 @@ It is clear that this x′ will also be a solution of the original equation. How
 Xi = (x′+i⋅m′) (mod m)for i = 0 .... g−1
 
 Summarizing, we can say that the number of solutions of the linear congruence equation is equal to either g = gcd(a,m) or to zero.
-
-### Solution with the Extended Euclidean Algorithm
 
 We can rewrite the linear congruence to the following Diophantine equation:
 
