@@ -34,3 +34,27 @@ with an odd number of prime factors.
 - μ(n) = 0 if n has a squared prime factor.
 
 - E.g. μ(2 * 3 * 3 * 7) = 0
+
+μ(n) = 1, -1, -1, 0, -1, 1, -1, 0, 0, 1, -1, 0, -1, 1
+
+μ(n) + 1 = 2, 0, 0, 1, 0, 2, 0, 1, 1, 2, 0, 1, 0, 2
+
+```cpp
+int mobius(int n)
+{
+    int mobval = 1;
+    for(int i=2;i*i<=n;i++)
+    {
+        if(n%i==0)
+        {
+            if(n%(i*i)==0)
+                return 0;
+            n /= i;
+            mobval = -mobval;
+        }
+    }
+    if(n>1)
+        mobval = -mobval;
+    return mobval;
+}
+```
