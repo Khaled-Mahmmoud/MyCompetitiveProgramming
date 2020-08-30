@@ -10,9 +10,18 @@ called a and b congruent modulo n
 
 - a = b+qn for some q integer (a-b = qn)
 
-57 ≡ 37 (mod 10) AND 57 - 37 = 20
+Note that a ≡ 0 (mod m) if and only if m | a . Thus, modular arithmetic gives you another way of dealing with divisibility relations. Another way of saying this is: Mod m any multiple of m is 0.
 
-57%10 = 37% 10 = 7, Also 20 % 10 = 0
+Example.
+
+(a) Reduce 101 (mod 3) to a number in the range {0, 1, 2}.
+
+(b) Reduce -101 (mod 3) to a number in the range {0, 1, 2}.
+
+(a) 101 = 2 (mod 3) , because 3 | 101 - 2 = 99.
+
+(b) -101 = 1 (mod 3) , because 3 | -101 - 1 = -102 .
+
 
 
 ### Congruence Facts
