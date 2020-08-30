@@ -103,7 +103,9 @@ It is clear that this x′ will also be a solution of the original equation. How
 
 Xi = (x′+i⋅m′) (mod m)for i = 0 .... g−1
 
-Summarizing, we can say that `the number of solutions of the linear congruence equation is equal to either g = gcd(a,m) or to zero`
+Summarizing, we can say that `the number of solutions of the linear congruence equation is equal to either g = gcd(a,m) or to zero` 
+
+but 'the number of solutions of Linear Diophantine equations is equal to either infinite solutions or zero'
 
 We can rewrite the linear congruence to the following Diophantine equation:
 
