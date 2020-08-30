@@ -16,3 +16,21 @@ than once: e.g. n = 2*5*11 is square free, but n
 15, 17, 19, 21, 22, 23, 26, 29, 30, 31, 33, 34
 
 - F(13) = 19
+
+### Möbius function
+
+- μ(1) = 1
+
+- μ(n) = 1 if n is a square-free positive integer
+with an even number of prime factors.
+
+- E.g. μ(2 * 3 * 5 * 7) = 1
+
+- μ(n) = −1 if n is a square-free positive integer
+with an odd number of prime factors.
+
+- E.g. μ(2*3*5) = -1
+
+- μ(n) = 0 if n has a squared prime factor.
+
+- E.g. μ(2*3*3*7) = 0
