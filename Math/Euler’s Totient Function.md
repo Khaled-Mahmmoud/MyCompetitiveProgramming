@@ -149,3 +149,16 @@ int phi(int n)
 ```
 Complexity : O(sqrt(n)) 
 
+**Phi Factorial Code**
+
+φ(n!) = (n is prime ? n-1 : n) * φ((n-1)!)
+
+```cpp
+ll phi_fact(int n)
+{
+    ll ret = 1;
+    for(int i=2;i<=n;i++)
+       ret = ret * (isprime(i)?i-1:i);
+    return ret;
+}
+```
