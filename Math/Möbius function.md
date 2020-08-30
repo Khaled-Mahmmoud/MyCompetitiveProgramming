@@ -29,8 +29,8 @@ with an even number of prime factors.
 - μ(n) = −1 if n is a square-free positive integer
 with an odd number of prime factors.
 
-- E.g. μ(2*3*5) = -1
+- E.g. μ(2 * 3 * 5) = -1
 
 - μ(n) = 0 if n has a squared prime factor.
 
-- E.g. μ(2*3*3*7) = 0
+- E.g. μ(2 * 3 * 3 * 7) = 0
