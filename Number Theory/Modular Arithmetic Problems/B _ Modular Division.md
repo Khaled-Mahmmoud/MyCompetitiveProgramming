@@ -85,7 +85,7 @@ int main()
     return 0; 
 } 
 ```
-## Solution with the Extended Euclidean Algorithm
+## Solution by Linear Diophantine Equation
 
 Now consider the case where a and m are not coprime (gcd(a,m)≠1). Then the solution will not exist (for example 2⋅x=1 (mod 4) has no solution).
 
