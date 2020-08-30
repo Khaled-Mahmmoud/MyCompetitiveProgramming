@@ -1,6 +1,6 @@
 # Modular Division
 
-### Linear Congruence Equation
+## Linear Congruence Equation
 
 
 Given three positive numbers a, c and m. Compute c/a under modulo m.
