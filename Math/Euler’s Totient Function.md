@@ -42,15 +42,36 @@ gcd(6, 1) is 1 and gcd(6, 5) is 1
 
 - φ(n^k) = n^k-1 * φ(n)
  
+ **Some Interesting Properties of Euler’s Totient Function**
+
+1) For prime number p , ?(p) is p-1
+For example ?(5) is 4, ?(7) is 6 and ?(13) is 12
+This is obvious, gcd of all numbers from 1 to p-1 will be 1 because p is a prime.
+2) For two numbers a and b, if gcd(a, b) is 1, then ?(ab) = ?(a) * ?(b)
+For example ?(5) is 4 and ?(6) is 2, so ?(30) must be 8 as 5 and 6 are relatively prime.
+3) If a, b, c are pairwise coprimes, then φ(a * b * c) = φ(a) * φ(b) * φ(c)
+4) For any two prime numbers p and q, ?(pq) = (p-1) * (q-1). This property is used in RSA algorithm.
+5) If p is a prime number, then ?(p^k) = p^k – p^(k-1) = p^k-1 * (p-1).
+6) Sum of values of totient functions of all divisors of n is equal to n.
+For example, n = 6, the divisors of n are 1, 2, 3 and 6. According to Gauss, sum of ?(1) + ?(2) + ?(3) + ?(6) should be 6
+We can verify the same by putting values, we get (1 + 1 + 2 + 2) = 6
+7) The most famous and important feature is expressed in Euler’s theorem :
+The theorem states that if n and a are coprime positive integers, then
+a^?(n) ? 1 (mod n) 
+The RSA cryptosystem is based on this theorem:
+In the particular case when m is prime say p
+Euler’s theorem turns into the so-called Fermat’s little theorem :
+a^(p-1) ? 1 (mod p) 
+
 A **simple Solution** is to iterate through all numbers from 1 to n-1 and count numbers with gcd with n as 1.
  
  A **Better Solution** is as we know that If a, b, c are pairwise coprimes, then φ(a * b * c) = φ(a) * φ(b) * φ(c)
  
-so we know that all prime factors of a number is pairwise comprimes.
+We know that all prime factors of a number is pairwise comprimes.
 
-then φ(n) = φ(p1) * φ(p2) * φ(p3) where p1, p2 and p3 are prime factors of n
+then φ(n) = φ(p1^h1) * φ(p2^h2) * φ(p3^h3) where p1, p2 and p3 are prime factors of n.
 
-Complexity : O(nlog(n))
+We know that If p is a prime number, then ?(p^k) = p^k-1 * (p-1).
  ```cpp
  int phi(int n)
 {
@@ -73,6 +94,8 @@ Complexity : O(nlog(n))
     return ans;
 }
  ```
+ Complexity : O(sqrt(n))
+
 **Another Solution**. The idea is based on Euler’s product formula which states that value of totient functions 
 is below product over all prime factors p of n
 ```
@@ -125,25 +148,4 @@ int phi(int n)
 }
 ```
 Complexity : O(sqrt(n)) 
-
-**Some Interesting Properties of Euler’s Totient Function**
-
-1) For prime number p , ?(p) is p-1
-For example ?(5) is 4, ?(7) is 6 and ?(13) is 12
-This is obvious, gcd of all numbers from 1 to p-1 will be 1 because p is a prime.
-2) For two numbers a and b, if gcd(a, b) is 1, then ?(ab) = ?(a) * ?(b)
-For example ?(5) is 4 and ?(6) is 2, so ?(30) must be 8 as 5 and 6 are relatively prime.
-3) If a, b, c are pairwise coprimes, then φ(a * b * c) = φ(a) * φ(b) * φ(c)
-4) For any two prime numbers p and q, ?(pq) = (p-1) * (q-1). This property is used in RSA algorithm.
-5) If p is a prime number, then ?(p^k) = p^k – p^(k-1) = p^k-1 * (p-1).
-6) Sum of values of totient functions of all divisors of n is equal to n.
-For example, n = 6, the divisors of n are 1, 2, 3 and 6. According to Gauss, sum of ?(1) + ?(2) + ?(3) + ?(6) should be 6
-We can verify the same by putting values, we get (1 + 1 + 2 + 2) = 6
-7) The most famous and important feature is expressed in Euler’s theorem :
-The theorem states that if n and a are coprime positive integers, then
-a^?(n) ? 1 (mod n) 
-The RSA cryptosystem is based on this theorem:
-In the particular case when m is prime say p
-Euler’s theorem turns into the so-called Fermat’s little theorem :
-a^(p-1) ? 1 (mod p) 
 
