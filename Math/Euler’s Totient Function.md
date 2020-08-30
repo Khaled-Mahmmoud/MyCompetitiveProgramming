@@ -32,6 +32,16 @@ gcd(5, 1) is 1, gcd(5, 2) is 1, gcd(5, 3) is 1 and gcd(5, 4) is 1
  
 gcd(6, 1) is 1 and gcd(6, 5) is 1
  
+ φ(n) = 1, 1, 2, 2, 4, 2, 6, 4, 6, 4, 10, 4, 12, 6, 8,
+8, 16, 6, 18, 8, 12, 10, 22, 8, 20, 12, 18, 12, 28,
+8, 30, 16, 20, 16, 24, 12, 36, 18, 24, 16, 40, 12
+
+- φ(n) is even for n > 2
+
+- sqrt(n) <= φ(n) <= n - sqrt(n): Except 2, 6
+
+- φ(n^k) = n^k-1 * φ(n)
+ 
 A **simple solution** is to iterate through all numbers from 1 to n-1 and count numbers with gcd with n as 1.
  
 Complexity : O(nlog(n))
