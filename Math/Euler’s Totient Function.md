@@ -42,11 +42,38 @@ gcd(6, 1) is 1 and gcd(6, 5) is 1
 
 - φ(n^k) = n^k-1 * φ(n)
  
-A **simple solution** is to iterate through all numbers from 1 to n-1 and count numbers with gcd with n as 1.
+A **simple Solution** is to iterate through all numbers from 1 to n-1 and count numbers with gcd with n as 1.
  
+ A **Better Solution** is as we know that If a, b, c are pairwise coprimes, then φ(a * b * c) = φ(a) * φ(b) * φ(c)
+ 
+so we know that all prime factors of a number is pairwise comprimes.
+
+then φ(n) = φ(p1) * φ(p2) * φ(p3) where p1, p2 and p3 are prime factors of n
+
 Complexity : O(nlog(n))
- 
-Below is a **Better Solution**. The idea is based on Euler’s product formula which states that value of totient functions 
+ ```cpp
+ int phi(int n)
+{
+    int p,ans = 1;
+    for(int i=2;i*i<=n;i++)
+    {
+        if(n%i==0)
+        {
+            p = 1;
+            while(n%i==0)
+            {
+                p *= i;
+                n /= i;
+            }
+            ans *= (p/i) * (i-1);
+        }
+    }
+    if(n!=1)
+        ans *= (n-1);
+    return ans;
+}
+ ```
+**Another Solution**. The idea is based on Euler’s product formula which states that value of totient functions 
 is below product over all prime factors p of n
 ```
  ϕ(n) = n II (1-1/p)
