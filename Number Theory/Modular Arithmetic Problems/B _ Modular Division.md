@@ -63,19 +63,21 @@ int gcdExtended(int a, int b, int *x, int *y)
   
     return gcd; 
 } 
-int modInverse(int a, int m) 
+vector<int> modInverse(int a, int m,int c) 
 { 
-    int x, y; 
+    int x, y; vector<int>res;
     int g = gcdExtended(a, m, &x, &y); 
-    if (g != 1) 
-        return -1; 
-    return (x%m + m) % m; 
+    if ( c%g != 0) 
+        return res;  // no Solution
+    x = ((x * c/g)%m + m) % m; 
+    for(int i=0;i<g;i++)
+    ans.push_back((x + i * m/g)%m);
+    return ans;
 } 
-
 void modDivide(int a, int c, int m) 
 { 
     c = c % m; 
-    int inv = modInverse(a, m); 
+    
     if (inv == -1) 
        cout << "Division not defined"; 
     else
@@ -84,7 +86,7 @@ void modDivide(int a, int c, int m)
 int main() 
 { 
     int  a  = 3, c = 8, m = 5; 
-    modDivide(a, c, m); 
+    vector<int> ans = modInverse(a, m,c); 
     return 0; 
 } 
 ```
