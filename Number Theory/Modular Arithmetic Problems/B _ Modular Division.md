@@ -20,6 +20,7 @@ Input  : a  = 4, c = 11, m = 5
 Output : 4
 Note that (4*4)%5 is same as 11%5
 
+### Solution by finding the inverse element
     
  x % m = (c/a) % m
     
@@ -63,21 +64,18 @@ int gcdExtended(int a, int b, int *x, int *y)
   
     return gcd; 
 } 
-vector<int> modInverse(int a, int m,int c) 
-{ 
-    int x, y; vector<int>res;
-    int g = gcdExtended(a, m, &x, &y); 
-    if ( c%g != 0) 
-        return res;  // no Solution
-    x = ((x * c/g)%m + m) % m; 
-    for(int i=0;i<g;i++)
-    ans.push_back((x + i * m/g)%m);
-    return ans;
+int modInverse(int a, int m) 
+{
+    int x, y; 
+    int g = gcdExtended(a, m, &x, &y);
+    if (g != 1) 
+        return -1; 
+    return (x%m + m) % m; 
 } 
 void modDivide(int a, int c, int m) 
 { 
     c = c % m; 
-    
+    int inv = modInverse(a, m); 
     if (inv == -1) 
        cout << "Division not defined"; 
     else
@@ -86,7 +84,7 @@ void modDivide(int a, int c, int m)
 int main() 
 { 
     int  a  = 3, c = 8, m = 5; 
-    vector<int> ans = modInverse(a, m,c); 
+    modDivide(a, c, m); 
     return 0; 
 } 
 ```
@@ -115,3 +113,37 @@ We can rewrite the linear congruence to the following Diophantine equation:
 a⋅x + m⋅k = c, where x and k are unknown integers.
 
 The method of solving this equation is described in [Linear Diophantine equations](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/Math/Linear%20Diophantine%20Equations.md) and it consists of applying the Extended Euclidean Algorithm.
+```cpp
+int gcdExtended(int a, int b, int *x, int *y) 
+{ 
+    if (a == 0) 
+    { 
+        *x = 0, *y = 1; 
+        return b; 
+    } 
+  
+    int x1, y1; 
+    int gcd = gcdExtended(b%a, a, &x1, &y1); 
+    *x = y1 - (b/a) * x1; 
+    *y = x1; 
+  
+    return gcd; 
+} 
+vector<int> solve(int a, int m,int c) 
+{ 
+    int x, y; vector<int>res;
+    int g = gcdExtended(a, m, &x, &y); 
+    if ( c%g != 0) 
+        return res;  // no Solution
+    x = ((x * c/g)%m + m) % m; 
+    for(int i=0;i<g;i++)
+    ans.push_back((x + i * m/g)%m);
+    return ans;
+} 
+int main() 
+{ 
+    int  a  = 3, c = 8, m = 5; 
+    vector<int> ans = solve(a, m,c); 
+    return 0; 
+} 
+```
