@@ -34,6 +34,10 @@ output :
 
 3
 
+**Constraints**
+
+1 <= n, a[i], q , x <= 10^ 5
+
 ```cpp
 int main()
 {
