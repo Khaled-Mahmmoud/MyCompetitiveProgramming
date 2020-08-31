@@ -2,24 +2,24 @@
 
 Boboniu likes bit operations. He wants to play a game with you.
 
-Boboniu gives you two sequences of non-negative integers a1,a2,…,an and b1,b2,…,bm.
+Boboniu gives you two sequences of non-negative integers a[1],a[2],…,a[n] and b[1],b[2],…,b[m].
 
-For each i (1≤i≤n), you're asked to choose a j (1≤j≤m) and let ci=ai&bj, where & denotes the bitwise AND operation. 
+For each i (1 ≤ i ≤ n), you're asked to choose a j (1 ≤ j ≤ m) and let c[i] = a[i] & b[j], where & denotes the bitwise AND operation. 
 Note that you can pick the same j for different i's.
 
-Find the minimum possible c1|c2|…|cn, where | denotes the bitwise OR operation.
+Find the minimum possible c[1]|c[2]| ..... |c[n], where | denotes the bitwise OR operation.
 
 **Input**
 
-The first line contains two integers n and m (1≤n,m≤200).
+The first line contains two integers n and m (1 ≤ n , m ≤ 200).
 
-The next line contains n integers a1,a2,…,an (0≤ai<29).
+The next line contains n integers a1,a2,…,an (0 ≤ a[i] < 2^9).
 
-The next line contains m integers b1,b2,…,bm (0≤bi<29).
+The next line contains m integers b1,b2,…,bm (0 ≤ b[i] < 2^9).
 
 **Output**
 
-Print one integer: the minimum possible c1|c2|…|cn.
+Print one integer: the minimum possible c[1] | c[2] | .... | c[n].
 
 
 input
@@ -60,15 +60,11 @@ output
 
 Note
 
-For the first example, we have c1=a1&b2=0, c2=a2&b1=2, c3=a3&b1=0, c4=a4&b1=0.Thus c1|c2|c3|c4=2, and this is the minimal answer we can get.
+For the first example, we have c[1] = a[1] & b[2] = 0, c[2] = a[2] & b[1] = 2, c[3] = a[3] & b[1] = 0, c[4] = a[4] & b[1] = 0.Thus c[1] | c[2] | c[3] | c[4] = 2, and this is the minimal answer we can get.
 
 ```cpp
-#include<bits/stdc++.h>
-using namespace std;
 int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(0);cout.tie(0);
     int n,m;
     cin >> n >> m;
     int a[n], b[m];
