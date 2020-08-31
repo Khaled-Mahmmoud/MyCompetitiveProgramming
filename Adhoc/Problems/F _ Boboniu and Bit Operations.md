@@ -62,6 +62,13 @@ Note
 
 For the first example, we have c[1] = a[1] & b[2] = 0, c[2] = a[2] & b[1] = 2, c[3] = a[3] & b[1] = 0, c[4] = a[4] & b[1] = 0.Thus c[1] | c[2] | c[3] | c[4] = 2, and this is the minimal answer we can get.
 
+**Solution**
+
+Suppose the answer is A. Thus for all i (1 ≤ i ≤ n), c[i] | A = A.
+
+Since a[i] , b[i] < 29, we can enumerate all integers from 0 to 2^9−1, and check if there exists j for each i that (a[i] & b[j]) | A = A. The minimum of them will be the answer.
+
+The time complexity is O(29⋅n2)
 ```cpp
 int main()
 {
