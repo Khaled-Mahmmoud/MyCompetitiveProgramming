@@ -1,6 +1,6 @@
 # Power Sequence
 
-Let's call a list of positive integers a[0],a[1],...,a[n−1] a power sequence if there is a positive integer c, so that for every 0 ≤ i ≤ n−1 then ai = c^i
+Let's call a list of positive integers a[0],a[1],...,a[n−1] a power sequence if there is a positive integer c, so that for every 0 ≤ i ≤ n−1 then a[i] = c^i
 
 Given a list of n positive integers a[0],a[1],...,a[n−1], you are allowed to:
 
