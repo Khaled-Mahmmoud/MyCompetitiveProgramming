@@ -79,6 +79,21 @@ In the sixth test case, n=100=2+2⋅5+3⋅11+5⋅11: integers 10, 33, 55 are nea
 
 In the seventh test case, n=258=2⋅5+3⋅7+13⋅17+2⋅3: integers 10, 21, 221, 6 are nearly prime.
 
+**Solution**
+
+Consider the three smallest nearly prime numbers: 6,10 and 14:
+
+if n ≤ 30 = 6 + 10 + 14, then the answer is NO.
+otherwise the answer is YES.
+
+The easiest way is to display 6,10,14,n−30 in cases where n−30 ≠ 6,10,14.
+
+If n=36,40,44, then we can output 6,10,15,n−31.
+
+In addition, it was possible to generate the first nearly prime numbers and iterate over all their possible triplets.
+
+Complexity: O(1) or more if brute-force is written.
+
 ```cpp
 int main()
 {
