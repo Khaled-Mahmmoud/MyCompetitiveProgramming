@@ -10,9 +10,9 @@ Uncle Bogdan easily solved the task and joined the crew. Can you do the same?
 
 Input
 
-The first line contains a single integer t (1≤t≤1000) — the number of test cases.
+The first line contains a single integer t (1 ≤ t ≤ 1000) — the number of test cases.
 
-Next t lines contain test cases — one per line. The first and only line of each test case contains the single integer n (1≤n≤2⋅105) — the number Flint guessed.
+Next t lines contain test cases — one per line. The first and only line of each test case contains the single integer n (1 ≤ n ≤ 2⋅10^5) — the number Flint guessed.
 
 Output
 
