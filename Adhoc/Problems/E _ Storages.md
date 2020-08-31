@@ -6,7 +6,7 @@ query has two types:
 
 X + : means add number x into array
 
-X - : means remove number x from array
+X - : means remove number x from array (it is guaranteed that the array has number X)
 
 input :
 
