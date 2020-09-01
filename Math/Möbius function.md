@@ -57,7 +57,7 @@ int mobius(int n)
 }
 ```
 
-### Möbius and Inclusion Exclusion
+### Möbius and [Inclusion Exclusion](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/Combinatorics/Counting%20Principle.md)
 
 Recall, in Inclusion Exclusion we compute all subsets, and add odd subsets and substract even subsets.
 
