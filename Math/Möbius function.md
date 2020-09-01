@@ -56,3 +56,49 @@ int mobius(int n)
     return mobval;
 }
 ```
+
+### Möbius and Inclusion Exclusion
+
+Recall, in Inclusion Exclusion we compute all subsets, and add odd subsets and substract even subsets.
+
+- Assume generating all subsets of primes but in implicit way (e.g. iterate on numbers), Möbius can tell you if number is odd subset or even.
+
+- Typically, ignoring numbers with repeated prime factors is target. Then Möbius(n) plays perfect role.
+
+- **Given n square free number, find its index?**
+
+- E.g. F_reverse(n = 19) = 13
+
+- Reverse thinking: Can we remove non SFree?
+
+- In range n, remove who divides by 2x2, 3x3, 4x4, 5x5, 6x6...etc.
+
+- 4x4 and 6x6 already computed by previous ones.
+
+- Ignore duplicate primes (4x4)...use Inclusion Exclusion for others F(2)+F(3)+F(5)-F(6)
+
+```cpp
+ll val = 19 , idx = val;
+for(ll i=2;i*i<=val;i++)
+    idx -= mobius[i] * (val/(i*i));
+```
+
+**Count the triples (a,b,c) such a, b, c <= n and gcd(a, b, c) = 1**
+
+- Reverse thinking, total - (number of triples gcd > 1)
+
+- How many triples with gcd multiple of 2: (n/2)^3
+
+- How many triples with gcd multiple of 3: (n/3)^3
+
+- and 4? Ignore any numbers of internal duplicate primes.
+
+- and 6? already computed in 2, 3. Remove it: -(n/6)^3
+
+- This is Inclusion Exclusion.
+
+```cpp
+ll sum = n*n*n;
+for(ll i=2;i<=n;i++)
+    sum -= mobius[i] * (n/i) * (n/i) * (n/i);
+```
