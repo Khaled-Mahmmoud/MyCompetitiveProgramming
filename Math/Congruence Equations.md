@@ -10,7 +10,7 @@ called a and b congruent modulo n
 
 - a = b+qn for some q integer (a-b = qn)
 
-Note that a ≡ 0 (mod m) if and only if m | a . Thus, modular arithmetic gives you another way of dealing with divisibility relations. Another way of saying this is: Mod m any multiple of m is 0.
+Note that a ≡ 0 (mod m) if and only if m | a . Thus, modular arithmetic gives you another way of dealing with divisibility relations. Another way of saying this is:  any multiple of m Mod m is 0.
 
 
 ### Congruence Facts
