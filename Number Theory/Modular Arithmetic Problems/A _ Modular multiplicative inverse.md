@@ -1,5 +1,11 @@
 # Modular multiplicative inverse
 
+Multiplicative inverse (reciprocal)
+
+- Of number a: 1/a or a^−1 => then a * (1/a) = 1
+
+- Then for any a * b = 1, then b = 1 / a = a^-1
+ 
 Given two integers ‘a’ and ‘m’, find modular multiplicative inverse of ‘a’ under modulo ‘m’.
 
 The modular multiplicative inverse is an integer ‘x’ such that.
