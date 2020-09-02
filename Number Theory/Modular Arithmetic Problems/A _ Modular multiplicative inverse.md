@@ -91,7 +91,38 @@ int main()
 ```
 Time Complexity of this method is O(log min(a,m))
 
+# Method 3: Euler's theorem
+ 
+- if gcd(a, m) = 1 => a^φ(m) ≡ 1 (mod m)
 
+- φ(m) is Euler's totient function
+
+- As a result (divide both sides by a)
+
+- a^(φ(m)-1) ≡ a^-1 (mod m)
+
+- if m is prime a^-1 ≡ a^(m-2) (mod m)
+```cpp
+int power(int a,int b,int mod)
+{
+    int ans = 1;
+    a %= mod;
+    while(b)
+    {
+        if(b%1)
+            ans = (ans*a)%mod;
+        b>>=1;
+        a = (a * a)%mod;
+    }
+    return ans;
+}
+int mod_inverse(int a,int m)
+{
+    if(isprime(m))
+        return power(a,m-2,m);
+    return power(a,phi(m)-1,m);
+}
+```
 ### Modular multiplicative inverse from 1 to n 
 
 Give a positive integer n, find modular multiplicative inverse of all integer from 1 to n with respect to a prime number
