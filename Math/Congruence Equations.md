@@ -19,7 +19,7 @@ Note that a ≡ 0 (mod m) if and only if m | a . Thus, modular arithmetic gives 
 
 - If ax ≡ ay (mod n) SAME as x ≡ y (mod n) THEN d = 1, Reverse doesn’t need this condition.
 
-- IF a ≡ b (mod m)  a^n ≡ b^n (mod m) for all  n>= 1
+- IF a ≡ b (mod m) then a^n ≡ b^n (mod m) for all  n >= 1
 
 - If p is prime , (x+y)^p ≡ x^p + y^p (mod p)
 
