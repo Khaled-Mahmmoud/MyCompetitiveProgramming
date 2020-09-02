@@ -91,7 +91,7 @@ int main()
 ```
 Time Complexity of this method is O(log min(a,m))
 
-## Method 3: Euler's theorem
+**Method 3: Euler's theorem**
  
 - if gcd(a, m) = 1 => a^φ(m) ≡ 1 (mod m)
 
