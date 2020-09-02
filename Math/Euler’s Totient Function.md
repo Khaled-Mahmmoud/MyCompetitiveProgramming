@@ -57,6 +57,7 @@ For example, n = 6, the divisors of n are 1, 2, 3 and 6. According to Gauss, sum
 We can verify the same by putting values, we get (1 + 1 + 2 + 2) = 6
 7) The most famous and important feature is expressed in **Euler’s theorem** :
 The theorem states that if n and a are coprime, then
+
 `a^φ(n) ≡ 1 (mod n)`.
 The RSA cryptosystem is based on this theorem.
 
