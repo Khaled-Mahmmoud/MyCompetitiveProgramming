@@ -163,16 +163,20 @@ void modularInverse(int n, int prime)
 } 
 ```
 Proof
-We have: m mod i = m − ⌊m/i⌋ ⋅ i
+We have: m % i = m − ⌊m/i⌋ ⋅ i
 
 Taking both sides modulo m yields:
 
-m mod i ≡ − ⌊m/i⌋ ⋅ i  (mod m)
+m % i ≡ − ⌊m/i⌋ * i  (mod m)
  
-Multiply both sides by i^−1 ⋅ (m mod i)^−1 yields
+Now, divide by i * (m % i)
 
-(m mod i) ⋅ i^−1 ⋅ (m mod i)^−1 ≡ − ⌊m/i⌋ ⋅ i ⋅ i^−1 ⋅ (m mod i)^−1 (mod m)
+1 / i ≡ − ⌊m/i⌋ / (m % i) (mod m)
  
 which simplifies to:
 
-i^−1 ≡ −⌊m/i⌋⋅(m mod i)^−1 (mod m)
+i^−1 ≡ −⌊m/i⌋⋅(m % i)^−1 (mod m)
+
+Add m to convert to +ve
+
+inv[i] = m - ⌊m/i⌋ * inv[m % i] (mod m)
