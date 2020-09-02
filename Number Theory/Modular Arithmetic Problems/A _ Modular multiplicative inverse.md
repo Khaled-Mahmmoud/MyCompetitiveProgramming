@@ -91,7 +91,7 @@ int main()
 ```
 Time Complexity of this method is O(log min(a,m))
 
-# Method 3: Euler's theorem
+## Method 3: Euler's theorem
  
 - if gcd(a, m) = 1 => a^φ(m) ≡ 1 (mod m)
 
@@ -123,7 +123,7 @@ int mod_inverse(int a,int m)
     return power(a,phi(m)-1,m);
 }
 ```
-### Modular multiplicative inverse from 1 to n 
+## Modular multiplicative inverse from 1 to n 
 
 Give a positive integer n, find modular multiplicative inverse of all integer from 1 to n with respect to a prime number
 
