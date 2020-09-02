@@ -123,6 +123,24 @@ int mod_inverse(int a,int m)
     return power(a,phi(m)-1,m);
 }
 ```
+### Euler's theorem and large powers
+
+- 7^222 % 10.
+
+- gcd(7, 10) = 1 and φ(10) = 4
+
+- From Euler's theorem 7^4 ≡ 1 (% 10)
+
+- 7^222 ≡ 7^(4 × 55 + 2) ≡ (7^4)^55 × 7^2 ≡ 1^55 × 72
+
+- 7^222 ≡ 49 ≡ 9 (mod 10)
+
+- Or shortly, 7^222 ≡ 7^(222 % 4) ≡ 7^2 = 9 (mod 10)
+
+- Compute ((1/a)^m)% p .. where p is prime.Same as ((1/a)% p)^m % p = (a^(p-2) % p)^m % p use inverse modular a^m(p-2) % p
+
+- What about using euler to reduce the power of a^m(p-2) % p? using note that gcd(a,p) = 1. 
+
 ## Modular multiplicative inverse from 1 to n 
 
 Give a positive integer n, find modular multiplicative inverse of all integer from 1 to n with respect to a prime number
