@@ -176,7 +176,7 @@ Now, divide by i * (m % i)
  
 which simplifies to:
 
-i^−1 ≡ −⌊m/i⌋ * (m % i)^−1 (mod m)
+i^−1 ≡ − ⌊m/i⌋ * (m % i)^−1 (mod m)
 
 Add m to convert to +ve
 
