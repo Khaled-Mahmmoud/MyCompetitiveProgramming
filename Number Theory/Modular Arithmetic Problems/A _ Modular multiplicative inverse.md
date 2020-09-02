@@ -162,7 +162,8 @@ void modularInverse(int n, int prime)
         cout << inv[i] << ' ';     
 } 
 ```
-Proof
+**Proof**
+```
 We have: m % i = m − ⌊m/i⌋ ⋅ i
 
 Taking both sides modulo m yields:
@@ -175,8 +176,9 @@ Now, divide by i * (m % i)
  
 which simplifies to:
 
-i^−1 ≡ −⌊m/i⌋⋅(m % i)^−1 (mod m)
+i^−1 ≡ −⌊m/i⌋ * (m % i)^−1 (mod m)
 
 Add m to convert to +ve
 
 inv[i] = m - ⌊m/i⌋ * inv[m % i] (mod m)
+```
