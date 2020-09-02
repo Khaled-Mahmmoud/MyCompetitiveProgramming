@@ -55,13 +55,14 @@ For example ?(5) is 4 and ?(6) is 2, so ?(30) must be 8 as 5 and 6 are relativel
 6) Sum of values of totient functions of all divisors of n is equal to n.
 For example, n = 6, the divisors of n are 1, 2, 3 and 6. According to Gauss, sum of ?(1) + ?(2) + ?(3) + ?(6) should be 6
 We can verify the same by putting values, we get (1 + 1 + 2 + 2) = 6
-7) The most famous and important feature is expressed in Euler’s theorem :
-The theorem states that if n and a are coprime positive integers, then
-a^?(n) ? 1 (mod n) 
-The RSA cryptosystem is based on this theorem:
+7) The most famous and important feature is expressed in **Euler’s theorem** :
+The theorem states that if n and a are coprime, then
+`a^φ(n) ≡ 1 (mod n)`.
+The RSA cryptosystem is based on this theorem.
+
 In the particular case when m is prime say p
 Euler’s theorem turns into the so-called Fermat’s little theorem :
-a^(p-1) ? 1 (mod p) 
+`a^(p-1) ≡ 1 (mod p)`
 
 A **simple Solution** is to iterate through all numbers from 1 to n-1 and count numbers with gcd with n as 1.
  
