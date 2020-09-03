@@ -52,24 +52,24 @@ long long a[100009];
 int main()
 {
     int n;
-	cin>>n;
-	vector<long long> v(n);
-	for(int i = 0;i < n;i++)
+    cin>>n;
+    vector<long long> v(n);
+    for(int i = 0; i < n; i++)
     {
-		cin>>v[i];
-		if(i)
-			a[i-1] = abs(v[i] - v[i-1]);
-	}
-	n--;
-	dp[n][0] = dp[n][1] = 0;
-	long long res = 0;
-	for(int i = n-1;i >=0;i--)
-	{
-		dp[i][0] = a[i] + max(0ll,dp[i+1][1]);
-		res = max(res,dp[i][0]);
-		dp[i][1] = -a[i] + max(0ll,dp[i+1][0]);
-	}
-	cout<<res;
+        cin>>v[i];
+        if(i)
+            a[i-1] = abs(v[i] - v[i-1]);
+    }
+    n--;
+    dp[n][0] = dp[n][1] = 0;
+    long long res = 0;
+    for(int i = n-1; i >=0; i--)
+    {
+        dp[i][0] = a[i] + max(0ll,dp[i+1][1]);
+        res = max(res,dp[i][0]);
+        dp[i][1] = -a[i] + max(0ll,dp[i+1][0]);
+    }
+    cout<<res;
     return 0;
 }
 ```
