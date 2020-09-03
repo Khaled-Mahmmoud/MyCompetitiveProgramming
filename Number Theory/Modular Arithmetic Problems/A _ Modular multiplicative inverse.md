@@ -141,6 +141,14 @@ int mod_inverse(int a,int m)
 
 - What about using euler to reduce the power of a^m(p-2) % p? using note that gcd(a,p) = 1. 
 
+- a^(m(p-2)) % (p-1) % p or a^(m%(p-1) * (p-2)%(p-1)) % (p-1) % p
+
+```cpp
+ll modinvers(ll a,ll m,ll p)
+{
+    return power(a,(m%(p-2) * (p-2)%(p-1))%(p-1),p);
+}
+```
 ## Modular multiplicative inverse from 1 to n 
 
 Give a positive integer n, find modular multiplicative inverse of all integer from 1 to n with respect to a prime number
