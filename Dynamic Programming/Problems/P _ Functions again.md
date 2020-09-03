@@ -51,8 +51,6 @@ long long dp[100009][2];
 long long a[100009];
 int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(0);
     int n;
 	cin>>n;
 	vector<long long> v(n);
