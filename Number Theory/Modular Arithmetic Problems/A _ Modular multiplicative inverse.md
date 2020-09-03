@@ -149,6 +149,21 @@ ll modinvers(ll a,ll m,ll p)
     return power(a,(m%(p-2) * (p-2)%(p-1))%(p-1),p);
 }
 ```
+- (p-2) % (p-1) = -1 [use -ve mode]
+
+- It now turns to be: a^(-m%(p-1)) % p … recall:
+
+- if m is +ve, its mode: m%a
+
+- if m is -ve, then -m is: (a + (-m)%a) % a
+
+- Or more directly a - m%a
+
+- Then turns to be: a^(p-1-(m%(p-1))) % p
+
+- Moral of that, is we get rid of p-2 with a
+constant -1 .. this helps in some advanced
+problems
 ## Modular multiplicative inverse from 1 to n 
 
 Give a positive integer n, find modular multiplicative inverse of all integer from 1 to n with respect to a prime number
