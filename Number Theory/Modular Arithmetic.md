@@ -142,3 +142,5 @@ boo is_odd(int n)
     retunr (n % 2 != 0);   // this correct
 }
 ```
+
+`(n-1) % n = n - 1` **or** `(n-1) % n = -1`
