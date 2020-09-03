@@ -82,4 +82,4 @@ Then equation = [(-1 * 3) + 3] (% 28) = 0
 
 for this 27 ≡ -1 (% 28)
 
-then n ≡ m-n (% m)
+then n ≡ n - m (% m)
