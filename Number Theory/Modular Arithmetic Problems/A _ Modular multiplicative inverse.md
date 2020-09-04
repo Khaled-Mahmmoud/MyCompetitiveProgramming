@@ -187,8 +187,6 @@ problems.
 
 - p^x = p^g p^x-g …. using modified euler
 
-- p^x (%n) = p^g p^((x-g)%φ(t)) p^k(x-g) (%n) [recall: d = qk + r]
-
 - p^x (%n) = p^g p^((x-g)%φ(t)) (%n)
 
 ## Modular multiplicative inverse from 1 to n 
