@@ -165,7 +165,16 @@ ll modinvers(ll a,ll m,ll p)
 
 - Moral of that, is we get rid of p-2 with a
 constant -1 .. this helps in some advanced
-problems
+problems.
+
+- What about a^x % n where gcd(a, n) > 1?
+
+- Let’s factorize a to p1 * p2 * p3...pk. e.g. 12 = 2 * 2 * 3 
+
+- Then answer = (p1^x % n * p2^x % n .... )%n
+
+- Our problem = new sub-problems: p^x % n. p is a prime number,then gcd(p, n) = 1, direct euler.
+
 ## Modular multiplicative inverse from 1 to n 
 
 Give a positive integer n, find modular multiplicative inverse of all integer from 1 to n with respect to a prime number
