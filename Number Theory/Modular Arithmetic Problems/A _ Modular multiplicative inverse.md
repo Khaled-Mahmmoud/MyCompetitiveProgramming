@@ -143,7 +143,7 @@ int mod_inverse(int a,int m)
 
 - What about using euler to reduce the power of a^m(p-2) % p? using note that gcd(a,p) = 1. 
 
-- a^(m(p-2)) % (p-1) % p or a^(m%(p-1) * (p-2)%(p-1)) % (p-1) % p
+- a^((m(p-2)) % (p-1)) % p or a^((m%(p-1) * (p-2)%(p-1)) % (p-1)) % p
 
 ```cpp
 ll modinvers(ll a,ll m,ll p)
