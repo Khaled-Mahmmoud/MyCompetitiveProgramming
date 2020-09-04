@@ -127,19 +127,15 @@ int mod_inverse(int a,int m)
 ```
 ### Euler's theorem and large powers
 
-- 7^222 % 10.
-
-- gcd(7, 10) = 1 and φ(10) = 4
+- 7^222 % 10 ==>> gcd(7, 10) = 1 and φ(10) = 4
 
 - From Euler's theorem 7^4 ≡ 1 (% 10)
 
-- 7^222 ≡ 7^(4 × 55 + 2) ≡ (7^4)^55 × 7^2 ≡ 1^55 × 7^2
-
-- 7^222 ≡ 49 ≡ 9 (mod 10)
+- 7^222 ≡ 7^(4 × 55 + 2) ≡ (7^4)^55 × 7^2 ≡ 1^55 × 7^2 ≡ 49 ≡ 9 (mod 10)
 
 - Or shortly, 7^222 ≡ 7^(222 % 4) ≡ 7^2 = 9 (mod 10)
 
-- Compute ((1/a)^m)% p .. where p is prime.Same as ((1/a)% p)^m % p = (a^(p-2) % p)^m % p use inverse modular a^m(p-2) % p
+**Compute ((1/a)^m)% p** .. where p is prime.Same as ((1/a)% p)^m % p = (a^(p-2) % p)^m % p use inverse modular a^m(p-2) % p
 
 - What about using **fermat's last theorm** to reduce the power of a^m(p-2) % p? using note that gcd(a,p) = 1. 
 
@@ -167,13 +163,33 @@ ll modinvers(ll a,ll m,ll p)
 constant -1 .. this helps in some advanced
 problems.
 
-- What about a^x % n where gcd(a, n) > 1?
+**What about a^x % n where gcd(a, n) > 1?**
 
 - Let’s factorize a to p1 * p2 * p3...pk. e.g. 12 = 2 * 2 * 3 
 
 - Then answer = (p1^x % n * p2^x % n .... )%n
 
-- Our problem = new sub-problems: p^x % n. p is a prime number,then gcd(p, n) = 1, direct euler.
+- Our problem = new sub-problems: p^x % n. p is a prime number,if gcd(p, n) = 1, direct euler, otherwise n % p = 0.
+
+**Find largest g such that: p^g % n = 0?**
+
+- Then gcd(p, t = n/(p^g)) = 1 … using euler rule.
+
+- p^φ(t) = 1 (%t) multiply all terms by p^g
+
+- p^g p^φ(t) = p^g (%n) then p^g p^φ(t) p^φ(t) = p^g (%n) and generally: p^g p^kφ(t) = p^g (%n) and k means multiple of p^φ(t) no effect.
+
+**Back to p^x**
+
+- if x <= g, then it was actually small power. Forget euler
+
+- if x > g, let’s embed it in equation: x = x - g + g
+
+- p^x = p^g p^x-g …. using modified euler
+
+- p^x (%n) = p^g p^((x-g)%φ(t)) p^k(x-g) (%n) [recall: d = qk + r]
+
+- p^x (%n) = p^g p^((x-g)%φ(t)) (%n)
 
 ## Modular multiplicative inverse from 1 to n 
 
