@@ -148,7 +148,7 @@ int mod_inverse(int a,int m)
 ```cpp
 ll modinvers(ll a,ll m,ll p)
 {
-    return power(a,(m%(p-2) * (p-2)%(p-1))%(p-1),p);
+    return power(a,(m%(p-1) * (p-2)%(p-1))%(p-1),p);
 }
 ```
 - (p-2) % (p-1) = -1 [use -ve mode]
