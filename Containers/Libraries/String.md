@@ -48,7 +48,7 @@ int main ()
 Complexity :: Unspecified, but generally linear in the number of characters interpreted.
 ```
 
-### stol 
+### stoll
 
 converts the string to long long
 ```cpp
@@ -58,7 +58,7 @@ using namespace std;
 int main ()
 {
      string s = "1987520892";
-     long long m = stol(s);   // 1987520892
+     long long m = stoll(s);   // 1987520892
      cout<< m + 1;      //  1987520893
 }
 ```
