@@ -31,7 +31,9 @@ For every number x, check if (a * x)%m is 1
  
 Time Complexity of this method is O(m)
 
-**Method 2 (Works when m and a are coprime)**
+**Method 2 : Extended Euclidean**
+
+(Works when m and a are coprime)
 
 The idea is to use Extended Euclidean algorithms that takes two integers ‘a’ and ‘b’,
 find their gcd and also find ‘x’ and ‘y’ such that `ax + by = gcd(a, b)`
