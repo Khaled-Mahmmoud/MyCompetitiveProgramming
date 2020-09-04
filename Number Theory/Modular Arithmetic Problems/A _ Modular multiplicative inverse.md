@@ -141,7 +141,7 @@ int mod_inverse(int a,int m)
 
 - Compute ((1/a)^m)% p .. where p is prime.Same as ((1/a)% p)^m % p = (a^(p-2) % p)^m % p use inverse modular a^m(p-2) % p
 
-- What about using euler to reduce the power of a^m(p-2) % p? using note that gcd(a,p) = 1. 
+- What about using **fermat's last theorm** to reduce the power of a^m(p-2) % p? using note that gcd(a,p) = 1. 
 
 - a^((m(p-2)) % (p-1)) % p or a^((m%(p-1) * (p-2)%(p-1)) % (p-1)) % p
 
