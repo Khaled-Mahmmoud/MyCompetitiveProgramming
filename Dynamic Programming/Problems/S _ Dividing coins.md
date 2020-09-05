@@ -6,8 +6,10 @@ value of a coin varies from 1 cent to 500 cents. It’s not allowed to split a s
 
 Input :
 A line with the number of problems n, followed by n times:
-• a line with a non negative integer m (m ≤ 100) indicating the number of coins in the bag
-• a line with m numbers separated by one space, each number indicates the value of a coin.
+
+a line with a non negative integer m (m ≤ 100) indicating the number of coins in the bag.
+
+a line with m numbers separated by one space, each number indicates the value of a coin.
 
 Output :
 The output consists of n lines. Each line contains the minimal positive difference between the amount
