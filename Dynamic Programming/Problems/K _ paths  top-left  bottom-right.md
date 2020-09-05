@@ -69,6 +69,8 @@ int path(int m,int n)
     return dp[m-1][n-1];
 }
 ```
+### Another Problem
+
 Consider an n×n grid whose squares may have traps. It is not allowed to move to a square with a trap
 Your task is to calculate the number of paths from the upper-left square to the lower-right square where
 you only can move right or down.
