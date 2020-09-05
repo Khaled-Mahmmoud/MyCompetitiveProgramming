@@ -6,10 +6,10 @@ Nikita thinks that string is beautiful if it can be cut into 3 strings (possibly
 
 Nikita wants to make the string beautiful by removing some (possibly none) of its characters, but without changing their order. What is the maximum length of the string he can get?
 
-**Input** : 
+Input : 
 The first line contains a non-empty string of length not greater than 5000 containing only lowercase English letters "a" and "b".
 
-**Output** : Print a single integer — the maximum possible size of beautiful string Nikita can get.
+Output : Print a single integer — the maximum possible size of beautiful string Nikita can get.
 
 input
 
