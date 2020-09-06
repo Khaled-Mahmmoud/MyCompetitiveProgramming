@@ -22,9 +22,9 @@ int main()
 {
     while (cin >> str)
     {
-		memset(dp, -1, sizeof dp);
-		cout << solve(0, str.size() - 1) << endl;
-	}
+	memset(dp, -1, sizeof dp);
+	cout << solve(0, str.size() - 1) << endl;
+    }
     return 0;
 }
 ```
