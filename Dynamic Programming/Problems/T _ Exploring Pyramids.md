@@ -10,7 +10,7 @@ int solve(int l, int r)
 {
 	if (l == r) return 1;
 	int &ret = dp[l][r];
-	if (ret != -1) return ret;
+	if (~ret) return ret;
 	ret = 0;
 	if (str[l] != str[r]) return 0;
 	for (int k = l + 2; k <= r; k++)
