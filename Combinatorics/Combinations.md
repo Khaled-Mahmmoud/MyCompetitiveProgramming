@@ -26,7 +26,7 @@ int nCr(int n, int r)
     return fact(n) / (fact(r) * fact(n - r)); 
 } 
 ```
-A 
+
 # binomial coefficient
 
 A binomial coefficient C(n, k) also gives the number of ways, disregarding order
