@@ -98,6 +98,7 @@ Time Complexity: O(n*k)
 
 Auxiliary Space: O(n*k)
 
+### Another Solution
 
 Note that C(n, r) = C(n, n - r).
 
@@ -116,3 +117,19 @@ int nCr(int n, int r)
 }
 ```
 Complexity: O(r)
+
+### Combinations (nCr) for Large Numbers
+
+```cpp
+int fact[N];
+void init(int n, int mod)
+{
+    fact[0] = 1;
+    for (int i = 1; i <= n; ++i) 
+        fact[i] = (fact[i - 1] * i * 1LL) % mod;
+}
+int nCr(int n, int r, int mod) 
+{
+    return (fact[n] * modInverse(fact[r] * 1LL * fact[n - r], mod + 0LL)) % mod;
+}
+```
