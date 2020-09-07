@@ -54,7 +54,7 @@ ax  ≡ 1 (mod m)
 So the ‘x’ that we can find using Extended Euclidean Algorithm is multiplicative inverse of ‘a’
 
 ```cpp
-int gcdExtended(int a, int b, int *x, int *y)
+int gcd(int a, int b, int *x, int *y)
 {
     if (a == 0)  
     {  
@@ -64,7 +64,7 @@ int gcdExtended(int a, int b, int *x, int *y)
     }  
   
     int x1, y1;  
-    int g = gcdExtended(b%a, a, &x1, &y1);   
+    int g = gcd(b%a, a, &x1, &y1);   
     *x = y1 - (b/a) * x1;  
     *y = x1;  
   
