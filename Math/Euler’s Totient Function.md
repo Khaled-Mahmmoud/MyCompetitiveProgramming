@@ -57,7 +57,7 @@ For example, n = 6, the divisors of n are 1, 2, 3 and 6. According to Gauss, sum
 We can verify the same by putting values, we get (1 + 1 + 2 + 2) = 6
 7) The most famous feature is expressed in **Euler’s theorem** :
 The theorem states that if n and a are coprime,`a^φ(n) ≡ 1 (mod n)`. The RSA cryptosystem is based on this theorem. In the particular case when m is prime say p
-Euler’s theorem turns into the so-called Fermat’s little theorem :
+Euler’s theorem turns into the so-called **Fermat’s little theorem** :
 `a^(p-1) ≡ 1 (mod p)`
 
 A **simple Solution** is to iterate through all numbers from 1 to n-1 and count numbers with gcd with n as 1.
