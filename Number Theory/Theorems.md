@@ -2,7 +2,7 @@
 
 ### Fermat's Little Theorem:
 
-If n is a prime number, then for every a, 1 < a < n-1,
+If n is a prime number, then for every a < n.
 
 `a^(n-1) ≡ 1 (mod n)` 
  
