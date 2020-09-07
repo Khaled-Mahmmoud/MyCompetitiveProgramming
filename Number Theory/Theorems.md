@@ -103,9 +103,12 @@ p  = 7
 
 1) We can quickly check result for p = 2 or p = 3.
 
-2) For p > 3: If p is composite, then its positive divisors are among the integers 1, 2, 3, 4, … , p-1 and it is clear that gcd((p-1)!,p) > 1, so we can not have (p-1)! = -1 (mod p).
+2) For p > 3: If p is composite, then its positive divisors are among the integers 1, 2, 3, 4, … , p and it is clear that gcd((p-1)!,p) > 1, 
 
-3) Now let us see how it is exactly -1 when p is a prime. If p is a prime, then all numbers in [1, p-1] are relatively prime to p. And for every number x in range [2, p-2], there must exist a pair y such that (x*y)%p = 1. So
+so we can not have (p-1)! = -1 (mod p).
+
+3) Now let us see how it is exactly -1 when p is a prime. If p is a prime, then all numbers in [1, p-1] are relatively prime to p. And for every number x in range 
+[2 , p-2], there must exist a pair y such that (x * y)%p = 1. So
 
 
 
