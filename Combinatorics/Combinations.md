@@ -118,7 +118,7 @@ int nCr(int n, int r)
 ```
 Complexity: O(r)
 
-### Combinations (nCr) for Large Numbers
+### Combinations (nCr) for Large Numbers where m is prime
 
 ```cpp
 int fact[N];
