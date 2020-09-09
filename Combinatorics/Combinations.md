@@ -130,6 +130,6 @@ void init(int n, int mod)
 }
 int nCr(int n, int r, int mod) 
 {
-    return (fact[n] * modInverse(fact[r] * 1LL * fact[n - r], mod + 0LL)) % mod;
+    return ((fact[n] *inv[r])%MOD * inv[n-r]) % mod;
 }
 ```
