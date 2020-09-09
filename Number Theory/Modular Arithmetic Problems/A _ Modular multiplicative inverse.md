@@ -216,7 +216,7 @@ We denote by inv[i] the modular inverse of i. Then for i>1 the following equatio
 inv[i]= −⌊m/i⌋⋅inv[m mod i] mod m
 
 ```cpp
-void modularInverse(int n, int prime) 
+void modularInverse(int n, int m) 
 { 
     int inv[n+1];
     inv[1] = 1;
