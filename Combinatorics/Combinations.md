@@ -168,3 +168,56 @@ int main()
 }
 ```
 Time complexity : O(nlog(mod))
+
+### Another Solution
+```cpp
+#define MOD 1000000007
+#define ll long long
+ll fact[1009];
+void init()
+{
+    fact[0] = 1;
+    for (int i = 1; i < 1009; ++i)
+        fact[i] = (fact[i - 1] * i) % MOD;
+}
+ll gcd(ll a, ll b,ll *x, ll *y)
+{
+    if (a == 0)
+    {
+        *x = 0;
+        *y = 1;
+        return b;
+    }
+    ll x1, y1;
+    ll g = gcd(b%a, a, &x1, &y1);
+    *x = y1 - (b/a) * x1;
+    *y = x1;
+ 
+    return g;
+}
+ll modinverse(ll a,ll m)
+{
+    ll x,y;
+    ll g = gcd(a,m,&x,&y);
+    if(g!=1)
+       cout<<"-1";
+     else
+     {
+         ll res = (x%m+m)%m;
+         return res;
+     }
+}
+int main()
+{
+    init();
+    int t;cin>>t;while(t--)
+    {
+        int r, n;
+        cin>>n>>r;
+        if(r>n)cout<<0<<'\n';
+        else
+        cout<<(fact[n] * modinverse(fact[r] * fact[n-r],MOD))%MOD<<'\n';
+    }
+    return 0;
+}
+```
