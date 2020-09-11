@@ -167,4 +167,4 @@ int main()
     return 0;
 }
 ```
-// Time complexity : O(nlog mod)
+// Time complexity : O(nlog(mod))
