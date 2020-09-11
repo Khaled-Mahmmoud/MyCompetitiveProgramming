@@ -49,7 +49,7 @@ flip each bit
 
 int a=10 ; // 1010
 
-int b=~a=~(1010)=0101
+int b= ~ a = ~ (1010)=0101
 
 **Shift Left**
 
