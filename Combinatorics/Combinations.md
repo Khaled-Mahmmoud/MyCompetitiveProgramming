@@ -1,8 +1,8 @@
 # Combinations
 
-Program to calculate value of nCr.
+Program to calculate value of nCk.
     
-Given two numbers n and r, find value of nCr
+Given two numbers n and k, find value of nCk.
 
 Input :  n = 5, r = 2
 Output : 30
@@ -11,7 +11,7 @@ The value of 5C2 is 10
 Input : n = 3, r = 1
 Output : 3
 
-The idea is simply based on formula`nCr = (n!) / ((n-r)! * r!)`
+The idea is simply based on formula`nCr = (n!) / ((n-k)! * k!)`
 
 ```cpp
 int fact(int n) 
@@ -167,4 +167,4 @@ int main()
     return 0;
 }
 ```
-// Time complexity : O(nlog(mod))
+Time complexity : O(nlog(mod))
