@@ -4,11 +4,11 @@ Program to calculate value of nCk.
     
 Given two numbers n and k, find value of nCk.
 
-Input :  n = 5, r = 2
+Input :  n = 5, k = 2
 Output : 30
 The value of 5C2 is 10
 
-Input : n = 3, r = 1
+Input : n = 3, k = 1
 Output : 3
 
 The idea is simply based on formula`nCr = (n!) / ((n-k)! * k!)`
