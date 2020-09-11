@@ -118,18 +118,52 @@ int nCr(int n, int r)
 ```
 Complexity: O(r)
 
-### Combinations (nCr) for Large Numbers where m is prime
+### Combinations nCr % m for Large Numbers where m is prime
 
 ```cpp
-int fact[N];
-void init(int n, int mod)
+#define mod 1000000007
+#define N 1009
+#define ll unsigned long long  // notice it should be unsigned long long, there wrong answer with long long
+ll fact[N],inv[N];
+ll power(ll x,ll y)
 {
-    fact[0] = 1;
-    for (int i = 1; i <= n; ++i) 
-        fact[i] = (fact[i - 1] * i * 1LL) % mod;
+    x = x % mod;
+    ll ans = 1;
+    while(y)
+    {
+        if(y&1)
+            ans = (ans * x)%mod;
+        x = (x * x)%mod;
+        y>>=1;
+    }
+    return ans;
 }
-int nCr(int n, int r, int mod) 
+void init()
 {
-    return ((fact[n] *inv[r])%MOD * inv[n-r]) % MOD;
+    fact[0] = inv[0] = 1;
+    for(int i=1;i<N;i++)
+    {
+        fact[i] = (i * fact[i-1])%mod;
+        inv[i] = power(fact[i],mod-2); // notice it should be fact[i], there was wrong answer with i
+    }
+}
+ll ncr(ll n,ll r)
+{
+    if(r>n)
+       return 0;
+    return ((fact[n]*inv[r])%mod * inv[n-r])%mod;
+}
+int main()
+{
+    init();
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        ll n,r;
+        cin>>n>>r;
+        cout<<ncr(n,r)<<'\n';
+    }
+    return 0;
 }
 ```
