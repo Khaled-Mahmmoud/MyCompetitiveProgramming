@@ -21,9 +21,9 @@ int fact(int n)
         res = res * i; 
     return res; 
 } 
-int nCr(int n, int r) 
+int nCr(int n, int k) 
 { 
-    return fact(n) / (fact(r) * fact(n - r)); 
+    return fact(n) / (fact(k) * fact(n - k)); 
 } 
 ```
 
