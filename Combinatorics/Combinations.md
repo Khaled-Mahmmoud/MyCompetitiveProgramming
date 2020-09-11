@@ -94,31 +94,31 @@ int binomialCoeff(int n, int k)
     return C[n][k]; 
 } 
 ```
-Time Complexity: O(n*k)
+Time Complexity: O(n * k)
 
-Auxiliary Space: O(n*k)
+Auxiliary Space: O(n * k)
 
 ### Another Solution
 
-Note that C(n, r) = C(n, n - r).
+Note that C(n, k) = C(n, n - k).
 
-So call the function with nCr(n, min(r, n-r)) for better performance.
+So call the function with nCk(n, min(k, n-k)) for better performance.
  
 ```cpp 
-int nCr(int n, int r) 
+int nCr(int n, int k) 
 {
-    if (n < r)
+    if (n < k)
         return 0;
 
-    if (r == 0)
+    if (k == 0)
         return 1;
 
-    return n * nCr(n - 1, r - 1) / r;
+    return n * nCr(n - 1, r - 1) / k;
 }
 ```
-Complexity: O(r)
+Complexity: O(k)
 
-### Combinations nCr % m for Large Numbers where m is prime
+### Combinations nCk % m for Large Numbers where m is prime
 
 ```cpp
 #define mod 1000000007
@@ -147,11 +147,11 @@ void init()
         inv[i] = power(fact[i],mod-2); // notice it should be fact[i], there was wrong answer with i
     }
 }
-ll ncr(ll n,ll r)
+ll nCk(ll n,ll k)
 {
-    if(r>n)
+    if(k>n)
        return 0;
-    return ((fact[n]*inv[r])%mod * inv[n-r])%mod;
+    return ((fact[n]*inv[k])%mod * inv[n-k])%mod;
 }
 int main()
 {
@@ -160,9 +160,9 @@ int main()
     cin>>t;
     while(t--)
     {
-        ll n,r;
+        ll n,k;
         cin>>n>>r;
-        cout<<ncr(n,r)<<'\n';
+        cout<<nCk(n,k)<<'\n';
     }
     return 0;
 }
