@@ -11,7 +11,7 @@ The value of 5C2 is 10
 Input : n = 3, k = 1
 Output : 3
 
-The idea is simply based on formula`nCr = (n!) / ((n-k)! * k!)`
+The idea is simply based on formula`nCk = (n!) / ((n-k)! * k!)`
 
 ```cpp
 int fact(int n) 
@@ -113,7 +113,7 @@ int nCr(int n, int k)
     if (k == 0)
         return 1;
 
-    return n * nCr(n - 1, r - 1) / k;
+    return n * nCr(n - 1, k - 1) / k;
 }
 ```
 Complexity: O(k)
