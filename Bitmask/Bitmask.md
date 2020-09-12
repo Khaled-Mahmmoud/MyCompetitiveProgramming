@@ -170,7 +170,7 @@ X = 11011 = 27
 
 X % 2 = X & 1 = bit 0
 
-Generally   :	X % (2^n)  = X & (2^n-1)
+Generally   :	X % (2^n)  = X & (2^n - 1)
 
 if( n%2 == 1)		-> Fails of n is negative
 
