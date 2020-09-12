@@ -179,16 +179,18 @@ if( n&1 == 1)     	-> Works always
 ```cpp
 void printNumber(int n)
 {
-  if(!n)return;
-	 printNumber(n>>1);	// remove last bit
-	 cout<<(n&1);           //  print last bit
+     if(!n)
+        return;
+     printNumber(n>>1);	// remove last bit
+     cout<<(n&1);           //  print last bit
 }
 
 void printNumber(int n, int len)
 {
-	 if(!len)return;
-	 printNumber(n>>1, len-1);	// remove last bit
-	 cout<<(n&1);		       //  print last bit
+     if(!len)
+	return;
+     printNumber(n>>1, len-1);	// remove last bit
+     cout<<(n&1);		       //  print last bit
 }
 
 int countNumBits1(int mask) 
