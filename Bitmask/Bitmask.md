@@ -218,7 +218,10 @@ X & (X-1) 	= 011010000000		first bit from right removed
 
 X & ~(X-1) 	= 011010010000 
                 & 100101110000 = 000000010000	value of 1<<SmaintestBitIdx
-
+```cpp
+template<class Int>	
+Int leastBit(Int num) { return (num & ~(num-1)); }	
+```
 to count number of sets in mask
 ```cpp
 int countNumBits2(int mask) 
@@ -242,21 +245,12 @@ to check whether N is power of 2 or not
     cout<<(n&(n-1)?"NO":"YES");
 ```
 // to get [least significant bit](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Bitmask/most%20significant%20bit.jpg) that is set
-```cpp
-template<class Int>	
-Int leastBit(Int num) { return (num & ~(num-1)); }	
-```
 
 num % mod, mod is a power of 2	
 
 ```cpp
 template<class Int>	
 Int Mod(Int num, Int mod) { return (num & (mod - 1) ); }	
-```
-
-```cpp
-template<class Int>	
-bool isPowerOfTwo(Int num) { return (num & (num - 1) ) == 0; }
 ```
 
 len = 3: 000, 001, 010, 011, 100, 101, 110, 111
