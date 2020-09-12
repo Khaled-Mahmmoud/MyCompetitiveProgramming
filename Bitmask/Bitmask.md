@@ -307,7 +307,7 @@ Gray Code :  is a binary numeral system where two successive values differ in on
 |0100|0110|4|
 |0101|0111|5|
 |0110|0101|6|
-
+|0111|0100|7|
 
 By observation, in gray code, every bit is Xor of its bit and last one
 
@@ -319,7 +319,7 @@ int grayCode(int i)
 
 void printAllSubsetsGray(int len)
 {
-	for (int i = 0; i < (1<<len)-1; ++i)
+	for (int i = 0; i < (1<<len); ++i)
 	{
 		printNumber(i, len );
 		cout<<"\t\t";
