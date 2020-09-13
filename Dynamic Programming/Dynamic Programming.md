@@ -28,6 +28,7 @@ int fib(int n)
 }
 ```
 
+
 ### Tabulation vs Memoization
 
 There are following two different ways to store the values so that the values of a sub-problem can be reused
