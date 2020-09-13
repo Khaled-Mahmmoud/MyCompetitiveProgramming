@@ -35,7 +35,9 @@ int main()
     int ans=INT_MAX;
     for(int i=1; i<n; i++)
         ans=min(ans,n-(neg[i]-pos[i]+pos[n]));
-
+    // notice for this code,there must be positive and negative numbers, for wotherwise we use
+    // for(int i=0; i<=n; i++)
+    //     ans=min(ans,n-(neg[i]-pos[i]+pos[n]));
     cout<<ans;
     return 0;
 }
