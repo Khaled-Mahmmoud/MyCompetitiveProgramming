@@ -1,4 +1,4 @@
-# The Number of Products
+# The Number of negative, positive and zero product subarray
 
 [Problem Link](https://codeforces.com/contest/1215/problem/B)
 
