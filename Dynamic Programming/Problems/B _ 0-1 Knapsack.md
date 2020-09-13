@@ -20,16 +20,17 @@ Complexity : O(wn)
 ```cpp
 const int MAX = 1009;
 int dp[MAX][MAX];     // please do not use vector , it's runtime 
-int knapSack(int w, int wt[], int val[], int n)
+int wt[MAX], int val[MAX];
+int knapSack(int n,int w)
 {
       if (n == 0 || w == 0)
           return 0;
       if(dp[n][w])
           return dp[n][w];
       if (wt[n-1] > w)
-         return dp[n][w] = knapSack(w, wt, val, n-1);
+         return dp[n][w] = knapSack(n-1,w);
       else
-        return dp[n][w] = max( val[n-1] + knapSack(w-wt[n-1], wt, val, n-1),knapSack(w, wt, val, n-1) );
+        return dp[n][w] = max(val[n-1] + knapSack(n-1,w-wt[n-1]),knapSack(n-1,w));
 }
 ```
 
