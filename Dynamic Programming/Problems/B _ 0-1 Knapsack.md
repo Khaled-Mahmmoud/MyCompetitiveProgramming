@@ -30,7 +30,7 @@ int knapSack(int n,int w)
       if (wt[n-1] > w)
          return dp[n][w] = knapSack(n-1,w);
       else
-        return dp[n][w] = max(val[n-1] + knapSack(n-1,w-wt[n-1]),knapSack(n-1,w));
+        return dp[n][w] = max(knapSack(n-1,w), val[n-1] + knapSack(n-1,w-wt[n-1]));
 }
 ```
 
