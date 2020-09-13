@@ -16,20 +16,12 @@ Output:  1
     
 We can convert str1 into str2 by inserting a 's'.
 
-Input:   str1 = "cat", str2 = "cut"
-    
-Output:  1
-    
-We can convert str1 into str2 by replacing 'a' with 'u'.
 
 Input:   str1 = "sunday", str2 = "saturday"
     
 Output:  3
     
-Last three and first characters are same.  We basically
-need to convert "un" to "atur".  This can be done using
-below three operations. 
-Replace 'n' with 'r', insert t, insert a
+Last three and first characters are same.  We basically need to convert "un" to "atur".  This can be done using below three operations. Replace 'n' with 'r', insert t, insert a
 
 **What are the subproblems in this case?**
 
