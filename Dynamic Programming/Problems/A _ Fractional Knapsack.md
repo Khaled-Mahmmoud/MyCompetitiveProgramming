@@ -24,7 +24,7 @@ By taking full items of 10 kg, 20 kg and
 2/3rd of last item of 30 kg
    
 An **efficient solution** is to use **Greedy** approach. The basic idea of the greedy approach is 
-to calculate the `ratio value/weight` for each item and sort the item on basis of this ratio
+to calculate the `ratio = value/weight` for each item and sort the item on basis of this ratio
 Then take the item with the highest ratio and add them until we can’t add the next item as
 a whole and at the end add the next item as much as we can. Which will always be the optimal
 solution to this problem
