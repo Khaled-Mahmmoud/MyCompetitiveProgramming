@@ -14,7 +14,7 @@ int maxSubArraySum(int a[], int size)
     } 
     return ans; 
 }
-// OR
+//  OR
 int maxSubArraySum(int a[], int size) 
 { 
    int ans = a[0], r = a[0]; 
