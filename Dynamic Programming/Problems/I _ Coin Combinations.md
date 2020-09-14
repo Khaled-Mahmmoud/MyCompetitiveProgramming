@@ -46,7 +46,7 @@ int main()
     if(ans==1e9)
         cout<<-1;
     else
-        cout<<solve(x);
+        cout<<ans;
     return 0;
 }
 ```
