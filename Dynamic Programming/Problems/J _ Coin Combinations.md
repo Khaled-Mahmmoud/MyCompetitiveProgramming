@@ -19,23 +19,34 @@ dp[x] = minimum number of coins with sum x
 The complexity : O(nx)
     
 ```cpp
+int dp[1000006];
+int n;int a[102];
+int solve(int x)
+{
+    if(!x)
+        return 0;
+    if(x<0)
+        return 1e9-1;
+    int &rt = dp[x];
+    if(~rt)
+        return rt;
+    rt = 1e9;
+    for(int i=0;i<n;i++)
+        rt = min(rt,1 + solve(x-a[i]));
+    return rt;
+}
 int main()
 {
-    int n,x;cin>>n>>x;
-    vector<int>v(n);
-    for(auto& z:v)cin>>z;
-    vector<int>dp(n+1,1e9);
-    dp[0]=0;
-    for(int i=1;i<=x;i++)
-    for(int j=0;j<n;j++)
-    {
-        if(i-a[j]>=0)
-        dp[i] = min(dp[i],dp[i-a[j]]+1);
-    }
-    if(dp[x]==1e9)
+    int x;
+    cin>>n>>x;
+    for(int i=0;i<n;i++)
+        cin>>a[i];
+    memset(dp,-1,sizeof dp);
+    int ans = solve(x);
+    if(ans==1e9)
         cout<<-1;
-    else 
-        cout<<dp[x];
+    else
+        cout<<solve(x);
     return 0;
 }
 ```
