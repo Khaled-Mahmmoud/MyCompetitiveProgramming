@@ -22,7 +22,7 @@ int main()
         int n,x,y,z;
         cin>>n>>x>>y>>z;
         memset(dp,0,sizeof(dp));
-        cout<<cut(n,x,y,z)<<'\n';
+        cout<<cut(n,x,y,z)<<endl;
     }
     return 0;
 }
