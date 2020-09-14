@@ -1,6 +1,6 @@
 # Longest Palindromic Subsequence
 
-Given a sequence, find the length of the longest palindromic subsequence in it
+Given a sequence, find the length of the longest palindromic subsequence .in it
 
 input  : GeeksforGeeks
 
@@ -8,7 +8,6 @@ output : 5
 
 **Memoization Method – Top Down Dynamic Programming**
 
-Complexity : O(n * n)
 ```cpp
 const int MAX = 1009;
 string s;int dp[MAX][MAX];
@@ -33,3 +32,4 @@ int main()
     return 0;
 }
 ```
+Complexity : O(n^2)
