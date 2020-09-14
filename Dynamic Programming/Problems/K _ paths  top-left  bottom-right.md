@@ -88,28 +88,39 @@ you only can move right or down.
 n <= 1000
     
 ```cpp
+int main()
+{
     int n;
     cin>>n;
-    char v[n][v];
+    char v[n][n];
+    
     for(int i=0;i<n;i++)
         for(int j=0;j<n;j++)
             cin>>v[i][j];
-    int dp[n][n];memset(dp,0,sizeof(dp));
+            
+    int dp[n][n];
+    memset(dp,0,sizeof(dp));
+    
     for(int i=0; i<n; i++)
         if(v[i][0]=='*')
             break;
         else
             dp[i][0]=1;
+            
     for(int j=0; j<n; j++)
         if(v[0][j]=='*')
             break;
         else
            dp[0][j]=1;
+           
     for(int i=1; i<n; i++)
         for(int j=1; j<n; j++)
             if(v[i][j]=='*')
                 dp[i][j]=0;
             else
                 dp[i][j]=(dp[i-1][j]+dp[i][j-1])%mod;
+                
     cout<<dp[n-1][n-1];
+}
 ```
+Time Complexity : O(n^2)
