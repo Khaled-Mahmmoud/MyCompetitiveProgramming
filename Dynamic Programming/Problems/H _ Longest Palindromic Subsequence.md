@@ -8,7 +8,7 @@ output : 5
 
 **Memoization Method – Top Down Dynamic Programming**
 
-Complexity : O(n^2)
+Complexity : O(n * n)
 ```cpp
 const int MAX = 1009;
 string s;int dp[MAX][MAX];
