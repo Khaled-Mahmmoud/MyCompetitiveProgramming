@@ -1,3 +1,5 @@
+# Frequency Array
+
 Frequency Array is an array that used to find the frequency of some elements in a range of elements.
 
 ```cpp
@@ -43,4 +45,68 @@ And for uppercase characters, we subtract ‘A’. And for numbers (as character
           if (freq[i-'a'])
             cout <<"The frequency of "<< i << " in the given string = " <<freq[i-'a']<<endl;
         
+```
+
+## How to pass a 2D array as a parameter in function?
+
+1-) When both dimensions are available globally (either as a macro or as a global constant).
+
+```cpp
+const int M = 3; 
+const int N = 3; 
+void print(int arr[M][N]) 
+{ 
+    int i, j; 
+    for (i = 0; i < M; i++) 
+      for (j = 0; j < N; j++) 
+        printf("%d ", arr[i][j]); 
+} 
+  
+int main() 
+{ 
+    int arr[][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}; 
+    print(arr); 
+    return 0; 
+} 
+```
+
+2-) When only second dimension is available globally (either as a macro or as a global constant).
+
+```cpp
+const int N = 3; 
+  
+void print(int arr[][N], int m) 
+{ 
+    int i, j; 
+    for (i = 0; i < m; i++) 
+      for (j = 0; j < N; j++) 
+        printf("%d ", arr[i][j]); 
+} 
+  
+int main() 
+{ 
+    int arr[][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}; 
+    print(arr, 3); 
+    return 0; 
+} 
+```
+
+3-) Using a single pointer
+
+```cpp
+void print(int *arr, int m, int n) 
+{ 
+    int i, j; 
+    for (i = 0; i < m; i++) 
+      for (j = 0; j < n; j++) 
+        printf("%d ", *((arr+i*n) + j)); 
+} 
+  
+int main() 
+{ 
+    int arr[][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}; 
+    int m = 3, n = 3; 
+    print((int *)arr, m, n); 
+    return 0; 
+} 
 ```
