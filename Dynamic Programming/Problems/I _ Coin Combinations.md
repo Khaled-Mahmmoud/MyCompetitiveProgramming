@@ -16,7 +16,6 @@ a[i] <= 10^6
 **Solution**
 
 dp[x] = minimum number of coins with sum x
-The complexity : O(nx)
     
 ```cpp
 int dp[1000006];
@@ -50,6 +49,8 @@ int main()
     return 0;
 }
 ```
+The complexity : O(nx)
+
 Consider a money system consisting of n coins. Each coin has a positive integer value.
 
 Your task is to calculate the number of distinct ways you can produce a money sum x 
