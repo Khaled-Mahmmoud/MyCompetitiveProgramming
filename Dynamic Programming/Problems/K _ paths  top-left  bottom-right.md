@@ -27,7 +27,7 @@ There are three paths
 1<=N<=1000
     
 
-<< Memoization Method – Top Down Dynamic Programming >>
+**Memoization Method – Top Down Dynamic Programming**
 
 Complexity : O(mn)
     
@@ -52,7 +52,7 @@ int main()
 }
 ```
 
-<< Tabulation Method – Bottom Up Dynamic Programming >>
+**Tabulation Method – Bottom Up Dynamic Programming**
     
 Complexity : O(mn)
     
