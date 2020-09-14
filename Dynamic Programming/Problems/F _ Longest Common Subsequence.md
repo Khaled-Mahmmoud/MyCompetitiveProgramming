@@ -2,7 +2,7 @@
 
 Given two sequences, find the length of longest subsequence present in both of them
 
-1<=size(str1),size(str2)<=1000
+1 <= size(str1), size(str2) <= 1000
 
 **Memoization Method – Top Down Dynamic Programming**
 
