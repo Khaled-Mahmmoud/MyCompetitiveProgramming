@@ -24,7 +24,7 @@ int solve(int n)
         return rt;
     rt = 0;
     for(int i=1;i<=6;i++)
-        (rt += (solve(n-i))%mod)%=mod;
+        (rt += solve(n-i))%=mod;
     return rt;
 }
 int main()
