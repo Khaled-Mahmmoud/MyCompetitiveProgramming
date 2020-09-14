@@ -7,7 +7,7 @@ For example, the length of LIS for {10, 22, 9, 33, 21, 50, 41, 60, 80} is 6 and 
 
 **Tabulation Method – Bottom Up Dynamic Programming**
 
-Complexity : O(n^2)
+Complexity : O(n * n)
 ```cpp
         int n;cin>>n;
         int a[n];
