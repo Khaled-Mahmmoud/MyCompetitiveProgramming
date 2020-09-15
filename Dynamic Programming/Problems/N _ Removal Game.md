@@ -16,8 +16,6 @@ Output : 8
 1 <= n <= 1000
     
 10^-9 <= v[i] <= 10^9
-
-Complexity : O(nn)
    
 ```cpp
 vector<int>v;
@@ -39,3 +37,4 @@ int main()
     cout<<get(0,n-1)<<'\n';
     return 0;
 }
+Complexity : O(n^2)
