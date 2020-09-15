@@ -8,7 +8,7 @@ Output:  True.
 
 There is a subset (4, 5) with sum 9.
     
-<< Memoization Method – Top Down Dynamic Programming >>
+**Memoization Method – Top Down Dynamic Programming**
     
 Complexity : O(n.sum)
 
@@ -26,8 +26,11 @@ bool subset(int n,int sum)
 }
 int main()
 {
-    int n,sum;cin>>n>>sum;v.resize(n);
-    for(int i=0;i<n;i++)cin>>v[i];
+    int n,sum;
+    cin>>n>>sum;
+    v.resize(n);
+    for(int i=0;i<n;i++)
+       cin>>v[i];
     memset(dp,-1,sizeof(dp));
     if(subset(n,sum))
         cout<<"YES";
@@ -36,7 +39,7 @@ int main()
     return 0;
 }
 ```
-<< Tabulation Method – Bottom Up Dynamic Programming >>
+**Tabulation Method – Bottom Up Dynamic Programming**
     
 Complexity : O(n.sum)
 
