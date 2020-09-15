@@ -16,7 +16,7 @@ Output : 5
 Explanation : 1 (squares of size 4x4) + 4 (squares of size 1x1)
 
     
-m,n < 1000
+m,n <= 1000
     
 Complexity : O(mn)
 
