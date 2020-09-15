@@ -20,13 +20,13 @@ ll solve(int idx,bool cur)
     if(~rt)
         return rt;
     rt = 1e18;
-	if (str[idx] == '0')
+    if (str[idx] == '0')
     {
-		rt = min(rt, a + solve(idx + 1, cur));
-		rt = min(rt, 2 * a + solve(idx + 1, !cur));
-	}
-	else
-		rt = min(rt, a + solve(idx + 1, cur));
+	rt = min(rt, a + solve(idx + 1, cur));
+	rt = min(rt, 2 * a + solve(idx + 1, !cur));
+    }
+    else
+	rt = min(rt, a + solve(idx + 1, cur));
 	return rt += (1 + cur) * b;
 
 }
@@ -41,5 +41,4 @@ int main()
     }
     return 0;
 }
-
 ```
