@@ -16,28 +16,19 @@ int main()
     neg[0]=0;
 
     for(int i=1; i<=n; i++)
-        if(arr[i]<0)
-        {
-            neg[i]=neg[i-1]+1;
-            pos[i]=pos[i-1];
-        }
-        else if(arr[i]>0)
-        {
-            pos[i]=pos[i-1]+1;
-            neg[i]=neg[i-1];
-        }
-        else
-        {
-            neg[i]=neg[i-1];
-            pos[i]=pos[i-1];
-        }
-
+    {
+        neg[i] = neg[i-1] + (arr[i]<0);
+        pos[i] = pos[i-1] + (arr[i]>0);
+    }
+    
     int ans=INT_MAX;
     for(int i=1; i<n; i++)
         ans=min(ans,n-(neg[i]-pos[i]+pos[n]));
+        
     // notice for this code,there must be positive and negative temperature values, for otherwise we use
     // for(int i=0; i<=n; i++)
     //     ans=min(ans,n-(neg[i]-pos[i]+pos[n]));
+    
     cout<<ans;
     return 0;
 }
