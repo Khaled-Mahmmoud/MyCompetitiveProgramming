@@ -27,7 +27,7 @@ int main()
     int t;cin>>t;while(t--)
     {
         memset(dp,-1,sizeof(dp));cin>>s;
-        cout<<lps(0,s.size()-1)<<'\n';
+        cout<<lps(0,s.size()-1)<<endl;
     }
     return 0;
 }
