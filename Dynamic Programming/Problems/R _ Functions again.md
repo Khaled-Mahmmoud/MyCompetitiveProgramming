@@ -36,7 +36,7 @@ int main()
     for(int i=0;i<n;i++)
         a[i] = abs(a[i]-a[i+1]);
    
-    //memset(dp,-1e15,sizeof dp);   please note that there no way to memset -1e15
+    //memset(dp,-1e15,sizeof dp);   please note that there no way to memset -1e15 or any value except 0 and -1
     
     for(int i=0;i<200005;i++)
         dp[i][0] = dp[i][1] = -1e15;
