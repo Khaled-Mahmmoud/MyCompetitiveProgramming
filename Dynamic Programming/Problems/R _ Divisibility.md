@@ -76,7 +76,7 @@ int main()
         for(int i=0;i<n;i++)
             cin>>a[i];
         memset(dp,-1,sizeof dp);
-        if(solve(1,a[0]%k))
+        if(solve(1,fix(a[0])))
             cout<<"Divisible";
         else
             cout<<"Not divisible";
@@ -85,3 +85,4 @@ int main()
     return 0;
 }
 ```
+Complexity : O(nk)
