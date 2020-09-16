@@ -28,7 +28,7 @@ int main ()
      cout<< m + 1;      //  1594
 }
 ```
-Complexity :: Unspecified, but generally linear in the number of characters interpreted.
+Complexity : Unspecified, but generally linear in the number of characters interpreted.
 
 ### stof 
 
