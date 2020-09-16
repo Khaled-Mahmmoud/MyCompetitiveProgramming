@@ -107,3 +107,23 @@ Reverses the order of the elements in the range [first,last]
   reverse(myvector.begin(),myvector.end());   // 9 8 7 6 5 4 3 2 1
 ```
 Complexity : Linear in half the distance between first and last : Swaps elements.
+
+### fill
+
+Assigns val to all the elements in the range [first,last]
+```cpp
+#include <iostream>
+#include <algorithm>
+int main()
+{
+    int a[n];
+    fill(a,a+n,8);
+    
+    vector<int> v(10);
+    fill (v.begin(),v.begin(),-5);
+    
+    string str = "khaled";
+    fill(str.begin(),str.end(),'x');
+}
+```
+Complexity : O(n)
