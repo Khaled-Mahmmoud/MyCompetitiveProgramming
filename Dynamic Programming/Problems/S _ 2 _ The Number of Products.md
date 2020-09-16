@@ -16,8 +16,6 @@ int a[200005];
 item dp[200005];
 int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
     cin>>n;
     int a[n];
     ll s_pos = 0, s_neg = 0;
