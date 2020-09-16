@@ -3,7 +3,7 @@
 [Problem Link](https://vjudge.net/problem/UVA-1362)
 
 ```cpp
-const int MOD = 1e9;
+#define MOD = 1e9;
 int dp[305][305];
 string str;
 int solve(int l, int r)
