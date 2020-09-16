@@ -85,21 +85,27 @@ Complexity :: Unspecified, but generally linear in the number of characters inte
 
 ### memset
 
-Sets the first num bytes of the block of memory pointed by ptr to the specified value
+Sets the first num bytes of the block of memory pointed by ptr to the specified value.
 
-memset is function of library string in c language
+memset is function of library string in c language.
+
+We can use memset() to set all values as 0 or -1 for integral data types also. It will not work if we use it to set as other values. The reason is simple, memset works byte by byte.
+
 ```cpp
 #include<iostream>
-#include<string.h>
+#include<cstring>
 using namespace std;
 int main()
 {
     int a[3];                    // one-d array
-    memset(a,0,sizeof(a));
-    int a[n][m];                // two-d array
-    memset(a,0,sizeof(a)*n*m); 
+    memset(a,0,sizeof a);
+    
+    int b[n][m];                // two-d array
+    memset(b,0,sizeof b); 
+    
     string str = "programmer know memset!";  // string
     memset (str,'-',6);  //  ------mmer know memset
+    
     return 0;
 }
 ```
