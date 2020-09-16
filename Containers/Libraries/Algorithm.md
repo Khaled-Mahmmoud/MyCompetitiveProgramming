@@ -103,8 +103,8 @@ auto it = find_if(st.begin(),st.end(),pred);
 Reverses the order of the elements in the range [first,last]
 ```cpp
   vector<int> myvector;
-  for(int i=1; i<10; ++i) myvector.push_back(i);   // 1 2 3 4 5 6 7 8 9
-  reverse(myvector.begin(),myvector.end());   // 9 8 7 6 5 4 3 2 1
+  for(int i=0; i<10; ++i) myvector.push_back(i);   // 0 1 2 3 4 5 6 7 8 9
+  reverse(myvector.begin(),myvector.end());     // 9 8 7 6 5 4 3 2 1 0
 ```
 Complexity : Linear in half the distance between first and last : Swaps elements.
 
