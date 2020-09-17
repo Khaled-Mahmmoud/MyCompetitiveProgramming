@@ -244,7 +244,6 @@ to check whether N is power of 2 or not
     cin>>n;
     cout<<(n&(n-1)?"NO":"YES");
 ```
-// to get [least significant bit](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Bitmask/most%20significant%20bit.jpg) that is set
 
 num % mod, mod is a power of 2	
 
@@ -330,4 +329,14 @@ void printAllSubsetsGray(int len)
 		cout<<"\n";
 	}
 }
+```
+### Find [the most significant bit](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Bitmask/most%20significant%20bit.jpg) of a number
+
+```cpp
+template<class T>
+T setBitNumber(T n) 
+{ 
+    T k = (T)(log2(n)); 
+    return (1<<K); 
+} 
 ```
