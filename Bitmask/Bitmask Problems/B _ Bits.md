@@ -12,7 +12,7 @@ int main()
         ll l,r,c = 0;
         cin>>l>>r;
         if(l==r)
-            cout<<l<<'\n';
+            cout<<l<<endl;
         else
             for(ll i=1ll<<62; i>=1; i>>=1)
             {
