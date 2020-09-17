@@ -333,17 +333,17 @@ void printAllSubsetsGray(int len)
 ### Find [the most significant bit](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Bitmask/most%20significant%20bit.jpg) of a number
 
 ```cpp
-int setBitNumber(int n) 
+int msb(int n) 
 { 
-    if (n == 0) 
+    if (!n) 
         return 0; 
-    int msb = 0; 
-    n = n / 2; 
-    while (n != 0)
+    int cnt = 0; 
+    n>>=1; 
+    while(n)
     { 
-        n = n / 2; 
-        msb++; 
+        n>>=1; 
+        cnt++; 
     } 
-    return (1 << msb); 
+    return (1<<cnt);
 } 
 ```
