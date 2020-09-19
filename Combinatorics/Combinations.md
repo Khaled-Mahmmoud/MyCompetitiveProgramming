@@ -165,7 +165,7 @@ int main()
     {
         ll n,r;
         cin>>n>>r;
-        cout<<nCk(n,r)<<'\n';
+        cout<<nCr(n,r)<<'\n';
     }
     return 0;
 }
