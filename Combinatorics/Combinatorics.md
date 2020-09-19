@@ -71,7 +71,7 @@ Select a combination of three letters frome the set A,B,C,D and E.
 
 combinations can include {A,B,C} , {B,D,E} , {D,B,A}
 
-the number of combination = nCr(5,3) = 10.
+the number of combination = nCr(5,3) = 5! / 2! * 3! = 10
 
 ten combinations are ABC, BCD, CDE, ABD, BCE, ABE, ACD, BDE, ACE, ADE
 
