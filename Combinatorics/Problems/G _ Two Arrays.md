@@ -6,7 +6,7 @@ A1, A2, ..., Am, Bm, Bm−1, ....., b1.
 
 It's sequence of length 2m sorted in non-descending order, where each element of each sequence is an integer between 1 and n.
 
-We can find the number of such sequences by simple combinatorics — it's combination with repetitions. 
+We can find the number of such sequences by simple combinatorics, it's combination with repetitions. 
 
 So the answer is `(n+2m−1,2m) = (n+2m−1)!/(2m)!(n−1)`.
 
