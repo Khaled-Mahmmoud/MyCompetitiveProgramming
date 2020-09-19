@@ -57,7 +57,7 @@ C(68, 34) = Overflow in long long
 
 ### order is important (Permutation)
 
-**n^r***
+**n^r**
 
 Ex. you forgot your password but you know it consists of 3 letters of this set A={a,b,e,i,p} so number of ways = 5 * 5 * 5 is 5^3
 
