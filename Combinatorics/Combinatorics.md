@@ -2,19 +2,9 @@
 
 Any Task 
 
-### with repetition
+# without repetition
 
-n^r
-
-Ex. you forgot your password but you know it consists of 3 letters of this set A={a,b,e,i,p} so number of ways = 5 * 5 * 5 is 5^3
-
-First step we do n choices, in second step, we are allowed n, third n.
-
-Then we have n * n * n ... n ways =	n^r
-
-### without repetition
-
-**order is important** (Permutation)
+### order is important (Permutation)
 
 **Permutation** : Permutations of set of objects: is an arrangement of those objects into a particular order.
 
@@ -39,7 +29,7 @@ Or think in another way: it is how many combination of r elements, and for each 
 
 That is it: P(n, r) = C(n, r) * r!
 
-**order is not important** (Combination)
+### order is not important (Combination)
 
 **Combination** : It is the different selections of a given number of elements.
 
@@ -62,3 +52,29 @@ C(1000, 999) = C(1000, 1) = 1000
 C(66, 33) = 7219428434016265740
 
 C(68, 34) = Overflow in long long
+
+# with repetition
+
+### order is important (Permutation)
+
+**n^r***
+
+Ex. you forgot your password but you know it consists of 3 letters of this set A={a,b,e,i,p} so number of ways = 5 * 5 * 5 is 5^3
+
+First step we do n choices, in second step, we are allowed n, third n.
+
+Then we have n * n * n ... n ways =	n^r
+
+### order is not important (Combination)
+
+Select a combination of three letters frome the set A,B,C,D and E.
+
+combinations can include {A,B,C} , {B,D,E} , {D,B,A}
+
+the number of combination = nCr(5,3) = 10.
+
+ten combinations are ABC, BCD, CDE, ABD, BCE, ABE, ACD, BDE, ACE, ADE
+
+**what if we allow repeated elements such as AAB, BCB?**
+
+the number of such combination = `ncr(n+k-1,k) = (n+k-1)! / (n-1)! * k!`
