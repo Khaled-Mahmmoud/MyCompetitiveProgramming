@@ -29,11 +29,11 @@ void init()
         inv[i] = power(fact[i],mod-2);
     }
 }
-ll nck(ll n,ll k)
+ll nCr(ll n,ll r)
 {
-    if(k>n)
+    if(r>n)
        return 0;
-    return ((fact[n]*inv[k])%mod * inv[n-k])%mod;
+    return ((fact[n]*inv[r])%mod * inv[n-r])%mod;
 }
 int main()
 {
@@ -43,7 +43,7 @@ int main()
     for(int i =1;i<=n;i++)
         cin >> a[i],a[i] += a[i-1];
     for(int i = 1;i<=n;i++)
-        ans=(ans*nck(a[i]-1,a[i]-a[i-1]-1))%mod;
+        ans=(ans*nCr(a[i]-1,a[i]-a[i-1]-1))%mod;
     cout << ans;
     return 0;
 }
