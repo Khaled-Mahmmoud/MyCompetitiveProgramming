@@ -26,7 +26,10 @@ We know, (1 + x)^n = nC0 + nC1 x + nC2 x^2 + ......... + nCn-1 x^n-1 + nCn x^n
 
 Also, (x + 1)^n = nC0 x^n + nC1 x^n-1 + nC2 x^n-2 + ......... + nCn-1 x + nCn
 
-Multiplying above two equations, (1 + x)^2n = [nC0 + nC1 x + nC2 x^2 + ......... + nCn-1 x^n-1 + nCn x^n] X 
+Multiplying above two equations, (1 + x)^2n =
+
+[nC0 + nC1 x + nC2 x^2 + ......... + nCn-1 x^n-1 + nCn x^n] X 
+
 [nC0 x^n + nC1 x^n-1 + nC2 x^n-2 + ......... + nCn-1 x + nCn]
 
 Equating coefficients of x^n on both sides, we get
