@@ -1,8 +1,5 @@
 # Stirling numbers
 
-### Stirling numbers of First kind
-
-
 ### Stirling numbers of Second kind
 
 S(n,k) = number of ways to partition a n objects into k similar boxes
@@ -36,5 +33,44 @@ So 123 / 4 / 5 and 4 / 5 / 123 are the same partition, S(5,3) = 25
 - S(n,k) = S(n-1,k-1) + k * S(n-1,k)
 
 
+### Stirling numbers of First kind
+
+C(n,k) = number of ways to partition a n objects into k circles
+
+**what is C(5,2) ?**
+
+let's say those 5 objects are 1,2,3,4,5
+
+what are some ways to partition ? we can
+```
+             1  
+circle 1:  2 O 3
+
+circle 2:  4 O 5
+
+Circles are Identical
+
+  1                          1
+2 O 3    4 O 5 and 4 O 5   2 O 3   are the same partition
 
 
+  1                   3
+2 O 3    4 O 5 and  1 O 2   4 O 5  are the same partition
+
+  1                   1
+2 O 3    4 O 5 and  3 O 2   4 O 5  are Not the same partition
+
+  1             
+2 O 3    4 O 5 = (123)(45)
+
+```
+
+**Facts**
+
+- C(n,k) = C(n-1,k-1) + (n-1) * C(n-1,k)
+- C(n,n) = 1  n >= 1
+- C(0,0) = 1  n >= 1
+- C(n,0) = 0  n >= 1
+
+
+`S(n,k) = (-1)^(n-k) C(n,k)
