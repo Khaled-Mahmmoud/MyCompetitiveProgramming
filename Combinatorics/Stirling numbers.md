@@ -24,7 +24,7 @@ So 123 / 4 / 5 and 4 / 5 / 123 are the same partition, S(5,3) = 25
 
 **Facts**
 
-- S(0,0) = 1
+- if(k>n) S(n,k) = 0
 - S(n,0) = 0 for n >= 1
 - S(n,1) = 1 for n >= 1
 - S(n,n) = 1    each box contains 1 number!
@@ -32,6 +32,24 @@ So 123 / 4 / 5 and 4 / 5 / 123 are the same partition, S(5,3) = 25
 - S(n,2) = 2^(n-1) - 1
 - S(n,k) = S(n-1,k-1) + k * S(n-1,k)
 
+```cpp
+int dp[1003][1003];
+int solve(int n, int k) 
+{ 
+  if (n == 0 || k == 0 || k > n) 
+     return 0; 
+  if (k == 1 || k == n) 
+      return 1; 
+  int &rt = dp[n][k];
+  if(~rt)
+      return rt;
+  return  rt = solve(n-1, k-1) + k * solve(n-1, k); 
+} 
+```
+
+Time complexity:O(n * k)
+
+Space complexity:O(n * k)
 
 ### Stirling numbers of First kind
 
