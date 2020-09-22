@@ -33,4 +33,4 @@ int main()
     cout<<binomialCoeffSum(n); 
     return 0; 
 } 
-```cpp
+```
