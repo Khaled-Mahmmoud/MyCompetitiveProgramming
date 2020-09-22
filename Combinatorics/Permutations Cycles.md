@@ -150,7 +150,7 @@ E.g. how do you calculate a^16 ? we use divide and conquer: a^16 = a^8 * a^8. Ca
 
 ```cpp
 typedef vector<int> perm;
-perm pow(perm inp, perm apply, int k)
+perm pow(perm inp, perm apply, int k)  // inp * apply^k
 {
     if(k == 0) 
         return inp;
