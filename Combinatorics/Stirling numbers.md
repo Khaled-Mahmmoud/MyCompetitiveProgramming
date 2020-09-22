@@ -87,16 +87,22 @@ Circles are Identical
 
 - C(n,k) = C(n-1,k-1) + (n-1) * C(n-1,k)
 - C(n,n) = 1  n >= 1
+- C(n,1) = (n-1)! n n >= 1
 - C(n,0) = 0  n >= 1
+- C(n,n-1) = nCr(n,2)
 
 ```cpp
 int dp[1003][1003];
 int solve(int n, int k) 
 { 
-  if (n == 0 || k == 0 || k > n) 
+  if(k>n)
+     return -1;
+  if (n == 0 || k == 0) 
      return 0; 
-  if (k == 1 || k == n) 
+  if (n == k) 
       return 1; 
+  if(k==1)
+      return fact(n-1);
   int &rt = dp[n][k];
   if(~rt)
       return rt;
