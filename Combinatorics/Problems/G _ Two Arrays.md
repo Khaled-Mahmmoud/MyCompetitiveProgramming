@@ -1,5 +1,9 @@
 # Two Arrays
 
+[Problem Link](https://codeforces.com/contest/1288/problem/C)
+
+**Solution**
+
 Let's consider the following sequence:
 
 A1, A2, ..., Am, Bm, Bm−1, ....., b1.
@@ -9,8 +13,6 @@ It's sequence of length 2m sorted in non-descending order, where each element of
 We can find the number of such sequences by simple combinatorics, it's combination with repetitions. 
 
 So the answer is `(n+2m−1,2m) = (n+2m−1)!/(2m)!(n−1)`.
-
-[Problem Link](https://codeforces.com/contest/1288/problem/C)
 
 ```cpp
 #include <bits/stdc++.h>
