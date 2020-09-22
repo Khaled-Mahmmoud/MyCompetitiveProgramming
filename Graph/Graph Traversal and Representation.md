@@ -115,9 +115,9 @@ vector<bool>vis;
 void dfs(int u)
 {
     vis[u] = true;
-    for (int z : adj[u])
-        if (!vis[z])
-            dfs(z);
+    for (int v : adj[u])
+        if (!vis[v])
+            dfs(v);
 }
 int main()
 {
