@@ -12,7 +12,7 @@ Given a number n, we need to find the maximum number of times n circles intersec
 
 **Description and Derivation**
 
-As we can see in [diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Combinatorics/points%20of%20intersection%20n%20circles.jpg), for each pair of circles, there can be maximum two intersection points
+As we can See in this [diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Combinatorics/points%20of%20intersection%20n%20circles.jpg), for each pair of circles, there can be maximum two intersection points
 Therefore if we have n circles then there can be nC2 pairs of circles in which each pair will have two intersections
 So by this we can conclude that by looking at all possible pairs of circles the mathematical formula can be made for
 the maximum number of intersection by n circles is given by `2 * nC2`.
