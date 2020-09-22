@@ -87,8 +87,25 @@ Circles are Identical
 
 - C(n,k) = C(n-1,k-1) + (n-1) * C(n-1,k)
 - C(n,n) = 1  n >= 1
-- C(0,0) = 1  n >= 1
 - C(n,0) = 0  n >= 1
 
+```cpp
+int dp[1003][1003];
+int solve(int n, int k) 
+{ 
+  if (n == 0 || k == 0 || k > n) 
+     return 0; 
+  if (k == 1 || k == n) 
+      return 1; 
+  int &rt = dp[n][k];
+  if(~rt)
+      return rt;
+  return  rt = solve(n-1, k-1) + (n-1) * solve(n-1, k); 
+} 
+```
+
+Time complexity:O(n * k)
+
+Space complexity:O(n * k)
 
 `S(n,k) = (-1)^(n-k) C(n,k)
