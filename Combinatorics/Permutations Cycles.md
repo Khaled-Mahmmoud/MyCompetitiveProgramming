@@ -227,9 +227,7 @@ Say we have permutation p = 3 0 1 2 5 6 4
 
 then we have cycle of length 4 = (3 0 1 2), and cycle of length 3 (5 6 4)
 	
-How is applying it over itself? p*p
-
-p' = 2 3 0 1 6 4 5
+**How is applying it over itself? p * p**, p' = 2 3 0 1 6 4 5
 
 then we have cycle of length 2 = (2 0), and 2 (3 1) and cycle of length 3 (6 4 5)
 
