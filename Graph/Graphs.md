@@ -348,7 +348,6 @@ n = 13
          E = V^2 the graph is dense
          
          E = V   the graph is sparse
-```
 
 ### Tree
 
