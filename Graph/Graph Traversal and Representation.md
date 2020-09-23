@@ -12,7 +12,7 @@ The adjacency matrix can also be modified for the weighted graph in which instea
 
 In an undirected graph, if v[i][j] = 1, then v[i][j] = 1. In a directed graph, if v[i][j] = 1, then v[i][j] may or may not be 1.
 
-Adjacency matrix provides constant time access (O(1) ) to determine if there is an edge between two nodes. Space complexity of the adjacency matrix is O().
+Adjacency matrix provides constant time access (O(1) ) to determine if there is an edge between two nodes. Space complexity of the adjacency matrix is O(v^2).
 
 The adjacency matrix of [the following graph](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/adjacency%20matrix%20undirected%20graph.jpg) is:
 
