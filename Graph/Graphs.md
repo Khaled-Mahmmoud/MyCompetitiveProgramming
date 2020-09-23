@@ -196,7 +196,7 @@ In the following graphs, all the vertices have the same degree. So these graphs 
 ```
          A            P_____Q
        /   \          |     |
-      B     C         R_____S
+      B_____C         R_____S
 ```
 In both the graphs, all the vertices have degree 2. They are called 2-Regular Graphs.
 
