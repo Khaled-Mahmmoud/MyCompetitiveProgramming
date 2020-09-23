@@ -23,15 +23,7 @@ ____ ==>> edges , arcs , lines
   V = {3,4,5,6}   E = { {4,6} , {4,3} , {5,3} }
 ```
 
-Tree is special form of graph.
 
-A tree is an undirected graph in which any two vertices are connected by only one path.
-
-A tree is an acyclic graph and has N - 1 edges where N is the number of vertices. 
-
-Each node in a graph may have one or multiple parent nodes. However, in a tree, each node (except the root node) comprises exactly one parent node.
-A tree cannot contain any cycles or self loops, however.
-  
 ### Types of nodes 
 
 **Root node** : The root node is the ancestor of all other nodes in a graph. It does not have any ancestor.
@@ -356,3 +348,15 @@ n = 13
          E = V^2 the graph is dense
          
          E = V   the graph is sparse
+```
+
+### Tree
+
+Tree is special form of graph.
+
+A tree is an undirected graph in which any two vertices are connected by only one path.
+
+A tree is an acyclic graph and has N - 1 edges where N is the number of vertices. 
+
+Each node in a graph may have one or multiple parent nodes. However, in a tree, each node (except the root node) comprises exactly one parent node.
+A tree cannot contain any cycles or self loops, however.
