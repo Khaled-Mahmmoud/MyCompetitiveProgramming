@@ -46,4 +46,4 @@ bool isBipartiteGraph()
     return dfs();
 }
 ```
-Complexity: O(n + m)
+Time Complexity: O(n + m)
