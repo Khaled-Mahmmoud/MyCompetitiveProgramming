@@ -289,65 +289,65 @@ n = 13
                  ↑     ↓
                  E ←-- D
 ```
-             Path : A , B , F is simple path
+Path : A , B , F is simple path
              
-             Path : A , B , C , D , E , B , F is not simple path (repetition)
+Path : A , B , C , D , E , B , F is not simple path (repetition)
              
-             Path : B , C , D , E , B is simple path
+Path : B , C , D , E , B is simple path
 
 **indegree**
 
-           indegree(D) = 1 (inEdges)
+indegree(D) = 1 (inEdges)
            
-           indegree(B) = 2
+indegree(B) = 2
            
-           indegree(A) = 0
+indegree(A) = 0
 
 **outdegree**
 
-           outdegree(A) = 1 (outEdges)
+outdegree(A) = 1 (outEdges)
            
-           outdegree(F) = 0
+outdegree(F) = 0
            
-           outdegree(B) = 2
+outdegree(B) = 2
            
 **incident edges**
 
-           incident edges(A) = 1 (outEdges)
+incident edges(A) = 1 (outEdges)
            
-           incident edges(F) = 0
+incident edges(F) = 0
            
-           incident edges(B) = 2
+incident edges(B) = 2
            
 **degree**
 
-           degree (D) = 2 ( inEdges + outEdges)
+degree (D) = 2 ( inEdges + outEdges)
            
-           degree (B) = 4
+degree (B) = 4
            
-           degree (F) = 1           
+degree (F) = 1           
            
 ```
            B ←-- A --→                 
                  ↑ ← ↓      degree(A) = 3
 ```        
         
-        A --- B ---- C    
+A --- B ---- C    
         
-        number of edges at a undirected graph = 2
+number of edges at a undirected graph = 2
         
-        number of edges at a directed graph = 4
+number of edges at a directed graph = 4
         
         
 
          
-         number of edges = E
+number of edges = E
          
-         number of nodes = V
+number of nodes = V
          
-         E = V^2 the graph is dense
+E = V^2 the graph is dense
          
-         E = V   the graph is sparse
+E = V   the graph is sparse
 
 ### Tree
 
