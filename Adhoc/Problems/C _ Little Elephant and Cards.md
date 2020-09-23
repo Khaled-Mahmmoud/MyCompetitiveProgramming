@@ -1,10 +1,8 @@
 # Little Elephant and Cards
 
-[codeforces Problem Link](https://codeforces.com/contest/205/problem/D)
+[Problem Link](https://codeforces.com/contest/205/problem/D)
 
 ```cpp
-#include <bits/stdc++.h>
-using namespace std;
 int main()
 {
     int n;
