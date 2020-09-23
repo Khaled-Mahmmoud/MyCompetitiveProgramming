@@ -14,7 +14,7 @@ int main()
             low = arr[i],num = i;
     }
     len = v/low,rem = v%low;
-    if(!v || !len)
+    if(!len)
         return cout << -1,0;
     vector<long long>ans;
     while(len--)
