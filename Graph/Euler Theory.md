@@ -9,7 +9,7 @@ vector<int>tour;
 int n,m;
 void euler(int i)
 {
-    for(int i=1;i<=j;i++)
+    for(int j=1;j<=i;j++)
     {
         if(adj[i][j])
         {
@@ -17,7 +17,7 @@ void euler(int i)
             adj[j][i]--;
             euler(j);
         }
-        tour.push_back(i);
     }
+    tour.push_back(i);
 }
 ```
