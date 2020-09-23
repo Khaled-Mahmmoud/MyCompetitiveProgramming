@@ -25,7 +25,8 @@ int main()
     while(t--)
     {
         ll n,m,x1,x2,x3,x4,y1,y2,y3,y4;
-        cin >> n >> m >>x1 >> y1 >>x2 >> y2 >> x3 >> y3 >> x4 >> y4;
+        cin >> n >> m;
+        cin>> x1 >> y1 >> x2 >> y2 >> x3 >> y3 >> x4 >> y4;
         ll white = W(1,1,m,n);
         ll black = B(1,1,m,n);
         white = white + B(x1,y1,x2,y2);
