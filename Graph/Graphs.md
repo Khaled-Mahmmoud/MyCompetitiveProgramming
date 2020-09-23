@@ -139,7 +139,13 @@ In the above shown graph, there is only one vertex ‘a’ with no other edges. 
 
 9) **Simple graph**
 
-if graph doesn't contain any loop or parallel graph it's called Simple graph otherwise it's called not simple graph
+```
+         Loop                  A
+  B ←-- A --→                 ↑↓ Parallel edges
+        ↑ ← ↓                  B
+```
+
+if graph doesn't contain any loop or parallel edges it's called Simple graph otherwise it's called not simple graph
 
 The maximum number of edges possible in a single graph with ‘n’ vertices is `nC2` where nC2 = n(n – 1)/2
 
@@ -194,13 +200,6 @@ Adjacent vertices(A) = {B,D}
 Adjacent vertices(C) = {D}
 
 Adjacent edges(A,B)  = { (A,D) , (B,C) , (B,E) }  
-
-```
-         Loop                  A
-  B ←-- A --→                 ↑↓ Parallel edges
-        ↑ ← ↓                  B
-```
-Adjacent vertices(A) = {A,B}                    
             
 ```
                    A --→ B
