@@ -10,7 +10,7 @@ Note: A binary matrix is a matrix in which the cells can have only one of two po
 
 The adjacency matrix can also be modified for the weighted graph in which instead of storing 0 or 1 in , the weight or cost of the edge will be stored.
 
-In an undirected graph, if  = 1, then  = 1. In a directed graph, if  = 1, then  may or may not be 1.
+In an undirected graph, if v[i][j] = 1, then v[i][j] = 1. In a directed graph, if v[i][j] = 1, then v[i][j] may or may not be 1.
 
 Adjacency matrix provides constant time access (O(1) ) to determine if there is an edge between two nodes. Space complexity of the adjacency matrix is O().
 
