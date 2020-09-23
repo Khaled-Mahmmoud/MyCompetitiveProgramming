@@ -222,7 +222,7 @@ X & ~(X-1) 	= 011010010000
 template<class Int>	
 Int leastBit(Int num) { return (num & ~(num-1)); }	
 ```
-to count number of sets in mask
+To count number of sets in mask
 ```cpp
 int countNumBits2(int mask) 
 {	
@@ -238,7 +238,7 @@ int countNumBits2(int mask)
 }
 ```
 
-to check whether N is power of 2 or not
+To check whether N is power of 2 or not
 ```cpp
     long long n;
     cin>>n;
