@@ -116,6 +116,21 @@ Loop at any node not present graph cycle
      ↓
      E
 ```
+Adjacent vertices(A) = {B,D} 
+
+Adjacent vertices(C) = {D}
+
+Adjacent edges(A,B)  = { (A,D) , (B,C) , (B,E) }  
+            
+```
+                   A --→ B
+                         ↓
+                         C
+```             
+(A,C) is connected vertices
+             
+(C,A) is disconnectd vertices
+
 7) **Null Graph**
 
 A graph having no edges is called a Null Graph.
@@ -195,21 +210,6 @@ In both the graphs, all the vertices have degree 2. They are called 2-Regular Gr
                \  |  /
                   D 
 ```
-Adjacent vertices(A) = {B,D} 
-
-Adjacent vertices(C) = {D}
-
-Adjacent edges(A,B)  = { (A,D) , (B,C) , (B,E) }  
-            
-```
-                   A --→ B
-                         ↓
-                         C
-```             
-(A,C) is connected vertices
-             
-(C,A) is disconnectd vertices
-
 12) **Bipartite Graph**
 
 A simple graph G = (V, E) with vertex partition V = {V1, V2} is called a bipartite graph if every edge of E joins a vertex in V1 to a vertex in V2.
