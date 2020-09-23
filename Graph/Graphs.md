@@ -38,12 +38,12 @@ These nodes only have ancestor nodes. They can have any number of incoming edges
 1) **Directed graph**  
 
 A directed graph is a graph in which all the edges are uni-directional i.e. the edges point in a single direction.
-A ---> B       E = { (A,B) }
+A ---> B, E = { (A,B) }
 
 2) **Undirected graph**  
 
 An undirected graph is a graph in which all the edges are bi-directional i.e. the edges do not point in any specific direction.
-A ---- B       E = { (A,B) , (B,A) }
+A ---- B, E = { (A,B) , (B,A) }
 
 3) **Weighted graph** 
 
@@ -66,7 +66,9 @@ Therefore the total cost of each path will be as follows:
 
 - The total cost of 1 -> 2 -> 3 will be (1 + 2) i.e. 3 units 
 
-- The total cost of 1 -> 3 will be 1 unit - The total cost of 1 -> 4 -> 3 will be (3 + 2) i.e. 5 units
+- The total cost of 1 -> 3 will be 1 unit 
+
+- The total cost of 1 -> 4 -> 3 will be (3 + 2) i.e. 5 units
 
 4) **Cyclic graph** 
 
