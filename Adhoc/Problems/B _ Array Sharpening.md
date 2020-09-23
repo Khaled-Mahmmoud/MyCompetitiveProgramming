@@ -44,5 +44,41 @@ int main()
         else
             cout << "No\n";
     }
+}#include <bits/stdc++.h>
+#define ll long long
+using namespace std;
+int main()
+{
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int n;
+        cin >> n;
+        vector<int> v(n);
+
+        for (int i = 0; i < n; ++i)
+            cin >> v[i];
+
+        int prefix = -1, suffix = n;
+
+        for (int i = 0; i < n; ++i)
+        {
+            if (v[i] < i)
+                break;
+            prefix = i;
+        }
+        for (int i = n-1; i >= 0; --i)
+        {
+            if (v[i] < (n-1)-i)
+                break;
+            suffix = i;
+        }
+
+        if (suffix <= prefix)
+            cout << "Yes\n";
+        else
+            cout << "No\n";
+    }
 }
 ```
