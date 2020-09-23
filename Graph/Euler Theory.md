@@ -1,8 +1,6 @@
 # Euler Theory
 
-[Euler Theory](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/Theory%20Euler.pdf)
-
-[Eulerian Path](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/Eulerian%20path.png)
+[Euler's theorem](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/Euler's%20theorem.pdf)
 
 ```cpp
 
