@@ -1,6 +1,6 @@
 # Storages
 
-given an array of integers, and q queries, print the most number repeated in array after every query, if there multiple numbers print largest of them.
+Given an array of integers, and q queries, print the most number repeated in array after every query, if there multiple numbers print largest of them.
 
 query has two types:
 
@@ -8,7 +8,7 @@ X + : means add number x into array
 
 X - : means remove number x from array (it is guaranteed that the array has number X)
 
-input :
+input
 
 6
 
@@ -16,23 +16,11 @@ input :
 
 4
 
-2 +
+2 + 3 + 2 - 1 - 
 
-3 +
+output 
 
-2 -
-
-1 - 
-
-output :
-
-2
-
-2
-
-1
-
-3
+2 2 1 3
 
 **Constraints**
 
