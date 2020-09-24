@@ -3,7 +3,6 @@
 [Euler's theorem](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/Euler's%20theorem.pdf)
 
 ```cpp
-
 vector<vector<int>>adj;
 vector<int>tour;
 int n,m;
