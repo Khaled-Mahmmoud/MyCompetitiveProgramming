@@ -1,22 +1,6 @@
 # Build a graph
 
-You are given an integer . Determine if there is an unconnected graph with  vertices that contains at least two connected components and contains the number of edges that is equal to the number of vertices. Each vertex must follow one of these conditions:
-
-1) Its degree is less than or equal to 1.
-2) It's a cut-vertex. (a cut vertex is any vertex whose removal increases the number of connected components).
-
-The graph must be simple.
-Loops and multiple edges are not allowed.
-
-Input  : n where 1 <= n <= 100
-
-Output : Print Yes if it is an unconnected graph. Otherwise, print No.
-
-input : 3 
-
-output : No
-
-There is only one graph with the number of edges equal to the number of vertices (triangle) which is connected.
+[Problem Link](https://www.hackerearth.com/practice/algorithms/graphs/graph-representation/practice-problems/algorithm/build-a-graph-5f5c6b4a/)
 
 **Solution**
 
