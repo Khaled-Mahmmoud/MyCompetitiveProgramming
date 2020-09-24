@@ -89,7 +89,7 @@ Sets the first num bytes of the block of memory pointed by ptr to the specified 
 
 memset is function of library string in c language.
 
-We can use memset() to set all values as 0 or -1 for integral data types also. It will not work if we use it to set as other values. The reason is simple, memset works byte by byte.
+We can use memset() to set all values as 0 or -1 for integer data types also. It will not work if we use it to set as other values. The reason is simple, memset works byte by byte.
 
 ```cpp
 #include<iostream>
