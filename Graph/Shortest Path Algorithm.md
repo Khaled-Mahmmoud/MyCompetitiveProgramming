@@ -2,8 +2,7 @@
 
 ## Dijkstra Algorithm
 
-Computes the shortest path between the given source node and all the other nodes in a weighted graph using the Dijkstra's algorithm, and fills the results in 
-the global "dis" and "par" arrays. (i.e. Single-Source Shortest Path (SSSP))
+[Problem Link](https://codeforces.com/contest/20/problem/C)
 
 ```cpp
 vector<vector<pair<int,int>>>adj;
@@ -15,7 +14,8 @@ long long dijkstra()
     vector<bool>vis(n+1);
     deque<int>dq;
     dq.push_front(1);
-    vis[1]=true;d[1]=0;
+    vis[1]=true;
+    d[1]=0;
     while(dq.size())
     {
         int u=dq.front();
@@ -44,12 +44,13 @@ long long dijkstra()
 }
 void backtrack(int u)
 {
-    if(u!=1)backtrack(par[u]);
+    if(u!=1)
+        backtrack(par[u]);
     cout<<u<<' ';
 }
+using namespace std;
 int main()
 {
-    fast();
     cin>>n>>m;
     adj.resize(n+1);
     par.resize(n+1);
@@ -61,7 +62,8 @@ int main()
         adj[v].push_back({u,w});
     }
     long long k=dijkstra();
-    if(k==1e18){return cout<<-1,0;}
+    if(k==1e18)
+        return cout<<-1,0;
     backtrack(n);
     return 0;
 }
