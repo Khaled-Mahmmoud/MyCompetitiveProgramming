@@ -13,11 +13,12 @@ ll solve(int idx,int c)
  
     if(idx==n)
         return 0;
-    if(dp[idx][c]+1e15)
-        return dp[idx][c];
-    dp[idx][c] =max(0ll,(c?-1:1) * a[idx] + solve(idx+1,!c));
-    ans = max(ans,dp[idx][c]);
-    return dp[idx][c];
+    ll &rt = dp[idx][c];
+    if(~rt)
+        return rt;
+    rt =max(0ll,(c?-1:1) * a[idx] + solve(idx+1,!c));
+    ans = max(ans,rt);
+    return rt;
 }
 int main()
 {
@@ -27,12 +28,12 @@ int main()
     n--;
     for(int i=0; i<n; i++)
         a[i] = abs(a[i]-a[i+1]);
-    for(int i=0; i<200005; i++)
-        dp[i][0] = dp[i][1] = -1e15;
+ 
+   memset(dp,-1,sizeof(dp));
  
     for(int i=n-1; i>=0; i--)
         dp[i][0] = solve(i,0);
-        
+ 
     cout<<ans;
     return 0;
 }
