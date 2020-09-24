@@ -4,7 +4,7 @@ A graph is said to be disconnected if it is not connected, i.e. if two nodes exi
 
 Consider the example given in [the diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/connected%20components.jpg). Graph G is a disconnected graph and has the following 3 connected components.
 
-First connected component is 1 -> 2 -> 3 as they are linked to each other
+First connected component is 1 -> 2 -> 3
 
 Second connected component 4 -> 5
 
