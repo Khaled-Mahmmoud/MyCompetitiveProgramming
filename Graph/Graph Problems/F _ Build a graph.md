@@ -8,9 +8,17 @@ You are given an integer . Determine if there is an unconnected graph with  vert
 The graph must be simple.
 Loops and multiple edges are not allowed.
 
-Print Yes if it is an unconnected graph. Otherwise, print No.
+Input  : n where 1 <= n <= 100
 
-**Explanation**
+Output : Print Yes if it is an unconnected graph. Otherwise, print No.
+
+input : 3 
+
+output : No
+
+There is only one graph with the number of edges equal to the number of vertices (triangle) which is connected.
+
+**Solution**
 
 Given that no. of edges should be equal to no. of vertices. Lets take cases to understand this:
 
