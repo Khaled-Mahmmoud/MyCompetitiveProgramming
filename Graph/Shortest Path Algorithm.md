@@ -1,6 +1,6 @@
-# Shortest Path
+# Shortest Path Algorithm
 
-## Dijkstra
+## Dijkstra Algorithm
 
 Computes the shortest path between the given source node and all the other nodes in a weighted graph using the Dijkstra's algorithm, and fills the results in 
 the global "dis" and "par" arrays. (i.e. Single-Source Shortest Path (SSSP))
