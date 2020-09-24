@@ -13,6 +13,7 @@ Output : Maximum number of edges that can be removed from the graph such that it
 If the graph intially has more than K components print -1. 
 
 1 <= n,m <= 100 000 
+
 1 <= k <=n
 
 SAMPLE INPUT 
@@ -27,7 +28,7 @@ SAMPLE INPUT
 
 SAMPLE OUTPUT : 1
 
-Explanation : Initially, the graph has one connected components, hence we can remove only one edge.
+Explanation : Initially, the graph has two connected components, hence we can remove only one edge.
 
 ```cpp
 vector<vector<int>>adj;
