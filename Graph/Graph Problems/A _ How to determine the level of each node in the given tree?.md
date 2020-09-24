@@ -1,6 +1,7 @@
 # How to determine the level of each node in the given tree?
 
-by [diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/level%20of%20node.jpg), As you know in BFS, you traverse level wise. You can also use BFS to determine the level of each node.
+by [diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/level%20of%20node.jpg), As you know in BFS, you traverse level wisely. 
+You can also use BFS to determine the level of each node.
 
 ```cpp
 vector<vector<int>>adj;
