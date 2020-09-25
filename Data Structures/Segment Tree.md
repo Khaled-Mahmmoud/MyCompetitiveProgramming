@@ -134,3 +134,9 @@ int query(int node, int start, int end, int l, int r)
 }
 ```
 Time Complexity of query will be O(log n).
+
+(start + end) / 2 ==>> ((start + end)>>1)
+
+2 * node  ==>> (node<<1)
+
+2 * node + 1 ==>> (node<<1|1)
