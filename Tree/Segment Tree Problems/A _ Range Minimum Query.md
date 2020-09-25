@@ -3,6 +3,7 @@
 Given an array A of size N, there are two types of queries on this array.
 
 1) qlr In this query you need to print the minimum in the sub-array A[L : R].
+
 2) uxy In this query you need to update A[x] = y.
 
 **Input** 
