@@ -1,4 +1,4 @@
-# Pokémon Army
+# Pokemon Army
 
 [Problem Link](https://codeforces.com/contest/1420/problem/C1)
 
