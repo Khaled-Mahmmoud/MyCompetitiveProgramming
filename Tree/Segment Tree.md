@@ -38,9 +38,7 @@ Query : Given L and R return the value of `A[L]+A[L+1]+A[L+2]+....+A[R-1]+A[R]` 
 
 **Naive Algorithm** :
 This is the most basic approach. For every query, run a loop from L to R and calculate the sum of all the elements. So each query will take O(n) time.
-
 A[Idx] += Val will update the value of the element. Each update will take O(1).
-
 This algorithm is good if the number of queries are very low compared to updates in the array.
 
 **Using Segment Tree** :
