@@ -127,3 +127,29 @@ int main()
 }
 ```
 Complexity : O(n)
+
+### unique 
+
+unique is used to remove duplicates of any element present consecutively in a range[first, last]. It performs this task for all the sub-groups present in the range having the same element present consecutively.
+
+It does not delete all the duplicate elements, but it removes duplicacy by just replacing those elements by the next element present in the sequence which is not duplicate to the current element being replaced. All the elements which are replaced are left in an unspecified state.
+
+Another interesting feature of this function is that it does not changes the size of the container after deleting the elements, it just returns a pointer pointing to the new end of the container, and based upon that we have to resize the container, or remove the garbage elements.
+
+```cpp
+vector<int>v={1,1,2,2,3,3,4,5};
+
+auto it = unique(v.begin(),v.end());
+
+for(int i=0;i<8;i++)
+    cout<<v[i]<<' ';   // 1 2 3 4 5 3 4 5
+
+cout<<'\n'<<*it<<'\n';   //  3
+
+v.resize(it-v.begin());
+
+for(int i=0;i<v.size();i++)
+     cout<<v[i]<<' ';     // 1 2 3 4 5
+```
+
+Complexity : O(n)
