@@ -42,20 +42,12 @@ q 1 5
 
 **SAMPLE OUTPUT**
 
-1
-
-1
-
-2
-
-1
+1 1 2 1
 
 
 
 ```cpp
-#include <bits/stdc++.h>
 #define N 100009  // 10^5
-using namespace std;
 int a[N];
 int tree[2 * N - 1];   // please note that number of nodes = 2*n-1
                        // there was wrong answer of tree[N] because input n may equal 10^5
