@@ -108,11 +108,11 @@ To query on a given range, check 3 conditions as [diagram](https://github.com/Kh
 
 1) Range represented by a node is completely inside the given range
 2) Range represented by a node is completely outside the given range
-3) Range represented by a node is partially inside and partially outside the given range **OR** the given range is completely inside Range represented by a
+3) Range represented by a node is partially inside and partially outside the given range **OR** the given range is completely inside Range represented by a node
 
 If the range represented by a node is completely outside the given range, simply return 0. If the range represented by a node is completely within the given range, 
-return the value of the node which is the sum of all the elements in the range represented by the node. 
-And if the range represented by a node is partially inside and partially outside the given range or the given range is completely inside Range represented by a, return sum of the left child and the right child. 
+return the value of the node which is the sum of all the elements in the range represented by a node. 
+And if the range represented by a node is partially inside and partially outside the given range or the given range is completely inside Range represented by a node, return sum of the left child and the right child. 
 
 ```cpp
 int query(int node, int start, int end, int l, int r)
@@ -128,7 +128,7 @@ int query(int node, int start, int end, int l, int r)
         return 0;
     }
     // range represented by a node is partially inside and partially outside the given range
-    // or or the given range is completely inside Range represented by a
+    // or or the given range is completely inside Range represented by a node
     int mid = (start + end) / 2;
     return query(2*node, start, mid, l, r) + query(2*node+1, mid+1, end, l, r);
 }
