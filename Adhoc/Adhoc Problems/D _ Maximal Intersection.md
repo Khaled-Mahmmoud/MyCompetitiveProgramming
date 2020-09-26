@@ -2,6 +2,8 @@
 
 [Problem Link](https://codeforces.com/contest/1029/problem/C)
 
+[Tutorial Link](https://codeforces.com/blog/entry/61439)
+
 ```cpp
 #define ll long long
 int main()
