@@ -4,6 +4,7 @@ Prime factor is the factor of the given number which is a prime number. Factors 
 Example: The prime factors of 15 are 3 and 5 (because 3×5=15, and 3 and 5 are prime numbers).
 
 Time complexity for below algorithm :  O(sqrt(n))
+
 ```cpp
 void primeFactors(int n)  
 {  
