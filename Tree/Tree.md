@@ -175,9 +175,6 @@ This below binary trees is not complete binary tree
                  O
 ```
 
-         Max no. of nodes at level L = 2^L
-         
-         Max no. of nodes in binary tree = 2^(h+1) - 1 (where h is height of tree)   //  as perfect tree
 ```
             O           Max no. of nodes at level 0 = 1 = 2^0
          /     \
@@ -185,3 +182,7 @@ This below binary trees is not complete binary tree
       /   \   /   \
      O     O O     O    Max no. of nodes at level 2 = 4 = 2^2
 ```
+
+Max no. of nodes at level L = 2^L
+         
+Max no. of nodes in binary tree = 2^(h+1) - 1 (where h is height of tree)   //  as perfect tree
