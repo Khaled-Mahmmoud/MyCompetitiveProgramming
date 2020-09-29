@@ -198,3 +198,37 @@ How to index them, given initial N values?
 
 How to do the pre-processing?
 
+```cpp
+const int MAX = 2000000;
+int interval[4194304];	
+int S = 0, E = MAX;
+int build(int s = S, int e = E, int p = 1) // O(nlogn)
+{	
+     if(s == e)	
+	  return  interval[p] = 1;
+     int mid = (s+e) >> 1;
+     return interval[p] = build(s, mid, 2*p) + build(mid+1, e, 2*p+1);
+}
+// insert num and return its order (kth in order)
+int insert(int num, int s = S, int e = E, int p = 1)  // O(logn)
+{	
+	interval[p]++;
+	if(s == e)	
+	        return interval[p];	
+	int mid = (s+e) >> 1;
+	if(num <= mid)
+		return insert(num, s, mid, 2*p);
+	return interval[2*p] + insert(num, mid+1, e, 2*p+1);
+}
+// delete kth element, and return its value
+int delete(int kTh, int s = S, int e = E, int p = 1)
+{
+	interval[p]--;
+	if(s == e)	
+	    return s;
+	int mid = (s+e) >> 1;
+	if(interval[2*p] >= kTh)	
+	    return delete(kTh, s, mid, 2*p);
+	return delete(kTh - interval[2*p], mid + 1, e, 2*p+1);
+}
+```
