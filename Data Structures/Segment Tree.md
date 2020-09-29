@@ -221,7 +221,7 @@ int insert(int num, int s = S, int e = E, int p = 1)  // O(logn)
 	return interval[2*p] + insert(num, mid+1, e, 2*p+1);
 }
 // delete kth element, and return its value
-int delete(int kTh, int s = S, int e = E, int p = 1)
+int delete(int kTh, int s = S, int e = E, int p = 1) // O(logn)
 {
 	interval[p]--;
 	if(s == e)	
@@ -230,5 +230,31 @@ int delete(int kTh, int s = S, int e = E, int p = 1)
 	if(interval[2*p] >= kTh)	
 	    return delete(kTh, s, mid, 2*p);
 	return delete(kTh - interval[2*p], mid + 1, e, 2*p+1);
+}
+```
+// return position of deleted val 
+int delete(int num, int s = S, int e = E, int p = 1) // O(logn)
+{
+	interval[p]--;
+	if(s == e)	
+	    return interval[p] + 1;
+	int mid = (s+e) >> 1;
+	if(mid >= num)	
+	    return delete(num, s, mid, 2*p);
+	return interval[2*p] + delete(num , mid + 1, e, 2*p+1);
+}
+void displayElements(int s=S, int e=E, int p=1)
+{
+    if(s < e)
+    {
+        displayElements(s, (s+e)/2, 2*p);
+        displayElements((s+e)/2+1, e, 2*p+1);
+    }
+    if(s == e)
+    {
+        int cnt = interval[p];
+        while(cnt--)
+            cout<<s<<" ";
+    }
 }
 ```
