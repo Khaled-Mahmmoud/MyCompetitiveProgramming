@@ -244,10 +244,11 @@ int delete(int num, int s = S, int e = E, int p = 1) // O(logn)
 }
 void displayElements(int s=S, int e=E, int p=1)
 {
+    int mid = (s+e) >> 1;
     if(s < e)
     {
-        displayElements(s, (s+e)/2, 2*p);
-        displayElements((s+e)/2+1, e, 2*p+1);
+        displayElements(s, mid, 2*p);
+        displayElements(mid+1, e, 2*p+1);
     }
     if(s == e)
     {
