@@ -231,7 +231,6 @@ int delete(int kTh, int s = S, int e = E, int p = 1) // O(logn)
 	    return delete(kTh, s, mid, 2*p);
 	return delete(kTh - interval[2*p], mid + 1, e, 2*p+1);
 }
-```
 // return position of deleted val 
 int delete(int num, int s = S, int e = E, int p = 1) // O(logn)
 {
