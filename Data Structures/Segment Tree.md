@@ -231,7 +231,7 @@ int delete(int kTh, int s = S, int e = E, int p = 1) // O(logn)
 	    return delete(kTh, s, mid, 2*p);
 	return delete(kTh - interval[2*p], mid + 1, e, 2*p+1);
 }
-// return position of deleted val 
+// delete num , return position of deleted val 
 int delete(int num, int s = S, int e = E, int p = 1) // O(logn)
 {
 	interval[p]--;
@@ -241,6 +241,16 @@ int delete(int num, int s = S, int e = E, int p = 1) // O(logn)
 	if(mid >= num)	
 	    return delete(num, s, mid, 2*p);
 	return interval[2*p] + delete(num , mid + 1, e, 2*p+1);
+}
+// get value of kth element
+int get(int kTh, int s = S, int e = E, int p = 1)
+{
+	if(s == e)	
+	    return s;
+	int mid = (s+e) >> 1;
+	if(interval[2*p] >= kTh)	
+	     return getkTh(kTh, s, mid, 2*p);
+	return getkTh(kTh-interval[2*p], mid+1, e, 2*p+1);
 }
 void displayElements(int s=S, int e=E, int p=1)
 {
