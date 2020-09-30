@@ -1,4 +1,4 @@
-# Check Integer Primality
+# check Integer Primality
 
 prime numbers : numbers which are only divisible by themselves and one
 
