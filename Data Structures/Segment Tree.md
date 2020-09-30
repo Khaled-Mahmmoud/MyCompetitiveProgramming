@@ -220,27 +220,27 @@ int insert(int num, int s = S, int e = E, int p = 1)  // O(logn)
 		return insert(num, s, mid, 2*p);
 	return interval[2*p] + insert(num, mid+1, e, 2*p+1);
 }
-// delete kth element, and return its value
-int delete(int kTh, int s = S, int e = E, int p = 1) // O(logn)
+// remove kth element, and return its value
+int remove(int kTh, int s = S, int e = E, int p = 1) // O(logn)
 {
 	interval[p]--;
 	if(s == e)	
 	    return s;
 	int mid = (s+e) >> 1;
 	if(interval[2*p] >= kTh)	
-	    return delete(kTh, s, mid, 2*p);
-	return delete(kTh - interval[2*p], mid + 1, e, 2*p+1);
+	    return remove(kTh, s, mid, 2*p);
+	return remove(kTh - interval[2*p], mid + 1, e, 2*p+1);
 }
-// delete num , return position of deleted val 
-int delete(int num, int s = S, int e = E, int p = 1) // O(logn)
+// remove num , return position of deleted val 
+int remove(int num, int s = S, int e = E, int p = 1) // O(logn)
 {
 	interval[p]--;
 	if(s == e)	
 	    return interval[p] + 1;
 	int mid = (s+e) >> 1;
 	if(mid >= num)	
-	    return delete(num, s, mid, 2*p);
-	return interval[2*p] + delete(num , mid + 1, e, 2*p+1);
+	    return remove(num, s, mid, 2*p);
+	return interval[2*p] + remove(num , mid + 1, e, 2*p+1);
 }
 // get value of kth element
 int get(int kTh, int s = S, int e = E, int p = 1)
