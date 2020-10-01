@@ -31,7 +31,6 @@ DRDDRR
 
 DDRDRR DRDDRR
 
-
 ```cpp
 void solve(int x,int y,string s,vector<string>&res,int n,int m[MAX][MAX])
 {
