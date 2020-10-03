@@ -3,6 +3,10 @@
 K#*8w
 W8#m+3*(u(-
 ```
+198.153.192.50
+
+198.153.194.50
+
 **proper divisors of number**
 
 is all divisors of number excluding the number itself
