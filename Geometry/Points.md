@@ -42,4 +42,4 @@ double toRadian(double degree)
 
 **Check is a point (x,y) is between two points drawn on a straight line (x1,y1) , (x2,y2)?**
 
-point is between tow points if (y1-y)/(x1-x) = (y2-y) / (x2-x)
+point is between two points if (y1-y)/(x1-x) = (y2-y) / (x2-x)
