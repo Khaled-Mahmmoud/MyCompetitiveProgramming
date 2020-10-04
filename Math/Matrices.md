@@ -227,3 +227,5 @@ matrix Reflect(matrix v)
     return r;
 }
 ```
+
+[Symmetric matrix](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Math/symmetric-matrix.jpg)
