@@ -62,6 +62,7 @@ int main()
     return 0;
 }
 ```
+
 two integers a and b are said to be relatively prime, mutually prime, or coprime 
 if gcd(a,b) = 1
 
