@@ -9,6 +9,7 @@ int a[5003];
 int arr[5003];
 int main()
 {
+    // not to use ios::syn....
     int n ;
     cin >> n ;
     for ( int i = 2 ; i <= n ; i++ )
