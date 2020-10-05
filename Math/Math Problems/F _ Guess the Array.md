@@ -15,7 +15,7 @@ int main()
     for ( int i = 2 ; i <= n ; i++ )
     {
         cout << "? " << 1 << " " << i << endl;
-        fflush(stdout); // use this after each print
+        fflush(stdout); // use this after each printed line
         cin >> a[i] ;
     }
     int x;
