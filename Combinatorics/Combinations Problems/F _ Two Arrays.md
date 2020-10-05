@@ -59,3 +59,39 @@ int main()
     return 0;
 }
 ```
+
+### Solution using Dynamic Programming
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int dp[1003][21];
+int n,k;
+const int mod = 1e9+7;
+int solve(int i,int indx)
+{
+    if(indx==k)
+        return 1;
+    if(i>n)
+        return 0;
+    int &rt = dp[i][indx];
+    if(~rt)
+        return rt;
+    rt = 0;
+    for(int j=i;j<=n;j++)
+        (rt += solve(j,indx+1))%=mod;
+
+    return rt;
+}
+int main()
+{
+    memset(dp,-1,sizeof dp);
+    cin>>n>>k;
+    k<<=1;
+    int ans = 0;
+    for(int i=1;i<=n;i++)
+    (ans +=solve(i,1))%=mod;
+    cout<<ans;
+    return 0;
+}
+```
