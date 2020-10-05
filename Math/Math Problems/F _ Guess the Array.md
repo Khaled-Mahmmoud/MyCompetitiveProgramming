@@ -15,7 +15,7 @@ int main()
     for ( int i = 2 ; i <= n ; i++ )
     {
         cout << "? " << 1 << " " << i << endl;
-        fflush(stdout);
+        fflush(stdout); // use this after each print
         cin >> a[i] ;
     }
     int x;
@@ -28,7 +28,7 @@ int main()
         arr[i] = a[i] - arr[1] ;
     cout<< "!" ;
     for ( int i = 1 ; i <= n ; i++ )
-        cout<<' '<< arr[i];
+        cout<<' '<< arr[i]; // not to use cout<<arr[i]<<' ';
     fflush(stdout);
     return 0;
 }
