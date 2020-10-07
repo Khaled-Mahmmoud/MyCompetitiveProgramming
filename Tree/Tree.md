@@ -1,6 +1,6 @@
 # Tree Data Structure 
 
-Search - Remove - Add ==>>{ O(log n) - Best Case } , { O(n) - Worst Case }
+Search - Remove - Add ==>>{ O(log n) - Average Case } , { O(n) - Worst Case }
 
 Tree types 
 
