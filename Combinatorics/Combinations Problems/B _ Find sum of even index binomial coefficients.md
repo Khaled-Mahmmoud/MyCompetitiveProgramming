@@ -35,9 +35,11 @@ Put x = 1
     
 (1 + 1)^n + (1 - 1)^n = 2 * [nC0 + nC2 + nC4 + .......]
 
-2^n / 2 = nC0 + nC2 + nC4 + .......
+2^n / 2 = nC0 + nC2 + nC4 + nC6 + .......
     
-2^(n-1) = nC0 + nC2 + nC4 + .......
+2^(n-1) = nC0 + nC2 + nC4 + nC6 +.......
+
+2^n = nC0 + nC1 + nC2 + nC3 + ...... + nCn
 
 ```cpp
 int evenbinomialCoeffSum(int n) 
