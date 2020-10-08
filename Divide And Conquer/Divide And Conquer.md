@@ -17,7 +17,23 @@ The following are some standard algorithms that follows Divide and Conquer algor
 **Quicksort** is a sorting algorithm. The algorithm picks a pivot element, rearranges the array elements in such a way that all elements smaller than the picked pivot element move to left side of pivot, and all greater elements move to right side. Finally, the algorithm recursively sorts the subarrays on left and right of pivot element.
 
 **Merge Sort** is also a sorting algorithm. The algorithm divides the array in two halves, recursively sorts them and finally merges the two sorted halves.
+```
 
+                    38 27 43 3 9 82 10
+                       /          \
+               38 27 43 3         9 82 10
+                /     \           /    \
+             38 27  43  3       9 82    10
+            /   \    /  \      /   \     \
+           38   27  43   3     9    82    10
+           \   /     \   /     \   /       \
+           27 38      3 43      9 82       10
+              \        /          \        /
+              3 27 38 43            9 10 82
+                     \              /
+                    3 9 10 27 38 43 82
+
+```
 **Closest Pair** of Points The problem is to find the closest pair of points in a set of points in x-y plane. The problem can be solved in O(n^2) time by calculating distances of every pair of points and comparing the distances to find the minimum. The Divide and Conquer algorithm solves the problem in O(nLogn) time.
 
 **Strassen’s Algorithm** is an efficient algorithm to multiply two matrices. A simple method to multiply two matrices need 3 nested loops and is O(n^3). Strassen’s algorithm multiplies two matrices in O(n^2.8974) time.
