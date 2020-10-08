@@ -171,3 +171,47 @@ int main()
 }
 ```
 Time complexity : O(nlog(mod))
+
+### Some Rules of Binomial coefficients
+
+```nC0 + nC1 + nC2 + ……. + nCn-1 + nCn = 2^n```
+
+Proof : We know, (1 + x)^n = nC0 x^0 + nC1 x^1 + nC2 x^2 + ..... + nCn x^n. we put x = 1
+
+(1 + 1)^n = nC0 + nC1 + nC2 + ..... + nCn
+
+2^n = nC0 + nC1 + nC2 + ..... + nCn
+
+```nC0^2 + nC1^2 + nC2^2 + .... + nCn-1^2 + nCn^2 = 2nCn```
+
+Proof : We know, (1 + x)^n = nC0 x^0 + nC1 x^1 + nC2 x^2 + ......... + nCn-1 x^n-1 + nCn x^n
+
+Also, (x + 1)^n = nC0 x^n + nC1 x^n-1 + nC2 x^n-2 + ......... + nCn-1 x + nCn
+
+Multiplying above two equations, (1 + x)^2n =
+
+[nC0 + nC1 x + nC2 x^2 + ......... + nCn-1 x^n-1 + nCn x^n] X
+
+[nC0 x^n + nC1 x^n-1 + nC2 x^n-2 + ......... + nCn-1 x + nCn]
+
+Equating coefficients of x^n on both sides, we get 2nCn = nC0^2 + nC1^2 + nC2^2 + nC3^2 + ......... + nCn-2^2 + nCn-1^2 + nCn^2
+
+Hence, sum of the squares of coefficients = 2nCn = (2n)!/(n! * (2n-n)!)
+
+```nC0 + nC2 + nC4 + nC6 + nC8 + ……… = 2^(n-1)```
+
+Proof : We know, (1 + x)^n = nC0 x^0 + nC1 x^1 + nC2 x^2 + ..... + nCn x^n
+
+Now put x = -x, we get (1 - x)^n = nC0 x^0 - nC1 x^1 + nC2 x2 + ..... + (-1)^n nCn x^n
+
+Now, adding both the above equation, we get, (1 + x)^n + (1 - x)^n = 2 * [nC0 + nC2 x2 + nC4 x4 + .....]
+
+Put x = 1
+
+(1 + 1)^n + (1 - 1)^n = 2 * [nC0 + nC2 + nC4 + .......]
+
+2^n / 2 = nC0 + nC2 + nC4 + nC6 + .......
+
+2^(n-1) = nC0 + nC2 + nC4 + nC6 +.......
+
+2^n = nC0 + nC1 + nC2 + nC3 + ...... + nCn
