@@ -28,10 +28,11 @@ int main()
 					cout << a << ' ' << l << ' ' << l - dif << endl;
 				else
 					cout << a << ' ' << r << ' ' << r - dif << endl;
-				return;
+				goto here;
 			}
 		}
 	}
+	here:;
     }
     return 0;
 }
