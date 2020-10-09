@@ -6,13 +6,18 @@
 #include <bits/stdc++.h>
 #define ll long long
 using namespace std;
-void solve()
+int main()
 {
-	int l, r;
+    ios::sync_with_stdio(0),cin.tie(0);
+    int T;
+    cin >> T;
+    while (T--)
+    {
+        int l, r;
 	ll m;
 	cin >> l >> r >> m;
 	for (int a = l; a <= r; a++)
-    {
+        {
 		ll ans = (r - l + m) / a;
 		ll dif = m - 1LL * ans * a;
 		if (ans > 0)
@@ -27,16 +32,7 @@ void solve()
 			}
 		}
 	}
-}
-int main()
-{
-    ios::sync_with_stdio(0),cin.tie(0);
-    int T;
-   	cin >> T;
-	  while (T--)
-    {
-		   solve();
-	  }
+    }
     return 0;
 }
 ```
