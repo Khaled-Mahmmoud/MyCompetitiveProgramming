@@ -13,9 +13,13 @@ SmallR, who shoots first can win in the following cases:
 2) He misses AND his opponent misses AND he shoots the target. OR
 3) He misses AND his opponent misses AND he misses AND his opponent misses AND he shoots the target
 
-When there is an OR between 2 events(which lead to same result) happening, it means EITHER of them will lead to the same result, so the probability of the result is the SUM OF ALL THESE PROBABILITIES.
+When there is an OR between 2 events(which lead to same result) happening, it means EITHER of them will lead to the same result, 
+so the probability of the result is the SUM OF ALL THESE PROBABILITIES.
 
-On the other hand, when there is AND between 2 events, it means that BOTH OF THEM SHOULD HAPPEN TO GET THE DESIRED OUTCOME. So if event A happens with probability = 1/2 and event B happens with probability = 1/2 and event C happens when both A and B happen, then probability of C happening is 1/2 * 1/2 = 1/4, which also makes sense logically. Because C will happen in only 1 out 4 cases, when BOTH A and B have happened. You can imagine the 4 cases:
+On the other hand, when there is AND between 2 events, it means that BOTH OF THEM SHOULD HAPPEN TO GET THE DESIRED OUTCOME. 
+So if event A happens with probability = 1/2 and event B happens with probability = 1/2 and event C happens when both A and B happen,
+then probability of C happening is 1/2 * 1/2 = 1/4, which also makes sense logically. Because C will happen in only 1 out 4 cases, 
+when BOTH A and B have happened. You can imagine the 4 cases:
 
 1) A did not happen AND B did not happen => C did not happen
 2) A happened AND B did not happen => C did not happen
