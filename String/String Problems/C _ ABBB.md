@@ -19,7 +19,6 @@ int main()
                 v.push_back({c,cnt});
                 c = str[i];cnt = 1;
             }
-        if(cnt)
         v.push_back({c,cnt});
         pair<char,int> res = v[v.size()-1];
         for(int i=v.size()-2;i>=0;i--)
