@@ -2,7 +2,7 @@
 
 [Problem Link](https://codeforces.com/contest/312/problem/B)
 
-**Solution ** let p=a/b,q=(1-c/d)*(1-a/b). The answer of this problem can be showed as:p*q^0+p*q^1+p*q^2+....
+**Solution** let p=a/b,q=(1-c/d)*(1-a/b). The answer of this problem can be showed as:p*q^0+p*q^1+p*q^2+....
 
 That is the sum of a geometric progression which is infinite but 0<q<1.We can get the limit by the formula:p/(1-q).
 
