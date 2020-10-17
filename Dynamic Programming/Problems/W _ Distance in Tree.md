@@ -45,3 +45,5 @@ int main()
     return 0;
 }
 ```
+
+resolve it using [Centroid Decomposition](https://codeforces.com/blog/entry/52492)
