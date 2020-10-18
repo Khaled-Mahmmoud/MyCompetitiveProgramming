@@ -5,6 +5,7 @@
 [Tutorial Link](https://codeforces.com/blog/entry/12680)
 
 ```cpp
+
 #include<bits/stdc++.h>
 #define ll long long
 using namespace std;
