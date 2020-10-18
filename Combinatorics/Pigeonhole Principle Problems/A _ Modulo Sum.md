@@ -3,6 +3,7 @@
 [Problem Link](https://codeforces.com/problemset/problem/577/B)
 
 ```cpp
+
 vector<int>v;int dp[1009][1009];
 int m;
 bool subset(int n,int sum,bool x)
