@@ -45,6 +45,7 @@ Idx: 23		3 2 1 0
 **How to iteratively generate Permutations ?**
 
 ```cpp
+
 void Permutation(int a[],int n)
 {
     do
