@@ -4,14 +4,6 @@
 
 In terms of mathematics, probability refers to the ratio of wanted outcomes to the total number of possible outcomes (wanted outcomes/total outcomes). 
 
-There are three approaches to the theory of probability, namely:
-
-- Empirical Approach
-- Classical Approach
-- Axiomatic Approach
-
-In this article, we are going to study about Axiomatic Approach.In this approach, we represent the probability in terms of sample space(S) and other terms.
-
 **Probability of an Event** – If there are total p possible outcomes associated with a random experiment and q of them are favourable outcomes to the event A, then the probability of event A is denoted by P(A) and is given by P(A) = q/p 
 
 The probability of non occurrence of event A, i.e, P(A’) = 1 – P(A)
