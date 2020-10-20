@@ -25,10 +25,14 @@ The probability of non occurrence of event A, i.e, P(A’) = 1 – P(A)
 **Theorems**
 
 General – Let A, B, C are the events associated with a random experiment, then
-P(A∪B) = P(A) + P(B) – P(A∩B)
-P(A∪B) = P(A) + P(B) if A and B are mutually exclusive
-P(A∪B∪C) = P(A) + P(B) + P(C) – P(A∩B) – P(B∩C)- P(C∩A) + P(A∩B∩C)
-P(A∩B’) = P(A) – P(A∩B)
-P(A’∩B) = P(B) – P(A∩B)
+
+- P(A∪B) = P(A) + P(B) – P(A∩B)
+- P(A∪B) = P(A) + P(B) if A and B are mutually exclusive
+- P(A∪B∪C) = P(A) + P(B) + P(C) – P(A∩B) – P(B∩C)- P(C∩A) + P(A∩B∩C)
+- P(A∩B’) = P(A) – P(A∩B)
+- P(A’∩B) = P(B) – P(A∩B)
+
 Extension of Multiplication Theorem – Let A1, A2, ….., An are n events associated with a random experiment, then
+
 P(A1∩A2∩A3 ….. An) = P(A1)P(A2/A1)P(A3/A2∩A1) ….. P(An/A1∩A2∩A3∩ ….. ∩An-1)
+
