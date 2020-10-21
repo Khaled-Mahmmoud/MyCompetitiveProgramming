@@ -160,4 +160,8 @@ Computation for Conditional Probability can be done using tree, This method is v
 
 **Example** : In a certain library, twenty percent of the fiction books are worn and need replacement. Ten percent of the non-fiction books are worn and need replacement. Forty percent of the library’s books are fiction and sixty percent are non-fiction. What is the probability that a book chosen at random are worn? Draw a tree diagram representing the data.
 
-Solution: Let F represents fiction books and N represents non-fiction books. Let W represents worn books and G represents non-worn books.
+Solution: Let F represents fiction books and N represents non-fiction books. Let W represents worn books and G represents non-worn books. see [diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Math/condi.png)
+
+
+P(worn)= P(N) * P(W | N) + P(F) * P(W | F) = 0.6 * 0.1  +  0.4 * 0.2  = 0.14
+
