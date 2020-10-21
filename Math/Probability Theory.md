@@ -30,7 +30,7 @@ P(A1∩A2∩A3 ….. An) = P(A1)P(A2/A1)P(A3/A2∩A1) ….. P(An/A1∩A2∩A3∩
 
 **Example1** : A bag contains 10 oranges and 20 apples out of which 5 apples and 3 oranges are defective .If a person takes out two at random, what is the probability that either both are good or both are apples ?
 
-** Solution** : Out of 30 items, two can selected in 30C2 ways . Thus, Total elementary events = 30C2 .
+**Solution** : Out of 30 items, two can selected in 30C2 ways . Thus, Total elementary events = 30C2 .
 
 Consider the events :
 
