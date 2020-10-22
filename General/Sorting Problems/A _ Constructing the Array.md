@@ -10,7 +10,8 @@
 using namespace std;
 struct cmp
  {
-	bool operator() (const pair<int, int> &a, const pair<int, int> &b) const  // notice you should to use struct cmp ,const , & and please save this for me
+        // notice you should to use struct cmp ,const , & and please save this code for me (:
+	bool operator() (const pair<int, int> &a, const pair<int, int> &b) const  
 	{
 		int lena = a.second - a.first + 1;
 		int lenb = b.second - b.first + 1;
