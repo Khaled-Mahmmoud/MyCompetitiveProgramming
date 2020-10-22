@@ -169,7 +169,6 @@ Computation for Conditional Probability can be done using tree, This method is v
 
 Solution: Let F represents fiction books and N represents non-fiction books. Let W represents worn books and G represents non-worn books. see [diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Math/condi.png)
 
-
 P(worn)= P(N) * P(W | N) + P(F) * P(W | F) = 0.6 * 0.1  +  0.4 * 0.2  = 0.14
 
 **Bayes’s formula**
