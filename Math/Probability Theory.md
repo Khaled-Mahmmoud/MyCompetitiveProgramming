@@ -137,6 +137,8 @@ Hence, the probability that the bulb is defective is 0.0345
 
 Conditional probability P(A | B) indicates the probability of event ‘A’ happening given that event B happened.
     
+احتمال وقوع أ بشرط وقوع ب
+
 ```P(A|B) = P(A∩B) / P(B)```
 
 We can easily understand the above formula using [the diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Math/conditional_probab.png). Since B has already happened, the sample space reduces to B. So the probability of A happening becomes P(A∩B) divided by P(B)
