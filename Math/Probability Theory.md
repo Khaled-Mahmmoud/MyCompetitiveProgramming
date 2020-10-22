@@ -157,6 +157,11 @@ So there are 50% chances that student that knows C also knows Java.
 
 P(A ∩ B) = P(B) * P(A|B) 
 
+From the product rule :
+
+- X ⊆ Y  implies P(X|Y) = P(X)/P(Y)
+- Y ⊆ X  implies P(X|Y) = 1
+
 **Understanding Conditional probability through tree** :
 Computation for Conditional Probability can be done using tree, This method is very handy as well as fast when for many problems.
 
@@ -167,3 +172,16 @@ Solution: Let F represents fiction books and N represents non-fiction books. Let
 
 P(worn)= P(N) * P(W | N) + P(F) * P(W | F) = 0.6 * 0.1  +  0.4 * 0.2  = 0.14
 
+**Bayes’s formula**
+
+```P(A|B) = P(B|A) * P(A) / P(B)```
+
+P(A|B) = P(A∩B) / P(B)   ==>>  P(A∩B) = P(A|B) * P(B)
+
+P(B|A) = P(B∩A) / P(A)   ==>> P(B∩A) =  P(B|A) * P(A)
+
+ P(A∩B) = P(B∩A)
+ 
+ P(A|B) * P(B) = P(B|A) * P(A)
+ 
+ P(X) = P(X∩Y) + P(X∩Y^c)  .
