@@ -1,29 +1,48 @@
-
+```
 #include<string>
 string s = "ksimuye"
-********************* Iterators *****************************
+```
+**Iterators**
+
 s.begin()    || O(1) || Returns an iterator pointing to the first element 
+
 s.end()      || O(1) || Returns an iterator pointing to the last element 
+
 s.rbegin()   || O(1) || Returns a reverse iterator pointing to the last element 
+
 s.rend()     || O(1) || Returns a reverse iterator pointing to the first element 
+
 s.cbegin()   || O(1) || Returns a const_iterator pointing to the first element 
+
 s.cend()     || O(1) || Returns a const_iterator pointing to the last element 
+
 s.crbegin()  || O(1) || Returns a const_reverse_iterator pointing to the last element 
+
 s.crend()    || O(1) || Returns a const_reverse_iterator pointing to the first element 
 
-********************* Element Access **************************
+**Element Access**
+
 s.front()    || O(1) || Returns a reference pointing to the first element 
+
 s.back()     || O(1) || Returns a reference pointing to the last element 
+
 s.at(pos)    || O(1) || Returns a reference to the element at position pos (O-Indexed)
+
 operator[pos]|| O(1) || Returns a reference to the element at position pos (O-Indexed)
 
-********************* Capacity ********************************
-s.size()     || O(1) || Return length of string 
+**Capacity**
+
+s.size()     || O(1) || Return length of string
+
 s.length()   || O(1) || Return length of string 
+
 s.max_size() || O(1) || Returns the maximum number of characters that the string can hold
+
 s.empty()    || O(1) || Returns whether the string is empty 
+
 s.clear()    || O(1) || Clear string
-s.resize(n)  ||      || Change size of string to n size
+
+s.resize(n)  ||  Change size of string to n size
 {
    If n is smaller than the current string size, the content is reduced to its first n elements, removing those beyond
    If n is greater than the current string size, the content is expanded by inserting at the end as many elements as
@@ -31,10 +50,12 @@ s.resize(n)  ||      || Change size of string to n size
    Complexity : linear in the new string length 
 }
 
-*************************** Modifiers ***************************
+**Modifiers**
 
-assign
+**assign**
+
 Assigns a new value to the string , replacing its current contents
+```cpp
 int main ()
 {
     string str;
@@ -67,22 +88,21 @@ int main ()
 
   return 0;
 }
+```
 Complexity : Linear on initial + final sizes
 
-************************* Modifiers **************************
-insert
+**insert**
+
 Inserts additional characters into the string right before the character indicated by pos (or p):
-// inserting into a string
+```cpp
 #include <iostream>
 #include <string>
-
 int main ()
 {
   std::string str="to be question";
   std::string str2="the ";
   std::string str3="or not to be";
   std::string::iterator it;
-
   // used in the same order as described above:
   str.insert(6,str2);                 // to be (the )question
   str.insert(6,str3,3,4);             // to be (not )the question
@@ -93,24 +113,27 @@ int main ()
   str.insert (str.end(),3,'.');       // to be, not to be: that is the question(...)
   str.insert (it+2,str3.begin(),str3.begin()+3); // to be, or not to be: that is the question...
 }
+```
 Complexity : linear in the new string length
 
+**operator+=**
 
-operator+=
 Extends the string by appending additional characters at the end of its current value
-
+```cpp
   std::string name ("John");
   std::string family ("Smith");
   name += " K. ";         // c-string
   name += family;         // string
   name += '\n';           // character
   cout<<name;            // John K. Smith
-
+```
 Complexity : linear in the new string length
 
 
-append
+**append**
+
 Extends the string by appending additional characters at the end of its current value:
+```cpp
   std::string str;
   std::string str2="Writing ";
   std::string str3="print 10 and then 5 more";
@@ -125,28 +148,34 @@ Extends the string by appending additional characters at the end of its current 
   str.append<int>(5,0x2E);                // "....."
 
   std::cout << str << '\n';              // Writing 10 dots here: .......... and then 5 more.....
+```
 Complexity : linear in the new string length
 
+**push_back**
 
-push_back
-Appends character c to the end of the string, increasing its length by one
-s.push_back('k')
-Generally amortized constant, but up to linear in the new string length
+Appends character c to the end of the string, increasing its length by one s.push_back('k')
 
-pop_back
-Erases the last character of the string, effectively reducing its length by one
-Complexity : constant
+Generally amortized constant, but up to linear in the new string length.
+
+**pop_back**
+
+Erases the last character of the string, effectively reducing its length by one.
+
+Complexity : constant.
 
 
-Swap
+**Swap**
+
 Swap string values 
+
 s1.swap(s2)
+
 Complexity : constant
 
-************************* Modifiers **************************
-replace
-Replaces the portion of the string that begins at character pos and spans len characters
+**replace**
 
+Replaces the portion of the string that begins at character pos and spans len characters
+```cpp
   string base="this is a test string.";
   string str2="n example";
   string str3="sample phrase";
@@ -169,12 +198,13 @@ Replaces the portion of the string that begins at character pos and spans len ch
   str.replace(str.begin()+12,str.end()-4,4,'o');                   "replace is cooool!!!"  
   str.replace(str.begin()+11,str.end(),str4.begin(),str4.end());   "replace is useful."    
   std::cout << str << '\n';
-  
- Complexity : linear in the new string length
+```
+Complexity : linear in the new string length
 
-  erase
-  Erases part of the string, reducing its length
+**erase**
 
+Erases part of the string, reducing its length
+```cpp
   std::string str ("This is an example sentence.");
   std::cout << str << '\n';
                                             "This is an example sentence."
@@ -187,11 +217,13 @@ Replaces the portion of the string that begins at character pos and spans len ch
   str.erase (str.begin()+5, str.end()-9);         ^^^^^
   std::cout << str << '\n';
                                             "This sentence."
+```
 Complexity : linear in the new string length
 
-************************* operations **************************
+**operations**
 
- ### substr ###
+ **substr**
+ ```cpp
  std::string str="We think in generalities, but we live in details.";
                                            // (quoting Alfred N. Whitehead)
 
@@ -202,11 +234,11 @@ Complexity : linear in the new string length
   std::string str3 = str.substr (pos);     // get from "live" to the end
 
   std::cout << str2 << ' ' << str3 << '\n';  // think live in details.
-  
+```
 Complexity : linear in the new string length
 
 
-#### strncmp ####
+**strncmp**
 
 int x = strncmp (str1, str2, num);
 str1 : C string to be compared.
@@ -214,11 +246,13 @@ str2 : C string to be compared.
 num : Maximum number of characters to compare.
 
 Returns an integral value indicating the relationship between the strings:
+```
 return value                	indicates
    <0	                 the first character that does not match has a lower value in str1 than in str2
     0	                 the contents of both strings are equal
    >0	                 the first character that does not match has a greater value in str1 than in str2
-
+```
+```cpp
 int x = strncmp ("sol", "kmsol" , 3); return 8
 int x = strncmp ("sol", "kmsol" + 2 , 3); return 0
 int x = strncmp ("hsol" + 1 , "kmsol" + 2 , 3); return 0
@@ -233,3 +267,4 @@ int main()
   
     return 0; 
 } 
+```
