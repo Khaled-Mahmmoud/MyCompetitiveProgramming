@@ -153,9 +153,9 @@ If the square root of given number(say x^2) is prime then it must have exactly t
  
  **what about Factorizing n^power**
  
- Simply if 	n   =  p1^a 		 p2^b 		 p3^c
+ Simply if 	n   =  p1^a 	*	 p2^b 	*	 p3^c
  
- Then      	n^z = p1^az 	 p2^bz 	 p3^cz
+ Then      	n^z = p1^az *	 p2^bz  *	 p3^cz
 
  Divisors of 	n   = (a+1) 	* (b+1) 	* (c+1)
  
