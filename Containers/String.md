@@ -268,3 +268,17 @@ int main()
     return 0; 
 } 
 ```
+
+To sort a range[l,r] of string where 1<=l<=r<=str.size()
+```cpp
+sort(&str[l-1], &str[r]);
+sort(str.begin() + l - 1, str.begin() + r);
+```
+
+To reverse a range[l,r] of string where 1<=l<=r<=str.size()
+```cpp
+reverse(&str[l-1], &str[r]);
+reverse(str.begin() + l - 1, str.begin() + r);
+```
+
+
