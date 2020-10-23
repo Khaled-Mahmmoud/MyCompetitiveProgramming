@@ -1,5 +1,5 @@
-/*
-Program for Goldbach’s Conjecture (Two Primes with given Sum)
+# Program for Goldbach’s Conjecture (Two Primes with given Sum)
+
 Goldbach’s conjecture is one of the oldest and best-known unsolved problems in number theory of mathematics
 Every even integer greater than 2 can be expressed as the sum of two primes.
 
@@ -52,20 +52,25 @@ void findPrimes(int n)
 } 
 /*
 
-Express an odd number as sum of prime numbers
+# Express an odd number as sum of prime numbers
+
 Given an odd number, we need to express it as the sum of at most three prime numbers.
 
 Input : 27
+
 Output : 27 = 3 + 5 + 19
 
-Input : 15
-Output : 15 = 2 + 13
 
 Approach : Here, we use Goldbach’s conjecture to solve this problem. 
+
 It says that any even integer can be expressed as sum of two prime numbers.
 
 We have three cases here:
+
 1) When N is a prime number, print the number.
+
 2) When (N-2) is a prime number, print 2 and N-2.
+
 3) Express N as 3 + (N-3). Obviously, N-3 will be an even number (subtraction of an odd from another odd results in even). 
+
 So, according to Goldbach’s conjecture, it can be expressed as the sum of two prime numbers. So, print 3 and other two prime numbers.
