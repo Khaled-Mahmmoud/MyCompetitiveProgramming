@@ -13,11 +13,7 @@ A simple solution is to traverse all the subarrays and calculate their sum. If t
 
 Complexity : O(n^2)
 
-**Efficient Solution** : 
-
-Time Complexity: O(nlogn) 
-
-Auxiliary Space: O(n)
+**Efficient Solution** 
 
 ```cpp
 int findSubarraySum(int arr[], int n, int sum)
@@ -37,3 +33,7 @@ int findSubarraySum(int arr[], int n, int sum)
     return res;
 }
 ```
+
+Time Complexity: O(nlogn) 
+
+Auxiliary Space: O(n)
