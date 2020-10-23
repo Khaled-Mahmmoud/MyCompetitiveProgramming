@@ -22,17 +22,17 @@ Auxiliary Space: O(n)
 ```cpp
 int findSubarraySum(int arr[], int n, int sum)
 {
-    unordered_map<int, int> prevSum;
+    unordered_map<int, int> m;
     int res = 0;
-    int currsum = 0;
+    int cur = 0;
     for (int i = 0; i < n; i++) 
     {
-        currsum += arr[i];
-        if (currsum == sum)
+        cur += arr[i];
+        if (cur == sum)
             res++;
-        if (prevSum.find(currsum - sum) != prevSum.end())
-            res += (prevSum[currsum - sum]);
-        prevSum[currsum]++;
+       // if (m.find(cur - sum) != m.end())
+            res += (m[cur - sum]);
+        m[cur]++;
     }
     return res;
 }
