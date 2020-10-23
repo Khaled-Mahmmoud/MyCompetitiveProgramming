@@ -37,3 +37,25 @@ int findSubarraySum(int arr[], int n, int sum)
 Time Complexity: O(nlogn) 
 
 Auxiliary Space: O(n)
+
+
+### Count of subarrays having exactly K prime numbers
+
+Input: arr[] = {1, 2, 3, 4}, K = 2
+
+Output: 4
+
+Explanation: Since total number of prime number in the array are 2. So the 4 subarray with 2 prime number are:
+
+- {2, 3}
+- {1, 2, 3}
+- {2, 3, 4}
+- {1, 2, 3, 4}
+
+Traverse the given array arr[] and check whether the element is prime or not.
+
+If the current element is prime then change the value of array that that index to 1, Else change the value at that index to 0.
+
+Now the given array is converted into Binary Array.
+
+Find the count of subarray with sum equals to K in the above Binary Array using the approach discussed in this article.
