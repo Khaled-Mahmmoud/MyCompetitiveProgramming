@@ -134,7 +134,7 @@ If the square root of given number(say x^2) is prime then it must have exactly t
  
  p^n has n+1 divisors for any p prime number
  
- what about p1^a  p1^b  	(a+1) * (b+1)
+ what about p1^a  p1^b  , it's (a+1) * (b+1)
  
  E.g. 12 2^2  3^1	has 3  2 divisors.
  
