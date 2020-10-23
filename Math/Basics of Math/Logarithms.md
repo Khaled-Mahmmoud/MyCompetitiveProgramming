@@ -54,3 +54,15 @@ logb b = 1, logb 1 = 0, logb 0 = -oo, log1 x = undefined
 ● b ^ logb(x) = x => take logb for the equation to get x
 ● xb^y => b^(logb(x) + y)
 ```
+
+### + more 
+
+1/1 + 1/2 + 1/3 + 1/4 + 1/5 + ..... + 1/(n-1) + 1/n = log(n)  Harmonic Progression
+
+1/2 + 1/3 + 1/5 + 1/7 + ..... + 1/p = log(log n) where p is largest prime less then n
+
+Θ(log(n!)) = Θ(n·log(n))
+
+log(n!) = log(1) + log(2) + ... + log(n-1) + log(n)
+
+log(1) + log(2) + ... + log(n) <= log(n) + log(n) + ... + log(n) = n*log(n)
