@@ -30,6 +30,7 @@ int divSum(int n)
     } 
     return result ; 
 } 
+
 ```
 Time Complexity : O(sqrt(n))
 
