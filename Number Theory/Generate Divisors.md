@@ -92,7 +92,7 @@ void precomputeCounts()
 } 
 ```
 
-we should know that only perfect square numbers have odd number of divisors 
+we should know that **only perfect square numbers have odd number of divisors** 
 
 4 (1, 2, 4) has 3 divisors
 
@@ -105,6 +105,19 @@ we should know that only perfect square numbers have odd number of divisors
 36 (1, 2, 3, 4, 6, 9, 12, 18, 36) has 9 divisors
 
 100 (1, 2, 4, 5, 10, 20, 25, 50, 100) has 9 divisors
+ 
+ ### Check if count of divisors is even or odd
+ ```cpp
+void countDivisors(int n) 
+{ 
+    int root_n = sqrt(n); 
+    
+    if (root_n * root_n == n) 
+        printf("Odd\n"); 
+    else
+        printf("Even\n"); 
+} 
+```
  
 ### Check whether a number has exactly three distinct factors or not?
     
