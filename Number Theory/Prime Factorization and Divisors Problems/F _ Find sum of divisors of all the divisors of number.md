@@ -64,8 +64,8 @@ int sumFactorsofFactors(int n)
         {  
             n = n / i; 
             curr_term *= i;
-            curr_sum += curr_term + pre; 
             pre = curr_term + pre;
+            curr_sum += pre; 
         } 
         res *= curr_sum; 
     } 
