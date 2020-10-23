@@ -52,6 +52,8 @@ Explanation: Since total number of prime number in the array are 2. So the 4 sub
 - {2, 3, 4}
 - {1, 2, 3, 4}
 
+**Solution**
+
 Traverse the given array arr[] and check whether the element is prime or not.
 
 If the current element is prime then change the value of array that that index to 1, Else change the value at that index to 0.
@@ -59,3 +61,27 @@ If the current element is prime then change the value of array that that index t
 Now the given array is converted into Binary Array.
 
 Find the count of subarray with sum equals to K in the above Binary Array using the approach discussed in this article.
+
+
+### Count of subarrays having exactly K perfect square numbers
+
+Input: arr[] = {2, 4, 9, 3}, K = 2
+
+Output: 4
+
+Explanation: Since total number of perfect square number in the array are 2.
+
+- {2, 4, 9}
+- {2, 4, 9, 3}
+- {4, 9}
+- {4, 9, 3}
+
+**Solution**
+
+Traverse the given array arr[] and check whether the element is Perfect Square or not.
+
+If the current element is Perfect Square then change the value of array at that index to 1, Else change the value at that index to 0.
+
+Now the given array is converted into Binary Array.
+
+Now, Find the count of subarray with sum equals to K in the above Binary Array using the approach discussed in this article.
