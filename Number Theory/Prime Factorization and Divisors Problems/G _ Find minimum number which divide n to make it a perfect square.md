@@ -1,16 +1,21 @@
-/*
-Find minimum number to be divided to make a number a perfect square
+# Find minimum number which divide n to make it a perfect square
+
 Given a positive integer n. Find the minimum number which divide n to make it a perfect square.
 
 Input : n = 50
+    
 Output : 2
+    
 By Dividing n by 2, we get which is a perfect square.
 
 Input : n = 6
+    
 Output : 6
+    
 By Dividing n by 6, we get which is a perfect square.
 
 Input : n = 36
+    
 Output : 1
 
 A number is perfect square if all prime factors appear even number of times
@@ -18,8 +23,7 @@ The idea is to find the prime factor of n and find each prime factor power
 Now, find and multiply all the prime factor whose power is odd
 The resultant of the multiplication is the answer
 
-*/
-
+```cpp
 int findMinNumber(int n) 
 { 
     int count = 0, ans = 1; 
@@ -46,3 +50,4 @@ int findMinNumber(int n)
   
     return ans; 
 } 
+```
