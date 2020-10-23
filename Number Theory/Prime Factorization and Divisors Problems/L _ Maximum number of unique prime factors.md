@@ -1,27 +1,17 @@
-/*
-Maximum number of unique prime factors
+# Maximum number of unique prime factors
+
 Given a number N, find the maximum number of unique prime factors any number can have in range [1, N].
 
-Examples:
-
 Input : N = 500
+	
 Output : 4
-The maximum number of prime factors
-for any number in [1, 500] is 4. A
-number in range that has 4 prime 
-factors is 210 (2 x 3 x 5 x 7)
+	
+The maximum number of prime factors for any number in [1, 500] is 4. A number in range that has 4 prime  factors is 210 (2 x 3 x 5 x 7)
 
-Input  : N = 3
-Output : 1
-
-Input : N = 5000
-Output : 5
 
 N <= 10^18
 
-*/
-
-
+```cpp
 vector<int>primes;
 void sieve()
 {
@@ -52,3 +42,4 @@ int main()
     }
 	return 0;
 }
+```
