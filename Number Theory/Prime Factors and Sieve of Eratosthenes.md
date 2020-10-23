@@ -116,13 +116,6 @@ It can be proved as below with the help of Harmonic Progression of the sum of pr
 
 So `n/2 + n/3 + n/5 + n/7 + ...... p = nlog(logn)`
 
-### + more 
-
-Θ(log(n!)) = Θ(n·log(n))
-
-log(n!) = log(1) + log(2) + ... + log(n-1) + log(n)
-
-log(1) + log(2) + ... + log(n) <= log(n) + log(n) + ... + log(n) = n*log(n)
 
 ### Facts
 - int prime[25] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97}; // [1-100]
