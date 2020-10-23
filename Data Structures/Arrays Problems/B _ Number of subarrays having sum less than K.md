@@ -22,6 +22,7 @@ Time complexity : O(n^2)
 Time complexity : O(n)
 
 ```cpp
+
 int countSubarrays(int arr[],int n, int k)
 {
     int start = 0, end = 0, count = 0, sum = arr[0];
