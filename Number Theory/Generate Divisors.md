@@ -70,8 +70,6 @@ Given a number n, count total perfect divisors of n.
     
 Perfect divisors are those divisors which are square of some integer.
     
-For example a perfect divisor of 8 is 4.
-
 Input  : n = 16 
     
 Output : 3
