@@ -1,29 +1,31 @@
-/*
-Given a positive integer n. Find the sum of all divisors of i where ( 1 <= i <= n)
-Examples :
+# Sum of all divisors from 1 to n
 
+Given a positive integer n. Find the sum of all divisors of i where ( 1 <= i <= n)
 
 Input: 4
+	
 Output: 15
+	
 Explanation
+
 F(1) = 1
+	
 F(2) = 1 + 2 = 3
+	
 F(3) = 1 + 3 = 4
+	
 F(4) = 1 + 2 + 4 = 7
-ans = F(1) + F(2) + F(3) + F(4)
-    = 1 + 3 + 4 + 7
-    = 15
+	
+ans = F(1) + F(2) + F(3) + F(4) = 1 + 3 + 4 + 7 = 15
     
-1 <= T <= 500
-1 <= N <= 106
 
 
+**Solution 1** :
 
-Solution 1 : 
 is to traverse for every number(1 to n), find all divisors and keep updating the sum with that divisor
 Time complexity: O(n.sqrt(n))
-*/
 
+```cpp
 int divisorSum(int n) 
 { 
     int sum = 0; 
@@ -40,12 +42,14 @@ int divisorSum(int n)
     } 
     return sum; 
 } 
-/*
-Solution 2 :
-is to traverse for every numb(1 to n), find all prime factors and keep updating the sum with that factor
-Time complexity: O(n.log(n))
-*/
+```
+**Solution 2** :
 
+is to traverse for every numb(1 to n), find all prime factors and keep updating the sum with that factor
+
+Time complexity: O(n.log(n))
+	
+```cpp
 #define N 1000009
 vector<int>spf(N);
 void sieve()
@@ -88,14 +92,16 @@ int main()
     }
 	return 0;
 }
+```
+**Solution 3** :
 
-/*
-Solution 3 :
 is to traverse for every number(1 to n), and add d[i] to sum where d[i] contains sum of all divisors of i
-Time complexity: O(N.log(N)) for function solve
-and o(n) for each test case
-*/
 
+Time complexity: O(N.log(N)) for function solve.
+	
+and o(n) for each test case
+
+```cpp
 #define N 1000009
 vector<int>d(N);
 void solve()
@@ -117,28 +123,34 @@ int main()
 	return 0;
   
 }
+```
+**Solution 4** :
 
-/*
-Solution 4 :
 is to observe the function and co-relate the pattern
 For a given number n, every number from 1 to n contribute 
 it’s presence up to the highest multiple less than n 
 
 Let n = 6
+	
 => F(1) + F(2) + F(3) + F(4) + F(5) + F(6)
-=> 1 will occurs 6 times in F(1), F(2),
-   F(3), F(4), F(5) and F(6)
-=> 2 will occurs 3 times in F(2), F(4) and
-   F(6)
+	
+=> 1 will occurs 6 times in F(1), F(2), F(3), F(4), F(5) and F(6)
+	
+=> 2 will occurs 3 times in F(2), F(4) and F(6)
+	
 => 3 will occur 2 times in F(3) and F(6)
+	
 => 4 will occur 1 times in F(4)
+	
 => 5 will occur 1 times in F(5)
+	
 => 6 will occur 1 times in F(6)
+	
 From above observation, it can easily be observed that number i is occurring only in there multiples less than or equal to n
-Thus, we just need to find the count of multiples and then multiply it with i for full contribution in the final sum
-It can easily be done in O(1) time by taking floor of (n / i) and then multiply it with i for the sum
+Thus, we just need to find the count of multiples and then multiply it with i for full contribution in the final sum.
+It can easily be done in O(1) time by taking floor of (n / i) and then multiply it with i for the sum.
 
-*/
+```cpp
 int divisorSum(int n) 
 { 
     int sum = 0; 
@@ -146,3 +158,4 @@ int divisorSum(int n)
         sum += (n / i) * i; 
     return sum; 
 } 
+```
