@@ -57,7 +57,7 @@ logb b = 1, logb 1 = 0, logb 0 = -oo, log1 x = undefined
 
 ### + more 
 
-1/1 + 1/2 + 1/3 + 1/4 + 1/5 + ..... + 1/(n-1) + 1/n = log(n)  Harmonic Progression
+1/1 + 1/2 + 1/3 + 1/4 + 1/5 + ..... + 1/(n-1) + 1/n = log(n)  ```Harmonic Progression```
 
 1/2 + 1/3 + 1/5 + 1/7 + ..... + 1/p = log(log n) where p is largest prime less then n
 
