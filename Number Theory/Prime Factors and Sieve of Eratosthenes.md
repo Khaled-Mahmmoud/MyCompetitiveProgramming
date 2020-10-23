@@ -124,4 +124,3 @@ So `n/2 + n/3 + n/5 + n/7 + ...... p = nlog(logn)`
 - (2^61)-1 is a prime number with value 2305843009213693951
 - primesRangeCnt 10^i (4, 25, 168, 1229, 9592, 78498, 664579, 5761455) [e.g. 4 primes <= 10^1] ~= n / log(n)
 - 257, 263, 269, 271 -> 4 primes their multiplication > 2^32
-- **Wilson's theorem**: (p-1)!%p = p-1 IF p is prime
