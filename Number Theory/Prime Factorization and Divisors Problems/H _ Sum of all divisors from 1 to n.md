@@ -108,7 +108,7 @@ void solve()
 {
     for(int i=1;i<N;i++)
     for(int j=i;j<N;j+=i)
-    d[j]++;
+    d[j]+= i;
 }
 int main()
 {
