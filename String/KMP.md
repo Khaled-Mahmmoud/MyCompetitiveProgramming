@@ -70,4 +70,5 @@ int main()
     kmp(str,pat);
     return 0;
 }
+
 ```
