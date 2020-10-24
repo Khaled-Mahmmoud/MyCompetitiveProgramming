@@ -78,7 +78,7 @@ it = find(v.begin,v.end(),3)  // where v is vector
 Complexity : linear for sequence conainers and
 Logarithmic for associative and unordered_associative containers 
 
-How to find the pair in the set using first element of the pair only?
+### How to find the pair in the set using first element of the pair only?
 ```cpp
 set < pair<int,int> >st;
 st.insert(make_pair(1,2));
