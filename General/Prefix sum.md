@@ -28,6 +28,7 @@ Building one-dimensional prefix sum array and printing the prefix sum between tw
 ```
 Building [two-dimensional prefix sum](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/General/Two-dimensional%20array%20prefix_sum.jpg) array and printing the prefix sum between two indices for each query
 ```cpp
+
 int n,m;cin>>n>>m;
     vector<vector<int>>v(n,vector<int>(m));
     vector<vector<int>>prefix_sum(n+1,vector<int>(m+1));
