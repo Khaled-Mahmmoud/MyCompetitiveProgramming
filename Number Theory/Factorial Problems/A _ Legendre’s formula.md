@@ -32,6 +32,7 @@ int PowerOFPINnfactorial(int n, int p)
     } 
     return ans; 
 } 
+
 ```
 Time Complexity :O(log_p(n))
 
