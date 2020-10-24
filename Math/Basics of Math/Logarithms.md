@@ -63,6 +63,6 @@ logb b = 1, logb 1 = 0, logb 0 = -oo, log1 x = undefined
 
 Θ(log(n!)) = Θ(n·log(n))
 
-log(n!) = log(1) + log(2) + ... + log(n-1) + log(n)
+log(n!) = log(1) + log(2) + ... + log(n-1) + log(n) ==>> log(a * b) = log(a) + log(b)
 
 log(1) + log(2) + ... + log(n) <= log(n) + log(n) + ... + log(n) = n*log(n)
