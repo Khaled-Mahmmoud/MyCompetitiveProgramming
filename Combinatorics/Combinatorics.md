@@ -22,6 +22,17 @@ what if we need arrangement of r elements. Same way: n x (n-1) x (n-2) x .....x 
 
 `nPr = P(n,r) = n! / (n-r)!`
                  
+```cpp
+ll perm(ll n,ll r)
+{
+    if(r>n)
+        return 0;
+    ll ans = 1;
+    for(int i=n;i>=n-r+1;i++)
+        ans = (ans*i)%mod;
+    return ans;
+}
+```
 Ex. you forgot your password but you know it consists of 3 distinct letters of this set A={a,b,e,i,p} so number of ways = 5 * 4 * 3 is 5P3 = 5! / (5-3)!
 
 
