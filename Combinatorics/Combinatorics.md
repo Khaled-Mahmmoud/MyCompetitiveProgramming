@@ -28,7 +28,7 @@ ll perm(ll n,ll r)
     if(r>n)
         return 0;
     ll ans = 1;
-    for(int i=n;i>=n-r+1;i++)
+    for(int i=n;i>=n-r+1;i--)
         ans = (ans*i)%mod;
     return ans;
 }
