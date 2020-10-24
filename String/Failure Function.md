@@ -34,6 +34,7 @@ for example : aaaaa. then f[] = {0,1,2,3,4}
 Time Complexity O(m)
 
 ```cpp
+
 vector<int>getprefix(string pat)
 {
     int m=pat.size();
