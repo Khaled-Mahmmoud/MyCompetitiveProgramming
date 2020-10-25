@@ -160,7 +160,7 @@ what does this mean ? first 4 = last 4 , but in between is not like them
 
 Given string P , for each prefix , count its frequency
 
-Ex. aabbaaab ==>> 5 3 2 1 1 1 1
+Ex. aabbaaab ==>> 5 3 2 1 1 1 1 1
 
 ```cpp
 vector<int>getprefix(string pat)
@@ -190,7 +190,7 @@ int main()
         freq[prefix[i-1]]+=freq[i];
     freq.erase(freq.begin());
     for(int i=0;i<freq.size();i++)
-        cout<<freq[i]<<' ';
+        cout<<freq[i] + 1<<' ';
     return 0;
 }
 ```
