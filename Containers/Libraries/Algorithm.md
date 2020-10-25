@@ -7,6 +7,13 @@ if no such element , it's return iterator pointing to the end of the range. and 
 ```cpp
 auto it =lower_bound(first,last,val)   OR   auto it =lower_bound(first,last,val,pred)
 ```
+Notice this blew code, please!
+```cpp
+vector<pair<int,int>>v;
+pair<int,int> p = {fir,sec};
+lower_bound(v.begin(),v.end(),{fir,sec});  // Compiler erro
+lower_bound(v.begin(),v.end(),p);   // correct
+```
 Complexity : log2(N) where N is the distance between first and last.
 
 ### upper_bound 
@@ -22,7 +29,13 @@ if no such element , it's return iterator pointing to the end of the range. and 
     cout<<*in;                                  // 5
     auto it = upper_bound(first,last,val)   OR   auto it = upper_bound(first,last,val,pred)
 ```
-
+Notice this blew code, please!
+```cpp
+vector<pair<int,int>>v;
+pair<int,int> p = {fir,sec};
+upper_bound(v.begin(),v.end(),{fir,sec});  // Compiler erro
+upper_bound(v.begin(),v.end(),p);   // correct
+```
 Complexity : log2(N) where N is the distance between first and last
 
 ### binary_search 
@@ -30,6 +43,13 @@ Complexity : log2(N) where N is the distance between first and last
 Returns true if any element in the range [first,last] is equivalent to val, and false otherwise. and this range should be sorted.
 ```cpp
 binary_search(first,last,val)   OR  binary_search(first,last,val,pred)
+```
+Notice this blew code, please!
+```cpp
+vector<pair<int,int>>v;
+pair<int,int> p = {fir,sec};
+binary_search(v.begin(),v.end(),{fir,sec});  // Compiler erro
+binary_search(v.begin(),v.end(),p);   // correct
 ```
 Complexity :  the distance between first and last
 
