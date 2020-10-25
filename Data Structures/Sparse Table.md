@@ -41,6 +41,7 @@ for (int i = 1; (1 << i) <= n; i++)
         ST[i][j] = min(x, y);
     }
 }
+
 ```
 ## Sparse Table Query
 Now in order to calculate any **_Q(l, r)_** we are going to use the _duplicate-invariant_ property to get the answer in **_O(1)_** as follows:
