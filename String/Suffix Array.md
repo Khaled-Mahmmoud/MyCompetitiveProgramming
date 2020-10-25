@@ -69,6 +69,7 @@ available substrings or pattern search
 ### O(n^2 logn)
 
 ```cpp
+
 void buildSuffixArray(string str) 
 {
   map<string, int> suffix_array;
