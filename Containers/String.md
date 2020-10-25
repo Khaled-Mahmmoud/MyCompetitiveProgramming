@@ -220,6 +220,21 @@ Erases part of the string, reducing its length
 ```
 Complexity : linear in the new string length
 
+**find**
+
+Searches the string for the first occurrence of the sequence specified by its arguments.
+
+Return Value : 
+The position of the first character of the first match. If no matches were found, the function returns string::npos.
+```cpp
+string str = "khaledmahmoudmah",pat = "mah";
+
+if(str.find(pat)!=string::npos)
+     cout<<"found";
+else
+     cout<<"not found";
+```
+Complexity :  str.size() * pat.size()
 **operations**
 
  **substr**
