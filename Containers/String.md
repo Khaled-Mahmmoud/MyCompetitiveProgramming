@@ -2,7 +2,7 @@
 #include<string>
 string s = "ksimuye"
 ```
-**Iterators**
+### Iterators
 
 s.begin()    || O(1) || Returns an iterator pointing to the first element 
 
@@ -20,7 +20,7 @@ s.crbegin()  || O(1) || Returns a const_reverse_iterator pointing to the last el
 
 s.crend()    || O(1) || Returns a const_reverse_iterator pointing to the first element 
 
-**Element Access**
+### Element Access
 
 s.front()    || O(1) || Returns a reference pointing to the first element 
 
@@ -30,7 +30,7 @@ s.at(pos)    || O(1) || Returns a reference to the element at position pos (O-In
 
 operator[pos]|| O(1) || Returns a reference to the element at position pos (O-Indexed)
 
-**Capacity**
+### Capacity
 
 s.size()     || O(1) || Return length of string
 
@@ -50,7 +50,7 @@ s.resize(n)  ||  Change size of string to n size
    Complexity : linear in the new string length 
 }
 
-**Modifiers**
+### Modifiers
 
 **assign**
 
@@ -235,7 +235,8 @@ else
      cout<<"not found";
 ```
 Complexity :  str.size() * pat.size()
-**operations**
+
+### operations
 
  **substr**
  ```cpp
