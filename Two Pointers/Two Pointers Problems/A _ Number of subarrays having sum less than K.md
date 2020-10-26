@@ -45,7 +45,7 @@ int countSubarrays(int arr[],int n, int k)
 }
 ```
 
-### Smallest subarray with sum equal or greater than a given value
+# Smallest subarray with sum equal or greater than a given value
 
 Given an array of integers and a number x, find the smallest subarray with sum equal or greater than the given value.
 
