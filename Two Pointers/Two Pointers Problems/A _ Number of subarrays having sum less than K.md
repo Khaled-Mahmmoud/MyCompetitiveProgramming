@@ -18,9 +18,6 @@ A **simple solution** is to generate all subarrays of the array and then count t
 Time complexity : O(n^2)
 
 **Efficient solution**
-
-Time complexity : O(n)
-
 ```cpp
 int countSubarrays(int arr[],int n, int k)
 {
@@ -44,6 +41,8 @@ int countSubarrays(int arr[],int n, int k)
     return count;
 }
 ```
+Time complexity : O(n)
+
 
 # Smallest subarray with sum equal or greater than a given value
 
@@ -96,4 +95,5 @@ int main()
     return 0;
 }
 ```
+Time complexity : O(n)
 
