@@ -17,8 +17,7 @@ Solution :
 If yes, then one by one subtract a prime from N and then check if the difference is also a prime
 if yes then express it as a sum
 
-*/
-
+```cpp
 const int MAX = 10000; 
 vector <int> primes;
 void sieveEratosthenes() 
@@ -50,7 +49,7 @@ void findPrimes(int n)
         } 
     } 
 } 
-/*
+```
 
 # Express an odd number as sum of prime numbers
 
