@@ -1,19 +1,43 @@
 # Number of subarrays having sum exactly equal to k
 
-Given an array of integers, find the number of subarrays having sum exactly equal to a given number k.
+Given an unsorted array of nonnegative integers, find a continuous subarray which adds to a given number.
+
+Input: arr[] = {1, 4, 20, 3, 10, 5}, sum = 33
+
+Ouptut: Sum found between indexes 2 and 4, Sum of elements between indices 2 and 4 is 20 + 3 + 10 = 33
+```cpp
+int countSubarrays(int arr[],int n, int k)
+{
+    int start = 0, end = 0, count = 0, sum = arr[0];
+    while (start < n && end < n)
+    {
+        if (sum < k)
+        {
+            end++;
+            if (end < n)
+                sum += arr[end];
+        }
+        else
+        {
+            if (sum == k && end >= start)
+                count += end - start;
+            sum -= arr[start];
+            start++;
+        }
+    }
+    return count;
+}
+```
+Time Complexity : O(n)
+
+
+Given an unsorted array of integers, find a continuous subarray which adds to a given number.
 
 Input : arr[] = {10, 2, -2, -20, 10}, k = -10, Output : 3
 
 Subarrays: arr[0...3], arr[1...4], arr[3..4] have sum exactly equal to -10.
 
 Input : arr[] = {9, 4, 20, 3, 10, 5},k = 33, Output : 2, Subarrays : arr[0...2], arr[2...4] have sum exactly equal to 33.
-
-**Naive Solution** : 
-A simple solution is to traverse all the subarrays and calculate their sum. If the sum is equal to the required sum then increment the count of subarrays. 
-
-Complexity : O(n^2)
-
-**Efficient Solution** 
 
 ```cpp
 int findSubarraySum(int arr[], int n, int sum)
@@ -35,9 +59,6 @@ int findSubarraySum(int arr[], int n, int sum)
 ```
 
 Time Complexity: O(nlogn) 
-
-Auxiliary Space: O(n)
-
 
 ### Count of subarrays having exactly K prime numbers
 
