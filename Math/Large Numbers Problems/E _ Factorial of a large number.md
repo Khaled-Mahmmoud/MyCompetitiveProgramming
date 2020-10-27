@@ -6,8 +6,8 @@ Given an integer, the task is to find factorial of the number
 	
 1 ≤ N ≤ 1000
 
+**First Solution**
 
-_**First Solution**_
 ```cpp
 vector<string>v(1009);
 string multiply(string str1, string str2) 
