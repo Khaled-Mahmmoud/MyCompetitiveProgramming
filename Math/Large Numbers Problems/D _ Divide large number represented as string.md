@@ -15,7 +15,7 @@ string longDivision(string number, int divisor)
     int temp = number[idx] - '0'; 
     while (temp < divisor) 
        temp = temp * 10 + (number[++idx] - '0'); 
-    while (number.size() > idx) 
+    while(idx < number.size()) 
     { 
         ans += (temp / divisor) + '0'; 
         temp = (temp % divisor) * 10 + number[++idx] - '0'; 
