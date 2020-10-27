@@ -30,6 +30,7 @@ We can also use the below formula to find nth catalan number in O(n) time
 We have discussed a O(n) approach to find binomial coefficient nCr
 
 ```cpp
+
 int binomialCoeff(int n,int r)
 {
     if (n < r)
