@@ -1,25 +1,24 @@
-/*
-Smallest number to multiply to convert floating point to natural
+# Smallest number to multiply to convert floating point to natural
+
 Given a positive floating point number n, the task is to find the smallest integer k
 such that when we multiply k with n, we get a natural number.
+    
 Input : 30.25
-Output : 4
-30.25 * 4 = 321, there is no number less than 4
-which can convert 30.25 into natural number.
+    
+Output : 4, 30.25 * 4 = 321, there is no number less than 4, which can convert 30.25 into natural number.
+    
 Input : 5.5
-Output : 2
-5.5 * 2 = 11, there is no number less than 2
-which can convert 5.5 into natural number.
-Input : 5.33
-Output : 100
+    
+Output : 2, 5.5 * 2 = 11, there is no number less than 2, which can convert 5.5 into natural number.
+
 The idea is to convert given floating point number into a fraction (not necessarily in reduced form) 
 and find the GCD of numerator and denominator. For example, if input floating point number is 30.25
 we convert into fraction as 3025/100. This can be easily done by finding the position of dot.
+    
 Finally to get the answer, we divide the denominator of the converted fraction by GCD of denominator and numerator
+
 For example, GCD of 3025 and 100 is 25. We divide 100 by 25 and get the answer as 4.
-*/
-
-
+```cpp
 int findnum(string &str) 
 { 
     int n = str.length(); 
@@ -48,3 +47,4 @@ int main()
     cout << findnum(str) << endl; 
     return 0; 
 }
+```
