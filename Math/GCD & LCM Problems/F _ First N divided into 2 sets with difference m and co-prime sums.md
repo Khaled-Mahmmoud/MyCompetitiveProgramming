@@ -43,8 +43,6 @@ bool isSplittable(int n, int m)
      /*
          total_sum = sum_s1 + sum_s2 
          m = sum_s1 - sum_s2 
-         sum_s1 = m + sum_s2
-         sum_s1 = m + (total_sum - sum_s1)
          2 * sum_s1 = m + total_sum
     */
     int sum_s1 = (total_sum + m) / 2;
