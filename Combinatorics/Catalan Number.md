@@ -61,7 +61,7 @@ int main()
 For n = 3, possible expressions are ((())), ()(()), ()()(), (())(), (()())
 
 3) Number of possible Binary Search Trees with n keys.
-```cpp
+```
 For n  = 1, there is only one tree
 
    1
