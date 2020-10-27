@@ -1,6 +1,8 @@
 # Maximum LCM of three <= n
 
 the maximum possible LCM of three not necessarily distinct positive integers that are not greater than n.
+
+n <= 10^6
     
 ```cpp
 #include <bits/stdc++.h>
