@@ -111,15 +111,14 @@ o      o            o     o
 ```
 7) Number of full binary trees with n+2 leaves or 2n+2 vertices. (root has one degree)
 ```
-         o          o
-         |          |
-         o          o
-       /   \      /   \
-      o     o    o     o
-    /   \      /   \
-   o     o    o     o
- /   \            /   \
-o     o          o     o
+           n = 2
+      o             o
+      |             |
+      o             o           
+    /   \         /   \     
+   o      o      o     o     
+ /   \               /   \        
+o      o            o     o   
 ```
 
 7) **Enumeration of Binary Trees**
