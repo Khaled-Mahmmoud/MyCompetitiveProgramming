@@ -31,6 +31,7 @@ int power(int x, unsigned int y)
     else
         return temp*temp;
 } 
+
 ```
 Time Complexity of optimized solution: O(log y)
 The recursive solutions are generally not preferred as they require space on
