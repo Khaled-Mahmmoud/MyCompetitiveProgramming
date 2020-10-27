@@ -27,7 +27,8 @@ Complexity : O(n^2)
 
 We can also use the below formula to find nth catalan number in O(n) time
 `catalan(n) = nCr(2n,n) / (n+1)`
-We have discussed a O(n) approach to find binomial coefficient nCr
+
+We have discussed a O(r) approach to find binomial coefficient nCr
 
 ```cpp
 
