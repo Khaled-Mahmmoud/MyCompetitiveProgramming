@@ -1,4 +1,4 @@
-# Combinations
+# nCr
 
 Program to calculate value of nCr.
     
