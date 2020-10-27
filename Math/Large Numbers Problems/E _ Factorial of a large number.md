@@ -52,18 +52,15 @@ string multiply(string str1, string str2)
   
     return str; 
 } 
-void f()
+void init()
 {
-    string res = "1";
+    v[0] = "1";
     for(int i=1;i<=1000;i++)
-    {
-        res = multiply(res,to_string(i));
-        v[i] = res;
-    }
+        v[i] = multiply(v[i-1],to_string(i));
 }
 int main()
 {
-    f();
+    init();
     int t;cin>>t;while(t--)
     {
         int n;cin>>n;
@@ -72,7 +69,7 @@ int main()
 	return 0;
 }
 ```
-_**Second Solution**_
+**Second Solution**
 ```cpp
 vector<string>v(1009);
 int multiply(int x, int res[], int res_size) 
@@ -91,7 +88,7 @@ int multiply(int x, int res[], int res_size)
     } 
     return res_size; 
 } 
-void f() 
+void init() 
 { 
     int res[3000];  // size of factorial(1000) equals 2568
 
@@ -107,7 +104,7 @@ void f()
 } 
 int main()
 {
-    f();
+    init();
     int t;cin>>t;while(t--)
     {
         int n;cin>>n;
@@ -116,4 +113,4 @@ int main()
 	return 0;
 }
 ```
-Time Complexity of first Solution = 2 * Time Complexity of second Solution
+better solution is of second Solution because Time Complexity of second solution is the least.
