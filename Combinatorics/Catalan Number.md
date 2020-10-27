@@ -157,3 +157,5 @@ Consider a circle with 4 points
 In [diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Math/noncrossing_partitions%20catalan_number.png), there are two non-crossing ways to connect{{1, 2}, {3, 4}} and {{1, 3}, {2, 4}}.Note that {{2, 3}, {1, 4}} is invalid as it would cause a cross
 
 10) Number of Dyck words of length 2n. A Dyck word is a string consisting of n X’s and n Y’s such that no prefix segment of the string has more Y’s than X’s.  For example, the following are the Dyck words of length 6: XXXYYY     XYXXYY     XYXYXY     XXYYXY     XXYXYY.
+
+11) Number of ways to tile a stairstep shape of height n with n rectangles. [See](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Combinatorics/800px-Catalan_stairsteps_4.svg.png) the case n = 4.
