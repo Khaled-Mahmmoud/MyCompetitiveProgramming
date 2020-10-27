@@ -60,10 +60,7 @@ int main()
 2) Number of expressions containing n pairs of parentheses which are correctly matched
 For n = 3, possible expressions are ((())), ()(()), ()()(), (())(), (()())
 
-3) Number of possible Binary Search Trees with n keys 
-(countBST(n)) = Catalan number Cn = (2n)! / ((n + 1)! * n!)
-[see this](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Math/BSTcatalan_number.png)
-Total number of possible Binary Trees with n different keys (countBT(n)) = countBST(n) * n!
+3) Number of possible Binary Search Trees with n keys, [See](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Math/BSTcatalan_number.png).
 
 4) Given a [convex polygon](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Math/convex-concave.jpg) with n+2 sides . The task is to calculate the number of ways in which triangles can be formed by connecting vertices with non-crossing line segments
 for n = 1, It is already a triangle so it can only be formed in 1 way.
