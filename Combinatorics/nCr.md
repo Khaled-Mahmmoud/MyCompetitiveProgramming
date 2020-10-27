@@ -32,17 +32,20 @@ int nCr(int n, int r)
 
 # binomial coefficient
 
-A binomial coefficient C(n, r) also gives the number of ways, disregarding order
-that r objects can be chosen from among n objects; more formally,
-the number of r-element subsets (or r-combinations) of an n-element set.
-
 The Problem : Write a function that takes two parameters n and r and returns the value of Binomial Coefficient C(n, r)
     
-For example, your function should return 6 for n = 4 and r = 2, and it should return 10 for n = 5 and r = 2.
-
+**Pascal Triangle**
+```
+1  
+1 1 
+1 2 1 
+1 3 3 1 
+1 4 6 4 1 
+1 5 10 10 5 1 
+```
 **Optimal Substructure**
 
-The value of C(n, r) can be recursively calculated using following standard formula for Binomial Coefficients.
+The value of C(n, r) can be recursively calculated using pascal triangle.
 
 ```
    C(n, r) = C(n-1, r-1) + C(n-1, r)
