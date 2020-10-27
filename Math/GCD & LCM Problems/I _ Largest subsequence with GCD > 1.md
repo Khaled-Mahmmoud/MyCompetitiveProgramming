@@ -1,16 +1,17 @@
-/*
-Largest subsequence having GCD greater than 1
+# Largest subsequence having GCD greater than 1
+
 Given an array arr[], find the largest subsequence such that GCD of all those subsequence are greater than 1.
-Examples:
+    
 Input: 3, 6, 2, 5, 4
+    
 Output: 3
-Explanation: There are only three elements(6, 2, 4) having GCD greater than 1
-i.e., 2. So the largest subsequence will be 3
+    
+Explanation: There are only three elements(6, 2, 4) having GCD greater than 1.
+        
 Solution :
 If we observe then we will found that to make gcd greater than 1
 all such elements must contain common prime factor greater than 1 which evenly divides all these values
-*/
-
+```cpp
 #define MAX 100001 
 int prime[MAX], countdiv[MAX]; 
 void SieveOfEratosthenes() 
@@ -54,3 +55,4 @@ int main()
     
     return 0; 
 } 
+```
