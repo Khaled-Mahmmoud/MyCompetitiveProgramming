@@ -55,8 +55,7 @@ int main()
 ```
 # Applications of Catalan Numbers
 
-1) Number of paths on a rectangular grid from bottom left to top right
-i.e., (n-1, 0) to (0, n-1) that lies above the main diagonal
+1) The number of paths with 2n steps on a rectangular grid from bottom left, i.e., (n-1, 0) to top right (0, n-1) that do not cross above the main diagonal, [See](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Combinatorics/rectangle1copy.jpg).
 
 2) Number of expressions containing n pairs of parentheses which are correctly matched
 For n = 3, possible expressions are ((())), ()(()), ()()(), (())(), (()())
