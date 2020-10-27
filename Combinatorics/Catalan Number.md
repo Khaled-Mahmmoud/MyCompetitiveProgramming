@@ -89,7 +89,7 @@ for n = 2, It can be cut into 2 triangles by using either pair of opposite verti
 for n = 3,Valid permutations : 132, 213, 231, 312 and 321 and not 123
 for n =4 Valid permutations : 1432, 2143, 2413, 2431, 3142, 3214, 3241, 3412, 3421, 4132, 4213, 4231, 4312 and 4321
 
-6) Number of full binary trees with n+1 leaves or 2n+1 vertices.
+6) Number of full binary trees with n+1 leaves or 2n+1 vertices. (root has two degree)
 ```
 For n  = 0, there is only one tree
 
@@ -109,6 +109,19 @@ For n  = 2, there are five trees
  /   \               /   \        
 o      o            o     o      
 ```
+7) Number of full binary trees with n+2 leaves or 2n+2 vertices. (root has one degree)
+```
+         o          o
+         |          |
+         o          o
+       /   \      /   \
+      o     o    o     o
+    /   \      /   \
+   o     o    o     o
+ /   \            /   \
+o     o          o     o
+```
+
 7) **Enumeration of Binary Trees**
 
 A Binary Tree is labeled if every node is assigned a label and a Binary Tree is unlabeled if nodes are not assigned any label.
