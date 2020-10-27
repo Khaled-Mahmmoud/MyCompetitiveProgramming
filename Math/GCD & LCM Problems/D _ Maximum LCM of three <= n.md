@@ -1,7 +1,8 @@
-/*
-the maximum possible LCM of three not necessarily distinct positive integers that are not greater than n
-codeforces problem link : https://codeforces.com/contest/235/problem/A
-*/
+# Maximum LCM of three <= n
+
+the maximum possible LCM of three not necessarily distinct positive integers that are not greater than n.
+    
+```cpp
 #include <bits/stdc++.h>
 #define ll long long
 #define N  1000000
@@ -9,8 +10,6 @@ using namespace std;
 vector<int>d(N);
 int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(0);cout.tie(0);
     ll n;cin>>n;
     if(n<3)cout<<n;
     else if(n%2)cout<<n*(n-1)*(n-2);
@@ -18,3 +17,4 @@ int main()
     else cout<<n*(n-1)*(n-3);
     return 0;
 }
+```
