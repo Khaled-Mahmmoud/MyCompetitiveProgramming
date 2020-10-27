@@ -1,20 +1,22 @@
-/*
-Given two numbers as strings. The numbers may be very large (may not fit in long long int)
-the task is to find sum of these two numbers
-Input  : str1 = "3333311111111111", 
-         str2 =   "44422222221111"
-Output : 3377733333332222
-Input  : str1 = "7777555511111111", 
-         str2 =    "3332222221111"
-Output : 7780887733332222
+# Sum of two large numbers
+
+Given two numbers as strings. The numbers may be very large (may not fit in long long int), the task is to find sum of these two numbers.
+         
+Input  : str1 = "3333311111111111", str2 =   "44422222221111".
+         
+Output : 3377733333332222.
+         
+Input  : str1 = "7777555511111111", str2 =    "3332222221111".
+         
+Output : 7780887733332222.
+         
 The idea is based on school mathematics. We traverse both strings from end, one by one add digits and keep track of carry
 To simplify the process, we do following:
 1) Reverse both strings.
 2) Keep adding digits one by one from 0’th index (in reversed strings) to end of smaller string
 append the sum % 10 to end of result and keep track of carry as sum/10
 3) Finally reverse the result.
-*/
-
+```cpp
 string findSum(string str1, string str2) 
 { 
     int n1 = str1.length();
@@ -54,5 +56,5 @@ int main()
     cout << findSum(str1, str2); 
     return 0; 
 } 
-
-// Time Complexity : O(n1 + n2) where n1 and n2 are lengths of two input strings representing numbers
+```
+Time Complexity : O(n1 + n2) where n1 and n2 are lengths of two input strings representing numbers
