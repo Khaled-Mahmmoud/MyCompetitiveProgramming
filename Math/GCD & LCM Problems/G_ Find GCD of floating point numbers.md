@@ -36,7 +36,7 @@ double gcd(double a, double b)
         return a; 
   
     else
-        return (gcd(b, a - floor(a / b) * b)); 
+        return (gcd(b, a - double(a / b) * b)); 
 } 
 int main() 
 { 
