@@ -21,6 +21,8 @@ Then we have n * n-1 * n-2 ... 1 ways =	p(n) = n!
 what if we need arrangement of r elements. Same way: n x (n-1) x (n-2) x .....x (n- r + 1)
 
 `nPr = P(n,r) = n! / (n-r)!`
+
+`nPr(circle) = nPr/r`
                  
 ```cpp
 ll perm(ll n,ll r)
