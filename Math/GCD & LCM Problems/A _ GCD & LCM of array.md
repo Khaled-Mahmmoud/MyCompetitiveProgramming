@@ -8,11 +8,9 @@ Output : 2
   
 The GCD of three or more numbers equals the product of the prime factors common to all the numbers
 but it can also be calculated by repeatedly taking the GCDs of pairs of numbers.
-````
-gcd(a, b, c) = gcd(a, gcd(b, c)) 
-             = gcd(gcd(a, b), c) 
-             = gcd(gcd(a, c), b)
-```
+
+gcd(a, b, c) = gcd(a, gcd(b, c))  = gcd(gcd(a, b), c) = gcd(gcd(a, c), b)
+
 ```cpp
 int gcd(int a,int b)
 {
