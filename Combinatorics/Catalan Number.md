@@ -60,7 +60,26 @@ int main()
 2) Number of expressions containing n pairs of parentheses which are correctly matched
 For n = 3, possible expressions are ((())), ()(()), ()()(), (())(), (()())
 
-3) Number of possible Binary Search Trees with n keys, [See](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Math/BSTcatalan_number.png).
+3) Number of possible Binary Search Trees with n keys.
+```cpp
+For n  = 1, there is only one tree
+
+   1
+
+For n  = 2, there are two trees
+
+   2      1
+  /        \  
+ 1          2
+
+For n  = 3, there are five trees
+
+    3      1           2          3      1
+   /        \         /  \       /        \
+  2          2       1    3     1          3
+ /            \                  \        /
+1              3                  2      2
+```
 
 4) Given a [convex polygon](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Math/convex-concave.jpg) with n+2 sides . The task is to calculate the number of ways in which triangles can be formed by connecting vertices with non-crossing line segments
 for n = 1, It is already a triangle so it can only be formed in 1 way.
@@ -71,12 +90,62 @@ for n = 3,Valid permutations : 132, 213, 231, 312 and 321 and not 123
 for n =4 Valid permutations : 1432, 2143, 2413, 2431, 3142, 3214, 3241, 3412, 3421, 4132, 4213, 4231, 4312 and 4321
 
 6) Number of full binary trees with n+1 leaves
-[See this](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Math/full_binary_tree%20catalan_number.png)
-            
-7) Enumeration of Binary Trees
-A Binary Tree is labeled if every node is assigned a label and a Binary Tree is unlabeled if nodes are not assigned any label
-[See this](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Math/Enumeration_binary_tree%20catalan%20number.png)
-Number of Labeled Tees = (Number of unlabeled trees) * n!= [(2n)! / (n+1)!n!]  × n!
+```
+For n  = 1, there is only one tree
+
+   o
+
+For n  = 2, there are two trees
+
+    o   
+  /   \  
+ o     o
+
+For n  = 3, there are five trees
+
+      o             o           
+    /   \         /   \     
+   o      o      o     o     
+ /   \               /   \        
+o      o            o     o      
+```
+7) **Enumeration of Binary Trees**
+
+A Binary Tree is labeled if every node is assigned a label and a Binary Tree is unlabeled if nodes are not assigned any label.
+```
+Below two are considered same unlabeled trees
+
+    o                 o
+  /   \             /   \ 
+ o     o           o     o 
+
+Below two are considered different labeled trees
+
+    A                C
+  /   \             /  \ 
+ B     C           A    B 
+ 
+How many different Unlabeled Binary Trees can be there with n nodes?
+
+For n  = 1, there is only one tree
+
+   o
+
+For n  = 2, there are two trees
+
+   o      o
+  /        \  
+ o          o
+
+For n  = 3, there are five trees
+
+    o      o           o         o      o
+   /        \         /  \      /         \
+  o          o       o    o     o          o
+ /            \                  \        /
+o              o                  o      o
+```
+Number of Labeled Tees = (Number of unlabeled trees) * n! = [(2n)! / (n+1)!n!]  × n!
                        
 8) Number of ways to insert n pairs of parentheses in a word of n+1 letters
 e.g., for n=2 there are 2 ways: ((ab)c) or (a(bc))
