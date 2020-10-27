@@ -43,10 +43,6 @@ void printSum(int num1, int den1, int num2, int den2)
     int lcd = lcm(den1, den2); 
     num1 *= (lcd / den1);  
     num2 *= (lcd / den2);  
- // OR
-    int g = gcd(den1,den2);
-    num1 *= (den2 / g);
-    num2 *= (den1 / g);
  
     int res_num = num1 + num2; 
     cout << res_num << "/" << lcd; 
