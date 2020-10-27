@@ -95,7 +95,6 @@ int gcdOfDemoninators(vector<pair<int, int> > vect)
 } 
 void lcmOfRationals(vector<pair<int, int> > vect) 
 { 
-    cout << lcmOfNumerator(vect) << "/" << gcdOfDemoninators(vect); 
     int Numerator = lcmOfDemoninators(vect);
     int Demoninator = gcdOfNumerator(vect)
     int g = __gcd(Numerator,Demoninator);
