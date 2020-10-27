@@ -30,7 +30,7 @@ int nCr(int n, int r)
 } 
 ```
 
-# binomial coefficient
+# Binomial Coefficient
 
 The Problem : Write a function that takes two parameters n and r and returns the value of Binomial Coefficient C(n, r)
     
