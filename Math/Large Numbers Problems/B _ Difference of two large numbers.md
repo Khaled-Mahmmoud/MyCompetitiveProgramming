@@ -1,15 +1,12 @@
-/*
-Difference of two large numbers
+# Difference of two large numbers
+
 Given two numbers as strings. The numbers may be very large (may not fit in long long int)
 the task is to find difference of these two numbers.
 
-Input : str1 = "11443333311111111100", 
-        str2 =     "1144422222221111"
+Input : str1 = "11443333311111111100", str2 =  "1144422222221111"
+        
 Output : 11442188888888889989
 
-Input :str1 = "122387876566565674",
-       str2 =     "31435454654554"
-Output : 122356441111911120
 
 This is simple based on school mathematics. We traverse both strings from end, one by one subtract digits.
 1) Reverse both strings.
@@ -17,9 +14,8 @@ This is simple based on school mathematics. We traverse both strings from end, o
 append the diff if it’s positive to end of result. If difference(diff) is negative then add 10 
 and keep track of carry as 1 if it’s positive then carry is 0.
 3) Finally reverse the result.
-*/
-
-bool smaller(string str1,string str2)
+```cpp
+bool islarger(string str1,string str2)
 {
     int n1=str1.length();
     int n2=str2.length();
@@ -52,12 +48,12 @@ bool smaller(string str1,string str2)
 }
 string findDiff(string str1,string str2)
 {
+    if(islarger(str1,str2))
+        swap(str1,str2);
+        
     int n1=str1.length();
     int n2=str2.length();
     
-    if(smaller(str1,str2))
-        swap(str1,str2);
-        
     string str;
     int carry = 0;
     
@@ -92,4 +88,5 @@ string findDiff(string str1,string str2)
     return str;
 
 }
-// Time complexity : O(n1 + n2)
+```
+Time complexity : O(n1 + n2)
