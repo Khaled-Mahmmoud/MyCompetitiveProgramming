@@ -1,24 +1,23 @@
-/*
-Check if elements of array can be made equal by multiplying given prime numbers
-Given an array of integers and an array of prime numbers
-The task is to find if it is possible to make all the elements of integer array equal
+# Check if elements of array can be made equal by multiplying given prime numbers
+
+Given an array of integers and an array of prime numbers. The task is to find if it is possible to make all the elements of integer array equal
 by multiplying one or more elements from prime given array of prime numbers.
-Input : arr[]   = {50, 200} 
-        prime[] = {2, 3}
+        
+Input : arr[]   = {50, 200} , prime[] = {2, 3}
+
 Output : Yes
-We can multiply 50 with 2 two times
-to make both elements of arr[] equal
-Input : arr[]   = {3, 4, 5, 6, 2} 
-        prime[] = {2, 3}
-Output : No
-Solution
-We find LCM of all array elements
-All elements can be made equal only if it is possible to convert all numbers to LCM
+
+We can multiply 50 with 2 two timesto make both elements of arr[] equal
+
+**Solution**
+We find LCM of all array elements.
+        
+All elements can be made equal only if it is possible to convert all numbers to LCM.
+        
 So we find the multiplier for each element so that we can make that element equal to LCM by multiplying that number
-After that we find if numbers from given primes can form given multiplier
-*/
-
-
+After that we find if numbers from given primes can form given multiplier.
+        
+```cpp
 int lcmOfArray(int arr[], int n) 
 { 
     int ans = arr[0]; 
@@ -52,5 +51,5 @@ int main()
     checkArray(arr, prime, n, m)? cout << "Yes" : cout << "No"; 
     return 0; 
 } 
-
-// Complexity : O( N M log(max(a[i])) )
+```
+Complexity : O( N log(max(a[i])))
