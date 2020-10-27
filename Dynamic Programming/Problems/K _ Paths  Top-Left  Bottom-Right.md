@@ -125,7 +125,7 @@ int main()
 ```
 Time Complexity : O(n^2)
 
-// count number of paths in matrix n * m go to right or down only
+Count number of paths in matrix n * m go to right or down only
 ```cpp
 ull countNumberOfPaths(int n, int m) 
 {
