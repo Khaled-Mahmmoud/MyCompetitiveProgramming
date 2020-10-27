@@ -91,17 +91,17 @@ for n =4 Valid permutations : 1432, 2143, 2413, 2431, 3142, 3214, 3241, 3412, 34
 
 6) Number of full binary trees with n+1 leaves
 ```
-For n  = 1, there is only one tree
+For n  = 0, there is only one tree
 
    o
 
-For n  = 2, there are two trees
+For n  = 1, there are two trees
 
     o   
   /   \  
  o     o
 
-For n  = 3, there are five trees
+For n  = 2, there are five trees
 
       o             o           
     /   \         /   \     
