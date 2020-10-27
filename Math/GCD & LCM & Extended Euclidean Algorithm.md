@@ -255,4 +255,20 @@ Since x is the modular multiplicative inverse of “a modulo b”, and y is the 
 
 In particular, the computation of the modular multiplicative inverse is an essential step in RSA public-key encryption method.
 
-[Extended Euclidean and Bézout's identity](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Math/Extended_Euclidean_Bezout's%20_identity.pdf)
+### Bézout's identity
+
+Assume a > 0 and b > 0
+
+ax + by = gcd(a, b)	=> we know that
+
+Can we generate further solutions?
+
+Is following valid:
+
+- a(x+b) + b(y-a) = g, Yes, we added ab - ab, so same equation
+
+- a(x+b/g) + b(y-a/g) = g
+
+- a(x+kb/g) + b(y-ka/g) = g
+
+With easy math, we can generate!
