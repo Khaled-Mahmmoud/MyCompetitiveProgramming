@@ -20,7 +20,7 @@ int countSubarrays(int arr[],int n, int k)
         else
         {
             if (sum == k && end >= start)
-                count += end - start;
+                count++;
             sum -= arr[start];
             start++;
         }
