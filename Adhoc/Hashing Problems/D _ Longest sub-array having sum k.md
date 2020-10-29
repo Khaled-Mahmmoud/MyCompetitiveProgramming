@@ -13,20 +13,20 @@ Output : 5
 ```cpp
 int lenOfLongSubarr(int arr[],int n,int k) 
 { 
-    unordered_map<int, int> m; 
-    int sum = 0, maxLen = 0; 
+    unordered_map<ll, int> m; 
+    ll sum = 0;int len = 0; 
     for (int i = 0; i < n; i++)
     { 
         sum += arr[i]; 
         if (sum == k) 
-            maxLen = i + 1; 
+            len = i + 1; 
         if (m.find(sum) == m.end()) 
             m[sum] = i; 
         if (m.find(sum - k) != m.end())  
-            if (maxLen < (i - m[sum - k])) 
-                maxLen = i - m[sum - k]; 
+            if (len < (i - m[sum - k])) 
+                len = i - m[sum - k]; 
     } 
-    return maxLen;
+    return len;
 } 
 ```
 Time Complexity: O(n)
