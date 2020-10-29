@@ -29,3 +29,4 @@ int lenOfLongSubarr(int arr[],int n,int k)
     return maxLen;
 } 
 ```
+Time Complexity: O(n)
