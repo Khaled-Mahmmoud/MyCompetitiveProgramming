@@ -50,7 +50,7 @@ int findSubarraySum(int arr[], int n, int sum)
         cur += arr[i];
         if (cur == sum)
             res++;
-       // if (m.find(cur - sum) != m.end())
+        if (m.find(cur - sum) != m.end())
             res += (m[cur - sum]);
         m[cur]++;
     }
