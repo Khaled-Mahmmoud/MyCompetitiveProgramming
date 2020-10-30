@@ -136,3 +136,35 @@ int findSubarraySum(int arr[], int n, int sum=0)
     return res;
 }
 ```
+
+### Count subarrays with same even and odd elements
+
+Given an array of N integers, count number of even-odd subarrays. An even – odd subarray is a subarray that contains the same number of even as well as odd integers.
+
+Input : arr[] = {2, 5, 7, 8} 
+
+Output : 3
+
+Explanation : There are total 3 even-odd subarrays. {2, 5}, {7, 8}, {2, 5, 7, 8}
+
+```cpp
+int findSubarraySum(int arr[], int n, int sum=0)
+{
+    unordered_map<int, int>m;
+    int res = 0;
+    int cur = 0;
+    for(int i=0;i<n;i++)
+    if(arr[i]&1)arr[i] = -1;
+    else arr[i] = 1;
+    for (int i = 0; i < n; i++) 
+    {
+        cur += arr[i];
+        if (cur == sum)
+            res++;
+        if (m.find(cur - sum)!= m.end())
+            res += (m[cur - sum]);
+        m[cur]++;
+    }
+    return res;
+}
+```
