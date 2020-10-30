@@ -11,22 +11,26 @@ Input : arr[] = {-5, 8, -14, 2, 4, 12}, k = -5
 Output : 5
 
 ```cpp
-int lenOfLongSubarr(int arr[],int n,int k) 
-{ 
-    unordered_map<ll, int> m; 
-    ll sum = 0;int len = 0; 
+int lenOfLongSubarr(int arr[],int n,int k)
+{
+    unordered_map<ll, int> m;
+    ll sum = 0;int len = 0,index = -1;
     for (int i = 0; i < n; i++)
-    { 
-        sum += arr[i]; 
-        if (sum == k) 
-            len = i + 1; 
-        if (m.find(sum) == m.end()) 
-            m[sum] = i; 
-        if (m.find(sum - k) != m.end())  
-            if (len < (i - m[sum - k])) 
-                len = i - m[sum - k]; 
-    } 
+    {
+        sum += arr[i];
+        if (sum == k)
+        {
+            len = i + 1;
+            index = i;
+        }
+        if (m.find(sum) == m.end())
+            m[sum] = i;
+        if (m.find(sum - k) != m.end())
+            if (len < (i - m[sum - k]))
+                len = i - m[sum - k],index = i;
+    }
+    cout<<index-len+1<<' '<<index;
     return len;
-} 
+}
 ```
 Time Complexity: O(n)
