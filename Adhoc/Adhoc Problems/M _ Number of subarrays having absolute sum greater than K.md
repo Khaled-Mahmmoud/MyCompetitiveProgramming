@@ -9,6 +9,7 @@ Output : 4
 All possible sub-arrays and there total sum: {-1} = -1, {0} = 0, {1} = 1, {-1, 0} = -1, {0, 1} = 1, {-1, 0, 1} = 0 
 
 ```cpp
+
 int findCnt(int arr[], int n, int k) 
 { 
     int ans = 0; 
