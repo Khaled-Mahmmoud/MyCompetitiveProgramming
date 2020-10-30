@@ -13,6 +13,8 @@ Therefore, the required output is 3.
 int cntSubXor(int arr[], int N)
 {
     int prefixXor = 0, Even[M], Odd[M], cntSub = 0;
+    memset(Even,0,sizeof Even);
+    memset(Odd,0,sizeof Odd);
     Odd[0] = 1;
     for (int i = 0; i < N; i++) 
     {
