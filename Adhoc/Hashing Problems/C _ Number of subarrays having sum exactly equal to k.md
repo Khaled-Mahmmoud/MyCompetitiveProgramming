@@ -106,3 +106,33 @@ If the current element is Perfect Square then change the value of array at that 
 Now the given array is converted into Binary Array.
 
 Now, Find the count of subarray with sum equals to K in the above Binary Array using the approach discussed in this article.
+
+### Count subarrays with equal number of 1’s and 0’s
+
+Given an array arr[] of size n containing 0 and 1 only. The problem is to count the subarrays having equal number of 0’s and 1’s.
+
+Input : arr[] = {1, 0, 0, 1, 0, 1, 1}
+
+Output : 8, The index range for the 8 sub-arrays are:
+(0, 1), (2, 3), (0, 3), (3, 4), (4, 5)
+(2, 5), (0, 5), (1, 6)
+```cpp
+int findSubarraySum(int arr[], int n, int sum=0)
+{
+    unordered_map<int, int>m;
+    int res = 0;
+    int cur = 0;
+    for(int i=0;i<n;i++)
+    if(!arr[i])arr[i] = -1;
+    for (int i = 0; i < n; i++) 
+    {
+        cur += arr[i];
+        if (cur == sum)
+            res++;
+        if (m.find(cur - sum)!= m.end())
+            res += (m[cur - sum]);
+        m[cur]++;
+    }
+    return res;
+}
+```
