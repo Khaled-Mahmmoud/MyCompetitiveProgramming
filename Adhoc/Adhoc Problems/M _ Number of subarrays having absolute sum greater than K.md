@@ -22,8 +22,7 @@ int findCnt(int arr[], int n, int k)
         ans++; 
     sort(arr, arr + n); 
     for (int i = 0; i < n; i++) 
-        ans += n -  
-       (upper_bound(arr, arr + n, arr[i] + k) - arr); 
+        ans += n - (upper_bound(arr, arr + n, arr[i] + k) - arr); 
     return ans; 
 } 
 ```
