@@ -27,3 +27,4 @@ int findCnt(int arr[], int n, int k)
     return ans; 
 } 
 ```
+Time complexity : O(Nlog(N))
