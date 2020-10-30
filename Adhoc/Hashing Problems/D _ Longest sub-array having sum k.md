@@ -34,3 +34,38 @@ int lenOfLongSubarr(int arr[],int n,int k)
 }
 ```
 Time Complexity: O(n)
+
+# Largest subarray with equal number of 0s and 1s
+
+Given an array containing only 0s and 1s, find the largest subarray which contains equal no of 0s and 1s. 
+
+Input : arr[] = {1, 0, 0, 1, 0, 1, 1}
+
+Output : 8, The index range for the 8 sub-arrays are:
+(0, 1), (2, 3), (0, 3), (3, 4), (4, 5)
+(2, 5), (0, 5), (1, 6)
+```cpp
+int maxLen(int a[], int n)
+{
+    for(int i=0;i<n;i++)
+    if(!a[i])a[i] = -1;
+    unordered_map<int, int> m;
+    int sum = 0,len = 0,index = -1,k=0;
+    for (int i = 0; i < n; i++)
+    {
+        sum += a[i];
+        if (sum == k)
+        {
+            len = i + 1;
+            index = i;
+        }
+        if (m.find(sum) == m.end())
+            m[sum] = i;
+        if (m.find(sum - k) != m.end())
+            if (len < (i - m[sum - k]))
+                len = i - m[sum - k],index = i;
+    }
+    cout<<index-len+1<<' '<<index;
+    return len;
+}
+```
