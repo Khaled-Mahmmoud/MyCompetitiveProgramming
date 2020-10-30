@@ -99,8 +99,11 @@ v.clear()  || Linear in size || Removes all elements , leaving the vector with a
 
 v1.operator=(v2) OR v1=v2|| Linear in size || Assigns new contents , replacing its current contents, and modifying its size  
 
-### vector<bool>
+## vector of boolean
 
+```cpp
+vector<bool>v;
+```
 like vector, except data, emplace, and emplace_back, add to
 
 v.flip() || Linear in size || Flips all values : All instances of true become false, and all instances of false become true
