@@ -39,11 +39,9 @@ Time Complexity: O(n)
 
 Given an array containing only 0s and 1s, find the largest subarray which contains equal no of 0s and 1s. 
 
-Input : arr[] = {1, 0, 0, 1, 0, 1, 1}
+Input: arr[] = {1, 0, 1, 1, 1, 0, 0}
 
-Output : 8, The index range for the 8 sub-arrays are:
-(0, 1), (2, 3), (0, 3), (3, 4), (4, 5)
-(2, 5), (0, 5), (1, 6)
+Output: 1 to 6
 ```cpp
 int maxLen(int a[], int n)
 {
