@@ -97,3 +97,35 @@ int main()
 ```
 Time complexity : O(n)
 
+# Number of subarrays having sum in a given range
+
+Given an array arr[] of positive integers and a range (L, R). Find number of subarrays having sum in the range L to R.
+
+Input : arr[] = {1, 4, 6}, L = 3, R = 8
+
+Output : 3, The subarrays are {1, 4}, {4}, {6}.
+
+```cpp
+int findSubSumLtoR(int arr[], int n, int L, int R) 
+{ 
+  
+    // Number of subarrays having sum less 
+    // than or equal to R. 
+    int Rcnt = countSub(arr, n, R); 
+  
+    // Number of subarrays having sum less 
+    // than or equal to L-1. 
+    int Lcnt = countSub(arr, n, L - 1); 
+  
+    return Rcnt - Lcnt; 
+} 
+int main() 
+{ 
+    int arr[] = { 1, 4, 6 }; 
+    int n = sizeof(arr) / sizeof(arr[0]); 
+    int L = 3; 
+    int R = 8; 
+    cout << findSubSumLtoR(arr, n, L, R); 
+    return 0; 
+} 
+```
