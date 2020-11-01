@@ -26,9 +26,7 @@ int main()
     int arr[] = { 1, 5, 3, 2, 17, 18 }; 
     int K = 4; 
     int N = sizeof(arr) / sizeof(arr[0]); 
-  
     cout << findSubarrays(arr, N, K); 
-  
     return 0; 
 } 
 ```
