@@ -86,7 +86,7 @@ Given an array size N , rotate it k times
 
 10 20 30 40 50 60 70   // rotate it 2 times
 
-30 40 50 60 70 10 20
+60 70 10 20 30 40 50
 
 ```cpp
 k = k % N
