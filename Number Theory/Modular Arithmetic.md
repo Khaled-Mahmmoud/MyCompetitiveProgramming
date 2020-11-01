@@ -47,6 +47,8 @@ N % 5  =   0 1 2 3 4 0 1 2 3 4 0  1  2  3  ...   //   Periodic
 
 ( a / b ) % m may NOT be same as ( (a % m) / (b % m) ) % m
 
+but (a/b) % m = (a * inv(b)) % m
+
  `x^n    % m =    ( x % m )^n    % m`
 
 ( 56 + 47 ) % 10 = 103 % 10 = 3
