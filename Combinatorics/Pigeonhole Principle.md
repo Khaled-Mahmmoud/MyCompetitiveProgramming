@@ -22,4 +22,4 @@ N = 5 and	A = {2, 3, 5, 7, 8}
 
 Compute A % 4 = {2, 3, 1, 3, 0}, 5 numbers, with values [0 - 3].
 
-Pick 2 with same mode - 3 is repeated mode. Then, (3, 7) are the answer
+Pick 2 with same mode -> 3 is repeated mode. Then, (3, 7) are the answer
