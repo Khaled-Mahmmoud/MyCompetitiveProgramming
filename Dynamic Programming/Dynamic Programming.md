@@ -126,3 +126,5 @@ in the CLRS book. There are two [longest paths](https://github.com/Khaled-Mahmmo
 paths do not have the optimal substructure propertym, For example, the longest path q→r→t is not a combination of 
 longest path from q to r and longest path from r to t, because the longest path from q to r is q→s→t→r and 
 the longest path from r to t is r→q→s→t.    
+
+Dynamic Programming most typical cases : **Minimization**, **Maximization**, **Counting**. but could have **adhoc** usages.
