@@ -63,7 +63,7 @@ Represent each day with a number from 0 to 6
 
 Let Tuesday be 3
 
-next = ( day + n ) % 7
+next = (day + n) % 7
 
 next = ( 3 + 40 ) % 7 = ( 3 % 7 + 40 % 7 ) % 7 = (3 + 5) % 7 = 8 % 7 = 1
 
@@ -72,7 +72,7 @@ next = ( 3 + 40 ) % 7 = 43 % 7 = 1
 
 What day was it 40 days ago?
 
-prev = ( n - day ) % 7
+prev = (day - n) % 7
 
 prev = ( 3 - 40 ) % 7 = -37 % 7 = -2 ==> 5
 
