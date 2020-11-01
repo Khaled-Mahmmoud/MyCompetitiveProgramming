@@ -141,7 +141,9 @@ boo is_odd(int n)
 {
     return (n % 2 == 1);     //  this wrong because if n is negative then n % 2 = -1 where n = -3
     return (n % 2 == 1) || (n % 2 == -1);   // this correct
-    retunr (n % 2 != 0);   // this correct
-}
+    // or
+    return (n % 2 != 0);   // this correct
+    // or
+    return (n & 1);
 ```
 `(n-1) % n = n - 1` **or** `(n-1) % n = -1`	
