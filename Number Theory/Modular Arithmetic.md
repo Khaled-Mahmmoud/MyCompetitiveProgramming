@@ -124,7 +124,7 @@ some other facts :
 
 - ((a * b) % n * (1/a)%n) %n = b % n
 
-- a % (2^n) = a & (n-1) => E.g. a%4 = a&3
+- a % n (n = 2^x) = a & (n-1) => E.g. a%4 = a&3
 
 - a % 0 is undefined
 
