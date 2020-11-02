@@ -5,6 +5,7 @@
 ```cpp
 #define N  200009
 int n,arr[N],dp[N][6][2];
+// where k is inferenced variable
 int solve(int idx,int k,int z,bool flag)
 {
     int &rt = dp[idx][z][flag];
