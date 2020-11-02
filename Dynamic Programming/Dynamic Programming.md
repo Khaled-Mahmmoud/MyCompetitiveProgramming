@@ -128,3 +128,12 @@ longest path from q to r and longest path from r to t, because the longest path 
 the longest path from r to t is r→q→s→t.    
 
 Dynamic Programming most typical cases : **Minimization**, **Maximization**, **Counting**. but could have **adhoc** usages.
+
+Subset Style : 01011011101 means pick OR leave item.
+
+Other Subset Style : 0401502 means pick item once or more OR leave item
+
+Consecutive Ranges Style : (ab)(cde)(fg)(h)
+
+Nested Ranges Style : (((a)((b)(c)))(d)((ef)(g)))
+
