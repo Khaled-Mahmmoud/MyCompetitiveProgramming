@@ -9,10 +9,10 @@ string str;
 int solve(int l, int r)
 {
 	if (l == r) return 1;
+	if (str[l] != str[r]) return 0;
 	int &ret = dp[l][r];
 	if (~ret) return ret;
 	ret = 0;
-	if (str[l] != str[r]) return 0;
 	for (int k = l + 2; k <= r; k++)
 		if (str[l] == str[k])
 			ret = (ret + ((1ll) * solve(l + 1, k - 1) * solve(k, r))%MOD) % MOD;
