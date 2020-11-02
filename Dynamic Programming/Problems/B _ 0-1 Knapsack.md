@@ -33,7 +33,6 @@ int knapSack(int n,int w)
         return dp[n][w] = max(knapSack(n-1,w), val[n-1] + knapSack(n-1,w-wt[n-1]));
 }
 ```
-this dp Solution is called **Subset Style dp** which means **pick or leave item**.
 
 **Tabulation Method – Bottom Up Dynamic Programming**
 
@@ -65,3 +64,5 @@ int main()
     cout<<dp[n][w];
 }
 ```
+
+Please note : this dp Solution is called **Subset Style dp** which means **pick or leave item**.
