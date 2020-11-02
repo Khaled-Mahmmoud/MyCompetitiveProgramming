@@ -34,6 +34,7 @@ int main()
     memset(dp,-1,sizeof dp);
     cout<<solve(n);
 }
+
 ```
 The complexity : O(n * 6)	
 
