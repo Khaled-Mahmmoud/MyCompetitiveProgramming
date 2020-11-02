@@ -35,7 +35,7 @@ int main()
     cout<<solve(n);
 }
 ```
-The complexity : O(n)	
+The complexity : O(n * 6)	
 
 
 # Dice Combinations	II
@@ -75,4 +75,4 @@ int main()
     cout<<solve(n,1);
 }
 ```
-The complexity : O(n * 7)	
+The complexity : O(n * 6)	
