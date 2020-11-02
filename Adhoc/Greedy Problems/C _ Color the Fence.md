@@ -31,3 +31,39 @@ int main()
     return 0;
 }
 ```
+### dp Solution
+
+```cpp
+#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+int n, i, a[9], dp[15][1000005];
+int solve(int j, int r)
+{
+    if(j < 0)
+        return 0;
+    if(~dp[j][r])
+        return dp[j][r];
+    return dp[j][r] = max(r >= a[j] ? solve(j, r - a[j]) + 1 : 0, solve(j - 1, r));
+}
+void print(int j, int r)
+{
+    if(j < 0)
+        return;
+    r >= a[j] && solve(j, r - a[j]) + 1 >= solve(j - 1, r) ? 
+    (cout << j + 1, print(j, r - a[j])) : print(j - 1, r);
+}
+int main()
+{
+    ios::sync_with_stdio(0),cin.tie(0);
+    memset(dp, -1, sizeof dp);
+    cin >> n;
+    while(i < 9)
+        cin >> a[i++];
+    if(solve(8, n))
+        print(8, n);
+    else
+        cout << -1;
+    return 0;
+}
+```
