@@ -1,5 +1,7 @@
 # Edit Distance
 
+`Minimization dp`
+
 Given two strings str1 and str2 and below operations that can performed on str1. 
     
 Find minimum number of edits (operations) required to convert ‘str1’ into ‘str2’
@@ -24,16 +26,18 @@ n: Length of str2 (second string)
 **Memoization Method – Top Down Dynamic Programming**
 ```cpp
 int dp[1009][1009];
-string s1,s2;
-int ed(int m,int n)
+string str1,str2;
+int solve(int m,int n)
 {
     if(m==0)return n;
     if(n==0)return m;
-    if(dp[m][n])return dp[m][n];
 
-    if(s1[m-1]==s2[n-1])
-        return dp[m][n] = ed(m-1,n-1);
-    return dp[m][n] = 1 + min(ed(m-1,n),min(ed(m,n-1),ed(m-1,n-1)));
+    int &rt = dp[m][n];
+    if(~rt)return rt;
+
+    if(str1[m-1]==str2[n-1])
+        return rt = solve(m-1,n-1);
+    return rt = 1 + min(solve(m-1,n),min(solve(m,n-1),solve(m-1,n-1)));
 }
 ```
 Complexity : O(mn)
@@ -57,3 +61,79 @@ int ed(string s1,string s2,int m,int n)
 }
 ```
 Complexity : O(mn)
+
+# Printing Edit Distance
+
+`Building Output dp`
+
+```cpp
+#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+int dp[1009][1009];
+string str1,str2;
+int cnt,idx;
+int solve(int m,int n)
+{
+    if(m==0)return n;
+    if(n==0)return m;
+
+    int &rt = dp[m][n];
+    if(~rt)return rt;
+
+    if(str1[m-1]==str2[n-1])
+        return rt = solve(m-1,n-1);
+    return rt = 1 + min(solve(m-1,n),min(solve(m,n-1),solve(m-1,n-1)));
+}
+void print(int m,int n)
+{
+    if(m==0)
+    {
+        while(n--)
+            cout<<++cnt<<" Insert 1,"<<str2[n]<<'\n';
+        return;
+    }
+    if(n==0)
+    {
+        while(m)
+        cout<<++cnt<<" Delete "<<m--<<'\n';
+        return;
+    }
+
+    if(str1[m-1]==str2[n-1])
+    {
+        idx--;
+        print(m-1,n-1);
+        return;
+    }
+
+    int optimal = dp[m][n];
+    if(optimal == 1+solve(m-1,n))
+    {
+        cout<<++cnt<<" Delete "<<idx--<<'\n';
+        print(m-1,n);
+    }
+    else if(optimal == 1+solve(m,n-1))
+    {
+        cout<<++cnt<<" Insert "<<idx+1<<','<<str2[n-1]<<'\n';
+        print(m,n-1);
+    }
+    else
+    {
+        cout<<++cnt<<" Replace "<<idx--<<','<<str2[n-1]<<'\n';
+        print(m-1,n-1);
+    }
+}
+int main()
+{
+    ios::sync_with_stdio(false),cin.tie(0);
+    while(getline(cin,str1)&&getline(cin,str2))
+    {
+        memset(dp,-1,sizeof dp);
+        cout<<solve(str1.size(),str2.size())<<'\n';
+        cnt = 0;idx = str1.size();
+        print(str1.size(),str2.size());
+    }
+    return 0;
+}
+```
