@@ -37,7 +37,15 @@ Complexity : O(n^2)
 
 # Form a palindrome
 
-[Problem link](https://practice.geeksforgeeks.org/problems/form-a-palindrome/0)
+Given a string, find the minimum number of characters to be inserted to convert it to palindrome.
+
+For Example:
+
+ab: Number of insertions required is 1. bab or aba
+
+aa: Number of insertions required is 0. aa
+
+abcd: Number of insertions required is 3. dcbabcd
 
 ```cpp
 #include<bits/stdc++.h>
