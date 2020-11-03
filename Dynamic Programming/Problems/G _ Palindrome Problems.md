@@ -186,7 +186,7 @@ ll solve(int i,int j)
     if(str[i]==str[j])
        rt += solve(i+1,j-1) + 1;  // {aba,aca,aa}
 
-    rt += solve(i+1, j);   // bca = {b,c,a}
+        rt += solve(i+1, j);   // bca = {b,c,a}
 	rt += solve(i, j-1);   // abc = {a,b,c}
 	rt -= solve(i+1, j-1); // bc  = {b,c}
 
