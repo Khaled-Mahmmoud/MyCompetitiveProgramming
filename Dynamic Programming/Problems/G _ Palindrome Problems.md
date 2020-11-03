@@ -31,7 +31,6 @@ int main()
     }
     return 0;
 }
-
 ```
 Complexity : O(n^2)
 
