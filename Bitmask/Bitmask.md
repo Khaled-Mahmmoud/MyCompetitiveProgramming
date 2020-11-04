@@ -191,6 +191,7 @@ if( n%2 == 1)		-> Fails of n is negative
 
 if( n&1 == 1)     	-> Works always
 
+to print binary system of number
 ```cpp
 void printNumber(int n)
 {
@@ -207,7 +208,9 @@ void printNumber(int n, int len)
      printNumber(n>>1, len-1);	// remove last bit
      cout<<(n&1);		       //  print last bit
 }
-
+```
+To count number of sets in mask
+```cpp
 int countNumBits1(int mask) 
 {	
         // O(bits Length) OR O(log2 mask)
@@ -236,21 +239,6 @@ X & ~(X-1) 	= 011010010000
 ```cpp
 template<class Int>	
 Int leastBit(Int num) { return (num & ~(num-1)); }	
-```
-To count number of sets in mask
-```cpp
-int countNumBits2(int mask) 
-{	
-         // O(bits Count)	
-         // __builtin_popcount(n)
-	 int ret = 0;
-	 while (mask) 	
-	 {
-	 	mask &= (mask-1);
-	 	++ret;	// Simply remove the last bit and so on
-	 }
-	 return ret;
-}
 ```
 
 To check whether N is power of 2 or not
