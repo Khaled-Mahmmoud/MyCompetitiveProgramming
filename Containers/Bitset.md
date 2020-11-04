@@ -80,7 +80,7 @@ Constructs a basic_string object that represents the bits in the bitset as a suc
     mybits.set();              // mybits: 1111
 
     string mystring = mybits.to_string();  //  O(n)
-    cout << "mystring: " << mystring << '\n';
+    cout << "mystring: " << mystring << '\n'; // 1111
 ```
 
 **(to_ulong)**
@@ -90,8 +90,7 @@ Returns an unsigned long with the integer value that has the same bits set as th
 ```cpp
   bitset<4> foo;         // foo: 0000
   foo.set();              // foo: 1111
-  cout << foo << " as an integer is: " << foo.to_ulong() << '\n';    O(n)
-  // 1111  as an iteger is: 15
+  cout << foo << " as an integer is: " << foo.to_ulong() << '\n'; // 1111  as an iteger is: 15  O(n)
 ```
 
 **(to_ullong)**
@@ -100,8 +99,7 @@ Returns an unsigned long long with the integer value that has the same bits set 
 ```cpp
   bitset<4> foo;         // foo: 0000
   foo.set();              // foo: 1111
-  cout << foo << " as a long long is: " << foo.to_ullong() << '\n';   // O(n)
-  // 1111  as a long long is: 15
+  cout << foo << " as a long long is: " << foo.to_ullong() << '\n'; // 1111  as a long long is: 15 O(n)
 
 
     bitset<8>bs;
