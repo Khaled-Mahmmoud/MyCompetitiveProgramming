@@ -86,6 +86,9 @@ Ex. int m = 5; // 101
 check set bit 2 
 int r = m & (1<<2) // 101 & 100 = 100 so is set
 
+```cpp
+bool getbit(int num,int idx){return ((num>>idx)&1);}
+```
 **set bit**
 
 how to set bit with index i in a bitmask m ?
@@ -100,6 +103,10 @@ set bit 2
 
 m = m | (1<<2) = 1011 | 100 = 1111
 
+```cpp
+int setbit(int num,int idx){return (num|(1<<idx));}
+```
+
 **clear bit**
 
 how to clear bit with index i in a bitmask m ?
@@ -113,6 +120,10 @@ EX. int m = 11 // 1011
 clear bit 3
 
 m = m & ~(1<<3) = 1011 & 0111 =0011
+
+```cpp
+int clearbit(int num,int idx){return (num&~(1<<idx));}
+```
 
 **flip bit**
 
