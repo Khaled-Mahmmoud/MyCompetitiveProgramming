@@ -143,6 +143,10 @@ flib bit 1
 
 m = m ^ (1<<1) = 1011 ^ 10 = 1001
 
+```cpp
+int flipbit(int num,int idx){return num^(1<<idx);}
+```
+
 # Bit Manipulation
 
 **Why using Bit Manipulation?**
