@@ -257,7 +257,7 @@ To check whether N is power of 2 or not
 ```cpp
     long long n;
     cin>>n;
-    cout<<(n&(n-1)?"NO":"YES");
+    cout<<(!n||n&(n-1)?"NO":"YES");
 ```
 
 num % mod, mod is a power of 2	
