@@ -54,7 +54,7 @@ int main()
     return 0;
 }
 ```
-
+### Better Solution
 ```cpp
 #include<bits/stdc++.h>
 #define ll long long
