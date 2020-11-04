@@ -260,22 +260,9 @@ To check whether N is power of 2 or not
     cout<<(!n||n&(n-1)?"NO":"YES");
 ```
 
-num % mod, mod is a power of 2	
-
-```cpp
-template<class Int>	
-Int Mod(Int num, Int mod) { return (num & (mod - 1) ); }	
-```
-
 len = 3: 000, 001, 010, 011, 100, 101, 110, 111
 
 ```cpp
-void printNumber(int n, int len)
-{
-	if(!len)return;
-	printNumber(n>>1, len-1);	// remove last bit
-	cout<<(n&1);		       //  print last bit
-}
 void printAllSubsets(int len)	
 {
    for (int i = 0; i < (1<<len); ++i)
