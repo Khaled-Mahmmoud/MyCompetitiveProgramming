@@ -211,10 +211,11 @@ void printNumber(int n, int len)
 ```
 To count number of sets in mask
 ```cpp
-int countNumBits1(int mask) 
+int countNumBits(int mask) 
 {	
         // O(bits Length) OR O(log2 mask)
-	 int ret = 0;	//1101001 -> 110100 -> 11010 -> 1101 -> 110 -> 11 -> 1 -> 0
+	//__builtin_popcount
+	int ret = 0;	//1101001 -> 110100 -> 11010 -> 1101 -> 110 -> 11 -> 1 -> 0
 	 while (mask) 
 	 {
 	 	if(mask&1)
