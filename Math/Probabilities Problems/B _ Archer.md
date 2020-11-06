@@ -2,9 +2,6 @@
 
 [Problem Link](https://codeforces.com/contest/312/problem/B)
 
-
-That is the sum of a geometric progression which is infinite but 0<q<1.We can get the limit by the formula:p/(1-q).
-
 ```
 SmallR, who shoots first can win in the following cases:
 
@@ -38,14 +35,12 @@ P(A) = a/b        P(A') = 1 - a/b
 P(B) = c/d        P(B') = 1 - c/d
 
 So now we can get the answer to our problem:
-answer = p(A) + (P(A') * P(B') * P(A)) + P(P(A') * P(B') * P(A') * P(B') * P(A)) + ......
-       = a/b + ((1-a/b) * (1-c/d) * a/b) + ((1-a/b) * (1-c/d) * (1-a/b) * (1-c/d) * a/b)... and so on.
+answer = p(A) + (P(A')*P(B') * P(A)) + P(P(A')*P(B')*P(A')*P(B') * P(A)) + ......
+       = a/b + ((1-a/b)*(1-c/d) * a/b) + ((1-a/b)*(1-c/d)*(1-a/b)*(1-c/d) * a/b)... and so on.
        
-let p= a/b ,q=(1-c/d)*(1-a/b). The answer of this problem can be showed as:p*q^0+p*q^1+p*q^2+....
+let p= a/b ,q = (1-c/d)*(1-a/b). The answer of this problem can be showed as: p * q^0 + p * q^1 + p * q^2 + ....
 
-You can sum this up using formula for sum of infinite geometric series.
-
-
+You can sum this up using formula for sum of infinite geometric series but 0 < q < 1.We can get the limit by the formula:p / (1-q).
 ```
 
 
