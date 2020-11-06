@@ -48,4 +48,5 @@ int main()
 	cout<<ans.first<<" "<<ans.second;
     return 0;
 }
+
 ```
