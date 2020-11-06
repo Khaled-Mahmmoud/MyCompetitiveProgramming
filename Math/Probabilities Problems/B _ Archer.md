@@ -40,7 +40,7 @@ answer = p(A) + (P(A')*P(B') * P(A)) + P(P(A')*P(B')*P(A')*P(B') * P(A)) + .....
        
 let p= a/b ,q = (1-c/d)*(1-a/b). The answer of this problem can be showed as: p * q^0 + p * q^1 + p * q^2 + ....
 
-You can sum this up using formula for sum of infinite geometric series but 0 < q < 1.We can get the limit by the formula:p / (1-q).
+this is infinite geometric series but 0 < q < 1.We can get the limit by the formula:p / (1-q).
 ```
 
 
