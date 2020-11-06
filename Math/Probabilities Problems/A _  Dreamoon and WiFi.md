@@ -8,16 +8,16 @@ Probabilities = valid states / all states "pow(2,no of ?)"
 Case 1 : ??
                ++    0    1    2    --> index(i)
                +-    -2   0    2    --> point you will reach
-               -+    1    2    1    --> not of states achieve that
+               -+    1    2    1    --> no. of states achieve that
                --    
                        --> 2i - e = c - d
                        c drazil point
                        d dreamoon point
                        
-Case 1 : ???
+Case 2 : ???
                +++    0    1    2   3   --> index(i)
                ++-    -3   -1   1   3    --> point you will reach
-               +-+    1    3    3   1    --> not of states achieve that
+               +-+    1    3    3   1    --> no. of states achieve that
                -++
                +--
                -+-
