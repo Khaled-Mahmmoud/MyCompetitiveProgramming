@@ -21,25 +21,19 @@ event A happens with probability = 1/2 and event B happens with probability = 1/
 then probability of C happening is 1/2 * 1/2 = 1/4, which also makes sense logically. Because C will happen in only 1 out 4 cases, 
 when BOTH A and B have happened. You can imagine the 4 cases:
 
-1) A did not happen AND B did not happen => C did not happen (0 & 0 = 0)
-2) A happened AND B did not happen => C did not happen   (1 & 0 = 0)
-3) A did not happen AND B happened => C did not happen   (0 & 1 = 0)
-4) A happened AND B happened => C happened  (1 & 1 = 1)
+1) A didn't happen AND B didn't happen => C didn't happen   (0 & 0 = 0)
+2) A happened AND B didn't happen => C didn't happen        (1 & 0 = 0)
+3) A didn't happen AND B happened => C didn't happen        (0 & 1 = 0)
+4) A happened AND B happened => C happened                  (1 & 1 = 1)
 
 P(A) = (2/4) = 1/2
-
 P(B) = (2/4) = 1/2
-
 P(C) = P(A) * P(B) = 1/2 * 1/2 = 1/4
 
 So a good rule of thumb is AND means product of probabilities and OR means sum of probabilities.
-
 So now we can get the answer to our problem:
-
 answer = a/b + ( (1-a/b) * (1-c/d) * a/b ) + ( (1-a/b) * (1-c/d) * (1-a/b) * (1-c/d) * a/b )... and so on.
-
 You can sum this up using formula for sum of infinite geometric series.
-
 PS: I know this question was asked 3 years ago, but I hope this helps someone.
 ```
 
