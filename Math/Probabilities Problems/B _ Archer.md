@@ -2,7 +2,6 @@
 
 [Problem Link](https://codeforces.com/contest/312/problem/B)
 
-**Solution** let p=a/b,q=(1-c/d)*(1-a/b). The answer of this problem can be showed as:p*q^0+p*q^1+p*q^2+....
 
 That is the sum of a geometric progression which is infinite but 0<q<1.We can get the limit by the formula:p/(1-q).
 
@@ -16,8 +15,11 @@ SmallR, who shoots first can win in the following cases:
 When there is an OR between 2 events(which lead to same result) happening, it means EITHER of them will lead to the same result, 
 so the probability of the result is the SUM OF ALL THESE PROBABILITIES.
 
-the other hand, when there is AND between 2 events, it means that BOTH OF THEM SHOULD HAPPEN TO GET THE DESIRED OUTCOME. So if 
-event A happens with probability = 1/2 and event B happens with probability = 1/2 and event C happens when both A and B happen,
+the other hand, when there is AND between 2 events, it means that BOTH OF THEM SHOULD HAPPEN TO GET THE DESIRED OUTCOME. 
+
+Ex.
+////////////////////////////////////////////////////////////////////////////////////////
+So if event A happens with probability = 1/2 and event B happens with probability = 1/2 and event C happens when both A and B happen,
 then probability of C happening is 1/2 * 1/2 = 1/4, which also makes sense logically. Because C will happen in only 1 out 4 cases, 
 when BOTH A and B have happened. You can imagine the 4 cases:
 
@@ -29,12 +31,21 @@ when BOTH A and B have happened. You can imagine the 4 cases:
 P(A) = (2/4) = 1/2
 P(B) = (2/4) = 1/2
 P(C) = P(A) * P(B) = 1/2 * 1/2 = 1/4
-
+///////////////////////////////////////////////////////////////////////////////////////
 So a good rule of thumb is AND means product of probabilities and OR means sum of probabilities.
+
+P(A) = a/b        P(A') = 1 - a/b
+P(B) = c/d        P(B') = 1 - c/d
+
 So now we can get the answer to our problem:
-answer = a/b + ( (1-a/b) * (1-c/d) * a/b ) + ( (1-a/b) * (1-c/d) * (1-a/b) * (1-c/d) * a/b )... and so on.
+answer = p(A) + (P(A') * P(B') * P(A)) + P(P(A') * P(B') * P(A') * P(B') * P(A)) + ......
+       = a/b + ((1-a/b) * (1-c/d) * a/b) + ((1-a/b) * (1-c/d) * (1-a/b) * (1-c/d) * a/b)... and so on.
+       
+let p= a/b ,q=(1-c/d)*(1-a/b). The answer of this problem can be showed as:p*q^0+p*q^1+p*q^2+....
+
 You can sum this up using formula for sum of infinite geometric series.
-PS: I know this question was asked 3 years ago, but I hope this helps someone.
+
+
 ```
 
 
