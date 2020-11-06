@@ -39,4 +39,5 @@ int main()
         cout<<res[i][j]<<' ';cout<<'\n';}
     return 0;
 }
+
 ```
