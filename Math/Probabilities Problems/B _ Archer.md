@@ -26,6 +26,12 @@ when BOTH A and B have happened. You can imagine the 4 cases:
 3) A did not happen AND B happened => C did not happen   (0 & 1 = 0)
 4) A happened AND B happened => C happened  (1 & 1 = 1)
 
+P(A) = (2/4) = 1/2
+
+P(B) = (2/4) = 1/2
+
+P(C) = P(A) * P(B) = 1/2 * 1/2 = 1/4
+
 So a good rule of thumb is AND means product of probabilities and OR means sum of probabilities.
 
 So now we can get the answer to our problem:
