@@ -13,6 +13,8 @@ We have the following information:
 2) the position that Dreamoon will be before all '?'s
 3) the number of '?'s
 
+N is small so we can brute force every possible choice of '?' with some recursive or dfs or Bitwise like search in O(2^n) time complexity.
+
 ```cpp
 #include<bits/stdc++.h>
 #define ll long long
