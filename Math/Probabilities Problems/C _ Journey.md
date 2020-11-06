@@ -8,11 +8,10 @@ Let the cities be vertices and roads be edges of a tree and vertex 1 be the root
 
 Let ans[i] be the answer for the i-th vertex (the expected value if they start their journey from that vertex and the horse doesn't go to it's parent). Now we can calculate ans[i] by knowing the answer for it’s children. Let v1, v2, …., vk be the children of i-th vertex , then 
 
-`ans[i] = (ans[v1]+ans[v2]+ans[v3]+.....+ans[vk])/k + 1`
+`ans[i] = (ans[v1]+ans[v2]+ans[v3]+.....+ans[vk])/k` but if i is leave then ans[i] = distance between root and i.
 
-Because when we are at i-th vertex , we have k choices with equal probabilities and  + 1 for going to one of them (length of the edge between i-th vertex and it’s children).
 
-So if we know the answer of some vertex’s children, we can calculate its expected value and we can do it by a simple DFS (note that the answer for a leave is 0).
+So if we know the answer of some vertex’s children, we can calculate its expected value and we can do it by a simple DFS.
 
 
 
