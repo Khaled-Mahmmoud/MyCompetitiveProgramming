@@ -9,7 +9,8 @@ Case 1 : ??
                ++    0    1    2    --> index(i)
                +-    -2   0    2    --> point you will reach
                -+    1    2    1    --> no. of states achieve that
-               --    
+               --   2C0  2C1   2C2 
+                    NOTICE no. of states = (no. of ?)Ci
                        --> 2i - e = c - d
                        c drazil point
                        d dreamoon point
@@ -18,8 +19,8 @@ Case 2 : ???
                +++    0    1    2   3   --> index(i)
                ++-    -3   -1   1   3    --> point you will reach
                +-+    1    3    3   1    --> no. of states achieve that
-               -++
-               +--
+               -++    3C0 3C1  3C2  3C3
+               +--   NOTICE no. of states = (no. of ?)Ci
                -+-
                --+
                ---
