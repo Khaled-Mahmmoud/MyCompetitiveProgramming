@@ -16,6 +16,7 @@ So if we know the answer of some vertex’s children, we can calculate its expec
 
 
 ```cpp
+
 #include<bits/stdc++.h>
 #define ll long long
 using namespace std;
