@@ -37,4 +37,5 @@ int main()
     cout<<get(0,n-1)<<'\n';
     return 0;
 }
+```
 Complexity : O(n^2)
