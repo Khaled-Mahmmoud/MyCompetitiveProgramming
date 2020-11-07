@@ -48,3 +48,37 @@ int main()
     return 0;
 }
 ```
+`ans[i] = (ans[v1]+ans[v2]+ans[v3]+.....+ans[vk])/k + 1` but if i is leave then ans[i] = 0.
+
+```cpp
+#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+vector<vector<int>>adj;
+double solve(int u,int par)
+{
+    int k = adj[u].size();
+    if(u!=1)k--;
+    if(!k)return 0;
+    double p = 1.0/k,ans = 0;
+    for(auto v:adj[u])
+        if(v!=par)
+        ans += (1 + solve(v,u)) * p;
+    return ans;
+}
+int main()
+{
+    ios::sync_with_stdio(0),cin.tie(0);
+    int n;cin>>n;adj.resize(n+1);
+    while(--n)
+    {
+        int u,v;
+        cin>>u>>v;
+        adj[u].push_back(v);
+        adj[v].push_back(u);
+    }
+    cout<<fixed<<setprecision(9);
+    cout<<solve(1,0);
+    return 0;
+}
+```
