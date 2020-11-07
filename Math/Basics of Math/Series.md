@@ -81,6 +81,8 @@ log(k+1) = n log(2)
 
 n = log(k+1) // log(base 2)
 
+**infinite geometric series**
+
 As n goes to infinity, the absolute value of r must be less than one for the series to converge. The sum then becomes
 
 a + ar + ar^2 + ar^3 + ..... = a/(1-r). for abs(r) < 1
