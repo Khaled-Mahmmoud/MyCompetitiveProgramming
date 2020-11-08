@@ -30,14 +30,14 @@ int main()
 {
     ios::sync_with_stdio(false),cin.tie(0);
     int t;cin>>t;
-	while(t--)
+    while(t--)
     {
-		cin>>n;
+	cin>>n;
         for(int i=0;i<n;i++)
             cin>>cnt[i]>>pr[i];
-		memset(dp, -1, sizeof dp);
-		cout<<solve()<<'\n';
-	}
-	return 0;
+	memset(dp, -1, sizeof dp);
+	cout<<solve()<<'\n';
+    }
+    return 0;
 }
 ```
