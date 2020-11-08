@@ -1,8 +1,5 @@
 # Divisibility
 
-```cpp
-# Divisibility 
-
 [Problem Link](https://vjudge.net/problem/UVA-10036)
 
 ```cpp
