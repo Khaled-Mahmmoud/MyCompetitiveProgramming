@@ -83,7 +83,8 @@ Like other typical Dynamic Programming(DP) problems, re-computations of same sub
 constructing a temporary array C[][] in bottom up manner. Following is Dynamic Programming based implementation.
 ```cpp
 int binomialCoeff(int n, int r) 
-{ 
+{
+    if(r>n)return 0;
     int C[n + 1][r + 1]; 
     int i, j;
     for (i = 0; i <= n; i++) 
@@ -113,7 +114,7 @@ So call the function with nCr(n, min(r, n-r)) for better performance.
 ```cpp 
 int nCr(int n, int r) 
 {
-    if (n < r)
+    if (r>n)
         return 0;
 
     if (r == 0)
