@@ -10,7 +10,6 @@ ll dp[200005][2];
 ll ans = -1e15;
 ll solve(int idx,int c)
 {
- 
     if(idx==n)
         return 0;
     ll &rt = dp[idx][c];
