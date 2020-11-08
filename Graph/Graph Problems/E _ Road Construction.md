@@ -4,7 +4,7 @@
 
 **Solution**
 
-The constraints can be satisfied if and only if the graph is a [star graph](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/Star%20graph.png), Since m < n/2, there exists at least one node that is not incident to any edge of m edges.
+The constraints can be satisfied if and only if the graph is a star graph, Since m < n/2, there exists at least one node that is not incident to any edge of m edges.
 
 ```cpp
 int main()
