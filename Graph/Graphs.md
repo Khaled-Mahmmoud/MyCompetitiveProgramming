@@ -354,7 +354,7 @@ E = V   the graph is sparse
 
 Tree is special form of graph.
 
-A tree is an undirected graph in which any two vertices are connected by only one path.
+A tree is a connected graph that doesn't contain any cycles in which any two vertices are connected by only one path.
 
 A tree is an acyclic graph and has N - 1 edges where N is the number of vertices. 
 
