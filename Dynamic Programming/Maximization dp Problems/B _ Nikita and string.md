@@ -39,3 +39,49 @@ int main()
 }
 
 ```
+
+# Weather
+
+```cpp
+#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+int a[100009],n,dp[100009][2];
+int solve(int idx,int group)
+{
+    if(idx==n-1)
+        return 0;
+    int &rt = dp[idx][group];
+    if(~rt)return rt;
+    if(a[idx]<0)
+    {
+        if(group)
+            rt = solve(idx+1,group) + 1;
+        else
+            rt = solve(idx+1,group);
+    }
+    else if(a[idx]>0)
+    {
+        if(group)
+            rt = solve(idx+1,group);
+        else
+            rt = min(1+solve(idx+1,group),solve(idx+1,group+1));
+    }
+    else
+        rt = 1 + solve(idx+1,group);
+    return rt;
+}
+int main()
+{
+    ios::sync_with_stdio(0),cin.tie(0);
+    freopen("input.txt","r",stdin);
+    freopen("output.txt","w",stdout);
+    cin>>n;
+    for(int i=0;i<n;i++)
+       cin>>a[i];
+    memset(dp,-1,sizeof dp);
+    int ans = solve(1,0) + (a[0]>=0) + (a[n-1]<=0);
+    cout<<ans<<'\n';
+    return 0;
+}
+```
