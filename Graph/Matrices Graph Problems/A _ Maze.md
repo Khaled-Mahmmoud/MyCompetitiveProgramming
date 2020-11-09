@@ -4,16 +4,6 @@
 
 Start BFS or DFS from any free cell. As the maze is connected, this search will visit all s free cells. But we can stop the search when it visits s - k free cells. It's obvious that these s - k cells are connected to each other. Remaining k cells can be transformed into the walls.
 
-Solutions which every move transform the cell which has the minimal number of neighbours passed pretests. However, it's wrong. Here is the counter-test:
-``
-....
-.#..
-..##
-..##
-```
-Top-left cell has no more neighbours than any other cell but we cannot transform it into the wall.
-
-
 ```cpp
 #include<bits/stdc++.h>
 #define ll long long
