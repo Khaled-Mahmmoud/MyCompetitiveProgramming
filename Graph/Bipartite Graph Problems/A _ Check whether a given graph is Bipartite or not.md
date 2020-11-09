@@ -4,16 +4,16 @@ A Bipartite Graph is a graph whose vertices can be divided into two independent 
 or a vertex from V to U. In other words, for every edge (u, v), either u belongs to U and v to V, or u belongs to V and v to U.
 We can also say that there is no edge that connects vertices of same set.
 
-[Bipartite1](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/bipartitegraph-1.jpg)
+[diagram1](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/bipartite%20graph.png)
 
 A bipartite graph is possible if the graph coloring is possible using two colors such that vertices in a set are colored with the same color.
 Note that it is possible to color a cycle graph with even cycle using two colors. 
 
-[Bipartite2](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/bipartitegraphfive.sixJPG.jpg)
+[diagram2](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/bipartite%20graph.png)
 
 It is not possible to color a cycle graph with odd cycle using two colors.
 
-[Bipartite3](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/bipartitegraphfive.jpg)
+[diagram3](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/bipartite%20graph.png)
 
 
 Algorithm to check if a graph is Bipartite:
