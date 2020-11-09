@@ -14,16 +14,16 @@ ll ans;
 vector<int> adj[N];
 void dfs(int u = 1 , int par = -1)
 {
-    for(int nxt : adj[u])
-        if(nxt != par)
+    for(int v : adj[u])
+        if(v != par)
         {
-            dfs(nxt , u);
+            dfs(v , u);
             for(int i = 1 ; i < k ; i++)
             {
-                ans += 1LL * dp[u][i] * dp[nxt][k-i-1];
-                dp[u][i] += dp[nxt][i-1];
+                ans += 1LL * dp[u][i] * dp[v][k-i-1];
+                dp[u][i] += dp[v][i-1];
             }
-            dp[u][k] += dp[nxt][k-1];
+            dp[u][k] += dp[v][k-1];
         }
 }
 int main()
