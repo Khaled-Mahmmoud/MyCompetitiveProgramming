@@ -41,7 +41,8 @@ int main()
     }
     cout<<ans1.size()<<'\n';
     for(int i=0;i<ans1.size();i++)
-        cout<<ans1[i].first<<' '<<ans1[i].second<<' '<<ans2[i].first<<' '<<ans2[i].second<<'\n';
+        cout<<ans1[i].first<<' '<<ans1[i].second<<' '
+            <<ans2[i].first<<' '<<ans2[i].second<<'\n';
     return 0;
 }
 ```
