@@ -10,19 +10,19 @@
 using namespace std;
 int dx[4] = {0,0,1,-1};
 int dy[4] = {1,-1,0,0};
-vector< string > adj(1000);
+vector<string> adj(1000);
 int n,m,k;
 bool visit[1010][1000]={false};
 void dfs(int i , int j)
 {
-     if(i>=n || i<0 || j>=m || j<0 || adj[i][j] == '#' || visit[i][j])
+     if(x>=n||x<0||y>=m||y<0||adj[x][y]=='#'||visit[x][y])
         return;
-     visit[i][j]=true;
+     visit[x][y]=true;
      for(int i=0;i<4;i++)
-     dfs(i+dx[i],j+dy[i]);
+     dfs(x+dx[i],y+dy[i]);
      if(k)
      {
-         adj[i][j]='X';
+         adj[x][y]='X';
          k--;
      }
 }
