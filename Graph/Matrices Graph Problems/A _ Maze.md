@@ -8,6 +8,8 @@
 #include<bits/stdc++.h>
 #define ll long long
 using namespace std;
+int dx[4] = {0,0,1,-1};
+int dy[4] = {1,-1,0,0};
 vector< string > adj(1000);
 int n,m,k;
 bool visit[1010][1000]={false};
@@ -16,10 +18,8 @@ void dfs(int i , int j)
      if(i>=n || i<0 || j>=m || j<0 || adj[i][j] == '#' || visit[i][j])
         return;
      visit[i][j]=true;
-     dfs(i+1 , j);
-     dfs(i-1,j);
-     dfs(i,j+1);
-     dfs(i,j-1);
+     for(int i=0;i<4;i++)
+     dfs(i+dx[i],j+dy[i]);
      if(k)
      {
          adj[i][j]='X';
