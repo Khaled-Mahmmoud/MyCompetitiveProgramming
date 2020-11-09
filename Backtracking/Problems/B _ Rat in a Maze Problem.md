@@ -32,6 +32,7 @@ DRDDRR
 DDRDRR DRDDRR
 
 ```cpp
+
 void solve(int x,int y,string s,vector<string>&res,int n,int m[MAX][MAX])
 {
     if(!m[x][y]||x>=n||y>=n||x<0||y<0||m[x][y]==100)
