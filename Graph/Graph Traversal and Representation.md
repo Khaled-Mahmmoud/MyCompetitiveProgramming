@@ -138,6 +138,16 @@ int main()
 ```
 The time complexity of DFS is O(V + E), where V is the number of nodes and E is the number of edges.
 
+### DFS on tree
+```cpp
+vector<vector<int>>adj;
+void dfs(int u,int par)
+{
+    for (int v : adj[u])
+        if (v!=par)
+            dfs(v,u);
+}
+```
 
 ### Breadth-First Search (BFS)
 
