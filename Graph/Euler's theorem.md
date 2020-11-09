@@ -8,7 +8,7 @@ vector<int>tour;
 int n,m;
 void euler(int i)
 {
-    for(int j=1;j<=i;j++)
+    for(int j=1;j<=n;j++)
     {
         if(adj[i][j])
         {
