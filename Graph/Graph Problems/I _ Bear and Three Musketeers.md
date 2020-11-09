@@ -42,4 +42,5 @@ int main() {
 	else printf("%d\n", result - 6);
 	return 0;
 }
+
 ```
