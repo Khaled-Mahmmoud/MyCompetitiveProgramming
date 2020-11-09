@@ -141,7 +141,7 @@ The time complexity of DFS is O(V + E), where V is the number of nodes and E is 
 ### DFS on tree
 ```cpp
 vector<vector<int>>adj;
-void dfs(int u,int par)
+void dfs(int u = 1,int par = -1)
 {
     for (int v : adj[u])
         if (v!=par)
