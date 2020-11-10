@@ -1,7 +1,5 @@
 # Shortest Path Algorithm
 
-## Dijkstra Algorithm
-
 ### Single Source Shortest Path (SSSP)
 
 - BFS
@@ -14,7 +12,49 @@
 
 - Floyd Warshal's Algorithm
 
+# BFS
 
+Computes the shortest path between the given source node and 
+all the other nodes in an unweighted graph using a BFS algorithm,
+and fills the results in the global "dis" and "par" arrays.
+(i.e. Single-Source Shortest Path (SSSP))
+ 
+Complexity: O(n+m)
+```cpp
+const int N = 100100;
+int n;                  // The number of nodes.
+int m;                  // The number of edges.
+int dis[N];             // dis[v] : holds the shortest distance between the source and node "v".
+int par[N];             // par[v] : holds the parent of "v" in the shortest path the source to node "v".
+vector<int> edges[N];   // The graph adjacency list.
+void bfs(int src) 
+{
+    queue<int> q;
+    q.push(src);
+    memset(par, -1, sizeof(par));
+    memset(dis, -1, sizeof(dis));
+    dis[src] = 0;
+    while(!q.empty()) 
+    {
+        int u = q.front();q.pop();
+        for(int v : edges[u]) 
+            if (dis[v] == -1)
+            {
+                dis[v] = dis[u] + 1;
+                par[v] = u;
+                q.push(v);
+            }
+    }
+}
+// Note that the path is encoded in reverse order
+void printPath(int v)
+{
+    if(~par[v]) 
+        printPath(par[v]);
+    cout<<v<<'\n';
+}
+```
+## Dijkstra Algorithm
 
 [Problem Link](https://codeforces.com/contest/20/problem/C)
 
