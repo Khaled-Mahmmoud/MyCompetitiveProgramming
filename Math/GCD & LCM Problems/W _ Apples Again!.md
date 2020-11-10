@@ -15,6 +15,7 @@ f(a, b, x) = (x/a) + (x/b) - (x/lcm(a, b)) where
 (x/lcm(a, b)) define the number of common multiples  of a and b
 
 ```cpp
+
 #include<bits/stdc++.h>
 #define ll long long
 using namespace std;
