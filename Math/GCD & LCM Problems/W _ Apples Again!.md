@@ -4,7 +4,7 @@
 
 **Solution** :
 
-f(a, b, x) :  Count of number that are less than x and multiples of a and b
+f(a, b, x) :  Count of numbers that are equal or less than x and multiples of a and b
 
 f(a, b, x) = (x/a) + (x/b) - (x/lcm(a, b)) where 
 
