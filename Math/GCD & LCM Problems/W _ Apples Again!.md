@@ -1,4 +1,4 @@
-# N-th multiple in sorted list of multiples of two numbers
+# Apples Again!
 
 [Problem Link](https://codeforces.com/group/MEqF8b6wBT/contest/277493/problem/M)
 
