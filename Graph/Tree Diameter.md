@@ -10,16 +10,16 @@ int n,m;
 int dis[N];             
 int par[N];             
 vector<int> edges[N];   
-void bfs(int src) 
+void bfs(int u) 
 {
     queue<int> q;
-    q.push(src);
+    q.push(u);
     memset(par, -1, sizeof(par));
     memset(dis, -1, sizeof(dis));
-    dis[src] = 0;
+    dis[u] = 0;
     while(!q.empty()) 
     {
-        int u = q.front();q.pop();
+        u = q.front();q.pop();
         for(int v : edges[u]) 
             if (dis[v] == -1)
             {
@@ -28,6 +28,7 @@ void bfs(int src)
                 q.push(v);
             }
     }
+    return u;
 }
 int calcTreeDiameter(int root) 
 {
