@@ -2,6 +2,20 @@
 
 ## Dijkstra Algorithm
 
+### Single Source Shortest Path (SSSP)
+
+- BFS
+- BFS on Complement Graph
+- Dijkstra's Algorithm
+- Bellman Ford's Algorithm
+- Optimized Bellman Ford's Algorithm
+
+### All Pair Shortest Path (APSP)
+
+- Floyd Warshal's Algorithm
+
+
+
 [Problem Link](https://codeforces.com/contest/20/problem/C)
 
 ```cpp
