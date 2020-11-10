@@ -1,5 +1,7 @@
 # Tree Diameter
 
+The diameter of a tree is the number of nodes on the longest path between two leaves in the tree. The [diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/tree%20diameter.png) shows two tree each with diameter nine, the leaves that form the ends of the longest path are colored (note that there may be more than one path in the tree of the same diameter).
+
 Computes the length of the diameter of the tree. (i.e. the length of the longest path in the tree).
  
 ```cpp
