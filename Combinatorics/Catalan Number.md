@@ -80,7 +80,10 @@ For n  = 3, there are five trees
  /            \                  \        /
 1              3                  2      2
 ```
-<img align="left" width="600" height="400" src="https://i.ytimg.com/vi/sd6R1sZJL1w/maxresdefault.jpg">
+
+<p align="center">
+  <img width="600" height="400" src="https://i.ytimg.com/vi/sd6R1sZJL1w/maxresdefault.jpg">
+</p>
 
 4) Given a [convex polygon](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Math/convex-concave.jpg) with n+2 sides . The task is to calculate the number of ways in which triangles can be formed by connecting vertices with non-crossing line segments
 for n = 1, It is already a triangle so it can only be formed in 1 way.
