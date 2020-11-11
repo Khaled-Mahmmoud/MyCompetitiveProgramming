@@ -61,5 +61,4 @@ int bfs()
     else
     cout<<"NO"<<endl;
 }
-
 ```
