@@ -34,15 +34,15 @@ public:
             {
                 bool w = check(cur->edge[i],cnt+1,col);
                 if(fg2)
-                   fg = w; // check(cur->edge[i],cnt+1,col);
+                   fg = w; // fg = check(cur->edge[i],cnt+1,col);
                 fg2 = false;
                 bool k = (cnt&1);
                 if(col)
                     k = !k;
                 if(k)
-                fg |= w;  // check(cur->edge[i],cnt+1,col);
+                fg |= w;  // fg |= check(cur->edge[i],cnt+1,col);
                 else
-                fg &= w;  // check(cur->edge[i],cnt+1,col);
+                fg &= w;  // fg &= check(cur->edge[i],cnt+1,col);
                 
                 // please don't use above code with comments, it's give time limited
             }
