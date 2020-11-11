@@ -44,7 +44,7 @@ public:
                 else
                 fg &= w;  // fg &= check(cur->edge[i],cnt+1,col);
                 
-                // please don't use above code with comments, it's give time limited
+                // please don't use code above with comments, it's give time limited
             }
         if(fg2)
         return (cnt&1);
