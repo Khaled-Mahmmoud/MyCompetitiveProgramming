@@ -47,10 +47,12 @@ int main()
     char ch_val; 
     float f_val; 
     tuple <int,char,float> tup1(20,'g',17.5);
-    tuple <int,char,float> tup2(10,'f',15.5); 
-    tup1.swap(tup2); 
+    tuple <int,char,float> tup2(10,'f',15.5);  
     tie(i_val,ch_val,f_val) = tup1;
     cout << i_val << " " << ch_val << " " << f_val;  // 20 g 17.5
+    tup1.swap(tup2);
+    
+    // make_tuple, get, tie, swap
     return 0; 
 } 
 ```
