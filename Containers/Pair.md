@@ -3,8 +3,8 @@
 Pair is a container that can be used to bind together a two values which may be of different types.
 
 ```cpp
-pair <int, char> p1;                    // default
-pair <int, char> p2 (1, ‘a’);            // value inititialization
+pair <int, char> p1;                     // default declaration
+pair <int, char> p2 (1, ‘a’);            // declaration and inititialization
 pair <int, char> p3 (p2);               // copy of p2
 ```
 We can also initialize a pair using make_pair() function. 
