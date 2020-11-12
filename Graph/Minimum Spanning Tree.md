@@ -21,7 +21,7 @@ struct edge
 };
 int n,m;
 int vis[N];
-vector<edge> edges[N];
+vector<edge> adj[N];
 int primMST()
 {
     priority_queue<edge> q;
@@ -35,7 +35,7 @@ int primMST()
         if (vis[u]++)
             continue;
         MST += w;
-        for(edge& e : edges[u])
+        for(edge& e : adj[u])
             if(!vis[e.to])
                 q.push(e);
     }
@@ -48,8 +48,8 @@ int main()
     {
         int u, v, w;
         cin>>u>>v>>w;
-        edges[u].push_back(edge(v, w));
-        edges[v].push_back(edge(u, w));
+        adj[u].push_back(edge(v, w));
+        adj[v].push_back(edge(u, w));
     }
     cout<<primMST();
 }
