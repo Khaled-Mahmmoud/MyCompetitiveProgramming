@@ -16,7 +16,7 @@ struct edge
 };
 struct comp
 {
-    bool operator()(const edge& l,const edge& r)const
+    bool operator()(const edge &l,const edge &r)const
     {
         return l.weight > r.weight;
         // for maximum spanning tree we used
