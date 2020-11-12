@@ -21,8 +21,6 @@ Features of stacks
 3) Do not consume a fixed amount of memory
 4) Size of stack changes with each push() and pop() operation. Each push() and pop() operation increases and decreases the size of the stack by 1, respectively.
 
-A stack can be [visualized](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Containers/stack.png) as follows:
-
 ```cpp
 #include <stack>  
 stack<object_type>object_name;
@@ -41,7 +39,6 @@ Queues are data structures that follow **the First In First Out (FIFO)** i.e. th
 
 Elements are always added to the back and removed from the front. Think of it as a line of people waiting for a bus. The person who is at the beginning of the line is the first one to enter the bus.
 
-A stack can be [visualized](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Containers/queue.png) as follows:
 
 ```cpp
 #include <queue>  
