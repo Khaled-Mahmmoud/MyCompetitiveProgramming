@@ -2,8 +2,6 @@
 
 Pair is a container that can be used to bind together a two values which may be of different types.
 
-Pair provides a way to store two heterogeneous objects as a single unit.
-
 ```cpp
 pair <int, char> p1;                    // default
 pair <int, char> p2 (1, ‘a’);            // value inititialization
@@ -13,7 +11,7 @@ We can also initialize a pair using make_pair() function.
 ```cpp
 p1 = make_pair(2, ‘b’);
 ```
-To access the elements we use keywords, first and second to access the first and second element respectively.
+To access the elements we use keywords.
 ```cpp
 cout << p2.first << ‘ ‘ << p2.second << endl;
 
