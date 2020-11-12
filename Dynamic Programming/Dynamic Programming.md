@@ -11,13 +11,13 @@ by storing solutions of subproblems, time complexity reduces to polynomial (line
 Recursion : Exponentail
 
 
-**
+```cpp
 int fib(int n)
 {
     if(n<2)return n;
     return fib(n-1) + fib(n-2);
 }
-**
+```
 
 Dynamic Programming : Polynomial
 ```cpp
