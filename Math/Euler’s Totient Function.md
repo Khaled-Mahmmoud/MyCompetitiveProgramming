@@ -24,7 +24,7 @@ i.e., the numbers whose GCD (Greatest Common Divisor) with n is 1
 
 - sqrt(n) <= φ(n) <= n - sqrt(n): Except 2, 6
 
-- φ(n^k) = n^k-1 * φ(n)
+- φ(n^k) = n^(k-1) * φ(n)
  
  **Some Interesting Properties of Euler’s Totient Function**
 
@@ -39,7 +39,7 @@ For example ?(5) is 4 and ?(6) is 2, so ?(30) must be 8 as 5 and 6 are relativel
 
 4) For any two prime numbers p and q, ?(pq) = (p-1) * (q-1). 
 
-5) If p is a prime number, then ?(p^k) = p^k – p^(k-1) = p^k-1 * (p-1).
+5) If p is a prime number, then ?(p^k) = p^k – p^(k-1) = p^(k-1) * (p-1).
 
 6) Sum of values of totient functions of all divisors of n is equal to n.
 For example, n = 6, the divisors of n are 1, 2, 3 and 6. According to Gauss, sum of ?(1) + ?(2) + ?(3) + ?(6) should be 6
@@ -54,11 +54,11 @@ A **simple Solution** is to iterate through all numbers from 1 to n-1 and count 
  
  A **Better Solution** is as we know that If a, b, c are pairwise coprimes, then φ(a * b * c) = φ(a) * φ(b) * φ(c)
  
-We know that all prime factors of a number is pairwise comprimes.
+We know that all prime factors of a number is pairwise coprimes.
 
 then φ(n) = φ(p1^h1) * φ(p2^h2) * φ(p3^h3) where p1, p2 and p3 are prime factors of n.
 
-We know that If p is a prime number, then ?(p^k) = p^k-1 * (p-1).
+We know that If p is a prime number, then ?(p^k) = p^(k-1) * (p-1).
  ```cpp
  int phi(int n)
 {
