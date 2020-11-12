@@ -37,7 +37,8 @@ sort(a,a+n,greater<long long>());
 string s = "monkey";
 sort(str.begin(), str.end());
 // a reverse order is possible as follows:
-sort(str.rbegin(),str.rend());          OR       sort(str.begin(),str.end(),greater<int>())
+sort(str.rbegin(),str.rend());          OR 
+sort(str.begin(),str.end(),greater<char>())
 ```
 
 Sorting a string means that the characters of the string are sorted. For example, the string ”monkey” becomes ”ekmnoy”
