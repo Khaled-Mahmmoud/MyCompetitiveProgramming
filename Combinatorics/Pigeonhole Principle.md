@@ -51,27 +51,3 @@ In some problems, it can be the major trick. Sometimes comes with Modular Arithm
 2) A cycle of Length M (M > N nodes), must be composed of cycles each of Length <= N.
 
 3) Every graph contains two vertices of same degree.
-
-
-### Powers tower % M
-
-Let’s compute: 2^3^4^5^6^7^8 % 56.
-
-We can solve it using Euler theorem. let’s simplify it, compute 2^X % 56. where x is very large, e.g. x = 3^4^5^6^7^8.
-
-Imagine we compute 2^i%M for i [0 - OO]. We know we have M mod values: [0 - M-1].
-
-Pigeonhole: values repeat in maximum M + 1 iterations. Then computing X should have same value as one of the first powers in range [0-M-1]. But which 2^i%M correspond to 2^x%M ?
-
-Let’s simulate it.
-```
-   i         0    1    2    3    4    5    6    7
-2^i % 56     1    2    4    8    16   32   8    16
-```
-2^6 is same as 2^3. Then 2^7 must = 2^4...etc. {8,16,32} is cycle and {1,2,4} is precycle.
-
-Let length of the cycle be L, and length of precycle be P.
-
-Given some X, we can compute its i position. i = (X % L - P % L + L) % L + P -->> (X-P)%L + P
-
-Then? Solve subproblem X % L in same manner. Then compute 2^i % M.
