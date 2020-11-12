@@ -79,7 +79,7 @@ ll sumPower(ll a, int k)
 	return half * (1 + half - sumPower(a, k / 2 - 1));
 }
 ```
-Time Complexity : O(k)
+Time Complexity : O(log(k))
 
 ### Powers tower % M
 
