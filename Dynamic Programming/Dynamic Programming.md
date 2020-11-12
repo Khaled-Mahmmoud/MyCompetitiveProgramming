@@ -8,8 +8,10 @@ For example, if we write simple recursive solution for Fibonacci Numbers, we get
 and if we optimize it 
 by storing solutions of subproblems, time complexity reduces to polynomial (linear)
 
-  Recursion : Exponentail
-**```
+Recursion : Exponentail
+
+
+```py
 int fib(int n)
 {
     if(n<2)return n;
@@ -17,7 +19,7 @@ int fib(int n)
 }
 ```
 
-  Dynamic Programming : Polynomial
+Dynamic Programming : Polynomial
 ```cpp
 vector<int>dp(1e7);
 int fib(int n)
