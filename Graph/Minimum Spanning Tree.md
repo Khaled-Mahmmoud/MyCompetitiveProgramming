@@ -13,10 +13,14 @@ struct edge
     int to, weight;
     edge() {}
     edge(int t, int w) : to(t), weight(w) {}
-    bool operator<(const edge& rhs) const {
-        return weight > rhs.weight;
+};
+struct comp
+{
+    bool operator()(const edge& l,const edge& r)const
+    {
+        return l.weight > r.weight;
         // for maximum spanning tree we used
-        //  return weight < rhs.weight;
+        //  return l.weight < r.weight;
     }
 };
 int n,m;
@@ -24,7 +28,7 @@ int vis[N];
 vector<edge> adj[N];
 int primMST()
 {
-    priority_queue<edge> q;
+    priority_queue<edge,vector<edge>,comp> q;
     q.push(edge(1, 0));
     int MST = 0;
     while(!q.empty())
