@@ -28,20 +28,20 @@ int vis[N];
 vector<edge> adj[N];
 int primMST()
 {
-    priority_queue<edge,vector<edge>,comp> q;
-    q.push(edge(1, 0));
+    priority_queue<edge,vector<edge>,comp> pq;
+    pq.push(edge(1, 0));
     int MST = 0;
-    while(!q.empty())
+    while(!pq.empty())
     {
-        int u = q.top().to;
-        int w = q.top().weight;
-        q.pop();
+        int u = pq.top().to;
+        int w = pq.top().weight;
+        pq.pop();
         if (vis[u]++)
             continue;
         MST += w;
         for(edge& e : adj[u])
             if(!vis[e.to])
-                q.push(e);
+                pq.push(e);
     }
     return MST;
 }
