@@ -39,7 +39,7 @@ For example ?(5) is 4 and ?(6) is 2, so ?(30) must be 8 as 5 and 6 are relativel
 
 4) For any two prime numbers p and q, ?(pq) = (p-1) * (q-1). 
 
-5) If p is a prime number, then ?(p^k) = p^k – p^(k-1) = p^(k-1) * (p-1).
+5) If p is a prime number, then ?(p^k) = p^(k-1) * (p-1).
 
 6) Sum of values of totient functions of all divisors of n is equal to n.
 For example, n = 6, the divisors of n are 1, 2, 3 and 6. According to Gauss, sum of ?(1) + ?(2) + ?(3) + ?(6) should be 6
@@ -82,59 +82,6 @@ We know that If p is a prime number, then ?(p^k) = p^(k-1) * (p-1).
 }
  ```
  Complexity : O(sqrt(n))
-
-**Another Solution**. The idea is based on Euler’s product formula which states that value of totient functions 
-is below product over all prime factors p of n
-```
- ϕ(n) = n II (1-1/p)
-          p|n
-```       
-The formula basically says that the value of ?(n) is equal to n multiplied by product of (1 – 1/p) for all prime factors p of n
-
-For example value of ?(6) = 6 * (1-1/2) * (1 – 1/3) = 2
-```cpp
-int phi(int n) 
-{ 
-    double result = n;
-    for (int p = 2; p * p <= n; ++p) 
-    { 
-        if (n % p == 0) 
-        { 
-            while (n % p == 0) 
-                n /= p; 
-            result *= (1 - (1 / (double)p)); 
-        } 
-    } 
-    if (n > 1) 
-        result *= (1 - (1 / (double)n)); 
-  
-    return (int)result; 
-} 
-```
-We can avoid floating point calculations in above method
-The idea is to count all prime factors and their multiples
-and subtract this count from n to get the totient function value
-(Prime factors and multiples of prime factors won’t have gcd as 1)
-```cpp
-int phi(int n) 
-{ 
-    int result = n; 
-    for (int p = 2; p * p <= n; ++p) 
-    { 
-          
-        if (n % p == 0)
-        { 
-            while (n % p == 0) 
-                n /= p; 
-            result = result - result / p; 
-        } 
-    } 
-    if (n > 1) 
-        result = result - result / n; 
-    return result; 
-}
-```
-Complexity : O(sqrt(n)) 
 
 **Phi Factorial Code**
 
