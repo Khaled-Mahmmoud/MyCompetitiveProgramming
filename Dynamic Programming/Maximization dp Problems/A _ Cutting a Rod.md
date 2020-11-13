@@ -20,12 +20,9 @@ price   : 3   5   8   9  10  17  17  20
   
 **Memoization Method – Top Down Dynamic Programming**
 
-Complexity : O(n^2)
-  
-Considering the above implementation,[recursion tree](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Dynamic%20Programming/recursion%20tree%20rod.png) for a Rod of length 4
-cR() ---> cutRod() 
+Complexity : O(n^2) 
 
-```cpp
+```
 int dp[10001];
 vector<int>price;
 int cut(int n)
@@ -54,7 +51,7 @@ int main()
 }
 ```
 **Tabulation Method – Bottom Up Dynamic Programming**
-```cpp
+```
 vector<int>price;
 int cut(int n)
 {
