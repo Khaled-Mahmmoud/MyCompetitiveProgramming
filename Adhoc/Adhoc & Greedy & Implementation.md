@@ -1,3 +1,5 @@
+# Adhoc & Greedy & Implementation
+
 **Adhoc** :: means that problem does not require any prerequisite knowledge of any algorithm or data structure or high level mathematical
 concept and can be solved using basic logical skills or sometimes even by common sense.
 
