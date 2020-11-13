@@ -10,7 +10,7 @@ n <= 10^6
 
 Print the number of ways modulo 10^9+7	
 
-```cpp	
+```
 #define mod 1000000007
 int dp[1000006];
 int solve(int n)
@@ -51,7 +51,7 @@ n <= 10^6
 
 Print the number of ways modulo 10^9+7	
 
-```cpp	
+```
 #define mod 1000000007
 int dp[1000006][7];
 int solve(int n,int j)
