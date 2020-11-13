@@ -5,17 +5,9 @@ from the list, and their score increases by that number. Both players try to max
     
 What is the maximum possible score for the first player when both players play optimally?
     
-Input:
+Input: 4 {4 5 1 3}, Output : 8
 
-4
-    
-4 5 1 3
-    
-Output : 8
-
-1 <= n <= 1000
-    
-10^-9 <= v[i] <= 10^9
+1 <= n <= 1000, 10^-9 <= v[i] <= 10^9
    
 ```cpp
 vector<int>v;
