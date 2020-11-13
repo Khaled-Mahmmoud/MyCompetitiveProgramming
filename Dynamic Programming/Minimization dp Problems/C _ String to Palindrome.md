@@ -8,7 +8,7 @@ The operations are described below:
 - Remove any character from any position
 - Replace any character at any position with another character
 
-```cpp
+```
 #include<bits/stdc++.h>
 #define ll long long
 using namespace std;
