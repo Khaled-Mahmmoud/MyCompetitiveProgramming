@@ -23,7 +23,7 @@ n: Length of str2 (second string)
 3) Replace: Recur for m-1 and n-1
 
 **Memoization Method – Top Down Dynamic Programming**
-```
+```cpp
 int dp[1009][1009];
 string str1,str2;
 int solve(int m,int n)
@@ -42,7 +42,7 @@ int solve(int m,int n)
 Complexity : O(mn)
 
 **Tabulation Method – Bottom Up Dynamic Programming**
-```
+```cpp
 int ed(string s1,string s2,int m,int n)
 {
     int dp[m+1][n+1]; // please use 2d-array in dp , not to use 2d-vector , because 2d-vector is slower
@@ -63,7 +63,7 @@ Complexity : O(mn)
 
 # Printing Edit Distance
 
-```
+```cpp
 #include<bits/stdc++.h>
 #define ll long long
 using namespace std;
