@@ -31,7 +31,7 @@ There are three paths
 
 Complexity : O(mn)
     
-```cpp
+```
 int dp[1009][1009];
 int path(int m,int n)
 {
@@ -56,7 +56,7 @@ int main()
     
 Complexity : O(mn)
     
-```cpp
+```
 int path(int m,int n)
 {
     int dp[m][n];
@@ -83,7 +83,7 @@ you only can move right or down.
 ```
 n <= 1000
     
-```cpp
+```
 int main()
 {
     int n;
@@ -122,8 +122,8 @@ int main()
 Time Complexity : O(n^2)
 
 Count number of paths in matrix n * m go to right or down only
-```cpp
-ull countNumberOfPaths(int n, int m) 
+```
+ll countNumberOfPaths(int n, int m) 
 {
 	return nCr(n + m - 2, n - 1);
 }
