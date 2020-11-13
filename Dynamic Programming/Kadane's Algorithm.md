@@ -2,7 +2,7 @@
 
 Given an array arr of N integers. Find the contiguous sub-array with maximum sum.
 
-```
+```cpp
 int maxSubArraySum(int a[], int size) 
 { 
     int ans = INT_MIN, r = 0; 
@@ -29,7 +29,7 @@ int maxSubArraySum(int a[], int size)
 Time Complexity : O(n)
 
 To print the subarray with the maximum sum, we maintain indices whenever we get the maximum sum
-```
+```cpp
 int maxSubArraySum(int a[], int size) 
 { 
     int ans = INT_MIN , r = 0, sat =0, en = 0, s=0; 
