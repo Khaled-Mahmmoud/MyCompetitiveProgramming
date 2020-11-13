@@ -107,7 +107,6 @@ int fib(int n)
    return fib(n-1) + fib(n-2); 
 }
 ```
-[Recursion tree](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Dynamic%20Programming/Recursion%20tree%20fib(5).png) for execution of fib(5)
 
 We can see that the function fib(3) is being called 2 times. If we would have stored the value of fib(3)
 then instead of computing it  again, we could have reused the old stored value.
