@@ -2,7 +2,7 @@
 
 [Problem Link](https://vjudge.net/problem/TopCoder-11781)
 
-```cpp
+```
 #include<bits/stdc++.h>
 #define ll long long
 using namespace std;
