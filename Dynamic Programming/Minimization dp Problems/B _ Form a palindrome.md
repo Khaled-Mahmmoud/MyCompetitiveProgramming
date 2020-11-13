@@ -10,7 +10,7 @@ aa: Number of insertions required is 0. aa
 
 abcd: Number of insertions required is 3. dcbabcd
 
-```cpp
+```
 #include<bits/stdc++.h>
 using namespace std;
 const int MAX = 1009;
