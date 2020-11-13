@@ -17,7 +17,7 @@ a[i] <= 10^6
 
 dp[x] = minimum number of coins with sum x
     
-```cpp
+```
 int dp[1000006];
 int n;int a[102];
 int solve(int x)
