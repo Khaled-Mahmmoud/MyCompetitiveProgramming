@@ -3,7 +3,7 @@
 
 [Problem Link](https://vjudge.net/problem/UVA-10003)
 
-```cpp
+```
 #include<bits/stdc++.h>
 #define ll long long
 using namespace std;
