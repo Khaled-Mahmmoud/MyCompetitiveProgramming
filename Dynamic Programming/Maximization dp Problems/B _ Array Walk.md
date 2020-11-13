@@ -2,7 +2,7 @@
 
 [Problem Link](https://codeforces.com/problemset/problem/1389/B)
 
-```cpp
+```
 #define N  200009
 int n,arr[N],dp[N][6][2];
 // where k is inferenced variable
