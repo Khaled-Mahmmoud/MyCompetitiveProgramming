@@ -11,7 +11,7 @@ by storing solutions of subproblems, time complexity reduces to polynomial (line
 Recursion : Exponentail
 
 
-```
+```cpp
 int fib(int n)
 {
     if(n<2)return n;
@@ -20,7 +20,7 @@ int fib(int n)
 ```
 
 Dynamic Programming : Polynomial
-```
+```cpp
 vector<int>dp(1e7);
 int fib(int n)
 {
@@ -55,7 +55,7 @@ Once, again as our general procedure to solve a DP we first define a state.
 In this case, we define a state as dp[x], where dp[x] is to find the factorial of x
 Now, it is quite obvious that dp[x+1] = dp[x] * (x+1)
 
-```
+```cpp
 int dp[MAXN];
 
 int dp[0] = 1;  // base case
@@ -71,7 +71,7 @@ the values of states that can reach the destination state, till we reach the bot
 
 Once again, let’s write the code for the factorial problem in the top-down fashion
 
-```
+```cpp
 int dp[MAXN];
 int solve(int x)
 {
@@ -99,7 +99,7 @@ subproblems are stored in a table so that these don’t have to be recomputed. S
 when there are no common (overlapping)  subproblems because there is no point storing the solutions if they are not
 needed again. For example, Binary Search doesn’t have common subproblems. If we take an example of following recursive
 program for Fibonacci Numbers, there are many subproblems which are solved again and again
-```
+```cpp
 int fib(int n) 
 { 
    if ( n <= 1 ) 
