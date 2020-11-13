@@ -1,7 +1,7 @@
 # Nikita and string
 
 [Problem Link](https://codeforces.com/problemset/problem/877/B)
-```
+```cpp
 string str;
 int n, dp[5005][5];
 int solve(int i, int group)
@@ -43,7 +43,7 @@ int main()
 # Weather
 
 [Problem Link](https://codeforces.com/problemset/problem/234/C)
-```
+```cpp
 #include<bits/stdc++.h>
 #define ll long long
 using namespace std;
