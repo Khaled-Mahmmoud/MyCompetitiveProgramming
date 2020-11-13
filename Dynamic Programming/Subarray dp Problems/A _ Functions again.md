@@ -2,7 +2,7 @@
 
 [Problem Link](https://codeforces.com/contest/788/problem/A)
 
-```cpp
+```
 #define ll long long
 int n;
 int a[200005];
