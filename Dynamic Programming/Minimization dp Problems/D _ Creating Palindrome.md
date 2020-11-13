@@ -5,7 +5,7 @@
 
 [Problem link](https://vjudge.net/problem/UVA-11753)
 
-```cpp
+```
 int n,k,a[10009],dp[10009][29][29];
 int solve(int i,int k1,int k2)
 {
