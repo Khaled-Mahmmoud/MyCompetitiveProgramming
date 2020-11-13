@@ -2,7 +2,7 @@
 
 [Problem Link](https://vjudge.net/problem/POJ-1260)
 
-```cpp
+```
 #include<iostream>
 #include<cstring>
 #define ll long long
