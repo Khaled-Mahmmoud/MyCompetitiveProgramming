@@ -2,7 +2,7 @@
 
 [Problem Link](https://vjudge.net/problem/UVA-10651)
 
-```cpp
+```
 #include<bits/stdc++.h>
 #define ll long long
 using namespace std;
@@ -55,7 +55,7 @@ int main()
 }
 ```
 ### Better Solution
-```cpp
+```
 #include<bits/stdc++.h>
 #define ll long long
 using namespace std;
