@@ -123,7 +123,13 @@ Shortest Path algorithms like Floyd–Warshall and Bellman–Ford are typical ex
 
 On the other hand, the Longest Path problem doesn’t have the Optimal Substructure property. Here by Longest Path 
 we mean longest  simple path (path without cycle) between two nodes. Consider the following unweighted graph given 
-in the CLRS book. There are two [longest paths](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Dynamic%20Programming/longest%20path%20.png) from q to t: q→r→t and q→s→t. Unlike shortest paths, these longest
+in the CLRS book. 
+```
+q ---- r
+|      |
+s -----t
+```
+There are two longest paths from q to t: q→r→t and q→s→t. Unlike shortest paths, these longest
 paths do not have the optimal substructure propertym, For example, the longest path q→r→t is not a combination of 
 longest path from q to r and longest path from r to t, because the longest path from q to r is q→s→t→r and 
 the longest path from r to t is r→q→s→t.    
