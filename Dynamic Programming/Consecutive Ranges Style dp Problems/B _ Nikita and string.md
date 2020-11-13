@@ -42,7 +42,8 @@ int main()
 
 # Weather
 
-```cpp
+[Problem Link](https://codeforces.com/problemset/problem/234/C)
+```
 #include<bits/stdc++.h>
 #define ll long long
 using namespace std;
