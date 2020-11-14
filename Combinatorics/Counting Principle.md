@@ -137,7 +137,7 @@ First piece has 64 choices.. then 1 row & 1 col are blocked
 
 So we have 7x7= 49 choices for 2nd rock. Total 64 * 49.
 
-Wrong! part of your solution {(0,0), (1,1)}, {(1,1), (0,0)}
+Wrong! (0,0), (1,1) same as (1,1), (0,0)
 
 Symmetry of each 2 rocks. Answer: 64 * 49 / 2
 
