@@ -1,4 +1,4 @@
-# Fractional Knapsack Problem
+# Fractional Knapsack 
 
 `Greedy`
 
