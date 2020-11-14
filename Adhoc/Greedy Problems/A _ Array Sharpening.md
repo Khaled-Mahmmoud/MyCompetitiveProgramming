@@ -44,9 +44,7 @@ int main()
         else
             cout << "No\n";
     }
-}#include <bits/stdc++.h>
-#define ll long long
-using namespace std;
+}
 int main()
 {
     int t;
