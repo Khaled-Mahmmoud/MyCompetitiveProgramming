@@ -121,3 +121,32 @@ int main()
 
 ## The Division Rule
 
+A food table with 3 chairs. Given 3 persons, in how many ways we can seat them? 1 2 3, 1 3 2, 2 1 3, 2 3 1, 3 1 2, 3 2 1 => 6 ways
+
+Wrong!	123 same as 231 same as 312 [by making 1 shift], So given 1 seating, we can generate 3 similar seatings.
+
+so answer is 6 / 3 = 2 .. or generally n! / n = n-1!, nPr(circle) = nPr/r
+
+Division rule: solution = m / d, where each d elements of m are same (e.g. symmetric)
+
+In an 8x8 chess, how many ways to put rock? Product rule: 8 rows x 8 cols = 64 ways.
+
+In an 8x8 chess, how many ways to put 2 rocks, with no shared rows or columns?
+
+First piece has 64 choices.. then 1 row & 1 col are blocked
+
+So we have 7x7= 49 choices for 2nd rock. Total 64 * 49
+
+◼	Wrong! part of your solution {(0,0), (1,1)}, {(1,1), (0,0)}​
+
+Symmetry of each 2 rocks. Answer: 64 * 49 / 2​
+
+When generating the actual results,​
+
+symmetric relationships gives faster code​
+
+Generate the main part (major processing time)​
+
+Use that to generate the symmetric answer​
+
+See USACO problem: Checker Challenge​
