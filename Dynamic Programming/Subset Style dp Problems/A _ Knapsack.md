@@ -89,7 +89,7 @@ than or equal to W You cannot break an item, either pick the complete item, or d
   
 **Memoization Method – Top Down Dynamic Programming**
 
-In the following [recursion tree](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Dynamic%20Programming/recursion%20tree%200-1%20knapsack.png), K() refers to knapSack().
+In the following recursion tree, K() refers to knapSack().
 The two parameters indicated in the following recursion tree are n and W.  
 The recursion tree is for following sample inputs.
 wt[] = {1, 1, 1}, W = 2, val[] = {10, 20, 30}
@@ -114,8 +114,6 @@ int knapSack(int n,int w)
 ```
 
 **Tabulation Method – Bottom Up Dynamic Programming**
-
-[See This Table](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Dynamic%20Programming/table%200-1%20knapsack.png)
 
 Complexity : O(wn)
 
