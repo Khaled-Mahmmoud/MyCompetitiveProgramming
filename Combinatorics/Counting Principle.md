@@ -135,18 +135,9 @@ In an 8x8 chess, how many ways to put 2 rocks, with no shared rows or columns?
 
 First piece has 64 choices.. then 1 row & 1 col are blocked
 
-So we have 7x7= 49 choices for 2nd rock. Total 64 * 49
+So we have 7x7= 49 choices for 2nd rock. Total 64 * 49.
 
-◼	Wrong! part of your solution {(0,0), (1,1)}, {(1,1), (0,0)}​
+Wrong! part of your solution {(0,0), (1,1)}, {(1,1), (0,0)}
 
-Symmetry of each 2 rocks. Answer: 64 * 49 / 2​
+Symmetry of each 2 rocks. Answer: 64 * 49 / 2
 
-When generating the actual results,​
-
-symmetric relationships gives faster code​
-
-Generate the main part (major processing time)​
-
-Use that to generate the symmetric answer​
-
-See USACO problem: Checker Challenge​
