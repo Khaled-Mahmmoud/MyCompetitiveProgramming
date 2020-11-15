@@ -6,8 +6,9 @@ Given a number positive number n, find value of f0 + f1 + f2 + …. + fn where f
 
 **Method** 2 (O(Log n)) : The idea is to find relationship between the sum of Fibonacci numbers and n’th Fibonacci number.
 
-F(n) can be evaluated in O(log n) time Matrices
+F(n) can be evaluated in O(log n) time Matrices.
 
+```cpp
 int fib(int n)
 {
     if(n <= 1)
@@ -28,3 +29,4 @@ int main()
     cout << "Sum of Fibonacci numbers is : "<< calculateSum(n) << endl; 
     return 0; 
 } 
+```
