@@ -1,4 +1,4 @@
-# Tree Data Structure 
+# Tree 
 
 Search - Remove - Add ==>>{ O(log n) - Average Case } , { O(n) - Worst Case }
 
@@ -187,12 +187,3 @@ Max no. of nodes at level L = 2^L
          
 Max no. of nodes in binary tree = 2^(h+1) - 1 (where h is height of tree)   //  as perfect tree
 
-# Heap Data Structure
-
-A Heap is a special Tree-based data structure in which the tree is a complete binary tree. Generally, Heaps can be of two types :
-
-**Max-Heap** : In a Max-Heap the key present at the root node must be greatest among the keys present at all of it’s children. The same property must be recursively true for all sub-trees in that Binary Tree.
-
-**Min-Heap** : In a Min-Heap the key present at the root node must be minimum among the keys present at all of it’s children. The same property must be recursively true for all sub-trees in that Binary Tree.
-
-The [Diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Data%20Structure/MinHeapAndMaxHeap.png) of Heap Data Structure.
