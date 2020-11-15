@@ -51,7 +51,7 @@ Another property of logarithms is that the number of digits of an integer x in b
 For example, the representation of 123 in base 2 is 1111011 and [ log2(123) + 1 ] = 7
 ```
 logb b = 1, logb 1 = 0, logb 0 = -oo, log1 x = undefined
-● b ^ logb(x) = x => take logb for the equation to get x
+● b^logb(x) = x => take logb for the equation to get x
 ● x b^y => b^(logb(x) + y)
 ```
 
