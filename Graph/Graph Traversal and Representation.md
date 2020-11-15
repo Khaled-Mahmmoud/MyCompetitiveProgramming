@@ -14,31 +14,6 @@ In an undirected graph, if v[i][j] = 1, then v[i][j] = 1. In a directed graph, i
 
 Adjacency matrix provides constant time access (O(1) ) to determine if there is an edge between two nodes. Space complexity of the adjacency matrix is O(v^2).
 
-The adjacency matrix of [the following graph](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/adjacency%20matrix%20undirected%20graph.jpg) is:
-
-$ : 1 2 3 4
-
-1 : 0 1 0 1
-
-2 : 1 0 1 0
-
-3 : 0 1 0 1
-
-4 : 1 0 1 0
-
-The adjacency matrix of [the following graph](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/adjacency%20matrix%20directed%20graph.jpg) is:
-
-
-$ : 1 2 3 4
-
-1 : 0 1 0 0
-
-2 : 0 0 0 1
-
-3 : 1 0 0 1
-
-4 : 0 1 0 0
-
 ```cpp
 bool A[10][10];
 int main()
