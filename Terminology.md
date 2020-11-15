@@ -122,3 +122,54 @@ such that : d , cd , bcd.
 then string of 1 letter , has no proper suffix
 
 ******************************************************************************************************************************************************
+
+**Sequence** : is a collection of objects in which repetitions are allowed and order is important
+The number of elements (possibly infinite) of the sequenc is called the length of the sequence
+
+**Difference between set and sequence ?**
+set ==>> no order , no repetition
+sequence ==>> order and repetition are important
+
+set corresponding to sequenc 2,2,7,1,7,1,1 is {1,2,7}
+
+**Formula of Sequence**
+
+1) **Explicit functions**
+
+depends on the index n of the element
+
+S(n) = 2 + n       0<= n <=10
+
+s(0) = 2 + 0 = 2   first element
+
+s(1) = 2 + 1 = 3   second element
+
+s(2) = 2 + 2 = 4   third element
+
+2) **Recursive functions**
+
+depends on the previous element
+
+5! = 5 * 4!
+
+4! = 4 * 3!
+
+3! = 3 * 2!
+
+2! = 2 * 1!
+
+1! = 1
+
+F(1) = 1 , F(n) = n * F(n-1)
+
+Ex S = 1, 1, 2, 3, 5, 8,...
+
+S(1) = 1 , S(2) = 1 , S(n) = S(n-1) + S(n-2)
+
+String sequence : a,b,c,3,5,'',""
+
+.letters , numbers and special letters
+
+.no commas
+
+.if we remove commas from a sequence it becomes string
