@@ -15,7 +15,7 @@ int power(int x, unsigned int y)
         return x * power(x, y / 2) * power(x, y / 2); 
 } 
 ```
-Time Complexity: O(y)
+Time Complexity: O(4^log y)
     
 Above function can be optimized to O(log y) by calculating power(x, y/2) only once and storing it
 
