@@ -52,7 +52,7 @@ For example, the representation of 123 in base 2 is 1111011 and [ log2(123) + 1 
 ```
 logb b = 1, logb 1 = 0, logb 0 = -oo, log1 x = undefined
 ● b ^ logb(x) = x => take logb for the equation to get x
-● xb^y => b^(logb(x) + y)
+● x b^y => b^(logb(x) + y)
 ```
 
 ### + more 
