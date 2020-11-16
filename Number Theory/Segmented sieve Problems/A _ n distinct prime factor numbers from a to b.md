@@ -1,5 +1,5 @@
-/*
 You are given two numbers a and b (1 <= a,b <= 10^8 ) and n
+
 The task is to find all numbers between a and b inclusively having 
 exactly n distinct prime factors. The solution should be designed 
 in a way that it efficiently handles multiple queries for 
@@ -15,13 +15,13 @@ Output: 2
 // only 30 = 2*3*5, 42 = 2*3*7, 60 = 2*2*3*5, 66 = 2*3*11,
 // 70 = 2*5*7, 78 = 2*3*13, 84 = 2*2*3*7 and 90 = 2*3*3*5 
 // have exactly three distinct prime factors
+	
 This problem is basically application of segmented sieve. As we know that all prime factors
 of a number are always less than or equal to square root of number i.e; sqrt(n)
 So we generate all prime numbers less than or equals to 10^8 and store them in an array
 Now using this segmented sieve we check each number from a to b to have exactly n prime factors
 
-*/
-
+```cpp
 vector<int> primes;
 void segmentedSieve() 
 { 
@@ -68,3 +68,4 @@ int main()
     cout << Nfactors(a, b, n)<<'\n';}
     return 0; 
 } 
+```
