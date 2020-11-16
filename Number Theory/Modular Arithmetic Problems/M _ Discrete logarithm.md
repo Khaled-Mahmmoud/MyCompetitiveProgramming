@@ -1,25 +1,23 @@
-/*
-Discrete logarithm
-Given three integers a, b and m. Find an integer k such that 
+# Discrete logarithm
+
+Given three integers a, b and m. Find an integer k such that
 a^k = b (mod m) then k is discrete logarithm of m
 where a and m are relatively prime. If it is not possible for any k to satisfy this relation, print -1
 
 Input: 2 3 5
 Output: 3
 
-Explanation:
-a = 2, b = 3, m = 5
 
 The value which satisfies the above equation
 is 3, because 
 
 => 23 = 2 * 2 * 2 = 8
+    
 => 23 (mod 5) = 8 (mod 5) 
+    
 => 3
+    
 which is equal to b i.e., 3
-
-Input: 3 7 11
-Output: -1
 
 A Naive approach is to run a loop from 0 to m to cover all possible values of k and check for which value of k
 the above relation satisfies. If all the values of k exhausted, print -1. Time complexity of thuis approach is O(m)
@@ -31,12 +29,14 @@ First of all we have to write k = i * n - j
 where n = sqrt{m} and 0 <= i,j < n 
 
 Replace the ‘k’ in above equality, we get
+
 a^k = b (mod m)
+    
 a^{i * n - j} = b (mod m)
+    
 a^{i * n} = a^j * b (mod m)
 
-*/
-
+```cpp
 int powmod(int x, int y, int p) 
 { 
     int res = 1; 
@@ -76,16 +76,15 @@ int main()
     int a = 2, b = 3, m = 5; 
     cout << discreteLogarithm(a, b, m) << endl; 
 } 
-
-/*
+```
 Time complexity: O(sqrt(m)*log(b))
+    
 Auxiliary space: O(sqrt(m))
 
 A possible improvement is to get rid of binary exponentiation or log(b) factor in the second phase of the algorithm
 This can be done by keeping a variable that multiplies by ‘a’ each time as ‘an’. Let’s see the program to understand more.
 
-*/
-
+```cpp
 int discreteLogarithm(int a, int b, int m)  
 { 
     int n = (int) sqrt (m) + 1; 
@@ -118,6 +117,7 @@ int main()
     int a = 2, b = 3, m = 5; 
     cout << discreteLogarithm(a, b, m) << endl; 
 } 
-/*
+```
 Time complexity: O(sqrt(m))
+
 Auxiliary space: O(sqrt(m))
