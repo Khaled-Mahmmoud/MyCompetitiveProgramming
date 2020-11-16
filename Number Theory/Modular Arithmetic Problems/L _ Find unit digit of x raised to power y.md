@@ -1,17 +1,13 @@
-/*
+# Find unit digit of x raised to power y
 
-Find unit digit of x raised to power y
 Given two numbers x and y, find unit digit of xy.
 
 Input  : x = 2, y = 1
+    
 Output : 2
-Explanation
-2^1 = 2 so units digit is 2.
+    
+Explanatio : 2^1 = 2 so units digit is 2.
 
-Input : x = 4, y = 2
-Output : 6
-Explanation
-4^2 = 16 so units digit is 6.
 
 
 Method 1 (Simple) Compute value of x^y and find its last digit
@@ -21,9 +17,7 @@ Method 2 (Efficient)
 1) Find last digit of x.
 2) Compute x^y under modulo 10 and return its value.
 
-*/
-
-
+```cpp
 int unitDigitXRaisedY(int x, int y) 
 {  
     x = x % 10;
@@ -33,8 +27,8 @@ int unitDigitXRaisedY(int x, int y)
   
     return res; 
 } 
-// Time Complexity : O(y)
-/*
+```
+Time Complexity : O(y)
 
 Further Optimizations: We can compute modular power in Log y.
 
@@ -55,8 +49,7 @@ x   |  power 2  |  power 3  |   power 4  | Cyclicity
 So here we directly mod the power y with 4 because this is the last power after this all number’s repetition start
 after this we simply power with number x last digit then we get the unit digit of produced number.
 
-*/
-
+```cpp
 int unitnumber(int x, int y) 
 { 
     x = x % 10; 
@@ -64,4 +57,5 @@ int unitnumber(int x, int y)
         y = y % 4 + 4; 
     return (((int)(pow(x, y))) % 10); 
 } 
-// Time Complexity : O(log y)
+```
+Time Complexity : O(log y)
