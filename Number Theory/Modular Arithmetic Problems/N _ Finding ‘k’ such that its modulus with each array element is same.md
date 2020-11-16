@@ -1,14 +1,18 @@
-/*
-Finding ‘k’ such that its modulus with each array element is same
+# Finding ‘k’ such that its modulus with each array element is same
+
 Given an array of n integers .We need to find all ‘k’ such that
 
 arr[0] % k = arr[1] % k = ....... = arr[n-1] % k 
 
 Input  : arr[] = {6, 38, 34}
+
 Output : 1 2 4
-        6%1 = 38%1 = 34%1 = 0
-        6%2 = 38%2 = 34%2 = 0
-        6%4 = 38%4 = 34%2 = 2
+        
+6%1 = 38%1 = 34%1 = 0
+
+6%2 = 38%2 = 34%2 = 0
+
+6%4 = 38%4 = 34%2 = 2
 
 Input  : arr[] = {3, 2}
 Output : 1
@@ -18,18 +22,22 @@ Suppose the array contains only two elements a and b (b>a)
 So we can write b = a + d where d isa positive integer and ‘k’ be a number such that b%k = a%k
 
 (a + d)%k = a%k
+
 a%k + d%k = a%k 
+
 d%k = 0
 
 Now what we get from the above calculation is that ‘k’ should be a divisor of difference between the two numbers.
-Now what we have to do when we have an array of integers
+        
+Now what we have to do when we have an array of integers.
 
 Find out the difference ‘d’ between maximum and minimum element of the array
+
 Find out all the divisors of ‘d’
+
 Step 3: For each divisor check if arr[i]%divisor(d) is same or not .if it is same print it.
 
-*/
-
+```cpp
 void printEqualModNumbers (int arr[], int n) 
 { 
     sort(arr, arr + n); 
@@ -62,3 +70,4 @@ int main()
     printEqualModNumbers(arr, n); 
     return 0; 
 } 
+```
