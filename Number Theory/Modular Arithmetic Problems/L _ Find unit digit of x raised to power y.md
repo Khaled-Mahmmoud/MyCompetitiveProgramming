@@ -34,7 +34,7 @@ Further Optimizations: We can compute modular power in Log y.
 
 Method 3 (Direct based on cyclic nature of last digit)
 This method depends on the cyclicity with the last digit of x that is
-
+```
 x   |  power 2  |  power 3  |   power 4  | Cyclicity  
 0   | .................................. |  .... repeat with 0
 1   | .................................. |  .... repeat with 1
@@ -46,6 +46,7 @@ x   |  power 2  |  power 3  |   power 4  | Cyclicity
 7   |     9     |     3     |      1     | .... repeat with 7
 8   |     4     |     2     |      6     | .... repeat with 8
 9   |     1     | ...................... |  .... repeat with 9 
+```
 So here we directly mod the power y with 4 because this is the last power after this all number’s repetition start
 after this we simply power with number x last digit then we get the unit digit of produced number.
 
