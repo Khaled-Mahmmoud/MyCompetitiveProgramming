@@ -1,22 +1,15 @@
-/*
-Number of solutions to Modular Equations
+# Number of solutions to Modular Equations
+
 Given A and B, the task is to find the number of possible values that X
 can take such that the given modular equation (A mod X) = B holds good
 Here, X is also called a solution of the modular equation
 
-Input : A = 26, B = 2
-Output : 6
-Explanation
+Input : A = 26, B = 2 , Output : 6
+    
+Explanation : 
 X can be equal to any of {3, 4, 6, 8, 12, 24} as A modulus any of these values
 equals 2 i. e., (26 mod 3) = (26 mod 4) 
 = (26 mod 6) = (26 mod 8) = .... = 2 
-
-Input : 21 5
-Output : 2
-Explanation
-X can be equal to any of {8, 16} as A modulus 
-any of these values equals 5 i.e. (21 mod 
-8) = (21 mod 16) = 5
 
 
 If we carefully analyze the equation A mod X = B its easy to note that if (A = B) 
@@ -48,9 +41,7 @@ But as we know A mod X would result in values from (0 to X – 1) we must take a
 
 Thus, we can conclude by saying that the number of divisors of (A – B) greater than B
 are the all possible values X can take to satisfy A mod X = B
-
-*/
-
+```cpp
 int calculateDivisors(int A, int B) 
 { 
     int N = (A - B); 
@@ -93,8 +84,5 @@ void numberOfPossibleWays(int A, int B)
              << ", X can take " << noOfSolutions << " values\n"; 
     } 
 } 
-/*
-Output:
-For A = 26 and B = 2, X can take 6 values
-For A = 21 and B = 5, X can take 2 values
+```
 Time Complexity of the above approach is nothing but the time complexity of finding the number of divisors of (A – B) ie O(√(A – B))
