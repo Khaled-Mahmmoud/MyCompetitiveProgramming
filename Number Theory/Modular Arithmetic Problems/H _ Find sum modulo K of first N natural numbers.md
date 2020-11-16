@@ -1,10 +1,11 @@
-/*
+# Find sum of modulo K of first N natural number
 
-Find sum of modulo K of first N natural number
 Given two integer N and K, the task is to find sum of modulo K of first N natural numbers i.e 1%K + 2%K + ….. + N%K.
 
 Input : N = 10 and K = 2.
+   
 Output : 5
+   
 Sum = 1%2 + 2%2 + 3%2 + 4%2 + 5%2 + 6%2 + 7%2 + 8%2 + 9%2 + 10%2
    = 1 + 0 + 1 + 0 + 1 + 0 + 1 + 0 + 1 + 0 = 5
 
@@ -22,9 +23,7 @@ Case 2: When N >= K, then integers from 1 to K in natural number sequence will p
 as result when operate with modulo K. Similarly, from K + 1 to 2K, it will produce same result
 So, the idea is to count how many numbers of times this sequence appears and multiply it with 
 the sum of first K – 1 natural numbers
-
-*/
-
+```cpp
 int findSum(int N, int K) 
 { 
     int ans = 0; 
@@ -40,7 +39,7 @@ int main()
     cout << findSum(N, K) << endl; 
     return 0; 
 } 
-/*
-Output :
-5
+```
+Output : 5
+   
 Time Complexity : O(1)
