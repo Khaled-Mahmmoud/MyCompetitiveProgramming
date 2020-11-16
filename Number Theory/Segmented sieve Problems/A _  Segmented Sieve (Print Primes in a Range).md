@@ -1,5 +1,5 @@
-// Given a range [low, high], print all primes in this range? For example, if the given range is [10, 20], then output is 11, 13, 17, 19.
-
+Given a range [low, high], print all primes in this range? For example, if the given range is [10, 20], then output is 11, 13, 17, 19.
+```cpp
 void simpleSieve(int limit, vector<int> &prime)
 {
 	bool mark[limit+1];
