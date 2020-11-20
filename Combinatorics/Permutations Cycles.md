@@ -51,14 +51,14 @@ Complexity : O(n * x)
 ```cpp
 vector<int> nthPerm(int len, int nth) 
 {
-    vector<int> identity(len), perm(len);
+    vector<int> id(len), perm(len);
     for(int i=0;i<len;i++)
-    identity[i] = i;
+    id[i] = i;
     for (int i = len - 1; i >= 0; --i)
     {
         int p = nth / Fact[i];
-	perm[len - i - 1] = identity[p];
-	identity.erase(identity.begin() + p);
+	perm[len - i - 1] = id[p];
+	id.erase(id.begin() + p);
 	nth %= Fact[i];
     }
     return perm;
