@@ -14,7 +14,6 @@ Idx: 5		2 1 0		-> Reversed
 ```
 **How to iteratively generate Permutations ?**
 ```cpp
-
 void Permutation(int a[],int n)
 {
     do
@@ -24,6 +23,7 @@ void Permutation(int a[],int n)
         cout<<'\n';
     }
     while(next_permutation(a,a+n));
+    // while(prev_permutation(a,a+n);
 }
 int main() 
 { 
