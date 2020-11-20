@@ -1,4 +1,4 @@
-# Permutations Cycles
+## Permutations Cycles
 
 ```
 For vector {0, 1, 2} -> we have 3! = 6
@@ -13,7 +13,6 @@ Idx: 4		2 0 1
 Idx: 5		2 1 0		-> Reversed
 ```
 **How to iteratively generate Permutations ?**
-
 ```cpp
 
 void Permutation(int a[],int n)
@@ -34,7 +33,7 @@ int main()
     return 0; 
 } 
 ```
-Complexity : O(!n)
+**Complexity : O(!n)**
 
 number of purmutaions = !n / !(n-r) where r = n , it's !n / !0 = !n
 
