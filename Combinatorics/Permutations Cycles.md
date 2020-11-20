@@ -34,8 +34,10 @@ int main()
 } 
 ```
 **Complexity : O(!n)**
+
+**The next permutation of s after x steps**
 ```cpp
-void permutation(string str,int n,int x)
+void permutation(string str,int x)
 {
     for(int i=0;i<x;i++)
         next_permutation(str.begin(),str.end());
