@@ -1,4 +1,5 @@
-// Generating subsets
+## Generating subsets
+```cpp
 vector<int>v,sub;
 int n;
 vector<vector<int>>res;
@@ -27,4 +28,5 @@ int main()
     }
     return 0;
 }
-// time complexity : O(2^n)
+```
+**complexity : O(2^n)**
