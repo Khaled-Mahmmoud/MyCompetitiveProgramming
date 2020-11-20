@@ -3,17 +3,17 @@
 #include<deque>
 deque<int> dq = {2,5,7,3}
 ```
-### Iterators 
+#### Iterators 
 
 dq.begin() / dq.end() / dq.rbegin() / dq.rend() / dq.cbegin() / dq.cend() / dq.crbegin() / dq.crend()   
 
 Complexity : O(1)
 
-### Element Access
+#### Element Access
 
 dq.front() / dq.back() / dq.at(pos) / operator[pos] 
 
-### Capacity
+#### Capacity
 
 dq.size() / dq.empty()    
 
@@ -25,7 +25,7 @@ If n is greater than the current container size, the content is expanded by inse
 
 Complexity : Linear on the number of elements inserted / erased 
 
-### Modifiers
+#### Modifiers
 
 dq.insert(iterator,val) OR dq.insert(iterator,n,val) OR dq1.insert(dq1 iterator,dq2 first iterator,dq2 last iterator)
 
@@ -42,6 +42,4 @@ Complexity : Linear on the number of elements after position
 
 dq.push_back(val) / dq.push_front(val) / dq.emplace_back(val) / dq.emplace_front(val) / dq.pop_back()  / dq.pop_front()/dq1.swap(v2) /swap(v[0],v[2])    
 
-dq.clear()  Linear in size || Removes all elements from the deque , leaving the deque with a size of 0
-********************* Member functions *******************************
-dq1.operator=(v2) || Linear in size (v1+v2) || Assigns new contents , replacing its current contents, and modifying its size 
+dq.clear() : Linear in size : Removes all elements from the deque , leaving the deque with a size of 0
