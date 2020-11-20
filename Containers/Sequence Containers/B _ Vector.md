@@ -1,8 +1,7 @@
-# Vector
+## Vector
 
 ```cpp
 #include<vector>
-vector<object_type> v ( size_of_object , intial_value )
 vector<int> v (10,5) ;
 vector<int> v = {2,4,5,9} ;
 ```
@@ -10,87 +9,79 @@ vector<int> v = {2,4,5,9} ;
 
 10^8 ===>>> 2,5
 
-### Iterators 
+#### Iterators 
 
-v.begin()    || O(1) || Returns an iterator pointing to the first element 
+v.begin() / v.end() / v.rbegin() / v.rend() / v.cbegin() / v.cend()  / v.crbegin()  / v.crend()    
 
-v.end()      || O(1) || Returns an iterator pointing to the last element 
+Complexity : O(1)
 
-v.rbegin()   || O(1) || Returns a reverse iterator pointing to the last element 
+#### Element Access 
 
-v.rend()     || O(1) || Returns a reverse iterator pointing to the first element 
+v.front() / v.back() / v.at(pos) / operator[pos] 
 
-v.cbegin()   || O(1) || Returns a const_iterator pointing to the first element 
+Complexity : O(1)
 
-v.cend()     || O(1) || Returns a const_iterator pointing to the last element 
+#### Capacity 
 
-v.crbegin()  || O(1) || Returns a const_reverse_iterator pointing to the last element 
+v.size() / v.max_size() / v.empty()    
 
-v.crend()    || O(1) || Returns a const_reverse_iterator pointing to the first element 
+Complexity : O(1)
 
-### Element Access 
-
-v.front()    || O(1) || Returns a reference pointing to the first element 
-
-v.back()     || O(1) || Returns a reference pointing to the last element 
-
-v.at(pos)    || O(1) || Returns a reference to the element at position pos (O-Indexed)
-
-operator[pos]|| O(1) || Returns a reference to the element at position pos (O-Indexed)
-
-v.data()     || O(1) || Returns a pointer to the first element 
-
-### Capacity 
-
-v.size()     || O(1) || Returns the number of elements 
-
-v.max_size() || O(1) || Returns the maximum number of elements that the container can hold
-
-v.empty()    || O(1) || Returns whether the container is empty 
-
-v.resize(n)  ||      || Change size of vector to n size
+v.resize(n) : 
 
 If n is smaller than the current container size, the content is reduced to its first n elements, removing those beyond.
    
 If n is greater than the current container size, the content is expanded by inserting at the end as many elements as needed to reach a size of n
    
-Complexity : Linear on the number of elements inserted / erased 
+Complexity : Linear on initial + final sizes
 
-### Modifiers 
+#### Modifiers 
 
-**assign**
 
 v.assign(n,val) OR v1.assign(v2 first iterator ,v2 last iterator)
 
 Complexity : Linear on initial + final sizes
 
-**insert**
+////////////////////////.\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 v.insert(iterator,val) OR v.insert(iterator,n,val) OR v1.insert(v1 iterator,v2 first iterator,v2 last iterator)
 
 Complexity : Linear on the number of elements inserted plus the number of elements after position
 
-**erase**
+////////////////////////.\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 v.erase(iterator) OR v.erase(first iterator , last iterator)
 
 **Erasing** an element in a vector is O(n) since once you remove the element you still need to shift all successive elements to fill the gap created. 
 If a vector has n elements, then at the worst case you will need to shift n-1 elemets, hence the **complexity is O(n)**
 
-**emplace**
+////////////////////////.\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-v.emplace(iterator,val) || Insert a new element at position of iterator (faster)
+v.emplace(iterator,val) : Insert a new element at position of iterator (faster)
+
 Complexity : Linear on the number of elements after position
 
-v.push_back(val)    || O(1) || Add element at the end 
+////////////////////////.\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-v.emplace_back(val) || O(1) || Add element at the end   (faster)
+v.push_back(val) : O(1) : Add element at the end 
 
-v.pop_back()        || O(1) || Delete the last element 
+////////////////////////.\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-v1.swap(v2)         || O(1) || Sawp two container
+v.emplace_back(val) : O(1) : Add element at the end   (faster)
 
-swap(v[0],v[2])     || O(1) || Sawp two elements
+////////////////////////.\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+v.pop_back() : O(1) : Delete the last element 
+
+////////////////////////.\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+v1.swap(v2) : O(1) : Sawp two container
+
+////////////////////////.\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+swap(v[0],v[2]) : O(1) : Sawp two elements
+
+////////////////////////.\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 v.clear()  || Linear in size || Removes all elements , leaving the vector with a size of 0
 
