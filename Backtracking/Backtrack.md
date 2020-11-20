@@ -3,10 +3,10 @@
 int n;
 vector<int>v,sub;
 vector<vector<int>>res;
-void subset(int index=0)
+void subset(int idx=0)
 {
     res.push_back(sub);
-    for(int i=index; i<n; i++)
+    for(int i=idx; i<n; i++)
     {
         sub.push_back(v[i]);
         subset(i+1);
