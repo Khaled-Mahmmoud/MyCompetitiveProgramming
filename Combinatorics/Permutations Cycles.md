@@ -34,6 +34,16 @@ int main()
 } 
 ```
 **Complexity : O(!n)**
+```cpp
+void permutation(string str,int n,int x)
+{
+    for(int i=0;i<x;i++)
+        next_permutation(str.begin(),str.end());
+    //  prev_permutation(str.begin(),str.end());
+    cout<<str;
+}
+```
+**Complexity : O(x)**
 
 number of purmutaions = !n / !(n-r) where r = n , it's !n / !0 = !n
 
