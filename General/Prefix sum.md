@@ -1,15 +1,20 @@
-# Prefix sum
+### Prefix sum
 
 One-dimensional array: O(n)
 
 ```cpp
+int main()
+{
     int n;
     cin>>n;
     vector<int>v(n),prefix(n+1);
+    
     for(int i=0;i<n;i++)
         cin>>v[i];
+        
     for(int i=1;i<=n;i++)
         prefix_sum[i]=prefix[i-1]+v[i-1];
+        
     int q;
     cin>>q;
     while(q--)
@@ -18,9 +23,8 @@ One-dimensional array: O(n)
         cin>>l>>r;
         cout<<prefix[r]-prefix[l-1]<<endl;
     }
+}
 ```
-
-Building [two-dimensional prefix sum](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/General/Two-dimensional%20array%20prefix_sum.jpg) array and printing the prefix sum between two indices for each query.
 
 Two-dimensional array: O(n * m)
 
@@ -29,9 +33,7 @@ Two-dimensional array: O(n * m)
 #define ll long long
 using namespace std;
 int main()
-{
-    ios::sync_with_stdio(false),cin.tie(0);
-    
+{    
     int n,m;
     cin>>n>>m;
     vector<vector<int>>v(n,vector<int>(m));
@@ -54,7 +56,6 @@ int main()
         cin >>r2>>c2;
         cout <<PrefixSum[r2][c2]-PrefixSum[r2][c1-1]-PrefixSum[r1-1][c2]+PrefixSum[r1-1][c1-1]<<endl;
     }
-    return 0;
 }
 
 ```
