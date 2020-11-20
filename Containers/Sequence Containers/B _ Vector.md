@@ -74,9 +74,8 @@ Complexity : Linear on the number of elements inserted plus the number of elemen
 
 v.erase(iterator) OR v.erase(first iterator , last iterator)
 
-Complexity : Linear on the number of elements erased plus the number of elements after the last element deleted 
-
-(Linear on the size of vector before erase operation)
+**Erasing** an element in a vector is O(n) since once you remove the element you still need to shift all successive elements to fill the gap created. 
+If a vector has n elements, then at the worst case you will need to shift n-1 elemets, hence the **complexity is O(n)**
 
 **emplace**
 
