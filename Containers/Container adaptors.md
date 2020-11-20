@@ -1,8 +1,6 @@
-# Container adaptors
+## Container adaptors
 
-### Stack
-
-Stacks are dynamic data structures that follow **the Last In First Out (LIFO)** principle. The last item to be inserted into a stack is the first one to be deleted from it.
+#### Stack
 
 ```cpp
 #include <stack>  
@@ -16,12 +14,7 @@ sk.emplace(val) // adds a new element at the top of the stack // O(1)
 sk1.swap(sk2)  || O(1) || Sawp two container
 ```
 
-### Queue
-
-Queues are data structures that follow **the First In First Out (FIFO)** i.e. the first element that is added to the queue is the first one to be removed.
-
-Elements are always added to the back and removed from the front.
-
+#### Queue
 
 ```cpp
 #include <queue>  
@@ -36,21 +29,19 @@ q.back() // Returns a reference to the newest element in the queue // O(1)
 q1.swap(q2)  || O(1) || Sawp two container
 ```
 
-### Priority Queue
-
-priority queue is an abstract data type similar to a regular queue or stack data structure in which each element additionally has a "priority" associated with it. In a priority queue, an element with high priority is served before an element with low priority.
+#### Priority Queue
 
 ```cpp
 #include <priority_queue>  
-priority_queue<object_type,vector<int>>object_name; OR
-priority_queue<object_type,deqeue<int>>object_name;
-pq.empty() // Returns whether the priority_queue is empty // O(1)
-pq.size() // Returns the number of elements in the priority_queue // O(1)
-pq.top() // Returns a reference to the top element in the priority_queue(refers to rightmost element) // O(1)
-pq.push(val) // Inserts a new element at the priority_queue // O(1)
-pq.pop() // Removes the element on top of the priority_queue // O(1)
-pq.emplace(val) // adds a new element at the priority_queue // O(1)
-pq1.swap(pq2)  || O(1) || Sawp two container
+priority_queue<int,vector<int>>pq; OR
+priority_queue<int,deqeue<int>>pq;
+pq.empty() // O(1)
+pq.size() // O(1)
+pq.top() // O(1)
+pq.push(val) // O(1)
+pq.pop() // O(1)
+pq.emplace(val) // O(1)
+pq1.swap(pq2)  // O(1) 
 
 priority_queue<int,vector<int>>pq; // all elements of pq stored in ascending order
 priority_queue<int,vector<int>,greater<int>>pq; // all elements of pq stored in descending order
