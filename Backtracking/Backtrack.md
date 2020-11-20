@@ -3,7 +3,7 @@
 int n;
 vector<int>v,sub;
 vector<vector<int>>res;
-void subset(int idx=0)
+void subset(int idx)
 {
     res.push_back(sub);
     for(int i=idx; i<n; i++)
@@ -19,7 +19,7 @@ int main()
     v.resize(n);
     for(int i=0; i<n; i++)
         cin>>v[i];
-    subset();
+    subset(0);
     for(int i=0; i<res.size(); i++)
     {
         for(int j=0; j<res[i].size(); j++)
