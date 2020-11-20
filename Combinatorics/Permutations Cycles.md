@@ -12,7 +12,7 @@ Idx: 3		1 2 0
 Idx: 4		2 0 1
 Idx: 5		2 1 0		-> Reversed
 ```
-**How to iteratively generate Permutations ?**
+### How to iteratively generate Permutations ?
 ```cpp
 void Permutation(int a[],int n)
 {
@@ -33,9 +33,9 @@ int main()
     return 0; 
 } 
 ```
-**Complexity : O(n * !n)**
+Complexity : O(n * !n)
 
-**The next permutation of s after x steps**
+### The next permutation of s after x steps ?
 ```cpp
 void permutation(string str,int x)
 {
@@ -45,12 +45,9 @@ void permutation(string str,int x)
     cout<<str;
 }
 ```
-**Complexity : O(n * x)**
+Complexity : O(n * x)
 
-number of purmutaions = !n / !(n-r) where r = n , it's !n / !0 = !n
-
-Given a permutation length, what is the ith permutation ?
-
+### Given a permutation length, what is the ith permutation ?
 ```cpp
 vector<int> nthPerm(int len, int nth) 
 {
@@ -68,7 +65,7 @@ vector<int> nthPerm(int len, int nth)
 }
 ```
 
-Given a permutation, what is its index ?
+### Given a permutation, what is its index ?
 ```cpp
 int PermToIndex(vector<int> perm)
 {
@@ -84,6 +81,12 @@ int PermToIndex(vector<int> perm)
     return idx;
 }
 ```
+
+
+
+
+
+
 
 ### Permutations Application
 
