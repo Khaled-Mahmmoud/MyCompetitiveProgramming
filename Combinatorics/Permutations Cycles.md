@@ -33,7 +33,7 @@ int main()
     return 0; 
 } 
 ```
-**Complexity : O(!n)**
+**Complexity : O(n * !n)**
 
 **The next permutation of s after x steps**
 ```cpp
@@ -45,7 +45,7 @@ void permutation(string str,int x)
     cout<<str;
 }
 ```
-**Complexity : O(x)**
+**Complexity : O(n * x)**
 
 number of purmutaions = !n / !(n-r) where r = n , it's !n / !0 = !n
 
