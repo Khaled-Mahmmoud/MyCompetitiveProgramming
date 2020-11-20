@@ -40,6 +40,6 @@ dq.emplace(iterator,val) || Insert a new element at position of iterator (faster
 
 Complexity : Linear on the number of elements after position
 
-dq.push_back(val) / dq.push_front(val) / dq.emplace_back(val) / dq.emplace_front(val) / dq.pop_back()  / dq.pop_front()/dq1.swap(v2) /swap(v[0],v[2])    
+dq.push_back(val) / dq.push_front(val) / dq.emplace_back(val) / dq.emplace_front(val) / dq.pop_back()  / dq.pop_front() / dq1.swap(dq2) / swap(dq[0],dq[2])    
 
 dq.clear() : Linear in size : Removes all elements from the deque , leaving the deque with a size of 0
