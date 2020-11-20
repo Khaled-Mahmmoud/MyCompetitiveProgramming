@@ -1,7 +1,7 @@
 ## Generating subsets
 ```cpp
-vector<int>v,sub;
 int n;
+vector<int>v,sub;
 vector<vector<int>>res;
 void subset(int index=0)
 {
