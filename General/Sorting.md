@@ -52,26 +52,16 @@ After this, the order of the tuples is (1,5,3), (2,1,3) and (2,1,4)
 ```
 **Comparison functions**
 
-It is also possible to give an external comparison function to the sort function
-as a callback function. For example, the following comparison function sorts
-strings primarily by length and secondarily by alphabetical order
+to give an external comparison function to the sort function
 ```cpp
 bool pred(string a, string b)
 {
-    if (a.size() != b.size())
-        return a.size() < b.size();
     return a < b;
 }
 sort(v.begin(), v.end(), pred);
 ```
 #### How to sort a pair increasing based on first element then decreasing based on second element?
-```
-1 100
-1 99
-2 101
-2 100
-3 400
-```
+
 ```cpp
 bool pred(pair<int, int> a, pair<int, int> b)
 {
@@ -83,4 +73,16 @@ bool pred(pair<int, int> a, pair<int, int> b)
 }
 vector<pair<int,int>>v;
 sort(v.begin(), v.end(), pred);
+```
+#### How to declare a set based on specified sorting ?
+```cpp
+struct cmp
+ {
+     // notice you should to use struct cmp ,const , & and please save this code for me (:
+	 bool operator() (const pair<int, int> &a, const pair<int, int> &b) const  
+	 {
+	  	// code
+	 }
+};
+set<pair<int,int>,cmp>st;
 ```
