@@ -29,9 +29,6 @@ sort(str.begin(), str.end());
 sort(str.rbegin(),str.rend());          OR 
 sort(str.begin(),str.end(),greater<char>())
 ```
-
-Sorting a string means that the characters of the string are sorted. For example, the string ”monkey” becomes ”ekmnoy”
-
 Pairs (pair) are sorted primarily according to their first elements (first).
 However, if the first elements of two pairs are equal, they are sorted according to
 their second elements (second)
@@ -67,8 +64,7 @@ bool pred(string a, string b)
 }
 sort(v.begin(), v.end(), pred);
 ```
-
-### How to sort a pair increasing based on first element then decreasing based on second element?
+#### How to sort a pair increasing based on first element then decreasing based on second element?
 ```
 1 100
 1 99
@@ -88,8 +84,7 @@ bool pred(pair<int, int> a, pair<int, int> b)
 vector<pair<int,int>>v;
 sort(v.begin(), v.end(), pred);
 ```
-
-## Counting Sort
+#### Counting Sort
 
 Counting sort is a sorting technique based on keys between a specific range. It works by counting the number of objects having distinct key values.
 Then doing some arithmetic to calculate the position of each object in the output sequence.
