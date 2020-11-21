@@ -1,32 +1,20 @@
-# Sorting
-It is almost never a good idea to use a self-made sorting algorithm in a contest
-because there are good implementations available in programming languages.
-For example, the C++ standard library contains the function sort that can be easily used for sorting arrays and other data structures.
-There are many benefits in using a library function. First, it saves time because there is no need to implement the function.
-Second, the library implementation is certainly correct and efficient: it is not probable that a self-made sorting function would 
-be better.
+#### Sorting
 
-we can sort in O(n^2)
 ```cpp
-    for(int i=0;i<n;i++)
-        for(int j=0;j<i;j++)
-          if(a[j]>a[i])swap(a[j],a[i]);
-```
-
-In this section we will see how to use the C++ sort function. 
-The following code sorts a vector in increasing order.
-```cpp
-
+// a vector as can be sorted as follows:
 sort(v.begin(),v.end());   // O(nlogn)
-// After the sorting, the contents of the vector will be [2,3,3,4,5,5,8]
+
 // a reverse order is possible as follows:
-sort(v.rbegin(),v.rend());          OR       sort(v.begin(),v.end(),greater<int>())
+sort(v.rbegin(),v.rend());
+sort(v.begin(),v.end(),greater<int>())
 
 
 // An ordinary array a can be sorted as follows:
-sort(a,a+n);  // where n is the size of array
+sort(a,a+n);  
+
 // a reverse order is possible as follows:
 sort(a,a+n,greater<int>());
+
 // but if there 
 long long a[n];
 // we can sort it by:
@@ -36,6 +24,7 @@ sort(a,a+n,greater<long long>());
 //The following code sorts the string s:
 string s = "monkey";
 sort(str.begin(), str.end());
+
 // a reverse order is possible as follows:
 sort(str.rbegin(),str.rend());          OR 
 sort(str.begin(),str.end(),greater<char>())
@@ -76,11 +65,10 @@ bool pred(string a, string b)
         return a.size() < b.size();
     return a < b;
 }
-// Now a vector of strings can be sorted as follows:
 sort(v.begin(), v.end(), pred);
 ```
 
-### How do i sort a pair increasing based on first element then decreasing based on second element?
+### How to sort a pair increasing based on first element then decreasing based on second element?
 ```
 1 100
 1 99
