@@ -78,7 +78,7 @@ sort(v.begin(), v.end(), pred);
 ```cpp
 struct cmp
  {
-     // notice you should to use struct (cmp, const, &)
+     // notice you should to use (struct cmp, const, &)
      bool operator() (const pair<int, int> &a, const pair<int, int> &b) const  
      {
 	 // code
