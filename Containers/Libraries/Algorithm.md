@@ -151,11 +151,9 @@ Complexity : O(n)
 #### unique 
 ```cpp
 vector<int>v={1,1,2,2,3,3,4,5};
-
+                // Array should be sorted
+                
 auto it = unique(v.begin(),v.end());
-
-for(int i=0;i<8;i++)
-    cout<<v[i]<<' ';   // 1 2 3 4 5 3 4 5
 
 cout<<'\n'<<*it<<'\n';   //  3
 
@@ -164,4 +162,4 @@ v.resize(it-v.begin());
 for(int i=0;i<v.size();i++)
      cout<<v[i]<<' ';     // 1 2 3 4 5
 ```
-Array should be sorted, Complexity : O(n)
+Complexity : O(n)
