@@ -30,7 +30,6 @@ Complexity : O(n)
 [Solution Link](https://codeforces.com/contest/182/submission/94810395)
 
 #### Count of subarrays which contains a given number exactly K times
-Given an array A[] of N elements consisting of values from 1 to N with duplicates, the task is to find the total number of subarrays which contain a given number num exactly K times.
 ```cpp
 int countSubarrays(int A[], int num,int K, int size)  
 {                                                  
