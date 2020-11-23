@@ -1,4 +1,4 @@
-### Prefix sum
+## Prefix sum
 
 One-dimensional array: O(n)
 
@@ -56,3 +56,9 @@ int main()
 }
 
 ```
+### Prefix Sum Problems
+
+#### Maximal Intersection
+[Problem Link](https://codeforces.com/contest/1029/problem/C)
+[Tutorial Link](https://codeforces.com/blog/entry/61439)
+[Solution Link](https://codeforces.com/contest/1029/submission/99326268)
