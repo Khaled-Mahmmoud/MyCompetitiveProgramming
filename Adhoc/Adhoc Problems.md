@@ -28,7 +28,3 @@ Complexity : O(n)
 #### Common Divisors
 [Problem Link](https://codeforces.com/contest/182/problem/D)
 [Solution Link](https://codeforces.com/contest/182/submission/94810395)
-
-#### Singhal and Equality
-[Problem Link](https://codeforces.com/group/5jpDueUEHd/contest/300302/problem/D)
-[Solution Link](https://codeforces.com/group/5jpDueUEHd/contest/300302/submission/96439022)
