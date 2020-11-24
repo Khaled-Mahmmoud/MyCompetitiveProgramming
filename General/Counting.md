@@ -194,3 +194,28 @@ int maxLen(int a[], int n)
     return len;
 }
 ```
+#### Subarray with given XOR
+Given an array of integers A and an integer B.
+Find the total number of subarrays having bitwise XOR of all elements equals to B.
+ 
+A = [4, 2, 2, 6, 4], B = 6
+ 
+The subarrays having XOR of their elements as 6 are: [4, 2], [4, 2, 2, 6, 4], [2, 2, 6], [6]
+ 
+```cpp
+int findsubarray(int a[],int n,int b)
+{
+    unordered_map<int,int>m;
+    int res = 0,cur = 0;
+    for(int i=0;i<n;i++)
+    {
+        cur += a[i];
+        if(cur==b)
+            res++;
+        if(m.find(cur^b)!=m.end())
+            res += m[cur^b];
+        m[cur]++;
+    }
+    return res;
+}
+```
