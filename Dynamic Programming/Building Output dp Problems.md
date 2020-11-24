@@ -21,7 +21,6 @@ n: Length of str2 (second string)
 2) Remove: Recur for m-1 and n
 3) Replace: Recur for m-1 and n-1
 
-**Memoization Method – Top Down Dynamic Programming**
 ```cpp
 int dp[1009][1009];
 string str1,str2;
@@ -38,29 +37,8 @@ int solve(int m,int n)
     return rt = 1 + min(solve(m-1,n),min(solve(m,n-1),solve(m-1,n-1)));
 }
 ```
-Complexity : O(mn)
 
-**Tabulation Method – Bottom Up Dynamic Programming**
-```cpp
-int ed(string s1,string s2,int m,int n)
-{
-    int dp[m+1][n+1]; // please use 2d-array in dp , not to use 2d-vector , because 2d-vector is slower
-    for(int i=0;i<=m;i++)
-    for(int j=0;j<=n;j++)
-    {
-        if(i==0)dp[i][j]=j;
-        else if(j==0)dp[i][j]=i; // please use else
-        else if(s1[i-1]==s2[j-1]) // please use else
-            dp[i][j]=dp[i-1][j-1];
-        else
-            dp[i][j]=1+min(dp[i][j-1],min(dp[i-1][j],dp[i-1][j-1]));
-    }
-    return dp[m][n];
-}
-```
-Complexity : O(mn)
-
-# Printing Edit Distance
+#### Printing Edit Distance
 
 ```cpp
 #include<bits/stdc++.h>
@@ -137,6 +115,7 @@ int main()
 
 [Problem Link](https://codeforces.com/contest/349/problem/B)
 
+`greed`
 ```cpp
 long long v,len,rem,arr[10],low=1e6,num;
 int main()
@@ -166,8 +145,7 @@ int main()
     return 0;
 }
 ```
-### dp Solution
-
+`dp` 
 ```cpp
 
 #include<bits/stdc++.h>
