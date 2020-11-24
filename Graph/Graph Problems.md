@@ -150,7 +150,7 @@ int main()
     return 0;
 }
 ```
-To remove edges from the graph
+**Remove edges from the graph**
 ```cpp
 void dfs(int u)
 {
