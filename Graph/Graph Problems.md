@@ -181,17 +181,17 @@ vector<int>g[100001];
 long long ans = 0;
 void dfs(int u=1, int p=-1)
 {
-      sz[u] = 1;
-      for(int i = 0; i < g[u].size(); ++i)
-      {
-	int v = g[u][i];
-	if(v == p)
-              continue;
-	dfs(v,u);
-	sz[u] += sz[v];
-     }
-     if(u != 1)
-	ans += 1ll*sz[u]*(n-sz[u]);
+    sz[u] = 1;
+    for(int i = 0; i < g[u].size(); ++i)
+    {
+        int v = g[u][i];
+        if(v == p)
+            continue;
+        dfs(v,u);
+        sz[u] += sz[v];
+    }
+    if(u != 1)
+        ans += 1ll*sz[u]*(n-sz[u]);
 }
 int main()
 {
@@ -199,9 +199,9 @@ int main()
     cin>>n;
     for (int i = 0; i < n-1; ++i)
     {
-	cin>>a>>b;
-	g[a].push_back(b);
-	g[b].push_back(a);
+        cin>>a>>b;
+        g[a].push_back(b);
+        g[b].push_back(a);
     }
     dfs();
     cout<<ans<<endl;
