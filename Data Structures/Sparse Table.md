@@ -49,6 +49,10 @@ Now in order to calculate any **_Q(l, r)_** we are going to use the _duplicate-i
 ```C++
 // LOG is a pre-computed array where LOG[i] = floor(log2(i))
 
+LOG[1] = 0;
+for (int i = 2; i <= n; ++i)
+    LOG[i] = LOG[i / 2] + 1;
+
 int g = LOG[r - l + 1];
 
 int x = ST[g][l];
