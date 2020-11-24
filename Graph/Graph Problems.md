@@ -173,3 +173,38 @@ void dfs(int u)
     adj[u] = newadj;
 }
 ```
+
+### Sum of lengths of all paths possible in a given tree
+```cpp
+int n,a,b,sz[100001];
+vector<int>g[100001];
+long long ans = 0;
+void dfs(int u=1, int p=-1)
+{
+	sz[u] = 1;
+	for(int i = 0; i < g[u].size(); ++i)
+    {
+		int v = g[u][i];
+		if(v == p)
+		    continue;
+		dfs(v,u);
+		sz[u] += sz[v];
+	}
+	if(u != 1)
+		ans += 1ll*sz[u]*(n-sz[u]);
+}
+int main()
+{
+    ios::sync_with_stdio(false),cin.tie(0);
+    cin>>n;
+	for (int i = 0; i < n-1; ++i)
+    {
+		cin>>a>>b;
+		g[a].push_back(b);
+		g[b].push_back(a);
+	}
+	dfs();
+	cout<<ans<<endl;
+    return 0;
+}
+```
