@@ -20,13 +20,3 @@ int main()
 }
 ```
 Complexity : O(n)
-
-#### Balanced Bitstring
-[Problem Link](https://codeforces.com/contest/1405/problem/C)
-[Tutorial Link](https://codeforces.com/blog/entry/82366)
-
-#### Common Divisors
-[Problem Link](https://codeforces.com/contest/182/problem/D)
-[Solution Link](https://codeforces.com/contest/182/submission/94810395)
-
-
