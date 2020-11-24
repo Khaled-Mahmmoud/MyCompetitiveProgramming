@@ -2,7 +2,7 @@
 
 [Problem Link](https://codeforces.com/contest/161/problem/D)
 
-```
+```cpp
 #include <bits/stdc++.h>
 #define ll long long
 using namespace std;
