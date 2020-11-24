@@ -1,4 +1,4 @@
-# Sparse Table
+##### Sparse Table
 
 Sparse table is a data structure that can help us answer range queries on a set on static data (i.e. data that does not change regularly).<br>
 Sparse table does pre-processing on the data first, then it can answer range queries efficiently.
@@ -18,7 +18,7 @@ So for example:<br>
 | _min(2, 3) = min(2, 2, 3, 3) = 2_ | minimum is _duplicate-invariant function_  |
 | _(2 + 3) != (2 + 2 + 3 + 3)_      | addition is not _duplicate-invariant_.     |
 
-## Sparse Table Structure
+#### Sparse Table Structure
 The structure of sparse table is a 2D array **_ST[j][i]_**,<br>
 where the **_j_**-th row in the sparse table holds the answer of queries of length **2^j**.
 
@@ -43,7 +43,7 @@ for (int i = 1; (1 << i) <= n; i++)
 }
 
 ```
-## Sparse Table Query
+#### Sparse Table Query
 Now in order to calculate any **_Q(l, r)_** we are going to use the _duplicate-invariant_ property to get the answer in **_O(1)_** as follows:
 
 ```C++
@@ -56,11 +56,3 @@ int y = ST[g][r - (1 << g) + 1];
 
 return min(x, y);
 ```
-
-## Full Implementation
-You can find the full implementation of the sparse table [here](https://github.com/OmarBazaraa/Competitive-Programming/blob/master/data_structures/sparse_table/sparse_table.cpp).
-
-The above implementation is an example of sparse table the computes the index of the minimum element in the range **_[L, R]_**
-
-## Problems
-1. [Codeforces CGCDSSQ](http://codeforces.com/contest/475/problem/D) => [Solution](http://codeforces.com/contest/475/submission/19443560)
