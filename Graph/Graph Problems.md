@@ -37,3 +37,64 @@ int main()
 }
 ```
 
+### How to find connected components using DFS?
+
+A graph is said to be disconnected if it is not connected, i.e. if two nodes exist in the graph such that there is no edge in between those nodes. In an undirected graph, a connected component is a set of vertices in a graph that are linked to each other by paths.
+
+In DFS, if we start from a start node it will mark all the nodes connected to the start node as visited. Therefore, if we choose any node in a connected component and run DFS on that node it will mark the whole connected component as visited.
+
+```cpp
+for(int i = 1;i <= nodes;++i) 
+{
+    if(visited[i] == false)     
+    {
+         dfs(i);
+         cnt_component++;
+    }
+}
+```
+### how to Check if an undirected graph has cycle ?
+```cpp
+vector<vector<int>>adj;
+vector<bool>vis;
+vector<int>parent;
+int cnt;
+void dfs(int u)
+{
+    vis[u] = 1;
+    for(auto v:adj[u])
+    if(vis[v])
+    {
+        if(parent[u]!=v)
+            cnt++;
+    }
+    else
+    {
+        parent[v] = u;
+        dfs(v);
+    }
+}
+int main()
+{
+    int n,m;
+    cin>>n>>m;
+    adj.resize(n+1);
+    vis.resize(n+1);
+    parent.resize(n+1);
+    while(m--)
+    {
+        int u,v;
+        cin>>u>>v;
+        adj[u].push_back(v);
+        adj[v].push_back(u);
+    }
+
+    for(int i=1; i<=n; i++)
+    if(!vis[i])dfs(i);
+
+    if(cnt)cout<<"YES";
+    else cout<<"NO";
+    
+    return 0;
+}
+```
