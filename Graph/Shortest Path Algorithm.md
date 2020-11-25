@@ -110,7 +110,7 @@ void bfs(int src)
 ```
 ### Dijkstra Algorithm
 
-Computes the shortest path between the given source node and all the other nodes in a weighted graph.
+Computes the shortest path between the given source node and all the other nodes in non-negative weighted graph.
 
 Complexity: O((n+m)log(n))
 
