@@ -27,7 +27,7 @@ General rule: |S1| * |S2| * |S3| … * |Sn|
 
 ### Sum Rule
 
-words: {bbb, bbc, bcb, bcc, cbb, cbc, ccb, ccc}
+words: {bbb,bc, bbc, bcb, bcc, cbb, cbc, ccb, ccc}
 
 How many words either start with bb or c? 2 + 4 [Notice, no intersection between that]
 
@@ -35,9 +35,7 @@ How many words either start with bb or c? 2 + 4 [Notice, no intersection between
 
 |A ∪ B ∪ C ∪ D ...| = |A| + |B| + |C| + |D| + ...
 
-How many words either start with cb or c? 2 + 4? Wrong there is overlap: 2 + 4 - 2(intersection) = 4
-
-How many words either start with cb or end  with bc? {cbb, cbc} + {bbc, cbc} - {cbc} = 2+4-1 = 5
+How many words either start with cb or end  with bc? 2 + 3? **Wrong** there is overlap: {cbb, cbc} + {bc,bbc, cbc} - {cbc}(intersection) = 2 + 3 - 1 = 4
 
 
 ### Inclusion Exclusion
