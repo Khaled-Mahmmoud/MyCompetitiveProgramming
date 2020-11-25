@@ -10,6 +10,8 @@
 
 - Floyd Warshal's Algorithm
 
+----------------------------------------------------------------------------------------------------------------------------------------------
+
 ### BFS
 
 Computes the shortest path between the given source node and all the other nodes in an unweighted graph.
