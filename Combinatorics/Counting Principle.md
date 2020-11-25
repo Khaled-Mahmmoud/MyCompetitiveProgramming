@@ -35,7 +35,7 @@ How many words either start with bb or c? 2 + 4 [Notice, no intersection between
 
 |A ∪ B ∪ C ∪ D ...| = |A| + |B| + |C| + |D| + ...
 
-How many words either start with cb or end  with bc? 2 + 3? **Wrong** there is overlap: {cbb, cbc} + {bc,bbc, cbc} - {cbc}(intersection) = 2 + 3 - 1 = 4
+How many words either start cb or end bc? 2 + 3? **Wrong** there is overlap: {cbb, cbc} + {bc,bbc, cbc} - {cbc}(intersection) = 2 + 3 - 1 = 4
 
 
 ### Inclusion Exclusion
