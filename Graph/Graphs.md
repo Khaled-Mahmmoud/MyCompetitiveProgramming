@@ -244,13 +244,9 @@ In [this graphs](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blo
        
 15) **Complement of a Graph**
 
-Let 'G−' be a simple graph with some vertices as that of ‘G’ and an edge {U, V} is present in 'G−', if the edge is not present in G. It means, two vertices are adjacent in 'G−' if the two vertices are not adjacent in G.
-
-If the edges that exist in graph I are absent in another graph II, and if both graph I and graph II are combined together to form a complete graph, then graph I and graph II are called complements of each other.
+if both graph I and graph II are combined together to form a complete graph, then graph I and graph II are called complements of each other.
   
 In [this graph](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/complement_of_graph.jpg), graph-I has two edges ‘cd’ and ‘bd’. Its complement graph-II has four edges.
-
-Note that the edges in graph-I are not present in graph-II and vice versa. Hence, the combination of both the graphs gives a complete graph of ‘n’ vertices.
 
 Note − A combination of two complementary graphs gives a complete graph.
 
