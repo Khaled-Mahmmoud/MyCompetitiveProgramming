@@ -1,4 +1,4 @@
-#### Euler’s Totient Function
+### Euler’s Totient Function
 
 totative of a positive integer n is an integer k (0 < k <= n) , such that n and k are coprimes.
  
