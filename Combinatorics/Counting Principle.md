@@ -48,7 +48,15 @@ Inclusion Exclusion principle is a generic sum rule to solve that
 
 2^3 -1 = 7 subsets (exponential)
 
-General Computations [Enumerate all subsets, Compute each one intersection, If odd subset add (include) it, If even subset subtract (exclude) it]
+**General Computations**
+
+- Enumerate all subsets,
+
+- Compute each one intersection
+
+- If odd subset add (include) it
+
+- If even subset subtract (exclude) it]
 
 How many integers in {1,2 ...,100} are  divisible by 2, 3, 5 or 7?
 
