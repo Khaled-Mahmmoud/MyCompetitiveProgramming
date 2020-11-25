@@ -95,7 +95,7 @@ Is any integer not divisible by perfect square (except 1)
 
 - perfect square: sqrt(n) = is integer. sqrt(16) = 4
 
-- In other words, no prime number occurs more
+- In other words, no prime factor occurs more
 than once: e.g. n = 2 * 5 * 11 is square free, but n
 = 2 * 3 * 3 * 3 * 7 is not (divisible by 9 = 3x3)
 
