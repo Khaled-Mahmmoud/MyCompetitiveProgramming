@@ -4,6 +4,7 @@
 
 If n is a prime number, then `a^(n-1) ≡ 1 (mod n)` 
  
+OR `a^(p-1) mod p = 1`
 
 Example: Since 5 is prime, 2^4 ≡ 1 (mod 5), 3^4 ≡ 1 (mod 5) and 4^4 ≡ 1 (mod 5) 
 
