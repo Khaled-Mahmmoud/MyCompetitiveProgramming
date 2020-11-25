@@ -8,13 +8,6 @@ Euler’s Totient function ?(n) for an input n is count of numbers in {1, 2, 3, 
  
 i.e., the numbers whose GCD (Greatest Common Divisor) with n is 1
  
-?(1) = 1  , gcd(1, 1) is 1
- 
-?(2) = 1 , gcd(2, 1) is 1, but gcd(2, 2) is 2.
- 
-?(5) = 4 , gcd(5, 1) is 1, gcd(5, 2) is 1, gcd(5, 3) is 1 and gcd(5, 4) is 1
- 
-?(6) = 2 , gcd(6, 1) is 1 and gcd(6, 5) is 1
  
  φ(n) = 1, 1, 2, 2, 4, 2, 6, 4, 6, 4, 10, 4, 12, 6, 8,
 8, 16, 6, 18, 8, 12, 10, 22, 8, 20, 12, 18, 12, 28,
