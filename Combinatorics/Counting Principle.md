@@ -58,7 +58,7 @@ Inclusion Exclusion principle is a generic sum rule to solve that
 
 - If even subset subtract (exclude) it]
 
-How many integers in {1,2 ...,100} are  divisible by 2, 3, 5 or 7?
+**How many integers in {1,2 ...,100} are  divisible by 2, 3, 5 or 7?**
 
 How many  divisible by 2? 100 / 2 = 50
 
