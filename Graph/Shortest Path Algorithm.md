@@ -126,13 +126,13 @@ long long dijkstra()
     vector<bool>vis(n+1);
     deque<int>dq;
     dq.push_front(1);
-    vis[1]=true;
-    d[1]=0;
+    vis[1] = true;
+    d[1] = 0;
     while(dq.size())
     {
         int u=dq.front();
         dq.pop_front();
-        vis[u]=0;
+        vis[u] = false;
         for(auto i:adj[u])
         {
             int v=i.first,w=i.second;
@@ -142,7 +142,7 @@ long long dijkstra()
                 par[v]=u;
                 if(!vis[v])
                     dq.push_front(v);
-                vis[v]=true;
+                vis[v] = true;
                 if(d[dq.front()]>d[dq.back()])
                 {
                     int k=dq.front();
