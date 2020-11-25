@@ -1,6 +1,4 @@
-# Counting Principle
-
-## Product Rule
+### Product Rule
 
 How many words of 3 letters of only B, C? easily: 2 x 2 x 2 = 8.
 
@@ -27,7 +25,7 @@ General rule: |S1| * |S2| * |S3| … * |Sn|
 
 2 ties, 5 jackets, 4 jeans, 2 shoes: Clothings? 2 x 5 x 4 x 2 = 80 dressing styles
 
-## Sum Rule
+### Sum Rule
 
 words: {bbb, bbc, bcb, bcc, cbb, cbc, ccb, ccc}
 
@@ -42,7 +40,7 @@ How many words either start with cb or c? 2 + 4? Wrong there is overlap: 2 + 4 -
 How many words either start with cb or end  with bc? {cbb, cbc} + {bbc, cbc} - {cbc} = 2+4-1 = 5
 
 
-## Inclusion Exclusion
+### Inclusion Exclusion
 
 Most of counting involves duplicate counting  issue [count item more than once].
 
@@ -119,7 +117,7 @@ int main()
 }
 ```
 
-## The Division Rule
+### The Division Rule
 
 A food table with 3 chairs. Given 3 persons, in how many ways we can seat them? 1 2 3, 1 3 2, 2 1 3, 2 3 1, 3 1 2, 3 2 1 => 6 ways
 
