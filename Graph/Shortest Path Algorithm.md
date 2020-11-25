@@ -19,11 +19,8 @@ Computes the shortest path between the given source node and all the other nodes
 Complexity: O(n+m)
 ```cpp
 const int N = 100100;
-int n;                  // The number of nodes.
-int m;                  // The number of edges.
-int dis[N];             // dis[v] : holds the shortest distance between the source and node "v".
-int par[N];             // par[v] : holds the parent of "v" in the shortest path the source to node "v".
-vector<int> edges[N];   // The graph adjacency list.
+int n, m, dis[N], par[N];             
+vector<int> edges[N];   
 void bfs(int src) 
 {
     queue<int> q;
@@ -43,7 +40,6 @@ void bfs(int src)
             }
     }
 }
-// Note that the path is encoded in reverse order
 void printPath(int v)
 {
     if(~par[v]) 
