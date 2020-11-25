@@ -45,7 +45,7 @@ A **simple Solution** is to iterate through all numbers from 1 to n-1 and count 
  
 We know that all prime factors of a number is pairwise coprimes.
 
-then φ(n) = φ(p1^h1) * φ(p2^h2) * φ(p3^h3) where p1, p2 and p3 are prime factors of n.
+then φ(n) = φ(p1^h1 * p2^h2 * p3^h3) =  φ(p1^h1) * φ(p2^h2) * φ(p3^h3) where p1, p2 and p3 are prime factors of n.
 
 We know that If p is a prime number, then ?(p^k) = p^(k-1) * (p-1).
  ```cpp
