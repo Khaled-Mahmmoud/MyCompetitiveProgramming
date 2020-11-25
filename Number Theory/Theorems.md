@@ -2,9 +2,7 @@
 
 ### Fermat's Little Theorem:
 
-If n is a prime number, then for every a < n.
-
-`a^(n-1) ≡ 1 (mod n)` 
+If n is a prime number, then `a^(n-1) ≡ 1 (mod n)` 
  
 
 Example: Since 5 is prime, 2^4 ≡ 1 (mod 5), 3^4 ≡ 1 (mod 5) and 4^4 ≡ 1 (mod 5) 
