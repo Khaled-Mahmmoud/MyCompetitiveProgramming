@@ -1,5 +1,3 @@
-# Shortest Path Algorithm
-
 ### Single Source Shortest Path (SSSP)
 
 - BFS
@@ -12,11 +10,10 @@
 
 - Floyd Warshal's Algorithm
 
-# BFS
+### BFS
 
-Computes the shortest path between the given source node and 
-all the other nodes in an unweighted graph using a BFS algorithm,
-and fills the results in the global "dis" and "par" arrays.
+Computes the shortest path between the given source node and all the other nodes in an unweighted graph.
+
 (i.e. Single-Source Shortest Path (SSSP))
  
 Complexity: O(n+m)
@@ -54,7 +51,13 @@ void printPath(int v)
     cout<<v<<'\n';
 }
 ```
-## Dijkstra Algorithm
+### Dijkstra Algorithm
+
+Computes the shortest path between the given source node and all the other nodes in a weighted graph.
+
+(i.e. Single-Source Shortest Path (SSSP))
+
+Complexity: O((n+m)log(n))
 
 [Problem Link](https://codeforces.com/contest/20/problem/C)
 
@@ -122,4 +125,3 @@ int main()
     return 0;
 }
 ```
-Complexity: O((n+m)log(n))
