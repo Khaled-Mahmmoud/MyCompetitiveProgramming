@@ -167,7 +167,7 @@ Recall, in Inclusion Exclusion we compute all subsets, and add odd subsets and s
 ```cpp
 ll val = 19 , idx = val;
 for(ll i=2;i*i<=val;i++)
-    idx -= mobius[i] * (val/(i*i));
+    idx += mobius[i] * (val/(i*i));
 ```
 
 **Count the triples (a,b,c) such a, b, c <= n and gcd(a, b, c) = 1**
