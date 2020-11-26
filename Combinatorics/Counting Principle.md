@@ -128,7 +128,9 @@ A food table with 3 chairs. Given 3 persons, in how many ways we can seat them? 
 
 Wrong!	123 same as 231 same as 312 [by making 1 shift], So given 1 seating, we can generate 3 similar seatings.
 
-so answer is 6 / 3 = 2 .. or generally n! / n = n-1!, nPr(circle) = nPr/r
+so answer is 6 / 3 = 2 .. or generally n! / n = n-1!, This is true because we just "fixed" who will be the first, and place others in every possible order.
+
+`nPr(circle) = nPr/r`
 
 Division rule: solution = m / d, where each d elements of m are same (e.g. symmetric)
 
