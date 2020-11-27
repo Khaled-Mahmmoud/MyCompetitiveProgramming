@@ -208,6 +208,48 @@ int main()
     return 0;
 }
 ```
+### How to count number of vertices in subtree of every node of cycle in the given graph ?
+
 <p align="center">
-  <img width="300" height="250" src="https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/Untitled.png">
+  <img width="330" height="250" src="https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/subtree_node_cyc.png">
 </p>
+```cpp
+int main()
+{
+    int n;
+    cin>>n;
+    vector<set<int>>adj(n);
+    for(int i=0; i<n; i++)
+    {
+        int u,v;
+        cin>>u>>v;
+        u--,v--;
+        adj[u].insert(v);
+        adj[v].insert(u);
+    }
+    vector<int>val(n,1);
+    queue<int>leaf;
+    for(int i=0; i<n; i++)
+    {
+        if(adj[i].size()==1)
+            leaf.push(i);
+    }
+    while(!leaf.empty())
+    {
+        int v = leaf.front();
+        leaf.pop();
+        int to = *adj[v].begin();
+        val[to] += val[v];
+        val[v] = 0;
+        adj[v].clear();
+        adj[to].erase(v);
+        if(adj[to].size()==1)
+        {
+            leaf.push(to);
+        }
+    }
+    for(int i=0; i<n; i++)
+        cout<<i+1<<" : "<<val[i]<<'\n';
+    return 0;
+}
+```
