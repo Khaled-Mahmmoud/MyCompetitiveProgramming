@@ -187,3 +187,6 @@ Max no. of nodes at level L = 2^L
          
 Max no. of nodes in binary tree = 2^(h+1) - 1 (where h is height of tree)   //  as perfect tree
 
+------------------------------------------------------------------------------------------------------------
+
+The number of simple paths of length at least 1 in the tree = n * (n-1) / 2
