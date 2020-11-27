@@ -211,8 +211,9 @@ int main()
 ### How to count number of vertices in subtree of every node of cycle in the given graph ?
 
 <p align="center">
-  <img width="330" height="250" src="https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/subtree_node_cyc.png">
+  <img width="350" height="250" src="https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/subtree_node_cyc.png">
 </p>
+
 ```cpp
 int main()
 {
