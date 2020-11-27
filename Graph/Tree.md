@@ -189,4 +189,20 @@ Max no. of nodes in binary tree = 2^(h+1) - 1 (where h is height of tree)   //  
 
 ------------------------------------------------------------------------------------------------------------
 
-The number of simple paths in the tree = n * (n-1) / 2
+The number of paths or simple paths in the tree = n * (n-1) / 2
+```cpp
+   O
+ /   \
+O     O 
+       \
+        O
+````
+in this tree the number of paths = n * (n-1) / 2 
+```cpp
+   O
+ /   \
+O ___ O 
+       \
+        O
+````
+in this graph the number of paths = 2 * n * (n-1) / 2  
