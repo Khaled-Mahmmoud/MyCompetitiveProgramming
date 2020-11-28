@@ -13,9 +13,11 @@ Consider an array A of size N and a corresponding Segment Tree T:
 2) Each leaf in the Segment Tree T will represent a single element A[i] such that 0 <= i <= N-1.
 3) The internal nodes in the Segment Tree T represents the union of elementary intervals A[i : j] where 0 <= i < j <= N-1.
 
-The Segment Tree of [array A of size 7](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Tree/segment%20tree%20size%207.jpg)
 
-The Segment tree represented as [linear array](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Tree/segment%20tree%20linear%20array.jpg)
+<p align="center">
+  <img width="580" height="400" src="https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Tree/segment%20tree%20size%207.jpg">
+</p>
+
 
 The root of the Segment Tree is broken down into [two half intervals](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Tree/two%20half%20intervals.png) or segments and the two children of the root 
 in turn represent the `A[0 : (N-1)/2]` and `A[(N-1)/2+1 : (N-1)]`. So in each step, the segment is divided into half and the two children represent those two halves.
