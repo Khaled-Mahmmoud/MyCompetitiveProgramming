@@ -230,13 +230,6 @@ How to do the pre-processing?
 const int N = 2000006;
 int interval[2*N-1];	
 int S = 0, E = N;
-int build(int s = S, int e = E, int p = 1) // O(nlogn)
-{	
-     if(s == e)	
-	  return  interval[p] = 1;
-     int mid = (s+e) >> 1;
-     return interval[p] = build(s, mid, 2*p) + build(mid+1, e, 2*p+1);
-}
 // insert num and return its order (kth in order)
 int insert(int num, int s = S, int e = E, int p = 1)  // O(logn)
 {	
