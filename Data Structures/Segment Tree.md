@@ -107,7 +107,12 @@ void update(int node, int start, int end, int idx, int val)
 ```
 Time Complexity of update will be O(log n).
 
-To query on a given range, check 3 conditions as [diagram](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Tree/segment%20tree%20query.png).
+To query on a given range, check 3 conditions as
+
+<p align="center>
+	  <img width="550" height="400" src="https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Tree/segment%20tree%20query.png">
+</p>
+				     
 
 1) Range represented by a node is completely inside the given range
 2) Range represented by a node is completely outside the given range
