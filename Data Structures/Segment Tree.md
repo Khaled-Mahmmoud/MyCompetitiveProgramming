@@ -148,8 +148,9 @@ Time Complexity of query will be O(log n).
 
 2 * node + 1 ==>> (node<<1|1)
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-**Segment tree solves:**
+### Segment tree Problems
  
 We we have a coordinate space on x-axis from [0 - N].
 
