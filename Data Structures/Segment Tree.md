@@ -14,11 +14,11 @@ Consider an array A of size N and a corresponding Segment Tree T:
 3) The internal nodes in the Segment Tree T represents the union of elementary intervals A[i : j] where 0 <= i < j <= N-1.
 
 
-<p align="centr">
+<p align="center">
   <img width="550" height="400" src="https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Tree/segment%20tree%20size%207.jpg">
 </p>
 
-<p align="centr">
+<p align="center">
   <img width="460" height="330" src="https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Tree/two%20half%20intervals.png">
 </p>
 
