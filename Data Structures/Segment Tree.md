@@ -149,31 +149,15 @@ Time Complexity of query will be O(log n).
 2 * node + 1 ==>> (node<<1|1)
 
 
-**Segment tree data structure solves:**
+**Segment tree solves:**
  
-Given set of intervals (a-b). Then given set of queries, each query is a number, HOW many intervals contain the number?
+We we have a coordinate space on x-axis from [0 - N].
 
-Segment tree ~= Interval Tree
+we are given set of numbers (order is not issue)	e.g.: 20 7 4 9 12.
 
-Interval tree data structure solves:
- 		
-Given set of intervals (a-b). Then given set of queries, each query is an interval, HOW many intervals intersect the given interval?
- 			
-If given interval has start = end, then it could solve what Segment tree
-
-Interval tree is extremely efficient in time/memory when moving to higher dimension
-
-Other related structures: range tree & fenwick(BIT) tree
-
-In fact, in programming competitions we typically work over a specific case of segment tree: The given intervals have start=end
+Queries are as following.
  
-1) We assume we have a coordinate space on x-axis from [0 - N]
- 
-2) we are given set of numbers (order is not issue)	e.g.: 20 7 4 9 12		(actually, they are set of intervals [1-1], [7-7], ...)
- 
-3) Queries are as following		
- 
-a) HOW many numbers are in given interval?
+a) **HOW many numbers are in given interval**?
  				
 E.g In interval [1-3]  = 0	-> Notice, our first element is 4
  				
@@ -181,19 +165,19 @@ E.g In interval [0-8]  = 2	-> 4, 7
 
 E.g In interval [6-15] = 3	-> 7, 9, 12
 
-b) Get Kth item in sorted list
+b) **Get Kth item in sorted list**
  
  E.g. get(2) = 7		-> in sorted list 4 7 9 12 20
 			
-c) Remove kth item in sorted list
+c) **Remove kth item in sorted list**
  				
 E.g. remove(5) 		-> 4 7 9 12
 		
-b) Insert new element: so we update our list:
+b) **Insert new element: so we update our list**
 				
 E.g. insert(16)		-> 4 7 9 12 16 20
 
-The main point in these data structures is idea of PRE-PROCESSING before answering Queries.
+**Solution** : The main point in these data structures is idea of `Pre-Processing` before answering Queries.
 
 So how is segment tree constructed? Done as a BINARY tree, each item holds an interval, represents HOW many numbers are in this interval. Leaf nodes represents the main number.
 
