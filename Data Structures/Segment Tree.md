@@ -15,11 +15,11 @@ Consider an array A of size N and a corresponding Segment Tree T:
 
 
 <p align="left">
-  <img width="580" height="400" src="https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Tree/segment%20tree%20size%207.jpg">
+  <img width="550" height="400" src="https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Tree/segment%20tree%20size%207.jpg">
 </p>
 
 <p align="right">
-  <img width="580" height="400" src="https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Tree/two%20half%20intervals.png">
+  <img width="450" height="320" src="https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Tree/two%20half%20intervals.png">
 </p>
 
 The root of the Segment Tree is broken down into two half intervals or segments and the two children of the root 
