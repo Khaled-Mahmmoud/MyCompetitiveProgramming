@@ -191,9 +191,11 @@ How to index them, given initial N values?
 How to do the pre-processing?
 
 ```cpp
-const int MAX = 2000000;
-int interval[4194304];	
-int S = 0, E = MAX;
+const int N = 2000006;
+int interval[2*N-1];	// please note that number of nodes = 2*N-1
+                       // there was wrong answer of tree[N] 
+                       // It is better to make it tree[4*N]
+int S = 0, E = N;
 int build(int s = S, int e = E, int p = 1) // O(nlogn)
 {	
      if(s == e)	
