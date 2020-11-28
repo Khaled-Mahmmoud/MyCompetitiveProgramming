@@ -14,12 +14,15 @@ Consider an array A of size N and a corresponding Segment Tree T:
 3) The internal nodes in the Segment Tree T represents the union of elementary intervals A[i : j] where 0 <= i < j <= N-1.
 
 
-<p align="center">
+<p align="left">
   <img width="580" height="400" src="https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Tree/segment%20tree%20size%207.jpg">
 </p>
 
+<p align="right">
+  <img width="580" height="400" src="https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Tree/two%20half%20intervals.png">
+</p>
 
-The root of the Segment Tree is broken down into [two half intervals](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Tree/two%20half%20intervals.png) or segments and the two children of the root 
+The root of the Segment Tree is broken down into two half intervals or segments and the two children of the root 
 in turn represent the `A[0 : (N-1)/2]` and `A[(N-1)/2+1 : (N-1)]`. So in each step, the segment is divided into half and the two children represent those two halves.
 So the height of the segment tree will be Log2 N. There are N leaves representing the `N` elements of the array. The number of internal nodes is `N-1`. 
 So, a total number of nodes are `2 * N - 1`.
