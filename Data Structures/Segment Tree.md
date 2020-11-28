@@ -75,8 +75,6 @@ From the leaves, go back to the root and update all the nodes in the path. **nod
 Since Segment Tree is a binary tree. **2 * node** will represent the left node and **2 * node + 1** will represent the right node. **start** and **end** represents
 the interval represented by the node. (Time Complexity of **build()** is O(n). There are total 2n-1 nodes, and value of every node is calculated only once in tree construction).
 
-[Segment tree for A = {1,3,5,7,9,11}](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Tree/segment%20tree%20for%20A.jpg)
-
 
 To update an element, look at the interval in which the element is present and recurse accordingly on the left or the right child.
 ```cpp
