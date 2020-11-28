@@ -50,6 +50,12 @@ This algorithm is good if the number of queries are very low compared to updates
 First, figure what needs to be stored in the Segment Tree's node. The question asks for summation in the interval from L to R, so in each node, 
 sum of all the elements in that interval represented by the node. 
 ```cpp
+#define N 100005  
+int a[N];	
+int tree[2 * N - 1];   // please note that number of nodes = 2*n-1	
+                       // there was wrong answer of tree[N] 
+                       // It is better to make it tree[4*N]
+		     
 void build(int node, int start, int end)
 {
     if(start == end)
@@ -148,6 +154,36 @@ Time Complexity of query will be O(log n).
 
 2 * node + 1 ==>> (node<<1|1)
 
+```cpp
+int main()	
+{	
+    int n,q;
+    cin>>n>>q;	
+    for(int i=0;i<n;i++)	
+        cin>>a[i];	
+    build(1,0,n-1);	
+    while(q--)	
+    {	
+        char c;	
+        cin>>c;	
+        if(c=='u')	
+        {	
+            int idx,val;	
+            cin>>idx>>val;	
+            idx--;	
+            updata(1,0,n-1,idx,val);	
+        }	
+        else 	
+        {	
+            int l,r;	
+            cin>>l>>r;	
+            l--,r--;	
+            cout<<query(1,0,n-1,l,r)<<'\n';	
+        }	
+    }	
+    return 0;	
+}
+```
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### Segment tree Problems
@@ -192,9 +228,7 @@ How to do the pre-processing?
 
 ```cpp
 const int N = 2000006;
-int interval[2*N-1];	// please note that number of nodes = 2*N-1
-                       // there was wrong answer of tree[N] 
-                       // It is better to make it tree[4*N]
+int interval[2*N-1];	
 int S = 0, E = N;
 int build(int s = S, int e = E, int p = 1) // O(nlogn)
 {	
