@@ -8,6 +8,8 @@ If you want to avoid duplicate: Put 1 apple per box. Remaining is 1 apple. To pu
 
 1 box will have at least	⌈13/5⌉ = 3 apples. Generally: ⌈N/M⌉ per a box.
 
+------------------------------------------------------------------------------------------------------------
+
 Prove: Among any N positive integers, there	exists 2 whose difference is divisible  by N-1.
 
 Recall: |A-B| % X = 0 IFF A%X = B%X. So, **let’s compute % N-1?**
@@ -23,6 +25,8 @@ N = 5 and	A = {2, 3, 5, 7, 8}
 Compute A % 4 = {2, 3, 1, 3, 0}, 5 numbers, with values [0 - 3].
 
 Pick 2 with same mode -> 3 is repeated mode. Then, (3, 7) are the answer
+
+------------------------------------------------------------------------------------------------------------
 
 Prove: For any N positive integers, find **the sum of subset of them is divisible N**.
 
