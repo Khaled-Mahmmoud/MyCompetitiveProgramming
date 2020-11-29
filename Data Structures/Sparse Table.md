@@ -63,5 +63,7 @@ return min(x, y);
 
 ### Sparse table Problems
 
+**Array Partition**
+
 [Problem Link](https://codeforces.com/contest/1454/problem/F)
 [Solution Link](https://codeforces.com/contest/1454/submission/99503441)
