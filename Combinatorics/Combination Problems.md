@@ -70,7 +70,7 @@ int main()
     {
         while (!m.empty()&&(*m.begin()<v[i].first))
         m.erase(m.begin());
-        ans += nCr(m.size(), k - 1);
+        ans += nCr(m.size(), k - 1); // I can't understand this, need help
         m.insert(v[i].second);
     }
     cout << ans << endl;
