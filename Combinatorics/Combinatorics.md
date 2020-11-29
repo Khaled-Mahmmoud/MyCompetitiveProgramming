@@ -79,4 +79,4 @@ ten combinations are ABC, BCD, CDE, ABD, BCE, ABE, ACD, BDE, ACE, ADE
 
 **what if we allow repeated elements such as AAB, BBBCCD?**
 
-the number of such combination = `ncr(n+k-1,k) = (n+k-1)! / (n-1)! * k!`
+the number of such combination = `ncr(n+r-1,r) = (n+r-1)! / (n-1)! * r!`
