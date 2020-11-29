@@ -25,7 +25,7 @@ Total number of ways = 4C1 * 7C4 + 4C2 * 7C3 + 4C3 * 7C2 + 4C4 * 7C1 = 140+210+8
 [Solution Link](https://codeforces.com/contest/131/submission/99935167)
 
 
-### why nC4 * mC1 * (n-4+m-1)C(t-5) is wrong ?
+### why ncr(m,1) * ncr(n,4) * ncr(n-4+m-1,t-5) is wrong ?
 
 I think the error is that we are choosing same group multiple times.
 
