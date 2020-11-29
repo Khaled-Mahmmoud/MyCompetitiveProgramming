@@ -59,17 +59,17 @@ In first test case there are nine sets of k lamps: (1,2,3), (1,2,4), (1,2,5), (1
 int main()
 {
     int n, k;
-  	cin >> n >> k;
-	  vector<pair<int,int>>v(n);
+    cin >> n >> k;
+    vector<pair<int,int>>v(n);
     for(auto &it:v)
         cin>>it.first>>it.second;
-	  sort(v.begin(), v.end());
+    sort(v.begin(), v.end());
     int ans = 0;
     multiset<int> m;
     for (int i=0;i<n;i++)
     {
         while (!m.empty()&&(*m.begin()<v[i].first))
-            m.erase(m.begin());
+        m.erase(m.begin());
         ans += nCr(m.size()+0ll, k - 1ll);
         ans = (ans%mod+mod)%mod;
         m.insert(v[i].second);
