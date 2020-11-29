@@ -1,4 +1,4 @@
-### Count of Trailing Zeroes in N! and Double Factorial
+### Count of Trailing Zeroes in N!
 
 **Leading Zero** :: is any 0 digit that comes before the first nonzero digit in a number string in positional notation.
 
