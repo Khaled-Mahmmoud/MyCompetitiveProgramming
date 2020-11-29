@@ -141,12 +141,26 @@ How many numbers between [1,1000] are divisible by 5 or 7? Answer:314
 ### The Division Rule
 
 A food table with 3 chairs. Given 3 persons, in how many ways we can seat them? 1 2 3, 1 3 2, 2 1 3, 2 3 1, 3 1 2, 3 2 1 => 6 ways
+```cpp
+1        3       2
+O 2      O 1     O 3
+3        2       1
 
+3        1       2 
+O 2      O 3     O 1
+1        2       3 
+```
 Wrong!	123 same as 231 same as 312 [by making 1 shift], So given 1 seating, we can generate 3 similar seatings.
 
 so answer is 6 / 3 = 2 .. or generally n! / n = n-1!, This is true because we just "fixed" who will be the first, and place others in every possible order.
 
 `nPr(circle) = nPr/r`
+
+How many ways are there to seat 4 people out of a group of 10 people, around a circular table where two seatings are considered the same if everyone has the same two neighbors **without regard to whether they are right or left neighbors**?
+
+Answer: nPr/(2 * r) =  630 
+
+
 
 Division rule: solution = m / d, where each d elements of m are same (e.g. symmetric)
 
