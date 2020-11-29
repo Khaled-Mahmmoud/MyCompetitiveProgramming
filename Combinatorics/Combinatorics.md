@@ -55,14 +55,6 @@ For permutation, AB and BA are two different things but for selection, AB and BA
 
 Let's do some evaluations
 
-C(1000, 2) = 499500
-
-C(1000, 999) = C(1000, 1) = 1000
-
-C(66, 33) = 7219428434016265740
-
-C(68, 34) = Overflow in long long
-
 ## with repetition
 
 ### order is important (Permutation)
