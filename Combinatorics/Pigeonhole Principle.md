@@ -32,7 +32,7 @@ Prove: For any N positive integers, find **the sum of subset of them is divisibl
 
 Compute Accum array % N. Accum[i] = {A[0] + A[1]...A[i]} % N
 
-If any Accum[i] = 0, we are done. Otherwise, we have N values in [1 - N-1].
+If any Accum[i] = 0, we are done. Otherwise, we have N values in [0 - N-1].
 
 Then 2 positions will have same mode. Then getting numbers between them is answer.
 
