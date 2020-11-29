@@ -47,6 +47,8 @@ void permutation(string str,int x)
 ```
 Complexity : O(n * x)
 
+**Permutations**
+
 [Problem Link](https://codeforces.com/contest/124/problem/B)
 [Solution Link](https://codeforces.com/contest/124/submission/99911452)
 
