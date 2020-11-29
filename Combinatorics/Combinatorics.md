@@ -71,12 +71,12 @@ Then we have n * n * n ... n ways =	n^r
 
 Select a combination of three letters frome the set A,B,C,D and E.
 
-combinations can include {A,B,C} , {B,D,E} , {D,B,A}
+combinations can include {A,B,C} , {B,D,E} , {C,D,B}
 
 the number of combination = nCr(5,3) = 5! / 2! * 3! = 10
 
 ten combinations are ABC, BCD, CDE, ABD, BCE, ABE, ACD, BDE, ACE, ADE
 
-**what if we allow repeated elements such as AAB, BCB?**
+**what if we allow repeated elements such as AAB, BBBCCD?**
 
 the number of such combination = `ncr(n+k-1,k) = (n+k-1)! / (n-1)! * k!`
