@@ -39,6 +39,16 @@ Or think in another way: it is how many combination of r elements, and for each 
 
 That is it: P(n, r) = C(n, r) * r!
 
+Ex. 
+
+ICPC needs volunteers, if there are 10 volunteers who are good at everything except coding,
+how many ways to choose people from the volunteers if they need:
+
+1 Social Media, 1 Balloon Runner, 1 System Admin? Answer: 720
+
+2 Social Media,2 Balloon Runner, 1 System Admin? Answer: 7560
+
+
 ### order is not important (Combination)
 
 **Combination** : It is the different selections of a given number of elements.
