@@ -1,4 +1,4 @@
-# Get right most non zero digit of factorial N?
+### Get right most non zero digit of factorial N?
 
 Let's simplify. Last digit of X = X%10
 
@@ -22,35 +22,10 @@ So n! has 3 zeros, We want to calculate n! with only 11-3 2's
 
 Let X = 2^8 * 5108103 = 1307674368, so X%10 = 8
 
-# Right most non zero digit of product of array
+### Right most non zero digit of product of array
 
 You will be given an array A of N non negative integers. Your task is to find the right most non zero digit in the product of array elements.
 
-Input:
-The first line of input contains a single integer T denoting the number of test cases.Then T test cases follow. The first line of each test case consists of N, the size of the array. The second line of each test cases consists of N space separated non negative integers which denote the values in the array A.
-
-Output:
-Corresponding to each test case, in a new line, print the right most non zero digit in the product of the numbers. If there is no right most non zero digit, then print -1.
-
-Constraints:
-
-1 ≤ T ≤ 100
-
-1 ≤ N ≤ 100
-
-0 ≤ A[i] ≤ 10^10 
-
-Input:
-
-1
-
-4
-
-3 23 30 45
-
-Output:
-
-5
 ```cpp
 int cnt2,cnt5;
 int solve(long long n)
