@@ -131,6 +131,12 @@ int main()
     cout<<n - inc_exe();
 }
 ```
+How many numbers between [1,1000] are divisible by 5 and 7? Answer: 28
+
+How many numbers between [1,1000] are divisible by 6 and 9? Answer : 55 
+
+How many numbers between [1,1000] are divisible by 5 or 7? Answer:314 
+
 
 ### The Division Rule
 
