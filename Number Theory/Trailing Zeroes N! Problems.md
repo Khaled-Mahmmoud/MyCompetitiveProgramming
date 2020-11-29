@@ -181,7 +181,7 @@ void solve(ll n)
 ```
 Time Complexity : O(log2(n))
 
-### find the number of trailing zeroes in b-ary (base B) representation of N!
+### Number of trailing zeroes in b-ary (base B) representation of N!
 
 Given two positive integers B and N . The task is to find the number of trailing zeroes in b-ary (base B) representation of N!
 
