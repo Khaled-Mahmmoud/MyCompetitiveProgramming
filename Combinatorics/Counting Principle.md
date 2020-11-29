@@ -25,6 +25,10 @@ General rule: |S1| * |S2| * |S3| … * |Sn|
 
 2 ties, 5 jackets, 4 jeans, 2 shoes: Clothings? 2 x 5 x 4 x 2 = 80 dressing styles
 
+How many binary strings of length 10 are palindromes? Answer: 2^5
+
+How many binary strings of length 10 have odd numbers of one? Answer: 2^9
+
 ### Sum Rule
 
 words: {bbb,bc, bbc, bcb, bcc, cbb, cbc, ccb, ccc}
