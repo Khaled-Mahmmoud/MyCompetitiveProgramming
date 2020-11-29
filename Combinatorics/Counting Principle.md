@@ -28,7 +28,12 @@ General rule: |S1| * |S2| * |S3| … * |Sn|
 How many binary strings of length 10 are palindromes? Answer: 2^5
 
 How many binary strings of length 10 have odd numbers of one? Answer: 2^9
-
+```cpp
+100 ~ 011
+010 ~ 101
+001 ~ 110
+111 ~ 000
+```
 ### Sum Rule
 
 words: {bbb,bc, bbc, bcb, bcc, cbb, cbc, ccb, ccc}
