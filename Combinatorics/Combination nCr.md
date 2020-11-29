@@ -49,11 +49,6 @@ int binomialCoeff(int n, int r)
 ```
 **Overlapping Subproblems**
 
-It should be noted that the above function computes the same subproblems again and again.
-    
-See the following recursion tree for n = 5 an r = 2. The function C(3, 1) is called two times.
-    
-For large values of n, there will be many common subproblems.
 ```
                              C(5, 2)
                     /                      \
@@ -65,10 +60,7 @@ For large values of n, there will be many common subproblems.
                    /        \              /   \            /    \
                C(1, 0)  C(1, 1)      C(1, 0)  C(1, 1)   C(1, 0)  C(1, 1)
 ```
-Since same suproblems are called again, this problem has Overlapping Subproblems property.
-So the Binomial Coefficient problem solve with use of a dynamic programming.
-Like other typical Dynamic Programming(DP) problems, re-computations of same subproblems can be avoided by 
-constructing a temporary array C[][] in bottom up manner. Following is Dynamic Programming based implementation.
+
 ```cpp
 int binomialCoeff(int n, int r) 
 {
