@@ -29,6 +29,7 @@ How many binary strings of length 10 are palindromes? Answer: 2^5
 
 How many binary strings of length 10 have odd numbers of one? Answer: 2^9
 ```cpp
+odd ~ even
 100 ~ 011
 010 ~ 101
 001 ~ 110
