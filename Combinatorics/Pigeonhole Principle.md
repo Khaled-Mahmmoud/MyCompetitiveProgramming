@@ -48,10 +48,4 @@ if yes then A[0]+A[1]...A[i] where C[i] % N = 0. 2nd and 4th have mode 1. Then r
 
 In some problems, it can be the major trick. Sometimes comes with Modular Arithmetic.
 
-**Some facts in graph**
 
-1) A Path of M nodes (M > N) must have a node used more than once.
-
-2) A cycle of Length M (M > N nodes), must be composed of cycles each of Length <= N.
-
-3) Every graph contains two vertices of same degree.
