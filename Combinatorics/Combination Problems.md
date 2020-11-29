@@ -1,3 +1,4 @@
+## Combination Problems
 
 ### A group consists of 4 girls and 7 boys. In how many ways can a team of 5 members be selected is the team has at least one boy and one girl ?
 
