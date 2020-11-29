@@ -1,8 +1,5 @@
-# Elementary
 
-Any Task 
-
-# without repetition
+## without repetition
 
 ### order is important (Permutation)
 
@@ -66,7 +63,7 @@ C(66, 33) = 7219428434016265740
 
 C(68, 34) = Overflow in long long
 
-# with repetition
+## with repetition
 
 ### order is important (Permutation)
 
