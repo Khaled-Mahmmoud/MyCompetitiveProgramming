@@ -11,9 +11,6 @@ The proof involves turning the objects into stars and separating the boxes using
 E.g. we can represent with ★|★★| |★★ the following situation: in the first box is one object, in the second box are two objects, the third one is empty and in the last box are two objects. 
 This is one way of dividing 5 objects into 4 boxes.
 
-It should be pretty obvious, that every partition can be represented using n stars and k−1 bars and every stars and bars permutation using n stars and k−1 bars 
-represents one partition. Therefore the number of ways to divide n identical objects into k labeled/distinguishable boxes is the same number as there are permutations of n stars and k−1 bars. The Binomial Coefficient gives us the desired formula.
-
 ## Number of non-negative integer sums
 
 This problem is a direct application of the theorem.
