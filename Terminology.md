@@ -3,9 +3,7 @@
 K#*8w
 W8#m+3*(u(-
 ```
-198.153.192.50
 
-198.153.194.50
 
 **proper divisors of number**
 
@@ -173,3 +171,13 @@ String sequence : a,b,c,3,5,'',""
 .no commas
 
 .if we remove commas from a sequence it becomes string
+
+******************************************************************************************************************************************************
+
+**Leading Zero** :: is any 0 digit that comes before the first nonzero digit in a number string in positional notation.
+
+0070009 ==>> has 2 leading zero , 000402 has 3 leading zero
+
+**Trailing Zeros** ::  is any 0 digit that comes after the last nonzero digit in a number string in positional notation.
+
+910034050000 ==>> The number has {4} trailing zeros 
