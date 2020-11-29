@@ -1,4 +1,4 @@
-# Program for nth Catalan Number
+### Program for nth Catalan Number
 
 Catalan numbers are a sequence of natural numbers that occurs in many interesting counting problems like following
 The first few Catalan numbers for n = 0, 1, 2, 3, … are `1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, …`
@@ -53,7 +53,7 @@ int main()
 	return 0;
 }
 ```
-# Applications of Catalan Numbers
+### Applications of Catalan Numbers
 
 1) Number of expressions containing n pairs of parentheses which are correctly matched
 For n = 3, possible expressions are ((())), ()(()), ()()(), (())(), (()())
