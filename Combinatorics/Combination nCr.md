@@ -1,19 +1,7 @@
-# nCr
+### Combination nCr
 
 Program to calculate value of nCr.
     
-Given two numbers n and r, find value of nCr.
-
-Input :  n = 5, r = 2
-
-Output : 30
-
-The value of 5C2 is 10
-
-Input : n = 3, r = 1
-
-Output : 3
-
 The idea is simply based on formula`nCr = (n!) / ((n-r)! * r!)`
 
 ```cpp
@@ -30,7 +18,7 @@ int nCr(int n, int r)
 } 
 ```
 
-# Binomial Coefficient
+#### Binomial Coefficient
 
 The Problem : Write a function that takes two parameters n and r and returns the value of Binomial Coefficient C(n, r)
     
