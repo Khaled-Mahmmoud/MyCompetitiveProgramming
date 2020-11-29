@@ -50,6 +50,5 @@ int main()
 **Roads not only in Berland** 
 
 [Problem Link](https://codeforces.com/problemset/problem/25/D)
-
 [Solution Link](https://codeforces.com/contest/25/submission/98017563)
 
