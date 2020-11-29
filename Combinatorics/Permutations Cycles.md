@@ -47,6 +47,9 @@ void permutation(string str,int x)
 ```
 Complexity : O(n * x)
 
+[Problem Link](https://codeforces.com/contest/124/problem/B)
+[Solution Link](https://codeforces.com/contest/124/submission/99911452)
+
 #### Given a permutation length, what is the ith permutation ?
 ```cpp
 vector<int> nthPerm(int len, int nth) 
