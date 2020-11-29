@@ -1,15 +1,8 @@
 ### Count of Trailing Zeroes in N!
 
-**Leading Zero** :: is any 0 digit that comes before the first nonzero digit in a number string in positional notation.
-
-0070009 ==>> has 2 leading zero , 000402 has 3 leading zero
-
-**Trailing Zeros** ::  is any 0 digit that comes after the last nonzero digit in a number string in positional notation.
-
-910034050000 ==>> The number has {4} trailing zeros 
-
 
 The number of trailing zeros in a non-zero base-b integer n equals the exponential of the highest power of b that divides n
+
 For example, 14000 has three trailing zeros and is therefore divisible by 1000 = 10^3
 
 **Problem** : Given an integer n, write a function that returns count of trailing zeroes in N!
