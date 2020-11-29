@@ -44,44 +44,42 @@ int solve(long long n)
 }
 int main()
 {
-    int t;cin>>t;while(t--)
+    int n;
+    cin>>n;
+    cnt2 = 0;
+    cnt5 = 0;
+    long long a[n],x;
+    bool flag = false;
+    for(int i=0; i<n; i++)
     {
-        int n;cin>>n;cnt2 = 0;cnt5 = 0;
-        long long a[n],x;bool flag = false;
-        for(int i=0;i<n;i++)
+        cin>>a[i];
+        if(!a[i])
         {
-            cin>>a[i];
-            if(!a[i])
-            {
-                flag = true;
-                continue;
-            }
-            x = a[i];
-            while(x%2==0)
-            {
-                cnt2++;
-                x = x/2;
-            }
-            while(x%5==0)
-            {
-                cnt5++;
-                x = x/5;
-            }
-        }
-        if(flag)
-        {
-            cout<<-1<<'\n';
+            flag = true;
             continue;
         }
-        cnt2 = min(cnt2,cnt5);
-        cnt5 =  cnt2;
-        int ans = 1;
-        for(int i=0;i<n;i++)
+        x = a[i];
+        while(x%2==0)
         {
-            ans = (ans * solve(a[i]))%10;
+            cnt2++;
+            x = x/2;
         }
-        cout<<ans<<'\n';
+        while(x%5==0)
+        {
+            cnt5++;
+            x = x/5;
+        }
     }
-	return 0;
+    if(flag)
+        return cout<<-1,0;
+    cnt2 = min(cnt2,cnt5);
+    cnt5 =  cnt2;
+    int ans = 1;
+    for(int i=0; i<n; i++)
+    {
+        ans = (ans * solve(a[i]))%10;
+    }
+    cout<<ans;
+    return 0;
 }
 ```
