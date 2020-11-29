@@ -56,41 +56,8 @@ In first test case there are nine sets of k lamps: (1,2,3), (1,2,4), (1,2,5), (1
 ```
 
 ```cpp
-#define ll unsigned long long
-#define N 300005
-#define mod 998244353
-ll fact[N],inv[N];
-ll power(ll x,ll y)
-{
-    x = x % mod;
-    ll ans = 1;
-    while(y)
-    {
-        if(y&1)
-            ans = (ans * x)%mod;
-        x = (x * x)%mod;
-        y>>=1;
-    }
-    return ans;
-}
-void init()
-{
-    fact[0] = inv[0] = 1;
-    for(int i=1;i<N;i++)
-    {
-        fact[i] = (i * fact[i-1])%mod;
-        inv[i] = power(fact[i],mod-2);
-    }
-}
-ll nCr(ll n,ll r)
-{
-    if(r>n)
-       return 0;
-    return ((fact[n]*inv[r])%mod * inv[n-r])%mod;
-}
 int main()
 {
-    init();
     int n, k;
   	cin >> n >> k;
 	  vector<pair<int,int>>v(n);
