@@ -70,8 +70,7 @@ int main()
     {
         while (!m.empty()&&(*m.begin()<v[i].first))
         m.erase(m.begin());
-        ans += nCr(m.size()+0ll, k - 1ll);
-        ans = (ans%mod+mod)%mod;
+        ans += nCr(m.size(), k - 1);
         m.insert(v[i].second);
     }
     cout << ans << endl;
