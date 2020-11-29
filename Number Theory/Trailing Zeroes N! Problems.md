@@ -263,7 +263,7 @@ int main()
 }
 ```
 
-### find the number of trailing zeros in the product of array
+### Number of trailing zeros in the product of array
 
 Given a array size of n, we need to find the total number of trailing zeros in the product of array
 
