@@ -191,7 +191,7 @@ if( n%2 == 1)		-> Fails of n is negative
 
 if( n&1 == 1)     	-> Works always
 
-to print binary system of number
+**Print binary system of number**
 ```cpp
 void printNumber(int n)
 {
@@ -209,7 +209,7 @@ void printNumber(int n, int len)
      cout<<(n&1);		       //  print last bit
 }
 ```
-To count number of sets in mask
+**Count number of sets in mask**
 ```cpp
 int countNumBits(int mask) 
 {	
@@ -227,7 +227,7 @@ int countNumBits(int mask)
 ```
 
 
-X-1 is very important!
+**X-1 is very important!**
 
 X 	= 840 	= 011010010000
 
@@ -242,7 +242,7 @@ template<class Int>
 Int leastBit(Int num) { return (num & ~(num-1)); }	
 ```
 
-To check whether N is power of 2 or not
+**Check whether N is power of 2 or not**
 ```cpp
     long long n;
     cin>>n;
@@ -274,7 +274,7 @@ void printAllSubsets(int len)
   }
 }
 ```
-Be careful with operators precedence problems
+**Be careful with operators** precedence problems
 
 X & 7 == 1 		is interpreted as 	X & (7 == 1)	        --> (X & 7) == 1
 
