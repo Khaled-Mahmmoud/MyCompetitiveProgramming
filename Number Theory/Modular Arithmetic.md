@@ -96,7 +96,7 @@ for(int i = 0; i < n; i++)
 
 some other facts : 
 
-` |a%n| has n-1: 0, 1, ...n-1
+- |a%n| has n-1 values: 0, 1, ...n-1
 
 - (n ^ x) % n = 0 for any x >= 0
 
