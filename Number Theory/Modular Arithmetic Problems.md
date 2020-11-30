@@ -130,7 +130,8 @@ int mod_inverse(int a,int m)
     return power(a,phi(m)-1,m);
 }
 ```
-### Euler's theorem and large powers
+
+**What about a^x % n where gcd(a, n) = 1?**
 
 - 7^222 % 10 ==>> gcd(7, 10) = 1 and φ(10) = 4
 
@@ -140,7 +141,9 @@ int mod_inverse(int a,int m)
 
 - Or shortly, 7^222 ≡ 7^(222 % 4) ≡ 7^2 = 9 (mod 10)
 
-**Compute ((1/a)^m)% p** .. where p is prime.Same as ((1/a)% p)^m % p = (a^(p-2) % p)^m % p use inverse modular a^m(p-2) % p
+**Compute ((1/a)^m)% p where p is prime**
+
+Same as ((1/a)% p)^m % p = (a^(p-2) % p)^m % p use inverse modular a^m(p-2) % p
 
 - What about using **fermat's last theorm** to reduce the power of a^m(p-2) % p? using note that gcd(a,p) = 1. 
 
