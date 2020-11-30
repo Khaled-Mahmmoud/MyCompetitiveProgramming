@@ -26,7 +26,13 @@ More formally, **_ST[j][i]_** holds the value of **_Q(i, i + (2^j) - 1)_**
 
 We can build the sparse table easily in **_O(n.log(n))_** as follows (having **_Q()_** equals **_min()_** as an example):
 
-```C++
+```Cpp
+// LOG is a pre-computed array where LOG[i] = floor(log2(i))
+
+LOG[1] = 0;
+for (int i = 2; i <= n; ++i)
+    LOG[i] = LOG[i / 2] + 1;
+    
 for (int j= 0; j < n; j++) 
 {
     ST[0][j] = a[j];
@@ -41,17 +47,12 @@ for (int i = 1; (1 << i) <= n; i++)
         ST[i][j] = min(x, y);
     }
 }
-
+Complexity : O(n.log(n))
 ```
 ### Sparse Table Query
 Now in order to calculate any **_Q(l, r)_** we are going to use the _duplicate-invariant_ property to get the answer in **_O(1)_** as follows:
 
 ```C++
-// LOG is a pre-computed array where LOG[i] = floor(log2(i))
-
-LOG[1] = 0;
-for (int i = 2; i <= n; ++i)
-    LOG[i] = LOG[i / 2] + 1;
 
 int g = LOG[r - l + 1];
 
@@ -59,6 +60,7 @@ int x = ST[g][l];
 int y = ST[g][r - (1 << g) + 1];
 
 return min(x, y);
+Complexity : O(1)
 ```
 
 ### Sparse table Problems
