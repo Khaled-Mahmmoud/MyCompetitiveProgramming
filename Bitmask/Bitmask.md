@@ -1,4 +1,4 @@
-# Bitmask
+### Bitmask
 
 **32-bit Integers**
 
@@ -147,7 +147,7 @@ m = m ^ (1<<1) = 1011 ^ 10 = 1001
 int flipbit(int num,int idx){return num^(1<<idx);}
 ```
 
-# Bit Manipulation
+### Bit Manipulation
 
 **Why using Bit Manipulation?**
 
@@ -284,7 +284,7 @@ X & 7 == 1 		is interpreted as 	X & (7 == 1)	        --> (X & 7) == 1
 
 
 
-## Gray Code
+### Gray Code
 
 Gray Code :  is a binary numeral system where two successive values differ in only one bit
 
