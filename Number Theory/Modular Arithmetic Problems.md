@@ -170,7 +170,7 @@ ll modinvers(ll a,ll m,ll p)
 
 - Our problem = new sub-problems: p^x % n. p is a prime number,then gcd(p, n) = 1.
 
-**Find largest g such that: p^g % n = 0?**
+**Find largest g such that: p^g % n = 0? where p is prime**
 
 - Then gcd(p, t = n/(p^g)) = 1 … using euler rule.
 
