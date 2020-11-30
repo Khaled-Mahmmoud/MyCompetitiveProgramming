@@ -156,17 +156,8 @@ ll modinvers(ll a,ll m,ll p)
 
 - It now turns to be: a^(-m%(p-1)) % p … recall:
 
-- if m is +ve, its mode: m % p
+- a^((-m%(p-1) + (p-1)) % (p-1)) % p 
 
-- if m is -ve, then -m is: ((-m)%p + p) % p
-
-- Or more directly p - m % p
-
-- Then turns to be: a^(p-1-(m%(p-1))) % p
-
-- Moral of that, is we get rid of p-2 with a
-constant -1 .. this helps in some advanced
-problems.
 
 **What about a^x % n where gcd(a, n) > 1?**
 
