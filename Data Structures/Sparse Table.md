@@ -59,6 +59,7 @@ int x = ST[g][l];
 int y = ST[g][r - (1 << g) + 1];
 
 return min(x, y);
+
 Complexity : O(1)
 ```
 
