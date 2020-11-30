@@ -1,4 +1,4 @@
-### Modular multiplicative inverse
+### Modular Multiplicative Inverse
 
 Multiplicative inverse (reciprocal)
 
