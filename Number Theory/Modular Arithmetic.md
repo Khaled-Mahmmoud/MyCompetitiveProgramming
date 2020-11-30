@@ -20,9 +20,9 @@ b = a * q + r
 
 **Example**
 
-1) Reduce 101 (mod 3) to a number in the range {0, 1, 2}.
+1) Reduce N (mod 3) to a number in the range {0, 1, 2}.
 
-2) Reduce -101 (mod 3) to a number in the range {0, 1, 2}.
+2) Reduce -N (mod 3) to a number in the range {0, 1, 2}.
 
 3) 101 = 2 (mod 3) , because 3 | 101 - 2 = 99.
 
