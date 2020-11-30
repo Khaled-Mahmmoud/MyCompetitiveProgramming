@@ -38,7 +38,9 @@ Time Complexity of this method is O(m)
 (Works when m and a are coprime)
 
 The idea is to use Extended Euclidean algorithms that takes two integers ‘a’ and ‘b’,
-find their gcd and also find ‘x’ and ‘y’ such that `ax + by = gcd(a, b)`
+find their gcd and also find ‘x’ and ‘y’ such that 
+
+`ax + by = gcd(a, b)`
 
 To find multiplicative inverse of ‘a’ under ‘m’, we put b = m in above formula
 Since we know that a and m are relatively prime, we can put value of gcd as 1.
