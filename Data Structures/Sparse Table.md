@@ -28,7 +28,6 @@ We can build the sparse table easily in **_O(n.log(n))_** as follows (having **_
 
 ```Cpp
 // LOG is a pre-computed array where LOG[i] = floor(log2(i))
-
 LOG[1] = 0;
 for (int i = 2; i <= n; ++i)
     LOG[i] = LOG[i / 2] + 1;
