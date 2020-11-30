@@ -77,7 +77,10 @@ int gcd(int a, int b, int *x, int *y)
 void modInverse(int a, int m) 
 { 
     int x, y; 
-    int g = gcd(a, m, &x, &y); 
+    int g = gcdExtended(abs(a), abs(m), &x, &y); 
+    if (a < 0) x *= -1;
+    if (m < 0) y *= -1;
+    
     if (g != 1) 
         cout << "Inverse doesn't exist"; 
     else
