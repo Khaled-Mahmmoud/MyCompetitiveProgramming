@@ -1,6 +1,4 @@
-### GCD & LCM
-
-GCD (Greatest Common Divisor) or HCF (Highest Common Factor)
+### GCD (Greatest Common Divisor) or HCF (Highest Common Factor)
 
 GCD of two numbers is the largest number that divides both of them . A simple way to find GCD is to factorize both numbers 
 and multiply common factors.
