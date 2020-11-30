@@ -4,7 +4,7 @@ Stars and bars is a mathematical technique for solving certain combinatorial pro
 
 ### Theorem
 
-The number of ways to put n identical objects into k labeled boxes is **ncr(n+r-1,n)**
+The number of ways to put n identical objects into k labeled boxes is **ncr(n+r-1,r-1)**
 
 The proof involves turning the objects into stars and separating the boxes using bars (therefore the name).
 
@@ -19,7 +19,7 @@ You want to count the number of solution of the equation X1 + X2 + ⋯ + Xk = n 
 
 Again we can represent a solution using stars and bars. E.g. the solution 1 + 3 + 0 = 4 for n = 4, k = 3 can be represented using ★|★★★|.
 
-It is easy to see, that this is exactly the stars an bars theorem. Therefore the solution is ncr(n+r−1,n).
+It is easy to see, that this is exactly the stars an bars theorem. Therefore the solution is ncr(n+r−1,r-1).
 
 ### Number of lower-bound integer sums
 
