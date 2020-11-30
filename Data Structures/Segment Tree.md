@@ -75,6 +75,7 @@ void build(int node, int start, int end)
         tree[node] = tree[2*node] + tree[2*node+1];     // Internal node will have the sum of both of its children
     }
 }
+Complexity : O(n)
 ```
 As shown in the code above, start from the root and recurse on the left and the right child until a leaf node is reached. 
 From the leaves, go back to the root and update all the nodes in the path. **node** represents the current node that is being processed.
@@ -110,8 +111,8 @@ void update(int node, int start, int end, int idx, int val)
         tree[node] = tree[2*node] + tree[2*node+1];
     }
 }
+Complexity : O(log n)
 ```
-Time Complexity of update will be O(log n).
 
 To query on a given range, check 3 conditions as
 
@@ -145,8 +146,8 @@ int query(int node, int start, int end, int l, int r)
     int mid = (start + end) / 2;
     return query(2*node, start, mid, l, r) + query(2*node+1, mid+1, end, l, r);
 }
+Complexity : O(log n)
 ```
-Time Complexity of query will be O(log n).
 
 (start + end) / 2 ==>> ((start + end)>>1)
 
