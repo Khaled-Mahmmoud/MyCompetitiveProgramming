@@ -94,7 +94,7 @@ for(int i = 0; i < n; i++)
     sum = (sum + a[i]%m)%m;
 ```
 
-some other facts : 
+**Some other facts :**
 
 - |a%n| has n-1 values: 0, 1, ...n-1
 
