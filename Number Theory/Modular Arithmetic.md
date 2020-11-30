@@ -114,7 +114,7 @@ for(int i = 0; i < n; i++)
 
 - ((a * b) % n * (1/a)%n) %n = b % n
 
-- a % n (n = 2^x) = a & (n-1) => E.g. a%4 = a&3
+- X % (2^n) = X & (2^n - 1) => E.g. a%4 = a&3
 
 - a % 0 is undefined
 
