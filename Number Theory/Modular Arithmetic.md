@@ -118,14 +118,7 @@ for(int i = 0; i < n; i++)
 
 - a % 0 is undefined
 
-- You are sure final results <= n, but intermediate results
-overflow. Take intermediate % x (x > n)
 
-1001 - 1111 + 153 = 43 ...let x = 44
-
-( (1001%44 + ((-1111%44)+44)%44 + 153%44 )%44
-
-(33+33+21)%44 = 87%44 = 43
 ```cpp
 boo is_odd(int n)
 {
