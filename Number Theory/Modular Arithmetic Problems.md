@@ -131,16 +131,6 @@ int mod_inverse(int a,int m)
 }
 ```
 
-**What about a^x % n where gcd(a, n) = 1?**
-
-- 7^222 % 10 ==>> gcd(7, 10) = 1 and φ(10) = 4
-
-- From Euler's theorem 7^4 ≡ 1 (% 10)
-
-- 7^222 ≡ 7^(4 × 55 + 2) ≡ (7^4)^55 × 7^2 ≡ 1^55 × 7^2 ≡ 49 ≡ 9 (mod 10)
-
-- Or shortly, 7^222 ≡ 7^(222 % 4) ≡ 7^2 = 9 (mod 10)
-
 **Compute ((1/a)^m)% p where p is prime**
 
 Same as ((1/a)% p)^m % p = (a^(p-2) % p)^m % p use inverse modular a^m(p-2) % p
@@ -161,6 +151,16 @@ ll modinvers(ll a,ll m,ll p)
 
 - a^((-m%(p-1) + (p-1)) % (p-1)) % p 
 
+
+**What about a^x % n where gcd(a, n) = 1?**
+
+- 7^222 % 10 ==>> gcd(7, 10) = 1 and φ(10) = 4
+
+- From Euler's theorem 7^4 ≡ 1 (% 10)
+
+- 7^222 ≡ 7^(4 × 55 + 2) ≡ (7^4)^55 × 7^2 ≡ 1^55 × 7^2 ≡ 49 ≡ 9 (mod 10)
+
+- Or shortly, 7^222 ≡ 7^(222 % 4) ≡ 7^2 = 9 (mod 10)
 
 **What about a^x % n where gcd(a, n) > 1?**
 
