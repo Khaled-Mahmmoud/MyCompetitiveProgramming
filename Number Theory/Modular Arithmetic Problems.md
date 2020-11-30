@@ -156,11 +156,11 @@ ll modinvers(ll a,ll m,ll p)
 
 - It now turns to be: a^(-m%(p-1)) % p … recall:
 
-- if m is +ve, its mode: m%a
+- if m is +ve, its mode: m % p
 
-- if m is -ve, then -m is: (a + (-m)%a) % a
+- if m is -ve, then -m is: ((-m)%p + p) % p
 
-- Or more directly a - m%a
+- Or more directly p - m % p
 
 - Then turns to be: a^(p-1-(m%(p-1))) % p
 
