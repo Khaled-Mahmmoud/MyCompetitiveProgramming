@@ -24,9 +24,9 @@ b = a * q + r
 
 2) Reduce -N (mod 3) to a number in the range {0, 1, 2}.
 
-3) 101 = 2 (mod 3) , because 3 | 101 - 2 = 99.
+3) 101 = 2 (mod 3) , because 3 | (101 - 2 = 99).
 
-4) -101 = 1 (mod 3) , because 3 | -101 - 1 = -102 .
+4) -101 = 1 (mod 3) , because 3 | (-101 - 1 = -102).
 
 _**Properties**_
 
