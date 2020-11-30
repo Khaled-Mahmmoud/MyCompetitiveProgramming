@@ -104,8 +104,6 @@ Time Complexity of this method is O(log min(a,m))
  
 - if gcd(a, m) = 1 => a^φ(m) ≡ 1 (mod m)
 
-- φ(m) is Euler's totient function
-
 - As a result (divide both sides by a)
 
 - a^(φ(m)-1) ≡ a^-1 (mod m)
