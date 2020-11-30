@@ -10,30 +10,6 @@ Example: Since 5 is prime, 2^4 ≡ 1 (mod 5), 3^4 ≡ 1 (mod 5) and 4^4 ≡ 1 (m
 
 Since 7 is prime, 2^6 ≡ 1 (mod 7), 3^6 ≡ 1 (mod 7), 4^6 ≡ 1 (mod 7), 5^6 ≡ 1 (mod 7) and 6^6 ≡ 1 (mod 7) 
          
-         
-## Fermat’s Last Theorem
- 
-According to Fermat’s Last Theorem, no three positive integers a, b, c satisfy the equation.
- 
-`a^n + b^n = c^n` for any integer value of n greater than 2.
- 
-For n = 1 and n = 2, the equation have infinitely many solutions.
-
-Some solutions for n = 1 
- ```
- 2 + 3 = 5
- 7 + 13 = 20
- 5 + 6 = 11
- 10 + 9 = 19
-```
-Some solutions for n = 2 
-```
-5^2 + 12^2 = 13^2     
-3^2 + 4^2 = 5^2    
-8^2 + 15^2 = 17^2    
-9^2 + 40^2 = 41^2 
-```
-
 ### Lemoine’s Conjecture Theorem
 
 Any odd integer greater than 5 can be expressed as a sum of an odd prime (all primes other than 2 are odd)
