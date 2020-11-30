@@ -122,7 +122,7 @@ for(int i = 0; i < n; i++)
 ```cpp
 boo is_odd(int n)
 {
-    return (n % 2 == 1);     //  this wrong because if n is negative then n % 2 = -1 where n = -3
+    return (n % 2 == 1);     //  this wrong because if n is negative then -3 % 2 = -1
     return (n % 2 == 1) || (n % 2 == -1);   // this correct
     // or
     return (n % 2 != 0);   // this correct
