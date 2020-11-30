@@ -170,24 +170,6 @@ ll modinvers(ll a,ll m,ll p)
 
 - Our problem = new sub-problems: p^x % n. p is a prime number,then gcd(p, n) = 1.
 
-**Find largest g such that: p^g % n = 0? where p is prime**
-
-- Then gcd(p, t = n/(p^g)) = 1 … using euler rule.
-
-- p^φ(t) = 1 (%t) multiply all terms by p^g
-
-- p^g p^φ(t) = p^g (%n) then p^g p^φ(t) p^φ(t) = p^g (%n) and generally: p^g p^kφ(t) = p^g (%n) and k multiple of p^φ(t) no effect.
-
-**Back to p^x**
-
-- if x <= g, then it was actually small power. Forget euler
-
-- if x > g, let’s embed it in equation: x = x - g + g
-
-- p^x = p^g p^x-g …. using modified euler
-
-- p^x (%n) = p^g p^((x-g)%φ(t)) (%n)
-
 ### Modular multiplicative inverse from 1 to n 
 
 Give a positive integer n, find modular multiplicative inverse of all integer from 1 to n with respect to a prime number
