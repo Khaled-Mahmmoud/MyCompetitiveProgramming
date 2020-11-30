@@ -1,5 +1,3 @@
-## Modular Arithmetic Problems
-
 ### Modular multiplicative inverse
 
 Multiplicative inverse (reciprocal)
