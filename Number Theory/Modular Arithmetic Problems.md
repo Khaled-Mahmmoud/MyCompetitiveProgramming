@@ -176,7 +176,7 @@ ll modinvers(ll a,ll m,ll p)
 
 - p^φ(t) = 1 (%t) multiply all terms by p^g
 
-- p^g p^φ(t) = p^g (%n) then p^g p^φ(t) p^φ(t) = p^g (%n) and generally: p^g p^kφ(t) = p^g (%n) and k means multiple of p^φ(t) no effect.
+- p^g p^φ(t) = p^g (%n) then p^g p^φ(t) p^φ(t) = p^g (%n) and generally: p^g p^kφ(t) = p^g (%n) and k multiple of p^φ(t) no effect.
 
 **Back to p^x**
 
