@@ -143,7 +143,8 @@ How many integers in {1,2 ...,100} are NOT divisible by 2, 3, 5 or 7?
 ```cpp
 int main()
 {
-    cout<<n - inc_exe();
+    subset();
+    cout<<n - ans;
 }
 ```
 How many numbers between [1,1000] are divisible by 5 and 7? Answer: 28
