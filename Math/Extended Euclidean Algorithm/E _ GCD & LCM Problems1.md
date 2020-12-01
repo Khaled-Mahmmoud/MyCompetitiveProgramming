@@ -125,3 +125,17 @@ bool checkArray(int arr[], int prime[], int n, int m)
     return true; 
 }  
 ```
+**Apples Again!**
+
+[Problem Link](https://codeforces.com/group/MEqF8b6wBT/contest/277493/problem/M)
+[Solution Link](https://codeforces.com/group/MEqF8b6wBT/contest/277493/submission/100137140)
+
+f(a, b, x) :  Count of numbers that are equal or less than x and multiples of a and b
+
+f(a, b, x) = (x/a) + (x/b) - (x/lcm(a, b)) where 
+
+(x/a) define number of multiples of a
+
+(x/b) define number of multiple of b 
+
+(x/lcm(a, b)) define the number of common multiples  of a and b
