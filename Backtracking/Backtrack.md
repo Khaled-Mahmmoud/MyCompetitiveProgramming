@@ -13,28 +13,6 @@ void subset(int idx)
         sub.pop_back();
     }
 }
-int main()
-{
-    cin>>n;
-    v.resize(n);
-    for(int i=0; i<n; i++)
-        cin>>v[i];
-    subset(0);
-    sort(res.begin(),res.end());
-    for(int i=0; i<res.size(); i++)
-    {
-        for(int j=0; j<res[i].size(); j++)
-            cout<<res[i][j]<<' ';
-        cout<<'\n';
-    }
-    return 0;
-}
-```
-### OR
-```cpp
-int n;
-vector<int>v,sub;
-vector<vector<int>>res;
 void subset(int idx)
 {
     if(idx==n)
