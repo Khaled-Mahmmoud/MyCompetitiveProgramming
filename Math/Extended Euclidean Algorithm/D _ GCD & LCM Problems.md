@@ -382,3 +382,170 @@ int main()
     return 0; 
 } 
 ```
+### Maximum sum of distinct numbers with LCM as N
+
+Given a number N, the task is to find out maximum sum of distinct numbers such that the Least Common Multiple of all these numbers is N.
+
+Input : N = 12 , Output : 28
+
+Maximum sum which we can achieve is, 1 + 2 + 3 + 4 + 6 + 12 = 28
+
+Solution : As the LCM of all the numbers is N, So all the numbers must be the divisors of N and all the numbers are distinct so answer must be the sum of all the divisors of N
+
+### Least Common Denominator (LCD)
+
+The lowest Common Denominator(LCD) or Least Common Denominator is the Least Common Multiple of the denominators of a set of fractions.
+ ```
+ 3   -> Numerator             2     3
+---                          --- + ---
+ 4   -> Denominator           5     5
+                               \   /
+                         Common Denominator
+```
+Common denominator : when the denominators of two or more fractions are the same.
+ 
+Least Common denominator is the smallest of all common denominators.
+ 
+**Why do we need LCD ?**
+ 
+It simplifies addition, subtraction and comparing fraction.
+ 
+Common Denominator can be simply evaluated by multiplying the denominators. In this case, 3 * 6 = 18
+ ```
+ 1     1     9     3
+--- + --- = --- = ---
+ 3     6     18    6
+ ```
+But that may not always be least common denominator as in this case LCD = 6 and not 18. LCD is actually LCM of denominators.
+
+
+LCD for fractions 1/3 and 4/7 is 21
+ 
+Example Problem : Given two fractions, find their sum using least common dominator.
+ 
+Input :  1/6  +  7/15    
+ 
+Output : 19/30, Explanation : LCM of 6 and 15 is 30. So, 5/30  +  14/30 = 19/30.
+  
+```cpp
+int lcm(int a, int b) 
+{ 
+    return (a * b) / __gcd(a, b); 
+} 
+void printSum(int num1, int den1, int num2, int den2) 
+{ 
+    int lcd = lcm(den1, den2); 
+    num1 *= (lcd / den1);  
+    num2 *= (lcd / den2);  
+ 
+    int res_num = num1 + num2; 
+    cout << res_num << "/" << lcd; 
+} 
+int main() 
+{ 
+    int num1 = 1, den1 = 6;  
+    int num2 = 7, den2 = 15;  
+    printSum(num1, den1, num2, den2); 
+    return 0; 
+} 
+```
+
+### is right angled triangle?
+
+Check whether right angled triangle is valid or not for large sides.
+
+Given three integers a, b and c as triplets. Check if it is possible to make right angled triangle or not.
+ 
+Print Yes if possible, else No. 
+
+10^-18 <= a, b, c <= 10^18
+  
+**Solution**
+
+1) a, b and c should be greater then 0.
+2) Sum of any two sides of triangle must be greater than the third side.
+3) Pythagorean Theorem i.e., a^2 + b^2 = c^2.
+  
+First two conditions can be easily checked but for third condition we have to take care of overflow.
+Since a, b and c can be large so we can’t compare them directly unless we use python or BigInteger library in Java
+For languages like C and C++, we have to reduce the expression in fraction form.
+```
+  a^2 + b^2 = c^2   
+  a^2 = c^2 - b^2  
+  a^2 = (c+b)(c-b)
+   a     c+b
+  --- =  ---
+  c-b     a
+```
+
+```cpp
+bool Triplets(long long a, long long b, long long c) 
+{ 
+    if (a <= 0 || b <= 0 || c <= 0) 
+        return false; 
+  
+    vector<long long> vec{ a, b, c }; 
+    sort(vec.begin(), vec.end()); 
+    a = vec[0], b = vec[1], c = vec[2]; 
+     if (a + b <= c) 
+        return false; 
+  
+    long long p1 = a, p2 = c - b; 
+    long long div = __gcd(p1, p2); 
+    p1 /= div, p2 /= div; 
+  
+    long long q1 = c + b, q2 = a; 
+    div = __gcd(q1, q2); 
+    q1 /= div, q2 /= div; 
+    
+    return (p1 == q1 && p2 == q2); 
+}  
+int main() 
+{ 
+    long long a = 4, b = 3, c = 5; 
+    if (Triplets(a, b, c)) 
+        return "Yes"; 
+    else
+        return "No"; 
+    return 0; 
+} 
+```
+
+### Minimum steps to come back to starting point in a circular tour
+
+Consider circular track with n points marked as 1, 2, …n. A person is initially placed on point k
+
+The person moves m > 0, slot forward (in circular way) in each step.
+ 
+Find the minimum number of steps required so that the person reaches initial point k.
+ 
+Input : n = 9, k = 2, m = 6 , Output : 3
+ 
+Explanation : Sequence of moves is 2 => 8 => 5 => 2
+ 
+Naive Approach : Initialize a counter ‘i’ with ‘k’ and ‘count’ = 0
+Further for each iteration increment ‘count’ add ‘m’ to ‘i’. Take its modulus with n i.e. i=((i+m)%n), till
+i becomes equal to k then count will be our answer.
+ 
+Time complexity: O(n). 
+ 
+Efficient Approach: We find GCD(n, m) and then divide n by GCD(n, m). That will be our answer.
+ 
+This can be explained as : Think of n and m as per question now as we know that gcd(n, m) must divide n.
+ 
+and the quotient tells us that after how many successive jumps(addition) of m numbers from starting position(say 0) we again reach the starting position.
+ 
+Note: In circular arrangement of n numbers nth and 0th position are same.
+```cpp
+int minStroke(int n, int m) 
+{ 
+    return (n/__gcd(n, m)); 
+} 
+int main() 
+{ 
+    int n = 12, k = 5, m = 8; 
+    cout << minStroke(n, m); 
+    return 0; 
+} 
+```
+Time Complexity: O(log(n))
