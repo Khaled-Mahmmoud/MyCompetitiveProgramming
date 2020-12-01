@@ -122,6 +122,7 @@ int main()
 {
     cout<<inc_exe();
 }
+Complexity : O(2^n-1)
 ```
 
 How many integers in {1,2 ...,100} are NOT divisible by 2, 3, 5 or 7?
