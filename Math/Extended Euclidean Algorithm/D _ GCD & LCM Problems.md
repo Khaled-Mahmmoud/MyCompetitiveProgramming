@@ -536,16 +536,5 @@ This can be explained as : Think of n and m as per question now as we know that 
 and the quotient tells us that after how many successive jumps(addition) of m numbers from starting position(say 0) we again reach the starting position.
  
 Note: In circular arrangement of n numbers nth and 0th position are same.
-```cpp
-int minStroke(int n, int m) 
-{ 
-    return (n/__gcd(n, m)); 
-} 
-int main() 
-{ 
-    int n = 12, k = 5, m = 8; 
-    cout << minStroke(n, m); 
-    return 0; 
-} 
-```
+
 Time Complexity: O(log(n))
