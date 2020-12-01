@@ -1,10 +1,8 @@
-# Given GCD(a,b) G and LCM(a,b) L, find number of possible pairs (a, b)
+### Given GCD(a,b) G and LCM(a,b) L, find number of possible pairs (a, b)
 
 We need to find number of possible pairs (a, b) such that GCD(a, b) is equal to given G and LCM(a, b) is equal to given L.
     
-Input : G = 2, L = 12
-    
-Output : 4
+Input : G = 2, L = 12 , Output : 4
     
 Explanation : There are 4 possible pairs : (2, 12), (4, 6), (6, 4), (12, 2)
 
@@ -83,3 +81,47 @@ int countPairs(int G, int L)
 } 
 ```
 Time Complexity : O(sqrt(L/G)).
+
+### Check if LCM of array elements is divisible by a prime number or not
+
+Given an array and a prime number k, the task is to find if LCM of the array is divisible by k or not.
+    
+    
+**Naive Solution** :
+One simple solution is to first find LCM of array elements, then check if LCM is divisible by k or not.
+
+**Better Solution** :    
+Here, we can find that LCM of array of number is divisible by a prime number k or not
+If any number of the array is divisible by prime number k
+then the LCM of the number is also divisible by prime number k.
+
+### Check if elements of array can be made equal by multiplying given prime numbers
+
+Given an array of integers and an array of prime numbers. The task is to find if it is possible to make all the elements of integer array equal
+by multiplying one or more elements from prime given array of prime numbers.
+        
+Input : arr[]   = {50, 200} , prime[] = {2, 3}, Output : Yes
+
+We can multiply 50 with 2 two timesto make both elements of arr[] equal
+
+**Solution** : We find LCM of all array elements, All elements can be made equal only if it is possible to convert all numbers to LCM.
+        
+```cpp
+bool checkArray(int arr[], int prime[], int n, int m) 
+{ 
+    int lcm = lcmOfArray(arr,n); 
+    for (int i=0; i<n; i++) 
+    { 
+        int val = lcm/arr[i]; 
+ 
+        for (int j=0; j<m && val!=1; j++) 
+            while (val % prime[j] == 0) 
+                val = val/prime[j]; 
+
+        if (val != 1) 
+          return false; 
+    } 
+  
+    return true; 
+}  
+```
