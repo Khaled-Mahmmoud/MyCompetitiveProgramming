@@ -31,5 +31,5 @@ int main()
     }
     return 0;
 }
+complexity : O(2^n)
 ```
-**complexity : O(2^n)**
