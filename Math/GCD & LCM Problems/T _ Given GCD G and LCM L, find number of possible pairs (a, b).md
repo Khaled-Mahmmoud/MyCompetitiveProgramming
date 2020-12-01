@@ -55,7 +55,7 @@ then p1 can't be present in prime factorization of B because gcd(A, B) = 1
     
 Therefore each prime factor p[i] will be present in either A or B
 
-Hence total possible ways to divide all prime factors among A and B is 2^k, where L/G has k distinct prime factors.
+Hence total possible ways to divide all prime factors among A and B is 2^k, where k is number of **distinct** prime factors of L/G.
     
 Example let G = 2 , L = 12
     
@@ -74,35 +74,12 @@ Primes(6) = {2,3}
 
 
 ```cpp
-int totalPrimeFactors(int n) 
-{ 
-    int count = 0; 
-    if (!(n%2)) 
-    { 
-        count++; 
-        while (!(n%2)) 
-            n /= 2; 
-    } 
-    for (int i = 3; i*i <= n; i = i+2) 
-    { 
-        if (!(n%i)) 
-        { 
-            count++; 
-            while (!(n%i)) 
-                n /= i; 
-        } 
-    } 
-    if (n > 1) 
-        count++; 
-  
-    return count; 
-}  
 int countPairs(int G, int L) 
 { 
     if (L % G != 0) 
        return 0; 
     int div = L/G; 
-    return (1 << totalPrimeFactors(div)); 
+    return (1 << total_Distinct_PrimeFactors(div)); 
 } 
 ```
 Time Complexity : O(sqrt(L/G)).
