@@ -108,22 +108,35 @@ Complexity : O(2^n-1)
 **Better Code**
 ```cpp
 int primes[4] = {2,3,5,7};
-int n = 100;
-int inc_exe(int idx=0,int d=1,int sign=-1)
+int n = 100,ans;
+vector<int>sub;
+void subset(int idx = 0)
 {
     if(idx==4)
     {
-        if(d==1)
-            return 0;
-        return sign * n/d;
+        if(sub.empty())
+            return;
+        int d = 1;
+        for(int i=0;i<sub.size();i++)
+            d *= sub[i];
+        if(sub.size()&1)
+            ans += n/d;
+        else
+            ans -= n/d;
+        return;
     }
-    return inc_exe(idx+1,d,sign)+inc_exe(idx+1,d*primes[idx],sign*-1);
+    sub.push_back(primes[idx]);
+    subset(idx+1);
+    sub.pop_back();
+    subset(idx+1);
 }
 int main()
 {
-    cout<<inc_exe();
+    subset();
+    cout<<ans;
+    return 0;
 }
-Complexity : O(2^n-1)
+Complexity : O(2^n)
 ```
 
 How many integers in {1,2 ...,100} are NOT divisible by 2, 3, 5 or 7?
