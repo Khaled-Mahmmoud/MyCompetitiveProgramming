@@ -103,6 +103,7 @@ int main()
     }
     cout<<ans;
 }    
+Complexity : O(2^n-1)
 ```
 **Better Code**
 ```cpp
