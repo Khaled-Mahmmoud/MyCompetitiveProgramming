@@ -225,41 +225,160 @@ int largestGCDSubsequence(int arr[], int n)
     return ans; 
 } 
 ```
-### Queries for GCD of all numbers of an array except elements in a given range
 
-Given an array of n numbers and a number of queries are also given. Each query will be represented by two integers l, r.
-        
-The task is to find out the GCD of all the numbers of the array excluding the numbers given in the range l, r (both inclusive) for each query.
+### Count number of pairs (A <= N, B <= N) such that gcd (A , B) is B
+
+Given a number n. We need find the number of ordered pairs of a and b such gcd(a, b) is b itself.
+    
+gcd(a, b) = b means that a is a multiple of b.
+    
+So total number of pairs will be sum of number of multiples of each b 
+(where b varies from 1 to n) which are less than or equal to n.
+For a number i, number of multiples of i is equal to floor(n/i)
+So what we need to do is just sum the floor(n/i) for each i = 1 to n and print it.
+
+Complexity : O(n)
+```cpp
+int main()
+{
+    int n,ans=0;cin>>n;
+    for(int i=1;i<=n;i++)
+        ans+=n/i;
+    cout<<ans;
+    return 0;
+}
+```
+### GCD of two numbers formed by n repeating x and y times
+
+Given three positive integer n, x, y. The task is to print Greatest Common Divisor of numbers formed by n repeating x times
+and number formed by n repeating y times.    
+    
+0 <= n, x, y <= 10^9
+
+Input : n = 123, x = 2, y = 3, Output : 123
+    
+Number formed are 123123 and 123123123. Greatest Common Divisor of 123123 and 123123123 is 123.
+    
+Solution : GCD(f(n, x), f(n, y)) = f(n, GCD(x, y))
 
 ```cpp
-void FillPrefixSuffix(int prefix[], int arr[], int suffix[], int n) 
+int main()
+{
+    int n,x,y;
+    cin>>n>>x>>y;
+    int g=gcd(x,y);
+    while(g--)
+    cout<<n;
+    return 0;
+}
+```
+
+### Find GCD of rational numbers
+
+Given an array of rational numbers, the task is to find the GCD of these numbers.
+
+Input : vect[] = {2/5, 8/9, 16/18,10/27}
+
+Output : 2/405
+
+      
+**Solution** First find the GCD of all numerator of rational number then find the LCM of all the denominator of rational number then 
+divide GCD of all numerator/ LCM of all the denominator then Reduce the fraction to Lowest Fraction this the GCD of rational number’s
+Formula:
+
+```
+      GCD of all the numerator of Rational number's
+GCD = -----------------------------------------------
+      LCM of all the denominator of Rational number's
+```
+
+```cpp
+int LCM(int a, int b) 
 { 
-
-    prefix[0] = arr[0]; 
-    for (int i=1 ;i<n; i++) 
-        prefix[i] = __gcd(prefix[i-1], arr[i]); 
-
-    suffix[n-1] = arr[n-1]; 
-  
-    for (int i=n-1; i>=0 ;i--) 
-        suffix[i] = __gcd(suffix[i+1], arr[i]); 
+    return (a * b) / (__gcd(a, b)); 
 } 
-int GCDoutsideRange(int l, int r, int prefix[], int suffix[], int n) 
+int gcdOfNumerator(vector<pair<int, int> > vect) 
 { 
-    if (l==0) 
-        return suffix[r+1]; 
-    if (r==n-1) 
-        return prefix[l-1]; 
-    return __gcd(prefix[l-1], suffix[r+1]); 
+    int gcd = vect[0].first; 
+    for (int i = 1; i < vect.size(); i++)  
+        gcd = __gcd(vect[i].first, gcd);  
+      return gcd; 
+} 
+int lcmOfDemoninators(vector<pair<int, int> > vect) 
+{ 
+    int lcm = vect[0].second; 
+    for (int i = 1; i < vect.size(); i++)  
+        lcm = LCM(vect[i].second, lcm);  
+    return lcm; 
+} 
+void gcdOfRationals(vector<pair<int, int> > vect) 
+{ 
+    int Numerator = gcdOfNumerator(vect);
+    int Demoninator = lcmOfDemoninators(vect)
+    int g = __gcd(Numerator,Demoninator);
+    cout<<Numerator/g<< "/" << Demoninator/g<<endl; 
+} 
+  
+int main() 
+{ 
+    vector<pair<int, int> > vect; 
+    vect.push_back(make_pair(2, 7)); 
+    vect.push_back(make_pair(3, 14)); 
+    vect.push_back(make_pair(5, 3)); 
+    gcdOfRationals(vect); 
+    return 0; 
+} 
+```
+
+### Find LCM of rational numbers
+
+Given an array of rational numbers, the task is to find the LCM of these numbers.
+
+Input : vect[] = {2/7, 3/14, 5/3}
+
+Output : 30/1
+
+**Solution** First find the lcm of all numerator of rational number then find the gcd of all the denominator of rational number then 
+divide lcm of all numerator/ gcd of all the denominator then Reduce the fraction to Lowest Fraction this the lcm of rational number’s.
+```
+      LCM of all the numerator of Rational number's
+LCM = -----------------------------------------------
+      GCD of all the denominator of Rational number's
+```
+
+```cpp
+int LCM(int a, int b) 
+{ 
+    return (a * b) / (__gcd(a, b)); 
+} 
+int lcmOfNumerator(vector<pair<int, int> > vect) 
+{ 
+    int lcm = vect[0].first; 
+    for (int i = 1; i < vect.size(); i++)  
+        lcm = LCM(vect[i].first, lcm);  
+      return lcm; 
+} 
+int gcdOfDemoninators(vector<pair<int, int> > vect) 
+{ 
+    int gcd = vect[0].second; 
+    for (int i = 1; i < vect.size(); i++)  
+        gcd = __gcd(vect[i].second, gcd);  
+    return gcd; 
+} 
+void lcmOfRationals(vector<pair<int, int> > vect) 
+{ 
+    int Numerator = lcmOfDemoninators(vect);
+    int Demoninator = gcdOfNumerator(vect)
+    int g = __gcd(Numerator,Demoninator);
+    cout<<Numerator/g<< "/" << Demoninator/g<<endl; 
 } 
 int main() 
 { 
-    int arr[] = {2, 6, 9}; 
-    int n = sizeof(arr)/sizeof(arr[0]); 
-    int prefix[n], suffix[n]; 
-    FillPrefixSuffix(prefix, arr, suffix, n); 
-  
-    int l = 0, r = 0; 
-    cout << GCDoutsideRange(l, r, prefix, suffix, n) <<endl;
+    vector<pair<int, int> > vect; 
+    vect.push_back(make_pair(2, 7)); 
+    vect.push_back(make_pair(3, 14)); 
+    vect.push_back(make_pair(5, 3)); 
+    lcmOfRationals(vect); 
+    return 0; 
 } 
 ```
