@@ -25,23 +25,21 @@ More formally, **_ST[j][i]_** holds the value of **_Q(i, i + (2^j) - 1)_**
 We can build the sparse table easily in **_O(n.log(n))_** as follows (having **_Q()_** equals **_min()_** as an example):
 
 ```Cpp
-// LOG is a pre-computed array where LOG[i] = floor(log2(i))
-LOG[1] = 0;
-for (int i = 2; i <= n; ++i)
-    LOG[i] = LOG[i / 2] + 1;
-    
-for (int j= 0; j < n; j++) 
+const int N = 2e5 + 5, K = 25;
+int mn[N][K + 1], lg[N + 1];
+void build() 
 {
-    ST[0][j] = a[j];
-}
-for (int i = 1; (1 << i) <= n; i++) 
-{
-    for (int j = 0; (j + (1 << i)) <= n; j++) 
+    lg[1] = 0;
+    for(int i = 1; i <= n; ++i)
+        lg[i] = lg[i / 2] + 1;
+    for(int i = 0; i < n; ++i)
+        mn[i][0] = arr[i];
+    for(int j = 1; j <= K; ++j) 
     {
-        int x = ST[i - 1][j];
-        int y = ST[i - 1][j + (1 << (i - 1))];
-
-        ST[i][j] = min(x, y);
+        for (int i = 0; i + (1 << j) <= n; ++i)
+        {
+            mn[i][j] = min(mn[i][j - 1], mn[i + (1 << (j - 1))][j - 1]);
+        }
     }
 }
 Complexity : O(n.log(n))
@@ -50,14 +48,11 @@ Complexity : O(n.log(n))
 Now in order to calculate any **_Q(l, r)_** we are going to use the _duplicate-invariant_ property to get the answer in **_O(1)_** as follows:
 
 ```C++
-
-int g = LOG[r - l + 1];
-
-int x = ST[g][l];
-int y = ST[g][r - (1 << g) + 1];
-
-return min(x, y);
-
+int get_min(int l, int r) 
+{
+    int j = lg[r - l + 1];
+    return min(mn[l][j], mn[r - (1 << j) + 1][j]);
+}
 Complexity : O(1)
 ```
 
