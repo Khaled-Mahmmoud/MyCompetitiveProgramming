@@ -26,7 +26,7 @@ We can build the sparse table easily in **_O(n.log(n))_** as follows (having **_
 
 ```Cpp
 const int N = 2e5 + 5, K = 25;
-int mn[N][K + 1], lg[N + 1];
+int arr[N], mn[N][K + 1], lg[N + 1];
 void build() 
 {
     lg[1] = 0;
