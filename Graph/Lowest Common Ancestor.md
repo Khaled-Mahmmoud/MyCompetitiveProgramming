@@ -67,4 +67,6 @@ int main()
     cout<<lca(a,b);
     return 0;
 }
+Build Complexity : O(n.log n)
+Query Complexity : O(log n)
 ```
