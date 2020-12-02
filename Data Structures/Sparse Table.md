@@ -1,5 +1,7 @@
 ### Sparse Table
 
+`Jump powers of 2`
+
 Sparse table is a data structure that can help us answer range queries on a set on static data (i.e. data that does not change regularly).<br>
 Sparse table does pre-processing on the data first, then it can answer range queries efficiently.
 
