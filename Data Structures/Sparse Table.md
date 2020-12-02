@@ -30,7 +30,7 @@ int mn[N][K + 1], lg[N + 1];
 void build() 
 {
     lg[1] = 0;
-    for(int i = 1; i <= n; ++i)
+    for(int i = 2; i <= n; ++i)
         lg[i] = lg[i / 2] + 1;
     for(int i = 0; i < n; ++i)
         mn[i][0] = arr[i];
