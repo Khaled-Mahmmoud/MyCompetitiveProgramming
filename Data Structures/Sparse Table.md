@@ -4,11 +4,7 @@ Sparse table is a data structure that can help us answer range queries on a set 
 Sparse table does pre-processing on the data first, then it can answer range queries efficiently.
 
 More formally, sparse table can calculate the answer of **_Q(l, r)_** on an array **_a[i]_** of length **_n_**.<br>
-Where **_Q(l, r)_** can be any _duplicate-invariant function_ as...
-- max
-- min
-- GCD
-- LCM
+Where **_Q(l, r)_** can be any _duplicate-invariant function_ as (max / min / GCD / LCM)
 
 What I mean by _duplicate-invariant function_ is any function that output the same value for duplicate inputs.<br>
 So for example:<br>
@@ -142,4 +138,7 @@ int main()
 Build Complexity : O(n.log n)
 Query Complexity : O(log n)
 ```
+**Analysis of Pathes in Functional Graph**
 
+[Problem Link](https://codeforces.com/contest/702/problem/E)
+[Solution Link](https://codeforces.com/contest/702/submission/100198507)
