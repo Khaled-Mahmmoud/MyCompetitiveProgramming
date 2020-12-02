@@ -59,6 +59,6 @@ Complexity : O(1)
 **Array Partition**
 
 [Problem Link](https://codeforces.com/contest/1454/problem/F)
-[Solution Link](https://codeforces.com/contest/1454/submission/99503441)
+[Solution Link](https://codeforces.com/contest/1454/submission/100205272)
 
 
