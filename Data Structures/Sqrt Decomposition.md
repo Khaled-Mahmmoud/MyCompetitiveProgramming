@@ -37,4 +37,5 @@ int main()
     }
     return 0;
 }
+Complexity : O(q * sqrt(n))
 ```
