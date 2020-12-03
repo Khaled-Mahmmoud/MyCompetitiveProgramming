@@ -290,3 +290,7 @@ void displayElements(int s=S, int e=E, int p=1)
     }
 }
 ```
+**New Year Tree**
+
+[Problem Link](https://codeforces.com/contest/620/problem/E)
+[Solution Link](https://codeforces.com/contest/620/submission/100289526)
