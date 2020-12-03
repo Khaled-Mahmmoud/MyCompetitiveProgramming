@@ -39,3 +39,7 @@ int main()
 }
 Complexity : O(q * sqrt(n))
 ```
+**Xenia and Tree**
+
+[Problem Link](https://codeforces.com/contest/342/problem/E)
+[Solution Link](https://codeforces.com/contest/342/submission/100257772)
