@@ -93,7 +93,7 @@ this sort is increasing based on first element then decreasing based on second e
 ```cpp
 struct qu
 {
-    int l, r,idx;
+    int l, r;
     qu() {}
     // notice you should to put < instead of (), also notice that rhs instead of b
     bool operator<(const qu &rhs) const
