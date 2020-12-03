@@ -1,4 +1,49 @@
-# Iterators 
+## Containers 
+
+**Sequence Containers**
+
+Sequence containers implement data structures which can be accessed sequentially
+```
+1- array            Static contiguous array
+2- vector           Dynamic contiguous array
+3- deque            Double-ended queue
+4- list             Doubly-linked list
+5- forward list     Singly-linked list
+```
+**Associative Containers**
+
+Associative containers implement sorted data structures that can be quickly searched (O(log n) complexity)
+```
+1- map              Collection of key-value pairs, sorted by keys, keys are unique
+2- multimap         Collection of key-value pairs, sorted by keys, keys are multi
+3- set              Collection of unique keys, sorted by keys
+4- multiset         Collection of multi keys, sorted by keys
+```
+**Unordered Associative Containers**
+
+Unordered associative containers implement unsorted (hashed) data structures that can be quickly searched 
+(O(1) amortized, O(n) worst-case complexity)
+```
+1- unordered_map           Collection of key-value pairs, hashed by keys, keys are unique
+2- unordered_multimap      Collection of key-value pairs, hashed by keys
+3- unordered_set           Collection of unique keys, hashed by keys
+4- unordered_multiset      Collection of keys, hashed by keys
+```
+**Container Adaptors**
+
+Container adaptors provide a different interface for sequential containers
+```
+1- stack                   Adapts a container to provide stack (LIFO data structure) 
+2- queue                   Adapts a container to provide queue (FIFO data structure) 
+3- priority_queue          Adapts a container to provide priority queue
+```
+
+for Associative container(map and unordered_map) supported random access (at,[])
+
+static memory allocation ==>> fixed size ==>>  int a[10]
+dynamic memory allocation ==>> size varies ==>>  stack , queue , vector , deque
+
+### Iterators 
 
 An iterator is an object (like a pointer) that points to an element inside the container. We can use iterators to move through
 the contents of the container.
