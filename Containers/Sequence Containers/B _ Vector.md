@@ -42,46 +42,42 @@ v.assign(n,val) OR v1.assign(v2 first iterator ,v2 last iterator)
 
 Complexity : Linear on initial + final sizes
 
-////////////////////////.\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 
 v.insert(iterator,val) OR v.insert(iterator,n,val) OR v1.insert(v1 iterator,v2 first iterator,v2 last iterator)
 
 Complexity : Linear on the number of elements inserted plus the number of elements after position
 
-////////////////////////.\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 
 v.erase(iterator) OR v.erase(first iterator , last iterator)
 
 **Erasing** an element in a vector is O(n) since once you remove the element you still need to shift all successive elements to fill the gap created. 
 If a vector has n elements, then at the worst case you will need to shift n-1 elemets, hence the **complexity is O(n)**
 
-////////////////////////.\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 v.emplace(iterator,val) : Insert a new element at position of iterator (faster)
 
 Complexity : Linear on the number of elements after position
 
-////////////////////////.\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 v.push_back(val) : O(1) : Add element at the end 
 
-////////////////////////.\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 v.emplace_back(val) : O(1) : Add element at the end   (faster)
 
-////////////////////////.\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 
 v.pop_back() : O(1) : Delete the last element 
 
-////////////////////////.\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 
 v1.swap(v2) : O(1) : Sawp two container
 
-////////////////////////.\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 swap(v[0],v[2]) : O(1) : Sawp two elements
 
-////////////////////////.\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 
 v.clear() : Linear in size : Removes all elements , leaving the vector with a size of 0
 
