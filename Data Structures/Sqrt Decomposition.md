@@ -43,3 +43,4 @@ Complexity : O(q * sqrt(n))
 
 [Problem Link](https://codeforces.com/contest/342/problem/E)
 [Solution Link](https://codeforces.com/contest/342/submission/100257772)
+Complexity : sqrt(q) * n + q * sqrt(q) * log n
