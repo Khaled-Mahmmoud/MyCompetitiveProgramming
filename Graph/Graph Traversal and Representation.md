@@ -123,7 +123,18 @@ void dfs(int u = 1,int par = -1)
             dfs(v,u);
 }
 ```
-
+### DFS Numbering
+```cpp
+void dfs(int node , int par) 
+{
+    l[node] = flatten.size();
+    flatten.push_back(node);
+    for(auto &i : adj[node])
+        if(i != par)
+            dfs(i , node);
+    r[node] = flatten.size() - 1;
+}
+```
 ### Breadth-First Search (BFS)
 
 There are many ways to traverse graphs. BFS is the most commonly used approach.
