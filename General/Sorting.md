@@ -86,3 +86,35 @@ struct cmp
 };
 set<pair<int,int>,cmp>st;
 ```
+### How to sort an array of structures
+
+this sort is increasing based on first element then decreasing based on second element
+
+```cpp
+struct qu
+{
+    int l, r,idx;
+    qu() {}
+    // notice you should to put < instead of (), also notice that rhs instead of b
+    bool operator<(const qu &rhs) const
+    {
+        if(l==rhs.l)
+        {
+            return r > rhs.r;
+        }
+        return l < rhs.l;
+    }
+};
+qu q[200010];
+int main()
+{
+    int t;cin>>t;
+    for(int i=0;i<t;i++)
+        cin>>q[i].l>>q[i].r;
+    sort(q,q+t);
+    cout<<'\n';
+    for(int i=0;i<t;i++)
+        cout<<q[i].l<<' '<<q[i].r<<'\n';
+    return 0;
+}
+```
