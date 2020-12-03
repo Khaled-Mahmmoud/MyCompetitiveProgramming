@@ -1,10 +1,4 @@
-# Bitset
-```cpp
-#include <bitset>
-```
-bitset <object_size> object_name;
-
-A bitset stores bits
+## Bitset
 
 **Access**
 
@@ -135,7 +129,6 @@ Returns an unsigned long long with the integer value that has the same bits set 
 ```
 
 ```cpp
-
 int main()
 {
     int n=6;
