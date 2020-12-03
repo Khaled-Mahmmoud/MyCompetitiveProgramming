@@ -66,7 +66,7 @@ struct Point
 };  
 int main() 
 { 
-   struct Point p1;  // The variable p1 is declared like a normal variable 
+   Point p1;  // The variable p1 is declared like a normal variable 
 }
 ```
 
@@ -82,12 +82,10 @@ struct Point
 }; 
 int main() 
 { 
-    struct Point p1 = { 0, 1 }; 
+    Point p1 = { 0, 1 }; 
     // Accessing members of point p1 
     p1.x = 20; 
     cout << p1.x << " " << p1.y; // 20  1
-  
-    return 0; 
 }
 ```
 **What is an array of structures?**
@@ -102,7 +100,7 @@ struct Point
 int main() 
 { 
     // Create an array of structures 
-    struct Point arr[10]; 
+    Point arr[10]; 
     // Access array members 
     arr[0].x = 10; 
     arr[0].y = 20; 
@@ -121,7 +119,7 @@ struct Point
 }; 
 int main() 
 { 
-    struct Point p1 = { 1, 2 }; 
+    Point p1 = { 1, 2 }; 
     // p2 is a pointer to structure p1 
     struct Point *p2 = &p1; 
     // Accessing structure members using structure pointer 
