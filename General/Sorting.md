@@ -118,3 +118,8 @@ int main()
     return 0;
 }
 ```
+To sort a range[l,r] of string where 1<=l<=r<=str.size()
+```cpp
+sort(&str[l-1], &str[r]);
+sort(str.begin() + l - 1, str.begin() + r);
+```
