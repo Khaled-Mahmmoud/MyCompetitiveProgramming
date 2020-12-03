@@ -1,4 +1,4 @@
-#### Sorting
+### Sorting
 
 ```cpp
 // a vector as can be sorted as follows:
@@ -60,7 +60,7 @@ bool pred(string a, string b)
 }
 sort(v.begin(), v.end(), pred);
 ```
-#### How to sort a pair increasing based on first element then decreasing based on second element?
+### How to sort a pair increasing based on first element then decreasing based on second element?
 
 ```cpp
 bool pred(pair<int, int> a, pair<int, int> b)
@@ -74,7 +74,7 @@ bool pred(pair<int, int> a, pair<int, int> b)
 vector<pair<int,int>>v;
 sort(v.begin(), v.end(), pred);
 ```
-#### How to declare a set based on specified sorting ?
+### How to declare a set based on specified sorting ?
 ```cpp
 struct cmp
  {
