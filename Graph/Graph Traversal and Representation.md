@@ -124,6 +124,12 @@ void dfs(int u = 1,int par = -1)
 }
 ```
 ### DFS Numbering
+
+<p align="center">
+  <img width="550" height="400" src="https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Graph/DFS%20Numbering.png">
+</p>
+
+
 ```cpp
 void dfs(int node , int par) 
 {
