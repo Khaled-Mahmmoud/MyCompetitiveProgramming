@@ -121,7 +121,7 @@ int main()
 { 
     Point p1 = { 1, 2 }; 
     // p2 is a pointer to structure p1 
-    struct Point *p2 = &p1; 
+    Point *p2 = &p1; 
     // Accessing structure members using structure pointer 
     cout << p2->x << " " << p2->y;       //    1   2
     return 0; 
