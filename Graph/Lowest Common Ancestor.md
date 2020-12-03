@@ -12,9 +12,8 @@ vector<int>adj[100100];
 void dfs(int u, int parent)
 {
     dp[u][0] = parent;
-    for (int i = 0; i < adj[u].size(); ++i)
+    for(auto v:adj[u])
     {
-        int v = adj[u][i];
         if(v == parent)
             continue;
         depth[v] = depth[u] + 1;
