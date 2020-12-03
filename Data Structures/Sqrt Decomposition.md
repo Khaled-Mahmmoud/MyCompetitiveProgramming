@@ -45,6 +45,7 @@ Complexity : O(q * sqrt(n))
 [Solution Link](https://codeforces.com/contest/342/submission/100257772)
 Complexity : sqrt(q) * n + q * sqrt(q) * log n
 
+### OFFLine Queries Problem
 [Problem Link](https://codeforces.com/contest/86/problem/D)
 [Solution Link](https://codeforces.com/contest/86/submission/100307729)
 Complexity : sqrt(n) * n + q * sqrt(n) 
