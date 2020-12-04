@@ -135,8 +135,9 @@ If it is assumed that the time taken to mark a number as composite is constant, 
 On taking n common from the above equation, the above equation can be rewritten as:
 `n * ( 1/2 + 1/3 + 1/5 + 1/7 + ...... p)`
 
-It can be proved as below with the help of Harmonic Progression of the sum of primes
-`( 1/2 + 1/3 + 1/5 + 1/7 + ...... p) = log(log n)`
+It can be proved as below with the help of Harmonic Progression of the sum `( 1/1 + 1/2 + 1/3 + 1/4 + 1/5 + ...... 1/n) = log n`
+
+Harmonic Progression of the sum of primes `( 1/2 + 1/3 + 1/5 + 1/7 + ...... p) = log(log n)`
 
 So `n/2 + n/3 + n/5 + n/7 + ...... p = nlog(logn)`
 
