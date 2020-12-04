@@ -28,7 +28,7 @@ void build(int node, int start, int end)
         int mid = (start + end) / 2;
         build(2*node, start, mid);       // Recurse on the left child
         build(2*node+1, mid+1, end);     // Recurse on the right child
-        tree[node] = tree[2*node] + tree[2*node+1];     // Internal node will have the sum of both of its children
+        tree[node] = tree[2*node] + tree[2*node+1]; // Internal node will have the sum of both of its children
     }
 }
 
