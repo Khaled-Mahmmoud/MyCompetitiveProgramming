@@ -292,5 +292,8 @@ void displayElements(int s=S, int e=E, int p=1)
 ```
 ### Lazy Propagation
 
+All problems in the above sections discussed modification queries that only effected a single element of the array each. However the Segment Tree allows applying modification queries to an entire segment of contiguous elements, and perform the query in the same time O(logn).
+
+
 [Problem Link](https://codeforces.com/contest/620/problem/E)
 [Solution Link](https://codeforces.com/contest/620/submission/100289526)
