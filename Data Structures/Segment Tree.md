@@ -26,11 +26,8 @@ void build(int node, int start, int end)
     else
     {
         int mid = (start + end) / 2;
-       
         build(2*node, start, mid);       // Recurse on the left child
-        
         build(2*node+1, mid+1, end);     // Recurse on the right child
-        
         tree[node] = tree[2*node] + tree[2*node+1];     // Internal node will have the sum of both of its children
     }
 }
@@ -110,8 +107,6 @@ int main()
 }
 ```
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-### Segment tree Problems
  
 We we have a coordinate space on x-axis from [0 - N].
 
@@ -123,7 +118,6 @@ a) **HOW many numbers are in given interval**?
  				
 E.g In interval [1-3]  = 0	-> Notice, our first element is 4
  				
-E.g In interval [0-8]  = 2	-> 4, 7
 
 E.g In interval [6-15] = 3	-> 7, 9, 12
 
@@ -138,18 +132,6 @@ E.g. remove(5) 		-> 4 7 9 12
 b) **Insert new element: so we update our list**
 				
 E.g. insert(16)		-> 4 7 9 12 16 20
-
-**Solution** : The main point in these data structures is idea of `Pre-Processing` before answering Queries.
-
-So how is segment tree constructed? Done as a BINARY tree, each item holds an interval, represents HOW many numbers are in this interval. Leaf nodes represents the main number.
-
-So to have N numbers as leaf, and want to go up layer by later till reach root as a binary tree, we need to go up logN level
-
-Assume we have N = 8, so above is 4, then 2, then 1. So a total number of nodes: 15 = 2^4 -1
-
-How to index them, given initial N values?
-
-How to do the pre-processing?
 
 ```cpp
 const int N = 2000006;
