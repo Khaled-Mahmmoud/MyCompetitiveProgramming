@@ -297,3 +297,8 @@ All problems in the above sections discussed modification queries that only effe
 
 [Problem Link](https://codeforces.com/contest/620/problem/E)
 [Solution Link](https://codeforces.com/contest/620/submission/100289526)
+
+###  A Heap of Heaps
+
+[Problem Link](https://codeforces.com/contest/538/problem/F)
+[Solution Link](https://codeforces.com/contest/538/submission/100404408)
