@@ -208,3 +208,8 @@ All problems in the above sections discussed modification queries that only effe
 
 [Problem Link](https://codeforces.com/contest/538/problem/F)
 [Solution Link](https://codeforces.com/contest/538/submission/100404408)
+
+### AMazing
+
+[Problem Link](https://codeforces.com/group/BDIXyZZHhT/contest/205914/problem/F)
+[Solution Link](https://codeforces.com/group/BDIXyZZHhT/contest/205914/submission/100484268)
