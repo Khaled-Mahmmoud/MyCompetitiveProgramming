@@ -151,4 +151,5 @@ convert string to lowercase
 transform(str1.begin(),str1.end(),str1.begin(),::tolower);
 covert string to uppercase 
 transform(str1.begin(),str1.end(),str1.begin(),::toupper);
+// O(n)
 ```
