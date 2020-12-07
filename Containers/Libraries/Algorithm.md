@@ -144,3 +144,11 @@ for(int i=0;i<v.size();i++)
      cout<<v[i]<<' ';     // 1 2 3 4 5
 ```
 Complexity : O(n)
+
+### 
+```cpp
+convert string to lowercase 
+transform(str1.begin(),str1.end(),str1.begin(),::tolower);
+covert string to uppercase 
+transform(str1.begin(),str1.end(),str1.begin(),::toupper);
+```
