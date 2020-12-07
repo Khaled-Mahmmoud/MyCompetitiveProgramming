@@ -1,0 +1,46 @@
+Propositions ===>>> True OR False	
+Today is Friday	
+1 + 1 = 2	
+2 + 2 = 6	
+Not Propositions ===>> statement OR question	
+where are you ?	
+x + 2 = 5	
+
+Logic	
+The value of a logical expression is either true (1) or false (0). The most important logical operators are 	
+¬ (negation)	
+∧ (conjunction)	
+∨ (disjunction)	
+⊕ (exclusive)	
+⇒(implication)	
+⇔ (equivalence)	
+
+A   B   ¬A   ¬B   A∧B   A∨B   A⊕B   A⇒B   A⇔B	
+0   0    1    1    0     0     0      1      1	
+0   1    1    0    0     1     1      1      0	
+1   0    0    1    0     1     1      0      0	
+1   1    0    0    1     1     0      1      1	
+
+A⇒B          equals    (¬A)∨B        ||     A⇔B         equals     ¬(A⊕B)	
+A∨B          equals     B∨A           ||     A∧B          equals      B∧A	
+A∨(B∨C)      equals    (A∨B)∨C        ||     A∧(B∧C)      equals     (A∧B)∧C         // Associative	
+A∨(B∧C)      equals    (A∨B)∧(A∨C)    ||     A∧(B∨C)      equals     (A∧B)∨(A∧C)    // Commutative	
+¬(A∨B)       equals    (¬A)∧(¬B)      ||     ¬(A∧B)       equals    (¬A)∨(¬B)        	
+A∨A          equals       A           ||      A∧A         equals        A	
+A⇒B         equals    (¬A)⇒(¬B)      ||      A⇔B        equals        (A⇒B)∨(B⇒A)	
+¬(A⇒B)      equals       A∧(¬B)	
+¬(¬A)        equals       A 	
+
+
+A predicate is an expression that is true or false depending on its parameters . Predicates are usually denoted by capital letters 	
+For example, we can define a predicate P(x) that is true exactly when x is a prime number 	
+Using this definition, P(7) is true but P(8) is false	
+
+A quantifier connects a logical expression to the elements of a set. The most important quantifiers are ∀ (for all) and ∃ (there is)	
+For example, ∀x(∃y(y < x))	
+means that for each element x in the set, there is an element y in the set such that y is smaller than x 	
+This is true in the set of integers, but false in the set of natural numbers	
+Using the notation described above, we can express many kinds of logical propositions	
+For example  ∀x((x > 1 ∧ ¬P(x)) ⇒ (∃a(∃b(x = ab ∧ a > 1 ∧ b > 1))))	
+means that if a number x is larger than 1 and not a prime number, then there are	
+numbers a and b that are larger than 1 and whose product is x. This proposition is true in the set of integers
