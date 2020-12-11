@@ -115,6 +115,7 @@ matrix addIdentity(const matrix& a)
 		rt[i][i] += 1;
 	return rt;
 }
+/*
            Matrix multiplication dimensions
 The dimensions of a matrix give the number of rows and columns of the matrix in that order
 Since matrix A has 2 rows and 3 columns, it is called 2 * 3 matrix
@@ -155,6 +156,21 @@ matrix power_itr(matrix a, ll k)
 	}	
 	return rt;	
 }	
+/*
+            1 5
+1234   ---> 2 6
+5678   ---> 3 7
+            4 8
+*/
+v = vector<string>(m);
+for (int i = 0; i < n; i++)
+for (int j = 0; j < m; j++)
+{
+     char ch;
+     cin >> ch;
+     v[j].push_back(ch);
+}
+
 /*
 calc a^1 + a^2 + a^3 + ..... + a^k
 (a^1+a^2+a^3+a^4+a^5+a^6)       = (a^1+a^2+a^3)+(a^1*a^3+a^2*a^3+a^3*a^3)
