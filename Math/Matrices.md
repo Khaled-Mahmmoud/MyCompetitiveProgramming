@@ -186,26 +186,6 @@ matrix sumPower(const matrix& a, ll k)
 	if (k & 1)return multiply(a, addIdentity(sumPower(a, k - 1)));	
 	return multiply(sumPower(a, k >> 1), addIdentity(power(a, k >> 1)));	
 }	
-/*
-Matrix Trace
-sum of diagonal values
- 10  1   2
--5  20  7
- 0   0   30
-Trace = 10 + 20 +30 = 60
-*/
-int matrixTrace(const matrix& a)
-{
-	int ret = 0;
-	for(int i=0;i<sz(a);i++)ret += a[i][i];
-	return ret;
-}
-/*
-Matrix ClockWise Rotation
- 1  7  4           0  1
- 0  9  4    -->    9  7
-                   4  4
-*/  
 ```
 
 [Symmetric matrix](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Math/symmetric-matrix.jpg)
