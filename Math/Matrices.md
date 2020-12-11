@@ -115,22 +115,6 @@ matrix addIdentity(const matrix& a)
 		rt[i][i] += 1;
 	return rt;
 }
-/*
-Matrix Addition 
-1) Same dimensions for two matrices
-2) Sum is for corresponing cells
- 1  2  3      1  5  3     2  7  6
- 4  0  0  +   0  7  9  =  4  7  9
-*/
-matrix add(const matrix& a, const matrix& b) 
-{
-	matrix rt = zero(sz(a), sz(a[0]));
-	for(int i = 0; i < sz(a); i++)
-             for(int j = 0; j < sz(a[0]); j++)
-		rt[i][j] = a[i][j] + b[i][j];
-	return rt;
-}
-/*
            Matrix multiplication dimensions
 The dimensions of a matrix give the number of rows and columns of the matrix in that order
 Since matrix A has 2 rows and 3 columns, it is called 2 * 3 matrix
@@ -205,27 +189,6 @@ Matrix ClockWise Rotation
  0  9  4    -->    9  7
                    4  4
 */  
-matrix rotate(matrix v)
-{
-	  matrix r = zero(sz(v[0]),sz(v));
-    for(int i=0;i<sz(v);i++)
-        for(int j=0;i<sz(v[0]);j++)
-            r[j][sz(v)-i-1] = v[i][j];
-    return r;
-}
-/*
-Matrix Reflection
- 1  7  4           4  7  1
- 0  9  4    -->    4  9  0
- */
-matrix Reflect(matrix v)
-{
-	  matrix r = zero(sz(v),sz(v[0]));
-    for(int i=0;i<sz(v);i++)
-        for(int j=0;i<sz(v[0]);j++)
-            r[i][sz(v[0])-j-1] = v[i][j];
-    return r;
-}
 ```
 
 [Symmetric matrix](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Math/symmetric-matrix.jpg)
