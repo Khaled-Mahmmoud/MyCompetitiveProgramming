@@ -155,6 +155,20 @@ matrix power_itr(matrix a, ll k)
 		a = multiply(a, a); k >>= 1;	
 	}	
 	return rt;	
+}
+/*
+calc a^1 + a^2 + a^3 + ..... + a^k
+(a^1+a^2+a^3+a^4+a^5+a^6)       = (a^1+a^2+a^3)+(a^1*a^3+a^2*a^3+a^3*a^3)
+(a^1+a^2+a^3)+a^3*(a^1+a^2+a^3) = (a^1+a^2+a^3)*(1+a^3)
+
+what about odd n
+(a^1+a^2+a^3+a^4+a^5+a^6+a^7)   = a + a*(a^1+a^2+a^3+a^4+a^5+a^6) = a(1+(a^1+a^2+a^3+a^4+a^5+a^6))
+*/
+matrix sumPower(const matrix& a, ll k)
+{	
+	if (k == 0)return zero(sz(a), sz(a));	
+	if (k & 1)return multiply(a, addIdentity(sumPower(a, k - 1)));	
+	return multiply(sumPower(a, k >> 1), addIdentity(power(a, k >> 1)));	
 }	
 /*
 Matrix Reflect
@@ -171,21 +185,6 @@ for (int j = 0; j < m; j++)
      cin >> ch;
      v[j].push_back(ch);
 }
-
-/*
-calc a^1 + a^2 + a^3 + ..... + a^k
-(a^1+a^2+a^3+a^4+a^5+a^6)       = (a^1+a^2+a^3)+(a^1*a^3+a^2*a^3+a^3*a^3)
-(a^1+a^2+a^3)+a^3*(a^1+a^2+a^3) = (a^1+a^2+a^3)*(1+a^3)
-
-what about odd n
-(a^1+a^2+a^3+a^4+a^5+a^6+a^7)   = a + a*(a^1+a^2+a^3+a^4+a^5+a^6) = a(1+(a^1+a^2+a^3+a^4+a^5+a^6))
-*/
-matrix sumPower(const matrix& a, ll k)
-{	
-	if (k == 0)return zero(sz(a), sz(a));	
-	if (k & 1)return multiply(a, addIdentity(sumPower(a, k - 1)));	
-	return multiply(sumPower(a, k >> 1), addIdentity(power(a, k >> 1)));	
-}	
 ```
 
 [Symmetric matrix](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Math/symmetric-matrix.jpg)
