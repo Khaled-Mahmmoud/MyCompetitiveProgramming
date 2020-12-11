@@ -157,10 +157,11 @@ matrix power_itr(matrix a, ll k)
 	return rt;	
 }	
 /*
-            1 5
-1234   ---> 2 6
-5678   ---> 3 7
-            4 8
+Matrix Reflect
+            15
+1234   ---> 26
+5678   ---> 37
+            48
 */
 v = vector<string>(m);
 for (int i = 0; i < n; i++)
