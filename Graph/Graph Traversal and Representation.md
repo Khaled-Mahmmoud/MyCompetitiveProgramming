@@ -131,14 +131,14 @@ void dfs(int u = 1,int par = -1)
 
 
 ```cpp
+int w = 0;
 void dfs(int node , int par) 
 {
-    l[node] = flatten.size();
-    flatten.push_back(node);
+    l[node] = ++w;
     for(auto &i : adj[node])
         if(i != par)
             dfs(i , node);
-    r[node] = flatten.size() - 1;
+    r[node] = w;
 }
 ```
 ### Breadth-First Search (BFS)
