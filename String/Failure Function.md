@@ -44,9 +44,8 @@ vector<int>getprefix(string pat)
         while(len>0&&pat[i]!=pat[len])
             len=prefix[len-1];
         if(pat[i]==pat[len])
-            prefix[i]=++len;
-        else
-            prefix[i]=len;  // OR prefix[i] = 0;
+            ++len;
+        prefix[i] = len;  // OR prefix[i] = 0;
     }
     return prefix;
 }
