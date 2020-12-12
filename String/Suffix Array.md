@@ -196,20 +196,6 @@ Observe: At h = 8, every suffix has a different group. We can stop processing.
 
 ◼ At 1st iteration (h = 1), we need to sort on first letter
 
-◼ Then we should depend on ascii letter
-
-◼ Create length+1 suffixes
-
-◼ Assign group of suffix = ascii of first letter
-
-◼ Sort in O(nlogn)
-
-◼ Process for h = {1, 2, 4, 8, 16…}
-
-◼ Sort 2h letters based on h letters => O(nlogn)
-
-◼ Comparing now is 2 checkings on the group index only
-
 ◼ Order: O(logn) * O(nlogn)
 
 ### O(n log^2 n)
