@@ -62,7 +62,7 @@ available substrings or pattern search
 **Code**
 
 1) Generate N+1 suffixes put in vector
-2) Create map from suffix to its original index
+2) Create map suffix_array to its original index
 3) Sort the vector
 4) Now we can use map to know idx of i'th sorted suffix
 
@@ -188,7 +188,6 @@ Then group[idx + h] is h shift from group[idx]
 |racadabra|2|8|..........|ra|9|9|..........|ra|9|10|
 |ra|9|8|..........|racadabra|2|10|..........|racadabra|2|11|
 
-Observe: Sorted suffix and its group never go upper. Either same position or lower.
 
 Observe: At h = 8, every suffix has a different group. We can stop processing.
 
