@@ -245,9 +245,8 @@ int main()
 {
     string str = "abracadabra";
     suffixArray(str);
-    for(int i=0;i<n;i++){
-        for(int j=suf[i];j<n-1;j++)
-        cout<<str[j];cout<<endl;}
+    for(int i=0;i<n;i++)
+        cout<<suf[i]<<' ';
     return 0;
 }
 
@@ -313,9 +312,8 @@ int main()
 {
     string str = "abracadabra";
     suffixArray(str);
-    for(int i=0;i<n;i++){
-        for(int j=suf[i];j<n-1;j++)
-        cout<<str[j];cout<<endl;}
+    for(int i=0;i<n;i++)
+    cout<<suf[i]<<' ';
     return 0;
 }
 ```
