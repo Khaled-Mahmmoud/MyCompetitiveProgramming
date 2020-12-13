@@ -1,5 +1,8 @@
 # البقاء للاقوى 
 
+#i++#
+
+mask&xor
 
 **2 Sat**
 [1](https://www.youtube.com/watch?v=jI79VxSDN1w&list=PLPSFnlxEu99EMIPO77hVp8-K5TdvYp0XG&index=18)
