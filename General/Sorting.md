@@ -123,3 +123,41 @@ To sort a range[l,r] of string where 1<=l<=r<=str.size()
 sort(&str[l-1], &str[r]);
 sort(str.begin() + l - 1, str.begin() + r);
 ```
+
+```cpp
+#include <bits/stdc++.h>
+#define ll long long
+using namespace std;
+int n, v[100000], t[100000];
+void sort()
+{
+    int f[10] = {};
+    int p10 = 1;
+    for (int it = 0; it < 10; ++it)
+    {
+        for (int i = 0; i < n; ++i)
+            ++f[v[i] / p10 % 10];
+        for (int i = 1; i < 10; ++i)
+            f[i] += f[i - 1];
+        for (int i = n - 1; i >= 0; --i)
+            t[--f[v[i] / p10 % 10]] = v[i];
+        for (int i = 0; i < n; ++i)
+            v[i] = t[i];
+        for (int i = 0; i < 10; ++i)
+            f[i] = 0;
+        p10 *= 10;
+    }
+}
+int main()
+{
+    ios_base::sync_with_stdio(0),cin.tie(0);
+    cin >> n;
+    for (int i = 0; i < n; ++i)
+        cin >> v[i];
+    sort();
+    for (int i = 0; i < n; ++i)
+        cout << v[i] << " ";
+    cout << endl;
+    return 0;
+}
+```
