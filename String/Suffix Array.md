@@ -219,6 +219,8 @@ void suffixArray(string s)
 {
     n = s.size() + 1;
     vector<int> sorGroup(n);
+    
+    
     for (int i = 0; i < n; i++)
     {
         suf.push_back(i);
@@ -227,6 +229,8 @@ void suffixArray(string s)
     sort(tmp.begin(),tmp.end());
     for (int i = 0; i < n; i++)
         group.push_back(lower_bound(tmp.begin(),tmp.end(), s[i]) - tmp.begin());
+	
+	
     for (int len = 1; sorGroup.back() != n - 1; len <<= 1)
     {
         curlen = len;
@@ -279,6 +283,8 @@ void suffixArray(string s)
 {
     n = s.size() + 1;
     vector<int> sorGroup(n);
+    
+    
     for (int i = 0; i < n; i++)
     {
         suf.push_back(i);
@@ -287,6 +293,8 @@ void suffixArray(string s)
     sort(tmp.begin(),tmp.end());
     for (int i = 0; i < n; i++)
         group.push_back(lower_bound(tmp.begin(),tmp.end(), s[i]) - tmp.begin());
+	
+	
     for (int len = 1; sorGroup.back() != n - 1; len <<= 1)
     {
         curlen = len;
