@@ -1,34 +1,35 @@
 ### Strongly Connected Components
 
 ```cpp
-const int N = 100000;
-int n, e, idx[N], low[N], T;
-vector<vector<int> > g;
-vector<int> S;
+#include <bits/stdc++.h>
+#define ll unsigned long long
+using namespace std;
+const int N = 1e5;
+int n,e,idx[N],low[N],comp[N],cmp,t;
+vector<vector<int>>adj;
+vector<int>s;
 bool vis[N];
-int compID[N], cmp;
-void DFS(int u)
+void dfs(int u)
 {
-    idx[u] = low[u] = ++T;
-    S.push_back(u);
+    idx[u] = low[u] = ++t;
+    s.push_back(u);
     vis[u] = true;
-    for (int i = 0; i < g[u].size(); ++i)
+    for(auto &v:adj[u])
     {
-        int v = g[u][i];
-        if (idx[v] == 0)
-            DFS(v);
-        if (vis[v])
-            low[u] = min(low[u], low[v]);
+        if(idx[v]==0)
+           dfs(v);
+        if(vis[v])
+            low[u] = min(low[u],low[v]);
     }
-    if (idx[u] == low[u])
+    if(idx[u]==low[u])
     {
-        while (true)
+        while(true)
         {
-            int v = S.back();
-            S.pop_back();
+            int v = s.back();
+            s.pop_back();
             vis[v] = false;
-            compID[v] = cmp;
-            if (v == u)
+            comp[v] = cmp;
+            if(v==u)
                 break;
         }
         ++cmp;
@@ -36,21 +37,18 @@ void DFS(int u)
 }
 int main()
 {
-    cin >> n >> e;
-    g.resize(n);
-    for (int i = 0; i < e; ++i)
+    ios_base::sync_with_stdio(false),cin.tie(0);
+    cin>>n>>e;
+    adj.resize(n+1);
+    for(int i=0;i<e;i++)
     {
-        int from, to;
-        cin >> from >> to;
-        --from;
-        --to;
-        g[from].push_back(to);
+        int u,v;
+        cin>>u>>v;
+        adj[u].push_back(v);
     }
-    for (int i = 0; i < n; ++i)
-        if (idx[i] == 0)
-            DFS(i);
-
-    cout<<cmp<<endl;
+    for(int i=1;i<=n;i++)
+        if(idx[i]==0)
+        dfs(i);
     return 0;
 }
 ```
