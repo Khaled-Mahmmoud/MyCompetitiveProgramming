@@ -343,3 +343,41 @@ int msb(int n)
     return (1<<cnt);
 } 
 ```
+
+### One’s Complement Representation
+
+The 1's complement of a binary number is just the inverse of the digits. To form the 1's complement, change all 0's to 1's and all 1's to 0's
+
+For Example, the 1's complement of 11001010 is 00110101
+
+## Two’s Complement Representation
+
+Start to flip after the “last bit”
+
+-number = 2’s complement of number
+
+One way to compute manually:
+
+Get 1’s complement...then add 1
+
+Original value : 01101110
+
+2's Complement : 10010010
+
+1's Complement : 10010001 
+
+ 10010001 + 1 = 10010010
+ 
+ |---|---|
+ |5  |0000000000000 101|
+ |4  | 0000000000000 100|
+ |3  | 0000000000000 011|
+ |2  | 0000000000000 010|
+ |1  | 0000000000000 001|
+ |0  | 0000000000000 000|
+ |-1 | 1111111111111 111|
+ |-2 | 1111111111111 110|
+ |-3 | 1111111111111 101|
+ |-4 | 1111111111111 100|
+ |-5 | 1111111111111 011|
+ 
