@@ -12,20 +12,6 @@ Given three integers a, b, c representing a linear equation of the form : ax + b
 
 Determine if the equation has a solution such that x and y are both integral values.
 
-Input : a = 3, b = 6, c = 9
-
-Output: Possible
-
-Explanation : The Equation turns out to be, 
-3x + 6y = 9 one integral solution would be 
-x = 1 , y = 1
-
-Input : a = 3, b = 6, c = 8
-
-Output : Not Possible
-
-Explanation : integral values of x and y not
-exists that can satisfy the equation 3x + 6y = 8
 
 **Solution**
 
