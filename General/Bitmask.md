@@ -270,6 +270,15 @@ void printAllSubsets(int len)
   }
 }
 ```
+
+- X = 10010100
+
+- Y = 00010100
+
+- X - Y removes all Y 1s from X : 10000000
+
+- Another longer/general way to do so: X & ~Y : 10010100 & 11101011 = 10000000
+
 **Be careful with operators** precedence problems
 
 X & 7 == 1 		is interpreted as 	X & (7 == 1)	        --> (X & 7) == 1
@@ -317,7 +326,7 @@ void printAllSubsetsGray(int len)
 	}
 }
 ```
-### Find [the most significant bit](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Bitmask/most%20significant%20bit.jpg) of a number
+### Find the most significant bit of a number
 
 ```cpp
 int msb(int n) 
