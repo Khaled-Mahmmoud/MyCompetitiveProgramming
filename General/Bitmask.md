@@ -237,6 +237,13 @@ X & ~(X-1) 	= 011010010000
 template<class Int>	
 Int leastBit(Int num) { return (num & ~(num-1)); }	
 ```
+- X = 10010100
+
+- Y = 00010100
+
+- X - Y removes all Y 1s from X : 10000000
+
+- Another longer/general way to do so: X & ~Y : 10010100 & 11101011 = 10000000
 
 **Check whether N is power of 2 or not**
 ```cpp
@@ -271,13 +278,6 @@ void printAllSubsets(int len)
 }
 ```
 
-- X = 10010100
-
-- Y = 00010100
-
-- X - Y removes all Y 1s from X : 10000000
-
-- Another longer/general way to do so: X & ~Y : 10010100 & 11101011 = 10000000
 
 **Be careful with operators** precedence problems
 
