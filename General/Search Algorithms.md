@@ -1,3 +1,4 @@
+### Binary Search
 ```cpp
 bool valid(int m)
 {
@@ -19,7 +20,7 @@ int binarySearch()
     cout<<ans;
 }
 ```
-
+### Ternary Search
 ```cpp
 double ternary_search(double l, double r)
 {
