@@ -237,6 +237,23 @@ X & ~(X-1) 	= 011010010000
 template<class Int>	
 Int leastBit(Int num) { return (num & ~(num-1)); }	
 ```
+
+**Get last bit using index & -index**
+
+- +20 = 00010100
+
+- -20 = 11101100
+
+- 20 & -20 = 00000100
+
+**Remove last bit**
+
+- Get it...subtract it, index - (index & -index)
+
+- 00010100 - 00000100 = 00010000
+
+**Removing bits from mask**
+
 - X = 10010100
 
 - Y = 00010100
