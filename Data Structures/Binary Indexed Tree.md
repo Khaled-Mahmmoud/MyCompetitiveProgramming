@@ -45,6 +45,9 @@
 
 ![alt text](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Tree/fenwick.png)
 
+
+
+
 12 = 1100 ⇒ removing last 1 bit ⇒ 1000 = 8, Then parent of 12 ⇒ 8
 
 Notice: we removed bit at position 2 ⇒ 12 covers 2^2 numbers = 12 - 8 = 4
