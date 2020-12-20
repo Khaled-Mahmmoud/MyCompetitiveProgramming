@@ -48,3 +48,9 @@
 12 = 1100 ⇒ removing last 1 bit ⇒ 1000 = 8, Then parent of 12 ⇒ 8
 
 Notice: we removed bit at position 2 ⇒ 12 covers 2^2 numbers = 12 - 8 = 4
+
+Notice: 8 = 1000 => has 3 trailing zeros. Try to replace each 0 with 1
+
+1001 = 9, 1010 = 10, 1100 = 12
+
+ number of trailing zeros = number of children … child remove last bit => go to parent
