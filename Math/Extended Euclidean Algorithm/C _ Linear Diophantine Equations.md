@@ -61,34 +61,30 @@ The above idea still works when a or b or both of them are negative. We only nee
 
 Finally, we can implement this idea as follows (note that this code does not consider the case a = b = 0)
 ```cpp
-int gcd(int a, int b, int *x, int *y)
+ll x,y;
+ll exgcd(ll a,ll b,ll &x,ll &y)
 {
-    if (a == 0)
+    if (!b)
     {
-        *x = 0;
-        *y = 1;
-        return b;
+        x=1;
+        y=0;
+        return a;
     }
-
-    int x1, y1;
-    int g = gcd(b%a, a, &x1, &y1);
-    *x = y1 - (b/a) * x1;
-    *y = x1;
-
-    return g;
+    ll d=exgcd(b,a%b,y,x);
+    y-=(a/b)*x;
+    return d;
 }
 bool find_any_solution(int a, int b, int c, int &x, int &y)
 {
-    int g, xg, yg;
-    g = gcd(abs(a), abs(b), &xg, &yg);
+    g = gcd(abs(a), abs(b), x, y);
     if (c % g)
     {
         return false;
     }
-    x = xg * (c / g);
-    y = yg * (c / g);
-    if (a < 0) x *= -1;
-    if (b < 0) y *= -1;
+    new_x = xg * (c / g);
+    new_y = yg * (c / g);
+    if (a < 0) new_x *= -1;
+    if (b < 0) new_y *= -1;
     return true;
 }
 ```
