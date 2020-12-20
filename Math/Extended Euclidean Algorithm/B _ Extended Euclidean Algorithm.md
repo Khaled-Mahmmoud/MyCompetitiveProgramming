@@ -45,7 +45,7 @@ ll exgcd(ll a,ll b,ll &x,ll &y)
 int main()  
 {  
     ll a = 35, b = 15;  
-    ll g = gcdExtended(abs(a), abs(b), &x, &y); 
+    ll g = exgcd(abs(a), abs(b), &x, &y); 
     if (a < 0) x *= -1;
     if (b < 0) y *= -1;
     cout<<g<<' '<<x<<' '<<y;  // 5  1  -2
