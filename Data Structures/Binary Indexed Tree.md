@@ -43,3 +43,5 @@
 
 - Sum(7) = BIT(7) + BIT(6) + BIT(4) ⇒ 111, 110, 100, 0
 
+![alt text](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Tree/fenwick.png)
+
