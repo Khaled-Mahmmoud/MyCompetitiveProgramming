@@ -27,7 +27,7 @@ set : bit with value 1
 
 clear : bit with value 0
 
-### basic bitwise operations
+### Basic Bitwise Operations
 
 **AND operator (&)**
 
