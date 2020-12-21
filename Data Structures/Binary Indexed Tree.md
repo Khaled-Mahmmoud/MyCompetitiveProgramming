@@ -87,9 +87,7 @@ E.g. 1 ⇒ 2 6 ⇒ 8 10 ⇒ 12 13 ⇒ 14
 
 Then 1 goes to 2...2 goes to 4..4 goes to 8 [recursive]
 
-Recall given number idx it covers 2^r values
-
-- r is position of “last bit”, It covers numbers from idx to idx – 2^r + 1
+Recall given number idx it covers 2^r values where r is position of “last bit”.
  
 All following numbers cover 8 values
 
