@@ -75,4 +75,24 @@ int getAccum(int idx)
     return sum;
 }
 ```
+### Updating position
 
+Position 1: Covered by 4 intervals ⇒ 1, 2, 4, 8
+
+Add -3 to 1 ⇒ add -3 to these 4 intervals
+
+**Given index, how to get smallest position covering it?**
+
+E.g. 1 ⇒ 2 6 ⇒ 8 10 ⇒ 12 13 ⇒ 14
+
+Then 1 goes to 2...2 goes to 4..4 goes to 8 [recursive]
+
+Recall given number idx it covers 2^r values
+
+- r is position of “last bit”, It covers numbers from idx to idx – 2^r + 1
+ 
+All following numbers cover 8 values
+
+- (0001000, 0101000, 1101000, 1111000, 1001000) ⇒ r = 3 ⇒ 2^3 = 8
+
+- So our focus on “last bit”, NOT before that
