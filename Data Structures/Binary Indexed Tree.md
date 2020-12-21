@@ -122,3 +122,14 @@ Notice: 8 = 1000 => has 3 trailing zeros. Remove last bit, and add 1, 2, 3...tra
 0100 = 4, 0110 = 6, 0111 = 7
 
 number of trailing zeros = number of children
+
+```cpp
+void add(int idx,int val)
+{
+    while(idx<MAX_VAL)
+    {
+        bit_tree[idx] += val;
+        idx += (idx & -idx);
+    }
+}
+```
