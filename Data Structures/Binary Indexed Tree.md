@@ -94,3 +94,24 @@ All following numbers cover 8 values
 - (0001000, 0101000, 1101000, 1111000, 1001000) ⇒ r = 3 ⇒ 2^3 = 8
 
 - So our focus on “last bit”, NOT before that
+
+**Let’s get who covers 4 = 0100**
+
+4 has “last bit” at k = 2, When target number enumerate its 2^r, one contains 100
+
+So we need to go at least 1 bit higher than k, E.g. re-set last bit k = 3 ⇒ 1000 ⇒ first one to cover 0100
+
+**Let’s get who covers 5 = 0101**
+
+k = 0, We need target number to include our 1 at k = 0
+
+The earlier one should exist in smallest coverer number. So again, shift k = 0 1 step to be in its enumeration
+
+E.g. re-set last bit k = 1 ⇒ 110. Note, 1000 also cover 5 Updating position
+
+Let’s get who covers 3 = 0011, “last bit” at k = 0
+
+We need enumeration includes whole 11. So parent need to be a 1 before these 11. E.g. ⇒ 0100
+
+**How to get that number easily?** Just add 2^k ⇒ if one or more bits ⇒ shifted. E.g. 100100011100 + 000000000100 = 100100100000
+
