@@ -133,3 +133,31 @@ void add(int idx,int val)
     }
 }
 ```
+
+Assume we have array of values >= 0, Accumulate it ⇒ increasing sequence
+
+- Find first index with accumulation >= value
+
+- Given that it is increasing, using binary search is direct
+
+- BIT maintain such accumulation by definition, if all values >= 0
+```cpp
+int get_value(int idx)
+{
+    return get_accum(idx) - get_accum(idx-1);
+}
+int get_idx(int accum)
+{
+    int s = 1, e = MAX_VAL;
+    while(s<e)
+    {
+        int mid_idx = (s+e)/2;
+        int val = get_accum(mid_idx);
+        if(val>=accum)
+            e = mid_idx;
+        else
+            s = mid_idx + 1;
+    }
+    return s;
+}
+```
