@@ -115,3 +115,4 @@ We need enumeration includes whole 11. So parent need to be a 1 before these 11.
 
 **How to get that number easily?** Just add 2^k ⇒ if one or more bits ⇒ shifted. E.g. 100100011100 + 000000000100 = 100100100000
 
+![alt text](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Tree/fenwick_1.png)
