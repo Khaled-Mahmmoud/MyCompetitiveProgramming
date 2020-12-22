@@ -29,8 +29,6 @@ This implies gcd also divides ‘c’ using the relation that ax + by = c.
 
 ### Finding a solution of equation ax + by = c
 
-**The degenerate case** : A degenerate case that need to be taken care of is when a = b = 0. It is easy to see that we either have no solutions or infinitely many solutions, depending on whether c = 0 or not. In the rest of this article, we will ignore this case.
-
 To find one solution of the Diophantine equation with 2 unknowns, you can use the Extended Euclidean algorithm. First, assume that a and b are non-negative. When we apply Extended Euclidean algorithm for a and b, we can find their greatest common divisor g and 2 numbers xg and yg such that: a.xg + b.yg = g
 
 If c is divisible by g = gcd(a,b), then the given Diophantine equation has a solution, otherwise it does not have any solution. 
