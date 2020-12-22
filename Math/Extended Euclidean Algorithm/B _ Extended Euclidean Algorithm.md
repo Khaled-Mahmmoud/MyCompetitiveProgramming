@@ -54,18 +54,8 @@ y = x1 - y1 * (a / b)
 
 ### Bézout's identity
 
-Assume a > 0 and b > 0
-
-ax + by = gcd(a, b)	=> we know that
-
-Can we generate further solutions?
-
-Is following valid:
+Assume a > 0 and b > 0, Can we generate further solutions?
 
 - a(x+b) + b(y-a) = g, Yes, we added ab - ab, so same equation
 
-- a(x+b/g) + b(y-a/g) = g
-
-- a(x+kb/g) + b(y-ka/g) = g
-
-With easy math, we can generate!
+- a(x+kb/m) + b(y-ka/m) = g
