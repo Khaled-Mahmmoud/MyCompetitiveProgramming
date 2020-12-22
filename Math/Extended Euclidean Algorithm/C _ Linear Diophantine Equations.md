@@ -76,12 +76,12 @@ ll exgcd(ll a,ll b,ll &x,ll &y)
     y = x1 - y1 * (a / b);
     return g;
 }
-bool phan(ll a, ll b, ll c)
+ll phan(ll a, ll b, ll c)
 {
     ll g = exgcd(abs(a), abs(b), x, y);
     
     if (c % g)
-        return false;
+        return -1;
     
     x = x * c / g;
     y = y * c / g;
@@ -89,7 +89,7 @@ bool phan(ll a, ll b, ll c)
     if (a < 0) x *= -1;
     if (b < 0) y *= -1;
     
-    return true;
+    return x;
 }
 ```
 
