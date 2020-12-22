@@ -31,8 +31,6 @@ This implies gcd also divides ‘c’ using the relation that ax + by = c.
 
 To find one solution of the Diophantine equation with 2 unknowns, you can use the Extended Euclidean algorithm. First, assume that a and b are non-negative. When we apply Extended Euclidean algorithm for a and b, we can find their greatest common divisor g and 2 numbers xg and yg such that: a.xg + b.yg = g
 
-If c is divisible by g = gcd(a,b), then the given Diophantine equation has a solution, otherwise it does not have any solution. 
-
 Now supposed that c is divisible by g, then we multiply the equation by c/g:
 
 a.xg.c/g + b.yg.c/g = c
