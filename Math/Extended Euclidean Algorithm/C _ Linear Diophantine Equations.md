@@ -43,7 +43,6 @@ y = yg.c/g
 
 The above idea still works when a or b or both of them are negative. We only need to change the sign of x and y when necessary.
 
-Finally, we can implement this idea as follows (note that this code does not consider the case a = b = 0)
 ```cpp
 ll phan(ll a, ll b, ll c)
 {
