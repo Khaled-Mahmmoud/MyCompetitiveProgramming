@@ -110,7 +110,7 @@ Complexity : O(2^n-1)
 int primes[4] = {2,3,5,7};
 int n = 100,ans;
 vector<int>sub;
-void subset(int idx = 0)
+void inc_exe(int idx = 0)
 {
     if(idx==4)
     {
@@ -126,9 +126,9 @@ void subset(int idx = 0)
         return;
     }
     sub.push_back(primes[idx]);
-    subset(idx+1);
+    inc_exe(idx+1);
     sub.pop_back();
-    subset(idx+1);
+    inc_exe(idx+1);
 }
 int main()
 {
