@@ -40,7 +40,7 @@ int main()
 
 As seen above, x and y are results for inputs a and b: a.x + b.y = gcd ---- (1)  
 
-And x1 and y1 are results for inputs b%a and a: b.x1 + a%b.y1 = gcd   
+And x1 and y1 are results for inputs b and a%b: b.x1 + a%b.y1 = gcd   
                     
 When we put a%b = (a - (⌊a/b⌋).b) in above, we get the following : b.x1 + (a - (⌊a/b⌋).b).y1  = gcd
    
