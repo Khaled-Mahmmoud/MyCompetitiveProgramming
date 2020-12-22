@@ -36,7 +36,7 @@ int main()
     cout<<g<<' '<<x<<' '<<y;  
 }  
 ```
-# How does Extended Algorithm Work?
+### How does Extended Algorithm Work?
 
 As seen above, x and y are results for inputs a and b: a.x + b.y = gcd ---- (1)  
 
