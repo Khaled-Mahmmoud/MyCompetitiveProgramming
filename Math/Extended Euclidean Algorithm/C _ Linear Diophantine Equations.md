@@ -71,14 +71,14 @@ ll exgcd(ll a,ll b,ll &x,ll &y)
         return a;
     }
     ll x1, y1;
-    ll d = exgcd(b, a % b, x1, y1);
+    ll g = exgcd(b, a % b, x1, y1);
     x = y1;
     y = x1 - y1 * (a / b);
-    return d;
+    return g;
 }
-bool find_any_solution(int a, int b, int c)
+bool find_any_solution(ll a, ll b, ll c)
 {
-    g = gcd(abs(a), abs(b), x, y);
+    ll g = gcd(abs(a), abs(b), x, y);
     
     if (c % g)
         return false;
