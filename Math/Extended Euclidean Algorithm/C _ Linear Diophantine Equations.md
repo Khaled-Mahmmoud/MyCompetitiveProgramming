@@ -12,23 +12,11 @@ Given three integers a, b, c representing a linear equation of the form : ax + b
 
 Determine if the equation has a solution such that x and y are both integral values.
 
-
 **Solution**
 
 For linear Diophantine equation equations, integral solutions exist if and only if, the GCD of coefficients of the two variables divides the constant term perfectly. 
 In other words the integral solution exists if, GCD(a ,b) divides c.
-
-- Find GCD of a and b
-- Check if c % GCD(a ,b) == 0
-- If yes then print Possible
- - Else print Not Possible
 ```cpp
-int gcd(int a, int b) 
-{ 
-    if(b==0)
-       return a;
-    return gcd(b,a%b); 
-} 
 bool isPossible(int a, int b, int c) 
 { 
     return (c % gcd(a,b) == 0); 
