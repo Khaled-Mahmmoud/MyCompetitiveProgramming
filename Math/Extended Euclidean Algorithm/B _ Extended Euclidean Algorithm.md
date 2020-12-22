@@ -51,14 +51,6 @@ After comparing coefficients of 'a' and 'b' in (1) and (2), we get following
 x = y1
 
 y = x1 - y1 * (a / b)
-    
-### How is Extended Algorithm Useful?
-
-The extended Euclidean algorithm is particularly useful when a and b are coprime (or gcd is 1)
-
-Since x is the modular multiplicative inverse of “a modulo b”, and y is the modular multiplicative inverse of “b modulo a”
-
-In particular, the computation of the modular multiplicative inverse is an essential step in RSA public-key encryption method.
 
 ### Bézout's identity
 
