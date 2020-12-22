@@ -61,21 +61,6 @@ The above idea still works when a or b or both of them are negative. We only nee
 
 Finally, we can implement this idea as follows (note that this code does not consider the case a = b = 0)
 ```cpp
-ll x,y;
-ll exgcd(ll a,ll b,ll &x,ll &y)
-{
-    if (!b)
-    {
-        x=1;
-        y=0;
-        return a;
-    }
-    ll x1, y1;
-    ll g = exgcd(b, a % b, x1, y1);
-    x = y1;
-    y = x1 - y1 * (a / b);
-    return g;
-}
 ll phan(ll a, ll b, ll c)
 {
     ll g = exgcd(abs(a), abs(b), x, y);
