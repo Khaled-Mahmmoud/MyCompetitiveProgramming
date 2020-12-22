@@ -76,7 +76,7 @@ ll exgcd(ll a,ll b,ll &x,ll &y)
     y = x1 - y1 * (a / b);
     return g;
 }
-bool Diophantine(ll a, ll b, ll c)
+bool Dioph(ll a, ll b, ll c)
 {
     ll g = exgcd(abs(a), abs(b), x, y);
     
