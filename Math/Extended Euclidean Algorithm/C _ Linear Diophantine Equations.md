@@ -67,15 +67,15 @@ From one solution (x,y), we can obtain all the solutions of the given equation.
 
 Let g=gcd(a,b) and let x,y be integers which satisfy the following: a⋅x + b⋅y = c
 
-Now, we should see that adding b/g to x, and at the same time subtracting a/g from y will not break the equality:
+Now, we should see that adding b/m to x, and at the same time subtracting a/m from y will not break the equality:
 
-a * (x+b/g) + b * (y-a/g) = c
+a * (x+b/m) + b * (y-a/m) = c
 
 Obviously, this process can be repeated again, so all the numbers of the form:
 
-x = x + k * (b/g)
+x = x + k * (b/m)
 
-y = y - k * (a/g)
+y = y - k * (a/m)
 
 are solutions of the given Diophantine equation.
 
