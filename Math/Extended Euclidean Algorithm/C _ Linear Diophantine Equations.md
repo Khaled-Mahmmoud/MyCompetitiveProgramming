@@ -78,7 +78,7 @@ ll exgcd(ll a,ll b,ll &x,ll &y)
 }
 bool find_any_solution(ll a, ll b, ll c)
 {
-    ll g = gcd(abs(a), abs(b), x, y);
+    ll g = exgcd(abs(a), abs(b), x, y);
     
     if (c % g)
         return false;
