@@ -76,17 +76,19 @@ ll exgcd(ll a,ll b,ll &x,ll &y)
     y = x1 - y1 * (a / b);
     return d;
 }
-bool find_any_solution(int a, int b, int c, int &x, int &y)
+bool find_any_solution(int a, int b, int c)
 {
     g = gcd(abs(a), abs(b), x, y);
+    
     if (c % g)
-    {
         return false;
-    }
-    new_x = xg * (c / g);
-    new_y = yg * (c / g);
-    if (a < 0) new_x *= -1;
-    if (b < 0) new_y *= -1;
+    
+    x = x * c / g;
+    y = y * c / g;
+    
+    if (a < 0) x *= -1;
+    if (b < 0) y *= -1;
+    
     return true;
 }
 ```
