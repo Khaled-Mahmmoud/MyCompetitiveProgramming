@@ -133,6 +133,7 @@ void add(ll idx,ll val)
     }
 }
 ```
+### Index with cumulative sum
 
 Assume we have array of values >= 0, Accumulate it ⇒ increasing sequence
 
