@@ -165,6 +165,7 @@ int get_value(int idx)
     return get_accum(idx) - get_accum(idx-1);
 }
 ```
+### 2D BIT
 BIT can be extended to higher dimensions. In 2D: query add value to cell Or Rectangle sum (0, 0) to (x, y)
 
 Define 2D array with MAX_X and MAX_Y. Think in each row (x indexed) as independent tree on y
