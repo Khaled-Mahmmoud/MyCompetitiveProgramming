@@ -143,10 +143,6 @@ Assume we have array of values >= 0, Accumulate it ⇒ increasing sequence
 
 - BIT maintain such accumulation by definition, if all values >= 0
 ```cpp
-int get_value(int idx)
-{
-    return get_accum(idx) - get_accum(idx-1);
-}
 int get_idx(int accum)
 {
     int s = 1, e = MAX_VAL;
@@ -162,7 +158,13 @@ int get_idx(int accum)
     return s;
 }
 ```
-
+How to get value of indx
+```cpp
+int get_value(int idx)
+{
+    return get_accum(idx) - get_accum(idx-1);
+}
+```
 BIT can be extended to higher dimensions. In 2D: query add value to cell Or Rectangle sum (0, 0) to (x, y)
 
 Define 2D array with MAX_X and MAX_Y. Think in each row (x indexed) as independent tree on y
