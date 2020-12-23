@@ -165,32 +165,3 @@ int get_value(int idx)
     return get_accum(idx) - get_accum(idx-1);
 }
 ```
-### 2D BIT
-BIT can be extended to higher dimensions. In 2D: query add value to cell Or Rectangle sum (0, 0) to (x, y)
-
-Define 2D array with MAX_X and MAX_Y. Think in each row (x indexed) as independent tree on y
-
-X is responsible for set of trees
-
-Y is responsible for a single tree
-
-Add val to bit2d[x][y]. bit2d[x] is a 1D tree at position x. Update normally cross different bit2d[x][y]
-
-```cpp
-void update(int x,int y,int val)
-{
-    while(x<=max_x)
-    {
-        updatey(x,y,val);
-        x += (x & -x);
-    }
-}
-void updatey(int x,int y,int val)
-{
-    while(y<=max_y)
-    {
-        tree[x][y] += val;
-        y += (y & -y);
-    }
-}
-```
