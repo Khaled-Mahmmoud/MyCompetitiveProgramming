@@ -61,7 +61,7 @@ Sum(15) = BIT(15) + BIT(14) + BIT(12) + BIT(8) = 1111 ⇒ 1110 ⇒ 1100 ⇒ 1000
 
 15 is responsible for 1 number, 14 for 2, 12 for 4, 8 for 8 numbers
 
-```
+```cpp
 const int max_val = 30000;
 int bit_tree[max_val];
 int getAccum(int idx)
