@@ -123,7 +123,7 @@ Notice: 8 = 1000 => has 3 trailing zeros. Remove last bit, and add 1, 2, 3...tra
 
 number of trailing zeros = number of children
 
-```cpp
+```
 void add(int idx,int val)
 {
     while(idx<MAX_VAL)
