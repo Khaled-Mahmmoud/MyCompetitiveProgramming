@@ -2,7 +2,7 @@
 ```cpp
 int binarySearch()
 {
-    int l = 0, r = 1e9,ans;
+    int l = 0, r = 1e9;
     while (l < r)
     {
         int mid = (l+r) / 2;
