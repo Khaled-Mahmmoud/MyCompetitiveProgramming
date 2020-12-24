@@ -15,7 +15,7 @@ int binarySearch()
     return l;
 }
 ```
-Double
+**Double**
 ```cpp
 double binarySearch()
 {
@@ -50,7 +50,7 @@ int ternary_search(int l, int r)
     return f(l);                   
 }
 ```
-Double
+**Double**
 ```cpp
 double ternary_search(double l, double r)
 {
