@@ -190,8 +190,7 @@ void dfs(int u=1, int p=-1)
         dfs(v,u);
         sz[u] += sz[v];
     }
-    if(u != 1)
-        ans += 1ll*sz[u]*(n-sz[u]);
+    ans += 1ll*sz[u]*(n-sz[u]);
 }
 int main()
 {
