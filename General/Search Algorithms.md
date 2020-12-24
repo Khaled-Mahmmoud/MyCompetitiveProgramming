@@ -39,13 +39,13 @@ int ternary_search(int l, int r)
 {
     while (l<=r)
     {
-        int m1 = l + (r - l) / 3;
-        int m2 = r - (r - l) / 3;
+        int mid1 = l + (r - l) / 3;
+        int mid2 = r - (r - l) / 3;
                 
-        if (f(m1) < f(m2))
-            l = m1;
+        if(f(mid1) < f(mid2))
+            l = mid1 + 1;
         else
-            r = m2;
+            r = mid2 - 1;
     }
     return f(l);                   
 }
@@ -57,16 +57,13 @@ double ternary_search(double l, double r)
     double eps = 1e-9;              
     while (r - l > eps)
     {
-        double m1 = l + (r - l) / 3;
-        double m2 = r - (r - l) / 3;
+        double mid1 = l + (r - l) / 3;
+        double mid2 = r - (r - l) / 3;
         
-        double f1 = f(m1);      
-        double f2 = f(m2);      
-        
-        if (f1 < f2)
-            l = m1;
+        if(f(mid1) < f(mid2))
+            l = mid1 + 1;
         else
-            r = m2;
+            r = mid2 - 1;
     }
     return f(l);                   
 }
