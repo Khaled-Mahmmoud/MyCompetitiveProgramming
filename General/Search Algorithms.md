@@ -1,26 +1,56 @@
 ### Binary Search
 ```cpp
-bool valid(int m)
-{
-    //
-    return 1;
-}
 int binarySearch()
 {
     int l = 0, r = 1e9,ans;
-    while (l <= r)
+    while (l < r)
     {
         int mid = (l+r) / 2;
 
         if (valid(mid))
-            r = mid - 1,ans = mid;
+            r = mid;
         else
             l = mid + 1;
     }
-    cout<<ans;
+    return l;
+}
+```
+Double
+```cpp
+double binarySearch()
+{
+    double l = 0, r = 1e9;
+    double eps = 1e-9;  
+    while (r-l > eps)
+    {
+        double mid = (l+r) / 2;
+
+        if (valid(mid))
+            r = mid;
+        else
+            l = mid + 1;
+    }
+    return l;
 }
 ```
 ### Ternary Search
+```cpp
+int ternary_search(int l, int r)
+{
+    while (l<=r)
+    {
+        int m1 = l + (r - l) / 3;
+        int m2 = r - (r - l) / 3;
+                
+        if (f(m1) < f(m2))
+            l = m1;
+        else
+            r = m2;
+    }
+    return f(l);                   
+}
+```
+Double
 ```cpp
 double ternary_search(double l, double r)
 {
