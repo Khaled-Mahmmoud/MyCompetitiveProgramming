@@ -150,7 +150,6 @@ int n,m;
 ll dijkstra()
 {
     vector<ll>d(n+1,1e18);
-    vector<bool>vis(n+1);
     set<pair<ll,int>>st;
     st.insert(make_pair(0,1));
     d[1] = 0;
@@ -159,16 +158,14 @@ ll dijkstra()
         int u = st.begin()->second;
         ll cost = st.begin()->first;
         st.erase(st.begin());
-        if(vis[u])
-            continue;
-        vis[u] = true;
         for(auto i:adj[u])
         {
-            int v=i.first,w=i.second;
+            int v = i.first,w = i.second;
             if(d[v] > d[u]+w)
             {
-                d[v]=d[u]+w;
-                par[v]=u;
+                st.erase(make_pair(d[v],v));
+                d[v] = d[u]+w;
+                par[v] = u;
                 st.insert(make_pair(d[v],v));
             }
         }
