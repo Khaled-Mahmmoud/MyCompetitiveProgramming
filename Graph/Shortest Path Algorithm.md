@@ -151,7 +151,7 @@ ll dijkstra()
 {
     vector<ll>d(n+1,1e18);
     vector<bool>vis(n+1);
-    priority_queue<pair<ll,int>,vector<pair<int,int>>,greater<pair<int,int>>>pq;
+    priority_queue<pair<ll,int>,vector<pair<ll,int>>,greater<pair<ll,int>>>pq;
     pq.push(make_pair(0,1));
     d[1] = 0;
     while(pq.size())
