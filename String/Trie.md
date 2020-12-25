@@ -35,7 +35,7 @@ bool search(string s)
         int c=s[i]-'a';
         if(!node[cur][c])
             return false;
-        v=node[cur][c];
+        cur=node[cur][c];
     }
     return en[cur];
 }
