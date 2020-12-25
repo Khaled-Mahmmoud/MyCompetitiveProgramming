@@ -165,7 +165,7 @@ ll dijkstra()
         for(auto i:adj[u])
         {
             int v=i.first,w=i.second;
-            if(d[u]+w<d[v])
+            if(d[v] > d[u]+w)
             {
                 d[v]=d[u]+w;
                 par[v]=u;
