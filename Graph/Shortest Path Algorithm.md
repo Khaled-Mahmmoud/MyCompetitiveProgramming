@@ -141,21 +141,27 @@ Complexity: O((n+m)log(n))
 [Problem Link](https://codeforces.com/contest/20/problem/C)
 
 ```cpp
+#include <bits/stdc++.h>
+#define ll long long
+using namespace std;
 vector<vector<pair<int,int>>>adj;
 vector<int>par;
 int n,m;
-long long dijkstra()
+ll dijkstra()
 {
-    vector<long long>d(n+1,1e18);
+    vector<ll>d(n+1,1e18);
     vector<bool>vis(n+1);
-    deque<int>dq;
-    dq.push_front(1);
+    priority_queue<pair<ll,int>,vector<pair<int,int>>,greater<pair<int,int>>>pq;
+    pq.push(make_pair(0,1));
     d[1] = 0;
-    while(dq.size())
+    while(pq.size())
     {
-        int u=dq.front();
-        dq.pop_front();
-        vis[u] = false;
+        int u = pq.top().second;
+        ll cost = pq.top().first;
+        pq.pop();
+        if(vis[u])
+            continue;
+        vis[u] = true;
         for(auto i:adj[u])
         {
             int v=i.first,w=i.second;
@@ -163,15 +169,7 @@ long long dijkstra()
             {
                 d[v]=d[u]+w;
                 par[v]=u;
-                if(!vis[v])
-                    dq.push_front(v);
-                vis[v] = true;
-                if(d[dq.front()]>d[dq.back()])
-                {
-                    int k=dq.front();
-                    dq.pop_front();
-                    dq.push_back(k);
-                }
+                pq.push(make_pair(d[v],v));
             }
         }
     }
@@ -183,9 +181,10 @@ void backtrack(int u)
         backtrack(par[u]);
     cout<<u<<' ';
 }
-using namespace std;
 int main()
 {
+    ios::sync_with_stdio(false);
+    cin.tie(0);
     cin>>n>>m;
     adj.resize(n+1);
     par.resize(n+1);
@@ -196,9 +195,11 @@ int main()
         adj[u].push_back({v,w});
         adj[v].push_back({u,w});
     }
-    long long k=dijkstra();
+    ll k=dijkstra();
     if(k==1e18)
+    {
         return cout<<-1,0;
+    }
     backtrack(n);
     return 0;
 }
