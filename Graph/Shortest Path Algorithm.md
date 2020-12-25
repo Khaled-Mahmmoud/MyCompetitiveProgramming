@@ -150,7 +150,6 @@ long long dijkstra()
     vector<bool>vis(n+1);
     deque<int>dq;
     dq.push_front(1);
-    vis[1] = true;
     d[1] = 0;
     while(dq.size())
     {
