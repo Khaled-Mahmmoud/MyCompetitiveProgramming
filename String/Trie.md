@@ -10,7 +10,7 @@ implementation **O(N * L)** Where n is number of words and L is average length o
 
 #define N 100009
 int sz,d;
-vector<int>en(N);vector<int>cnt(N);
+vector<int>en(N);vector<int>prefix(N);
 vector<vector<int>>node(N,vector<int>(27));
 //                                     ^ OR 255 for all characters and digits and symbols
 void insert(string s)
@@ -18,13 +18,13 @@ void insert(string s)
     int v=0;
     for(int i=0;s[i];i++)
     {
-        cnt[v]++;
+        prefix[v]++;
         int c=s[i]-'a';
         if(!node[v][c]) // if 255 we put node[v][s[i]]
             node[v][c]=++sz;
         v=node[v][c];
     }
-    cnt[v]++;
+    prefix[v]++;
     d+=(++en[v]==1);
 }
 bool search(string s)
@@ -44,16 +44,16 @@ void remove(string s)
     int v=0;
     for(int i=0;i<s[i];i++)
     {
-        cnt[v]--;
+        prefix[v]--;
         int c=s[i]-'a';
         int nx=node[v][c];
-        if(cnt[nx]==1)
+        if(prefix[nx]==1)
         {
             node[v][c]=0;
         }
         v=nx;
     }
-    cnt[v]--;
+    prefix[v]--;
     d-=(--en[v]==0);
 }
 int main()
@@ -86,7 +86,7 @@ implementation **O(N * L)** Where n is number of words and L is average length o
 struct node
 {
     node* edge[N]={};
-    int cnt=0,en=0;
+    int prefix=0,en=0;
 };
 class trie
 {
@@ -99,7 +99,7 @@ public:
         node* cur = root;
         for(int i=0;str[i];i++)
         {
-            cur->cnt++;
+            cur->prefix++;
             int c=str[i]-'a';
             if(cur->edge[c]==nullptr)
             {
@@ -108,7 +108,7 @@ public:
             }
             cur=cur->edge[c];
         }
-        cur->cnt++;
+        cur->prefix++;
         d+=(++cur->en==1);
     }
     void remove(string str)
@@ -116,10 +116,10 @@ public:
         node* cur = root;
         for(int i=0;str[i];i++)
         {
-            cur->cnt--;
+            cur->prefix--;
             int c=str[i]-'a';
             node* nx = cur->edge[c];
-            if(nx->cnt==1)
+            if(nx->prefix==1)
             {
                 destroy(nx);
                 d--;
@@ -128,7 +128,7 @@ public:
             }
             cur = nx;
         }
-        cur->cnt--;
+        cur->prefix--;
         cur->en--;
     }
     int search(string str)
@@ -139,7 +139,7 @@ public:
     int getprefix(string str)
     {
         node* cur = reach(str);
-        return cur != nullptr ? cur->cnt: 0;
+        return cur != nullptr ? cur->prefix: 0;
     }
     int getdistinct() const
     {
