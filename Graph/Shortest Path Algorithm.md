@@ -143,23 +143,22 @@ Complexity: O((n+m)log(n))
 ```cpp
 #include <bits/stdc++.h>
 #define ll long long
-#define pi pair<ll,int>
 using namespace std;
-vector<vector<pi>>adj;
+vector<vector<pair<int,int>>>adj;
 vector<int>par;
 int n,m;
 ll dijkstra()
 {
     vector<ll>d(n+1,1e18);
     vector<bool>vis(n+1);
-    priority_queue<pi,vector<pi>,greater<pi>>pq;
-    pq.push(make_pair(0,1));
+    set<pair<ll,int>>st;
+    st.insert(make_pair(0,1));
     d[1] = 0;
-    while(pq.size())
+    while(st.size())
     {
-        int u = pq.top().second;
-        ll cost = pq.top().first;
-        pq.pop();
+        int u = st.begin()->second;
+        ll cost = st.begin()->first;
+        st.erase(st.begin());
         if(vis[u])
             continue;
         vis[u] = true;
@@ -170,7 +169,7 @@ ll dijkstra()
             {
                 d[v]=d[u]+w;
                 par[v]=u;
-                pq.push(make_pair(d[v],v));
+                st.insert(make_pair(d[v],v));
             }
         }
     }
