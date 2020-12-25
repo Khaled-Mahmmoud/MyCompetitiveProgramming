@@ -15,46 +15,46 @@ vector<vector<int>>node(N,vector<int>(27));
 //                                     ^ OR 255 for all characters and digits and symbols
 void insert(string s)
 {
-    int v=0;
+    int cur=0;
     for(int i=0;s[i];i++)
     {
-        prefix[v]++;
+        prefix[cur]++;
         int c=s[i]-'a';
-        if(!node[v][c]) // if 255 we put node[v][s[i]]
-            node[v][c]=++sz;
-        v=node[v][c];
+        if(!node[cur][c]) // if 255 we put node[cur][s[i]]
+            node[cur][c]=++sz;
+        cur=node[cur][c];
     }
-    prefix[v]++;
-    d+=(++en[v]==1);
+    prefix[cur]++;
+    d+=(++en[cur]==1);
 }
 bool search(string s)
 {
-    int v=0;
+    int cur=0;
     for(int i=0;s[i];i++)
     {
         int c=s[i]-'a';
-        if(!node[v][c])
+        if(!node[cur][c])
             return false;
-        v=node[v][c];
+        v=node[cur][c];
     }
-    return en[v];
+    return en[cur];
 }
 void remove(string s)
 {
-    int v=0;
+    int cur=0;
     for(int i=0;i<s[i];i++)
     {
-        prefix[v]--;
+        prefix[cur]--;
         int c=s[i]-'a';
-        int nx=node[v][c];
+        int nx=node[cur][c];
         if(prefix[nx]==1)
         {
-            node[v][c]=0;
+            node[cur][c]=0;
         }
-        v=nx;
+        cur=nx;
     }
-    prefix[v]--;
-    d-=(--en[v]==0);
+    prefix[cur]--;
+    d-=(--en[cur]==0);
 }
 int main()
 {
