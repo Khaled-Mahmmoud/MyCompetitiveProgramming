@@ -1,4 +1,4 @@
-### Sum of all the factors of a number
+### Sum of divisors of a number	
 
 Given a number n, the task is to find the sum of all the divisors.
 
