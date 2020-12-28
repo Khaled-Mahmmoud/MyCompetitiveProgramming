@@ -37,7 +37,7 @@ Time complexity for below algorithm :  O(sqrt(n))
 ```cpp
 void primeFactors(int n)  
 {  
-    for(int i=3;i*i<=n;i++)  
+    for(int i=2;i*i<=n;i++)  
     {  
         while(!(n%i))  
         {  
