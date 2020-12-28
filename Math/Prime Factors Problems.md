@@ -91,7 +91,7 @@ The largest power of 5 that divides 6!, exp3 = 1.
 
 `6! = 2^4 * 3^2 * 5^1`	
 
-the sum of divisors of `6! = (2^0 + 2^1 + 2^2 + 2^3 + 2^4) * (3^0 + 3^1 + 3^2) * (5^0 + 5^1)`	
+The sum of divisors of `6! = (2^0 + 2^1 + 2^2 + 2^3 + 2^4) * (3^0 + 3^1 + 3^2) * (5^0 + 5^1)`	
 
 ```cpp	
 vector<int> allPrimes; 	
@@ -135,6 +135,7 @@ int main()
     return 0; 	
 } 	
 ```	
+
 Time Complexity : O(n log log n)
 
 
@@ -188,7 +189,7 @@ int sumofFactors(int n)
         res *= (1 + n); 
     return res; 
 } 
-
+```
 ### Find sum of odd factors of a number
 
 Given a number n, the task is to find the odd factor sum.
