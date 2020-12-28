@@ -1,39 +1,7 @@
 
-### Finding power of prime number p in n!
-
-Given a number ‘n’ and a prime number ‘p’. We need to find out the power of ‘p’ in the prime factorization of n
-
-Input  : n = 4, p = 2
-
-Output : 3 Power of 2 in the prime factorization of 2 in 4! = 24 is 3
-
-The naive approach is to find the power of p in each number from 1 to n and add them
-Because we know that during multiplication power are added
-
-Before discussing efficient approach lets discuss a question given two numbers n, m how many numbers are there from 1 to n
-that are divisible by m the answer is floor(n/m). Now coming back to our original question to find the power of p in n!
-what we do is count the number of numbers from 1 to n that are divisible by p then by p^2 then by p^3 till p^k > n and add them
-This will be our required answer
 
 
-   Powerofp(n!) = floor(n/p) + floor(n/p^2) + floor(n/p^3)........
-   
-```cpp
-int PowerOFPINnfactorial(int n, int p) 
-{ 
-    int ans = 0; 
-    int temp = p; 
-    while (temp <= n)
-    { 
-        ans += n / temp; 
-        temp = temp * p; 
-    } 
-    return ans; 
-} 
-```
-Time Complexity :O(log_p(n))
-
-# Sum of divisors of factorial of a number	
+### Sum of divisors of factorial of a number	
 Given a number n, we need to calculate the sum of divisors of factorial of the number	
 
 |Input|Output| 	
@@ -47,9 +15,9 @@ Factorial of 4 is 24. Divisors of 24 are
 A **Simple Solution** is to first compute factorial of given number, then count sum divisors of the factorial	
 This solution is not efficient and may cause overflow due to factorial computation	
 
-An **efficient solution** is based on [Legendre’s formula](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/Number%20Theory/Factorial/A%20_%20Legendre%E2%80%99s%20formula.md). Below are the steps.	
+An **efficient solution** is based on **Legendre’s formula**.
 
-Find all prime numbers less than or equal to n. We can use [Sieve Algorithm](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/Number%20Theory/Prime%20Factors%20and%20Sieve%20of%20Eratosthenes.md) for this. Let n be 6	
+Find all prime numbers less than or equal to n. We can use Sieve Algorithm for this. Let n be 6	
 All prime numbers less than 6 are {2, 3, 5}.	
 For each prime number p find the largest power of it that divides n!. We use below Legendre’s formula for this purpose	
 The value of largest power that divides p is floor value of each term `n/p + n/(p^2) + n/(p^3) + ……`	
@@ -64,7 +32,7 @@ The largest power of 5 that divides 6!, exp3 = 1.
 
 `6! = 2^4 * 3^2 * 5^1`	
 
-[the sum of divisors](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/Number%20Theory/Prime%20Factorization%20and%20Divisors%20Problems/B%20_%20Sum%20of%20all%20the%20factors%20of%20a%20number.md) of `6! = (2^0 + 2^1 + 2^2 + 2^3 + 2^4) * (3^0 + 3^1 + 3^2) * (5^0 + 5^1)`	
+the sum of divisors of `6! = (2^0 + 2^1 + 2^2 + 2^3 + 2^4) * (3^0 + 3^1 + 3^2) * (5^0 + 5^1)`	
 
 ```cpp	
 vector<int> allPrimes; 	
