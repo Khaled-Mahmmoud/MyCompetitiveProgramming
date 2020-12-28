@@ -211,7 +211,21 @@ The largest power of 9 that
 divides 10! is 92.
 
 Now to find the power of any non-prime number k in n!, we first find all the prime factors of the number k along with the count of number of their occurrences. 
-Then for each prime factor, we count occurrences using Legendre’s formula which states that the largest possible power of a prime number p in n is `⌊n/p⌋ + ⌊n/(p^2)⌋ + ⌊n/(p^3)⌋ + ……`
+Then for each prime factor, we count occurrences using **Legendre’s formula** which states that the largest possible power of a prime number p in n is `⌊n/p⌋ + ⌊n/(p^2)⌋ + ⌊n/(p^3)⌋ + ……`
+```cpp
+int PowerOFPINnfactorial(int n, int p) 
+{ 
+    int ans = 0; 
+    int temp = p; 
+    while (temp <= n)
+    { 
+        ans += n / temp; 
+        temp = temp * p; 
+    } 
+    return ans; 
+} 
+```
+Time Complexity :O(log_p(n))
 
 Over all the prime factors p of K, the one with the minimum value of `findPowerOfK(n, p)/count` will be our answer where count is number of occurrences of p in k.
 
