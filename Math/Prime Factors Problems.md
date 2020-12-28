@@ -17,7 +17,7 @@ Sum of divisors = (1 + p1 + p1^2 ... p1^a1) *
 We can notice that individual terms of above 
 formula are Geometric Progressions (GP). We
 can rewrite the formula as.
-```cpp
+```
 Sum of divisors = (p1^(a1+1) - 1)/(p1 -1) * 
                   (p2^(a2+1) - 1)/(p2 -1) *
                   ..................................
