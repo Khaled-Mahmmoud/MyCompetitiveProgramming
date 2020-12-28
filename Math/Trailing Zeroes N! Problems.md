@@ -8,10 +8,6 @@ For example, 14000 has three trailing zeros and is therefore divisible by 1000 =
 **Problem** : Given an integer n, write a function that returns count of trailing zeroes in N!
 OR Given an integer N, the task is to find the number of trailing zeroes in the base 10 representation of the factorial of N
 
-|input|output|
-|---|---|
-|5|1|
-|20|4|
 
 Factorial of 5 is 120 which has one trailing 0.
 
