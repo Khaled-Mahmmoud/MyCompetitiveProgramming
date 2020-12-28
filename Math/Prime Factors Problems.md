@@ -63,14 +63,6 @@ Further Optimization: If there are multiple queries, we can use Sieve to find pr
 ### Sum of divisors of factorial of a number	
 Given a number n, we need to calculate the sum of divisors of factorial of the number	
 
-|Input|Output| 	
-|---|---|	
-|4|60|	
-|6|2418|	
-
-Factorial of 4 is 24. Divisors of 24 are	
-1 2 3 4 6 8 12 24, sum of these is 60.	
-
 A **Simple Solution** is to first compute factorial of given number, then count sum divisors of the factorial	
 This solution is not efficient and may cause overflow due to factorial computation	
 
