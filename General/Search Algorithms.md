@@ -20,8 +20,8 @@ int binarySearch()
 double binarySearch()
 {
     double l = 0, r = 1e9;
-    double eps = 1e-9;  
-    while (r-l > eps)
+    
+    while (r-l > 1e-9)
     {
         double mid = (l+r) / 2;
 
@@ -54,8 +54,7 @@ int ternary_search(int l, int r)
 ```cpp
 double ternary_search(double l, double r)
 {
-    double eps = 1e-9;              
-    while (r - l > eps)
+    while (r - l > 1e-9)
     {
         double mid1 = l + (r - l) / 3;
         double mid2 = r - (r - l) / 3;
