@@ -169,8 +169,3 @@ bool doIntersect(Point p1, Point q1, Point p2, Point q2)
     return false; 
 } 
 ```
-
-
-
-[Problem Link](https://codeforces.com/gym/101350/problem/J)
-[Solution Link](https://codeforces.com/gym/101350/submission/101374638)
