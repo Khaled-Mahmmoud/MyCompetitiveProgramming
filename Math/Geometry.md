@@ -2,8 +2,8 @@
 ```cpp
 double toRadians(double degree) 
 {
-  const double PI = acos(-1.0);
-	return (degree * PI) / 180.0;
+    const double PI = acos(-1.0);
+    return (degree * PI) / 180.0;
 }
 ```
 
