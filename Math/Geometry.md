@@ -77,6 +77,44 @@ Two segments (p1,q1) and (p2,q2) intersect if and only if one of the following t
 - the y-projections of (p1, q1) and (p2, q2) intersect
 
 ![alt text](https://media.geeksforgeeks.org/wp-content/uploads/linesegments2.png)
-
+```cpp
+struct Point 
+{ 
+    int x; 
+    int y; 
+}; 
+// Given three colinear points p, q, r,
+// the function checks if point q lies on line segment 'pr' 
+bool onSegment(Point p, Point q, Point r) 
+{ 
+    if (q.x <= max(p.x, r.x) && q.x >= min(p.x, r.x) && 
+        q.y <= max(p.y, r.y) && q.y >= min(p.y, r.y)) 
+       return true; 
+  
+    return false; 
+} 
+bool doIntersect(Point p1, Point q1, Point p2, Point q2) 
+{ 
+    int o1 = orientation(p1, q1, p2); 
+    int o2 = orientation(p1, q1, q2); 
+    int o3 = orientation(p2, q2, p1); 
+    int o4 = orientation(p2, q2, q1); 
+  
+    // General case 
+    if (o1 != o2 && o3 != o4) 
+        return true; 
+  
+    // Special Cases 
+    if (o1 == 0 && onSegment(p1, p2, q1)) return true; 
+  
+    if (o2 == 0 && onSegment(p1, q2, q1)) return true; 
+  
+    if (o3 == 0 && onSegment(p2, p1, q2)) return true; 
+  
+    if (o4 == 0 && onSegment(p2, q1, q2)) return true; 
+  
+    return false; 
+} 
+```
 [Problem Link](https://codeforces.com/gym/101350/problem/J)
 [Solution Link](https://codeforces.com/gym/101350/submission/101374638)
