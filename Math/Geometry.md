@@ -167,5 +167,9 @@ bool doIntersect(Point p1, Point q1, Point p2, Point q2)
     return false; 
 } 
 ```
+
+![alt text](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Computational%20Geometry.pdf)
+
+
 [Problem Link](https://codeforces.com/gym/101350/problem/J)
 [Solution Link](https://codeforces.com/gym/101350/submission/101374638)
