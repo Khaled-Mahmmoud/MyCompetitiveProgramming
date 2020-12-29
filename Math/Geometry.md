@@ -11,12 +11,19 @@ Right angle 90 degree or π/2 radians
 370 Degree = 10 Degree = 370 % 360
 
 ```cpp
+const double PI = acos(-1.0);
 double toRadians(double degree) 
 {
-    const double PI = acos(-1.0);
     return (degree * PI) / 180.0;
 }
+double toDegree(double radian)
+{
+    if(radian<0)
+        radian += 2*PI;
+    return (radian * 180.0 / PI);
+}
 ```
+
 ### Orientation of 3 points
 
 Orientation of an ordered triplet of points in the plane can be
