@@ -66,7 +66,7 @@ void orientation(Point p1, Point p2, Point p3)
 } 
 ```
 
-**How to check if two given line segments intersect?**
+### How to check if two given line segments intersect?
 
 Given two line segments (p1, q1) and (p2, q2), find if the given line segments intersect with each other.
 
