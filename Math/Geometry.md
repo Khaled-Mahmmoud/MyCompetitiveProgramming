@@ -10,6 +10,8 @@ Right angle 90 degree or π/2 radians
 
 370 Degree = 10 Degree = 370 % 360
 
+[Tutorials](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Computational%20Geometry.pdf)
+
 ```cpp
 const double PI = acos(-1.0);
 double toRadians(double degree) 
@@ -168,7 +170,6 @@ bool doIntersect(Point p1, Point q1, Point p2, Point q2)
 } 
 ```
 
-![alt text](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Computational%20Geometry.pdf)
 
 
 [Problem Link](https://codeforces.com/gym/101350/problem/J)
