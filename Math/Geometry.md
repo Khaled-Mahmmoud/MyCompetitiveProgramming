@@ -6,6 +6,7 @@ double toRadians(double degree)
     return (degree * PI) / 180.0;
 }
 ```
+### Orientation of 3 ordered points
 
 Orientation of an ordered triplet of points in the plane can be
 
