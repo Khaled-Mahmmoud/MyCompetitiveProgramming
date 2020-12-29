@@ -1,3 +1,12 @@
+### Computational Geometry
+
+Radians: 0 - 2 π
+
+Degrees: 0 - 360
+
+Radians is better computationally - so libraries use that
+
+Right angle 90 degree or π/2 radians
 
 ```cpp
 double toRadians(double degree) 
