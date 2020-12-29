@@ -22,7 +22,28 @@ double toDegree(double radian)
         radian += 2*PI;
     return (radian * 180.0 / PI);
 }
+
+
+// sin(A)/a = sin(B)/b = sin(C)/c
+// a^2 = b^2 + c^2 - 2*b*c*cos(A)
+double fixAngle(double A)
+{
+	return A > 1 ? 1 : (A < -1 ? -1 : A);
+}
+double getSide_a_bAB(double b, double A, double B) 
+{
+	return (sin(A) * b) / sin(B);
+}
+double getAngle_A_abB(double a, double b, double B) 
+{
+	return asin(fixAngle((a * sin(b)) / b));
+}
+double getAngle_A_abc(double a, double b, double c)
+{
+	return acos(fixAngle((b * b + c * c - a * a) / (2 * b * c)));
+}
 ```
+
 
 ### Orientation of 3 points
 
