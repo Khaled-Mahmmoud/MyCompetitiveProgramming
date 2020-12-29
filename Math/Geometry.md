@@ -8,6 +8,8 @@ Radians is better computationally - so libraries use that
 
 Right angle 90 degree or π/2 radians
 
+370 Degree = 10 Degree = 370 % 360
+
 ```cpp
 double toRadians(double degree) 
 {
