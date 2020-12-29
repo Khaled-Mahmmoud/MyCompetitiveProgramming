@@ -22,8 +22,6 @@ double toDegree(double radian)
         radian += 2*PI;
     return (radian * 180.0 / PI);
 }
-
-
 // sin(A)/a = sin(B)/b = sin(C)/c
 // a^2 = b^2 + c^2 - 2*b*c*cos(A)
 double fixAngle(double A)
