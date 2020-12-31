@@ -48,13 +48,10 @@ double perimeter_triangle(double a, double b, double c)
 }
 double area_triangle(double a, double b, double c) 
 {
+        if(a+b<=c||b+c<=a||a+c<=b)
+            return -1;
 	double s = 0.5 * perimeter_triangle(a, b, c);
-	return sqrt(s * (s - a) * (s - b) * (s - c));
-}
-double triangleArea(point p0, point p1, point p2)
-{
-	double a = length(vec(p1, p0)), b = length(vec(p2, p0)), c = length(vec(p2, p1));
-	return area_triangle(a, b, c);
+	    return sqrt(s * (s - a) * (s - b) * (s - c));
 }
 ```
 
