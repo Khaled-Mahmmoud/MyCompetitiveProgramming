@@ -59,7 +59,7 @@ double triangleArea(point p0, point p1, point p2)
 ```
 
 
-### Orientation of 3 points
+### Orientation of 3 points?
 
 Orientation of an ordered triplet of points in the plane can be
 
@@ -110,7 +110,7 @@ void orientation(Point p1, Point p2, Point p3)
 } 
 ```
 
-### How to check if two given line segments intersect?
+### Check if two given line segments intersect?
 
 Given two line segments (p1, q1) and (p2, q2), find if the given line segments intersect with each other.
 
@@ -169,7 +169,7 @@ bool doIntersect(Point p1, Point q1, Point p2, Point q2)
     return false; 
 } 
 ```
-### to check whether a given point lies inside a triangle or not
+### Check whether a given point lies inside a triangle or not?
 ```cpp
 /* A function to check whether point P(x, y) lies inside the triangle formed  
    by A(x1, y1), B(x2, y2) and C(x3, y3) */ 
