@@ -55,12 +55,12 @@ double area_triangle(double a, double b, double c)
 	    return sqrt(s * (s - a) * (s - b) * (s - c));
 }
 // a, b, c are medians of triangle
-double area_triangle(double a,double b,double c)
+double area_triangle(double a, double b, double c) 
 {
-    if(a+b<=c||b+c<=a||a+c<=b)
-        return -1;
-    double s = 0.5 * perimeter_triangle(a, b, c);
-    return (4.0/3.0)*sqrt(s*(s-a)*(s-b)*(s-c));
+        if(a+b<=c||b+c<=a||a+c<=b)
+            return -1;
+	double s = 0.5 * perimeter_triangle(a, b, c);
+	    return (4.0/3.0) * sqrt(s * (s - a) * (s - b) * (s - c));
 }
 ```
 
