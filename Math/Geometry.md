@@ -176,6 +176,7 @@ bool doIntersect(Point p1, Point q1, Point p2, Point q2)
 double area(int x1, int y1, int x2, int y2, int x3, int y3) 
 { 
    return abs((x1*(y2-y3) + x2*(y3-y1)+ x3*(y1-y2))/2.0); 
+   //OR return abs(x1*(y2-y3) + x2*(y3-y1)+ x3*(y1-y2)); 
 } 
 bool isInside(int x1, int y1, int x2, int y2, int x3, int y3, int x, int y) 
 {    
