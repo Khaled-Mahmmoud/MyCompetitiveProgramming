@@ -169,30 +169,3 @@ bool doIntersect(Point p1, Point q1, Point p2, Point q2)
     return false; 
 } 
 ```
-### Compute intersected rectangule between two Rectangules
-```cpp
-struct point
-{
-    int x,y;
-};
-int main()
-{
-    int t;cin>>t;while(t--)
-    {
-        point a,b,c,d,s,e;
-        cin>>a.x>>a.y>>b.x>>b.y;
-        cin>>c.x>>c.y>>d.x>>d.y;
-        s.x = max(a.x,c.x);
-        s.y = max(a.y,c.y);
-        e.x = min(b.x,d.x);
-        e.y = min(b.y,d.y);
-        if(s.x>=e.x||s.y>=e.y)
-            cout<<"No Overlap\n";
-        else
-            cout<<s.x<<' '<<s.y<<' '<<e.x<<' '<<e.y<<'\n';
-        if(t)
-            cout<<'\n';
-    }
-    return 0;
-}
-```
