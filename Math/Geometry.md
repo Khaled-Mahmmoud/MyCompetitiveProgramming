@@ -205,7 +205,7 @@ bool isInside(int x1, int y1, int x2, int y2, int x3, int y3, int x, int y)
 [Point and Vector Tutorial](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Point%20and%20Vector.pdf)
 
 ```cpp
-// Program for distance between two points on earth
+// Distance between two points on Earth
 // we need to have the co-ordinates of point A and point B.
 // convert the latitude and longitude values from decimal degrees to radians.
 #define R 6378
