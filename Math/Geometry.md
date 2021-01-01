@@ -10,7 +10,7 @@ Right angle 90 degree or π/2 radians
 
 370 Degree = 10 Degree = 370 % 360
 
-[Tutorials](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Computational%20Geometry.pdf)
+[Computational Geometry Tutorial](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Computational%20Geometry.pdf)
 
 ```cpp
 const double PI = acos(-1.0);
@@ -202,3 +202,4 @@ bool isInside(int x1, int y1, int x2, int y2, int x3, int y3, int x, int y)
    return (A == A1 + A2 + A3); 
 }
 ```
+[Point and Vector Tutorial](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Point%20and%20Vector.pdf)
