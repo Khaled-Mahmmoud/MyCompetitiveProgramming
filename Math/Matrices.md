@@ -186,5 +186,4 @@ for (int j = 0; j < m; j++)
      v[j].push_back(ch);
 }
 ```
-
-[Symmetric matrix](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Math/symmetric-matrix.jpg)
+![alt text](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Math/symmetric-matrix.jpg)
