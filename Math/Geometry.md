@@ -24,6 +24,31 @@ double toDegree(double radian)
         radian += 2*PI;
     return (radian * 180.0 / PI);
 }
+/*
+How to convert degrees, minutes, seconds to decimal degrees
+
+One degree is equal to 60 minutes and equal to 3600 seconds: 1° = 60' = 3600"
+
+One minute is equal to 1/60 degrees: 1' = (1/60)° = 0.01666667°
+
+One second is equal to 1/3600 degrees: 1" = (1/3600)° = 2.77778e-4° = 0.000277778°
+
+For angle with d integer degrees m minutes and s seconds: d° m' s"
+
+The decimal degrees dd is equal to: dd = d + m/60 + s/3600
+
+Example
+
+Convert 30 degrees 15 minutes and 50 seconds angle to decimal degrees: 30° 15' 50"
+
+The decimal degrees dd is equal to: dd = d + m/60 + s/3600 = 30° + 15'/60 + 50"/3600 = 30.263888889°
+*/
+```cpp
+double to_degree_from_minutes(double minutes)
+{
+    return (minutes/60);
+}
+```
 // sin(A)/a = sin(B)/b = sin(C)/c
 // a^2 = b^2 + c^2 - 2*b*c*cos(A)
 double fixAngle(double A)
