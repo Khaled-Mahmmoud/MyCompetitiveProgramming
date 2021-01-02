@@ -43,12 +43,10 @@ Convert 30 degrees 15 minutes and 50 seconds angle to decimal degrees: 30° 15' 
 
 The decimal degrees dd is equal to: dd = d + m/60 + s/3600 = 30° + 15'/60 + 50"/3600 = 30.263888889°
 */
-```cpp
 double to_degree_from_minutes(double minutes)
 {
     return (minutes/60);
 }
-```
 // sin(A)/a = sin(B)/b = sin(C)/c
 // a^2 = b^2 + c^2 - 2*b*c*cos(A)
 double fixAngle(double A)
