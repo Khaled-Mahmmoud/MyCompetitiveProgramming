@@ -197,15 +197,3 @@ The Leonardo numbers are a sequence of numbers given by the recurrence:
 The first few Leonardo Numbers are 1, 1, 3, 5, 9, 15, 25, 41, 67, 109, 177, 287, 465, 753, 1219, 1973, 3193, 5167, 8361, ···
 The Leonardo numbers are related to the Fibonacci numbers by below relation
 `L(n)= 2 * F(n+1) - 1` , n >= 0
-
-Given a number n, find n-th Leonardo number.
-
-Input : n = 0
-
-Output : 1
-
-Input : n = 3
-
-Output : 5
-
-The best solution is to use relation with Fibonacci Numbers. We can find n-th Fibonacci number in O(Log n) time
