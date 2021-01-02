@@ -445,3 +445,6 @@ Then equation = [(-1 * 3) + 3] (% 28) = 0
 for this 27 ≡ -1 (% 28)
 
 then n ≡ n - m (% m)
+
+
+`a % (a-b) = b % (a-b)`
