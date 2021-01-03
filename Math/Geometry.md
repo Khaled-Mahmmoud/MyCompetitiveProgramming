@@ -246,4 +246,4 @@ double spherical_distance(double lat1,double lon1,double lat2,double lon2)
 [Complex Number and 2D Point](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Complex%20Number%20and%202D%20Point.pdf)
 
 
-[Lines and Distances](file:///C:/Users/Khaled%20Mahmoud/Downloads/Lines%20and%20Distances.pdf)
+[Lines and Distances](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Lines%20and%20Distances.pdf)
