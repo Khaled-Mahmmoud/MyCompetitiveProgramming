@@ -231,8 +231,9 @@ bool isInside(int x1, int y1, int x2, int y2, int x3, int y3, int x, int y)
 
 [Complex Number and 2D Point](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Complex%20Number%20and%202D%20Point.pdf)
 
-
 [Lines and Distances](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Lines%20and%20Distances.pdf)
+
+[Parametric equation](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Parametric%20equation.pdf)
 
 ```cpp
 struct point
