@@ -266,6 +266,10 @@ double cross(point p,point q)
 {
     return p.x*q.y - p.y*q.x;
 }
+point cross_3d(point a, point b)
+{
+    return point(a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x);
+}
 double norm(point a) 
 {
     return dot(a, a);
