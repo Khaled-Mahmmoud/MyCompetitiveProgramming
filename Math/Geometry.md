@@ -275,6 +275,10 @@ double abs(point a)
     // Length of a: |a| = √(a.a)
     return sqrt(norm(a));
 }
+double dot_angle(point a, point b) 
+{
+    return acos(dot(a,b)/(abs(a) * abs(b)));
+}
 bool arelinesame(point a,point b,point c,point d)
 {
     return (cross(a-c,d-c)==0&&cross(b-c,d-c)==0);
