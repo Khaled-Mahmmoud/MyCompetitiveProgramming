@@ -247,3 +247,45 @@ double spherical_distance(double lat1,double lon1,double lat2,double lon2)
 
 
 [Lines and Distances](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Lines%20and%20Distances.pdf)
+
+```cpp
+struct point
+{
+    double x,y;
+    point(){}
+    point(double x,double y):x(x),y(y){}
+    point operator+(const point &p)const
+    {
+        return point(x+p.x,y+p.y);
+    }
+    point operator-(const point &p)const
+    {
+        return point(x-p.x,y-p.y);
+    }
+    point operator*(double c)const
+    {
+        return point(x*c,y*c);
+    }
+    point operator/(double c)const
+    {
+        return point(x/c,y/c);
+    }
+
+};
+double dot(point p,point q)
+{
+    return p.x*q.x + p.y*q.y;
+}
+double cross(point p,point q)
+{
+    return p.x*q.y - p.y*q.x;
+}
+bool arelinesame(point a,point b,point c,point d)
+{
+    return (cross(a-c,d-c)==0&&cross(b-c,d-c)==0);
+}
+bool arelinesparallel(point a,point b,point c,point d)
+{
+    return cross(b-a,d-c)==0;
+}
+```
