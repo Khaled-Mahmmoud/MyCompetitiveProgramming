@@ -227,6 +227,8 @@ bool isInside(int x1, int y1, int x2, int y2, int x3, int y3, int x, int y)
 ```
 [Point and Vector Tutorial](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Point%20and%20Vector.pdf)
 
+[Vectors](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/vectors.pdf)
+
 ```cpp
 // Distance between two points on Earth
 // we need to have the co-ordinates of point A and point B.
