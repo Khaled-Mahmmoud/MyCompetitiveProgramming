@@ -266,6 +266,15 @@ double cross(point p,point q)
 {
     return p.x*q.y - p.y*q.x;
 }
+double norm(point a) 
+{
+    return dot(a, a);
+}
+double abs(point a) 
+{
+    // Length of a: |a| = √(a.a)
+    return sqrt(norm(a));
+}
 bool arelinesame(point a,point b,point c,point d)
 {
     return (cross(a-c,d-c)==0&&cross(b-c,d-c)==0);
