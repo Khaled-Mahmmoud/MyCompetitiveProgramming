@@ -618,4 +618,45 @@ Catalan numbers are a sequence of natural numbers that occurs in many interestin
 catalan(n) = nCr(2n,n) / (n+1)
 */
 
+// How many integers in {1,2 ...,100} are divisible by 2, 3, 5 or 7?
+int primes[4] = {2,3,5,7};
+int n = 100,ans;
+vector<int>sub;
+void inc_exe(int idx = 0)
+{
+    if(idx==4)
+    {
+        if(sub.empty())
+            return;
+        int d = 1;
+        for(int i=0;i<sub.size();i++)
+            d *= sub[i];
+        if(sub.size()&1)
+            ans += n/d;
+        else
+            ans -= n/d;
+        return;
+    }
+    sub.push_back(primes[idx]);
+    inc_exe(idx+1);
+    sub.pop_back();
+    inc_exe(idx+1);
+}
+int main()
+{
+    subset();
+    cout<<ans;
+    return 0;
+}
+// Complexity : O(2^n)
+
+<The Division Rule>
+A food table with 3 chairs. Given 3 persons, in how many ways we can seat them? 6 ways
+Wrong! 123 same as 231 same as 312 [by making 1 shift]. so answer is 6 / 3 = 2 .. or generally n! / n = n-1!,
+nPr(circle) = nPr/r
+In an 8x8 chess, how many ways to put 2 rocks, with no shared rows or columns?
+First piece has 64 choices.. then 1 row & 1 col are blocked
+So we have 7x7= 49 choices for 2nd rock. Total 64 * 49.
+Wrong! (0,0), (1,1) same as (1,1), (0,0)
+Symmetry of each 2 rocks. Answer: 64 * 49 / 2
 ```
