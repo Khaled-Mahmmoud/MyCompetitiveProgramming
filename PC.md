@@ -74,15 +74,5 @@ int gray_code(int i)
 {
     return i ^ (i>>1);
 }
-void get_subset_gray(int len)
-{
-    for (int i = 0; i < (1<<len); ++i)
-    {
-        get_binary_len(i, len );
-        cout<<"\t\t";
-
-        get_binary_len( gray_code(i), len );
-    }
-}
 ```
 
