@@ -50,5 +50,40 @@ Y = 00010100
 X - Y removes all Y 1s from X : 10000000
 general way to do so: X & ~Y : 10010100 & 11101011 = 10000000
 */
+bool is_power_of_two(ll n)
+{
+    return (n&&n&(n-1)==0);
+}
+void get_binary_len(int n, int len)
+{
+    if(!len)
+        return;
+    get_binary_len(n>>1, len-1);
+    cout<<(n&1);
+}
+// len = 3: 000, 001, 010, 011, 100, 101, 110, 111
+void get_subset_binary(int len)	
+{
+   for (int i = 0; i < (1<<len); ++i)
+   //for (int i = (1<<len)-1; i >= 0 ; --i) For reversed order
+   {
+        get_binary_len(i,len);
+        cout<<' ';
+   }
+}
+int gray_code(int i)
+{
+    return i ^ (i>>1);
+}
+void get_subset_gray(int len)
+{
+    for (int i = 0; i < (1<<len); ++i)
+    {
+        get_binary_len(i, len );
+        cout<<"\t\t";
+
+        get_binary_len( gray_code(i), len );
+    }
+}
 ```
 
