@@ -490,3 +490,42 @@ if (abs(a-b) < 1e-9)
 #include<iomanip>	
 cout<< fixed << showpoint << setprecision(n) ;
 ```
+
+Combinatorics
+```cpp
+/*
+<without repetition>
+order is important (Permutation)
+How? The rule of product.
+First step we do n choices, in second step, we are allowed only n-1, third n-2
+Then we have n * n-1 * n-2 ... 1 ways = p(n) = n!
+what if we need arrangement of r elements. Same way: n x (n-1) x (n-2) x .....x (n- r + 1)
+nPr = P(n,r) = n! / (n-r)!
+nPr(circle) = nPr/r
+
+order is not important (Combination)
+nCr = C(n,r) = n! / (n-r)! * r!
+That is it: P(n, r) = C(n, r) * r!
+nCr = nC(n – r)
+
+<with repetition>
+order is important (Permutation)
+n^r
+
+order is not important (Combination)
+Select a combination of three letters frome the set A,B,C,D and E.
+combinations can include {A,B,C} , {B,D,E} , {C,D,B}
+
+what if we allow repeated elements such as AAB, BBBCCD?
+the number of such combination = ncr(n+r-1,r) = (n+r-1)! / (n-1)! * r!
+*/
+ll perm(ll n,ll r)
+{
+    if(r>n)
+        return 0;
+    ll ans = 1;
+    for(int i=n;i>=n-r+1;i--)
+        ans = (ans*i)%mod;
+    return ans;
+}
+```
