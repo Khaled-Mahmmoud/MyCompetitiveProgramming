@@ -136,53 +136,27 @@ int main()
 
 ### Prefix sum
 ```cpp
-// One-dimensional array: O(n)
-int main()
+ll prefix_sum_2d(vector<int>v,int l,int r)
 {
-    int n;
-    cin>>n;
-    vector<int>v(n),prefix(n+1);
-    
-    for(int i=0;i<n;i++)
-        cin>>v[i];
-        
+    int n = v.size();
+    vector<ll>prefix_sum(n+1);
+
     for(int i=1;i<=n;i++)
-        prefix_sum[i]=prefix[i-1]+v[i-1];
-        
-    int q;
-    cin>>q;
-    while(q--)
-    {
-        int l,r;
-        cin>>l>>r;
-        cout<<prefix[r]-prefix[l-1]<<endl;
-    }
+        prefix_sum[i] = prefix_sum[i-1]+v[i-1];
+
+    return prefix_sum[r]-prefix_sum[l-1];
 }
-// Two-dimensional array: O(n * m)
-int main()
-{    
-    int n,m;
-    cin>>n>>m;
-    vector<vector<int>>v(n,vector<int>(m));
+ll prefix_sum_3d(vector<vector<int>>v,int r1,int c1,int r2,int c2)
+{
+    int n = v.size(),m = v[0].size();
     vector<vector<int>>prefix_sum(n+1,vector<int>(m+1));
-    
-    for(int i=0; i<n; i++)
-        for(int j=0; j<m; j++)
-            cin>>v[i][j];
-            
+
     for(int i=1; i<=n; i++)
         for(int j=1; j<=m; j++)
             prefix_sum[i][j] = v[i-1][j-1] + prefix_sum[i][j-1] + prefix_sum[i-1][j] - prefix_sum[i-1][j-1];
-            
-    int q;
-    cin>>q;
-    while(q--)
-    {
-        int r1,c1,r2,c2;
-        cin >>r1>>c1;
-        cin >>r2>>c2;
-        cout <<PrefixSum[r2][c2]-PrefixSum[r2][c1-1]-PrefixSum[r1-1][c2]+PrefixSum[r1-1][c1-1]<<endl;
-    }
+
+
+    return prefix_sum[r2][c2]-prefix_sum[r2][c1-1]-prefix_sum[r1-1][c2]+prefix_sum[r1-1][c1-1];
 }
 ```
 
