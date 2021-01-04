@@ -617,18 +617,17 @@ Catalan numbers are a sequence of natural numbers that occurs in many interestin
 1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862
 catalan(n) = nCr(2n,n) / (n+1)
 */
-
+/*
 <Inclusion Exclusion>
 Most of counting involves duplicate counting issue [count item more than once].
 Inclusion Exclusion principle is a generic sum rule to solve that
 |A ∪ B ∪ C| = |A| + |B| + |C| - |A ∩ B| - |A ∩ C| - |B ∩ C| + |A ∩ B ∩ C|
-
 Enumerate all subsets, Compute each one intersection If odd subset add (include) it If even subset subtract (exclude) it.
 
-// How many integers in {1,2 ...,100} are divisible by 2, 3, 5 or 7?
-// F(2) + F(3) + F(5) + F(7) - F(2, 3) - F(2, 5) - F(2, 7) - F(3, 5) - F(3, 7) - F(5, 7) + F(2, 3, 5) 
-// + F(2, 3, 7) + F(2, 5, 7) + F(3, 5, 7) - F(2, 3, 5, 7)
-
+How many integers in {1,2 ...,100} are divisible by 2, 3, 5 or 7?
+F(2) + F(3) + F(5) + F(7) - F(2, 3) - F(2, 5) - F(2, 7) - F(3, 5) - F(3, 7) - F(5, 7) + F(2, 3, 5) 
++ F(2, 3, 7) + F(2, 5, 7) + F(3, 5, 7) - F(2, 3, 5, 7)
+*/
 int primes[4] = {2,3,5,7};
 int n = 100,ans;
 vector<int>sub;
