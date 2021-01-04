@@ -459,7 +459,7 @@ int cnt_subarray(int a[],int n,int b)
     return res;
 }
 ```
-General
+### General
 ```cpp
 ios_base::sync_with_stdio(0), cin.tie(0);
 
