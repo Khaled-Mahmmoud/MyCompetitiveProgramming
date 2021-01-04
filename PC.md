@@ -10,7 +10,6 @@ void printNumber(int n)
      printNumber(n>>1);	// remove last bit
      cout<<(n&1);           //  print last bit
 }
-
 void printNumber(int n, int len)
 {
      if(!len)
