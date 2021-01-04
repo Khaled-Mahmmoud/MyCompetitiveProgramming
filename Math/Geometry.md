@@ -3,6 +3,99 @@
 [Computational Geometry Tutorial](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Computational%20Geometry.pdf)
 
 ```cpp
+struct point
+{
+    double x,y;
+    point(){}
+    point(double x,double y):x(x),y(y){}
+    point operator+(const point &p)const
+    {
+        return point(x+p.x,y+p.y);
+    }
+    point operator-(const point &p)const
+    {
+        return point(x-p.x,y-p.y);
+    }
+    point operator*(double c)const
+    {
+        return point(x*c,y*c);
+    }
+    point operator/(double c)const
+    {
+        return point(x/c,y/c);
+    }
+
+};
+double dot(point p,point q)
+{
+    return p.x*q.x + p.y*q.y;
+}
+double cross(point p,point q)
+{
+    return p.x*q.y - p.y*q.x;
+}
+point cross_3d(point a, point b)
+{
+    return point(a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x);
+}
+double norm(point a) 
+{
+    return dot(a, a);
+}
+double abs(point a) 
+{
+    // Length of a: |a| = √(a.a)
+    return sqrt(norm(a));
+}
+double dot_angle(point a, point b) 
+{
+    return acos(dot(a,b)/(abs(a) * abs(b)));
+}
+double proj(point a, point b) 
+{
+    return dot(a, b) / abs(b);
+}
+bool arelinesame(point a,point b,point c,point d)
+{
+    return (cross(a-c,d-c)==0&&cross(b-c,d-c)==0);
+}
+bool arelinesparallel(point a,point b,point c,point d)
+{
+    return cross(b-a,d-c)==0;
+}
+/*
+We can say that all points from first line can be parameterized as r=a1+t.d1 
+where a1 is initial point, d1 is direction and t is some real parameter. 
+As for second line all its points must satisfy (r−a2)×d2=0. 
+From this we can easily find parameter t:
+
+(a1+t⋅d1−a2)×d2 = 0
+
+t = ((a2−a1)×d2)/d1×d2
+
+*/
+point intersect(point a, point b1, point a2, point b2) 
+{
+    point d1 = b1 - a1;
+    point d2 = b2 - a2;
+    return a1 + cross(a2 - a1, d2) / cross(d1, d2) * d1;
+}
+/*
+Distance between two points on Earth
+we need to have the co-ordinates of point A and point B.
+convert the latitude and longitude values from decimal degrees to radians.
+*/
+#define R 6378
+double spherical_distance(double lat1,double lon1,double lat2,double lon2)
+{
+    double dlon, dlat, a, c, d;
+    dlon = lon2 - lon1;
+    dlat = lat2 - lat1;
+    a = pow((sin(dlat/2)),2) + cos(lat1) * cos(lat2) * pow(sin(dlon/2), 2);
+    c = 2 * atan2(sqrt(a), sqrt(1-a));
+    d = R * c;
+    return d;
+}
 /*
 Radians: 0 - 2 π
 Degrees: 0 - 360
@@ -226,98 +319,4 @@ bool isInside(int x1, int y1, int x2, int y2, int x3, int y3, int x, int y)
 [Parametric equation - Part 1](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Parametric%20equation.pdf)
 
 [Parametric equation - Part 2](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Parametric%20equation2.pdf)
-```cpp
-struct point
-{
-    double x,y;
-    point(){}
-    point(double x,double y):x(x),y(y){}
-    point operator+(const point &p)const
-    {
-        return point(x+p.x,y+p.y);
-    }
-    point operator-(const point &p)const
-    {
-        return point(x-p.x,y-p.y);
-    }
-    point operator*(double c)const
-    {
-        return point(x*c,y*c);
-    }
-    point operator/(double c)const
-    {
-        return point(x/c,y/c);
-    }
 
-};
-double dot(point p,point q)
-{
-    return p.x*q.x + p.y*q.y;
-}
-double cross(point p,point q)
-{
-    return p.x*q.y - p.y*q.x;
-}
-point cross_3d(point a, point b)
-{
-    return point(a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x);
-}
-double norm(point a) 
-{
-    return dot(a, a);
-}
-double abs(point a) 
-{
-    // Length of a: |a| = √(a.a)
-    return sqrt(norm(a));
-}
-double dot_angle(point a, point b) 
-{
-    return acos(dot(a,b)/(abs(a) * abs(b)));
-}
-double proj(point a, point b) 
-{
-    return dot(a, b) / abs(b);
-}
-bool arelinesame(point a,point b,point c,point d)
-{
-    return (cross(a-c,d-c)==0&&cross(b-c,d-c)==0);
-}
-bool arelinesparallel(point a,point b,point c,point d)
-{
-    return cross(b-a,d-c)==0;
-}
-/*
-We can say that all points from first line can be parameterized as r=a1+t.d1 
-where a1 is initial point, d1 is direction and t is some real parameter. 
-As for second line all its points must satisfy (r−a2)×d2=0. 
-From this we can easily find parameter t:
-
-(a1+t⋅d1−a2)×d2 = 0
-
-t = ((a2−a1)×d2)/d1×d2
-
-*/
-point intersect(point a, point b1, point a2, point b2) 
-{
-    point d1 = b1 - a1;
-    point d2 = b2 - a2;
-    return a1 + cross(a2 - a1, d2) / cross(d1, d2) * d1;
-}
-/*
-Distance between two points on Earth
-we need to have the co-ordinates of point A and point B.
-convert the latitude and longitude values from decimal degrees to radians.
-*/
-#define R 6378
-double spherical_distance(double lat1,double lon1,double lat2,double lon2)
-{
-    double dlon, dlat, a, c, d;
-    dlon = lon2 - lon1;
-    dlat = lat2 - lat1;
-    a = pow((sin(dlat/2)),2) + cos(lat1) * cos(lat2) * pow(sin(dlon/2), 2);
-    c = 2 * atan2(sqrt(a), sqrt(1-a));
-    d = R * c;
-    return d;
-}
-```
