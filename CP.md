@@ -649,7 +649,7 @@ int main()
     return 0;
 }
 // Complexity : O(2^n)
-
+/*
 <The Division Rule>
 A food table with 3 chairs. Given 3 persons, in how many ways we can seat them? 6 ways
 Wrong! 123 same as 231 same as 312 [by making 1 shift]. so answer is 6 / 3 = 2 .. or generally n! / n = n-1!,
@@ -659,4 +659,5 @@ First piece has 64 choices.. then 1 row & 1 col are blocked
 So we have 7x7= 49 choices for 2nd rock. Total 64 * 49.
 Wrong! (0,0), (1,1) same as (1,1), (0,0)
 Symmetry of each 2 rocks. Answer: 64 * 49 / 2
+*/
 ```
