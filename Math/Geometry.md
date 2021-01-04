@@ -190,16 +190,3 @@ double spherical_distance(double lat1,double lon1,double lat2,double lon2)
     return d;
 }
 ```
-[Computational Geometry Tutorial](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Computational%20Geometry.pdf)
-
-[Point and Vector Tutorial](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Point%20and%20Vector.pdf)
-
-[Vectors](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/vectors.pdf)
-
-[Complex Number and 2D Point](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Complex%20Number%20and%202D%20Point.pdf)
-
-[Lines and Distances](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Lines%20and%20Distances.pdf)
-
-[Parametric equation - Part 1](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Parametric%20equation.pdf)
-
-[Parametric equation - Part 2](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Parametric%20equation2.pdf)
