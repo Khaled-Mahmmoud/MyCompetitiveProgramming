@@ -16,8 +16,8 @@ void get_binary(int n)
 {
      if(!n)
         return;
-     printNumber(n>>1);	// remove last bit
-     cout<<(n&1);           //  print last bit
+     printNumber(n>>1);	
+     cout<<(n&1);           
 }
 int cnt_bit(int mask)
 {
