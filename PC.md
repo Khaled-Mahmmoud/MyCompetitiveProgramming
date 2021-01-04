@@ -276,7 +276,6 @@ double ternary_search_d(double l, double r)
 ```
 ### Sorting
 ```cpp
-// a vector as can be sorted as follows:
 sort(v.begin(),v.end());   // O(nlogn)
 
 // a reverse order is possible as follows:
@@ -291,13 +290,12 @@ sort(a,a+n);
 sort(a,a+n,greater<int>());
 
 // but if there 
-long long a[n];
+ll a[n];
 // we can sort it by:
-sort(a,a+n,greater<long long>());
+sort(a,a+n,greater<ll>());
 
 
-//The following code sorts the string s:
-string s = "monkey";
+//sorting the string s:
 sort(str.begin(), str.end());
 
 // a reverse order is possible as follows:
@@ -315,16 +313,7 @@ v.push_back({1,2});
 sort(v.begin(), v.end());
 // After this, the order of the pairs is (1,2), (1,5) and (2,3).
 
-// In a similar way, tuples (tuple) are sorted primarily by the first element, secondarily by the second element, etc.
-
-vector<tuple<int,int,int>> v;
-v.push_back(make_tuple(2,1,4));
-v.push_back(make_tuple(1,5,3));
-v.push_back(make_tuple(2,1,3));
-sort(v.begin(), v.end());
-// After this, the order of the tuples is (1,5,3), (2,1,3) and (2,1,4)
-
- // give an external comparison function to the sort function
+// comparison function to the sort 
 bool pred(string a, string b)
 {
     return a < b;
@@ -351,8 +340,8 @@ struct cmp
      }
 };
 set<pair<int,int>,cmp>st;
-// How to sort an array of structures
-// this sort is increasing based on first element then decreasing based on second element
+
+// How to sort an array of structures ?
 struct q
 {
     int l, r;
@@ -368,25 +357,12 @@ struct q
     }
 };
 q a[200010];
-int main()
-{
-    int t;cin>>t;
-    for(int i=0;i<t;i++)
-        cin>>a[i].l>>a[i].r;
-    sort(a,a+t);
-    cout<<'\n';
-    for(int i=0;i<t;i++)
-        cout<<a[i].l<<' '<<a[i].r<<'\n';
-    return 0;
-}
-// To sort a range[l,r] of string where 1<=l<=r<=str.size()
 
+// To sort a range[l,r] of string where 1<=l<=r<=str.size()
 sort(&str[l-1], &str[r]);
 sort(str.begin() + l - 1, str.begin() + r);
+
 // Radix Sort
-#include <bits/stdc++.h>
-#define ll long long
-using namespace std;
 int n, v[100000], t[100000];
 void sort()
 {
@@ -406,17 +382,5 @@ void sort()
             f[i] = 0;
         p10 *= 10;
     }
-}
-int main()
-{
-    ios_base::sync_with_stdio(0),cin.tie(0);
-    cin >> n;
-    for (int i = 0; i < n; ++i)
-        cin >> v[i];
-    sort();
-    for (int i = 0; i < n; ++i)
-        cout << v[i] << " ";
-    cout << endl;
-    return 0;
 }
 ```
