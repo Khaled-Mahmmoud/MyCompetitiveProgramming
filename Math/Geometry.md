@@ -1,6 +1,17 @@
-### Computational Geometry
 
 [Computational Geometry Tutorial](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Computational%20Geometry.pdf)
+
+[Point and Vector Tutorial](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Point%20and%20Vector.pdf)
+
+[Vectors](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/vectors.pdf)
+
+[Complex Number and 2D Point](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Complex%20Number%20and%202D%20Point.pdf)
+
+[Lines and Distances](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Lines%20and%20Distances.pdf)
+
+[Parametric equation - Part 1](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Parametric%20equation.pdf)
+
+[Parametric equation - Part 2](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Parametric%20equation2.pdf)
 
 ```cpp
 struct point
@@ -80,22 +91,7 @@ point intersect(point a, point b1, point a2, point b2)
     point d2 = b2 - a2;
     return a1 + cross(a2 - a1, d2) / cross(d1, d2) * d1;
 }
-/*
-Distance between two points on Earth
-we need to have the co-ordinates of point A and point B.
-convert the latitude and longitude values from decimal degrees to radians.
-*/
-#define R 6378
-double spherical_distance(double lat1,double lon1,double lat2,double lon2)
-{
-    double dlon, dlat, a, c, d;
-    dlon = lon2 - lon1;
-    dlat = lat2 - lat1;
-    a = pow((sin(dlat/2)),2) + cos(lat1) * cos(lat2) * pow(sin(dlon/2), 2);
-    c = 2 * atan2(sqrt(a), sqrt(1-a));
-    d = R * c;
-    return d;
-}
+
 /*
 Radians: 0 - 2 π
 Degrees: 0 - 360
@@ -167,6 +163,46 @@ double area_triangle(double a, double b, double c)
             return -1;
 	double s = 0.5 * perimeter_triangle(a, b, c);
 	    return (4.0/3.0) * sqrt(s * (s - a) * (s - b) * (s - c));
+}
+/* A function to check whether point P(x, y) lies inside the triangle formed  
+   by A(x1, y1), B(x2, y2) and C(x3, y3) */ 
+double area(int x1, int y1, int x2, int y2, int x3, int y3) 
+{ 
+   return abs((x1*(y2-y3) + x2*(y3-y1)+ x3*(y1-y2))/2.0); 
+   //OR return abs(x1*(y2-y3) + x2*(y3-y1)+ x3*(y1-y2)); 
+} 
+bool isInside(int x1, int y1, int x2, int y2, int x3, int y3, int x, int y) 
+{    
+   /* Calculate area of triangle ABC */
+   double A = area (x1, y1, x2, y2, x3, y3); 
+  
+   /* Calculate area of triangle PBC */   
+   double A1 = area (x, y, x2, y2, x3, y3); 
+  
+   /* Calculate area of triangle PAC */   
+   double A2 = area (x1, y1, x, y, x3, y3); 
+  
+   /* Calculate area of triangle PAB */    
+   double A3 = area (x1, y1, x2, y2, x, y); 
+    
+   /* Check if sum of A1, A2 and A3 is same as A */ 
+   return (A == A1 + A2 + A3); 
+}
+/*
+Distance between two points on Earth
+we need to have the co-ordinates of point A and point B.
+convert the latitude and longitude values from decimal degrees to radians.
+*/
+#define R 6378
+double spherical_distance(double lat1,double lon1,double lat2,double lon2)
+{
+    double dlon, dlat, a, c, d;
+    dlon = lon2 - lon1;
+    dlat = lat2 - lat1;
+    a = pow((sin(dlat/2)),2) + cos(lat1) * cos(lat2) * pow(sin(dlon/2), 2);
+    c = 2 * atan2(sqrt(a), sqrt(1-a));
+    d = R * c;
+    return d;
 }
 ```
 
@@ -281,42 +317,5 @@ bool doIntersect(Point p1, Point q1, Point p2, Point q2)
     return false; 
 } 
 ```
-### Check whether a given point lies inside a triangle or not?
-```cpp
-/* A function to check whether point P(x, y) lies inside the triangle formed  
-   by A(x1, y1), B(x2, y2) and C(x3, y3) */ 
-double area(int x1, int y1, int x2, int y2, int x3, int y3) 
-{ 
-   return abs((x1*(y2-y3) + x2*(y3-y1)+ x3*(y1-y2))/2.0); 
-   //OR return abs(x1*(y2-y3) + x2*(y3-y1)+ x3*(y1-y2)); 
-} 
-bool isInside(int x1, int y1, int x2, int y2, int x3, int y3, int x, int y) 
-{    
-   /* Calculate area of triangle ABC */
-   double A = area (x1, y1, x2, y2, x3, y3); 
-  
-   /* Calculate area of triangle PBC */   
-   double A1 = area (x, y, x2, y2, x3, y3); 
-  
-   /* Calculate area of triangle PAC */   
-   double A2 = area (x1, y1, x, y, x3, y3); 
-  
-   /* Calculate area of triangle PAB */    
-   double A3 = area (x1, y1, x2, y2, x, y); 
-    
-   /* Check if sum of A1, A2 and A3 is same as A */ 
-   return (A == A1 + A2 + A3); 
-}
-```
-[Point and Vector Tutorial](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Point%20and%20Vector.pdf)
 
-[Vectors](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/vectors.pdf)
-
-[Complex Number and 2D Point](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Complex%20Number%20and%202D%20Point.pdf)
-
-[Lines and Distances](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Lines%20and%20Distances.pdf)
-
-[Parametric equation - Part 1](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Parametric%20equation.pdf)
-
-[Parametric equation - Part 2](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Parametric%20equation2.pdf)
 
