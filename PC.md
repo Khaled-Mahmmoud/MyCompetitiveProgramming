@@ -98,7 +98,7 @@ Two’s Complement is start to flip after the “last bit”.
 */
 
 
-// <Generating Subsets>
+//<Generating Subsets>
 int n;
 vector<int>v,sub;
 vector<vector<int>>res;
