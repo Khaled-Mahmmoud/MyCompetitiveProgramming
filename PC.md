@@ -305,7 +305,8 @@ sort(str.rbegin(),str.rend());          OR
 sort(str.begin(),str.end(),greater<char>())
 
 /*
-Pairs (pair) are sorted primarily according to their first elements (first). However, if the first elements of two pairs are equal, they are sorted according to their second elements (second)
+Pairs (pair) are sorted primarily according to their first elements (first).
+However, if the first elements of two pairs are equal, they are sorted according to their second elements (second)
 */
 vector<pair<int,int>> v;
 v.push_back({1,5});
