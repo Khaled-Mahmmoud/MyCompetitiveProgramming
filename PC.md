@@ -1,6 +1,6 @@
+### Bitmask
 ```cpp
 /*
-<Bit Manipulation>
 X ^ 0 = X
 X ^ X = 0
 (A ^ B ^ C ^ D ^ E) ^ (A ^ B ^ C) = D ^ E
@@ -97,8 +97,9 @@ Two’s Complement is start to flip after the “last bit”.
 -number = 2’s complement of number or Get 1’s complement...then add 1
 */
 
-
-// <Generating Subsets>
+```
+### Generating Subsets
+```cpp
 int n;
 vector<int>v,sub;
 vector<vector<int>>res;
@@ -131,8 +132,10 @@ int main()
     return 0;
 }
 // complexity : O(2^n)
+````
 
-// <Prefix sum>
+### Prefix sum
+```cpp
 // One-dimensional array: O(n)
 int main()
 {
