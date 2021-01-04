@@ -27,8 +27,6 @@ X-1     = 839 	= 011010001111		What happened? First bit 16=(2^4) is removed, and
 X & (X-1) 	= 011010000000		first bit from right removed
 X & ~(X-1) 	= 011010010000  & 100101110000 = 000000010000	value of 1<<SmaintestBitIdx
 */
-template<class Int>	
-Int least_bit(Int num) { return (num & ~(num-1)); }
-
+int least_bit(Int num) { return (num & ~(num-1)); }
 ```
 
