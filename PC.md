@@ -64,7 +64,7 @@ general way to do so: X & ~Y : 10010100 & 11101011 = 10000000
 */
 bool is_power_of_two(ll n)
 {
-    return (n&&n&(n-1)==0);
+    return (n&&(n&(n-1))==0);
 }
 void get_binary_len(int n, int len)
 {
