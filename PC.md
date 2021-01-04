@@ -10,7 +10,7 @@ void get_binary(int n)
      printNumber(n>>1);	// remove last bit
      cout<<(n&1);           //  print last bit
 }
-int cnt_bits(int mask)
+int cnt_bit(int mask)
 {
     int ret = 0;
     while (mask)
