@@ -1,4 +1,5 @@
 ```cpp
+/*
 <Bit Manipulation>
 X ^ 0 = X
 X ^ X = 0
@@ -6,6 +7,7 @@ X ^ X = 0
 A ^ B ^ C ^ D = E , if E has any 1s bit, it must have odd number of 1s
 X % 2 = X & 1 = bit 0
 Generally : X % (2^n) = X & (2^n - 1)
+*/
 bool get_bit(int num,int idx){return ((num>>idx)&1);}
 int set_bit(int num,int idx){return (num|(1<<idx));}
 int clear_bit(int num,int idx){return (num&~(1<<idx));}
