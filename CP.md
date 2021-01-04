@@ -611,4 +611,9 @@ nC0 + nC1 + nC2 + ……. + nCn-1 + nCn = 2^n
 nC0 + nC2 + nC4 + nC6 + nC8 + ……… = 2^(n-1)
 nC0^2 + nC1^2 + nC2^2 + .... + nCn-1^2 + nCn^2 = 2nCn
 */
+
+Catalan numbers are a sequence of natural numbers that occurs in many interesting counting problems 
+1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862
+catalan(n) = nCr(2n,n) / (n+1)
+
 ```
