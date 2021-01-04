@@ -36,7 +36,19 @@ X-1  = 839 	= 011010001111		What happened? First bit 16=(2^4) is removed, and 15
 X & (X-1) 	= 011010000000		first bit from right removed
 X & ~(X-1) 	= 011010010000  & 100101110000 = 000000010000	
 */
-int least_bit(int num) {return (num & ~(num-1));}
+int lsb(int num) {return (num & ~(num-1));}
+int msb(int n) 
+{ 
+    if (!n) 
+        return 0; 
+    int cnt = -1; 
+    while(n)
+    { 
+        n>>=1; 
+        cnt++; 
+    } 
+    return (1<<cnt);
+} 
 /*
 Get last bit using index & -index
 +20 = 00010100
