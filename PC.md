@@ -65,7 +65,6 @@ void get_binary_len(int n, int len)
 void get_subset_binary(int len)	
 {
    for (int i = 0; i < (1<<len); ++i)
-   //for (int i = (1<<len)-1; i >= 0 ; --i) For reversed order
    {
         get_binary_len(i,len);
         cout<<' ';
