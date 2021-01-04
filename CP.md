@@ -491,7 +491,7 @@ if (abs(a-b) < 1e-9)
 cout<< fixed << showpoint << setprecision(n) ;
 ```
 
-Combinatorics
+### Combinatorics
 ```cpp
 /*
 <without repetition>
@@ -516,7 +516,7 @@ order is not important (Combination)
 Select a combination of three letters frome the set A,B,C,D and E.
 combinations can include {A,B,C} , {B,D,E} , {C,D,B}
 
-what if we allow repeated elements such as AAB, BBBCCD?
+what if we allow repeated elements such as AABC, BBBCCD?
 the number of such combination = ncr(n+r-1,r) = (n+r-1)! / (n-1)! * r!
 */
 ll perm(ll n,ll r)
@@ -528,4 +528,87 @@ ll perm(ll n,ll r)
         ans = (ans*i)%mod;
     return ans;
 }
+/*
+Pascal Triangle
+1  
+1 1 
+1 2 1 
+1 3 3 1 
+1 4 6 4 1 
+1 5 10 10 5 1 
+The value of C(n, r) can be recursively calculated using pascal triangle.
+C(n, r) = C(n-1, r-1) + C(n-1, r)
+C(n, 0) = C(n, n) = 1
+*/
+int binomial_coeff(int n, int r) 
+{
+    if(r>n)
+        return 0;
+    int C[n + 1][r + 1]; 
+    int i, j;
+    for (i = 0; i <= n; i++) 
+    { 
+        for (j = 0; j <= min(i, r); j++) 
+        { 
+            if (j == 0 || j == i) 
+                C[i][j] = 1; 
+            else
+                C[i][j] = C[i - 1][j - 1] + C[i - 1][j]; 
+        } 
+    } 
+    return C[n][r]; 
+} 
+// Combinations nCr % m for Large Numbers where m is prime
+#define mod 1000000007
+#define N 1009
+#define ll unsigned long long  // notice it should be unsigned long long, there wrong answer with long long
+ll fact[N],inv[N];
+ll power(ll x,ll y)
+{
+    x = x % mod;
+    ll ans = 1;
+    while(y)
+    {
+        if(y&1)
+            ans = (ans * x)%mod;
+        x = (x * x)%mod;
+        y>>=1;
+    }
+    return ans;
+}
+void init()
+{
+    fact[0] = inv[0] = 1;
+    for(int i=1;i<N;i++)
+    {
+        fact[i] = (i * fact[i-1])%mod;
+        inv[i] = power(fact[i],mod-2); // notice it should be fact[i], there was wrong answer with i
+    }
+}
+ll nCr(ll n,ll r)
+{
+    if(r>n)
+       return 0;
+    return ((fact[n]*inv[r])%mod * inv[n-r])%mod;
+}
+int main()
+{
+    init();
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        ll n,r;
+        cin>>n>>r;
+        cout<<nCr(n,r)<<'\n';
+    }
+    return 0;
+}
+// Time complexity : O(nlog(mod))
+/*
+Some Rules of Binomial coefficients
+nC0 + nC1 + nC2 + ……. + nCn-1 + nCn = 2^n
+nC0 + nC2 + nC4 + nC6 + nC8 + ……… = 2^(n-1)
+nC0^2 + nC1^2 + nC2^2 + .... + nCn-1^2 + nCn^2 = 2nCn
+*/
 ```
