@@ -91,8 +91,10 @@ int gray_code(int i)
 {
     return i ^ (i>>1);
 }
-// The 1's complement of a binary number is  the inverse of the digits, change all 0's to 1's and all 1's to 0's.
-// 
-
+/*
+One’s complement of a binary number is the inverse of the digits, change all 0's to 1's and all 1's to 0's.
+Two’s Complement is start to flip after the “last bit”.
+-number = 2’s complement of number or Get 1’s complement...then add 1
+*/
 ```
 
