@@ -449,7 +449,7 @@ int cnt_subarray(int a[],int n,int b)
     int res = 0,cur = 0;
     for(int i=0;i<n;i++)
     {
-        cur += a[i];
+        cur ^= a[i];
         if(cur==b)
             res++;
         if(m.find(cur^b)!=m.end())
