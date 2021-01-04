@@ -1,18 +1,14 @@
 ### Computational Geometry
 
-Radians: 0 - 2 π
-
-Degrees: 0 - 360
-
-Radians is better computationally - so libraries use that
-
-Right angle 90 degree or π/2 radians
-
-370 Degree = 10 Degree = 370 % 360
-
 [Computational Geometry Tutorial](https://github.com/Khaled-Mahmmoud/MyCompetitiveProgramming/blob/master/img/Geometry/Computational%20Geometry.pdf)
 
 ```cpp
+/*
+Radians: 0 - 2 π
+Degrees: 0 - 360
+Right angle 90 degree or π/2 radians
+370 Degree = 10 Degree = 370 % 360
+*/
 const double PI = acos(-1.0);
 double toRadians(double degree) 
 {
@@ -36,12 +32,6 @@ One second is equal to 1/3600 degrees: 1" = (1/3600)° = 2.77778e-4° = 0.000277
 For angle with d integer degrees m minutes and s seconds: d° m' s"
 
 The decimal degrees dd is equal to: dd = d + m/60 + s/3600
-
-Example
-
-Convert 30 degrees 15 minutes and 50 seconds angle to decimal degrees: 30° 15' 50"
-
-The decimal degrees dd is equal to: dd = d + m/60 + s/3600 = 30° + 15'/60 + 50"/3600 = 30.263888889°
 */
 double to_degree_from_minutes(double minutes)
 {
