@@ -82,9 +82,17 @@ void get_subset_binary(int len)
         cout<<' ';
    }
 }
+/*
+binary    gray
+ 0111	0100
+in gray code, every bit is Xor of its bit and last one in binary
+*/
 int gray_code(int i)
 {
     return i ^ (i>>1);
 }
+// The 1's complement of a binary number is  the inverse of the digits, change all 0's to 1's and all 1's to 0's.
+// 
+
 ```
 
