@@ -1,5 +1,5 @@
-### How to determine the level of each node in the given tree?
 ```cpp
+// How to determine the level of each node in the given tree?
 vector<vector<int>>adj;
 vector<bool>vis;
 void bfs(int u,int level)
@@ -35,15 +35,8 @@ int main()
     bfs(1,0);
     return 0;
 }
-```
 
-### How to find connected components using DFS?
-
-A graph is said to be disconnected if it is not connected, i.e. if two nodes exist in the graph such that there is no edge in between those nodes. In an undirected graph, a connected component is a set of vertices in a graph that are linked to each other by paths.
-
-In DFS, if we start from a start node it will mark all the nodes connected to the start node as visited. Therefore, if we choose any node in a connected component and run DFS on that node it will mark the whole connected component as visited.
-
-```cpp
+// How to find connected components using DFS?
 for(int i = 1;i <= nodes;++i) 
 {
     if(visited[i] == false)     
@@ -52,9 +45,7 @@ for(int i = 1;i <= nodes;++i)
          cnt_component++;
     }
 }
-```
-### How to Check if an undirected graph has cycle ?
-```cpp
+// How to Check if an undirected graph has cycle ?
 vector<vector<int>>adj;
 vector<bool>vis;
 vector<int>parent;
@@ -97,10 +88,7 @@ int main()
     
     return 0;
 }
-```
-### Maximum number of edges removed
-Calculate maximum number of edges that can be removed from the graph so that it contains exactly K connected components.
-```cpp
+// Calculate maximum number of edges that can be removed from the graph so that it contains exactly K connected components.
 vector<vector<int>>adj;
 vector<bool>vis;
 vector<int>parent;
@@ -149,9 +137,7 @@ int main()
     }
     return 0;
 }
-```
-**Remove edges from the graph**
-```cpp
+// Remove edges from the graph
 void dfs(int u)
 {
     vis[u] = 1;
@@ -172,10 +158,7 @@ void dfs(int u)
     }
     adj[u] = newadj;
 }
-```
-
-### Sum of lengths of all paths possible in a given tree
-```cpp
+// Sum of lengths of all paths possible in a given tree
 int n,a,b,sz[100001];
 vector<int>g[100001];
 long long ans = 0;
@@ -194,7 +177,6 @@ void dfs(int u=1, int p=-1)
 }
 int main()
 {
-    ios::sync_with_stdio(false),cin.tie(0);
     cin>>n;
     for (int i = 0; i < n-1; ++i)
     {
@@ -252,9 +234,7 @@ int main()
         cout<<i+1<<" : "<<val[i]<<'\n';
     return 0;
 }
-```
-### Bridges and Articulation Points
-```cpp
+// Bridges and Articulation Points
 int n;
 vector<vector<int> > g;
 vector<int> idx, low;
@@ -304,24 +284,7 @@ int main()
     art[0] = child > 1;
     return 0;
 }
-```
-### Check whether a given graph is Bipartite or not
-
-A Bipartite Graph is a graph whose vertices can be divided into two independent sets, U and V such that every edge (u, v) either connects a vertex from U to V
-or a vertex from V to U. In other words, for every edge (u, v), either u belongs to U and v to V, or u belongs to V and v to U.
-We can also say that there is no edge that connects vertices of same set.
-
-A bipartite graph is possible if the graph coloring is possible using two colors such that vertices in a set are colored with the same color.
-Note that it is possible to color a cycle graph with even cycle using two colors. 
-
-It is not possible to color a cycle graph with odd cycle using two colors.
-
-
-Algorithm to check if a graph is Bipartite:
-
-One approach is to check whether the graph is 2-colorable or not using backtracking algorithm m coloring problem.
-
-```cpp
+// Check whether a given graph is Bipartite or not
 const int N = 100100;
 int color[N];           
 vector<int> edges[N];   
@@ -346,5 +309,5 @@ bool isBipartiteGraph()
     color[1] = 0;
     return dfs();
 }
+// Time Complexity: O(n + m)
 ```
-Time Complexity: O(n + m)
