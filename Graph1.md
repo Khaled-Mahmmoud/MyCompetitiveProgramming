@@ -121,12 +121,13 @@ int main()
     cout<<primMST();
 }
 // O(n.log(n)+m.log(n))
-
+/*
 Single Source Shortest Path (SSSP)
 BFS - BFS on Complement Graph - Dijkstra's Algorithm
 Bellman Ford's Algorithm - Optimized Bellman Ford's Algorithm
-All Pair Shortest Path (APSP) - Floyd Warshal's Algorithm
 
+All Pair Shortest Path (APSP) - Floyd Warshal's Algorithm
+*/
 // BFS : Computes the shortest path between the given source node and all the other nodes in an unweighted graph.
 const int N = 100100;
 int n, m, dis[N], par[N];             
