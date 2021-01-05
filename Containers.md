@@ -194,6 +194,5 @@ double m = stold(s);   // converts string to double
 
 // We can use memset() to set all values as 0 or -1.
 memset(a,0,sizeof a); // one-d array or two-d array
-memset (str,'-',6)
-
+memset(str,'-',6);
 ```
