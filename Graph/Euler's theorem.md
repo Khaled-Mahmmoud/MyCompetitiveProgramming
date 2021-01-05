@@ -1,4 +1,5 @@
 ```cpp
+/*
 <Euler Theory>
 Euler Path: a path that use every edge exactly once
 path: different start and end
@@ -11,8 +12,11 @@ cycle: start node = end node
 number of odd degree vertices = 0
 graph can have multiple edges / self edges
 
-Note that there is not exist graph where number of odd degree vertices = 1,3,5,7
+- Note that there is not exist graph where number of odd degree vertices = 1,3,5,7
+- every graph has an even number of odd vertices
+- 2 * edges = sum of nodes degree
 
+*/
 
 vector<vector<int>>adj;
 vector<int>tour;
