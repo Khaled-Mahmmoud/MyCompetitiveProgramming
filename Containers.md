@@ -162,6 +162,7 @@ advance (it,n); // Advances the iterator it by n element positions
 auto first = v.begin();
 auto last = v.end();
 cout << distance(first,last);
+// Complexity : Constant for random-access iterators . Otherwise, linear in n.
 
 
 ```
