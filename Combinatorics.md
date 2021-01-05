@@ -206,7 +206,8 @@ Compute Accum array % N. Accum[i] = {A[0] + A[1]...A[i]} % N
 If any Accum[i] = 0, we are done. Otherwise, we have N values in [0 - N-1].
 Then 2 positions will have same mode. Then getting numbers between them is answer.
 Let A represents array of numbers N = 5 and A = {2, 4, 8, 2, 7}, Accumulate: B = {2, 6, 14, 16, 23}
-Mode 5: C = {2, 1, 4, 1, 3} Any zeros? No..remaining 4 values spread on 5 values...one of them must be repeated.
-if yes then A[0]+A[1]...A[i] where C[i] % N = 0. 2nd and 4th have mode 1. Then range from 3rd till 4th is answer: 8, 2
+Mode 5: C = {2, 1, 4, 1, 3} Any zeros? (if yes then A[0]+A[1]...A[i] where C[i] % N = 0. ) 
+No..remaining 4 values spread on 5 index...one of them must be repeated. 2nd and 4th have mode 1.
+Then range from 3rd till 4th is answer: 8, 2
 */
 ```
