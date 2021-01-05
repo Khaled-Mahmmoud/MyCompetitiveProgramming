@@ -111,7 +111,8 @@ upper_bound(v.begin(),v.end(),{fir,sec});  // Compiler erro
 upper_bound(v.begin(),v.end(),p);   // correct
 Complexity : log(n) 
 
-// find: Searches the container for an element equivalent to val and returns an iterator to it if found otherwise it returns an iterator to container::end.
+// find: Searches the container for an element equivalent to val and returns an iterator to it if found 
+otherwise it returns an iterator to container::end
 it = s.find(3) // where s is set
 it = find(v.begin,v.end(),3)  // where v is vector
 Complexity : linear for sequence conainers and Logarithmic for associative and unordered_associative containers
