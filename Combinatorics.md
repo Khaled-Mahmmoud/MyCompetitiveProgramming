@@ -209,5 +209,72 @@ Let A represents array of numbers N = 5 and A = {2, 4, 8, 2, 7}, Accumulate: B =
 Mode 5: C = {2, 1, 4, 1, 3} Any zeros? (if yes then A[0]+A[1]...A[i] where C[i] % N = 0. ) 
 No..remaining 4 values spread on 5 index...one of them must be repeated. 2nd and 4th have mode 1.
 Then range from 3rd till 4th is answer: 8, 2
+
+/*
+<Permutations Cycles>
+For vector {0, 1, 2} -> we have 3! = 6
+
+Idx: 0		0 1 2		-> Sorted	     	{			Block of length 2! = 2 
+Idx: 1		0 2 1					}                                      (n-1)!
+      
+Idx: 2		1 0 2
+Idx: 3		1 2 0
+
+Idx: 4		2 0 1
+Idx: 5		2 1 0		-> Reversed
+*/
+// How to iteratively generate Permutations ?
+void Permutation(int a[],int n)
+{
+    do
+    {
+        for(int i=0;i<n;i++)
+            cout<<a[i]<<' ';
+        cout<<'\n';
+    }
+    while(next_permutation(a,a+n));
+    // while(prev_permutation(a,a+n);
+}
+// Complexity : O(n * !n)
+
+// The next permutation of s after x steps ?
+void permutation(string str,int x)
+{
+    for(int i=0;i<x;i++)
+        next_permutation(str.begin(),str.end());
+    //  prev_permutation(str.begin(),str.end());
+    cout<<str;
+}
+// Complexity : O(n * x)
+
+// Given a permutation length, what is the ith permutation ?
+vector<int> nthPerm(int len, int nth) 
+{
+    vector<int> id(len), perm(len);
+    for(int i=0;i<len;i++)
+    id[i] = i;
+    for (int i = len - 1; i >= 0; --i)
+    {
+        int p = nth / Fact[i];
+	perm[len - i - 1] = id[p];
+	id.erase(id.begin() + p);
+	nth %= Fact[i];
+    }
+    return perm;
+}
+// Given a permutation, what is its index ?
+int PermToIndex(vector<int> perm)
+{
+    int idx = 0;
+    int n = perm.size();
+    for (int i = 0; i < n; ++i)
+    {
+        // Remove first, and Renumber the remaining elements to remove gaps
+        idx += Fact[n-1-i] * perm[i];
+        for(int j = i+1; j < n; j++)
+           perm[j] -= perm[j] > perm[i];
+    }
+    return idx;
+}
 */
 ```
