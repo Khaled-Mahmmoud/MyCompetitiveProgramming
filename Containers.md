@@ -87,4 +87,61 @@ int main()
     cout << p1.first << ' ' << p1.second << endl;
     return 0;
 }
+/*
+lower_bound: Returns an iterator pointing to the first element in the range [first,last] 
+which greater than or equal val if no such element , it's return iterator pointing to the end of the range.
+this range should be sorted.
+*/
+lower_bound(v.begin(),v.end(),x);
+vector<pair<int,int>>v;
+pair<int,int> p = {fir,sec};
+lower_bound(v.begin(),v.end(),{fir,sec});  // Compiler erro
+lower_bound(v.begin(),v.end(),p);   // correct
+// Complexity : log(n)
+
+/*
+upper_bound: Returns an iterator pointing to the first element in the range [first,last] 
+which greater than val if no such element , it's return iterator pointing to the end of the range. 
+this range should be sorted.
+*/
+upper_bound(v.begin(),v.end(),x);
+vector<pair<int,int>>v;
+pair<int,int> p = {fir,sec};
+upper_bound(v.begin(),v.end(),{fir,sec});  // Compiler erro
+upper_bound(v.begin(),v.end(),p);   // correct
+Complexity : log(n) 
+
+// find: Searches the container for an element equivalent to val and returns an iterator to it if found otherwise it returns an iterator to container::end.
+it = s.find(3) // where s is set
+it = find(v.begin,v.end(),3)  // where v is vector
+Complexity : linear for sequence conainers and Logarithmic for associative and unordered_associative containers
+
+// How to find the pair in the set using first element of the pair only?
+bool pred(const pair<int,int>&p)
+{
+     return p.first == k;
+}
+auto it = find_if(st.begin(),st.end(),pred);
+
+cout<<*min_element(a,a+7); // O(n)
+cout<<*max_element(v.begin(),v.end()); //O(n)
+reverse(myvector.begin(),myvector.end());     // O(n)
+
+fill(a,a+n,8); // O(n)
+fill (v.begin(),v.begin(),-5); // O(n)
+fill(str.begin(),str.end(),'x'); // O(n)
+ 
+
+
+vector<int>v={1,1,2,2,3,3,4,5}; // Array should be sorted
+auto it = unique(v.begin(),v.end()); // O(n)
+v.resize(it-v.begin());
+for(int i=0;i<v.size();i++)
+     cout<<v[i]<<' ';     // 1 2 3 4 5
+
+// convert string to lowercase 
+transform(str1.begin(),str1.end(),str1.begin(),::tolower); // O(n)
+// covert string to uppercase 
+transform(str1.begin(),str1.end(),str1.begin(),::toupper); // O(n)
+
 ```
