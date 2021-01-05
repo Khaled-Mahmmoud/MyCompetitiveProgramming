@@ -1,4 +1,3 @@
-### Bitmask
 ```cpp
 /*
 X ^ 0 = X
