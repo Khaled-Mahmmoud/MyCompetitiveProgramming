@@ -1,4 +1,16 @@
 ```cpp
+/*
+Sequence Containers: array - vector - deque - list - forward list
+Associative Containers: map - multimap- set - multiset
+Unordered Associative Containers: unordered_map - unordered_multimap - unordered_set - unordered_multiset
+Container Adaptors: stack - queue - priority_queue 
+
+Random_Access Iterator: vector - array - deque
+Bidirectional Iterator: map - multimap- set - multiset - list 
+Bidirectional Iterator: unordered_map - unordered_multimap - unordered_set - unordered_multiset
+Forward Iterator: Forward Iterator
+No Iterator Supported: stack - queue - priority_queue
+*/
 int n = 6;
 bitset<32> bit;
 bit = n;
