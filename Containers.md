@@ -115,7 +115,7 @@ Complexity : log(n)
 otherwise it returns an iterator to container::end
 it = s.find(3) // where s is set
 it = find(v.begin,v.end(),3)  // where v is vector
-Complexity : linear for sequence conainers and Logarithmic for associative and unordered_associative containers
+// Complexity : linear for sequence conainers and Logarithmic for associative and unordered_associative containers
 
 // How to find the pair in the set using first element of the pair only?
 bool pred(const pair<int,int>&p)
