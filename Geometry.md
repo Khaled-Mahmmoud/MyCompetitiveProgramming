@@ -1,4 +1,5 @@
 ```cpp
+/*
 // Polar system , Cartesian
 x = r * cos(O)
 y = r * sin(O)
@@ -27,6 +28,7 @@ A x B = A.x * B.y - B.x * A.y = r1 * r2 * sin(T2 - T1)
 //complex numbers
 point a(2,3) >> norm(a) = 2^2 + 3^2 = 13
 conj(a) >> 2 + 3i > 2 -3i flip sign i
+*/
 struct point
 {
     double x,y;
