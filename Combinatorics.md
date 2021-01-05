@@ -276,4 +276,12 @@ int PermToIndex(vector<int> perm)
     }
     return idx;
 }
+/*
+A group consists of 4 girls and 7 boys.
+In how many ways can a team of 5 members be selected, the team has at least one boy and one girl ?
+1 girls + 4 boys ⇒ 4C1 * 7C4
+2 girls +3 boys ⇒ 4C2 * 7C3
+3 girls +2 boys ⇒ 4C3 * 7C2
+4 girls +1 boy ⇒ 4C4 * 7C1
+Total number of ways = 4C1 * 7C4 + 4C2 * 7C3 + 4C3 * 7C2 + 4C4 * 7C1 = 140+210+84+7 =441
 ```
