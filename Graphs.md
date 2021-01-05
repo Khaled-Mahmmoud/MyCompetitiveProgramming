@@ -57,27 +57,6 @@ Parenthetical notation = A(B(CD)EF(GHI))
 o     o   o    external nodes (or leaves)
 
 
-A binary tree is a structure comprising nodes, where each node has the following 3 components:
-1) Data element : Stores any kind of data in the node
-2) Left pointer : Points to the tree on the left side of node
-3) Right pointer : Points to the tree on the right side of the node
-If a tree is empty, it is represented by a null pointer.
-
-                            (left,item,right)
-                           /                \
-                          /                  \
-                 (left,item,right)     (left,item,right)
-                 /               \                     \
-                /                 \                     \
-        (left,item,right)    (left,item,right)    (left,item,right)
-*/
-struct node
-{
-     Type item;
-     node* left;
-     node* right;
-};
-/*
 Full(strictly) Binary Tree : if Every node has zero or two children
            O
          /   \
