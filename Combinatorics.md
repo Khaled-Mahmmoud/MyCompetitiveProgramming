@@ -1,0 +1,182 @@
+
+
+
+
+```cpp
+/*
+<without repetition>
+order is important (Permutation)
+How? The rule of product.
+First step we do n choices, in second step, we are allowed only n-1, third n-2
+Then we have n * n-1 * n-2 ... 1 ways = p(n) = n!
+what if we need arrangement of r elements. Same way: n x (n-1) x (n-2) x .....x (n- r + 1)
+nPr = P(n,r) = n! / (n-r)!
+nPr(circle) = nPr/r
+
+order is not important (Combination)
+nCr = C(n,r) = n! / (n-r)! * r!
+That is it: P(n, r) = C(n, r) * r!
+nCr = nC(n – r)
+
+<with repetition>
+order is important (Permutation)
+n^r
+
+order is not important (Combination)
+Select a combination of three letters frome the set A,B,C,D and E.
+combinations can include {A,B,C} , {B,D,E} , {C,D,B}
+
+what if we allow repeated elements such as AABC, BBBCCD?
+the number of such combination = ncr(n+r-1,r) = (n+r-1)! / (n-1)! * r!
+*/
+ll perm(ll n,ll r)
+{
+    if(r>n)
+        return 0;
+    ll ans = 1;
+    for(int i=n;i>=n-r+1;i--)
+        ans = (ans*i)%mod;
+    return ans;
+}
+/*
+Pascal Triangle
+1  
+1 1 
+1 2 1 
+1 3 3 1 
+1 4 6 4 1 
+1 5 10 10 5 1 
+The value of C(n, r) can be recursively calculated using pascal triangle.
+C(n, r) = C(n-1, r-1) + C(n-1, r)
+C(n, 0) = C(n, n) = 1
+*/
+int binomial_coeff(int n, int r) 
+{
+    if(r>n)
+        return 0;
+    int C[n + 1][r + 1]; 
+    int i, j;
+    for (i = 0; i <= n; i++) 
+    { 
+        for (j = 0; j <= min(i, r); j++) 
+        { 
+            if (j == 0 || j == i) 
+                C[i][j] = 1; 
+            else
+                C[i][j] = C[i - 1][j - 1] + C[i - 1][j]; 
+        } 
+    } 
+    return C[n][r]; 
+} 
+// Combinations nCr % m for Large Numbers where m is prime
+#define mod 1000000007
+#define N 1009
+#define ll unsigned long long  // notice it should be unsigned long long, there wrong answer with long long
+ll fact[N],inv[N];
+ll power(ll x,ll y)
+{
+    x = x % mod;
+    ll ans = 1;
+    while(y)
+    {
+        if(y&1)
+            ans = (ans * x)%mod;
+        x = (x * x)%mod;
+        y>>=1;
+    }
+    return ans;
+}
+void init()
+{
+    fact[0] = inv[0] = 1;
+    for(int i=1;i<N;i++)
+    {
+        fact[i] = (i * fact[i-1])%mod;
+        inv[i] = power(fact[i],mod-2); // notice it should be fact[i], there was wrong answer with i
+    }
+}
+ll nCr(ll n,ll r)
+{
+    if(r>n)
+       return 0;
+    return ((fact[n]*inv[r])%mod * inv[n-r])%mod;
+}
+int main()
+{
+    init();
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        ll n,r;
+        cin>>n>>r;
+        cout<<nCr(n,r)<<'\n';
+    }
+    return 0;
+}
+// Time complexity : O(nlog(mod))
+/*
+Some Rules of Binomial coefficients
+nC0 + nC1 + nC2 + ……. + nCn-1 + nCn = 2^n
+nC0 + nC2 + nC4 + nC6 + nC8 + ……… = 2^(n-1)
+nC0^2 + nC1^2 + nC2^2 + .... + nCn-1^2 + nCn^2 = 2nCn
+*/
+
+/*
+Catalan numbers are a sequence of natural numbers that occurs in many interesting counting problems 
+1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862
+catalan(n) = nCr(2n,n) / (n+1)
+*/
+/*
+<Inclusion Exclusion>
+Most of counting involves duplicate counting issue [count item more than once].
+Inclusion Exclusion principle is a generic sum rule to solve that
+|A ∪ B ∪ C| = |A| + |B| + |C| - |A ∩ B| - |A ∩ C| - |B ∩ C| + |A ∩ B ∩ C|
+Enumerate all subsets, Compute each one intersection If odd subset add (include) it If even subset subtract (exclude) it.
+
+How many integers in {1,2 ...,100} are divisible by 2, 3, 5 or 7?
+F(2) + F(3) + F(5) + F(7) - F(2, 3) - F(2, 5) - F(2, 7) - F(3, 5) - F(3, 7) - F(5, 7) + F(2, 3, 5) 
++ F(2, 3, 7) + F(2, 5, 7) + F(3, 5, 7) - F(2, 3, 5, 7)
+*/
+int primes[4] = {2,3,5,7};
+int n = 100,ans;
+vector<int>sub;
+void inc_exe(int idx = 0)
+{
+    if(idx==4)
+    {
+        if(sub.empty())
+            return;
+        int d = 1;
+        for(int i=0;i<sub.size();i++)
+            d *= sub[i];
+        if(sub.size()&1)
+            ans += n/d;
+        else
+            ans -= n/d;
+        return;
+    }
+    sub.push_back(primes[idx]);
+    inc_exe(idx+1);
+    sub.pop_back();
+    inc_exe(idx+1);
+}
+int main()
+{
+    subset();
+    cout<<ans;
+    return 0;
+}
+// Complexity : O(2^n)
+/*
+<The Division Rule>
+A food table with 3 chairs. Given 3 persons, in how many ways we can seat them? 6 ways
+Wrong! 123 same as 231 same as 312 [by making 1 shift]. so answer is 6 / 3 = 2 .. or generally n! / n = n-1!,
+nPr(circle) = nPr/r
+In an 8x8 chess, how many ways to put 2 rocks, with no shared rows or columns?
+First piece has 64 choices.. then 1 row & 1 col are blocked
+So we have 7x7= 49 choices for 2nd rock. Total 64 * 49.
+Wrong! (0,0), (1,1) same as (1,1), (0,0)
+Symmetry of each 2 rocks. Answer: 64 * 49 / 2
+*/
+```
