@@ -1,5 +1,4 @@
 
-### Generating Subsets
 ```cpp
 int n;
 vector<int>v,sub;
