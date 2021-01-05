@@ -131,4 +131,86 @@ The number of paths or simple paths in the tree = n * (n-1) / 2
 O     O 
        \
         O
+*/
+
+// Depth-First Search (DFS)
+vector<vector<int>>adj;
+vector<bool>vis;
+void dfs(int u)
+{
+    vis[u] = true;
+    for (int v : adj[u])
+        if (!vis[v])
+            dfs(v);
+}
+int main()
+{
+    int n,m;cin>>n>>m;
+    adj.resize(n+1);
+    vis.resize(n+1);
+    while(m--)
+    {
+        int u,v;
+        cin>>u>>v;
+        adj[u].push_back(v);
+        adj[v].push_back(u);
+    }
+    for(int i=1;i<=n;i++)
+    if(!vis[i])dfs(i);
+    return 0;
+}
+// O(V + E), where V is the number of nodes and E is the number of edges.
+// DFS on tree
+vector<vector<int>>adj;
+void dfs(int u = 1,int par = -1)
+{
+    for (int v : adj[u])
+        if (v!=par)
+            dfs(v,u);
+}
+// DFS Numbering
+int w = 0;
+void dfs(int node , int par) 
+{
+    l[node] = ++w;
+    for(auto &i : adj[node])
+        if(i != par)
+            dfs(i , node);
+    r[node] = w;
+}
+// Breadth-First Search (BFS)
+vector<vector<int>>adj;
+vector<bool>vis;
+void bfs(int u) 
+{
+    queue<int> q;
+    q.push(u);
+    while (!q.empty()) 
+    {
+        u = q.front();
+        vis[u] = true;
+        q.pop();
+        for(int v:adj[u]) 
+          if(!vis[v]) 
+             q.push(v);
+    }
+}
+int main()
+{
+    int n,m;cin>>n>>m;
+    adj.resize(n+1);
+    vis.resize(n+1);
+    while(m--)
+    {
+        int u,v;
+        cin>>u>>v;
+        adj[u].push_back(v);
+        adj[v].push_back(u);
+    }
+    for(int i=1;i<=n;i++)
+      if(!vis[i])bfs(i);
+    return 0;
+}
+// O(V + E), where V is the number of nodes and E is the number of edges.
+
 ```
