@@ -5,29 +5,12 @@ x = r * cos(O)
 y = r * sin(O)
 r = sqrt(x^2 + y^2)
 O = atan2(y,x)
-// Rotatet
-x_ = cos(O) -sin(O) * x
-y_ = sin(O) - cos(O) * y
+
 //vectors
 Vector = Direction + Magnitude
 Two vectors are perpendicular if and only if their angle is a right angle
 Set of vectors is orthogonal if and only if they are pairwise perpendicular
-The normal vector to a surface is a vector which is perpendicular to the surface at a
-given point
-Dot Product : Algebraically, sum of the products of the corresponding entries
-Geometrically, the product of the Euclidean magnitudes of the two vectors
-and the cosine of the angle between them.
-A . B = |A| |B| cos(O) = x1*x2 + y1*y2
-if A and B are orthogonal, then the angle between them is 90 A.B = 0
-if they are codirectional, then the angle between them is 0 A.B = |A| |B|
-if (O) > 90 then A.B <0 and if(O) < 90 then A.B > 0 if (O) = 90 the A.B = 0
-The cross product, a X b, is a vector that is perpendicular
-to both a and b and therefore normal to the plane containing them.
--one if the two are perpendicular and a magnitude of zero if the two are parallel.
-A x B = A.x * B.y - B.x * A.y = r1 * r2 * sin(T2 - T1)
-//complex numbers
-point a(2,3) >> norm(a) = 2^2 + 3^2 = 13
-conj(a) >> 2 + 3i > 2 -3i flip sign i
+The normal vector to a surface is a vector which is perpendicular to the surface at a given point
 */
 struct point
 {
@@ -52,17 +35,18 @@ struct point
     }
 
 };
+/*
+Dot Product : Algebraically, sum of the products of the corresponding entries
+Geometrically, the product of the Euclidean magnitudes of the two vectors
+and the cosine of the angle between them. A . B = |A| |B| cos(O) = x1*x2 + y1*y2
+
+if A and B are orthogonal, then the angle between them is 90 A.B = 0
+if they are codirectional, then the angle between them is 0 A.B = |A| |B|
+if (O) > 90 then A.B <0 and if(O) < 90 then A.B > 0 if (O) = 90 the A.B = 0
+*/
 double dot(point p,point q)
 {
     return p.x*q.x + p.y*q.y;
-}
-double cross(point p,point q)
-{
-    return p.x*q.y - p.y*q.x;
-}
-point cross_3d(point a, point b)
-{
-    return point(a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x);
 }
 double norm(point a) 
 {
@@ -76,6 +60,20 @@ double abs(point a)
 double dot_angle(point a, point b) 
 {
     return acos(dot(a,b)/(abs(a) * abs(b)));
+}
+/*
+The cross product, a X b, is a vector that is perpendicular
+to both a and b and therefore normal to the plane containing them.
+it's a magnitude of one if the two are perpendicular and zero if the two are parallel.
+A x B = |A| |B| sin(O) = A.x * B.y - B.x * A.y 
+*/
+double cross(point p,point q)
+{
+    return p.x*q.y - p.y*q.x;
+}
+point cross_3d(point a, point b)
+{
+    return point(a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x);
 }
 double proj(point a, point b) 
 {
