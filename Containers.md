@@ -176,5 +176,24 @@ auto last = v.end();
 cout << distance(first,last);
 // Complexity : Constant for random-access iterators . Otherwise, linear in n.
 
+string k = "khaled mahmoud fawzy",s1,s2,s3;
+stringstream input(k);
+input>>s1>>s2>>s3;
+cout<<s1<<':'<<s2<<':'<<s3;  // khaled:mahmoud:fawzy
+
+string k = "23 87 69";int s1,s2,s3;
+stringstream input(k);
+input>>s1>>s2>>s3;
+cout<<s1<<':'<<s2<<':'<<s3;  // 23:87:69
+
+string s = to_string(m); // converts integer/ll/double to string
+int m = stoi(s);   // converts string to integer
+ll m = stoll(s);   // converts string to ll
+double m = stold(s);   // converts string to double
+
+
+// We can use memset() to set all values as 0 or -1.
+memset(a,0,sizeof a); // one-d array or two-d array
+memset (str,'-',6)
 
 ```
