@@ -197,7 +197,7 @@ memset(a,0,sizeof a); // one-d array or two-d array
 memset(str,'-',6);
 
 int val[] = {1,2,3,4,5},result[5];
-partial_sum(val, val+5, result);
+partial_sum(val, val+5, result); // O(n), for array[] only.
 for(int i=0; i<5; i++) 
 cout<< result[i] << ' ';  // 1 3 6 10 15
 ```
