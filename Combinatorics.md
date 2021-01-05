@@ -209,7 +209,7 @@ Let A represents array of numbers N = 5 and A = {2, 4, 8, 2, 7}, Accumulate: B =
 Mode 5: C = {2, 1, 4, 1, 3} Any zeros? (if yes then A[0]+A[1]...A[i] where C[i] % N = 0. ) 
 No..remaining 4 values spread on 5 index...one of them must be repeated. 2nd and 4th have mode 1.
 Then range from 3rd till 4th is answer: 8, 2
-
+*/
 /*
 <Permutations Cycles>
 For vector {0, 1, 2} -> we have 3! = 6
@@ -276,5 +276,4 @@ int PermToIndex(vector<int> perm)
     }
     return idx;
 }
-*/
 ```
