@@ -1,7 +1,3 @@
-
-
-
-
 ```cpp
 /*
 <without repetition>
@@ -191,7 +187,6 @@ the solution 1 + 3 + 0 = 4 for n = 4, k = 3 can be represented using ★|★★�
 
 Number of lower-bound integer sums
 we want to count the number of solutions for the equation x1 + x2 + ⋯ + xk = n with xi ≥ ai.
-
 After substituting x′i = xi - ai we receive the modified equation (x′1+ai) + (x′2+ai) + ⋯ + (x′k+ak) = n 
 x′1 + x′2 + ⋯ + x′k = n − a1 − a2 − ⋯ − ak with x′i ≥ 0. and again can apply the stars and bars theorem.
 
