@@ -57,13 +57,5 @@ string multiply(string str1, string str2)
   
     return str; 
 } 
-int main() 
-{ 
-    string str1 = "1235421415454545454545454544"; 
-    string str2 = "1714546546546545454544548544544545"; 
-    
-    multiply(str1, str2); 
-    return 0; 
-} 
-// Time Complexity: O(m*n)
+// Time Complexity: O(n1*n2)
 ```
