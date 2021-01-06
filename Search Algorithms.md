@@ -17,8 +17,9 @@ int binary_search()
 double binary_search_d()
 {
     double l = 0, r = 1e9;
-    
     while (r-l > 1e-9)
+    // better than above : while (r-l > 1e-6)
+    // better than above : for (int i = 0; i < 100; ++i)
     {
         double mid = (l+r) / 2;
 
@@ -46,6 +47,8 @@ int ternary_search(int l, int r)
 double ternary_search_d(double l, double r)
 {
     while (r - l > 1e-9)
+    // better than above : while (r-l > 1e-6)
+    // better than above : for (int i = 0; i < 100; ++i)
     {
         double mid1 = l + (r - l) / 3;
         double mid2 = r - (r - l) / 3;
