@@ -5,7 +5,7 @@ int binary_search()
     int l = 0, r = 1e9;
     while (l < r)
     {
-        int mid = (l+r) / 2;
+        int mid = l + (r-l) / 2;
 
         if (valid(mid))
             r = mid;
