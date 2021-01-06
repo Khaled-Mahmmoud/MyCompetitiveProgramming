@@ -2,11 +2,11 @@
 // Sum of two large numbers
 string findSum(string str1, string str2) 
 {    
-    int n1 = str1.length();
-    int n2 = str2.length();
-    
     if (str1.length() > str2.length()) 
         swap(str1, str2);
+        
+    int n1 = str1.length();
+    int n2 = str2.length();
         
     string str = ""; 
     reverse(str1.begin(), str1.end()); 
