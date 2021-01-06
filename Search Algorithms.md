@@ -44,6 +44,7 @@ int ternary_search(int l, int r)
     }
     return f(l);                   
 }
+// Ternary search on to find a real (floating) local minimum
 double ternary_search_d(double l, double r)
 {
     while (r - l > 1e-9) // // somtimes give us time limited
