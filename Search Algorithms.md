@@ -21,7 +21,7 @@ double binary_search_d()
     // better than above : while (r-l > 1e-6)
     // better than above : for (int i = 0; i < 100; ++i)
     {
-        double mid = (l+r) / 2;
+        double mid = l + (r-l) / 2;
 
         if (valid(mid))
             r = mid;
