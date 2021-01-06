@@ -475,7 +475,7 @@ graph can have multiple edges / self edges
 - Note that there is not exist graph where number of odd degree vertices = 1,3,5,7
 - every graph has an even number of odd vertices
 - 2 * edges = sum of nodes degree
-```cpp
+*/
 vector<vector<int>>adj;
 vector<int>tour;
 int n,m;
@@ -492,6 +492,5 @@ void euler(int i)
     }
     tour.push_back(i);
 }
-```
 // this code don't work with multiple edges
 ```
