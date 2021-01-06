@@ -51,9 +51,9 @@ double ternary_search_d(double l, double r)
         double mid2 = r - (r - l) / 3;
         
         if(f(mid1) < f(mid2))
-            l = mid1;
-        else
             r = mid2;
+        else
+            l = mid1;
     }
     return f(l);                   
 }
