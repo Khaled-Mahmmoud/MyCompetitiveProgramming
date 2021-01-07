@@ -19,11 +19,8 @@ identity matrix
 The n X n, identity matrix, denoted I_n 
 The entries on the diagonal from the upper left to the bottom right are all 1's, and all other entries are 0
  I2 = |1  0|               |1  0  0|
-      |0  1|          I3 = |0  1  0|                    |1  0  0  0|
-                           |0  0  1|               I4 = |0  1  0  0|
-                                                        |0  0  1  0|
-                                                        |0  0  0  1|
-							
+      |0  1|          I3 = |0  1  0|                    
+                           |0  0  1|               							
 The product of any square matrix and the appropriate identity matrix is always the original matrix
 regardless of the order in which the multiplication was performed! In other words, A.I = I.A = A
 */
