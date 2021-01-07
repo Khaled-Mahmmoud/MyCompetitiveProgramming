@@ -29,6 +29,8 @@ if (abs(a-b) < 1e-9)
 #include<iomanip>	
 cout<< fixed << showpoint << setprecision(n) ;
 
+cout<<setw(5)<<setfill('0')<<"kh"; 000kh
+
 int binary_search()
 {
     int l = 0, r = 1e9;
