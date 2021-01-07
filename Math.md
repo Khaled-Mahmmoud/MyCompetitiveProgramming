@@ -76,6 +76,7 @@ Let’s simulate it.
 Let length of the cycle be L, and length of precycle be P.
 Given some X, we can compute its i position. i = (X % L - P % L + L) % L + P -->> (X-P)%L + P
 Then? Solve subproblem X % L in same manner. Then compute 2^i % M.
+*/
 // Generate Divisors
 template<class T>
 vector<T> getDivisors(T n) 
