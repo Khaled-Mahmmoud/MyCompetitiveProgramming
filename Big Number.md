@@ -174,13 +174,13 @@ string longDivision(string number, int divisor)
 { 
     string ans; 
     int idx = 0; 
-    int temp = number[idx] - '0'; 
+    int temp = (number[idx] - '0'); 
     while (idx<number.size()&&temp < divisor) 
        temp = temp * 10 + (number[++idx] - '0'); 
     while(idx < number.size()) 
     { 
-        ans += (temp / divisor) + '0'; 
-        temp = (temp % divisor) * 10 + number[++idx] - '0'; 
+        ans += ((temp / divisor) + '0'); 
+        temp = (temp % divisor) * 10 + (number[++idx] - '0'); 
     } 
     if (ans.length() == 0) 
         return "0"; 
@@ -290,14 +290,14 @@ int main()
     }
 	return 0;
 }
-// better solution is of second Solution because Time Complexity of second solution is the least.
+// Complexity : Second Solution is the better.
 
 // How to compute mod of a big number?
 int mod(string num, int a) 
 { 
     int res = 0; 
     for (int i = 0; i < num.length(); i++) 
-         res = (res*10 + (int)num[i] - '0') %a; 
+         res = (res*10 + (num[i] - '0')) %a; 
     return res; 
 } 
 ```
