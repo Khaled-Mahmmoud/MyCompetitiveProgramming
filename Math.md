@@ -1,3 +1,4 @@
+```cpp
 // Generate Divisors
 template<class T>
 vector<T> getDivisors(T n) 
@@ -60,3 +61,4 @@ If the square root of given number(say x^2) is prime then it must have exactly t
  Divisors of n   = (a+1)  * (b+1)  * (c+1)
  Divisors of n^z = (az+1) * (bz+1) * (cz+1)
  */
+```
