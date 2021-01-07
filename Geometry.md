@@ -22,22 +22,10 @@ double toDegree(double radian)
         radian += 2*PI;
     return (radian * 180.0 / PI);
 }
-/*
-How to convert degrees, minutes, seconds to decimal degrees
-
-One degree is equal to 60 minutes and equal to 3600 seconds: 1° = 60' = 3600"
-
-One minute is equal to 1/60 degrees: 1' = (1/60)° = 0.01666667°
-
-One second is equal to 1/3600 degrees: 1" = (1/3600)° = 2.77778e-4° = 0.000277778°
-
-For angle with d integer degrees m minutes and s seconds: d° m' s"
-
-The decimal degrees dd is equal to: dd = d + m/60 + s/3600
-*/
-double to_degree_from_minutes(double minutes)
+// Convert degrees, minutes, seconds(d° m' s") to decimal degrees d°
+double to_degree(double degrees, double minutes, double seconds)
 {
-    return (minutes/60);
+    return degrees + (minutes/60) + (seconds/60*60);
 }
 /*
 Vector = Direction + Magnitude
@@ -45,7 +33,6 @@ Two vectors are perpendicular if and only if their angle is a right angle
 Set of vectors is orthogonal if and only if they are pairwise perpendicular
 The normal vector to a surface is a vector which is perpendicular to the surface at a given point
 */
-
 #define point complex<double>
 point input()
 {
