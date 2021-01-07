@@ -45,10 +45,6 @@ point input()
 Dot Product : Algebraically, sum of the products of the corresponding entries
 Geometrically, the product of the Euclidean magnitudes of the two vectors
 and the cosine of the angle between them. A . B = |A| |B| cos(O) = x1*x2 + y1*y2
-
-if A and B are orthogonal, then the angle between them is 90 A.B = 0
-if they are codirectional, then the angle between them is 0 A.B = |A| |B|
-if (O) > 90 then A.B <0 and if(O) < 90 then A.B > 0 if (O) = 90 the A.B = 0
 */
 // conj(a) ==> 2 + 3i ==> 2 - 3i flip sign of image
 double dot(point a,point b)
@@ -58,7 +54,6 @@ double dot(point a,point b)
 /*
 The cross product, a X b, is a vector that is perpendicular
 to both a and b and therefore normal to the plane containing them.
-it's a magnitude of one if the two are perpendicular and zero if the two are parallel.
 A x B = |A| |B| sin(O) = A.x * B.y - B.x * A.y 
 */
 double cross(point a,point b)
@@ -201,31 +196,22 @@ double area_triangle1(double a, double b, double c)
 	double s = 0.5 * perimeter_triangle(a, b, c);
 	    return (4.0/3.0) * sqrt(s * (s - a) * (s - b) * (s - c));
 }
-/* A function to check whether point P(x, y) lies inside the triangle formed  
-   by A(x1, y1), B(x2, y2) and C(x3, y3) */ 
-double area_triangle2(int x1, int y1, int x2, int y2, int x3, int y3) 
+// check whether point X lies inside the triangle abc
+double area_triangle2(point a,point b,point c) 
 { 
-   return abs((x1*(y2-y3) + x2*(y3-y1)+ x3*(y1-y2))/2.0); 
-   //OR return abs(x1*(y2-y3) + x2*(y3-y1)+ x3*(y1-y2)); 
+   return abs((a.x*(b.y-c.y) + b.x*(c.y-a.y)+ c.x*(a.y-b.y))/2.0); 
+   //OR return abs(a.x*(b.y-c.y) + b.x*(c.y-a.y)+ c.x*(a.y-b.y)); 
 } 
-bool isInside(int x1, int y1, int x2, int y2, int x3, int y3, int x, int y) 
+bool isInside(point a,point b,point c,point x) 
 {    
-   /* Calculate area of triangle ABC */
-   double A = area_triangle2 (x1, y1, x2, y2, x3, y3); 
-  
-   /* Calculate area of triangle PBC */   
-   double A1 = area_triangle2 (x, y, x2, y2, x3, y3); 
-  
-   /* Calculate area of triangle PAC */   
-   double A2 = area_triangle2 (x1, y1, x, y, x3, y3); 
-  
-   /* Calculate area of triangle PAB */    
-   double A3 = area_triangle2 (x1, y1, x2, y2, x, y); 
-    
-   /* Check if sum of A1, A2 and A3 is same as A */ 
+   double A  = area_triangle2(a,b,c); 
+   double A1 = area_triangle2(x,a,b); 
+   double A2 = area_triangle2(x,b,c); 
+   double A3 = area_triangle2(x,a,c); 
+   
    return (A == A1 + A2 + A3); 
 }
-/*	
+/*
 Distance between two points on Earth	
 we need to have the co-ordinates of point A and point B.	
 convert the latitude and longitude values from decimal degrees to radians.	
