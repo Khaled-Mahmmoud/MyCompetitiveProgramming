@@ -175,7 +175,7 @@ string longDivision(string number, int divisor)
     string ans; 
     int idx = 0; 
     int temp = number[idx] - '0'; 
-    while (temp < divisor) 
+    while (idx<number.size()&&temp < divisor) 
        temp = temp * 10 + (number[++idx] - '0'); 
     while(idx < number.size()) 
     { 
