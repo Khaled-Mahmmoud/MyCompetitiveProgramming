@@ -61,7 +61,7 @@ void precomputeCounts()
               perfectDiv[j]++; 
     } 
 } 
-
+/*
 we should know that **only perfect square numbers have odd number of divisors** 
 
 4 (1, 2, 4) has 3 divisors
@@ -75,7 +75,7 @@ we should know that **only perfect square numbers have odd number of divisors**
 36 (1, 2, 3, 4, 6, 9, 12, 18, 36) has 9 divisors
 
 100 (1, 2, 4, 5, 10, 20, 25, 50, 100) has 9 divisors
- 
+ */
 // Check if count of divisors is even or odd
 void countDivisors(int n) 
 { 
