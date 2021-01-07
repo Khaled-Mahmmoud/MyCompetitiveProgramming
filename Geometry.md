@@ -6,7 +6,6 @@ y = r * sin(O)
 r = sqrt(x^2 + y^2)
 O = atan2(y,x)
 
-/*
 Radians: 0 - 2 π
 Degrees: 0 - 360
 Right angle 90 degree or π/2 radians
@@ -40,7 +39,7 @@ double to_degree_from_minutes(double minutes)
 {
     return (minutes/60);
 }
-
+/*
 Vector = Direction + Magnitude
 Two vectors are perpendicular if and only if their angle is a right angle
 Set of vectors is orthogonal if and only if they are pairwise perpendicular
