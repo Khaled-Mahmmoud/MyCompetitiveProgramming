@@ -1,6 +1,6 @@
 ```cpp
 /*
-// Polar system , Cartesian
+Polar system , Cartesian
 x = r * cos(O)
 y = r * sin(O)
 r = sqrt(x^2 + y^2)
