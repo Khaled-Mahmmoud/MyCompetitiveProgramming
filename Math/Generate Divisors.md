@@ -1,7 +1,6 @@
-### Generate Divisors
 
-Computes all the divisors of a positive integer.
 ```cpp
+// Generate Divisors
 template<class T>
 vector<T> getDivisors(T n) 
 {
@@ -15,11 +14,8 @@ vector<T> getDivisors(T n)
     }
     return divs;
 }
-```
-Complexity : O(sqrt(n))
-
-### Generates all the divisors of the integers from 1 to "n"
-```cpp
+// Complexity : O(sqrt(n))
+// Generates all the divisors of the integers from 1 to "n"
 vector<int> divs[N];
 void generateDivisors(int n) 
 {
@@ -27,25 +23,17 @@ void generateDivisors(int n)
         for (int j = i; j <= n; j += i)
             divs[j].push_back(i);
 }
-```
-After calling this function, "divs[i]" will contains all the divisors of integer "i".
- 
-Complexity: O(n.log(n))
-    
+// After calling this function, "divs[i]" will contains all the divisors of integer "i".
+// Complexity: O(n.log(n))   
+/*
 for this code only: 
 n=10^4 -->> 0.8s,
 n=10^5 -->> 2s,
 n=10^6 -->> 19s    
+*/
 
-
-Given an array of integers and you have to find the index of the number which has the maximum number of divisors, 
-if there many answers print the smallest index.
-    
-N <= 10^6
-
-a[i] <= 10^6
-
-```cpp
+// Given an array of integers and you have to find the index of the number which has the maximum number of divisors, 
+// if there many answers print the smallest index.
 #define N  1000000
 vector<int>d(N);
 int main()
@@ -63,24 +51,7 @@ int main()
     cout<<idx;
     return 0;
 }
-```
-### Count all perfect divisors of a number
-
-Given a number n, count total perfect divisors of n.
-    
-Perfect divisors are those divisors which are square of some integer.
-    
-Input  : n = 16 
-    
-Output : 3
-    
-Explanation : There are only 5 divisor of 16:
-
-1, 2, 4, 8, 16. Only three of them are perfect
-
-squares: 1, 4, 16. Therefore the answer is 3
-    
-```cpp
+// Count all perfect divisors of a number
 int perfectDiv[MAX]; 
 void precomputeCounts() 
 { 
@@ -90,7 +61,6 @@ void precomputeCounts()
               perfectDiv[j]++; 
     } 
 } 
-```
 
 we should know that **only perfect square numbers have odd number of divisors** 
 
@@ -106,8 +76,7 @@ we should know that **only perfect square numbers have odd number of divisors**
 
 100 (1, 2, 4, 5, 10, 20, 25, 50, 100) has 9 divisors
  
- ### Check if count of divisors is even or odd
- ```cpp
+// Check if count of divisors is even or odd
 void countDivisors(int n) 
 { 
     int root_n = sqrt(n); 
