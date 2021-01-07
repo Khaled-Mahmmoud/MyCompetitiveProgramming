@@ -44,6 +44,7 @@ void countDivisors(int n)
     else
         printf("Even\n"); 
 } 
+/*
 Check whether a number has exactly three distinct factors or not?
 According to property of perfect square, “Every perfect square(x^2) always have only odd numbers of factors“
 If the square root of given number(say x^2) is prime then it must have exactly three distinct factors i.e,
