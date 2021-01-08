@@ -259,29 +259,29 @@ int fib(int n)
   Initial   Transition    Updated
   Matrix    Matrix        Matrix
 */
-ll fibonacciMatrix(ll n) 
+ll fibonacciMatrix(ll n)
 {
-	if(n <= 1)
-              return n;
-	matrix transition = zero(2, 2);
-	transition[0][1] = transition[1][0] = transition[1][1] = 1;
-        transition = power(transition, n - 1);
-	matrix Initial = zero(2, 2);
-	Initial[0][1] = 1;
-	Initial = multiply(Initial, transition);
-	return Initial[0][1];
+    if(n <= 1)
+        return n;
+    matrix transition = zero(2, 2);
+    transition[0][1] = transition[1][0] = transition[1][1] = 1;
+    transition = power(transition, n - 1);
+    matrix Initial = zero(2, 2);
+    Initial[0][1] = 1;
+    Initial = multiply(Initial, transition);
+    return Initial[0][1];
 }
 // O(logn) 
 // first row in initial matrix same as first row in transition matrix
 // So instead : initial x transition^(n-1) , we use transition^n
-ll fibonacciMatrix(ll n) 
+ll fibonacciMatrix(ll n)
 {
-	if(n <= 1)
-     return n;
-	matrix transition = zero(2, 2);
-	transition[0][1] = transition[1][0] = transition[1][1] = 1;
-      transition = power(transition, n);
-	return transition[0][1];
+    if(n <= 1)
+        return n;
+    matrix transition = zero(2, 2);
+    transition[0][1] = transition[1][0] = transition[1][1] = 1;
+    transition = power(transition, n);
+    return transition[0][1];
 }
 /*
 In Fibonacci , F(n) depends on 2 terms only ; F(n-1) + F(n-2) 
