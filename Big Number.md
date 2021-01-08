@@ -272,7 +272,8 @@ void init()
 
     res[0] = 1; 
     int res_size = 1; 
-  
+    v[0] = "1";
+    
     for (int x=1; x<=1000; x++) 
     {
         res_size = multiply(x, res, res_size);
