@@ -296,7 +296,8 @@ we depend on 3 terms , construct 3 x 3 and fill with base cases
 1 3 4
 0 0 0
 0 0 0
-Now we need to prepare column values We know that initial matrix first row 1 3 4 (base case) and first row in updated matrix after 1 step 3 4 x that is first 2 columns just shift 2 values , 3rd column only do calculation 2 * F[n-3] + F[n-2] - 4 * F[n-1]
+Now we need to prepare column values We know that initial matrix first row 1 3 4 (base case) and first row in updated matrix
+after 1 step 3 4 x that is first 2 columns just shift 2 values , 3rd column only do calculation 2 * F[n-3] + F[n-2] - 4 * F[n-1]
 0  0  2
 1  0  1
 0  1 -4
