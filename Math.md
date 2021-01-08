@@ -43,23 +43,15 @@ T power(T a, T b, T mod)
 }
 // O(log(y))
 /*
-calc a^1 + a^2 + a^3 + ..... + a^k
-(a^1+a^2+a^3+a^4+a^5+a^6)       = (a^1+a^2+a^3)+(a^1*a^3+a^2*a^3+a^3*a^3)
-(a^1+a^2+a^3)+a^3*(a^1+a^2+a^3) = (a^1+a^2+a^3)*(1+a^3)
-(a^1+a^2+a^3)+a^3*(a^1+a^2+a^3) = (a^1+a^2+a^3)*(1+ a^1+a^2+a^3 - (a^1+a^2))
-= (a^1+a^2+a^3)*(1+a^3)
-
-what about odd n (a^1+a^2+a^3+a^4+a^5+a^6+a^7)  = a + a*(a^1+a^2+a^3+a^4+a^5+a^6)
-= a(1+(a^1+a^2+a^3+a^4+a^5+a^6))
+Calc a^1 + a^2 + a^3 + ..... + a^k
+(a^1+a^2+a^3+a^4+a^5+a^6)  =  (a^1+a^2+a^3)+a^3*(a^1+a^2+a^3) = (a^1+a^2+a^3)*(1+a^3)
+what about odd n (a^1+a^2+a^3+a^4+a^5+a^6+a^7) = a(1+(a^1+a^2+a^3+a^4+a^5+a^6))
 */
 ll sumPower(ll a, int k)
 {
-    if (k == 0)
-        return 0;
-    if (k % 2 == 1)
-        return a * (1 + sumPower(a, k - 1));
-    ll half = sumPower(a, k / 2);
-    return half * (1 + half - sumPower(a, k / 2 - 1));
+    if (!k) return 0;
+    if (k&1) return a * (1 + sumPower(a, k - 1));
+    return sumPower(a, k>>1) * (1 + power(a,k>>1));
 }
 // Time Complexity : O(log(k)) 
 /*
@@ -204,7 +196,7 @@ matrix multiply(const matrix& a, const matrix& b)
 }
 matrix power(const matrix& a, ll k) 
 {	
-	if (k == 0)return identity(sz(a));	
+	if (!k)return identity(sz(a));	
 	if (k & 1)return multiply(a, power(a, k - 1));	
 	return power(multiply(a, a), k >> 1);	
 }	
