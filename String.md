@@ -51,10 +51,10 @@ F[size - 1] = 8. So we can get the block easily len - f[len-1] = 12 - 8 = 4
 if(len%(len-f[len-1])==0) then len/(len-f[len-1]) is solution else there no solution
 
 why all blocks are equal ? let string s=concatenate(abcd,5). let's divide string for 5 blocks ABCDE
-
 F[len-1]=16 , which means first 16 = last 16 or first 4 blocks = last 4 blocks
 ABCD = BCDE Then A = B , B = C , C = D , D = E
 
+Ex. abcdghkmabcd ==>> 1
 a b c d g h k m a b c d
 0 0 0 0 0 0 0 0 1 2 3 4
 len-F[len-1] = 8 12 % 8 != 0
