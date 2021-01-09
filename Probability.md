@@ -1,5 +1,6 @@
 ```cpp
-// https://codeforces.com/contest/312/problem/B
+/*
+https://codeforces.com/contest/312/problem/B
 SmallR, who shoots first can win in the following cases:
 1) He shoots the target in the first shot. OR
 2) He misses AND his opponent misses AND he shoots the target. OR
@@ -29,7 +30,7 @@ answer = p(A) + (P(A')*P(B') * P(A)) + P(P(A')*P(B')*P(A')*P(B') * P(A)) + .....
        = a/b + ((1-a/b)*(1-c/d) * a/b) + ((1-a/b)*(1-c/d)*(1-a/b)*(1-c/d) * a/b)... and so on.
 let p= a/b ,q = (1-c/d)*(1-a/b). The answer of this problem can be showed as: p * q^0 + p * q^1 + p * q^2 + ....
 this is infinite geometric series but 0 < q < 1.We can get the limit by the formula:p / (1-q).
-
+*/
 int main()
 {
     double a,b,c,d,p,q;
