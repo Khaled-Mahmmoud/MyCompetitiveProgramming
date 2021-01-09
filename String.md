@@ -95,4 +95,49 @@ Count number of distinct substring
 abc => has a, b, c, ab, bc, abc, aaa => has a, aa, aaa
 For each prefix P, Count += CountUniquePrefixes( reverse(P) ) // O(n^2)
 */
+
+// KMP algorithm to find a Pattern in a Text.
+vector<int>getprefix(string pat)
+{
+    int m=pat.size();
+    vector<int>prefix(m);
+    for(int i=1,len=0;i<m;i++)
+    {
+        while(len>0&&pat[i]!=pat[len])
+            len=prefix[len-1];
+        if(pat[i]==pat[len])
+            ++len;
+         prefix[i] = len;
+    }
+    return prefix;
+}
+void kmp(string str,string pat)
+{
+    int n=str.size(),m=pat.size();
+    vector<int>prefix=getprefix(pat);
+    for(int i=0,len=0;i<n;i++)  // Notic here i = 0 but above i = 1
+    {
+        while(len>0&&str[i]!=pat[len])
+            len=prefix[len-1];
+        if(str[i]==pat[len])len++;
+        if(len==m)
+        {
+            cout<<i-m+1<<' ';
+            len=prefix[len-1]; // for override
+            /*
+            len = 0    for not override
+            Example : str = ababakaba      pat = aba
+            len = prefix[len-1]  --> 0 2 6
+            len = 0  --> 0 6
+            */
+        }
+    }
+}
+int main()
+{
+    string str,pat;
+    cin>>str>>pat;
+    kmp(str,pat);
+    return 0;
+} // O(n+m)
 ```
