@@ -90,4 +90,9 @@ int main()
         cout<<freq[i] + 1<<' ';
     return 0;
 }
+/*
+Count number of distinct substring
+abc => has a, b, c, ab, bc, abc, aaa => has a, aa, aaa
+For each prefix P, Count += CountUniquePrefixes( reverse(P) ) // O(n^2)
+*/
 ```
