@@ -34,9 +34,6 @@ Given a string what is the longest prefix that is palindrome ? Ex. effedcba ==>>
 input + '#' + reverse_input ==>> effedcba#abcdeffe
 Now problem , find longest prefix that is suffix.
 
-Given a string what is the longest suffix that is palindrome ? Ex. abcdeffe ==>> effe
-we reverse that string: Now problem , find the longest prefix that is palindrome.
-
 Given a string , what is minimum characters to add to convert string to palindrome ? abcdeffe ==>> abdcdeffedcba.
 let's k = longest suffix that is palidrome: answer = length of string - k.
 
