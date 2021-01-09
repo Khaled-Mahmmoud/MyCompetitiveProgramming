@@ -394,17 +394,18 @@ vertex u comes before v in the ordering. Topological Sorting for a graph is not 
 vector<vector<int>>adj;
 vector<bool>vis;
 vector<int>result;
-void toposordfs(int u)
+void top_dfs(int u)
 {
     vis[u] = true;
     for (int z : adj[u])
         if (!vis[z])
-            dfs(z);
+            top_dfs(z);
     result.push_back(u);
 }
 int main()
 {
-    int n,m;cin>>n>>m;
+    int n,m;
+    cin>>n>>m;
     adj.resize(n+1);
     vis.resize(n+1);
     while(m--)
@@ -413,10 +414,11 @@ int main()
         cin>>u>>v;
         adj[u].push_back(v);
     }
-    for(int i=1;i<=n;i++)
-    if(!vis[i])toposordfs(i);
+    for(int i=1; i<=n; i++)
+        if(!vis[i])
+            top_dfs(i);
     reverse(result.begin(),result.end());
-    for(int i=0;i<result.size();i++)
+    for(int i=0; i<result.size(); i++)
         cout<<result[i]<<' ';
     return 0;
 }
