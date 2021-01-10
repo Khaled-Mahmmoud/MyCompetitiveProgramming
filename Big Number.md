@@ -77,6 +77,10 @@ bool operator==(big a,big b)
 {
     return !(a<b) && !(b<a);
 }
+bool operator!=(big a,big b)
+{
+    return !(a==b);
+}
 bool operator<=(big a,big b)
 {
     return (a<b||a==b);
