@@ -1,9 +1,9 @@
-### Power
-### Matrices
-### Fibonacci
-### Generate Divisors
-### Logarithms
-### Series
+- Power
+- Matrices
+- Fibonacci
+- Generate Divisors
+- Logarithms
+- Series
 ```cpp
 // <Power>
 // 10^8 = (10^2)^4 = (10^4)^2
