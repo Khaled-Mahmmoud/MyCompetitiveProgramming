@@ -3,18 +3,11 @@
 GCD (Greatest Common Divisor) or HCF (Highest Common Factor)
 we express the 2 numbers in form of : m = qn + r 
 */
-#define N 50000000
 int gcd(int a,int b)
 {
-    if(b==0)
+    if(!b)
         return a;
     return gcd(b,a%b);
-}
-int main()
-{
-    int a,b;cin>>a>>b;
-    cout<<gcd(a,b);
-    return 0;
 }
 /*
 two integers a and b are said to be relatively prime, mutually prime, or coprime if gcd(a,b) = 1
@@ -23,26 +16,18 @@ this fact could be used as : gcd(45, 10) = gcd(35, 10) = gcd(25, 10) = gcd(15, 1
 gcd(10, 5) = gcd(5, 5) = gcd(5, 0) = 5
 Wait: We just keep reaming the small from the big, the big number turn to be the smaller, and then do reverse
 How to do this switch fast? gcd(45, 10) = gcd(45%10, 10)	-> simply remove the smaller cycles in 1 step
-
 LCM (Least Common Multiple) 
 LCM(a,b) = a * b / GCD(a,b)
 */
-#define N 50000000
 int gcd(int a,int b)
 {
-    if(b==0)
+    if(!b)
         return a;
     return gcd(b,a%b);
 }
 int lcm(int a,int b)
 {
     return a*b/gcd(a,b);
-}
-int main()
-{
-    int a,b;cin>>a>>b;
-    cout<<lcm(a,b);
-    return 0;
 }
 /*
 GCD is distributive over the LCM, and vice versa: gcd(a, lcm(b, c)) = lcm(gcd(a, b), gcd(a, c)) 
@@ -62,14 +47,7 @@ int main()
 } 
 /*
         GCD & LCM
-find GCD and LCM between (504,540)
-504 | 2           540 | 2
-252 | 2           270 | 2
-126 | 2           135 | 3
-63  | 3           45  | 3
-21  | 3           15  | 3
-7   | 7           5   | 5
-    | 1               | 1
+Find GCD and LCM between (504,540)
    504 = 2^3 * 3^2 * 5^0 * 7^1
    540 = 2^2 * 3^3 * 5^1 * 7^0       
 GCD(504,540) = 2^2 * 3^2 * 5^0 * 7^0    --> Least power
