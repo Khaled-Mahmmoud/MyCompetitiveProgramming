@@ -324,4 +324,19 @@ If the square root of given number(say x^2) is prime then it must have exactly t
  Divisors of n   = (a+1)  * (b+1)  * (c+1)
  Divisors of n^z = (az+1) * (bz+1) * (cz+1)
  */
+ 
+#define numOfDigit(x) 1 + floor(log10(x))
+#define numOfBits(x)  1 + floor(log2(x)))
+// Number of Digits in !n = floor(log10(1 * 2 * 3 * 4 * .... * n)) + 1 = floor(log10(1) + log10(2) + .... + log10(n)) + 1
+int main()
+{
+    int n;
+    cin>>n;
+    double ans = 0;
+    for(int i=1;i<=n;i++)
+        ans += log10(i);
+    cout<<fixed<<setprecision(0)<<floor(ans) + 1;
+    return 0;
+}
+
 ```
