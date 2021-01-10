@@ -41,10 +41,10 @@ big convert(string s)
     Set(ans);
     return ans;
 }
-big convert(char c[])
+big convert(char c[],int sz)
 {
     string s = "";
-    for(int i=0;i<(int)strlen(c);i++)
+    for(int i=0;i<sz;i++)
         s = s + c[i];
     return convert(s);
 }
