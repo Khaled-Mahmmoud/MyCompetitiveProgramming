@@ -1,5 +1,5 @@
 ```cpp
-<Power>
+// <Power>
 // 10^8 = (10^2)^4 = (10^4)^2
 // 10^9 = 10 * 10^8
 int power(int x, unsigned int y) 
