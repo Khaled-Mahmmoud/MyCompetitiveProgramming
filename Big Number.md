@@ -93,6 +93,26 @@ bool operator<(big a,int b)
 {
     return a<convert(b);
 }
+bool operator>(big a,int b)
+{
+    return convert(b) < a;
+}
+bool operator==(big a,int b)
+{
+    return !(a<b) && !(a>b);
+}
+bool operator!=(big a,int b)
+{
+    return !(a==b);
+}
+bool operator<=(big a,int b)
+{
+    return (a<b||a==b);
+}
+bool operator>=(big a,int b)
+{
+    return (a>b||a==b);
+}
 big max(big a,big b)
 {
     if(a>b)
