@@ -73,8 +73,10 @@ double gcd(double a, double b)
 /*
 Find GCD of rational numbers
 Input : vect[] = {2/5, 8/9, 16/18,10/27}, Output : 2/405
-**Solution** First find the GCD of all numerator of rational number then find the LCM of all the denominator of rational number then 
-divide GCD of all numerator/ LCM of all the denominator then Reduce the fraction to Lowest Fraction this the GCD of rational number’s
+**Solution** First find the GCD of all numerator of rational number
+then find the LCM of all the denominator of rational number then 
+divide GCD of all numerator/ LCM of all the denominator then Reduce 
+the fraction to Lowest Fraction this the GCD of rational number’s
 Formula:
       GCD of all the numerator of Rational number's
 GCD = -----------------------------------------------
@@ -104,8 +106,10 @@ void gcdOfRationals(vector<pair<int, int> > vect)
 /*
 Find LCM of rational numbers
 Input : vect[] = {2/7, 3/14, 5/3}, Output : 30/1
-**Solution** First find the lcm of all numerator of rational number then find the gcd of all the denominator of rational number then 
-divide lcm of all numerator/ gcd of all the denominator then Reduce the fraction to Lowest Fraction this the lcm of rational number’s.
+**Solution** First find the lcm of all numerator of rational number then 
+find the gcd of all the denominator of rational number then 
+divide lcm of all numerator/ gcd of all the denominator then Reduce 
+the fraction to Lowest Fraction this the lcm of rational number’s.
       LCM of all the numerator of Rational number's
 LCM = -----------------------------------------------
       GCD of all the denominator of Rational number's
@@ -133,8 +137,8 @@ void lcmOfRationals(vector<pair<int, int> > vect)
 } 
 /*
 Least Common Denominator (LCD)
-The lowest Common Denominator(LCD) or Least Common Denominator is the Least Common Multiple of the denominators of a set of fractions.
- 
+The lowest Common Denominator(LCD) or Least Common Denominator is 
+the Least Common Multiple of the denominators of a set of fractions.
  3   -> Numerator             2     3
 ---                          --- + ---
  4   -> Denominator           5     5
@@ -148,8 +152,8 @@ Common Denominator can be simply evaluated by multiplying the denominators. In t
  1     1     9     3
 --- + --- = --- = ---
  3     6     18    6
-But that may not always be least common denominator as in this case LCD = 6 and not 18. LCD is actually LCM of denominators.
-LCD for fractions 1/3 and 4/7 is 21
+But that may not always be least common denominator as in this case LCD = 6 and not 18. 
+LCD is actually LCM of denominators. LCD for fractions 1/3 and 4/7 is 21
 Example Problem : Given two fractions, find their sum using least common dominator.
 Input :  1/6  +  7/15    
 Output : 19/30, Explanation : LCM of 6 and 15 is 30. So, 5/30  +  14/30 = 19/30.
@@ -166,6 +170,7 @@ void printSum(int num1, int den1, int num2, int den2)
 /*
 Minimum steps to come back to starting point in a circular tour
 Consider circular track with n points marked as 1, 2, …n. A person is initially placed on any point. 
-The person moves m, slot forward (in circular way) in each step.Answer: We find GCD(n, m) and then divide n by GCD(n, m).
+The person moves m, slot forward (in circular way) in each step.
+Answer: We find GCD(n, m) and then divide n by GCD(n, m).
 ```
 
