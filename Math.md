@@ -327,7 +327,8 @@ If the square root of given number(say x^2) is prime then it must have exactly t
  
 #define numOfDigit(x) 1 + floor(log10(x))
 #define numOfBits(x)  1 + floor(log2(x)))
-// Number of Digits in !n = floor(log10(1 * 2 * 3 * 4 * .... * n)) + 1 = floor(log10(1) + log10(2) + .... + log10(n)) + 1
+// Number of Digits in !n = floor(log10(1 * 2 * 3 * 4 * 5 *  .... * n)) + 1 
+//                        = floor(log10(1) + log10(2) + ... + log10(n)) + 1
 int main()
 {
     int n;
