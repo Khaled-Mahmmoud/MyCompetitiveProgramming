@@ -1,3 +1,9 @@
+### Power
+### Matrices
+### Fibonacci
+### Generate Divisors
+### Logarithms
+### Series
 ```cpp
 // <Power>
 // 10^8 = (10^2)^4 = (10^4)^2
@@ -56,7 +62,7 @@ ll sumPower(ll a, int k)
 }
 // Time Complexity : O(log(k)) 
 
-// <Matrices>
+//<Matrices>
 #define sz(v) (int)(v.size())
 typedef vector<int> row;
 typedef vector<row> matrix;
@@ -265,7 +271,7 @@ The Leonardo numbers are a sequence of numbers given by the recurrence:
               L(n-1)+L(n-2)+1     if n > 1
 The Leonardo numbers are related to the Fibonacci numbers by below relation L(n) = 2 * F(n+1) - 1 , n >= 0
 */
-// Generate Divisors
+//<Generate Divisors>
 template<class T>
 vector<T> getDivisors(T n) 
 {
