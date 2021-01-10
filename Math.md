@@ -398,7 +398,7 @@ S*(r-1) = b*r - a
 2^(0) + 2^(1) + 2^(2) +2^(3) + ... + 2^(n-1) = 2^n - 1
 Infinite Geometric Series:  a + ar + ar^2 + ar^3 + ..... = a/(1-r). for abs(r) < 1
 */
-// Calculate the N-th digit of the number 123456789101112 where n <= 1e9
+// Calculate the N-th digit of the number 12345678910111213... where n <= 1e9
 int findNthDigit(int n)
 {
     ll len = 1;
