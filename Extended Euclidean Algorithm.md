@@ -32,20 +32,7 @@ int lcm(int a,int b)
 /*
 GCD is distributive over the LCM, and vice versa: gcd(a, lcm(b, c)) = lcm(gcd(a, b), gcd(a, c)) 
 and lcm(a, gcd(b, c)) = gcd(lcm(a, b), lcm(a, c))
-*/
-// inbuilt function for finding GCD in c++
-int main() 
-{ 
-    cout << "gcd(6, 20) = " << __gcd(6, 20) << endl; 
-}
-// inbuilt function for finding LCM in c++
-#include <boost/math/common_factor.hpp> 
-int main() 
-{ 
-    cout << "LCM(10,20) = " << boost::math::lcm(10,20) << endl; 
-    return 0; 
-} 
-/*
+
         GCD & LCM
 Find GCD and LCM between (504,540)
    504 = 2^3 * 3^2 * 5^0 * 7^1
