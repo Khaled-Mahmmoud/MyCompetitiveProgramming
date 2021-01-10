@@ -86,7 +86,8 @@ The value of x should be in {0, 1, 2, … m-1}, i.e., in the range of integer mo
 The multiplicative inverse of “a modulo m” exists if and only if a and m are relatively prime (i.e., if gcd(a, m) = 1).
 Input:  a = 3, m = 11, Output: 4
 Since (4 * 3) mod 11 = 1, 4 is modulo inverse of 3
-One might think, 15 also as a valid output as "(15 * 3) mod 11" is also 1, but 15 is not in range {0, 1, 2, ... 10}, so not valid
+One might think, 15 also as a valid output as "(15 * 3) mod 11" is also 1
+but 15 is not in range {0, 1, 2, ... 10}, so not valid
 
 Solution by Extended Euclidean (Works when m and a are coprime)
 The idea is to use Extended Euclidean algorithms that takes two integers ‘a’ and ‘b’,
@@ -134,7 +135,6 @@ void modInverse(int a, int m)
         cout << "Modular multiplicative inverse is " << res; 
     } 
 } 
-*/
 // O(log min(a,m))
 /*
 Solution by Euler's theorem
@@ -197,7 +197,8 @@ For 2, modular inverse is 9 as (2 * 9)%17 is 1
 For 3, modular inverse is 6 as (3 * 6)%17 is 1
 The problem is the following: we want to compute the modular inverse for every number in the range [1,n].
 Applying the algorithms described in the previous sections, we can obtain a solution with complexity O(nlogn).
-Here we present a better algorithm with complexity O(n). However for this specific algorithm we require that the modulus m is prime.
+Here we present a better algorithm with complexity O(n). 
+However for this specific algorithm we require that the modulus m is prime.
 We denote by inv[i] the modular inverse of i. Then for i>1 the following equation is valid:
 inv[i]= −⌊m/i⌋⋅inv[m mod i] mod m
 */
