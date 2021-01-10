@@ -164,7 +164,8 @@ for (int j = 0; j < m; j++)
      cin >> ch;
      v[j].push_back(ch);
 }
-// Fibonacci : Fn = Fn-1 + Fn-2, F0 = 0, F1 = 1
+// <Fibonacci>
+// Fn = Fn-1 + Fn-2, F0 = 0, F1 = 1
 int fib(int n) 
 { 
   int a = 0, b = 1, c, i; 
