@@ -70,11 +70,8 @@ int main()
     return 0;
 }
 /*
-GCD(f(x,y),f(x,z)) = f(x,GCD(y,z))   where f is fuction
-GCD(f(y),f(z)) = f(GCD(y,z))
-         
-GCD(LCM(x,y),LCM(x,z)) = LCM(x,GCD(y,z))   
-GCD(Fibonacci(x), Fibonacci(z)) = Fibonacci(GCD(x, z))
+GCD is distributive over the LCM, and vice versa: gcd(a, lcm(b, c)) = lcm(gcd(a, b), gcd(a, c)) 
+and lcm(a, gcd(b, c)) = gcd(lcm(a, b), lcm(a, c))
 */
 // inbuilt function for finding GCD in c++
 int main() 
