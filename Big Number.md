@@ -1,198 +1,294 @@
 ```cpp
-// Sum of two large numbers
-string findSum(string str1, string str2) 
-{    
-    if (str1.length() > str2.length()) 
-        swap(str1, str2);
-        
-    int n1 = str1.length();
-    int n2 = str2.length();
-        
-    string str = ""; 
-    reverse(str1.begin(), str1.end()); 
-    reverse(str2.begin(), str2.end()); 
-  
-    int carry = 0; 
-    for (int i=0; i<n1; i++) 
-    { 
-        int sum = ((str1[i]-'0')+(str2[i]-'0')+carry); 
-        str.push_back(sum%10 + '0'); 
-        carry = sum/10; 
-    } 
-    for (int i=n1; i<n2; i++) 
-    { 
-        int sum = ((str2[i]-'0')+carry); 
-        str.push_back(sum%10 + '0'); 
-        carry = sum/10; 
-    } 
-    if (carry) 
-        str.push_back(carry+'0'); 
-    reverse(str.begin(), str.end()); 
-  
-    return str; 
-} 
-// Time Complexity : O(n1 + n2) 
-
-// Difference of two large numbers
-bool islarger(string str1,string str2)
+#define sz(v) (int)v.size()
+const int base = 1e9;
+typedef vector<int> big;
+void Set(big &a)
 {
-    int n1=str1.length();
-    int n2=str2.length();
-        
-    // if str1 = 003234 it will be 3234
-    int i=0;
-    while(i<n1-1&&str1[i]=='0')i++;
-    a=a.substr(i);
-        
-    // if str2 = 000 it will be 0
-    i=0;
-    while(i<n2-1&&str2[i]=='0')i++;
-    b=b.substr(i);
-        
-    // resize length of a and b
-    n1=a.length();
-    n2=b.length();
-        
-    if(n1<n2)
-        return false;
-    if(n1>n2)
-        return true;
-    for(int i=0;i<n1;i++)
-    if(str1[i]<str2[i])
-        return false;
-    else if(str1[i]>str2[i])
-        return true;
+    while(a.size()>1&&a.back()==0)
+        a.pop_back();
+}
+void print(big a)
+{
+    Set(a);
+    if(a.empty())
+        cout<<0;
+    else
+    {
+        for(int i=sz(a)-1;i>=0;i--)
+            cout<<a[i]<<' ';
+    }
+}
+big convert(string s)
+{
+    big ans;
+    if(s.empty())
+    {
+        ans.push_back(0);
+        return ans;
+    }
+    if(s[0]=='-')
+        return ans;
+    while(s.size()%9)
+        s = '0' + s;
+    for(int i=0;i<sz(s);i+=9)
+    {
+        int v = 0;
+        for(int j=i;j<i+9;j++)
+            v = v*10 + (s[j]-'0');
+        ans.insert(ans.begin(),v);
+    }
+    Set(ans);
+    return ans;
+}
+big convert(char c[])
+{
+    string s = "";
+    for(int i=0;i<(int)strlen(c);i++)
+        s = s + c[i];
+    return convert(s);
+}
+big convert(ll x)
+{
+    string s = "";
+    while(x>0)
+        s = char(x%10+'0') + s, x/=10;
+    return convert(s);
+}
+big convert(int x)
+{
+    return convert((ll)x);
+}
+bool operator<(big a,big b)
+{
+    Set(a);Set(b);
+    if(sz(a)!=sz(b))
+        return sz(a) < sz(b);
+    for(int i=sz(a)-1;i>=0;i--)
+        if(a[i]!=b[i])
+        return a[i] < b[i];
     return false;
-    
 }
-string findDiff(string str1,string str2)
+bool operator>(big a,big b)
 {
-    if(islarger(str1,str2))
-        swap(str1,str2);
-        
-    int n1=str1.length();
-    int n2=str2.length();
-    
-    string str;
-    int carry = 0;
-    
-    reverse(str1.begin(),str1.end());
-    reverse(str2.begin(),str2.end());
-    
-    for(int i=0;i<n1;i++)
-    {
-        int sub = (str2[i]-'0') - (str1[i]-'0') - carry;
-        if(sub<0)
-        {
-            sub+=10;
-            carry=1;
-        }
-        else 
-            carry=0;
-        str.push_back(sub+'0');
-    }
-    for(int i=n1;i<n2;i++)
-    {
-        int sub = (str2[i]-'0') - carry;
-        if(sub<0)
-        {
-            sub+=10;
-            carry=1;
-        }
-        else
-            carry=0;
-        str.push_back(sub+'0');
-    }
-    reverse(str.begin(),str.end());
-    return str;
-
+    return b < a;
 }
-// Time complexity : O(n1 + n2)
-
-// Multiply Large Numbers represented as Strings
-string multiply(string str1, string str2) 
-{ 
-    if(str1.at(0) == '-' && str2.at(0)!='-') 
-    { 
-         str1 = str1.substr(1); 
-         cout<<"-";
-    } 
-    else if(str1.at(0) != '-' && str2.at(0) == '-') 
-    { 
-         str2 = str2.substr(1); 
-         cout<<"-";
-    } 
-    else if(str1.at(0) == '-' && str2.at(0) == '-') 
-    { 
-         str1 = str1.substr(1); 
-         str2 = str2.substr(1); 
-    } 
-    int n1 = str1.length(); 
-    int n2 = str2.length(); 
-        
-    if (n1 == 0 || n2 == 0) 
-    return "0"; 
-        
-    vector<int> result(n1 +n2, 0); 
-        
-    int i_n1 = 0;  
-    int i_n2 = 0;  
-        
-    for (int i=n1-1; i>=0; i--) 
-    { 
-        int carry = 0; 
-        int m1 = str1[i] - '0'; 
-        i_n2 = 0;       
-        for (int j=n2-1; j>=0; j--) 
-        { 
-            int m2 = str2[j] - '0'; 
-            int sum = m1*m2 + result[i_n1 + i_n2] + carry; 
-            carry = sum/10; 
-            result[i_n1 + i_n2] = sum % 10; 
-            i_n2++; 
-        } 
-        if (carry > 0) 
-            result[i_n1 + i_n2] += carry; 
-        i_n1++; 
-    } 
-    int i = result.size() - 1; 
-    while (i>=0 && result[i] == 0) 
-    i--; 
-    if (i == -1) 
-    return "0"; 
-    
-    string str = ""; 
-    while (i >= 0) 
-        str.push_back(result[i--]+'0'); 
-  
-    return str; 
-} 
-// Time Complexity: O(n1*n2)
-
-// Divide large number represented as string
-string longDivision(string number, int divisor) 
-{ 
-    string ans; 
-    int idx = 0; 
-    int temp = (number[idx] - '0'); 
-    while (idx<number.size() && temp < divisor) 
-       temp = temp * 10 + (number[++idx] - '0'); 
-    while(idx < number.size()) 
-    { 
-        ans += ((temp / divisor) + '0'); 
-        temp = (temp % divisor) * 10 + (number[++idx] - '0'); 
-    } 
-    if (ans.length() == 0) 
-        return "0"; 
-    return ans; 
-} 
-
-// How to compute mod of a big number?
-int mod(string num, int a) 
-{ 
-    int res = 0; 
-    for (int i = 0; i < num.length(); i++) 
-         res = (res*10 + (num[i] - '0')) %a; 
-    return res; 
-} 
+bool operator==(big a,big b)
+{
+    return !(a<b) && !(b<a);
+}
+bool operator<=(big a,big b)
+{
+    return (a<b||a==b);
+}
+bool operator>=(big a,big b)
+{
+    return (a>b||a==b);
+}
+bool operator<(big a,int b)
+{
+    return a<convert(b);
+}
+big max(big a,big b)
+{
+    if(a>b)
+        return a;
+    return b;
+}
+big min(big a,big b)
+{
+    if(a<b)
+        return a;
+    return b;
+}
+big operator+(big a,big b)
+{
+    Set(a);Set(b);
+    big ans;
+    int carry = 0;
+    for(int i=0;i<max(sz(a),sz(b));i++)
+    {
+        if(i<sz(a))
+            carry += a[i];
+        if(i<sz(b))
+            carry += b[i];
+        ans.push_back(carry%base);
+        carry /= base;
+    }
+    if(carry)
+        ans.push_back(carry);
+    Set(ans);
+    return ans;
+}
+big operator+(big a,int b)
+{
+    return a + convert(b);
+}
+big operator++(big &a)
+{
+    a = a + 1;
+    return a;
+}
+void operator+=(big &a,big b)
+{
+    a = a + b;
+}
+void operator+=(big &a,int b)
+{
+    a = a + convert(b);
+}
+big operator-(big a,big b)
+{
+    Set(a);Set(b);
+    big ans;
+    int carry = 0;
+    for(int i=0;i<sz(a);i++)
+    {
+        carry += a[i] - (i<sz(b)?b[i]:0);
+        if(carry<0)
+            ans.push_back(carry+base),carry = -1;
+        else
+            ans.push_back(carry),carry = 0;
+    }
+    Set(ans);
+    return ans;
+}
+big operator-(big a,int b)
+{
+    return a - convert(b);
+}
+void operator--(big &a)
+{
+    a = a - 1;
+}
+void operator-=(big &a,big b)
+{
+    a = a - b;
+}
+void operator-=(big &a,int b)
+{
+    a = a - convert(b);
+}
+big operator*(big a,big b)
+{
+    Set(a);Set(b);
+    big ans;
+    ans.assign(sz(a)+sz(b),0);
+    for(int i=0;i<sz(a);i++)
+    {
+        ll carry = 0;
+        for(int j=0;j<sz(b)||carry>0;j++)
+        {
+            ll s = ans[i+j] + carry + (ll)a[i]*(j<sz(b)?b[j]:0);
+            ans[i+j] = s%base;
+            carry = s/base;
+        }
+    }
+    Set(ans);
+    return ans;
+}
+big operator*(big a,int b)
+{
+    return a * convert(b);
+}
+void operator*=(big &a,big b)
+{
+    a = a * b;
+}
+void operator*=(big &a,int b)
+{
+    a = a * convert(b);
+}
+big operator/(big a,big b)
+{
+    Set(a);Set(b);
+    if(b==convert(0))
+        return convert("-1");
+    big ans,cur;
+    for(int i=sz(a)-1;i>=0;i--)
+    {
+        cur.insert(cur.begin(),a[i]);
+        int x = 0,l = 0,r = base;
+        while(l<=r)
+        {
+            int mid = (l+r)>>1;
+            if(b*convert(mid)>cur)
+                r = mid - 1,x = mid;
+             else
+                l = mid+1;
+        }
+        cur = cur - convert(x-1) * b;
+        ans.insert(ans.begin(),x - 1);
+    }
+    Set(ans);
+    return ans;
+}
+big operator/(big a,int b)
+{
+    return a / convert(b);
+}
+void operator/=(big &a,big b)
+{
+    a = a / b;
+}
+void operator/=(big &a,int b)
+{
+    a = a / convert(b);
+}
+big operator%(big a,big b)
+{
+    Set(a);Set(b);
+    if(b==convert(0))
+        return convert("-1");
+    big ans;
+    for(int i=sz(a)-1;i>=0;i--)
+    {
+        ans.insert(ans.begin(),a[i]);
+        int x = 0, l = 0,r = base;
+        while(l<=r)
+        {
+            int mid = (l+r)>>1;
+            if(b*convert(mid)>ans)
+                r = mid-1, x = mid;
+            else
+                l = mid+1;
+        }
+        ans = ans - convert(x-1)*b;
+    }
+    Set(ans);
+    return ans;
+}
+big operator%(big a,int b)
+{
+    return a % convert(b);
+}
+void operator%=(big &a,big b)
+{
+    a = a / b;
+}
+void operator%=(big &a,int b)
+{
+    a = a % convert(b);
+}
+big sqrt(big a)
+{
+    big x0 = a, x1 = (a+1)/2;
+    while(x1<x0)
+    {
+        x0 = x1;
+        x1 = (x1+a/x1)/2;
+    }
+    return x0;
+}
+big gcd(big a,big b)
+{
+    Set(a);Set(b);
+    while(b>convert(0))
+    {
+        big r = a%b;
+        a = b;
+        b = r;
+    }
+    Set(a);
+    return a;
+}
 ```
