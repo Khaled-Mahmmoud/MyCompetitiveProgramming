@@ -14,8 +14,9 @@ void print(big a)
         cout<<0;
     else
     {
-        for(int i=sz(a)-1;i>=0;i--)
-            cout<<a[i]<<' ';
+        cout<<a[sz(a)-1];
+        for(int i=sz(a)-2;i>=0;i--)
+            cout<<setw(9)<<setfill('0')<<a[i];
     }
 }
 big convert(string s)
@@ -278,17 +279,5 @@ big sqrt(big a)
         x1 = (x1+a/x1)/2;
     }
     return x0;
-}
-big gcd(big a,big b)
-{
-    Set(a);Set(b);
-    while(b>convert(0))
-    {
-        big r = a%b;
-        a = b;
-        b = r;
-    }
-    Set(a);
-    return a;
 }
 ```
