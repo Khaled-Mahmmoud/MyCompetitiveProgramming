@@ -228,28 +228,4 @@ int main()
     return 0;
 }
 // O(2^n)
-
-int n;
-vector<int>v,p;
-void gen()
-{
-    if(v.size()==n)
-    {
-        for(int i=0;i<v.size();i++)
-            cout<<v[i]<<' ';
-        cout<<'\n';
-        return;
-    }
-    for(int i=1;i<=n;i++)
-    {
-        if(p[i])
-            continue;
-        p[i] = 1;
-        v.push_back(i);
-        gen();
-        p[i] = 0;
-        v.pop_back();
-    }
-}
-// O(!n)
 ```
