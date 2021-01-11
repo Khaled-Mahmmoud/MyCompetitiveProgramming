@@ -1,14 +1,10 @@
-# Segment Tree
-
-
-
-Given an array A of size N and some queries. There are two types of queries:
-
-Update : Given Idx and Val, update array element A[Idx] as A[Idx] = A[Idx] + Val.
-
-Query : Given L and R return the value of `A[L]+A[L+1]+A[L+2]+....+A[R-1]+A[R]` such that 0 <= L <= R <= N-1
-
 ```cpp
+/*
+<Segment Tree>
+Given an array A of size N and some queries. There are two types of queries:
+Update : Given Idx and Val, update array element A[Idx] as A[Idx] = A[Idx] + Val.
+Query : Given L and R return the value of `A[L]+A[L+1]+A[L+2]+....+A[R-1]+A[R]` such that 0 <= L <= R <= N-1
+*/
 #define N 100005  
 int a[N];	
 int tree[2 * N - 1];   // please note that number of nodes = 2*n-1	
@@ -31,7 +27,6 @@ void build(int node, int start, int end)
         tree[node] = tree[2*node] + tree[2*node+1]; // Internal node will have the sum of both of its children
     }
 }
-
 // Complexity : O(log n) 
 void update(int node, int start, int end, int idx, int val)
 {
@@ -105,35 +100,24 @@ int main()
     }	
     return 0;	
 }
-```
---------------------------------------------------------------------------------------------------------------------------------------------------------------
- 
+/*
 We we have a coordinate space on x-axis from [0 - N].
-
 we are given set of numbers (order is not issue)	e.g.: 20 7 4 9 12.
-
 Queries are as following.
  
-a) **HOW many numbers are in given interval**?
- 				
+HOW many numbers are in given interval?			
 E.g In interval [1-3]  = 0	-> Notice, our first element is 4
- 				
-
 E.g In interval [6-15] = 3	-> 7, 9, 12
 
-b) **Get Kth item in sorted list**
- 
+Get Kth item in sorted list
  E.g. get(2) = 7		-> in sorted list 4 7 9 12 20
 			
-c) **Remove kth item in sorted list**
- 				
+Remove kth item in sorted list
 E.g. remove(5) 		-> 4 7 9 12
 		
-b) **Insert new element: so we update our list**
-				
+Insert new element: so we update our list
 E.g. insert(16)		-> 4 7 9 12 16 20
-
-```cpp
+*/
 const int N = 2000006;
 int interval[2*N-1];	
 int S = 0, E = N;
@@ -195,21 +179,14 @@ void displayElements(int s=S, int e=E, int p=1)
             cout<<s<<" ";
     }
 }
-```
+
 ### Lazy Propagation
 
-All problems in the above sections discussed modification queries that only effected a single element of the array each. However the Segment Tree allows applying modification queries to an entire segment of contiguous elements, and perform the query in the same time O(logn).
+All problems in the above sections discussed modification queries that only effected a single element of the array each.
+However the Segment Tree allows applying modification queries to an entire segment of contiguous elements, 
+and perform the query in the same time O(logn).
 
-
-[Problem Link](https://codeforces.com/contest/620/problem/E)
-[Solution Link](https://codeforces.com/contest/620/submission/100289526)
-
-###  A Heap of Heaps
-
-[Problem Link](https://codeforces.com/contest/538/problem/F)
-[Solution Link](https://codeforces.com/contest/538/submission/100404408)
-
-### AMazing
-
-[Problem Link](https://codeforces.com/group/BDIXyZZHhT/contest/205914/problem/F)
-[Solution Link](https://codeforces.com/group/BDIXyZZHhT/contest/205914/submission/100484268)
+// https://codeforces.com/contest/620/submission/100289526
+// https://codeforces.com/contest/538/submission/100404408
+// https://codeforces.com/group/BDIXyZZHhT/contest/205914/submission/100484268
+```
