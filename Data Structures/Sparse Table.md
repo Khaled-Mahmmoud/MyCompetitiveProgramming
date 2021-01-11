@@ -42,6 +42,4 @@ int get_min(int l, int r)
     return min(mn[l][j], mn[r - (1 << j) + 1][j]);
 }
 // O(1)
-
-
-
+```
