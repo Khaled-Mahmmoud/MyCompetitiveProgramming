@@ -1,5 +1,6 @@
 ```cpp
 /*
+Probability
 A probability is a real number between 0 and 1 that indicates how probable an event is. 
 If an event is certain to happen, its probability is 1, and if an event is impossible, its probability is 0. 
 The probability of an event is denoted P(···) where the three dots describe the event.
