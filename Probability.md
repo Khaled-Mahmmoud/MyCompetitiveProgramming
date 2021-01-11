@@ -29,7 +29,7 @@ For example, when throwing a dice, p(x) = 1/6 for each outcome x,
 so the probability of the event ”the result is even” is p(2)+ p(4)+ p(6) = 1/2.
 Probability of an event = (number of outcomes of an event / total number of outcomes)
 Since the events in probability are sets, we can manipulate them using standard set operations:
-• The complement A¯ means ”A does not happen”. For example, when throwing a dice, the complement of A = {2,4,6} is A¯ = {1,3,5}.
+• The complement A¯ means ”A does not happen”, when throwing a dice, the complement of A = {2,4,6} is A¯ = {1,3,5}.
 • The union A ∪ B means ”A or B happen”, the union of A = {2,5} and B = {4,5,6} is A∪B = {2,4,5,6}.
 • The intersection A ∩ B means ”A and B happen”, the intersection of A = {2,5} and B = {4,5,6} is A∩B = {5}.
 
