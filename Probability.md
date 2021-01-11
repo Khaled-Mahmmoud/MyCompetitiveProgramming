@@ -106,7 +106,31 @@ In this case, the expected number of empty boxes is (0+0+1+1) / 4 = 1/2
 In the general case, the probability that a single box is empty is ((n-1) / n)^n
 Hence, using linearity, the expected number of empty boxes is n * ((n-1) / n)^n
 
+Distributions
+The distribution of a random variable X shows the probability of each value that X may have.
+The distribution consists of values P(X = x). For example, when throwing two dice, the distribution for their sum is:
+x          2   3    4    5    6    7    8    9    10   11  12
+P(X = x) 1/36 2/36 3/36 4/36 5/36 6/36 5/36 4/36 3/36 2/36 1/36
 
+Uniform Distribution
+the random variable X has n possible values a,a+1,...,b and the probability of each value is 1/n. 
+For example, when throwing a dice, a = 1, b = 6 and P(X = x) = 1/6 for each value x.
+The expected value for X in a uniform distribution is E[X] = (a + b)/2
+
+Binomial Distribution
+n attempts are made and the probability that a
+single attempt succeeds is p. The random variable X counts the number of successful attempts,
+and the probability for a value x is P(X = x) = p^x * (1 − p)^(n−x) * ncr(n,x) where p^x and (1 − p)^n−x 
+correspond to successful and unsuccessful attemps, and ncr(n,x) is the number of ways we can choose the order of the attempts.
+For example, when throwing a dice ten times, the probability of throwing a six exactly three times is (1/6)^3 * (5/6)^7 * ncr(10,3)
+The expected value for X in a binomial distribution is E[X] = pn
+
+Geometric Distribution
+the probability that an attempt succeeds is p, and we continue until the first success happens. 
+The random variable X counts thenumber of attempts needed, and the probability for a value x is P(X = x) = (1 − p)^x−1 p,
+where (1− p)^x−1 corresponds to unsuccessful attemps and p corresponds to the first successful attempt.
+For example, if we throw a dice until we throw a six, the probability that the number of throws is exactly 4 is (5/6)^3 * 1/6.
+The expected value for X in a geometric distribution is E[X] = 1/p
 
 https://codeforces.com/contest/312/problem/B
 SmallR, who shoots first can win in the following cases:
