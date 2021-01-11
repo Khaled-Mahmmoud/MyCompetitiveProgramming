@@ -127,8 +127,8 @@ The expected value for X in a binomial distribution is E[X] = pn
 
 Geometric Distribution
 the probability that an attempt succeeds is p, and we continue until the first success happens. 
-The random variable X counts the number of attempts needed, and the probability for a value x is P(X = x) = (1 − p)^x−1 p,
-where (1− p)^x−1 corresponds to unsuccessful attemps and p corresponds to the first successful attempt.
+The random variable X counts the number of attempts needed, and the probability for a value x is P(X = x) = (1 − p)^(x−1) p,
+where (1 − p)^x−1 corresponds to unsuccessful attemps and p corresponds to the first successful attempt.
 For example, if we throw a dice until we throw a six, the probability that the number of throws is exactly 4 is (5/6)^3 * 1/6.
 The expected value for X in a geometric distribution is E[X] = 1/p
 
