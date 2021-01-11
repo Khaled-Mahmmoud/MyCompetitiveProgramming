@@ -196,6 +196,8 @@ int maxSubArraySum(int a[], int size)
     cout << "Starting index "<< sat <<"  :   Ending index "<< en << endl; 
 }
 // Generating Subsets
+// the subsets of {1,2,3} are ;φ, {1}, {2}, {3}, {1,2}, {1,3}, {2,3} and {1,2,3}.
+// Method 1
 int n;
 vector<int>v,sub;
 vector<vector<int>>res;
@@ -227,5 +229,17 @@ int main()
     }
     return 0;
 }
-// O(2^n)
+// O(n * 2^n)
+
+// Method 2
+for(int b=0;b<(1<<n);b++)
+{
+    vector<int>v;
+    for(int i=0;i<n;i++)
+    {
+        if (b&(1<<i))
+            v.push_back(i+1);
+    }
+}
+// O(n * 2^n)
 ```
