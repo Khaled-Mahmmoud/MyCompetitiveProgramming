@@ -32,6 +32,23 @@ and 3 of them have the same value as the first card. In a similar way.
 the third step succeeds with probability 2/50.
 The probability that the entire process succeeds is 1 * (3/51) * (2/50) = 1 / 425
 
+Events
+An event in probability can be represented as a set A ⊂ X,
+where X contains all possible outcomes and A is a subset of outcomes.
+For example, when drawing a dice, the outcomes are X = {1,2,3,4,5,6}.
+Now, for example, the event ”the result is even” corresponds to the set A = {2,4,6}.
+Each outcome x is assigned a probability p(x). Furthermore, the probability
+P(A) of an event that corresponds to a set A can be calculated as a sum of
+probabilities of outcomes using the formula P(A) = sum(x∈A) p(x).
+For example, when throwing a dice, p(x) = 1/6 for each outcome x, 
+so the probability of the event ”the result is even” is p(2)+ p(4)+ p(6) = 1/2.
+
+Since the events in probability are sets, we can manipulate them using standard set operations:
+• The complement A¯ means ”A does not happen”. For example, when
+throwing a dice, the complement of A = {2,4,6} is A¯ = {1,3,5}.
+• The union A ∪ B means ”A or B happen”, the union of A = {2,5} and B = {4,5,6} is A∪B = {2,4,5,6}.
+• The intersection A ∩ B means ”A and B happen”, the intersection of A = {2,5} and B = {4,5,6} is A∩B = {5}.
+
 https://codeforces.com/contest/312/problem/B
 SmallR, who shoots first can win in the following cases:
 1) He shoots the target in the first shot. OR
