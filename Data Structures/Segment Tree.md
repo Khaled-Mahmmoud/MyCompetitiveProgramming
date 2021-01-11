@@ -179,13 +179,11 @@ void displayElements(int s=S, int e=E, int p=1)
             cout<<s<<" ";
     }
 }
-
-### Lazy Propagation
-
+/*
+Lazy Propagation
 All problems in the above sections discussed modification queries that only effected a single element of the array each.
 However the Segment Tree allows applying modification queries to an entire segment of contiguous elements, 
 and perform the query in the same time O(logn).
-
 // https://codeforces.com/contest/620/submission/100289526
 // https://codeforces.com/contest/538/submission/100404408
 // https://codeforces.com/group/BDIXyZZHhT/contest/205914/submission/100484268
