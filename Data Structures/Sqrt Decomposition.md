@@ -42,7 +42,7 @@ int main()
 // O(q * sqrt(n))
 /*
 <Mo's algorithm>
-A similar idea, based on sqrt decomposition, can be used to answer range queries (Q) **offline** in O((N+Q) * sqrt(N)).
+A similar idea, based on sqrt decomposition, can be used to answer range queries (Q) offline in O((N+Q) * sqrt(N)).
 */
 int n, t,a[200010],Z,freq[1000010];
 ll res[200010];
