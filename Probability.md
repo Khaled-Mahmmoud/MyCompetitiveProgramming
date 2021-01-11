@@ -40,6 +40,7 @@ For tossing two coins, the corresponding sample space would be {(head,head), (he
 If the sample space is unordered, it becomes {{head,head}, {head,tail}, {tail,tail}}.
 
 Events
+an event is a subset of the sample space.
 An event in probability can be represented as a set A ⊂ X,
 where X contains all possible outcomes and A is a subset of outcomes.
 For example, when drawing a dice, the outcomes are X = {1,2,3,4,5,6}.
