@@ -56,6 +56,13 @@ For example, the probability of getting at least one six when throwing a dice te
 Here 5/6 is the probability that the outcome of a single throw is not six, and (5/6)^10 is the probability
 that none of the ten throws is a six. The complement of this is the answer to the problem
 
+Union
+The probability of the union A ∪B is calculated using the formula P(A ∪ B) = P(A)+ P(B)− P(A ∩ B)
+For example, when throwing a dice, the union of the events A = ”the result is even”
+and B = ”the result is less than 4” is A ∪ B = ”the result is even or less than 4”,
+and its probability is P(A ∪ B) = P(A)+ P(B)− P(A ∩ B) = 1/2+1/2−1/6 = 5/6.
+If the events A and B are disjoint, i.e., A ∩ B is empty, the probability of the event A ∪B is simply P(A ∪ B) = P(A)+ P(B).
+
 https://codeforces.com/contest/312/problem/B
 SmallR, who shoots first can win in the following cases:
 1) He shoots the target in the first shot. OR
