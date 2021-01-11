@@ -224,7 +224,7 @@ Idx: 4		2 0 1
 Idx: 5		2 1 0		-> Reversed
 */
 // Generating permutations
-Method 1: Recursion
+// Method 1: Recursion
 int n;
 vector<int>v,p;
 void gen()
