@@ -70,6 +70,16 @@ we only consider the outcomes that also belong to B.
 Using the above sets, P(A|B) = 1/3, because the outcomes of B are {1,2,3}, and one of them is even.
 This is the probability of an even result if we know that the result is between 1...3.
 
+Intersection
+Using conditional probability, the probability of the intersection A ∩ B can be
+calculated using the formula P(A ∩ B) = P(A)P(B|A).
+Events A and B are independent if P(A|B) = P(A) and P(B|A) = P(B),
+which means that the fact that B happens does not change the probability of A,
+and vice versa. In this case, the probability of the intersection is P(A ∩ B) = P(A)P(B).
+For example, when drawing a card from a deck, the events A = ”the suit is clubs” and
+B = ”the value is four” are independent. Hence the event A ∩ B = ”the card is the four of clubs”
+happens with probability P(A ∩ B) = P(A)P(B) = 1/4·1/13 = 1/52
+
 https://codeforces.com/contest/312/problem/B
 SmallR, who shoots first can win in the following cases:
 1) He shoots the target in the first shot. OR
