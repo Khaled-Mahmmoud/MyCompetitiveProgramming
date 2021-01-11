@@ -397,7 +397,7 @@ If the square root of given number(say x^2) is prime then it must have exactly t
  Then n^z        = p1^az  *	p2^bz  * p3^cz
  Divisors of n   = (a+1)  * (b+1)  * (c+1)
  Divisors of n^z = (az+1) * (bz+1) * (cz+1)
- 
+ */
  // prime numbers : numbers which are only divisible by themselves and one
 bool isprime(int n)
 {
