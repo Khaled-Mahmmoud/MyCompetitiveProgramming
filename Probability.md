@@ -45,8 +45,8 @@ An event in probability can be represented as a set A ⊂ X,
 where X contains all possible outcomes and A is a subset of outcomes.
 For example, when drawing a dice, the outcomes are X = {1,2,3,4,5,6}.
 Now, for example, the event ”the result is even” corresponds to the set A = {2,4,6}.
-Each outcome x is assigned a probability p(x). Furthermore, the probability
-P(A) of an event that corresponds to a set A can be calculated as a sum of
+Each outcome x is assigned a probability p(x). 
+the probability P(A) of an event that corresponds to a set A can be calculated as a sum of
 probabilities of outcomes using the formula P(A) = sum(x∈A) p(x).
 For example, when throwing a dice, p(x) = 1/6 for each outcome x, 
 so the probability of the event ”the result is even” is p(2)+ p(4)+ p(6) = 1/2.
