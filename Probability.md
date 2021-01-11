@@ -163,8 +163,8 @@ In the above scenario, the matrix is
 | 0 1/2  0  1/2 0 |
 | 0  0  1/2  0  1 |
 | 0  0   0  1/2 0 |
-When we multiply a probability distribution by this matrix, we get the new
-distribution after moving one step. For example, we can move from the distribution [1,0,0,0,0] to the distribution [0,1,0,0,0] as follows:
+When we multiply a probability distribution by this matrix, we get the new distribution after moving one step. 
+For example, we can move from the distribution [1,0,0,0,0] to the distribution [0,1,0,0,0] as follows:
 | 0 1/2  0   0  0 | |1|   |0|
 | 1  0  1/2  0  0 | |0|   |1|
 | 0 1/2  0  1/2 0 |.|0| = |0|
