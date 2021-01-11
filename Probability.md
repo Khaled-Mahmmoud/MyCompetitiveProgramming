@@ -132,6 +132,46 @@ where (1 − p)^x−1 corresponds to unsuccessful attemps and p corresponds to t
 For example, if we throw a dice until we throw a six, the probability that the number of throws is exactly 4 is (5/6)^3 * 1/6.
 The expected value for X in a geometric distribution is E[X] = 1/p
 
+Markov chains
+A Markov chain is a random process that consists of states and transitions between them.
+For each state, we know the probabilities for moving to other states. 
+A Markov chain can be represented as a graph whose nodes are states and edges are transitions.
+As an example, consider a problem where we are in floor 1 in an n floor building. 
+At each step, we randomly walk either one floor up or one floor down, except that we always walk one floor up from floor 1 
+and one floor down from floor n. What is the probability of being in floor m after k steps?
+In this problem, each floor of the building corresponds to a state in a Markov chain. 
+For example, if n = 5, the graph is as follows:
+
+    1     1/2    1/2    1/2
+  ---->   ---->  ---->  ---->
+(1)    (2)    (3)    (4)    (5)  
+  <----  <----  <----  <-----
+   1/2    1/2    1/2     1
+
+The probability distribution of a Markov chain is a vector [p1, p2,..., pn], 
+where pk is the probability that the current state is k. The formula p1 + p2 +···+ pn = 1 always holds.
+In the above scenario, the initial distribution is [1,0,0,0,0], because we always begin in floor 1. 
+The next distribution is [0,1,0,0,0], because we can only move from floor 1 to floor 2. 
+After this, we can either move one floor up or one floor down, so the next distribution is [1/2,0,1/2,0,0], and so on.
+An efficient way to simulate the walk in a Markov chain is to use dynamic programming. 
+The idea is to maintain the probability distribution, and at each step go through all possibilities how we can move. 
+Using this method, we can simulate a walk of m steps in O(n^2m) time.
+The transitions of a Markov chain can also be represented as a matrix that updates the probability distribution.
+In the above scenario, the matrix is
+| 0 1/2  0   0  0 |
+| 1  0  1/2  0  0 |
+| 0 1/2  0  1/2 0 |
+| 0  0  1/2  0  1 |
+| 0  0   0  1/2 0 |
+When we multiply a probability distribution by this matrix, we get the new
+distribution after moving one step. For example, we can move from the distribution [1,0,0,0,0] to the distribution [0,1,0,0,0] as follows:
+| 0 1/2  0   0  0 | |1|   |0|
+| 1  0  1/2  0  0 | |0|   |1|
+| 0 1/2  0  1/2 0 |.|0| = |0|
+| 0  0  1/2  0  1 | |0|   |0|
+| 0  0   0  1/2 0 | |0|   |0|
+By calculating matrix powers efficiently, we can calculate the distribution after m steps in O(n^3 log m) time.
+
 https://codeforces.com/contest/312/problem/B
 SmallR, who shoots first can win in the following cases:
 1) He shoots the target in the first shot. OR
