@@ -8,7 +8,8 @@
 - Integer = Sum of Powers of 2
 - Accumulative Sum = Sum of Sub sums
 - Recall: 147 = 128 + 16 + 2 + 1
-- Think in accumulative sum (1 to 147) = Sum of last 1 number + Sum of next 2 numbers + Sum of next 16 numbers + Sum of next 128 numbers
+- Think in accumulative sum (1 to 147) = Sum of last 1 number + Sum of next 2 numbers + 
+Sum of next 16 numbers + Sum of next 128 numbers
 - Sum(1,147) = Sum(147,147) + Sum(146,145) + Sum(144,129) + Sum(128,1)
 - 147 ⇒ positions {147, 146, 144, 128} with ranges {1, 2, 16,128}
 - To get starting positions fast? Remove last bit
