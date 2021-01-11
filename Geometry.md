@@ -220,9 +220,14 @@ bool isInside(point a,point b,point c,point x)
 
 // <Circles>
 /*
+Diameter = 2 * Radius
+Area of circle = PI * r^2
+Circumference of a circle = 2 * PI * r
+Length of an Arc = (n/360) * 2 * PI * r
+Sector area = (n/360) * PI * r^2
 (x-h)^2 + (y-k)^2 = r^2 where (h,k) is center, (x,y) any point in circle
 */
-bool is_insideCircle(point center, point b, double r)
+bool is_inside_circle(point center, point b, double r)
 {
     double d1 = (b.X - center.X);
     double d2 = (b.Y - center.Y);
