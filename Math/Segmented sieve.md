@@ -1,22 +1,20 @@
-### Segmented sieve
-
+```cpp
+/*
+<Segmented sieve>
 This page contains a step by step explanation of simple but fast C++ implementation of segmented sieve 
 of Eratosthenes that generates the primes below n using O(n log log n) operations and O(sqrt(n)) space
 It runs significantly faster than  a traditional sieve of Eratosthenes implementation due to its more 
 efficient CPU cache usage 
-
 Problems with Simple Sieve:
 The Sieve of Eratosthenes looks good, but consider the situation
 when n is large the Simple Sieve faces following issues
 An array of size Θ(n) may not fit in memory
-
 The simple Sieve is not cache friendly even for slightly bigger n
 The algorithm traverses the array without locality of reference Segmented Sieve
 The idea of segmented sieve is to divide the range [0..n-1] in different segments 
 and compute primes in all segments one by one
 This algorithm first uses Simple Sieve to find primes smaller than or equal to √(n)
-
-```cpp
+*/
 void simpleSieve(int limit, vector<int> &prime)
 {
 	bool mark[limit+1];
