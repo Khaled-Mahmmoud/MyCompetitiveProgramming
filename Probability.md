@@ -49,6 +49,13 @@ throwing a dice, the complement of A = {2,4,6} is A¯ = {1,3,5}.
 • The union A ∪ B means ”A or B happen”, the union of A = {2,5} and B = {4,5,6} is A∪B = {2,4,5,6}.
 • The intersection A ∩ B means ”A and B happen”, the intersection of A = {2,5} and B = {4,5,6} is A∩B = {5}.
 
+Complement
+The probability of the complement A¯ is calculated using the formula P(A¯) = 1 − P(A).
+Sometimes, we can solve a problem easily using complements by solving the opposite problem.
+For example, the probability of getting at least one six when throwing a dice ten times is 1−(5/6)^10
+Here 5/6 is the probability that the outcome of a single throw is not six, and (5/6)^10 is the probability
+that none of the ten throws is a six. The complement of this is the answer to the problem
+
 https://codeforces.com/contest/312/problem/B
 SmallR, who shoots first can win in the following cases:
 1) He shoots the target in the first shot. OR
