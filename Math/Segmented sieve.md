@@ -17,55 +17,49 @@ This algorithm first uses Simple Sieve to find primes smaller than or equal to â
 */
 void simpleSieve(int limit, vector<int> &prime)
 {
-	bool mark[limit+1];
-	memset(mark, true, sizeof(mark));
+    bool mark[limit+1];
+    memset(mark, true, sizeof(mark));
 
-	for (int i=2; i*i<limit; i++)
-	if (mark[i])
-	    for (int j=i*2; j<limit; j+=i)
-		mark[j] = false;
-	
-	for (int i=2; i<limit; i++)
-	if (mark[i])
-	{
-		prime.push_back(i);
-		cout << i << " ";
-	}
+    for (int i=2; i*i<limit; i++)
+        if (mark[i])
+            for (int j=i*2; j<limit; j+=i)
+                mark[j] = false;
+
+    for (int i=2; i<limit; i++)
+        if (mark[i])
+        {
+            prime.push_back(i);
+            cout << i << " ";
+        }
 }
 void segmentedSieve(int n)
 {
-	int limit = sqrt(n)+1;
-	vector<int> prime;
-	simpleSieve(limit, prime);
-	int low = limit;
-	int high = 2*limit;
-	while (low < n)
-	{
-		if (high >= n)
-		high = n;
-		bool mark[limit+1];
-		memset(mark, true, sizeof(mark));
-		for (int i = 0; i < prime.size(); i++)
-		{
-			int loLim = (low/prime[i]) * prime[i];
-			if (loLim < low)
-				loLim += prime[i];
-			if(loLim == prime[i])
-		                loLim += prime[i];
-			for (int j=loLim; j<high; j+=prime[i])
-				mark[j-low] = false;
-		}
-		for (int i = low; i<high; i++)
-			if (mark[i - low] == true)
-				cout << i << " ";
-		low = low + limit;
-		high = high + limit;
-	}
-}
-int main()
-{
-	cout << "Primes Smaller Than " << n << " : ";
-	segmentedSieve(n);
-	return 0;
+    int limit = sqrt(n)+1;
+    vector<int> prime;
+    simpleSieve(limit, prime);
+    int low = limit;
+    int high = 2*limit;
+    while (low < n)
+    {
+        if (high >= n)
+            high = n;
+        bool mark[limit+1];
+        memset(mark, true, sizeof(mark));
+        for (int i = 0; i < prime.size(); i++)
+        {
+            int loLim = (low/prime[i]) * prime[i];
+            if (loLim < low)
+                loLim += prime[i];
+            if(loLim == prime[i])
+                loLim += prime[i];
+            for (int j=loLim; j<high; j+=prime[i])
+                mark[j-low] = false;
+        }
+        for (int i = low; i<high; i++)
+            if (mark[i - low] == true)
+                cout << i << " ";
+        low = low + limit;
+        high = high + limit;
+    }
 }
 ```
