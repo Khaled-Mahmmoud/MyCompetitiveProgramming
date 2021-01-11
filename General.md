@@ -197,7 +197,7 @@ int maxSubArraySum(int a[], int size)
 }
 // Generating Subsets
 // the subsets of {1,2,3} are ;φ, {1}, {2}, {3}, {1,2}, {1,3}, {2,3} and {1,2,3}.
-// Method 1
+// Method 1: Recursion
 int n;
 vector<int>v,sub;
 vector<vector<int>>res;
@@ -231,7 +231,7 @@ int main()
 }
 // O(n * 2^n)
 
-// Method 2
+// Method 2: Bitmask
 for(int b=0;b<(1<<n);b++)
 {
     vector<int>v;
