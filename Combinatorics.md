@@ -224,6 +224,7 @@ Idx: 4		2 0 1
 Idx: 5		2 1 0		-> Reversed
 */
 // Generating permutations
+Method 1: Recursion
 int n;
 vector<int>v,p;
 void gen()
@@ -248,7 +249,7 @@ void gen()
 }
 // O(n * !n)
 
-// Generating permutations
+// Method 2: The C++ standard library
 void Permutation(int a[],int n)
 {
     do
