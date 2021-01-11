@@ -9,6 +9,28 @@ the probability of each outcome is 1/6. For example, we can calculate the follow
 • P(”the result is not 6”) = 5/6
 • P(”the result is even”) = 1/2
 
+Calculation
+To calculate the probability of an event, we can either use combinatorics or simulate the process that generates the event. 
+As an example, let us calculate the probability of drawing three cards with the same value from a shuffled deck of cards
+(for example, ♠8, ♣8 and ♦8).
+
+Method 1
+We can calculate the probability using the formula
+(number of desired outcomes / total number of outcomes)
+In this problem, the desired outcomes are those in which the value of each card is the same.
+There are 13 ncr(4,3) such outcomes, because there are 13 possibilities for the value of the cards and ncr(4,3) ways 
+to choose 3 suits from 4 possible suits. There are a total of ncr(52,3) outcomes, because we choose 3 cards from 52 cards.
+Thus, the probability of the event is ncr(4,3) / ncr(52,3) = 1 / 425.
+
+Method 2
+Another way to calculate the probability is to simulate the process that generates the event.
+In this case, we draw three cards, so the process consists of three steps.
+We require that each step in the process is successful.
+Drawing the first card certainly succeeds, because there are no restrictions.
+The second step succeeds with probability 3/51, because there are 51 cards left
+and 3 of them have the same value as the first card. In a similar way.
+the third step succeeds with probability 2/50.
+The probability that the entire process succeeds is 1 * (3/51) * (2/50) = 1 / 425
 
 https://codeforces.com/contest/312/problem/B
 SmallR, who shoots first can win in the following cases:
