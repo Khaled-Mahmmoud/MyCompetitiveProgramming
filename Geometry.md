@@ -157,7 +157,7 @@ point cross_3d(point3d a, point3d b)
 }
 
 
-
+// Triangle Law
 // sin(A)/a = sin(B)/b = sin(C)/c
 // a^2 = b^2 + c^2 - 2*b*c*cos(A)
 double fixAngle(double A)
