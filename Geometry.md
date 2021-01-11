@@ -220,7 +220,7 @@ bool isInside(point a,point b,point c,point x)
 
 <Circles>
 /*
-(x-h) ^ 2 + (y-k)^2 = r^2 (h,k) is center, (x,y) any point in circle
+(x-h) ^ 2 + (y-k)^2 = r^2 where (h,k) is center, (x,y) any point in circle
 */
 bool is_insideCircle(point center, point b, double r)
 {
