@@ -156,10 +156,15 @@ point cross_3d(point3d a, point3d b)
     return point(a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x);
 }
 
-
 // Triangle Law
 // sin(A)/a = sin(B)/b = sin(C)/c
 // a^2 = b^2 + c^2 - 2*b*c*cos(A)
+// sin(A + B) = sin(A) cos(B) + sin(B) cos(A)
+// sin(A - B) = sin(A) cos(B) - sin(B) cos(A)
+// cos(A + B) = cos(A) cos(B) - sin(A) sin(B)
+// cos(A - B) = cos(A) cos(B) + sin(A) sin(B)
+// tan(A + B) = (tan A + tan B)/(1 - tan A tan B)
+// tan(A - B) = (tan A - tan B)/(1 + tan A tan B)
 double fixAngle(double A)
 {
 	return A > 1 ? 1 : (A < -1 ? -1 : A);
