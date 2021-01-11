@@ -1,4 +1,5 @@
 ```cpp
+// <Geometry>
 /*
 Polar system , Cartesian
 x = r * cos(O)
@@ -33,6 +34,8 @@ Two vectors are perpendicular if and only if their angle is a right angle
 Set of vectors is orthogonal if and only if they are pairwise perpendicular
 The normal vector to a surface is a vector which is perpendicular to the surface at a given point
 */
+
+// <Complex>
 #define point complex<double>
 point input()
 {
@@ -121,7 +124,6 @@ bool arelinesparallel(point a,point b,point c,point d)
     return cross(b-a,d-c)==0;
 }
 
-
 struct point
 {
     double x,y;
@@ -146,7 +148,6 @@ struct point
 
 };
 
-
 struct point3d
 {
     int x,y,z;
@@ -156,7 +157,7 @@ point cross_3d(point3d a, point3d b)
     return point(a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x);
 }
 
-// Triangle Law
+<Triangle>
 // sin(A)/a = sin(B)/b = sin(C)/c
 // a^2 = b^2 + c^2 - 2*b*c*cos(A)
 // sin(A + B) = sin(A) cos(B) + sin(B) cos(A)
@@ -216,6 +217,18 @@ bool isInside(point a,point b,point c,point x)
    
    return (A == A1 + A2 + A3); 
 }
+
+<Circles>
+/*
+(x-h) ^ 2 + (y-k)^2 = r^2 (h,k) is center, (x,y) any point in circle
+*/
+bool is_insideCircle(point center, point b, double r)
+{
+    double d1 = (b.X - center.X);
+    double d2 = (b.Y - center.Y);
+    return (d1 * d1 + d2 * d2) <= r * r;
+}
+
 /*
 Distance between two points on Earth	
 we need to have the co-ordinates of point A and point B.	
