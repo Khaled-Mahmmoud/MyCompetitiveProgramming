@@ -103,7 +103,7 @@ int mobius(int n)
 /*
 Möbius and Inclusion Exclusion
 Recall, in Inclusion Exclusion we compute all subsets, and add odd subsets and substract even subsets.
-- Assume generating all subsets of primes but in implicit way (e.g. iterate on numbers), Möbius can tell you if number is odd subset or even.
+- Assume generating all subsets of primes but in implicit way, Möbius can tell you if number is odd subset or even.
 - Typically, ignoring numbers with repeated prime factors is target. Then Möbius(n) plays perfect role.
 - **Given n square free number, find its index?**
 - E.g. F_reverse(n = 19) = 13
