@@ -192,7 +192,7 @@ double area_triangle(double a, double b, double c)
         if(a+b<=c||b+c<=a||a+c<=b)
             return -1;
 	double s = 0.5 * perimeter_triangle(a, b, c);
-	    return sqrt(s * (s - a) * (s - b) * (s - c));
+	    return sqrt(s * (s - a) * (s - b) * (s - c));// Heron’s formula
 }
 // a, b, c are medians of triangle
 double area_triangle1(double a, double b, double c) 
