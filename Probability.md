@@ -33,6 +33,12 @@ and 3 of them have the same value as the first card. In a similar way.
 the third step succeeds with probability 2/50.
 The probability that the entire process succeeds is 1 * (3/51) * (2/50) = 1 / 425
 
+Sample space
+the sample space of an experiment or random trial is the set of all possible outcomes or results of that experiment.
+For example, if the experiment is tossing a coin, the sample space is typically the set {head, tail}.
+For tossing two coins, the corresponding sample space would be {(head,head), (head,tail), (tail,head), (tail,tail)},.
+If the sample space is unordered, it becomes {{head,head}, {head,tail}, {tail,tail}}.
+
 Events
 An event in probability can be represented as a set A ⊂ X,
 where X contains all possible outcomes and A is a subset of outcomes.
