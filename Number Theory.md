@@ -1,3 +1,4 @@
+```cpp
 //<Generate Divisors>
 template<class T>
 vector<T> getDivisors(T n) 
@@ -174,3 +175,4 @@ It is known that amount of prime numbers non greater than n is about **(n / log 
 primesRangeCnt 10^i (4, 25, 168, 1229, 9592, 78498, 664579, 5761455) [e.g. 4 primes <= 10^1] ~= n / log(n)
 257, 263, 269, 271 -> 4 primes their multiplication > 2^32
  */
+```
