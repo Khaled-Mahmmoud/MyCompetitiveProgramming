@@ -236,7 +236,30 @@ void Permutation(int a[],int n)
     // while(prev_permutation(a,a+n);
 }
 // Complexity : O(n * !n)
-
+// Generating permutations
+int n;
+vector<int>v,p;
+void gen()
+{
+    if(v.size()==n)
+    {
+        for(int i=0;i<v.size();i++)
+            cout<<v[i]<<' ';
+        cout<<'\n';
+        return;
+    }
+    for(int i=1;i<=n;i++)
+    {
+        if(p[i])
+            continue;
+        p[i] = 1;
+        v.push_back(i);
+        gen();
+        p[i] = 0;
+        v.pop_back();
+    }
+}
+// O(n * !n)
 // The next permutation of s after x steps ?
 void permutation(string str,int x)
 {
