@@ -1,8 +1,10 @@
-### Sqrt Decomposition
-
-Sqrt Decomposition is a method (or a data structure) that allows you to perform some common operations (finding sum of the elements of the sub-array, finding the minimal/maximal element, etc.) in O(√n) operations, which is much faster than O(n) for the trivial algorithm
-
 ```cpp
+/*
+<Sqrt Decomposition>
+Sqrt Decomposition is a method (or a data structure) that allows you to perform some common operations
+(finding sum of the elements of the sub-array, finding the minimal/maximal element, etc.)
+in O(√n) operations, which is much faster than O(n) for the trivial algorithm
+*/
 const int N = 100005;
 int n,q,v[N],root,bucket[N];
 int main()
@@ -37,21 +39,11 @@ int main()
     }
     return 0;
 }
-Complexity : O(q * sqrt(n))
-```
-**Xenia and Tree**
-
-[Problem Link](https://codeforces.com/contest/342/problem/E)
-[Solution Link](https://codeforces.com/contest/342/submission/100257772)
-Complexity : sqrt(q) * n + q * sqrt(q) * log n
-
-### Mo's algorithm
-
+// O(q * sqrt(n))
+/*
+<Mo's algorithm>
 A similar idea, based on sqrt decomposition, can be used to answer range queries (Q) **offline** in O((N+Q) * sqrt(N)).
-
-
-[Problem Link](https://.com/contest/86/problem/D)
-```cpp
+*/
 int n, t,a[200010],Z,freq[1000010];
 ll res[200010];
 struct qu
