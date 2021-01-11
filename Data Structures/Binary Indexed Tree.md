@@ -1,4 +1,5 @@
 ```cpp
+/*
 <Binary Indexed Tree> 
 - Given an array of integer N, Assume index 0 always will be 0 (NOT in use)
 - 2 query types:(1) Add value val to position index. (2) Sum values from 1 to index
