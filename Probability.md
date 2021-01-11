@@ -63,6 +63,13 @@ and B = ”the result is less than 4” is A ∪ B = ”the result is even or le
 and its probability is P(A ∪ B) = P(A)+ P(B)− P(A ∩ B) = 1/2+1/2−1/6 = 5/6.
 If the events A and B are disjoint, i.e., A ∩ B is empty, the probability of the event A ∪B is simply P(A ∪ B) = P(A)+ P(B).
 
+Conditional probability
+P(A|B) = P(A ∩ B) / P(B)
+is the probability of A assuming that B happens. In this situation, when calculating the probability of A,
+we only consider the outcomes that also belong to B.
+Using the above sets, P(A|B) = 1/3, because the outcomes of B are {1,2,3}, and one of them is even.
+This is the probability of an even result if we know that the result is between 1...3.
+
 https://codeforces.com/contest/312/problem/B
 SmallR, who shoots first can win in the following cases:
 1) He shoots the target in the first shot. OR
