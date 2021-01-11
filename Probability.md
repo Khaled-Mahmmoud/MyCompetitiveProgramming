@@ -88,6 +88,31 @@ We denote P(X = x) the probability that the value of a random variable X is x.
 For example, when throwing two dice, P(X = 10) = 3/36, because the total number of outcomes is 36
 and there are three possible ways to obtain the sum 10: [4,6], [5,5] and [6,4].
 
+Expected value
+The expected value E[X] indicates the average value of a random variable X.
+The expected value can be calculated as the sum(x) P(X = x)x, where x goes through all possible values of X.
+
+Let X be a random variable with a finite number of finite outcomes x1,x2,x3,...xk occurring with probabilities 
+p1,p2,p3,...,pk respectively. The expectation of X is defined as E[X] = sum(i=1,k) xi pi = x1p1 + x2p2 + x3p3 + .... + xkpk.
+Since p1 + p2 + p3 +...+ pk = 1
+
+For example, when throwing a dice, the expected result is 1/6·1+1/6·2+1/6·3+1/6·4+1/6·5+1/6·6 = 7/2.
+
+A useful property of expected values is linearity. 
+It means that the sum E[X1 + X2 + ··· + Xn] always equals the sum E[X1] + E[X2] + ··· + E[Xn]. 
+This formula holds even if random variables depend on each other.
+
+For example, when throwing two dice, the expected sum is E[X1 + X2] = E[X1] + E[X2] = 7/2 + 7/2 = 7.
+
+Let us now consider a problem where n balls are randomly placed in n boxes,
+and our task is to calculate the expected number of empty boxes. Each ball has an equal probability to be placed in any of the boxes.
+For example, if n = 2, the possibilities are as follows: (.)(-), (-)(.), (.-)(), ()(.-)
+In this case, the expected number of empty boxes is (0+0+1+1) / 4 = 1/2
+In the general case, the probability that a single box is empty is ((n-1) / n)^n
+Hence, using linearity, the expected number of empty boxes is n * ((n-1) / n)^n
+
+
+
 https://codeforces.com/contest/312/problem/B
 SmallR, who shoots first can win in the following cases:
 1) He shoots the target in the first shot. OR
