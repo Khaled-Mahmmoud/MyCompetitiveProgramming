@@ -98,20 +98,20 @@ void permutation(string str,int x)
 // Complexity : O(n * x)
 
 // the number of ways we can place n queens to an n × n chessboard so that no two queens attack each other.
-void search(int y)
+void search(int r)
 {
-    if(y == n)
+    if(r == n)
     {
-        c++;
+        cnt++;
         return;
     }
-    for(int x = 0; x < n; x++)
+    for(int c = 0; c < n; c++)
     {
-        if (r1[x] || r2[x+y] || r3[x-y+n-1])
+        if (col_vis[c] || d1_vis[c+r] || d2_vis[c-r+n-1])
             continue;
-        r1[x] = r2[x+y] = r3[x-y+n-1] = 1;
-        search(y+1);
-        r1[x] = r2[x+y] = r3[x-y+n-1] = 0;
+        col_vis[c] = d1_vis[c+r] = d2_vis[c-r+n-1] = 1;
+        search(r+1);
+        col_vis[c] = d1_vis[c+r] = d2_vis[c-r+n-1] = 0;
     }
 }
 ```
