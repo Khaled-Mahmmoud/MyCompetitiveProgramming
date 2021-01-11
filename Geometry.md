@@ -157,7 +157,7 @@ point cross_3d(point3d a, point3d b)
     return point(a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x);
 }
 
-<Triangle>
+// <Triangle>
 // sin(A)/a = sin(B)/b = sin(C)/c
 // a^2 = b^2 + c^2 - 2*b*c*cos(A)
 // sin(A + B) = sin(A) cos(B) + sin(B) cos(A)
@@ -218,7 +218,7 @@ bool isInside(point a,point b,point c,point x)
    return (A == A1 + A2 + A3); 
 }
 
-<Circles>
+// <Circles>
 /*
 (x-h)^2 + (y-k)^2 = r^2 where (h,k) is center, (x,y) any point in circle
 */
