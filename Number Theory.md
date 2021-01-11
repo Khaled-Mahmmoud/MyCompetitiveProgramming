@@ -436,5 +436,4 @@ void segmentedSieve(int n)
         high = high + limit;
     }
 }
-*/
 ```
