@@ -34,7 +34,8 @@ void build()
 }
 // O(n.log(n))
 // Sparse Table Query
-// Now in order to calculate any Q(l, r) we are going to use the duplicate-invariant property to get the answer in O(1) as follows:
+// Now in order to calculate any Q(l, r) we are going to use the duplicate-invariant property
+// to get the answer in O(1) as follows:
 
 int get_min(int l, int r) 
 {
