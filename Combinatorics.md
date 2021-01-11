@@ -223,19 +223,6 @@ Idx: 3		1 2 0
 Idx: 4		2 0 1
 Idx: 5		2 1 0		-> Reversed
 */
-// How to iteratively generate Permutations ?
-void Permutation(int a[],int n)
-{
-    do
-    {
-        for(int i=0;i<n;i++)
-            cout<<a[i]<<' ';
-        cout<<'\n';
-    }
-    while(next_permutation(a,a+n));
-    // while(prev_permutation(a,a+n);
-}
-// Complexity : O(n * !n)
 // Generating permutations
 int n;
 vector<int>v,p;
@@ -260,6 +247,21 @@ void gen()
     }
 }
 // O(n * !n)
+
+// Generating permutations
+void Permutation(int a[],int n)
+{
+    do
+    {
+        for(int i=0;i<n;i++)
+            cout<<a[i]<<' ';
+        cout<<'\n';
+    }
+    while(next_permutation(a,a+n));
+    // while(prev_permutation(a,a+n);
+}
+// Complexity : O(n * !n)
+
 // The next permutation of s after x steps ?
 void permutation(string str,int x)
 {
