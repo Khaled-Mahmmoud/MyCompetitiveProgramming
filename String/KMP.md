@@ -22,4 +22,4 @@ void kmp(string str,string pat)
         }
     }
 } // O(n + m)
-```cpp
+```
