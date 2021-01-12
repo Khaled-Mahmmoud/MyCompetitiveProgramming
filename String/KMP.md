@@ -16,7 +16,7 @@ vector<int>getprefix(string pat)
             len=prefix[len-1];
         if(pat[i]==pat[len])
             ++len;
-        prefix[i] = len;  // OR prefix[i] = 0;
+        prefix[i] = len;  
     }
     return prefix;
 } // O(m)
