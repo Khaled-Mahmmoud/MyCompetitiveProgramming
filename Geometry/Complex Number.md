@@ -26,6 +26,14 @@ double cross(point a,point b)
 {
     return (conj(a)*b).imag();
 }
+struct point3d
+{
+    int x,y,z;
+}
+point cross_3d(point3d a, point3d b)
+{
+    return point(a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x);
+}
 // point a(2,3) ==> norm(a) = 2^2 + 3^2 = 13
 double norm(point a) 
 {
