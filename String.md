@@ -196,11 +196,8 @@ int sub(int x,int y)
 {
     return add(x,mod-y);
 }
-int main()
+int rabin(string s,int k)
 {
-    string s;
-    int k;
-    cin>>k>>s;
     int h1 = 0,h2 = 0, p = 1;
     for(int i=0,j=k-1;i<k;i++,j--)
     {
@@ -226,9 +223,17 @@ int main()
         h2 = mul(h2,inv);
         h2 = add(h2,mul(s[i],p));
     }
-    cout<<res;
+    return res;
+}
+int main()
+{
+    string s;
+    int k;
+    cin>>k>>s;
+    cout<<rabin(s,k);
     return 0;
 }
+
 
 /*
 Trie
