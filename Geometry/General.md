@@ -1,4 +1,4 @@
-```
+```cpp
 /*
 Polar system , Cartesian
 x = r * cos(O)
@@ -27,4 +27,10 @@ double to_degree(double degrees, double minutes, double seconds)
 {
     return degrees + (minutes/60) + (seconds/60*60);
 }
+/*
+Vector = Direction + Magnitude
+Two vectors are perpendicular if and only if their angle is a right angle
+Set of vectors is orthogonal if and only if they are pairwise perpendicular
+The normal vector to a surface is a vector which is perpendicular to the surface at a given point
+*/
 ```
