@@ -210,69 +210,68 @@ void min_cyclic_string(string s)
     cout<<s.substr(ans, n / 2);
 }
 
-
-// Rolling Hash
-#define mod 2123456789ll
-#define base 53ll
-ll power(ll a,ll b)
+// Rabin-Karp Algorithm
+// count number of k-length substrings of given string that is palindrome
+const int mod = 1e9 + 7;
+const int base = 128;
+int mul(int x,int y)
 {
-    ll ans = 1;
-    a %= mod;
+    return 1ll * x * y % mod;
+}
+int power(int a,int b)
+{
+    int ans = 1;
     while(b)
     {
         if(b&1)
-            ans = (ans * a) % mod;
+            ans = mul(ans,a);
         b >>= 1;
-        a = (a * a) % mod;
+        a = mul(a,a);
     }
     return ans;
-} 
-ll remove(ll code,ll idx,ll val)
-{
-    return (code - (val * power(base,idx))%mod + mod) % mod;
 }
-ll insert(ll code,ll idx,ll val)
+const int inv = power(base,mod-2);
+int add(int x,int y)
 {
-    return (code + (val * power(base,idx))%mod + mod) % mod;
+    return (x+y)%mod;
 }
-ll shiftleft(ll code)
+int sub(int x,int y)
 {
-    return (base * code) % mod;
+    return add(x,mod-y);
 }
-ll shiftright(ll code)
+int main()
 {
-    return (code * power(base,mod-2)) % mod;
-}
-ll rolling_hash(string pat)
-{
-    ll patcode = 0;
-    for(int i=0;i<pat.size();i++)
+    string s;
+    int k;
+    cin>>k>>s;
+    int h1 = 0,h2 = 0, p = 1;
+    for(int i=0,j=k-1;i<k;i++,j--)
     {
-        patcode = shiftleft(patcode);
-        patcode = insert(patcode,0,pat[i]);
+        if(i)
+            p = mul(p,base);
+        h1 = mul(h1,base);
+        h1 = add(h1,s[i]);
+
+        h2 = mul(h2,base);
+        h2 = add(h2,s[j]);
     }
-    return patcode;
-}
-void pattern_search(string str,string pat)
-{
-    int n = pat.size();
-    ll patcode = rolling_hash(pat);
-    
-    ll subcode = 0;
-    
-    for(int i=0;i<str.size();i++)
+    int res = 0;
+    for(int i=k,j=0;;i++,j++)
     {
-        if(i-n>=0)
-            subcode = remove(subcode,n-1,str[i-n]);
-            
-        subcode = shiftleft(subcode);
-        subcode = insert(subcode,0,str[i]);
-        
-        if(patcode == subcode)
-            cout<< (i+1) - pat.size() + 1 <<'\n';
+        res += h1 == h2;
+        if(!s[i])
+            break;
+        h1 = sub(h1,mul(s[j],p));
+        h1 = mul(h1,base);
+        h1 = add(h1,s[i]);
+
+        h2 = sub(h2,s[j]);
+        h2 = mul(h2,inv);
+        h2 = add(h2,mul(s[i],p));
     }
+    cout<<res;
+    return 0;
 }
-// Time Complexity : O(n log m) where n is length of string str, m is length of string pat
 
 /*
 Trie
