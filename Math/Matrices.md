@@ -1,4 +1,4 @@
-//<Matrices>
+```cpp
 #define sz(v) (int)(v.size())
 typedef vector<int> row;
 typedef vector<row> matrix;
@@ -106,3 +106,4 @@ for (int j = 0; j < m; j++)
      cin >> ch;
      v[j].push_back(ch);
 }
+```
