@@ -1,6 +1,5 @@
 ```cpp
 /*
-Lyndon Factorization
 A string is called simple (or a Lyndon word), if it is strictly smaller than any of its own proper suffixes. 
 Examples of simple strings are: a, b, ab, aab, abb, ababb, abcd. It can be shown that a string is simple,
 if and only if it is strictly smaller than all its proper cyclic shifts.
