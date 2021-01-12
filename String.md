@@ -20,15 +20,7 @@ vector<int>getprefix(string pat)
     }
     return prefix;
 }
-int main()
-{
-    string pat;cin>>pat;
-    vector<int>prefix=getprefix(pat);
-    for(int i=0;i<prefix.size();i++)
-        cout<<prefix[i]<<' ';
-    return 0;
-}
-// Time Complexity O(m)
+// O(m)
 /*
 Given a string what is the longest prefix that is palindrome ? Ex. effedcba ==>> effe
 input + '#' + reverse_input ==>> effedcba#abcdeffe
@@ -60,21 +52,6 @@ what does this mean ? first 4 = last 4 , but in between is not like them
 Given string P , for each prefix , count its frequency
 Ex. aabbaaab ==>> 5 3 2 1 1 1 1 1
 */
-vector<int>getprefix(string pat)
-{
-    int m=pat.size();
-    vector<int>prefix(m);
-    for(int i=1,len=0;i<m;i++)
-    {
-        while(len>0&&pat[i]!=pat[len])
-            len=prefix[len-1];
-        if(pat[i]==pat[len])
-            prefix[i]=++len;
-        else
-            prefix[i]=len;
-    }
-    return prefix;
-}
 int main()
 {
     string pat;cin>>pat;
@@ -97,20 +74,6 @@ For each prefix P, Count += CountUniquePrefixes( reverse(P) ) // O(n^2)
 */
 
 // KMP algorithm to find a Pattern in a Text.
-vector<int>getprefix(string pat)
-{
-    int m=pat.size();
-    vector<int>prefix(m);
-    for(int i=1,len=0;i<m;i++)
-    {
-        while(len>0&&pat[i]!=pat[len])
-            len=prefix[len-1];
-        if(pat[i]==pat[len])
-            ++len;
-         prefix[i] = len;
-    }
-    return prefix;
-}
 void kmp(string str,string pat)
 {
     int n=str.size(),m=pat.size();
@@ -133,13 +96,7 @@ void kmp(string str,string pat)
         }
     }
 }
-int main()
-{
-    string str,pat;
-    cin>>str>>pat;
-    kmp(str,pat);
-    return 0;
-} // O(n+m)
+// O(n + m)
 
 /*
 Lyndon Factorization
