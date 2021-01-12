@@ -4,7 +4,6 @@ ll res[200010];
 struct qu
 {
     int l, r,idx;
- 
     qu() {}
     bool operator<(const qu &rhs) const
     {
@@ -29,7 +28,7 @@ void remove(int idx)
     freq[a[idx]]--;
     ans += 1ll*freq[a[idx]]*freq[a[idx]]*a[idx];
 }
-int main()
+void Mo()
 {
     cin>>n>>t;
     Z = sqrt(n)+1;
@@ -74,6 +73,5 @@ int main()
     {
         cout<<res[i]<<'\n';
     }
-    return 0;
 }
 ```
