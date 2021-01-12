@@ -1,14 +1,11 @@
-**Failure Function** (Prefix Function) expresses longest proper prefix that is a suffix (LPS Table)
-
-Given String P of length m, define an array F(m).
-
-F[i] = length of longest proper prefix of P that is suffix of P.
-
-for example : akaka. then f[] = {0,0,1,2,3}
-
-for example : aaaaa. then f[] = {0,1,2,3,4}
-
 ```cpp
+/*
+Failure Function (Prefix Function) expresses longest proper prefix that is a suffix (LPS Table)
+Given String P of length m, define an array F(m).
+F[i] = length of longest proper prefix of P that is suffix of P.
+for example : akaka. then f[] = {0,0,1,2,3}
+for example : aaaaa. then f[] = {0,1,2,3,4}
+*/
 vector<int>getprefix(string pat)
 {
     int m=pat.size();
@@ -23,11 +20,7 @@ vector<int>getprefix(string pat)
     }
     return prefix;
 } // O(m)
-```
-Given string P , for each prefix , count its frequency
-
-Ex. aabbaaab ==>> 5 3 2 1 1 1 1 1
-```cpp
+// Given string P , for each prefix , count its frequency Ex. aabbaaab ==>> 5 3 2 1 1 1 1 1
 void frq()
 {
     string pat;cin>>pat;
