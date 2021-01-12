@@ -38,6 +38,3 @@ int get_value(int idx)
     return get_accum(idx) - get_accum(idx-1);
 }
 ```
-
-
-```
