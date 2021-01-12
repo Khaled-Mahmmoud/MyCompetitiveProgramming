@@ -1,3 +1,4 @@
+```cpp
 /*
 Trie
 insert OR search OR erase O(L) Where L length of a word
@@ -176,3 +177,4 @@ int main()
     cout<<t.getdistinct();             // 0
     return 0;
 }
+```
