@@ -25,7 +25,7 @@ void kmp(string str,string pat)
 {
     int n=str.size(),m=pat.size();
     vector<int>prefix=getprefix(pat);
-    for(int i=0,len=0;i<n;i++)  // Notic here i = 0 but above i = 1
+    for(int i=0,len=0;i<n;i++)  
     {
         while(len>0&&str[i]!=pat[len])
             len=prefix[len-1];
