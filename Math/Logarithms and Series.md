@@ -37,7 +37,9 @@ Harmonic Progression: 1/1 + 1/2 + 1/3 + 1/4 + 1/5 + ..... + 1/(n-1) + 1/n = log(
 Θ(log(n!)) = Θ(n·log(n))
 log(1) + log(2) + ... + log(n) <= log(n) + log(n) + ... + log(n) 
 */
+```
 
+```cpp
 /*
 <Series>
 sum(x=1,n) x   = 1 + 2 + 3 + ... + n = n*(n+1)/2
