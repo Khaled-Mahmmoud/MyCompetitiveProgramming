@@ -1,6 +1,7 @@
 ```cpp
 const int N = 1000;
-int p[N];vector<int>siz;
+int p[N];
+vector<int>siz;
 int find(int u) 
 {
     if (p[u] == u)
