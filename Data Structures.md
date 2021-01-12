@@ -5,102 +5,68 @@ Given an array A of size N and some queries. There are two types of queries:
 Update : Given Idx and Val, update array element A[Idx] as A[Idx] = A[Idx] + Val.
 Query : Given L and R return the value of `A[L]+A[L+1]+A[L+2]+....+A[R-1]+A[R]` such that 0 <= L <= R <= N-1
 */
-#define N 100005  
-int a[N];	
-int tree[2 * N - 1];   // please note that number of nodes = 2*n-1	
-                       // there was wrong answer of tree[N] 
-                       // It is better to make it tree[4*N]
-// Complexity : O(n)
-void build(int node, int start, int end)
+const int N = 4e5 + 5;
+int n, m, a[N];
+int l[N], r[N];
+ll seg[4 * N], lazy[4 * N];
+vector<int> g[N];
+vector<int> flatten;
+void build(int node, int s, int e)
 {
-    if(start == end)
+    if(s == e)
     {
-        // Leaf node will have a single element
-        tree[node] = A[start];
+        seg[node] = (1ll << a[flatten[s]]);
         return;
     }
-    else
-    {
-        int mid = (start + end) / 2;
-        build(2*node, start, mid);       // Recurse on the left child
-        build(2*node+1, mid+1, end);     // Recurse on the right child
-        tree[node] = tree[2*node] + tree[2*node+1]; // Internal node will have the sum of both of its children
-    }
-}
-// Complexity : O(log n) 
-void update(int node, int start, int end, int idx, int val)
+    int mid = s + e >> 1;
+    build(node << 1, s, mid);
+    build(node << 1 | 1, mid + 1, e);
+    seg[node] = (seg[node << 1] | seg[node << 1 | 1]);
+} // O(n)
+void propagate(int node, int s, int e)
 {
-    if(start == end)
+    seg[node] = lazy[node];
+    if(s != e)
     {
-        // Leaf node
-        A[idx] += val;
-        tree[node] += val;
+        lazy[node << 1] = lazy[node];
+        lazy[node << 1 | 1] = lazy[node];
+    }
+    lazy[node] = 0;
+} // O(1)
+void update(int node, int s, int e, int l, int r, int val)
+{
+    if(lazy[node])
+        propagate(node, s, e);
+    if(s > r || e < l)
+        return;
+    if(l <= s && e <= r)
+    {
+        lazy[node] = (1ll << val);
+        propagate(node, s, e);
         return;
     }
-    else
-    {
-        int mid = (start + end) / 2;
-        if(idx <= mid)
-        {
-            // If idx is in the left child, recurse on the left child
-            update(2*node, start, mid, idx, val);
-        }
-        else
-        {
-            // if idx is in the right child, recurse on the right child
-            update(2*node+1, mid+1, end, idx, val);
-        }
-        // Internal node will have the sum of both of its children
-        tree[node] = tree[2*node] + tree[2*node+1];
-    }
-}
-// Complexity : O(log n)
-int query(int node, int start, int end, int l, int r)
+    int mid = s + e >> 1;
+    update(node << 1, s, mid, l, r, val);
+    update(node << 1 | 1, mid + 1, e, l, r, val);
+    seg[node] = (seg[node << 1] | seg[node << 1 | 1]);
+} // O(log n) 
+ll query(int node, int s, int e, int l, int r)
 {
-    if(start >= l and end <= r)
-    {
-        // range represented by a node is completely inside the given range
-        return tree[node];
-    }
-    if(start > r || end < l)
-    {
-        // range represented by a node is completely outside the given range
+    if(lazy[node])
+        propagate(node, s, e);
+    if(s > r || e < l)
         return 0;
-    }
-    // range represented by a node is partially inside and partially outside the given range
-    // or or the given range is completely inside Range represented by a node
-    int mid = (start + end) / 2;
-    return query(2*node, start, mid, l, r) + query(2*node+1, mid+1, end, l, r);
-}
-int main()	
-{	
-    int n,q;
-    cin>>n>>q;	
-    for(int i=0;i<n;i++)	
-        cin>>a[i];	
-    build(1,0,n-1);	
-    while(q--)	
-    {	
-        char c;	
-        cin>>c;	
-        if(c=='u')	
-        {	
-            int idx,val;	
-            cin>>idx>>val;	
-            idx--;	
-            updata(1,0,n-1,idx,val);	
-        }	
-        else 	
-        {	
-            int l,r;	
-            cin>>l>>r;	
-            l--,r--;	
-            cout<<query(1,0,n-1,l,r)<<'\n';	
-        }	
-    }	
-    return 0;	
-}
+    if(l <= s && e <= r)
+        return seg[node];
+    int mid = s + e >> 1;
+    return (query(node << 1, s, mid, l, r) | query(node << 1 | 1, mid + 1, e, l, r));
+} // O(log n)
 /*
+main
+build(1,0,n-1);	
+updata(1,0,n-1,idx,val);
+query(1,0,n-1,l,r)
+
 We we have a coordinate space on x-axis from [0 - N].
 we are given set of numbers (order is not issue)	e.g.: 20 7 4 9 12.
 Queries are as following.
@@ -179,69 +145,6 @@ void displayElements(int s=S, int e=E, int p=1)
             cout<<s<<" ";
     }
 }
-/*
-Lazy Propagation
-All problems in the above sections discussed modification queries that only effected a single element of the array each.
-However the Segment Tree allows applying modification queries to an entire segment of contiguous elements, 
-and perform the query in the same time O(logn).
-*/
-const int N = 4e5 + 5;
-int n, m, a[N];
-int l[N], r[N];
-ll seg[4 * N], lazy[4 * N];
-vector<int> g[N];
-vector<int> flatten;
-void build(int node, int s, int e)
-{
-    if(s == e)
-    {
-        seg[node] = (1ll << a[flatten[s]]);
-        return;
-    }
-    int mid = s + e >> 1;
-    build(node << 1, s, mid);
-    build(node << 1 | 1, mid + 1, e);
-    seg[node] = (seg[node << 1] | seg[node << 1 | 1]);
-}
-void propagate(int node, int s, int e)
-{
-    seg[node] = lazy[node];
-    if(s != e)
-    {
-        lazy[node << 1] = lazy[node];
-        lazy[node << 1 | 1] = lazy[node];
-    }
-    lazy[node] = 0;
-}
-void update(int node, int s, int e, int l, int r, int val)
-{
-    if(lazy[node])
-        propagate(node, s, e);
-    if(s > r || e < l)
-        return;
-    if(l <= s && e <= r)
-    {
-        lazy[node] = (1ll << val);
-        propagate(node, s, e);
-        return;
-    }
-    int mid = s + e >> 1;
-    update(node << 1, s, mid, l, r, val);
-    update(node << 1 | 1, mid + 1, e, l, r, val);
-    seg[node] = (seg[node << 1] | seg[node << 1 | 1]);
-}
-ll query(int node, int s, int e, int l, int r)
-{
-    if(lazy[node])
-        propagate(node, s, e);
-    if(s > r || e < l)
-        return 0;
-    if(l <= s && e <= r)
-        return seg[node];
-    int mid = s + e >> 1;
-    return (query(node << 1, s, mid, l, r) | query(node << 1 | 1, mid + 1, e, l, r));
-}
-
 /*
 <Binary Indexed Tree> 
 - Given an array of integer N, Assume index 0 always will be 0 (NOT in use)
