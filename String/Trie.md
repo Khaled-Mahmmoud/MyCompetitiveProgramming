@@ -164,17 +164,4 @@ private:
         delete root;
     }
 };
-int main()
-{
-    trie t;
-    t.insert("abc");
-    t.insert("adc");
-    if(t.search("abc"))cout<<"k";       // k
-    t.remove("abc");
-    t.clear();
-    if(t.search("adc"))cout<<"h";      // m
-    else cout<<"m";                 
-    cout<<t.getdistinct();             // 0
-    return 0;
-}
 ```
