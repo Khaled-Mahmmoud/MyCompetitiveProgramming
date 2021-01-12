@@ -25,5 +25,5 @@ void solve()
     for(int i=1; i<=n; i++)
         if(!vis[i])
             dfs(i);
-}
+}// O(V + E)
 ```
