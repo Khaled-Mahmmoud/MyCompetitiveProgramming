@@ -1,4 +1,5 @@
 ```cpp
+/*
 This page contains a step by step explanation of simple but fast C++ implementation of segmented sieve 
 of Eratosthenes that generates the primes below n using O(n log log n) operations and O(sqrt(n)) space
 It runs significantly faster than  a traditional sieve of Eratosthenes implementation due to its more 
