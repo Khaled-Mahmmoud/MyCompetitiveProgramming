@@ -16,19 +16,17 @@ this fact could be used as : gcd(45, 10) = gcd(35, 10) = gcd(25, 10) = gcd(15, 1
 gcd(10, 5) = gcd(5, 5) = gcd(5, 0) = 5
 Wait: We just keep reaming the small from the big, the big number turn to be the smaller, and then do reverse
 How to do this switch fast? gcd(45, 10) = gcd(45%10, 10)	-> simply remove the smaller cycles in 1 step
+*/
+
+/*
 LCM (Least Common Multiple) 
 LCM(a,b) = a * b / GCD(a,b)
 */
-int gcd(int a,int b)
-{
-    if(!b)
-        return a;
-    return gcd(b,a%b);
-}
 int lcm(int a,int b)
 {
-    return a*b/gcd(a,b);
+    return a/gcd(a,b)*b;
 }
+
 /*
 GCD is distributive over the LCM, and vice versa: gcd(a, lcm(b, c)) = lcm(gcd(a, b), gcd(a, c)) 
 and lcm(a, gcd(b, c)) = gcd(lcm(a, b), lcm(a, c))
