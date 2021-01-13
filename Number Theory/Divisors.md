@@ -1,6 +1,6 @@
 ```cpp
 template<class T>
-vector<T> getDivisors(T n) 
+vector<T> get_div(T n) 
 {
     vector<T> divs;
     for (T i = 1; i * i <= n; ++i) 
@@ -17,7 +17,7 @@ vector<T> getDivisors(T n)
 
 // Count all the divisors of the integers from 1 to "n"
 vector<int> divs[N];
-void generateDivisors(int n) 
+void cnt_div(int n) 
 {
     for (int i = 1; i <= n; ++i)
         for (int j = i; j <= n; j += i)
@@ -28,7 +28,7 @@ void generateDivisors(int n)
 // O(n*log(n)) // max-> 1e6
 const int N = 1e6;
 vector<int> divs[N + 1];
-void generateDivisors() 
+void generate_div() 
 {
 	for (int i = 1; i <= N; i++)
 		for (int j = i; j <= N; j += i)
@@ -37,7 +37,7 @@ void generateDivisors()
 
 // Count all perfect divisors of a number from 1 to n
 int perfectDiv[MAX]; 
-void precomputeCounts() 
+void cnt_per_div() 
 { 
     for (int i=1; i*i < MAX; ++i) 
         for (int j=i*i; j < MAX; j += i*i) 
@@ -46,7 +46,7 @@ void precomputeCounts()
 
 // only perfect square numbers have odd number of divisors
 // Check if count of divisors is even or odd
-void countDivisors(int n) 
+void check(int n) 
 { 
     int root_n = sqrt(n); 
     if (root_n * root_n == n) 
@@ -78,7 +78,7 @@ If the square root of given number(say x^2) is prime then it must have exactly t
 
 // return sum of divisors for all number from 1 to n
 //O(n) // max -> 1e8
-ll sumRangeDivisors(int n) 
+ll get_sum_div(int n) 
 {
 	ll ans = 0;
 	for (int x = 1; x <= n; x++)
