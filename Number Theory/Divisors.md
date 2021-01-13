@@ -87,8 +87,7 @@ ll get_sum_div(ll x)
 }
 
 /*
- Counting tne number of the divisors of number
- 2^4 has 5 divisors 2^0, 2^1...2^4, p^n has n+1 divisors for any p prime number
+ for any p prime number, p^n has n+1 divisors,Ex 2^4 has 5 divisors 2^0, 2^1...2^4
  what about not prime number n = p1^a * p1^b  , it's (a+1) * (b+1)
  
  what about Factorizing n^power
@@ -96,6 +95,8 @@ ll get_sum_div(ll x)
  Then n^z        = p1^az  *	p2^bz  * p3^cz
  Divisors of n   = (a+1)  * (b+1)  * (c+1)
  Divisors of n^z = (az+1) * (bz+1) * (cz+1)
+ */
+ 
  /*
 // Sum of divisors of a number	
 Given a number n, the task is to find the sum of all the divisors.
