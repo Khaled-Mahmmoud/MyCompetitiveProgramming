@@ -76,7 +76,7 @@ Infinite Geometric Series:  a + ar + ar^2 + ar^3 + ..... = a/(1-r). for abs(r) <
 //sum 1/(x^i) for i = 1 to n
 double summation(int x, int n)
 {
-	double p = power(x, n);
-	return(p - (x - 1.0)) / p;
+   double p = power(x, n);
+   return(p - (x - 1.0)) / p;
 }
 ```
