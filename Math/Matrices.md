@@ -38,6 +38,14 @@ matrix addIdentity(const matrix& a)
 		rt[i][i] += 1;
 	return rt;
 }
+matrix add(const matrix& a, const matrix& b) 
+{
+	matrix rt = zero(sz(a), sz(a[0]));
+	for(int i = 0; i < sz(a); i++)
+    for(int j = 0; j < sz(a[0]); j++)
+		rt[i][j] = a[i][j] + b[i][j];
+	return rt;
+}
 /*
            Matrix multiplication dimensions
 The dimensions of a matrix give the number of rows and columns of the matrix in that order
