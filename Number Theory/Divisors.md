@@ -73,6 +73,19 @@ ll sumRangeDivisors(int n)
 	return ans;
 }
 
+// return sum of divisors for all number from 1 to n
+// max -> 1e9
+ll get_sum_div(ll x)
+{
+    ll ans = 0, left = 1, right;
+    for (; left <= x; left = right + 1)
+    {
+        right = x / (x / left);
+        ans += (x / left) * (left + right) * (right - left + 1) / 2;
+    }
+    return ans;
+}
+
 /*
  Counting tne number of the divisors of number
  2^4 has 5 divisors 2^0, 2^1...2^4, p^n has n+1 divisors for any p prime number
