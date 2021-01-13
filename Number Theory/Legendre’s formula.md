@@ -11,7 +11,7 @@ int larg(int n,int p)
     return cnt;
 }
 /*
-// largest power of Composite number in n!
+// largest power of composite number in n!
 K = p1^a1 p1^a2 p3^a3 ....
 Answer = min( larg(n,p1)/a1 , larg(n,p2)/a2 , larg(n,p3)/a3 ,....)
 */
