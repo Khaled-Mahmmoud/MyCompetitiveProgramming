@@ -13,8 +13,8 @@ vector<T> getDivisors(T n)
         divs.push_back(n / i);
     }
     return divs;
-}
-// O(sqrt(n))
+}// O(sqrt(n))
+
 // Count all the divisors of the integers from 1 to "n"
 vector<int> divs[N];
 void generateDivisors(int n) 
@@ -22,8 +22,19 @@ void generateDivisors(int n)
     for (int i = 1; i <= n; ++i)
         for (int j = i; j <= n; j += i)
             divs[j]++;
+}// O(n.log(n))
+
+const int N = 1e6;
+vector<int> divisors[N + 1];
+// generate divisors for all number from 1 to n
+// O(n*log(n)) // max-> 1e6
+void generateDivisors() 
+{
+	for (int i = 1; i <= N; i++)
+		for (int j = i; j <= N; j += i)
+			divisors[j].push_back(i);
 }
-// O(n.log(n))
+
 // Count all perfect divisors of a number
 int perfectDiv[MAX]; 
 void precomputeCounts() 
