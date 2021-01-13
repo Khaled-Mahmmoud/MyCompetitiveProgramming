@@ -63,6 +63,19 @@ If the square root of given number(say x^2) is prime then it must have exactly t
 3) Number itself i.e., x^2.
 */
 
+/*
+ for any p prime number, p^n has n+1 divisors,Ex 2^4 has 5 divisors 2^0, 2^1...2^4
+ what about not prime number n = p1^a * p1^b  , it's (a+1) * (b+1)
+ 
+ what about Factorizing n^power
+ Simply if n     =  p1^a  *	p2^b   * p3^c
+ Then n^z        = p1^az  *	p2^bz  * p3^cz
+ Divisors of n   = (a+1)  * (b+1)  * (c+1)
+ Divisors of n^z = (az+1) * (bz+1) * (cz+1)
+ */
+ 
+ /*
+
 // return sum of divisors for all number from 1 to n
 //O(n) // max -> 1e8
 ll sumRangeDivisors(int n) 
@@ -86,18 +99,6 @@ ll get_sum_div(ll x)
     return ans;
 }
 
-/*
- for any p prime number, p^n has n+1 divisors,Ex 2^4 has 5 divisors 2^0, 2^1...2^4
- what about not prime number n = p1^a * p1^b  , it's (a+1) * (b+1)
- 
- what about Factorizing n^power
- Simply if n     =  p1^a  *	p2^b   * p3^c
- Then n^z        = p1^az  *	p2^bz  * p3^cz
- Divisors of n   = (a+1)  * (b+1)  * (c+1)
- Divisors of n^z = (az+1) * (bz+1) * (cz+1)
- */
- 
- /*
 // Sum of divisors of a number	
 Given a number n, the task is to find the sum of all the divisors.
 A simple solution is to traverse through all divisors and add them. O(sqrt(n))
