@@ -30,7 +30,6 @@ matrix identity(int n)
 		rt[i][i] = 1;
 	return rt;
 }
-
 matrix addIdentity(const matrix& a) 
 {
 	matrix rt = a;
