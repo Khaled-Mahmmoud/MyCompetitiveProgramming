@@ -35,17 +35,7 @@ void generateDivisors()
 			divs[j].push_back(i);
 }
 
-// return sum of divisors for all number from 1 to n
-//O(n) // max -> 1e8
-ll sumRangeDivisors(int n) 
-{
-	ll ans = 0;
-	for (int x = 1; x <= n; x++)
-		ans += (n / x) * x;
-	return ans;
-}
-
-// Count all perfect divisors of a number
+// Count all perfect divisors of a number from 1 to n
 int perfectDiv[MAX]; 
 void precomputeCounts() 
 { 
@@ -53,6 +43,7 @@ void precomputeCounts()
         for (int j=i*i; j < MAX; j += i*i) 
               perfectDiv[j]++; 
 } 
+
 // only perfect square numbers have odd number of divisors
 // Check if count of divisors is even or odd
 void countDivisors(int n) 
@@ -63,6 +54,17 @@ void countDivisors(int n)
     else
         printf("Even\n"); 
 } 
+
+// return sum of divisors for all number from 1 to n
+//O(n) // max -> 1e8
+ll sumRangeDivisors(int n) 
+{
+	ll ans = 0;
+	for (int x = 1; x <= n; x++)
+		ans += (n / x) * x;
+	return ans;
+}
+
 /*
 Check whether a number has exactly three distinct factors or not?
 According to property of perfect square, “Every perfect square(x^2) always have only odd numbers of factors“
