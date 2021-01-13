@@ -55,6 +55,14 @@ void countDivisors(int n)
         printf("Even\n"); 
 } 
 
+/*
+Check whether a number has exactly three distinct factors or not?
+If the square root of given number(say x^2) is prime then it must have exactly three distinct factors
+1) A number 1 of course.
+2) Square root of a number i.e., x(prime number).
+3) Number itself i.e., x^2.
+*/
+
 // return sum of divisors for all number from 1 to n
 //O(n) // max -> 1e8
 ll sumRangeDivisors(int n) 
@@ -66,13 +74,6 @@ ll sumRangeDivisors(int n)
 }
 
 /*
-Check whether a number has exactly three distinct factors or not?
-According to property of perfect square, “Every perfect square(x^2) always have only odd numbers of factors“
-If the square root of given number(say x^2) is prime then it must have exactly three distinct factors i.e,
-1) A number 1 of course.
-2) Square root of a number i.e., x(prime number).
-3) Number itself i.e., x^2.
-
  Counting tne number of the divisors of number
  2^4 has 5 divisors 2^0, 2^1...2^4, p^n has n+1 divisors for any p prime number
  what about not prime number n = p1^a * p1^b  , it's (a+1) * (b+1)
@@ -82,8 +83,6 @@ If the square root of given number(say x^2) is prime then it must have exactly t
  Then n^z        = p1^az  *	p2^bz  * p3^cz
  Divisors of n   = (a+1)  * (b+1)  * (c+1)
  Divisors of n^z = (az+1) * (bz+1) * (cz+1)
- 
-   
  /*
 // Sum of divisors of a number	
 Given a number n, the task is to find the sum of all the divisors.
