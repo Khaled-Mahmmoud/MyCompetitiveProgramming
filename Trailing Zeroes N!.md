@@ -60,23 +60,23 @@ void solve(ll n)
 }
 // O(log2(n))
 
+// largest power of prime number in n! is n/p + n/(p^2) + n/(p^3) + …… (Legendre’s formula)
+int larg_p(int n,int p)
+{
+    int cnt=0;
+    while(n)
+    {
+        cnt+=n/p;
+        n/=p;
+    }
+    return cnt;
+}
 /*
-// Largest power of k in n!
-we first find all the prime factors of the number k. Then for each prime factor, we count occurrences using
-Legendre’s formula which states that the largest possible power of a prime number p in n is ⌊n/p⌋ + ⌊n/(p^2)⌋ + ⌊n/(p^3)⌋ + ……
+// largest power of number in n!
+K = p1^a1 p1^a2 p3^a3 ....
+Answer = min(larg_p(n,p1)/a1, large(n,p2)/a2, large(n,p3)/a3,....)
 */
-int PowerOFPINnfactorial(int n, int p) 
-{ 
-    int ans = 0; 
-    int temp = p; 
-    while (temp <= n)
-    { 
-        ans += n / temp; 
-        temp = temp * p; 
-    } 
-    return ans; 
-} 
-// O(log_p(n))
+
 
 /*
 Number of trailing zeroes in b-ary (base B) representation of N!
