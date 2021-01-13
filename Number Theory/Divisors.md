@@ -35,6 +35,16 @@ void generateDivisors()
 			divs[j].push_back(i);
 }
 
+// return sum of divisors for all number from 1 to n
+//O(n) // max -> 1e8
+ll sumRangeDivisors(int n) 
+{
+	ll ans = 0;
+	for (int x = 1; x <= n; x++)
+		ans += (n / x) * x;
+	return ans;
+}
+
 // Count all perfect divisors of a number
 int perfectDiv[MAX]; 
 void precomputeCounts() 
