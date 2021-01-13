@@ -34,7 +34,7 @@ int f(int n)
         cnt+=n/i; 
     return cnt; 
 } 
-// if n = 1e18 , time = 0,042s
+
 /*
 Number of trailing zeroes in base 16 representation of N!
 6! = 720 (base 10) = 2D0 (base 16)
