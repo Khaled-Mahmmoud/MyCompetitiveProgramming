@@ -74,8 +74,6 @@ If the square root of given number(say x^2) is prime then it must have exactly t
  Divisors of n^z = (az+1) * (bz+1) * (cz+1)
  */
  
- /*
-
 // return sum of divisors for all number from 1 to n
 //O(n) // max -> 1e8
 ll get_sum_div(int n) 
