@@ -24,15 +24,15 @@ void generateDivisors(int n)
             divs[j]++;
 }// O(n.log(n))
 
-const int N = 1e6;
-vector<int> divisors[N + 1];
 // generate divisors for all number from 1 to n
 // O(n*log(n)) // max-> 1e6
+const int N = 1e6;
+vector<int> divs[N + 1];
 void generateDivisors() 
 {
 	for (int i = 1; i <= N; i++)
 		for (int j = i; j <= N; j += i)
-			divisors[j].push_back(i);
+			divs[j].push_back(i);
 }
 
 // Count all perfect divisors of a number
