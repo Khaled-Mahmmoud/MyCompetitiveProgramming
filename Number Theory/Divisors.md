@@ -97,6 +97,7 @@ ll get_sum_div(ll x)
     return ans;
 }
 
+/*
 // Sum of divisors of a number	
 Given a number n, the task is to find the sum of all the divisors.
 A simple solution is to traverse through all divisors and add them. O(sqrt(n))
