@@ -258,5 +258,4 @@ count number of even factors = (p+1) * (q+r) * (r+1) - (q+r) * (r+1) = (p) * (q+
 count sum of odd factors = (3^0 + 3^1) * (5^0 + 5^1) = 24 (we ignore 2^0 + 2^1 + 2^2 )
 count sum of even factors = (2^1 + 2^2) * (3^0 + 3^1) * (5^0 + 5^1) = 144  (we ignore 2^0)
 */
- */
  ```
