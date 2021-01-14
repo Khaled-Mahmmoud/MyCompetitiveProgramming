@@ -9,6 +9,17 @@ int gcd(int a,int b)
         return a;
     return gcd(b,a%b);
 }
+// gcd for two strins
+string gcdOfStrings(string str1, string str2)
+{
+    if (str1.size() < str2.size())
+        return gcdOfStrings(str2, str1);
+    if (str2.empty())
+        return str1;
+    if (str1.substr(0, str2.size()) != str2)
+        return "";
+    return gcdOfStrings(str1.substr(str2.size()), str2);
+}
 /*
 two integers a and b are said to be relatively prime, mutually prime, or coprime if gcd(a,b) = 1
 Assume gcd(a,b) = g then `(a+b)%g = 0` and `(a-b)%g = 0` as (a+b)%g = (a%g+b%g)%g = (0+0)%g = 0
