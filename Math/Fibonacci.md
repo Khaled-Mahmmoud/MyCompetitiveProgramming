@@ -92,11 +92,4 @@ int fmat(int n)
     initial = multiply(initial,transition);
     return initial[0][2];
 } 
-/*
-The Leonardo numbers are a sequence of numbers given by the recurrence:
-                   1              if n = 0
-  L(n)   =         1              if n = 1
-              L(n-1)+L(n-2)+1     if n > 1
-The Leonardo numbers are related to the Fibonacci numbers by below relation L(n) = 2 * F(n+1) - 1 , n >= 0
-*/
 ```
