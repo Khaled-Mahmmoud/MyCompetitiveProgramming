@@ -37,6 +37,15 @@ matrix addIdentity(const matrix& a)
 		rt[i][i] += 1;
 	return rt;
 }
+// matrix trace : sum of all diagonal 
+int matrix_trace(const matrix &a)
+{
+    int ret = 0;
+    for(int i=0;i<sz(a);i++)
+        ret += a[i][i];
+    return rt;
+}
+
 matrix add(const matrix& a, const matrix& b) 
 {
 	matrix rt = zero(sz(a), sz(a[0]));
