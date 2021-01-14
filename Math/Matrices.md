@@ -114,9 +114,9 @@ Matrix Reflect
 5678   ---> 37
             48
 */
-v = vector<string>(m);
-for (int i = 0; i < n; i++)
-for (int j = 0; j < m; j++)
+v = vector<string>(sz(ch[0]));
+for (int i = 0; i < sz(ch); i++)
+for (int j = 0; j < sz(ch[0]); j++)
      v[j].push_back(ch[i][j]);
 
 /*
@@ -126,8 +126,8 @@ Matrix Rotate
 5678   ---> 73
             84
 */
-v = vector<string>(m);
-for (int i = n-1; i >=0 ; i--)
-for (int j = 0; j < m; j++)
+v = vector<string>(sz(ch[0]));
+for (int i = sz(ch)-1; i >=0 ; i--)
+for (int j = 0; j < sz(ch[0]); j++)
      v[j].push_back(ch[i][j]);
 ```
