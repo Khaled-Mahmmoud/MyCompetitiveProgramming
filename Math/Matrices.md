@@ -117,9 +117,17 @@ Matrix Reflect
 v = vector<string>(m);
 for (int i = 0; i < n; i++)
 for (int j = 0; j < m; j++)
-{
-     char ch;
-     cin >> ch;
-     v[j].push_back(ch);
-}
+     v[j].push_back(ch[i][j]);
+
+/*
+Matrix Rotate
+            51
+1234   ---> 62
+5678   ---> 73
+            84
+*/
+v = vector<string>(m);
+for (int i = n-1; i >=0 ; i--)
+for (int j = 0; j < m; j++)
+     v[j].push_back(ch[i][j]);
 ```
