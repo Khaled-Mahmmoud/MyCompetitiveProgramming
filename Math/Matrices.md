@@ -69,12 +69,12 @@ be equal to the number of rows in the second matrix
 5  6       5  6  7  8       35  46  57  68
     
 */
-matrix multiply(const matrix& a, const matrix& b) 
+matrix multiply(const matrix& a, const matrix& b)
 {
 	matrix rt = zero(sz(a), sz(b[0]));
-        for(i=0;i<sz(a);i++)
-          for(j=0;j<sz(b[0]);j++)
-             for(k=0;k<sz(a[0]);k++)
+        for(int i=0;i<sz(a);i++)
+          for(int j=0;j<sz(b[0]);j++)
+             for(int k=0;k<sz(a[0]);k++)
                 rt[i][j]+=a[i][k]*b[k][j];
 	return rt;
 }
