@@ -9,7 +9,7 @@ int gcd(int a,int b)
         return a;
     return gcd(b,a%b);
 }
-// gcd for two strins
+// gcd for two strings
 string gcdOfStrings(string str1, string str2)
 {
     if (str1.size() < str2.size())
