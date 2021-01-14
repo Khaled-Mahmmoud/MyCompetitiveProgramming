@@ -43,7 +43,7 @@ int matrix_trace(const matrix &a)
     int ret = 0;
     for(int i=0;i<sz(a);i++)
         ret += a[i][i];
-    return rt;
+    return ret;
 }
 
 matrix add(const matrix& a, const matrix& b) 
