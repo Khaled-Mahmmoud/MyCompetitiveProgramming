@@ -84,4 +84,20 @@ It is known that amount of prime numbers non greater than n is about **(n / log 
 primesRangeCnt 10^i (4, 25, 168, 1229, 9592, 78498, 664579, 5761455) [e.g. 4 primes <= 10^1] ~= n / log(n)
 257, 263, 269, 271 -> 4 primes their multiplication > 2^32
  */
+ 
+// Generate prime divisors for all number from 1 to n
+// O(n*log(n)) // max -> 2e6
+const int M = 2e6;
+vector<int> primeDivs[M + 1];
+void primeDivisors()
+{
+    for(int i = 2; i <= M; i += 2)
+        primeDivs[i].push_back(2);
+    for(int i = 3; i <= M; i += 2)
+    {
+        if(primeDivs[i].empty())
+            for (int j = i; j <= M; j += i)
+                primeDivs[j].push_back(i);
+    }
+}
  ```
