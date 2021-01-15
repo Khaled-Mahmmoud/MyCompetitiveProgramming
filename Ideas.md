@@ -55,23 +55,6 @@ int long_subarray(int arr[],int n,int k)
     cout<<index-len+1<<' '<<index;
     return len;
 }
-// Find the total number of subarrays having bitwise XOR of all elements equals to B
-int cnt_subarray(int a[],int n,int b)
-{
-    unordered_map<int,int>m;
-    int res = 0,cur = 0;
-    for(int i=0;i<n;i++)
-    {
-        cur ^= a[i];
-        if(cur==b)
-            res++;
-        if(m.find(cur^b)!=m.end())
-            res += m[cur^b];
-        m[cur]++;
-    }
-    return res;
-}
-
 // Minimum number of swaps required to sort an array
 int min_swaps(int arr[], int n)
 {
