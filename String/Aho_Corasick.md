@@ -1,4 +1,5 @@
 ```cpp
+// https://cutt.us/MH97O
 struct aho_corasick
 {
     struct trie_node
