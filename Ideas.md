@@ -101,7 +101,6 @@ int min_swaps(int arr[], int n)
     }
     return ans;
 }
-
 // Minimum swaps to make two arrays identical
 int min_swap_2array(int a[], int b[], int n)
 {
