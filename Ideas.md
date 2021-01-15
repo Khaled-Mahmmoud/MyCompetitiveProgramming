@@ -73,7 +73,7 @@ int cnt_subarray(int a[],int n,int b)
 }
 
 // Minimum number of swaps required to sort an array
-int minSwaps(int arr[], int n)
+int min_swaps(int arr[], int n)
 {
     pair<int, int> arrPos[n];
     for (int i = 0; i < n; i++)
@@ -100,5 +100,16 @@ int minSwaps(int arr[], int n)
             ans += (cycle_size - 1);
     }
     return ans;
+}
+
+// Minimum swaps to make two arrays identical
+int min_swap_2array(int a[], int b[], int n)
+{
+    map<int, int> mp;
+    for (int i = 0; i < n; i++)
+        mp[b[i]] = i;
+    for (int i = 0; i < n; i++)
+        b[i] = mp[a[i]];
+    return min_swaps(b, n);
 }
 ```
