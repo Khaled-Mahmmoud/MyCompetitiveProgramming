@@ -30,4 +30,20 @@ double spherical_distance(double lat1,double lon1,double lat2,double lon2)
     d = R * c;	
     return d;	
 }
+
+
+// p = m / v
+//  p = density, m	= mass, V = volume
+
+/*
+// cylinder
+The surface area of cylinder consists of three parts:
+
+the area of the top base: πr^2
+the area of the bottom base: πr^2
+the area of the side: 2πrh (lateral area)
+
+The surface area of cylinder = πr^2 + 2πrh + πr^2 = 2πrh + πr^2 = 2πr(h + r)
+volume = the area of the bottom base * height = πr^2 * h
+*/
 ```
