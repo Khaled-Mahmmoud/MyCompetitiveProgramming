@@ -33,7 +33,7 @@ double spherical_distance(double lat1,double lon1,double lat2,double lon2)
 
 
 // p = m / v
-//  p = density, m	= mass, V = volume
+// p = density, m = mass, v = volume
 
 /*
 // cylinder
