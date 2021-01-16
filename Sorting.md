@@ -108,6 +108,7 @@ void sort()
     }
 }
 
+// the minimum number of swaps to sort array
 int cnt;
 void mergesort(int a[],int l,int mid,int r)
 {
