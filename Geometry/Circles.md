@@ -41,9 +41,9 @@ The surface area of cylinder consists of three parts:
 
 the area of the top base: πr^2
 the area of the bottom base: πr^2
-the area of the side: 2πrh (lateral area)
+the area of the side(lateral area): 2πrh (Circumference of the bottom base * height)
 
 The surface area of cylinder = πr^2 + 2πrh + πr^2 = 2πrh + πr^2 = 2πr(h + r)
-volume = the area of the bottom base * height = πr^2 * h
+volume = πr^2 * h (Area of the bottom base * height)
 */
 ```
