@@ -61,6 +61,7 @@ string dayOfTheWeek(int day, int month, int year)
 }
 
 /*
+// Grid Conversion
 Say we are given grid of characters, and you want to convert them to grid of numbers.
 	Say you are given characters S, E, ., # to {.=0, S=1, E=2, #=3}
 ...S.				00010
@@ -72,6 +73,7 @@ for(int j = 0 ; j < c; j++)
    gridInt[i][j] = string(".SE#").find( gridChar[i][j] );	//O(n)	
    
 /*
+// Ranges Intersection / Union
 Say you have 2 ranges [1-20] and [5-15] and want to find their Intersection? Union?
 	Let them (a, b) and (c, d)
 	1- check if no intersection is easy? I am after you or reverse
@@ -81,6 +83,7 @@ Say you have 2 ranges [1-20] and [5-15] and want to find their Intersection? Uni
 	4- Union: 2 numbers on boundary
 */
 /*
+// Array Flatten
 Say we have 2D array R*C, and we want to convert it to 1D array of R*C elements
 	then for any (i, j) zero based: we have i rows before us, each of C elements. In current row, j elements.
 	then (i, j) = i * C + j			(note j < C)
