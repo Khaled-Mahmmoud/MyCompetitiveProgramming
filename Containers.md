@@ -160,8 +160,7 @@ transform(str1.begin(),str1.end(),str1.begin(),::toupper); // O(n)
 sqrt(7) = 2.64575 // Returns the square root of x
 cbrt(43) = 3.5033 // Returns the cubic root of x
 pow(32.01 , 1.54) =   208.036691 // Returns base raised to the power exponent.
-round(2.3) = 2 // Returns the integral value that is nearest to x, with halfway cases rounded away from zero O(1)
-round ==>> float and llround ==>> double
+
 
 int abs (int n);
 long long llabs (long long n);
