@@ -59,4 +59,25 @@ string dayOfTheWeek(int day, int month, int year)
     idx += day;
     return show[idx % 7];
 }
+
+/*
+Say we are given grid of characters, and you want to convert them to grid of numbers.
+	Say you are given characters S, E, ., # to {.=0, S=1, E=2, #=3}
+...S.				00010
+##E.#		->		33203
+...#.				00030
+*/
+for(int i = 0 ; i < r; i++)
+for(int j = 0 ; j < c; j++)
+   gridInt[i][j] = string(".SE#").find( gridChar[i][j] );	//O(n)	
+   
+/*
+Say you have 2 ranges [1-20] and [5-15] and want to find their Intersection? Union?
+	Let them (a, b) and (c, d)
+	1- check if no intersection is easy? I am after you or reverse
+	if(b < c || d < a) ...
+	2- Sort 4 numbers a, b, c, d
+	3- Intersection: 2 numbers in mid.
+	4- Union: 2 numbers on boundary
+*/
 ```
