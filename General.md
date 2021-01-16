@@ -29,6 +29,14 @@ if (abs(a-b) < 1e-9)
 #define EPS 1e-8
 int dcmp(double x, double y) { return fabs(x - y) <= EPS ? 0 : x < y ? -1 : 1; }
 
+/*
+- Floor of 2 positive Integers
+	 a / b
+- Ceil of 2 positive Integers
+	(a + b-1) / b
+- Round of 2 positive Integers
+	(a + b/2) / b
+*/
 #include<iomanip>	
 cout<< fixed << showpoint << setprecision(n) ;
 
