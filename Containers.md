@@ -200,4 +200,15 @@ int val[] = {1,2,3,4,5},result[5];
 partial_sum(val, val+5, result); // O(n), for array[] only.
 for(int i=0; i<5; i++) 
 cout<< result[i] << ' ';  // 1 3 6 10 15
+
+/*
+Say we are given grid of characters, and you want to convert them to grid of numbers.
+	Say you are given characters S, E, ., # to {.=0, S=1, E=2, #=3}
+...S.				00010
+##E.#		->		33203
+...#.				00030
+*/
+for(int i = 0; i < r; i++)
+	for(int j = 0 ; j < c; j++)
+		gridInt[i][j] = string(".SE#").find( gridChar[i][j] );	//O(n)	
 ```
