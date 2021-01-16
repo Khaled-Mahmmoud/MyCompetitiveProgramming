@@ -80,4 +80,22 @@ Say you have 2 ranges [1-20] and [5-15] and want to find their Intersection? Uni
 	3- Intersection: 2 numbers in mid.
 	4- Union: 2 numbers on boundary
 */
+/*
+Say we have 2D array R*C, and we want to convert it to 1D array of R*C elements
+	then for any (i, j) zero based: we have i rows before us, each of C elements. In current row, j elements.
+	then (i, j) = i * C + j			(note j < C)
+	what if we have index X in 1 D, and want to convert it to its 2D?
+	we know X = i * C + j
+		then X%C = (i * C % C + j % C)%C = j
+			 X/C = i*C / C + j/C = i
+What about X*Y*Z?
+	Then (i, j, k) = i * Y * Z + j * Z + k	-> Each term * Multiplication of next dimensions
+	What about Index?
+		Index%Z = i * Y * Z + j * Z + k = 0 + 0 + k
+		Index/Z = i * Y + j + 0	= Index2
+		then
+		Index2%Y = 0 + j
+		Index2/Y = i
+	Coding wise, the processing from left and ranking (i, j, k) are similar
+*/
 ```
