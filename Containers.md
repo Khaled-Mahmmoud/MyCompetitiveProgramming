@@ -209,6 +209,6 @@ Say we are given grid of characters, and you want to convert them to grid of num
 ...#.				00030
 */
 for(int i = 0; i < r; i++)
-	for(int j = 0 ; j < c; j++)
-		gridInt[i][j] = string(".SE#").find( gridChar[i][j] );	//O(n)	
+for(int j = 0 ; j < c; j++)
+   gridInt[i][j] = string(".SE#").find( gridChar[i][j] );	//O(n)	
 ```
