@@ -26,7 +26,7 @@ x^n    % m =  ( x % m )^n % m
 
 MOD is expensive! That is, in case a tight order problem, code TLE due to MOD!
 if(a > MOD || a < 0)
-    (a%X + X)%X
+    a = (a%X + X)%X
 
 If today is Tuesday, what day will it be after 40 days?
 Represent each day with a number from 0 to 6
