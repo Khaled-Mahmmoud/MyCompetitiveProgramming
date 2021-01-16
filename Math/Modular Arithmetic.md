@@ -16,12 +16,17 @@ N     =    0 1 2 3 4 5 6 7 8 9 10 11 12 13 ...
 N % 5  =   0 1 2 3 4 0 1 2 3 4 0  1  2  3  ...   //   Periodic
 
 a % b = a - (a/b) * b
+
 ( a + b ) % m = ( a % m + b % m ) % m
 ( a - b ) % m = ( a % m - b % m ) % m
 ( a * b ) % m = ( a % m * b % m ) % m
 ( a / b ) % m may NOT be same as ( (a % m) / (b % m) ) % m
 but (a/b) % m = (a * inv(b)) % m
 x^n    % m =  ( x % m )^n % m
+
+MOD is expensive! That is, in case a tight order problem, code TLE due to MOD!
+if(a > MOD || a < 0)
+    (a%X + X)%X
 
 If today is Tuesday, what day will it be after 40 days?
 Represent each day with a number from 0 to 6
