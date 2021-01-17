@@ -29,7 +29,7 @@ if(a > MAX / b)
 if(a > MAX / b || a * b > MAX / c)	
     continue;	// Check ab, then abc
 // What about a * b + c?
-// if(a > MAX / b || a * b > MAX - c)	
+if(a > MAX / b || a * b > MAX - c)	
    continue;	// Check ab, then abc
 
 double a,b;
