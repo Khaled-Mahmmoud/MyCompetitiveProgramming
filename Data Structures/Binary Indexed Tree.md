@@ -8,7 +8,7 @@ Binary Indexed  O(N) preprocess, O(NlogN) queries, O(N) memory
 */
 const int max_val = 30000;
 int bit_tree[max_val];
-int getAccum(int idx)
+int get_accum(int idx)
 {
     int sum = 0;
     while(idx>0)
@@ -20,7 +20,7 @@ int getAccum(int idx)
 }
 void add(ll idx,ll val)
 {
-    while(idx<MAX_VAL)
+    while(idx<max_val)
     {
         bit_tree[idx] += val;
         idx += (idx & -idx);
