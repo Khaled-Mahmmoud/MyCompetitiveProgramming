@@ -1,4 +1,12 @@
 ```cpp
+/*
+2 query types:
+Add value val to position index
+Sum values from 1 to index
+Segment Tree  O(N) preprocess, O(NlogN) queries, O(nlogn) memory
+BIT O(N) preprocess, O(NlogN) queries, O(N) memory 
+BIT has a better memory order (shorter code)
+*/
 const int max_val = 30000;
 int bit_tree[max_val];
 int getAccum(int idx)
