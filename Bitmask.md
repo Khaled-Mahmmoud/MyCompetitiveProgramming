@@ -49,17 +49,18 @@ int msb(int n)
     return (1<<cnt);
 } 
 /*
+Removing bits from mask
+X = 10010100
+Y = 00010100
+X - Y removes all Y 1s from X : 10000000
+general way to do so: X & ~Y : 10010100 & 11101011 = 10000000
+
 Get last bit using index & -index
 +20 = 00010100
 -20 = 11101100
 20 & -20 = 00000100
 Remove last bit : index - (index & -index)
 00010100 - 00000100 = 00010000
-Removing bits from mask
-X = 10010100
-Y = 00010100
-X - Y removes all Y 1s from X : 10000000
-general way to do so: X & ~Y : 10010100 & 11101011 = 10000000
 */
 bool is_power_of_two(ll n)
 {
