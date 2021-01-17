@@ -17,8 +17,19 @@ bit = n;
 cout<<bit<<endl;     // 000000000000000000000000000110
 for (int i = 0; i < 32; i++)
    cout<<bit[i];    // 011000000000000000000000000000
+bit.set();				// 11111111111111111111
+bit.flip();				// 00000000000000000000
+bit.set(15);				
+bit.flip(0);		
+bit.set(15, 3);
+bit.count();				// Returns the number of bits that are set.
+if(x[2] == 0);
+x[0] = 1;
 string s = bit.to_string();
 cout<<endl<<s;       // 000000000000000000000000000110
+int x = bit.to_ulong(); // 6 
+ll  z = bit.to_ullong(); // 6
+
  /*   
 <structure>
 is a user-defined data type in C/C++
