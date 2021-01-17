@@ -1,7 +1,5 @@
 ```cpp
-#define sz(v) (int)v.size()
-const int base = 1e9;
-typedef vector<int> big;
+const int base = 1e9;typedef vector<int> big;
 void Set(big &a){while(a.size()>1&&a.back()==0)a.pop_back();}
 void print(big a){Set(a);if(a.empty())cout<<0;else{cout<<a[sz(a)-1];
 for(int i=sz(a)-2;i>=0;i--)cout<<setw(9)<<setfill('0')<<a[i];}}
