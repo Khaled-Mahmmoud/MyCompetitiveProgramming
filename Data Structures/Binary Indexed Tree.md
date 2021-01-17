@@ -5,7 +5,6 @@ Add value val to position index
 Sum values from 1 to index
 Segment Tree    O(N) preprocess, O(NlogN) queries, O(nlogn) memory
 Binary Indexed  O(N) preprocess, O(NlogN) queries, O(N) memory 
-Binary Indexed  has a better memory order (shorter code)
 */
 const int max_val = 30000;
 int bit_tree[max_val];
