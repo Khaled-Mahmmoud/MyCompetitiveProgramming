@@ -19,6 +19,18 @@ cout<< 838897238475ll ;
 int a = 1e9 , b = 1e9 ;	
 cout<< a * b ;             // -148668157543         // Overflow 	
 long long c = a*b ;       // c = -148668157543     // Casting
+// convert to c = 1ll * a * b
+
+if(a * b > MAX) continue;
+// Convert to
+if(a > MAX / b) 
+    continue;
+// What about a * b * c?
+if(a > MAX / b || a * b > MAX / c)	
+    continue;	// Check ab, then abc
+// What about a * b + c?
+// if(a > MAX / b || a * b > MAX - c)	
+   continue;	// Check ab, then abc
 
 double a,b;
 if (abs(a-b) < 1e-9) 	
