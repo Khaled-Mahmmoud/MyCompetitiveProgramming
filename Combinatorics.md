@@ -18,7 +18,7 @@ nCr = nC(n – r)
 order is important (Permutation)
 n^r
 
-order is not important (Combination)
+order is not important ()
 Select a combination of three letters frome the set A,B,C,D and E.
 combinations can include {A,B,C} , {B,D,E} , {C,D,B}
 
@@ -37,6 +37,8 @@ ll perm(ll n,ll r)
 }
 
 /*
+// Permutation with repetition  
+// Combination with repetition 
 How many permutations of AAABB?
 Imagine it as A1A2A3B1B2 (where A1=A2=A3, B1=B2)
 Now think in permutation: A1A2B1A3B2
