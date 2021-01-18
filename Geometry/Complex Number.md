@@ -55,6 +55,11 @@ double length2(point a)
     // Length of a: |a| = √(a.a)
     return sqrt(norm(a));
 }
+// distance between two points
+double dis(point a,point b)
+{
+    return length1(b-a);
+}
 double angle(point a)// angle with x-axis
 {
     return arg(a);
