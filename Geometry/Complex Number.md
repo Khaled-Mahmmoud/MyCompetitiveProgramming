@@ -87,6 +87,19 @@ point rotate_around_b(point a,point b,double ang)
     // rotate point a around point b
     return (a - b) * polar(1.0, ang) + b;
 }
+#define EPS 1e-8
+int dcmp(double x, double y){return fabs(x - y) <= EPS ? 0 : x < y ? -1 : 1;}
+void check_point_line(point a,point b,point c)
+{
+    // check if point c on, above, below line a b
+    int x = dcmp(cross(c-a,c-b),0);
+    if(x==1)
+        cout<<"below";
+    else if(x==-1)
+        cout<<"above";
+    else
+        cout<<"on line";
+}
 double proj(point a, point b) 
 {
     return dot(a, b) / abs(b);
