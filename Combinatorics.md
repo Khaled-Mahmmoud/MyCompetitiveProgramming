@@ -25,6 +25,7 @@ combinations can include {A,B,C} , {B,D,E} , {C,D,B}
 what if we allow repeated elements such as AABC, BBBCCD?
 the number of such combination = ncr(n+r-1,r) = (n+r-1)! / (n-1)! * r!
 */
+
 ll perm(ll n,ll r)
 {
     if(r>n)
@@ -34,6 +35,19 @@ ll perm(ll n,ll r)
         ans = (ans*i)%mod;
     return ans;
 }
+
+/*
+How many permutations of AAABB?
+Imagine it as A1A2A3B1B2 (where A1=A2=A3, B1=B2)
+Now think in permutation: A1A2B1A3B2
+This is as same as A3A1B1A2B2
+Specifically, fixing all except As, 3! of it are same!
+Now, assume on of these 3! is fixed but B’s are changed
+2! of them are same e.g. A3A1B1A2B2 = A3A1B2A2B1
+Then 3! * 2! items are duplicate => 5! / (3! * 2!)
+P(n) = n!..but P(n, [c1, c2...cm]) = n!/(c1!c2!...cm!) where c1 is repeated char
+*/
+
 /*
 Pascal Triangle
 1  
@@ -253,10 +267,29 @@ int PermToIndex(vector<int> perm)
     return idx;
 }
 /*
+Building Committee of 7 persons out of 8 women and 9 men?
+No more conditions? C(17, 7)
+Has Exactly 5 women? C(8, 5) * C(9, 2)
+Has at least 5 women? w >= 5
+Convert inequality to loop: W(5) + W(6) + W(7)
+C(8, 5) * C(9, 2)+C(8, 6) * C(9, 1)+C(8, 7) * C(9, 0)
+Has at least 0 women? Useless => C(17, 7)
+Has at least 1 women? C(17, 7) - C(9, 7)
+
+Combination concept can be related to:
+Exact / At most / At least
+Atmost(k) = SUM Exact(i) where i = [0-k]
+Exact(k) = Atmost(k) - Atmost(k-1)
+In range (start, end) =
+SUM Exact(i) where i = [start-end]
+Atmost(end) - Atmost(start-1)
+Atleast(start) - Atleast(end+1)
+
 A group consists of 4 girls and 7 boys.
 In how many ways can a team of 5 members be selected, the team has at least one boy and 2 girls ?
 2 girls +3 boys ⇒ 4C2 * 7C3
 3 girls +2 boys ⇒ 4C3 * 7C2
 4 girls +1 boy ⇒ 4C4 * 7C1
 Total number of ways = 4C2 * 7C3 + 4C3 * 7C2 + 4C4 * 7C1 = 210+84+7 = 301
+*/
 ```
