@@ -1,12 +1,12 @@
 ```cpp
  // prime numbers : numbers which are only divisible by themselves and one
-bool isprime(int n)
+bool isprime(ll n)
 {
      if (n < 2)
         return 0;
      if (!(n&1))
         return (n == 2);
-     for (int i = 3; i * i <= n; i += 2)
+     for (ll i = 3; i * i <= n; i += 2)
         if (!(n%i))
             return 0;
      return 1;
@@ -14,9 +14,9 @@ bool isprime(int n)
 // O(sqrt(n))
 
 // Prime factor is the factor of the given number which is a prime number.
-void primeFactors(int n)  
+void primeFactors(ll n)  
 {  
-    for(int i=2;i*i<=n;i++)  
+    for(ll i=2;i*i<=n;i++)  
     {  
         while(!(n%i))  
         {  
