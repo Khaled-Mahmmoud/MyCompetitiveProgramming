@@ -1,5 +1,8 @@
 ```cpp
 #define point complex<double>
+#define PI acos(-1.0)
+#define EPS 1e-8
+int dcmp(double x, double y){return fabs(x - y) <= EPS ? 0 : x < y ? -1 : 1;}
 point input()
 {
     point a;int val;
@@ -87,8 +90,6 @@ point rotate_around_b(point a,point b,double ang)
     // rotate point a around point b
     return (a - b) * polar(1.0, ang) + b;
 }
-#define EPS 1e-8
-int dcmp(double x, double y){return fabs(x - y) <= EPS ? 0 : x < y ? -1 : 1;}
 void check_point_line(point a,point b,point c)
 {
     // check if point c on, above, below vector/line ab
