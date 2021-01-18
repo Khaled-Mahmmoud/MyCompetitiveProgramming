@@ -91,7 +91,7 @@ point rotate_around_b(point a,point b,double ang)
 int dcmp(double x, double y){return fabs(x - y) <= EPS ? 0 : x < y ? -1 : 1;}
 void check_point_line(point a,point b,point c)
 {
-    // check if point c on, above, below line a b
+    // check if point c on, above, below vector/line ab
     int x = dcmp(cross(c-a,c-b),0);
     if(x==1)
         cout<<"below";
