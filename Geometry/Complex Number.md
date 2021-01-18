@@ -56,7 +56,7 @@ double length2(point a)
     return sqrt(norm(a));
 }
 // distance between two points
-double dis(point a,point b)
+double dist(point a,point b)
 {
     return length1(b-a);
 }
