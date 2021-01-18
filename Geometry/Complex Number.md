@@ -1,6 +1,6 @@
 ```cpp
 #define point complex<double>
-#define PI acos(-1.0)
+#define pi acos(-1.0)
 #define EPS 1e-8
 int dcmp(double x, double y){return fabs(x - y) <= EPS ? 0 : x < y ? -1 : 1;}
 point input()
