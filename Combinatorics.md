@@ -38,7 +38,6 @@ ll perm(ll n,ll r)
 
 /*
 // Permutation with repetition  
-// Combination with repetition 
 How many permutations of AAABB?
 Imagine it as A1A2A3B1B2 (where A1=A2=A3, B1=B2)
 Now think in permutation: A1A2B1A3B2
