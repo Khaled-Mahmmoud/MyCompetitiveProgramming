@@ -5,7 +5,7 @@ int n,e,idx[N],low[N],comp[N],cmp,t;
 vector<vector<int>>adj;
 vector<int>s;
 bool vis[N];
-void dfs(int u)
+void tarjan(int u)
 {
     idx[u] = low[u] = ++t;
     s.push_back(u);
@@ -13,7 +13,7 @@ void dfs(int u)
     for(auto &v:adj[u])
     {
         if(idx[v]==0)
-           dfs(v);
+           tarjan(v);
         if(vis[v])
             low[u] = min(low[u],low[v]);
     }
@@ -43,7 +43,7 @@ int main()
     }
     for(int i=1;i<=n;i++)
         if(idx[i]==0)
-        dfs(i);
+        tarjan(i);
     return 0;
 }
 ```
