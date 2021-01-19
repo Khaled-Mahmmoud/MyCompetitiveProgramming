@@ -1,5 +1,4 @@
 ```cpp
-/*
 const int N = 505, oo = 1e9;
 int n;
 int adj[N][N];
@@ -64,5 +63,4 @@ int main()
     }
     return 0;
 }
-*/
 ```
