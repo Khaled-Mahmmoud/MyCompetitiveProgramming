@@ -33,9 +33,9 @@ void tarjan(int u)
 }
 int main()
 {
-    cin>>n>>e;
+    cin>>n>>m;
     adj.resize(n+1);
-    for(int i=0;i<e;i++)
+    for(int i=0;i<m;i++)
     {
         int u,v;
         cin>>u>>v;
