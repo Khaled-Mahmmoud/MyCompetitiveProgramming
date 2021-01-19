@@ -1,7 +1,7 @@
 ```cpp
 // Strongly Connected Components
 const int N = 1e5;
-int n,e,idx[N],low[N],comp[N],cmp,t;
+int n,m,idx[N],low[N],comp[N],cmp,t;
 vector<vector<int>>adj;
 vector<int>s;
 bool vis[N];
