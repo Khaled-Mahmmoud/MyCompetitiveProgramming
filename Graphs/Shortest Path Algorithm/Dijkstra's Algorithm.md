@@ -1,6 +1,6 @@
 ```cpp
 // Dijkstra Algorithm : Computes the shortest path between the given source node
-/ and all the other nodes in non-negative weighted graph.
+// and all the other nodes in non-negative weighted graph.
 vector<vector<pair<int,int>>>adj;
 vector<int>par;
 int n,m;
@@ -56,5 +56,5 @@ int main()
     }
     backtrack(n);
     return 0;
-}// O((n+m)log(n))
+} // O((n+m)log(n))
 ```
