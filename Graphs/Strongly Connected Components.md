@@ -46,4 +46,6 @@ int main()
         tarjan(i);
     return 0;
 }
+// Time Complexity O(N+E) 
+// Space Requirement O(N)
 ```
