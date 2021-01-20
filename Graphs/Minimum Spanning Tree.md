@@ -1,28 +1,25 @@
 ```cpp
 // Prim Algorithm 
-// Computes the minimum/maximum spanning tree of a weighted graph.
-const int N = 100100;
+// Computes the minimum/maximum spanning tree of a weighted graph
 struct edge
 {
     int to, weight;
     edge() {}
     edge(int t, int w) : to(t), weight(w) {}
-};
-struct comp
-{
-    bool operator()(const edge &l,const edge &r)const
+    bool operator<(const edge& rhs) const
     {
-        return l.weight > r.weight;
         // for maximum spanning tree we used
-        //  return l.weight < r.weight;
+        //  return weight < rhs.weight;
+        return weight > rhs.weight;
     }
 };
+const int N = 100100;
 int n,m;
 int vis[N];
 vector<edge> adj[N];
 int primMST()
 {
-    priority_queue<edge,vector<edge>,comp> pq;
+    priority_queue<edge> pq;
     pq.push(edge(1, 0));
     int MST = 0;
     while(!pq.empty())
@@ -33,9 +30,9 @@ int primMST()
         if (vis[u]++)
             continue;
         MST += w;
-        for(edge& e : adj[u])
-            if(!vis[e.to])
-                pq.push(e);
+        for(edge& v : adj[u])
+            if(!vis[v.to])
+                pq.push(v);
     }
     return MST;
 }
@@ -51,5 +48,4 @@ int main()
     }
     cout<<primMST();
 }
-// O(n.log(n)+m.log(n))
 ```
