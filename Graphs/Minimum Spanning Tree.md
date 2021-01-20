@@ -161,8 +161,10 @@ void read()
     for(int i = 0 ; i < res.second.size(); i++)
     {
         edges[res.second[i].idx].del = true;
+        
         pair<int,vector<edge>>res2 = kruskalMST(n,edges);
         sc = (res2.first < sc)?res2.first:sc;
+        
         edges[res.second[i].idx].del = false;
     }
     cout<<res.first <<" "<<sc<< '\n';
