@@ -1,6 +1,7 @@
 ```cpp
 // Prim Algorithm 
 // Computes the minimum/maximum spanning tree of a weighted graph
+// O(n.log(n))
 struct edge
 {
     int to, weight;
