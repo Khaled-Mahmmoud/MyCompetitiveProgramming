@@ -102,7 +102,7 @@ void read()
 }
 
 // Kruskal Algorithm
-// Computes the the second minimum spanning tree of a weighted graph
+// Computes the second minimum spanning tree of a weighted graph
 // O(n.log(n))
 ```cpp
 struct edge
