@@ -132,4 +132,8 @@ What about X*Y*Z?
 		Index2/Y = i
 	Coding wise, the processing from left and ranking (i, j, k) are similar
 */
+
+// dist distance between dragon and princess 
+double td = dist / (vd - vp);  // time for the dragon to reach the princess where vd > vp
+// vd the speed of dragon and vp the speed of princess
 ```
