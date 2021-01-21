@@ -72,25 +72,6 @@ bool check(int i,int j)
     return i>=0&&j>=0&&i<n&&j<m;
 }
 
-// Leap Year
-bool isLeap(int y)
-{
-    return y % 400 == 0 || (y % 100 != 0 && y % 4 == 0);
-}
-string dayOfTheWeek(int day, int month, int year)
-{
-    vector<int> md = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-    vector<string> show{ "Friday", "Saturday", "Sunday", "Monday",
-                         "Tuesday", "Wednesday", "Thursday" };
-    int idx = 6;
-    for (int y = 1971; y < year; y++)
-        idx += (isLeap(y) ? 366 : 365);
-    for (int m = 1; m < month; m++)
-        idx += (isLeap(year) && m == 2 ? 29 : md[m]);
-    idx += day;
-    return show[idx % 7];
-}
-
 /*
 // Grid Conversion
 Say we are given grid of characters, and you want to convert them to grid of numbers.
@@ -132,6 +113,25 @@ What about X*Y*Z?
 		Index2/Y = i
 	Coding wise, the processing from left and ranking (i, j, k) are similar
 */
+
+// Leap Year
+bool isLeap(int y)
+{
+    return y % 400 == 0 || (y % 100 != 0 && y % 4 == 0);
+}
+string dayOfTheWeek(int day, int month, int year)
+{
+    vector<int> md = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+    vector<string> show{ "Friday", "Saturday", "Sunday", "Monday",
+                         "Tuesday", "Wednesday", "Thursday" };
+    int idx = 6;
+    for (int y = 1971; y < year; y++)
+        idx += (isLeap(y) ? 366 : 365);
+    for (int m = 1; m < month; m++)
+        idx += (isLeap(year) && m == 2 ? 29 : md[m]);
+    idx += day;
+    return show[idx % 7];
+}
 
 // dist distance between dragon and princess 
 double td = dist / (vd - vp);  // time for the dragon to reach the princess where vd > vp
