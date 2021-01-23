@@ -141,6 +141,12 @@ void check_point_line(point a,point b,point c)
     else
         cout<<"on line";
 }
+// Point C distance to Line A-B
+double dist_to_line(point a,point b,point c)
+{
+    double dist = cross(b-a,c-a)/length(a-b);
+    return fabs(dist);
+}
 double proj(point a, point b) 
 {
     return dot(a, b) / abs(b);
