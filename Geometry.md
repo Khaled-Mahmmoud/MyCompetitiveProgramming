@@ -144,8 +144,8 @@ void check_point_line(point a,point b,point c)
 // Point C distance to Line A-B
 double dist_to_line(point a,point b,point c)
 {
-    double dist = cross(b-a,c-a)/length(a-b);
-    return fabs(dist);
+    double d = cross(b-a,c-a)/dist(a,b);
+    return fabs(d);
 }
 double proj(point a, point b) 
 {
