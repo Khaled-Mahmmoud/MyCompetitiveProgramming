@@ -1,5 +1,5 @@
 ```cpp
-
+// Graham Scan Algorithm
 #define point complex<double>
 #define x real()
 #define y imag()
@@ -67,5 +67,5 @@ int main()
         cout<<hull[i].x<<" "<<hull[i].y<<endl;
     return 0;
 }
-
+// O(n log n)
 ```
