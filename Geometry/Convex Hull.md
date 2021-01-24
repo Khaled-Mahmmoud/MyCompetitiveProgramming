@@ -1,4 +1,5 @@
 ```cpp
+
 #define point complex<double>
 #define x real()
 #define y imag()
@@ -45,9 +46,9 @@ void convexHull()
 }
 bool operator<(point a,point b)
 {
-		if(a.x!=b.x)
-			return a.x<b.x;
-		return a.y<b.y;
+    if(a.x!=b.x)
+        return a.x<b.x;
+    return a.y<b.y;
 }
 int main()
 {
@@ -58,7 +59,7 @@ int main()
     point mn(1e9,1e9);
     for(int i=0; i<n; ++i)
         if(v[i]<v[0])
-           swap(v[0],v[i]);
+            swap(v[0],v[i]);
     sort(v.begin()+1, v.end(), cmp);
     convexHull();
     cout<<sz(hull)<<endl;
@@ -66,5 +67,5 @@ int main()
         cout<<hull[i].x<<" "<<hull[i].y<<endl;
     return 0;
 }
-}
+
 ```
