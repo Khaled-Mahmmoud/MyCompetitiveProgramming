@@ -40,10 +40,9 @@ The normal vector to a surface is a vector which is perpendicular to the surface
 int dcmp(double x, double y){return fabs(x - y) <= EPS ? 0 : x < y ? -1 : 1;}
 point input()
 {
-    point a;int val;
-    cin>>val;a.real(val);
-    cin>>val;a.imag(val);
-    return a;
+    int nx,ny;
+    cin>>nx>>ny;
+    return point(nx,ny);
 }
 /*
 Dot Product : Algebraically, sum of the products of the corresponding entries
