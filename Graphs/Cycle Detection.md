@@ -1,5 +1,4 @@
 ```cpp
-// How to Check if an undirected graph has cycle ?
 // Undirected Graph
 vector<vector<int>>adj;
 vector<bool>vis;
