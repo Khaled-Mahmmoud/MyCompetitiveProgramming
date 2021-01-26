@@ -35,7 +35,7 @@ int binomial_coeff(int n, int r)
 // Combinations nCr % m for Large Numbers where m is prime
 #define mod 1000000007
 #define N 1009
-#define ll unsigned long long  // notice it should be unsigned long long, there wrong answer with long long
+#define ll unsigned long long  
 ll fact[N],inv[N];
 ll power(ll x,ll y)
 {
@@ -56,7 +56,7 @@ void init()
     for(int i=1;i<N;i++)
     {
         fact[i] = (i * fact[i-1])%mod;
-        inv[i] = power(fact[i],mod-2); // notice it should be fact[i], there was wrong answer with i
+        inv[i] = power(fact[i],mod-2); 
     }
 }
 ll nCr(ll n,ll r)
