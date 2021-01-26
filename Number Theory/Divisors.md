@@ -1,9 +1,8 @@
 ```cpp
-template<class T>
-vector<T> get_div(T n) 
+vector<int> get_div(int n) 
 {
-    vector<T> divs;
-    for (T i = 1; i * i <= n; ++i) 
+    vector<int> divs;
+    for (int i = 1; i * i <= n; ++i) 
     {
         if (n % i) 
            continue;
