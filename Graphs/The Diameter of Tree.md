@@ -1,5 +1,46 @@
 ```cpp
 // The Diameter of a tree is the number of nodes on the longest path between two leaves in the tree. 
+// DFS
+const int N = 100100;
+int n,m;
+vector<int> adj[N];
+int mx, pos;
+void dfs(int u, int p, int cost)
+{
+	if(mx<cost)
+    {
+		mx = cost;
+		pos = u;
+	}
+	for(auto v:adj[u])
+		if(adj[u][v]!= p)
+			dfs(v, u, cost + 1);
+}
+int calcTreeDiameter()
+{
+    int mx = -1;
+	dfs(0, -1, 0);
+	int u = pos;
+	mx = -1;
+	dfs(u, -1, 0);
+	int v = pos;
+	cout<<u<<" "<<v<<'\n';
+	return mx;
+}
+void solve()
+{
+    int n,m;
+    cin>>n>>m;
+    while(m--)
+    {
+        int u,v;
+        cin>>u>>v;
+        adj[u].push_back(v);
+        adj[v].push_back(u);
+    }
+    cout<<calcTreeDiameter();
+}
+// BFS
 const int N = 100100;
 int n,m;
 int dis[N];
