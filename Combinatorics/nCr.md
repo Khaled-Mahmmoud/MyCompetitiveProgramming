@@ -59,7 +59,7 @@ void init()
         inv[i] = power(fact[i],mod-2); 
     }
 }
-ll nCr(ll n,ll r)
+ll ncr(ll n,ll r)
 {
     if(r>n)
        return 0;
@@ -70,7 +70,7 @@ void solve()
     init();
     ll n,r;
     cin>>n>>r;
-    cout<<nCr(n,r)<<'\n';
+    cout<<ncr(n,r)<<'\n';
 }
 // Time complexity : O(nlog(mod))
 ```
