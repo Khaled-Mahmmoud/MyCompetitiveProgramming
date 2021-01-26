@@ -7,25 +7,25 @@ vector<int> adj[N];
 int mx, pos;
 void dfs(int u, int p, int cost)
 {
-	if(mx<cost)
+    if(mx<cost)
     {
-		mx = cost;
-		pos = u;
-	}
-	for(auto v:adj[u])
-		if(adj[u][v]!= p)
-			dfs(v, u, cost + 1);
+        mx = cost;
+        pos = u;
+    }
+    for(auto v:adj[u])
+        if(adj[u][v]!= p)
+            dfs(v, u, cost + 1);
 }
 int calcTreeDiameter()
 {
     int mx = -1;
-	dfs(0, -1, 0);
-	int u = pos;
-	mx = -1;
-	dfs(u, -1, 0);
-	int v = pos;
-	cout<<u<<" "<<v<<'\n';
-	return mx;
+    dfs(0, -1, 0);
+    int u = pos;
+    mx = -1;
+    dfs(u, -1, 0);
+    int v = pos;
+    cout<<u<<" "<<v<<'\n';
+    return mx;
 }
 void solve()
 {
@@ -40,6 +40,7 @@ void solve()
     }
     cout<<calcTreeDiameter();
 }
+
 // BFS
 const int N = 100100;
 int n,m;
