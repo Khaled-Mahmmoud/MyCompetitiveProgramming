@@ -29,6 +29,9 @@ int binomial_coeff(int n, int r)
     } 
     return C[n][r]; 
 } 
+// Time complexity : O(n * r)
+
+
 // Combinations nCr % m for Large Numbers where m is prime
 #define mod 1000000007
 #define N 1009
