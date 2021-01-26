@@ -1,17 +1,17 @@
 ```cpp
 // Check whether a given graph is Bipartite or not
 const int N = 100100;
-int color[N];           
-vector<int> edges[N];   
+int vis[N];           
+vector<int> adj[N];   
 bool dfs(int u = 1) 
 {
-    for (int v : edges[u]) 
+    for(int v : adj[u]) 
     {
-        if (color[v] == color[u]) 
+        if (vis[v] == vis[u]) 
             return false;
-        if (color[v] == -1) 
+        if (vis[v] == -1) 
         {
-            color[v] = 1 - color[u];
+            vis[v] = 1 - vis[u];
             if (!dfs(v)) 
                 return false;
         }
@@ -20,9 +20,24 @@ bool dfs(int u = 1)
 }
 bool isBipartiteGraph() 
 {
-    memset(color, -1, sizeof(color));
-    color[1] = 0;
+    memset(vis, -1, sizeof(vis));
+    vis[1] = 0;
     return dfs();
 }
-// Time Complexity: O(n + m)
+void solve()
+{
+    int n,m;
+    cin>>n>>m;
+    while(m--)
+    {
+        int u,v;
+        cin>>u>>v;
+        adj[u].push_back(v);
+        adj[v].push_back(u);
+    }
+    if(isBipartiteGraph())
+        cout<<"YES";
+    else
+        cout<<"NO";
+}
 ```
