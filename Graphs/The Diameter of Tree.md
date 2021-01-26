@@ -52,5 +52,4 @@ void solve()
     }
     cout<<calcTreeDiameter();
 }
-// Complexity: O(n+m)
 ```
