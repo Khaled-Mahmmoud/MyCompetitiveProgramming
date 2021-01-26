@@ -1,6 +1,6 @@
 ```cpp
 // How to Check if an undirected graph has cycle ?
-// Directed Graph
+// Undirected Graph
 vector<vector<int>>adj;
 vector<bool>vis;
 vector<int>parent;
@@ -34,6 +34,48 @@ int main()
     for(int i=1; i<=n; i++)
         if(!vis[i])
             dfs(i,-1);
+    if(cnt)
+        cout<<"YES";
+    else
+        cout<<"NO";
+    return 0;
+}
+
+// Directed Graph
+vector<vector<int>>adj;
+vector<int>vis;
+vector<int>parent;
+int cnt;
+void dfs(int u)
+{
+    if(vis[u]==2)
+        return;
+    if(vis[u] == 1)
+    {
+		cnt++;
+		return;
+	}
+	vis[u] = 1;
+	for(auto v:adj[u])
+		dfs(v);
+	vis[u] = 2;
+}
+int main()
+{
+    int n,m;
+    cin>>n>>m;
+    adj.resize(n+1);
+    vis.resize(n+1);
+    parent.resize(n+1);
+    while(m--)
+    {
+        int u,v;
+        cin>>u>>v;
+        adj[u].push_back(v);
+    }
+    for(int i=1; i<=n; i++)
+        if(!vis[i])
+            dfs(i);
     if(cnt)
         cout<<"YES";
     else
