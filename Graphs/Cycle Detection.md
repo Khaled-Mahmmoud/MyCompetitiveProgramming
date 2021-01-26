@@ -16,7 +16,7 @@ void dfs(int u,int p)
         if(v!=p)
             dfs(v,u);
 }
-int main()
+void solve()
 {
     int n,m;
     cin>>n>>m;
@@ -37,7 +37,6 @@ int main()
         cout<<"YES";
     else
         cout<<"NO";
-    return 0;
 }
 
 // Directed Graph
@@ -59,7 +58,7 @@ void dfs(int u)
 		dfs(v);
 	vis[u] = 2;
 }
-int main()
+void solve()
 {
     int n,m;
     cin>>n>>m;
@@ -79,7 +78,5 @@ int main()
         cout<<"YES";
     else
         cout<<"NO";
-    return 0;
 }
-
 ```
