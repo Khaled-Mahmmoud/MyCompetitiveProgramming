@@ -1,7 +1,7 @@
 ```cpp
 /*
- n cities form a ring. cities i and i + 1 (1 ≤ i < n) are connected by a road, as well as the cities n and 1. 
-build m new roads. Each road will connect two cities. Each road should be a curve which lies inside or outside the ring.
+n cities form a ring. cities i and i + 1 (1 ≤ i < n) are connected by a road, as well as the cities n and 1. 
+build m new roads. Each road connect two cities and be a curve which lies inside or outside the ring.
 New roads will have no common points with the ring (except the endpoints of the road).
 4 ≤ n ≤ 100, 1 ≤ m ≤ 100
 */
