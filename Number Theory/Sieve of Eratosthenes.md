@@ -10,7 +10,7 @@ void sieve()
 {
     for(int i=2;i*i<N;i++)
     if(!spf[i])
-        for(int j=i;j<N;j+=i)
+        for(int j=i*i;j<N;j+=i)
 	    if(!spf[j])
                spf[j] = i;
     
@@ -50,7 +50,7 @@ void sieve()
 	vector<bool>mark(N,true);
 	for (int i=2; i*i<limit; i++)
 	if (mark[i])
-	    for (int j=i*2; j<limit; j+=i)
+	    for (int j=i*i; j<limit; j+=i)
 		mark[j] = false;
 	
 	for (int i=2; i<limit; i++)
