@@ -50,13 +50,13 @@ void dfs(int u)
         return;
     if(vis[u] == 1)
     {
-		cnt++;
-		return;
-	}
-	vis[u] = 1;
-	for(auto v:adj[u])
-		dfs(v);
-	vis[u] = 2;
+        cnt++;
+        return;
+    }
+    vis[u] = 1;
+    for(auto v:adj[u])
+        dfs(v);
+    vis[u] = 2;
 }
 void solve()
 {
