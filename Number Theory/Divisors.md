@@ -1,8 +1,8 @@
 ```cpp
-vector<int> get_div(int n) 
+vector<ll> get_div(ll n) 
 {
-    vector<int> divs;
-    for (int i = 1; i * i <= n; ++i) 
+    vector<ll> divs;
+    for (ll i = 1; i * i <= n; ++i) 
     {
         if (n % i) 
            continue;
