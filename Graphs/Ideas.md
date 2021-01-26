@@ -35,16 +35,6 @@ int main()
     bfs(1,0);
     return 0;
 }
-
-// How to find connected components using DFS?
-for(int i = 1;i <= nodes;++i) 
-{
-    if(visited[i] == false)     
-    {
-         dfs(i);
-         cnt_component++;
-    }
-}
 // Calculate maximum number of edges that can be removed from the graph 
 // so that it contains exactly K connected components.
 vector<vector<int>>adj;
