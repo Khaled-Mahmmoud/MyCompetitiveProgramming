@@ -9,7 +9,7 @@ public:
         spf.resize(N);
         for(int i=2; i*i<N; i++)
             if(!spf[i])
-                for(int j=2*i; j<N; j+=i)
+                for(int j=i*2; j<N; j+=i)
                     if(!spf[j])
                         spf[j] = i;
         for(int i=2; i<N; i++)
