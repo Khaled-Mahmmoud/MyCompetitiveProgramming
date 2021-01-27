@@ -1,4 +1,5 @@
 ```cpp
+// O(n.log(log(n))) and Space: O(sqrt(n))
 class SEGSIEVE
 {
 public:
@@ -16,7 +17,7 @@ public:
                 prime.push_back(i);
             }
     }
-    // Get all prime numbers less than n in time O(n.log(log(n))) and Space: O(sqrt(n))
+    // get all prime numbers less than n 
     void segmentedSieve(int n)
     {
         int L = sqrt(n)+1;
