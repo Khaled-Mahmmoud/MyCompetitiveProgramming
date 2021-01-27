@@ -12,10 +12,7 @@ public:
                     mark[j] = false;
         for (int i=2; i<L; i++)
             if (mark[i])
-            {
-                cout << i << " ";
                 prime.push_back(i);
-            }
     }
     // get all prime numbers less than n
     void segmentedSieve(int n)
@@ -23,6 +20,8 @@ public:
         int L = sqrt(n)+1;
         vector<int> prime;
         simpleSieve(L, prime);
+        for(int i=0;i<sz(prime);i++)
+            cout<<prime[i]<<' ';
         int low = L;
         int high = 2*L;
         while (low < n)
@@ -43,7 +42,7 @@ public:
             }
             for (int i = low; i<high; i++)
                 if (mark[i - low] == true)
-                    cout << i << " ";
+                    cout<<i<<' ';
             low = low + L;
             high = high + L;
         }
@@ -67,7 +66,7 @@ public:
                 mark[j-low] = false;
         }
         for (int i = low; i<=high; i++)
-            if (mark[i - low] == true)
+            if (mark[i - low] == true&&i!=1)
                 cout<<i<<' ';
     }
 };
