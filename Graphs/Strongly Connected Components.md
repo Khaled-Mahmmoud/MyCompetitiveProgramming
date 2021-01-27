@@ -1,7 +1,7 @@
 ```cpp
 class SCC
 {
-    int n, e, t,cmp;
+    int n, e, t = 0, cmp = 0;
     vector<vector<int>>adj;
     vector<int> s,vis,compID,compH,idx,low;
 public:
@@ -37,7 +37,6 @@ public:
         cin >> n >> e;
         adj.resize(n+1);
         s = vis = compID = compH = idx = low = vector<int>(sz(adj));
-        t = cmp = 0;
         for(int i=0; i<e; i++)
         {
             int u,v;
