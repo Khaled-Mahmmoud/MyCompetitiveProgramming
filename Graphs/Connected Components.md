@@ -10,52 +10,56 @@ for(int i = 1;i <= nodes;++i)
 }
 
 // Strongly Connected Components (Directed Graph)
-const int N = 1e5;
-int n,m,idx[N],low[N],comp[N],cmp,t;
-vector<vector<int>>adj;
-vector<int>s;
-bool vis[N];
-void tarjan(int u)
+class SCC
 {
-    idx[u] = low[u] = ++t;
-    s.push_back(u);
-    vis[u] = true;
-    for(auto &v:adj[u])
+    int n, e, t,cmp;
+    vector<vector<int>>adj;
+    vector<int> s,vis,compID,compH,idx,low;
+public:
+    void tarjan(int u)
     {
-        if(idx[v]==0)
-           tarjan(v);
-        if(vis[v])
-            low[u] = min(low[u],low[v]);
-    }
-    if(idx[u]==low[u])
-    {
-        while(true)
+        idx[u] = low[u] = ++t;
+        s.push_back(u);
+        vis[u] = true;
+        for(auto v:adj[u])
         {
-            int v = s.back();
-            s.pop_back();
-            vis[v] = false;
-            comp[v] = cmp;
-            if(v==u)
-                break;
+            if (idx[v] == 0)
+                tarjan(v);
+            if (vis[v])
+                low[u] = min(low[u], low[v]);
         }
-        ++cmp;
+        if (idx[u] == low[u])
+        {
+            compH[cmp] = u;
+            while (true)
+            {
+                int v = s.back();
+                s.pop_back();
+                vis[v] = false;
+                compID[v] = cmp;
+                if (v == u)
+                    break;
+            }
+            ++cmp;
+        }
     }
-}
-int main()
-{
-    cin>>n>>m;
-    adj.resize(n+1);
-    for(int i=0;i<m;i++)
+    void solve()
     {
-        int u,v;
-        cin>>u>>v;
-        adj[u].push_back(v);
+        cin >> n >> e;
+        adj.resize(n+1);
+        s = vis = compID = compH = idx = low = vector<int>(sz(adj));
+        t = cmp = 0;
+        for(int i=0; i<e; i++)
+        {
+            int u,v;
+            cin>>u>>v;
+            adj[u].push_back(v);
+        }
+        for(int i=1; i<=n; i++)
+            if(idx[i]==0)
+                tarjan(i);
     }
-    for(int i=1;i<=n;i++)
-        if(idx[i]==0)
-        tarjan(i);
-    return 0;
-}
+};
 // Time Complexity O(N+E) 
 // Space Requirement O(N)
 ```
