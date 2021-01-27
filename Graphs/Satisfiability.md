@@ -55,22 +55,22 @@ public:
         adj.resize(2*e);
         s = vis = compID = compH = idx = low = vector<int>(sz(adj));
         t = cmp = 0;
-        vector<pair<int,int>>v;
+        vector<pair<int,int>>vec;
         for (int i = 0; i < e; ++i)
         {
-            int from, to;
-            cin >> from >> to;
-            --from;--to;
-            if (from > to)
-                swap(from, to);
-            v.push_back(make_pair(from, to));
+            int u, v;
+            cin >> u >> v;
+            --u;--v;
+            if (u > v)
+                swap(u, v);
+            vec.push_back(make_pair(u, v));
         }
         for (int i = 0; i < e; ++i)
             for (int j = 0; j < e; ++j)
             {
                 if (i == j)
                     continue;
-                if (v[i].first<v[j].first && v[i].second>v[j].first && v[i].second < v[j].second)
+                if (vec[i].first<vec[j].first && vec[i].second>vec[j].first && vec[i].second < vec[j].second)
                 {
                     add(i, j);
                     add(Not(i), Not(j));
@@ -98,6 +98,5 @@ public:
             else
                 cout<<'i';
     }
-};
-
+}; // O(n+e)
 ```
