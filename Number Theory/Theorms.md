@@ -1,5 +1,6 @@
 ```cpp
 // Goldbach's conjecture : It states that every even number greater than 2 is the sum of two prime numbers
+// Wilson's theorem: (p-1)!%p = p-1 IFF p is prime
 
 // Legendre’s formula: largest power of prime number in n! is n/p + n/(p^2) + n/(p^3) + …… (Legendre’s formula)
 int larg(int n,int p)
