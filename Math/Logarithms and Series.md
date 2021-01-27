@@ -84,6 +84,5 @@ double summation(int x, int n)
  Harmonic Series
  1 + 1/2 + 1/3 + 1/4 + 1/5 ... + 1/n is O(log n)
  1 + 1/2 + 1/3 + 1/7 + ... + 1/p is O(log log n) where p is largest prime less than n
-
 */
 ```
