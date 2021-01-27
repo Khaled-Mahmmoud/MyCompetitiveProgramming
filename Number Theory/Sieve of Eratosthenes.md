@@ -1,21 +1,22 @@
 ```cpp
 class SIEVE
 {
+    const int N = 1e7;
     vector<int>spf;
 public:
-    void sieve(int n)
+    SIEVE()
     {
-        spf.resize(n);
-        for(int i=2; i*i<n; i++)
+        spf.resize(N);
+        for(int i=2; i*i<N; i++)
             if(!spf[i])
-                for(int j=i*i; j<n; j+=i)
+                for(int j=i*i; j<N; j+=i)
                     if(!spf[j])
                         spf[j] = i;
-        for(int i=3; i<n; i+=2)
+        for(int i=3; i<N; i+=2)
             if(!spf[i])
                 spf[i] = i;
     }// O(n.log(log(n)))
-    
+
     vector<int> primeFactors(int x)
     {
         vector<int> res;
@@ -26,12 +27,12 @@ public:
         }
         return res;
     }// O(log(n))
-    
+
     bool isprime(int x)
     {
         return (x == spf[x]);
     }
-    
+
     // Store all prime numbers less than 10^7 in vector
     vector<int> getPrimes(int n)
     {
@@ -41,7 +42,7 @@ public:
                 ans.push_back(i);
         return ans;
     }// O(n)
-    
+
     // Generate prime divisors for all number from 1 to n
     vector<vector<int>> primeDivisors(int n)
     {
@@ -51,4 +52,4 @@ public:
         return ans;
     }// O(n*log(n)) // max -> 1e6
 };
- ```
+```
