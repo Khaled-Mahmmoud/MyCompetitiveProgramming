@@ -42,9 +42,10 @@ public:
         {
             int u,v;
             cin>>u>>v;
+            u--,v--;
             adj[u].push_back(v);
         }
-        for(int i=1; i<=n; i++)
+        for(int i=0; i<n; i++)
             if(idx[i]==0)
                 tarjan(i);
     }
