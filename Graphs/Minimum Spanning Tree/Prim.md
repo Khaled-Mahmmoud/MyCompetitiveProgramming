@@ -1,6 +1,6 @@
 ```cpp
 // Prim Algorithm 
-// Computes the minimum/maximum spanning tree of a weighted graph
+// Computes the minimum spanning tree of a weighted graph
 class MST
 {
     struct edge
@@ -10,7 +10,7 @@ class MST
         edge(int t, int w) : to(t), weight(w) {}
         bool operator<(const edge& rhs) const
         {
-            return weight > rhs.weight;
+            return weight > rhs.weight; // < for Maximum Spanning Tree
         }
     };
     int n,e;
