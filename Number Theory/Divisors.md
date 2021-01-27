@@ -83,19 +83,6 @@ ll get_sum_div(int n)
 	return ans;
 }
 
-// return sum of divisors for all number from 1 to n
-// max -> 1e9
-ll get_sum_div(ll x)
-{
-    ll ans = 0, left = 1, right;
-    for (; left <= x; left = right + 1)
-    {
-        right = x / (x / left);
-        ans += (x / left) * (left + right) * (right - left + 1) / 2;
-    }
-    return ans;
-}
-
 /*
 // Sum of divisors of a number	
 n = (p1^a1) * (p2^a2)  *  … (pk^ak).
