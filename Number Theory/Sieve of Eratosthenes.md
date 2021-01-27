@@ -33,7 +33,7 @@ public:
         return (x == spf[x]);
     }
 
-    // Store all prime numbers less than 10^7 in vector
+    // Store all prime numbers less than n
     vector<int> getPrimes(int n)
     {
         vector<int> ans;
