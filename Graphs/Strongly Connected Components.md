@@ -49,7 +49,5 @@ public:
             if(idx[i]==0)
                 tarjan(i);
     }
-};
-// Time Complexity O(N+E) 
-// Space Requirement O(N)
+}; O(n+e) 
 ```
