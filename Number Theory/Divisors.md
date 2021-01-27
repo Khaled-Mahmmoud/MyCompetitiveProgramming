@@ -1,5 +1,5 @@
 ```cpp
-class DIV
+class Div
 {
     void get_div(ll n)
     {
