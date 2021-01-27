@@ -17,7 +17,7 @@ public:
                 prime.push_back(i);
             }
     }
-    // get all prime numbers less than n 
+    // get all prime numbers less than n
     void segmentedSieve(int n)
     {
         int L = sqrt(n)+1;
@@ -47,6 +47,28 @@ public:
             low = low + L;
             high = high + L;
         }
-    } 
+    }
+    // get all prime numbers between low and high <= 1e9 and high - low <= 1e6
+    void segmentedSieve(int low,int high)
+    {
+        int L = sqrt(high)+1;
+        vector<int> prime;
+        simpleSieve(L, prime);
+        bool mark[(high-low+1)+1];
+        memset(mark, true, sizeof(mark));
+        for (int i = 0; i < sz(prime); i++)
+        {
+            int loLim = (low/prime[i]) * prime[i];
+            if (loLim < low)
+                loLim += prime[i];
+            if(loLim == prime[i])
+                loLim += prime[i];
+            for (int j=loLim; j<=high; j+=prime[i])
+                mark[j-low] = false;
+        }
+        for (int i = low; i<=high; i++)
+            if (mark[i - low] == true)
+                cout<<i<<' ';
+    }
 };
 ```
