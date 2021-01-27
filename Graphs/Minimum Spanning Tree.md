@@ -1,54 +1,57 @@
 ```cpp
 // Prim Algorithm 
 // Computes the minimum/maximum spanning tree of a weighted graph
-// O(n.log(n))
-struct edge
+class MST
 {
-    int to, weight;
-    edge() {}
-    edge(int t, int w) : to(t), weight(w) {}
-    bool operator<(const edge& rhs) const
+    struct edge
     {
-        // for maximum spanning tree we used
-        //  return weight < rhs.weight;
-        return weight > rhs.weight;
-    }
-};
-const int N = 100100;
-int n,m;
-int vis[N];
-vector<edge> adj[N];
-int primMST()
-{
-    priority_queue<edge> pq;
-    pq.push(edge(1, 0));
-    int MST = 0;
-    while(!pq.empty())
+        int to, weight;
+        edge() {}
+        edge(int t, int w) : to(t), weight(w) {}
+        bool operator<(const edge& rhs) const
+        {
+            return weight > rhs.weight;
+        }
+    };
+    int n,e;
+    vector<int>vis;
+    vector<vector<edge>>adj;
+public:
+    int primMST()
     {
-        int u = pq.top().to;
-        int w = pq.top().weight;
-        pq.pop();
-        if (vis[u]++)
-            continue;
-        MST += w;
-        for(edge& v : adj[u])
-            if(!vis[v.to])
-                pq.push(v);
+        priority_queue<edge> pq;
+        pq.push(edge(1, 0));
+        int MST = 0;
+        while(!pq.empty())
+        {
+            int u = pq.top().to;
+            int w = pq.top().weight;
+            pq.pop();
+            if (vis[u]++)
+                continue;
+            MST += w;
+            for(edge& v : adj[u])
+                if(!vis[v.to])
+                    pq.push(v);
+        }
+        return MST;
     }
-    return MST;
-}
-int main()
-{
-    cin >> n >> m;
-    while (m--)
+    void solve()
     {
-        int u, v, w;
-        cin>>u>>v>>w;
-        adj[u].push_back(edge(v, w));
-        adj[v].push_back(edge(u, w));
+        cin >> n >> e;
+        adj.resize(n);
+        vis.resize(n);
+        while (e--)
+        {
+            int u, v, w;
+            cin>>u>>v>>w;
+            u--,v--;
+            adj[u].push_back(edge(v, w));
+            adj[v].push_back(edge(u, w));
+        }
+        cout<<primMST();
     }
-    cout<<primMST();
-}
+}; // O(n.log(n))
 
 // Kruskal Algorithm
 // Computes the minimum spanning tree of a weighted graph
