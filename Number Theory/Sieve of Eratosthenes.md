@@ -15,6 +15,7 @@ public:
             if(!spf[i])
                 spf[i] = i;
     }// O(n.log(log(n)))
+    
     vector<int> primeFactors(int x)
     {
         vector<int> res;
@@ -25,10 +26,12 @@ public:
         }
         return res;
     }// O(log(n))
+    
     bool isprime(int x)
     {
         return (x == spf[x]);
     }
+    
     // Store all prime numbers less than 10^7 in vector
     vector<int> getPrimes(int n)
     {
@@ -38,6 +41,7 @@ public:
                 ans.push_back(i);
         return ans;
     }// O(n)
+    
     // Generate prime divisors for all number from 1 to n
     vector<vector<int>> primeDivisors(int n)
     {
