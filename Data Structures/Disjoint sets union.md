@@ -1,6 +1,5 @@
 ```cpp
-// Disjoint-set data structure to tracks a set of elements partitioned
-// into a number of disjoint subsets
+// Disjoint-set data structure to tracks a set of elements partitioned into a number of disjoint subsets
 class DSU
 {
     int cnt;
