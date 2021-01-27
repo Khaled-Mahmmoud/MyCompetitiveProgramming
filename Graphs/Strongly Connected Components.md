@@ -1,15 +1,4 @@
 ```cpp
-// Connected Components (Undirected Graph)
-for(int i = 1;i <= nodes;++i) 
-{
-    if(visited[i] == false)     
-    {
-         dfs(i);
-         cnt_component++;
-    }
-}
-
-// Strongly Connected Components (Directed Graph)
 class SCC
 {
     int n, e, t,cmp;
