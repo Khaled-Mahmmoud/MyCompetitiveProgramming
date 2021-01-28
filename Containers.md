@@ -164,9 +164,12 @@ for(int i=0;i<v.size();i++)
      cout<<v[i]<<' ';     // 1 2 3 4 5
 
 // convert string to lowercase 
-transform(str1.begin(),str1.end(),str1.begin(),::tolower); // O(n)
+transform(str.begin(),str.end(),str.begin(),::tolower); // O(n)
 // covert string to uppercase 
-transform(str1.begin(),str1.end(),str1.begin(),::toupper); // O(n)
+transform(str.begin(),str.end(),str.begin(),::toupper); // O(n)
+
+char c = tolower(str[i]);
+char c = toupper(str[i]);
 
 sqrt(7) = 2.64575 // Returns the square root of x
 cbrt(43) = 3.5033 // Returns the cubic root of x
