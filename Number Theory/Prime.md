@@ -1,6 +1,7 @@
 ```cpp
 class PRIME
 {
+public:
     bool isprime(ll n)
     {
         if (n < 2)
@@ -12,7 +13,7 @@ class PRIME
                 return 0;
         return 1;
     }// O(sqrt(n))
-    
+
     void primeFactors(ll n)
     {
         for(ll i=2; i*i<=n; i++)
