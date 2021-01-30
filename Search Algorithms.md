@@ -2,20 +2,22 @@
 int binary_search()
 {
     int l = 0, r = 1e9;
-    while (l < r)
+    int ans = l;
+    while (l <= r)
     {
         int mid = l + (r-l) / 2;
 
         if (valid(mid))
-            r = mid;
+            l = mid + 1,ans = mid;
         else
-            l = mid + 1;
+            r = mid - 1;
     }
-    return l;
+    return ans;
 }
 double binary_search_d()
 {
     double l = 0, r = 1e9;
+    double ans = l;
     while (r-l > 1e-9) // somtimes give us time limited
     // better than above : while (r-l > 1e-6)
     // better than above : for (int i = 0; i < 100; ++i)
@@ -23,11 +25,11 @@ double binary_search_d()
         double mid = l + (r-l) / 2;
 
         if (valid(mid))
-            r = mid;
+            l = mid,ans = l;
         else
-            l = mid;
+            r = mid;
     }
-    return l;
+    return ans;
 }
 // Ternary search to find an interger local minimum
 int ternary_search(int l, int r)	
