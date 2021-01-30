@@ -8,7 +8,7 @@ class DSU
 public:
     DSU(int n)
     {
-        cnt = n;// the number of disjoint sets
+        cnt = n;
         siz.resize(n, 1);
         par.resize(n);
         for(int i=0;i<n;i++)
@@ -33,7 +33,6 @@ public:
         par[u] = v;
         return true;
     }
-    // return the size of the set having the given element "u"
     int get_set_size(int u)
     {
         return siz[find_set(u)];
