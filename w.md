@@ -7,5 +7,5 @@
 74:C1:7D:95:8C:A1 //  Mohamed' wife
 42:10:E4:3F:69:03 //	Mohamed
 80:35:C1:59:20:F3 // Ahmed
-D0:67:E5:51:AB:BE	//  Khaled
+D0:67:E5:51:AB:BE	// Khaled
 ```
