@@ -41,15 +41,6 @@ if (abs(a-b) < 1e-9)
 #define EPS 1e-8
 int dcmp(double x, double y) { return fabs(x - y) <= EPS ? 0 : x < y ? -1 : 1; }
 
-struct Double 
-{
-	double d;
-	Double() {d = 0.0;};
-	Double(double d):d(d){}
-	bool operator < (const Double& D) const{return dcmp(d, D.d) < 0;}
-	bool operator > (const Double& D) const{return dcmp(d, D.d) > 0;}
-	bool operator ==(const Double& D) const{return dcmp(d, D.d) ==0;}
-};
 map<Double,int>m;
 
 /*
