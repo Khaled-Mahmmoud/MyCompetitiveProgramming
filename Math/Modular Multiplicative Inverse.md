@@ -43,20 +43,20 @@ if gcd(a, m) = 1 => a^φ(m) ≡ 1 (mod m)
 divide both sides by a then a^(φ(m)-1) ≡ a^-1 (mod m)
 if m is prime a^(m-2) ≡ a^-1 (mod m)
 */
-int power(int a,int b,int mod)
+ll power(ll a,ll b,ll mod)
 {
-    int ans = 1;
+    ll ans = 1ll;
     a %= mod;
     while(b)
     {
-        if(b%1)
+        if(b&1ll)
             ans = (ans*a)%mod;
         b>>=1;
         a = (a * a)%mod;
     }
     return ans;
 }
-int mod_inverse(int a,int m)
+ll mod_inverse(ll a,ll m)
 {
     if(isprime(m))
         return power(a,m-2,m);
