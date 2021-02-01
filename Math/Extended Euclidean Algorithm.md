@@ -177,12 +177,6 @@ double gcd(double a, double b)
 } 
 /*
 Find GCD of rational numbers
-Input : vect[] = {2/5, 8/9, 16/18,10/27}, Output : 2/405
-**Solution** First find the GCD of all numerator of rational number
-then find the LCM of all the denominator of rational number then 
-divide GCD of all numerator/ LCM of all the denominator then Reduce 
-the fraction to Lowest Fraction this the GCD of rational number’s
-Formula:
       GCD of all the numerator of Rational number's
 GCD = -----------------------------------------------
       LCM of all the denominator of Rational number's
@@ -210,11 +204,6 @@ void gcdOfRationals(vector<pair<int, int> > vect)
 }
 /*
 Find LCM of rational numbers
-Input : vect[] = {2/7, 3/14, 5/3}, Output : 30/1
-**Solution** First find the lcm of all numerator of rational number then 
-find the gcd of all the denominator of rational number then 
-divide lcm of all numerator/ gcd of all the denominator then Reduce 
-the fraction to Lowest Fraction this the lcm of rational number’s.
       LCM of all the numerator of Rational number's
 LCM = -----------------------------------------------
       GCD of all the denominator of Rational number's
