@@ -176,17 +176,6 @@ double gcd(double a, double b)
         return (gcd(b, a - double(a / b) * b)); 
 } 
 /*
-Find GCD of rational numbers
-      GCD of all the numerator of Rational number's
-GCD = -----------------------------------------------
-      LCM of all the denominator of Rational number's
-      
-Find LCM of rational numbers
-      LCM of all the numerator of Rational number's
-LCM = -----------------------------------------------
-      GCD of all the denominator of Rational number's
-*/
-/*
 Least Common Denominator (LCD)
 The lowest Common Denominator(LCD) or Least Common Denominator is 
 the Least Common Multiple of the denominators of a set of fractions.
