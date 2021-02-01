@@ -180,29 +180,7 @@ Find GCD of rational numbers
       GCD of all the numerator of Rational number's
 GCD = -----------------------------------------------
       LCM of all the denominator of Rational number's
-*/
-int gcdOfNumerator(vector<pair<int, int> > vect)
-{
-    int gcd = vect[0].first;
-    for (int i = 1; i < sz(vect); i++)
-        gcd = __gcd(vect[i].first, gcd);
-      return gcd;
-}
-int lcmOfDemoninators(vector<pair<int, int> > vect)
-{
-    int lcm = vect[0].second;
-    for (int i = 1; i < sz(vect); i++)
-        lcm = LCM(vect[i].second, lcm);
-    return lcm;
-}
-void gcdOfRationals(vector<pair<int, int> > vect)
-{
-    int Numerator = gcdOfNumerator(vect);
-    int Demoninator = lcmOfDemoninators(vect);
-    int g = __gcd(Numerator,Demoninator);
-    cout<<Numerator/g<< "/" << Demoninator/g<<endl;
-}
-/*
+      
 Find LCM of rational numbers
       LCM of all the numerator of Rational number's
 LCM = -----------------------------------------------
