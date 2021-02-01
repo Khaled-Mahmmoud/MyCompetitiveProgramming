@@ -1,4 +1,5 @@
 ```cpp
+/*
 a ≡ b (mod n)
 called a and b congruent modulo n
 - It means a%n = b%n = x,
@@ -43,4 +44,5 @@ Hint: 3^3 = 27 = -1 (% 28) and 1000 = 3*333+1
 Then equation = [(-1 * 3) + 3] (% 28) = 0
 for this 27 ≡ -1 (% 28) then n ≡ n - m (% m)
 a % (a-b) = b % (a-b)
+*/
 ```
