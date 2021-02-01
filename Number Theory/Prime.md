@@ -14,18 +14,20 @@ public:
         return 1;
     }// O(sqrt(n))
 
-    void primeFactors(ll n)
+    vector<int> primeFactors(ll n)
     {
+        vector<int>res;
         for(ll i=2; i*i<=n; i++)
         {
             while(!(n%i))
             {
-                cout<<i<<" ";
+                res.push_back(i);
                 n/=i;
             }
         }
-        if (n>1)
-            cout<<n<<" ";
+        if(n>1)
+            res.push_back(n);
+        return res;
     }// O(sqrt(n))
 };
 ```
