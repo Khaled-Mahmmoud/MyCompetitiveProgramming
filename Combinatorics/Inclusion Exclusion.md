@@ -20,7 +20,7 @@ void inc_exe(int idx = 0)
         if(sub.empty())
             return;
         int d = 1;
-        for(int i=0;i<sub.size();i++)
+        for(int i=0;i<sz(sub);i++)
             d *= sub[i];
         if(sub.size()&1)
             ans += n/d;
