@@ -51,7 +51,7 @@ ll power(ll a,ll b,ll mod)
     {
         if(b&1ll)
             ans = (ans*a)%mod;
-        b>>=1;
+        b>>=1ll;
         a = (a * a)%mod;
     }
     return ans;
