@@ -186,27 +186,6 @@ Find LCM of rational numbers
 LCM = -----------------------------------------------
       GCD of all the denominator of Rational number's
 */
-int lcmOfNumerator(vector<pair<int, int> > vect)
-{
-    int lcm = vect[0].first;
-    for (int i = 1; i <sz(vect); i++)
-        lcm = LCM(vect[i].first, lcm);
-      return lcm;
-}
-int gcdOfDemoninators(vector<pair<int, int> > vect)
-{
-    int gcd = vect[0].second;
-    for (int i = 1; i < sz(vect); i++)
-        gcd = __gcd(vect[i].second, gcd);
-    return gcd;
-}
-void lcmOfRationals(vector<pair<int, int> > vect)
-{
-    int Numerator = lcmOfDemoninators(vect);
-    int Demoninator = gcdOfNumerator(vect);
-    int g = __gcd(Numerator,Demoninator);
-    cout<<Numerator/g<< "/" << Demoninator/g<<endl;
-}
 /*
 Least Common Denominator (LCD)
 The lowest Common Denominator(LCD) or Least Common Denominator is 
