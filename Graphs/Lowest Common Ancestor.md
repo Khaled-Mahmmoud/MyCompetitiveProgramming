@@ -40,7 +40,7 @@ int lca(int u, int v)
     }
     return dp[u][0];
 }
-int main()
+void solve()
 {
     cin>>n;
     for (int i = 0; i < n-1; ++i)
@@ -62,7 +62,6 @@ int main()
     }
     cin>>a>>b;
     cout<<lca(a,b);
-    return 0;
 }
 // Build Complexity : O(n.log n)
 // Query Complexity : O(log n)
