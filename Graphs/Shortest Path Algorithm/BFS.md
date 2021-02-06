@@ -1,6 +1,6 @@
 ```cpp
-// BFS : Computes the shortest path between the given source node 
-and all the other nodes in an unweighted graph. (Single Source Shortest Path (SSSP))
+// BFS : Computes the shortest path between the given source node and all the other nodes in an unweighted graph.
+// (Single Source Shortest Path (SSSP))
 const int N = 100100;
 int n, m, dis[N], par[N];             
 vector<int> edges[N];   
