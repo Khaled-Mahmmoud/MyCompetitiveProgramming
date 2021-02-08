@@ -5,9 +5,11 @@ class DIAMETER
 {
     int n,e,mx,pos;
     vector<vector<int>>adj;
+    vector<int>par;
 public:
     void dfs(int u, int p, int cost)
     {
+        par[u] = p;
         if(mx<cost)
         {
             mx = cost;
@@ -16,6 +18,12 @@ public:
         for(auto v:adj[u])
             if(adj[u][v]!= p)
                 dfs(v, u, cost + 1);
+    }
+    void printPath(int v)
+    {
+        if(~par[v])
+            printPath(par[v]);
+        cout<<v<<'\n';
     }
     int calcTreeDiameter()
     {
@@ -26,12 +34,14 @@ public:
         dfs(u, -1, 0);
         int v = pos;
         cout<<u<<" "<<v<<'\n';
+        printPath(v);
         return mx;
     }
     void solve()
     {
         cin>>n>>e;
         adj.resize(n);
+        par = vector<int>(n);
         while(e--)
         {
             int u,v;
