@@ -31,6 +31,25 @@ int binomial_coeff(int n, int r)
 } 
 // Time complexity : O(n * r)
 
+ll ncr(int n, int r)
+{
+    if (n < r)
+        return 0;
+    r = min(r,n - r);
+    ll p = 1,k = 1;
+    while(r)
+    {
+        p *= n;
+        k *= r;
+        ll g = __gcd(p,k);
+        p/=g;
+        k/=g;
+        n--;
+        r--;
+    }
+    return p/k;
+}
+// Time complexity : O(n * log n)
 
 // Combinations nCr % m for Large Numbers where m is prime
 #define mod 1000000007
@@ -72,5 +91,5 @@ void solve()
     cin>>n>>r;
     cout<<ncr(n,r)<<'\n';
 }
-// Time complexity : O(nlog(mod))
+// Time complexity : O(n log mod)
 ```
