@@ -6,7 +6,7 @@ public:
     {
         if (n < 2)
             return 0;
-        if (!(n&1))
+        if (!(n&1ll))
             return (n == 2);
         for (ll i = 3; i * i <= n; i += 2)
             if (!(n%i))
