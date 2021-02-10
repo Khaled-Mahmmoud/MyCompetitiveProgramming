@@ -1,35 +1,32 @@
 ```cpp
 //  Check undirected graph contains a Hamiltonian Path or not?
-int n;
+int n,cnt = 0;
 int label[20];
 int adj[20][20];
-bool dfs(int v,int cnt)
+void dfs(int v,int k)
 {
-    if(cnt == n)
-        return true;
+    if(k == n)
+        cnt++;
     for(int i=0; i<n; i++)
         if(adj[v][i] && label[i] == 0)
         {
             label[i] = 1;
-            if(dfs(i,cnt + 1))
-                return true;
+            dfs(i,k + 1);
             label[i] = 0;
         }
-    return false;
 }
-bool check()
+void check()
 {
     for(int i=0; i<n; i++)
     {
         label[i] = 1;
-        if(dfs(i,1))
-            return true;
+        dfs(i,1);
         label[i] = 0;
     }
-    return false;
 }
 void hamil()
 {
+    cnt = 0;
     int e;
     cin>>n>>e;
     memset(label,0,sizeof label);
@@ -41,6 +38,7 @@ void hamil()
         u--,v--;
         adj[u][v] = adj[v][u] = 1;
     }
-    cout<<(check()?"YES":"NO")<<'\n';
+    check();
+    cout<<cnt<<'\n';
 }
 ```
