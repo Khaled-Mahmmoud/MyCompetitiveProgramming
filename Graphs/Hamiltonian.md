@@ -42,7 +42,7 @@ void hamil()
     cout<<cnt<<'\n';
 }
 
-// // Count number of Hamiltonian Cycle in undirected graph?
+// Count number of Hamiltonian Cycle in undirected graph?
 int n,cnt = 0,start;
 int label[20];
 int adj[20][20];
