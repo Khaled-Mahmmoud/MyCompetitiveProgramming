@@ -32,7 +32,7 @@ double binary_search_d()
     return ans;
 }
 // Ternary search to find an interger local minimum
-int ternary_search(int l, int r)	
+int ternary_search()	
 {	
     int l = 0, r = 1e6;	   
     while(r - l > 10)	
@@ -57,8 +57,9 @@ int ternary_search(int l, int r)
     return pos;	
 }
 // Ternary search on to find a real (floating) local minimum
-double ternary_search_d(double l, double r)
+double ternary_search_d()
 {
+    double l = 0, r = 1e9;
     while (r - l > 1e-9) // // somtimes give us time limited
     // better than above : while (r-l > 1e-6)
     // better than above : for (int i = 0; i < 100; ++i)
