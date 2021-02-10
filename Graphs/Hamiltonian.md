@@ -11,7 +11,7 @@ bool dfs(int v,int cnt)
         if(adj[v][i] && label[i] == 0)
         {
             label[i] = 1;
-            if(dfs(i , cnt + 1))
+            if(dfs(i,cnt + 1))
                 return true;
             label[i] = 0;
         }
