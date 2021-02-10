@@ -1,5 +1,5 @@
 ```cpp
-//  Check undirected graph contains a Hamiltonian Path or not?
+// Count number of Hamiltonian Path in undirected graph?
 int n,cnt = 0;
 int label[20];
 int adj[20][20];
@@ -40,5 +40,49 @@ void hamil()
     }
     check();
     cout<<cnt<<'\n';
+}
+
+// // Count number of Hamiltonian Cycle in undirected graph?
+int n,cnt = 0,start;
+int label[20];
+int adj[20][20];
+void dfs(int v,int k)
+{
+    if(k == n && adj[start][v])
+        cnt++;
+    for(int i=0; i<n; i++)
+        if(adj[v][i] && label[i] == 0)
+        {
+            label[i] = 1;
+            dfs(i,k + 1);
+            label[i] = 0;
+        }
+}
+void check()
+{
+    for(int i=0; i<n; i++)
+    {
+        start = i;
+        label[i] = 1;
+        dfs(i,1);
+        label[i] = 0;
+    }
+}
+void hamil()
+{
+    cnt = 0;
+    int e;
+    cin>>n>>e;
+    memset(label,0,sizeof label);
+    memset(adj,1,sizeof adj);
+    while(e--)
+    {
+        int u,v;
+        cin>>u>>v;
+        u--,v--;
+        adj[u][v] = adj[v][u] = 0;
+    }
+    check();
+    cout<<cnt/(n+n)<<'\n';
 }
 ```
