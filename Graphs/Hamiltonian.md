@@ -38,6 +38,7 @@ void solve()
     {
         int u,v;
         cin>>u>>v;
+        u--,v--;
         adj[u][v] = adj[v][u] = 1;
     }
     cout<<(check()?"YES":"NO")<<'\n';
