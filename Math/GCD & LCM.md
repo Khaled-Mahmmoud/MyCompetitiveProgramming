@@ -92,24 +92,7 @@ int main()
     cout<<gcd(a,c);
     return 0;
 }
-/*
-Product of given N fractions         
-Input : N = 3, num[] = { 1, 2, 5 }, den[] = { 2, 1, 6 }      
-Product of 1/2 * 2/1 * 5/6 is 10/12 = 5/6
-*/
-int main()
-{
-    int n1=1,n2=1;
-    for(int i=0;i<n;i++)
-    {
-        n1*=a[i];
-        n2*=b[i];
-    }
-    int g=gcd(n1,n2);
-    n1/=g;n2/=g;
-    cout<<n1<<'/'<<n2;
-    return 0;
-}
+
 /*
 Check if possible to move from given coordinate(x, y) to desired coordinate(a, b).  
 Only possible moves from any coordinate (i, j) are (i-j, j), (i, j-i) , (i+j, j) , (i, j+i)
