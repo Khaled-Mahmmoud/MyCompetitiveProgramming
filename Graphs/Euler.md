@@ -15,6 +15,7 @@ graph can have multiple edges / self edges
 - every graph has an even number of odd vertices
 - 2 * edges = sum of nodes degree
 */
+// Hierholzer's Algorithm for finding Euler Cycle
 vector<vector<int>>adj;
 vector<int>tour;
 int n,m;
