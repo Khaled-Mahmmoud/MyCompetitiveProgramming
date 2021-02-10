@@ -48,7 +48,7 @@ int label[20];
 int adj[20][20];
 void dfs(int v,int k)
 {
-    if(k == n && adj[start][v])
+    if(k == n&&adj[start][v])
         cnt++;
     for(int i=0; i<n; i++)
         if(adj[v][i] && label[i] == 0)
@@ -57,16 +57,6 @@ void dfs(int v,int k)
             dfs(i,k + 1);
             label[i] = 0;
         }
-}
-void check()
-{
-    for(int i=0; i<n; i++)
-    {
-        start = i;
-        label[i] = 1;
-        dfs(i,1);
-        label[i] = 0;
-    }
 }
 void hamil()
 {
@@ -82,7 +72,9 @@ void hamil()
         u--,v--;
         adj[u][v] = adj[v][u] = 0;
     }
-    check();
-    cout<<cnt/(n+n)<<'\n';
+    start = 0;
+    label[start] = 1;
+    dfs(start,1);
+    cout<<cnt/2<<'\n';
 }
 ```
