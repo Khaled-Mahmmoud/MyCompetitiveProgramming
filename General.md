@@ -144,15 +144,4 @@ int getLIS()
     }
     return len + 1;
 }
-
-// for reverse number
-ll rev(ll n)
-{
-    string str = to_string(n);
-    reverse(str.begin(),str.end());
-    ll n1 = 0;
-    for(int i=0;i<sz(str);i++)
-        n1 = n1 * 10 + (str[i]-'0');
-    return n1;
-}
 ```
