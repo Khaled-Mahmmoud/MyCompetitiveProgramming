@@ -1,8 +1,8 @@
 ```cpp
 //  Check undirected graph contains a Hamiltonian Path or not?
 int n;
-int label[10];
-int adj[10][10];
+int label[20];
+int adj[20][20];
 bool dfs(int v,int cnt)
 {
     if(cnt == n)
