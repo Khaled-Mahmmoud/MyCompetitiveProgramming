@@ -14,13 +14,10 @@ int binary_search()
     }
     return ans;
 }
-double binary_search_d()
+double binary_search(double l,double r)
 {
-    double l = 0, r = 1e9;
     double ans = l;
-    while (r-l > 1e-9) // somtimes give us time limited
-    // better than above : while (r-l > 1e-6)
-    // better than above : for (int i = 0; i < 100; ++i)
+    for (int i = 0; i < 100; ++i)
     {
         double mid = l + (r-l) / 2;
 
@@ -31,6 +28,10 @@ double binary_search_d()
     }
     return ans;
 }
+// while (r - l > 1e-9)  // somtimes give us time limited
+// better than above : while (r-l > 1e-6)
+// better than above : for (int i = 0; i < 100; ++i) 
+    
 // Ternary search to find an interger local minimum
 int ternary_search()	
 {	
@@ -57,12 +58,9 @@ int ternary_search()
     return pos;	
 }
 // Ternary search on to find a real (floating) local minimum
-double ternary_search_d()
+double ternary_search(double l,double r)
 {
-    double l = 0, r = 1e9;
-    while (r - l > 1e-9) // // somtimes give us time limited
-    // better than above : while (r-l > 1e-6)
-    // better than above : for (int i = 0; i < 100; ++i)
+    for (int i = 0; i < 100; ++i)
     {
         double mid1 = l + (r - l) / 3;
         double mid2 = r - (r - l) / 3;
