@@ -152,7 +152,7 @@ ll rev(ll n)
     reverse(str.begin(),str.end());
     ll n1 = 0;
     for(int i=0;i<sz(str);i++)
-        n1 *= 10 + (str[i]-'0');
+        n1 = n1 * 10 + (str[i]-'0');
     return n1;
 }
 ```
