@@ -28,7 +28,7 @@ bool check()
     }
     return false;
 }
-void solve()
+void hamil()
 {
     int e;
     cin>>n>>e;
@@ -43,5 +43,4 @@ void solve()
     }
     cout<<(check()?"YES":"NO")<<'\n';
 }
-
 ```
