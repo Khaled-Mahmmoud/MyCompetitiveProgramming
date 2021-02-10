@@ -1,7 +1,6 @@
 ```cpp
-int binary_search()
+int binary_search(int l,int r)
 {
-    int l = 0, r = 1e9;
     int ans = l;
     while (l <= r)
     {
@@ -33,9 +32,8 @@ double binary_search(double l,double r)
 // better than above : for (int i = 0; i < 100; ++i) 
     
 // Ternary search to find an interger local minimum
-int ternary_search()	
+int ternary_search(int l,int r)	
 {	
-    int l = 0, r = 1e6;	   
     while(r - l > 10)	
     {	    
         int mid1 = l + (r - l) / 3;	        
