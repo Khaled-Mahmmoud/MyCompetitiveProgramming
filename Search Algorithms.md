@@ -33,7 +33,7 @@ double binary_search_d()
 }
 // Ternary search to find an interger local minimum
 int ternary_search(int l, int r)	
-{	{
+{	
     int l = 0, r = 1e6;	   
     while(r - l > 10)	
     {	    
