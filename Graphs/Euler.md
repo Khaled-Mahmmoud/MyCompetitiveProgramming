@@ -1,7 +1,7 @@
 ```cpp
 // Hierholzer’s Algorithm : O(E)
 // Undirected Graph
-int e;
+int e,w;
 class Euler
 {
     int vertex;
@@ -14,39 +14,35 @@ public:
     }
     void addEdge(int u, int v)
     {
-        adj[u][v] = 1;
-        adj[v][u] = 1;
+        adj[u][v]++;
+        adj[v][u]++;
     }
     void removeEdge(int v,int u)
     {
-        adj[v].erase(u);
-        adj[u].erase(v);
+        adj[u][v]--;
+        adj[v][u]--;
+        if(adj[u][v]==0)
+        {
+            adj[v].erase(u);
+            adj[u].erase(v);
+        }
     }
     void printEulerPathCircuit()
     {
-
         int odd = 0;
         int oddVertex = 0;
         for(int i=1; i<=vertex; ++i)
-        {
             if(sz(adj[i])&1)
             {
                 ++odd;
                 oddVertex = i;
             }
-        }
         if(odd==0)
-        {
-            cout<<"Euler Circuit: ";
-            printEuler(1);
-        }
+            printEuler(w);
         else if(odd==2)
-        {
-            cout<<"Euler Path: ";
             printEuler(oddVertex);
-        }
         else
-            cout<<"Euler Path/Circuit Doesn't Exist"<<endl;
+            cout<<-1<<'\n';
     }
     void printEuler(int v)
     {
@@ -70,11 +66,11 @@ public:
         if(e==sz(epath)-1)
             while(!epath.empty())
             {
-                cout<<" "<<epath.top()<<" ";
+                cout<<epath.top()<<' ';
                 epath.pop();
             }
         else
-            cout<<"Euler Path/Circuit Doesn't Exist"<<endl;
+            cout<<-1<<'\n';
     }
 };
 void solve()
@@ -86,11 +82,11 @@ void solve()
     {
         int u,v;
         cin>>u>>v;
+        w = u;
         hr.addEdge(u,v);
     }
     hr.printEulerPathCircuit();
 }
-
 // Directed Graph
 int e;
 class Euler
