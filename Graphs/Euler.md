@@ -1,4 +1,5 @@
 ```cpp
+// Undirected Graph
 class Hier
 {
     int vertex;
