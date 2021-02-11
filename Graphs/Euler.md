@@ -92,13 +92,14 @@ void solve()
 }
 
 // Directed Graph
-class Hier
+int e;
+class Euler
 {
     int vertex;
     vector<unordered_map<int, int>> adj;
     vector<int> degree;
 public:
-    Hier(int v)
+    Euler(int v)
     {
         vertex = v;
         adj = vector<unordered_map<int, int>>(v + 1);
@@ -166,11 +167,27 @@ public:
                 removeEdge(u, adj[u].begin()->first);
             }
         }
-        while (!epath.empty())
-        {
-            cout<< " " <<epath.top()<< " ";
-            epath.pop();
-        }
+        if(e==sz(epath)-1)
+            while (!epath.empty())
+            {
+                cout<< " " <<epath.top()<< " ";
+                epath.pop();
+            }
+        else
+            cout << "Euler Path/Circuit Doesn't Exist" << endl;
     }
 };
+void solve()
+{
+    int n;
+    cin>>n>>e;
+    Euler hr(n);
+    for(int i=0; i<e; i++)
+    {
+        int u,v;
+        cin>>u>>v;
+        hr.addEdge(u,v);
+    }
+    hr.printEulerPathCircuit();
+}
 ```
