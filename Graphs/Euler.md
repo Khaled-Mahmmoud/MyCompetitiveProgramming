@@ -1,6 +1,7 @@
 ```cpp
 // Hierholzer’s Algorithm : O(E)
 // Undirected Graph
+int e;
 class Euler
 {
     int vertex;
@@ -66,13 +67,29 @@ public:
                 removeEdge(u,adj[u].begin()->first);
             }
         }
-        while(!epath.empty())
-        {
-            cout<<" "<<epath.top()<<" ";
-            epath.pop();
-        }
+        if(e==sz(epath)-1)
+            while(!epath.empty())
+            {
+                cout<<" "<<epath.top()<<" ";
+                epath.pop();
+            }
+        else
+            cout<<"Euler Path/Circuit Doesn't Exist"<<endl;
     }
 };
+void solve()
+{
+    int n;
+    cin>>n>>e;
+    Euler hr(n);
+    for(int i=0; i<e; i++)
+    {
+        int u,v;
+        cin>>u>>v;
+        hr.addEdge(u,v);
+    }
+    hr.printEulerPathCircuit();
+}
 
 // Directed Graph
 class Hier
