@@ -1,5 +1,5 @@
 ```cpp
-// Count number of Hamiltonian Path in undirected graph?
+// Hamiltonian Path 
 int n,cnt = 0;
 int label[20];
 int adj[20][20];
@@ -42,7 +42,7 @@ void hamil()
     cout<<cnt<<'\n';
 }
 
-// Count number of Hamiltonian Cycle in undirected graph?
+// Hamiltonian Cycle 
 int n,cnt = 0,start;
 int label[20];
 int adj[20][20];
