@@ -1,5 +1,5 @@
 ```cpp
-// Multi-source BFS : calculate which colored node is the closest to the given node 
+// Multi-Source BFS : calculate which colored node is the closest to the given node 
 // and print the shortest distance to the closest colored node. 
 void bfs()
 {
