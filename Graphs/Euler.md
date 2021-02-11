@@ -1,36 +1,74 @@
 ```cpp
-/*
-Euler Path: a path that use every edge exactly once
-path: different start and end
-number of odd degree vertices = 2
-graph can have multiple edges / self edges
-
-
-Euler Cycle: a cycle that use every edge exactly once
-cycle: start node = end node
-number of odd degree vertices = 0
-graph can have multiple edges / self edges
-
-- Note that there is not exist graph where number of odd degree vertices = 1,3,5,7
-- every graph has an even number of odd vertices
-- 2 * edges = sum of nodes degree
-*/
-// Hierholzer's Algorithm for finding Euler Cycle
-vector<vector<int>>adj;
-vector<int>tour;
-int n,m;
-void euler(int i)
+class Hier
 {
-    for(int j=1;j<=n;j++)
-    {
-        if(adj[i][j]) // this condtion for self loops
+	int vertex;
+	vector<unordered_map<int,int>> adj;
+	public:
+		Hier(int v)
+		{
+			vertex = v;
+			adj = vector<unordered_map<int,int>>(v+1);
+		}
+		void addEdge(int u, int v)
+		{
+			adj[u][v] = 1;
+			adj[v][u] = 1;
+		}
+		void removeEdge(int v,int u)
+		{
+			adj[v].erase(u);
+			adj[u].erase(v);
+		}
+		void printEulerPathCircuit()
+		{
+
+			int odd = 0;
+			int oddVertex = 0;
+			for(int i=1;i<=vertex;++i)
+            {
+				if(sz(adj[i])&1)
+				{
+					++odd;
+					oddVertex = i;
+				}
+			}
+			if(odd==0)
+			{
+				cout<<"Euler Circuit: ";
+				printEuler(1);
+			}
+			else if(odd==2)
+			{
+				cout<<"Euler Path: ";
+				printEuler(oddVertex);
+			}
+			else
+				cout<<"Euler Path/Circuit Doesn't Exist"<<endl;
+		}
+		void printEuler(int v)
         {
-            adj[i][j]--;
-            adj[j][i]--;
-            euler(j);
-        }
-    }
-    tour.push_back(i);
-}
-// this code don't work with multiple edges
+			stack<int> cpath;
+			stack<int> epath;
+			cpath.push(v);
+			while(!cpath.empty())
+            {
+				int u = cpath.top();
+				if(sz(adj[u])==0)
+                {
+					epath.push(u);
+					cpath.pop();
+				}
+				else
+				{
+					cpath.push(adj[u].begin()->first);
+					removeEdge(u,adj[u].begin()->first);
+				}
+			}
+			while(!epath.empty())
+            {
+				cout<<" "<<epath.top()<<" ";
+				epath.pop();
+			}
+		}
+};
 ```
