@@ -1,11 +1,11 @@
 ```cpp
 // Undirected Graph
-class Hier
+class Euler
 {
     int vertex;
     vector<unordered_map<int,int>> adj;
 public:
-    Hier(int v)
+    Euler(int v)
     {
         vertex = v;
         adj = vector<unordered_map<int,int>>(v+1);
