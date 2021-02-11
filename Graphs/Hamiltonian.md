@@ -64,13 +64,13 @@ void hamil()
     int e;
     cin>>n>>e;
     memset(label,0,sizeof label);
-    memset(adj,1,sizeof adj);
+    memset(adj,0,sizeof adj);
     while(e--)
     {
         int u,v;
         cin>>u>>v;
         u--,v--;
-        adj[u][v] = adj[v][u] = 0;
+        adj[u][v] = adj[v][u] = 1;
     }
     start = 0;
     label[start] = 1;
