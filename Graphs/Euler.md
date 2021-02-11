@@ -87,8 +87,9 @@ void solve()
     }
     hr.printEulerPathCircuit();
 }
+
 // Directed Graph
-int e;
+int e,w;
 class Euler
 {
     int vertex;
@@ -103,12 +104,14 @@ public:
     }
     void addEdge(int u, int v)
     {
-        adj[u][v] = 1;
+        adj[u][v]++;
         degree[u]++;
         degree[v]--;
     }
     void removeEdge(int u, int v)
     {
+        adj[u][v]--;
+        if(adj[u][v]==0)
         adj[u].erase(v);
         degree[u]--;
         degree[v]++;
@@ -129,20 +132,14 @@ public:
             }
             else if (degree[i] != 0)
             {
-                cout << "Euler Path/Circuit Doesn't Exist" << endl;
+                cout<<-1<<'\n';
                 return;
             }
         }
         if (indeg == 1 && outdeg == 1)
-        {
-            cout << "Euler Path: ";
             printEuler(start);
-        }
         else
-        {
-            cout << "Euler Curcuit: ";
-            printEuler(1);
-        }
+            printEuler(w);
     }
     void printEuler(int v)
     {
@@ -166,11 +163,11 @@ public:
         if(e==sz(epath)-1)
             while (!epath.empty())
             {
-                cout<< " " <<epath.top()<< " ";
+                cout<<epath.top()<< " ";
                 epath.pop();
             }
         else
-            cout << "Euler Path/Circuit Doesn't Exist" << endl;
+            cout <<-1<<'\n';
     }
 };
 void solve()
@@ -182,6 +179,7 @@ void solve()
     {
         int u,v;
         cin>>u>>v;
+        w = u;
         hr.addEdge(u,v);
     }
     hr.printEulerPathCircuit();
