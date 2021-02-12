@@ -42,7 +42,7 @@ public:
         else if(odd==2)
             printEuler(oddVertex);
         else
-            cout<<-1<<'\n';
+            cout<<-1;
     }
     void printEuler(int v)
     {
@@ -70,7 +70,7 @@ public:
                 epath.pop();
             }
         else
-            cout<<-1<<'\n';
+            cout<<-1;
     }
 };
 void solve()
@@ -86,6 +86,7 @@ void solve()
         hr.addEdge(u,v);
     }
     hr.printEulerPathCircuit();
+    cout<<'\n';
 }
 // Directed Graph
 int e,w;
@@ -131,7 +132,7 @@ public:
             }
             else if (degree[i] != 0)
             {
-                cout<<-1<<'\n';
+                cout<<-1;
                 return;
             }
         }
@@ -162,11 +163,11 @@ public:
         if(e==sz(epath)-1)
             while (!epath.empty())
             {
-                cout<<epath.top()<< " ";
+                cout<<epath.top()<<' ';
                 epath.pop();
             }
         else
-            cout <<-1<<'\n';
+            cout <<-1;
     }
 };
 void solve()
@@ -182,5 +183,6 @@ void solve()
         hr.addEdge(u,v);
     }
     hr.printEulerPathCircuit();
+    cout<<'\n';
 }
 ```
