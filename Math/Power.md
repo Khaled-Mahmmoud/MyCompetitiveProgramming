@@ -26,16 +26,15 @@ int power(int x, unsigned int y)
 } 
 // O(log y)
 // Better Solution
-template<class T>
-T power(T a, T b, T mod)
+ll power(ll a, ll b, ll mod)
 {
-    T ans = 1;
+    ll ans = 1;
     a %= mod;
 
-    while (b) 
+    while (b)
     {
-        if (b & 1) ans = (ans * a) % mod;
-        b >>= 1;
+        if (b & 1ll) ans = (ans * a) % mod;
+        b >>= 1ll;
         a = (a * a) % mod;
     }
 
