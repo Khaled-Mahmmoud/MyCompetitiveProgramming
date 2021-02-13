@@ -78,22 +78,21 @@ matrix multiply(const matrix& a, const matrix& b)
                 rt[i][j]+=a[i][k]*b[k][j];
 	return rt;
 }
-matrix power(const matrix& a, ll k) 
-{	
-	if (!k)return identity(sz(a));	
-	if (k & 1)return multiply(a, power(a, k - 1));	
-	return power(multiply(a, a), k >> 1);	
-}	
-
-matrix power_itr(matrix a, ll k) 
-{	
-	matrix rt = identity(sz(a));	
+matrix power(const matrix& a, ll k)
+{
+	if (!k)return identity(sz(a));
+	if (k & 1ll)return multiply(a, power(a, k - 1));
+	return power(multiply(a, a), k >> 1ll);
+}
+matrix power_itr(matrix a, ll k)
+{
+	matrix rt = identity(sz(a));
 	while (k)
-	{	
-		if (k & 1)rt = multiply(rt, a);	
-		a = multiply(a, a); k >>= 1;	
-	}	
-	return rt;	
+	{
+		if (k & 1ll)rt = multiply(rt, a);
+		a = multiply(a, a); k >>= 1ll;
+	}
+	return rt;
 }
 /*
 Calc a^1 + a^2 + a^3 + ..... + a^k
