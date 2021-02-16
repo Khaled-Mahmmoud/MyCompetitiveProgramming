@@ -1,30 +1,4 @@
 ```cpp
-// 10^8 = (10^2)^4 = (10^4)^2
-// 10^9 = 10 * 10^8
-int power(int x, unsigned int y) 
-{ 
-    if (y == 0) 
-        return 1; 
-    else if (y % 2 == 0) 
-        return power(x, y / 2) * power(x, y / 2); 
-    else
-        return x * power(x, y / 2) * power(x, y / 2); 
-} 
-// O(4^log y)
-    
-// Above function can be optimized to O(log y) by calculating power(x, y/2) only once and storing it
-int power(int x, unsigned int y) 
-{ 
-    int temp; 
-    if( y == 0) 
-        return 1; 
-    temp = power(x, y/2); 
-    if (y & 1) 
-        return x*temp*temp;
-    else
-        return temp*temp;
-} 
-// O(log y)
 // Better Solution
 ll power(ll a, ll b, ll mod)
 {
