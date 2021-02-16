@@ -1,4 +1,4 @@
-```cpp
+```
 The number of ways to put n identical objects into k labeled boxes is ncr(n+r-1,r-1)
 E.g. we can represent with ★|★★| |★★ the following situation: in the first box is one object, 
 in the second box are two objects, the third one is empty and in the last box are two objects.
