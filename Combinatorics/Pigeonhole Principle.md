@@ -1,4 +1,4 @@
-```cpp
+```
 Assume we have N=5 boxes and M=6 apples, Distribute apples in boxes in whatever way, There must be 1 box with at least 2 apples.
 What if we have 13 apples? one box will have at least ⌈13/5⌉ = 3 apples. Generally: ⌈N/M⌉ per a box.
 
