@@ -4,16 +4,15 @@
 vector<vector<pair<int,int>>>adj;
 vector<int>par;
 int n,m;
-ll dijkstra()
+ll dijkstra(int src,int dist)
 {
     vector<ll>d(n+1,1e18);
     set<pair<ll,int>>st;
-    st.insert(make_pair(0,1));
-    d[1] = 0;
+    st.insert(make_pair(0,src));
+    d[src] = 0;
     while(st.size())
     {
         int u = st.begin()->second;
-        ll cost = st.begin()->first;
         st.erase(st.begin());
         for(auto i:adj[u])
         {
@@ -21,13 +20,13 @@ ll dijkstra()
             if(d[v] > d[u]+w)
             {
                 st.erase(make_pair(d[v],v));
-                d[v] = d[u]+w;
+                d[v] = d[u] + w;
                 par[v] = u;
                 st.insert(make_pair(d[v],v));
             }
         }
     }
-    return d[n];
+    return d[dist];
 }
 void backtrack(int u)
 {
@@ -35,10 +34,8 @@ void backtrack(int u)
         backtrack(par[u]);
     cout<<u<<' ';
 }
-int main()
+void solve()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(0);
     cin>>n>>m;
     adj.resize(n+1);
     par.resize(n+1);
@@ -49,12 +46,12 @@ int main()
         adj[u].push_back({v,w});
         adj[v].push_back({u,w});
     }
-    ll k=dijkstra();
+    int src,dist;
+    cin>>src>>dist;
+    ll k=dijkstra(src,dist);
     if(k==1e18)
-    {
-        return cout<<-1,0;
-    }
-    backtrack(n);
-    return 0;
+        cout<<-1;
+    else
+        backtrack(n);
 } // O((n+m)log(n))
 ```
