@@ -5,7 +5,7 @@ ios_base::sync_with_stdio(0), cin.tie(0);
 string s;
 while(s.size()==0)
 getline(cin, s);
-
+// OR
 while (cin >> x) 
 {
     // code
@@ -14,12 +14,11 @@ while (cin >> x)
 freopen("input.txt", "r", stdin);
 freopen("output.txt", "w", stdout);
 
-cout<< 838897238475ll ;
-
-int a = 1e9 , b = 1e9 ;	
-cout<< a * b ;             // -148668157543         // Overflow 	
-long long c = a*b ;       // c = -148668157543     // Casting
-// convert to c = 1ll * a * b
+clockid_t ct1,ct2;
+ct1 = clock();
+//
+ct2 = clock();
+cout<<fixed<<setprecision(5)<<double(ct2-ct1)/double(CLOCKS_PER_SEC);
 
 if(a * b > MAX) continue;
 // Convert to
