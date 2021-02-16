@@ -11,7 +11,7 @@ The value of C(n, r) can be recursively calculated using pascal triangle.
 C(n, r) = C(n-1, r-1) + C(n-1, r)
 C(n, 0) = C(n, n) = 1
 */
-int binomial_coeff(int n, int r) 
+int ncr(int n, int r) 
 {
     if(r>n)
         return 0;
