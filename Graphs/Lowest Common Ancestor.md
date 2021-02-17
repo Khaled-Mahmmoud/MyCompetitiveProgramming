@@ -4,7 +4,7 @@ the lowest common ancestor (LCA) of two nodes v and w in a tree or directed acyc
 that has both v and w as descendants, where we define each node to be a descendant of itself 
 (so if v has a direct connection from w, w is the lowest common ancestor).
 */
-int n,a,b,dp[100010][18],depth[100010];
+int n,dp[100010][18],depth[100010];
 vector<int>adj[100100];
 void dfs(int u, int parent)
 {
@@ -23,7 +23,7 @@ int lca(int u, int v)
         swap(u,v);
     for(int k = 17 ; k >= 0 ; --k)
     {
-        if(depth[u]-(1<<k) >= depth[v])
+        if(depth[u]-depth[v] >= (1<<k))
         {
             u = dp[u][k];
         }
@@ -45,9 +45,10 @@ void solve()
     cin>>n;
     for (int i = 0; i < n-1; ++i)
     {
-        cin>>a>>b;
-        adj[a].push_back(b);
-        adj[b].push_back(a);
+        int u,v;
+        cin>>u>>v;
+        adj[u].push_back(v);
+        adj[v].push_back(u);
     }
     memset(dp,-1,sizeof dp);
     dfs(1,-1);
@@ -60,6 +61,7 @@ void solve()
             dp[u][k] = dp[dp[u][k-1]][k-1];
         }
     }
+    int a,b;
     cin>>a>>b;
     cout<<lca(a,b);
 }
