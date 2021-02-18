@@ -104,64 +104,11 @@ What about X*Y*Z?
 	Coding wise, the processing from left and ranking (i, j, k) are similar
 */
 
-// Leap Year
-bool isLeap(int y)
-{
-    return y % 400 == 0 || (y % 100 != 0 && y % 4 == 0);
-}
-string dayOfTheWeek(int day, int month, int year)
-{
-    vector<int> md = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-    vector<string> show{ "Friday", "Saturday", "Sunday", "Monday",
-                         "Tuesday", "Wednesday", "Thursday" };
-    int idx = 6;
-    for (int y = 1971; y < year; y++)
-        idx += (isLeap(y) ? 366 : 365);
-    for (int m = 1; m < month; m++)
-        idx += (isLeap(year) && m == 2 ? 29 : md[m]);
-    idx += day;
-    return show[idx % 7];
-}
 
 // dist distance between dragon and princess 
 double td = dist / (vd - vp);  // time for the dragon to reach the princess where vd > vp
 // vd the speed of dragon and vp the speed of princess
 
-// Computes the length of the longest increasing subsequence (LIS) 
-// O(n.log(n))
-int getLIS()
-{
-    int len = 0;
-    vector<int> LIS(n, INT_MAX);
-    for (int i = 0; i < n; ++i)
-    {
-        // To get the length of the longest non decreasing subsequence
-        // replace function "lower_bound" with "upper_bound"
-        int idx = lower_bound(LIS.begin(), LIS.end(), a[i]) - LIS.begin();
-        LIS[idx] = a[i];
-        len = max(len, idx);
-    }
-    return len + 1;
-}
-
-// Given an unsorted array of integers
-// count a continuous subarray which adds to a given number.
-int cnt_subarray(int arr[], int n, int sum)
-{
-    map<int, int> m;
-    int res = 0;
-    int cur = 0;
-    for (int i = 0; i < n; i++) 
-    {
-        cur += arr[i];
-        if (cur == sum)
-            res++;
-        if (m.find(cur - sum) != m.end())
-            res += (m[cur - sum]);
-        m[cur]++;
-    }
-    return res;
-}
 /*
 Count of subarrays having exactly K prime numbers
 Count of subarrays having exactly K perfect square numbers
