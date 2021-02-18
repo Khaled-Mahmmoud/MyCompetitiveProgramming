@@ -1,72 +1,70 @@
 ```cpp
-class DIV
+// get Divisors of number
+vector<ll> getDiv(ll n)
 {
-    // get Divisors of number
-    vector<ll> getDiv(ll n)
+    vector<ll> divs;
+    for (ll i = 1; i * i <= n; ++i)
     {
-        vector<ll> divs;
-        for (ll i = 1; i * i <= n; ++i)
-        {
-            if (n % i)
-                continue;
-            divs.push_back(i);
-            if (i * i == n)
-                continue;
-            divs.push_back(n / i);
-        }
-        return divs;
-    }// O(sqrt(n))
-
-    // generate divisors for all number from 1 to n
-    vector<vector<int>> generateDiv(int n)
-    {
-        vector<vector<int>>divs(n+1);
-        for (int i = 1; i <= n; i++)
-            for (int j = i; j <= n; j += i)
-                divs[j].push_back(i);
-        return divs;
-    }// O(n*log(n)) // max-> 1e6
-
-    // Count all the divisors of the integers from 1 to "n"
-    vector<int> cntDiv(int n)
-    {
-        vector<int>divs(n+1);
-        for (int i = 1; i <= n; ++i)
-            for (int j = i; j <= n; j += i)
-                divs[j]++;
-        return divs;
-    }// O(n.log(n)) // max-> 1e7
-
-    // Count all perfect divisors of a number from 1 to n
-    vector<int> cntPerDiv(int n)
-    {
-        vector<int>perfectDiv(n+1);
-        for (int i=1; i*i <= n; ++i)
-            for (int j=i*i; j <= n; j += i*i)
-                perfectDiv[j]++;
-        return perfectDiv;
-    }// O(sqrt(n).log(n))
-
-    // only perfect square numbers have odd number of divisors
-    // Check if count of divisors is even or odd
-    void checkOddDiv(ll n)
-    {
-        ll root_n = sqrt(n);
-        if (root_n * root_n == n)
-            cout<<"Odd\n";
-        else
-            cout<<"Even\n";
+        if (n % i)
+            continue;
+        divs.push_back(i);
+        if (i * i == n)
+            continue;
+        divs.push_back(n / i);
     }
+    return divs;
+}// O(sqrt(n))
 
-    // return sum of divisors for all number from 1 to n
-    ll getSumDiv(int n)
-    {
-        ll ans = 0;
-        for (int x = 1; x <= n; x++)
-            ans += (n / x) * x;
-        return ans;
-    }// O(n)
-};
+// generate divisors for all number from 1 to n
+vector<vector<int>> generateDiv(int n)
+{
+    vector<vector<int>>divs(n+1);
+    for (int i = 1; i <= n; i++)
+        for (int j = i; j <= n; j += i)
+            divs[j].push_back(i);
+    return divs;
+}// O(n*log(n)) // max-> 1e6
+
+// Count all the divisors of the integers from 1 to "n"
+vector<int> cntDiv(int n)
+{
+    vector<int>divs(n+1);
+    for (int i = 1; i <= n; ++i)
+        for (int j = i; j <= n; j += i)
+            divs[j]++;
+    return divs;
+}// O(n.log(n)) // max-> 1e7
+
+// Count all perfect divisors of a number from 1 to n
+vector<int> cntPerDiv(int n)
+{
+    vector<int>perfectDiv(n+1);
+    for (int i=1; i*i <= n; ++i)
+        for (int j=i*i; j <= n; j += i*i)
+            perfectDiv[j]++;
+    return perfectDiv;
+}// O(sqrt(n).log(n))
+
+// only perfect square numbers have odd number of divisors
+// Check if count of divisors is even or odd
+void checkOddDiv(ll n)
+{
+    ll root_n = sqrt(n);
+    if (root_n * root_n == n)
+        cout<<"Odd\n";
+    else
+        cout<<"Even\n";
+}
+
+// return sum of divisors for all number from 1 to n
+ll getSumDiv(int n)
+{
+    ll ans = 0;
+    for (int x = 1; x <= n; x++)
+        ans += (n / x) * x;
+    return ans;
+}// O(n)
+
 /*
 Check whether a number has exactly three distinct factors or not?
 If the square root of given number(say x^2) is prime then it must have exactly three distinct factors
