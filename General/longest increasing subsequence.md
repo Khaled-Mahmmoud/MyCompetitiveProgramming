@@ -1,6 +1,7 @@
 ```cpp
 // Computes the length of the longest increasing subsequence (LIS) 
 // O(n.log(n))
+// this code for length only
 int getLIS()
 {
     int len = 0;
