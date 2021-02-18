@@ -1,6 +1,6 @@
-// http://programming-study-notes.blogspot.com/2014/03/uva-200-rare-order.html
+// [programming-study-notes](http://programming-study-notes.blogspot.com/2014/03/uva-200-rare-order.html)
 
-// https://www.programmersought.com/
+//[programmersought](https://www.programmersought.com/)
 
 
 [Solver to be](https://www.youtube.com/watch?v=0y2L8E4SIXE&list=PLPSFnlxEu99Gc6mSTVoYzPG77tnUW8znJ&index=4&ab_channel=SolverToBe)
