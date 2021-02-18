@@ -22,7 +22,7 @@ void solve()
 {
     int n,k,ans1,ans2,ans3;
     cin>>n>>k;
-    ans1 = 0;
+    ans1 = (k-1)%1;
     ans2 = (k-1)%2;
     ans3 = (k-1)%3;
     for(int i=2; i<=n; i++)
