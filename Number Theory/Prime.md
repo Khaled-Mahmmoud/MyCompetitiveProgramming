@@ -11,9 +11,9 @@ bool isprime(ll n)
     return 1;
 }// O(sqrt(n))
 
-vector<int> primeFactors(ll n)
+vector<ll> primeFactors(ll n)
 {
-    vector<int>res;
+    vector<ll>res;
     for(ll i=2; i*i<=n; i++)
     {
         while(!(n%i))
