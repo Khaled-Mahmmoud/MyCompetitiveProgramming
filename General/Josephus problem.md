@@ -2,13 +2,14 @@
 /*
 Given n persons and a number k which indicates that k-1 persons are skipped and kth person is killed in circle. 
 The task is to choose the place in the initial circle so that you are the last one remaining and so survive.
+f(n) =( f(n-1)+k)% n
 */
 int k;
 int jose(int n)
 {
     if (!n)
         return n;
-    return (jose(n-1)+k) % n;
+    return (jose(n-1)+k)%n;
 }
 void josephus()
 {
