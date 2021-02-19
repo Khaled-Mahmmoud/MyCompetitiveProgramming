@@ -1,6 +1,6 @@
 ```CPP
-// cnt for Count // the minimum number of swaps to sort array when only adjacent swapping allowed
-// cnt for Count // the number of inversions of array where If i < j and ar[i] > ar[j] then the pair (i, j) is called an inversion of ar.
+cnt // the minimum number of swaps to sort array when only adjacent swapping allowed
+cnt // the number of inversions of ar. If i < j and ar[i] > ar[j] then the pair(i, j) is called inversion of ar.
 int cnt; 
 void mergesort(int a[],int l,int mid,int r)
 {
