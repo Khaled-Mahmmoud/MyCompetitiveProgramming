@@ -1,0 +1,35 @@
+```CPP
+int cnt; // the minimum number of swaps to sort array when only adjacent swapping allowed
+void mergesort(int a[],int l,int mid,int r)
+{
+    int i=l,j=mid+1;
+    int n = r-l+1;
+    int temp[n],k=0;
+    while(i<=mid&&j<=r)
+    {
+        if(a[i]<a[j])
+            temp[k++] = a[i++];
+        else
+        {
+            temp[k++] = a[j++];
+            cnt += mid - i + 1;
+        }
+    }
+    while(i<=mid)
+        temp[k++] = a[i++];
+    while(j<=r)
+        temp[k++] = a[j++];
+    for(int i=l; i<=r; i++)
+        a[i] = temp[i-l];
+}
+void merge(int a[],int l,int r)
+{
+    if(l<r)
+    {
+        int mid = (l+r)/2;
+        merge(a,l,mid);
+        merge(a,mid+1,r);
+        mergesort(a,l,mid,r);
+    }
+}
+```
