@@ -3,18 +3,18 @@
 #define X real()
 #define Y imag()
 #define polar(r,t) ((r)*exp(point(0,(t))))
-#define length(a) hypot((a).X,(a).Y)
-#define angle(a) atan2((a).Y,(a).X)
 
 #define pi acos(-1.0)
 #define EPS 1e-8
 int dcmp(double x, double y){return fabs(x - y) <= EPS ? 0 : x < y ? -1 : 1;}
+
 point input()
 {
     int nx,ny;
     cin>>nx>>ny;
     return point(nx,ny);
 }
+
 /*
 Dot Product : Algebraically, sum of the products of the corresponding entries
 Geometrically, the product of the Euclidean magnitudes of the two vectors
@@ -42,11 +42,7 @@ point cross_3d(point3d a, point3d b)
 {
     return point(a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x);
 }
-// point a(2,3) ==> norm(a) = 2^2 + 3^2 = 13
-double norm(point a) 
-{
-    return dot(a, a);
-}
+
 double length(point a)
 {
     return abs(a);
@@ -55,16 +51,23 @@ double length1(point a)
 {
     return hypot(a.real(),a.imag());
 }
+// point a(2,3) ==> norm(a) = 2^2 + 3^2 = 13
+double norm(point a) 
+{
+    return dot(a, a);
+}
 double length2(point a) 
 {
     // Length of a: |a| = √(a.a)
     return sqrt(norm(a));
 }
+
 // distance between two points
 double dist(point a,point b)
 {
     return length1(b-a);
 }
+
 double angle(point a)// angle with x-axis
 {
     return arg(a);
