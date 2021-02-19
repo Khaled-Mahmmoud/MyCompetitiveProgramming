@@ -1,5 +1,11 @@
 ```cpp
 #define point complex<double>
+#define X real()
+#define Y imag()
+#define polar(r,t) ((r)*exp(point(0,(t))))
+#define length(a) hypot((a).X,(a).Y)
+#define angle(a) atan2((a).Y,(a).X)
+
 #define pi acos(-1.0)
 #define EPS 1e-8
 int dcmp(double x, double y){return fabs(x - y) <= EPS ? 0 : x < y ? -1 : 1;}
