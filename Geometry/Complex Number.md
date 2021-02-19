@@ -3,7 +3,13 @@
 #define X real()
 #define Y imag()
 #define polar(r,t) ((r)*exp(point(0,(t))))
-
+/*
+// Polar system , Cartesian
+x = r * cos(O)
+y = r * sin(O)
+r = sqrt(x^2  + y^2)
+O = atan2(y,x)
+*/
 #define pi acos(-1.0)
 #define EPS 1e-8
 int dcmp(double x, double y){return fabs(x - y) <= EPS ? 0 : x < y ? -1 : 1;}
