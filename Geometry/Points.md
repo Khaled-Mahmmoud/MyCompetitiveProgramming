@@ -84,9 +84,5 @@ point rotate_around_b(point a,point b,double ang)
     // rotate point a around point b
     return (a - b) * polar(1.0, ang) + b;
 }
-double proj(point a, point b) 
-{
-    return dot(a, b) / abs(b);
-}
 
 ```
