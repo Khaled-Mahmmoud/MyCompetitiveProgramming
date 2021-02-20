@@ -1,11 +1,4 @@
 ```cpp
-/*
-// Polar system , Cartesian
-x = r * cos(O)
-y = r * sin(O)
-r = sqrt(x^2  + y^2)
-O = atan2(y,x)
-*/
 #define point complex<double>
 #define X real()
 #define Y imag()
@@ -37,39 +30,36 @@ point cross_3d(point3d a, point3d b)
     return point(a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x);
 }
 
-double length(point a)
-{
-    return abs(a);
-}
-double length1(point a)
-{
-    return hypot(a.real(),a.imag());
-}
 // point a(2,3) ==> norm(a) = 2^2 + 3^2 = 13
 double norm(point a) 
 {
     return dot(a, a);
 }
-double length2(point a) 
+
+double length(point a)
 {
+    return abs(a);
+    return hypot(a.real(),a.imag());
     // Length of a: |a| = √(a.a)
     return sqrt(norm(a));
 }
 
+point vec(point a,point b)
+{
+    return b - a;
+}
 // distance between two points
 double dist(point a,point b)
 {
-    return length1(b-a);
+    return length(vec(a,b));
 }
 
 double angle(point a)// angle with x-axis
 {
     return arg(a);
-}
-double angle1(point a)// angle with x-axis
-{
     return atan2((a).imag(), (a).real());
 }
+
 double dot_angle(point a, point b) 
 {
     return acos(dot(a,b)/(abs(a) * abs(b)));
@@ -78,10 +68,7 @@ point scale(point a,double s)
 {
     return a * s;
 }
-point vec(point a,point b)
-{
-    return b - a;
-}
+
 point rotate_counterclockwise(point a,double ang)
 {
     // rotate around origin
@@ -102,22 +89,4 @@ double proj(point a, point b)
     return dot(a, b) / abs(b);
 }
 
-// Check if 4 points is Square
-bool is_square(vector<point> p)
-{
-    map<Double,vector<pair<int, int>>> mp;
-    for(int i = 0; i < (int)p.size(); ++i)
-        for(int j = i+1; j < (int)p.size(); ++j)
-        {
-            Double len(dist(p[i],p[j]));
-            mp[len].push_back({i, j});
-        }
-    if(mp.size() != 2)
-        return false;
-    auto S = mp.begin();// side
-    auto D = mp.begin(); // Diagonal
-    ++D;
-    if(S->Y.size() != 4 || D->Y.size() != 2)
-        return false;
-}
 ```
