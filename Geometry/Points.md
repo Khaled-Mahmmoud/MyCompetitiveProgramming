@@ -1,7 +1,4 @@
 ```cpp
-#define point complex<double>
-#define X real()
-#define Y imag()
 /*
 Dot Product : Algebraically, sum of the products of the corresponding entries
 Geometrically, the product of the Euclidean magnitudes of the two vectors
