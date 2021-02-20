@@ -1,5 +1,9 @@
 ```cpp
 /*
+#define PI acos(-1.0)
+#define EPS 1e-9
+int dcmp(double x, double y) {return fabs(x - y) <= EPS ? 0 : x < y ? -1 : 1;}
+/*
 Polar system , Cartesian
 x = r * cos(O)
 y = r * sin(O)
@@ -11,7 +15,6 @@ Degrees: 0 - 360
 Right angle 90 degree or π/2 radians
 370 Degree = 10 Degree = 370 % 360
 */
-#define PI acos(-1.0)
 double toRadians(double degree) 
 {
     return (degree * PI) / 180.0;
