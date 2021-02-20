@@ -13,6 +13,11 @@ void check_point_line(point a,point b,point c)
     else
         cout<<"on line";
 }
+// check if point c is on Ray AB
+bool check_is_on_ray(point a,point b,point c)
+{
+    return (dcmp(cross(vec(a,b),vec(a,c),0)==0)&&dcmp(dot(vec(a,b),vec(a,c),0)==1)
+}
 // Point C distance to Line AB
 double dist_to_line(point a,point b,point c)
 {
