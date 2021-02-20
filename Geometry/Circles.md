@@ -7,7 +7,7 @@ Circumference of a circle = 2 * PI * r
 */
 
 /*
-// Circular sector
+// Circular Sector
 Length of an Arc = (n/360) * 2 * PI * r
 Sector area = (n/360) * PI * r^2
 (x-h)^2 + (y-k)^2 = r^2 where (h,k) is center, (x,y) any point in circle
