@@ -1,7 +1,5 @@
 
-```cpp
-ios_base::sync_with_stdio(0), cin.tie(0);
-
+```cp
 string s;
 while(s.size()==0)
 getline(cin, s);
@@ -36,9 +34,6 @@ if (abs(a-b) < 1e-9)
 {	
     // a and b are equal	
 }
-
-#define EPS 1e-9
-int dcmp(double x, double y) { return fabs(x - y) <= EPS ? 0 : x < y ? -1 : 1; }
 
 map<Double,int>m;
 
