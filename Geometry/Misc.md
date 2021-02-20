@@ -3,12 +3,16 @@
 #define EPS 1e-9
 int dcmp(double x, double y) {return fabs(x - y) <= EPS ? 0 : x > y ? 1 : -1;}
 /*
-Polar system , Cartesian
+Polar System , Cartesian System
 x = r * cos(O)
 y = r * sin(O)
 r = sqrt(x^2 + y^2)
 O = atan2(y,x)
 
+Complex number with Catresian System : X + i Y
+Complex number with Polar System : R(cos(O) + i sin(O)) = R e^(i O)
+
+// Angles
 Radians: 0 - 2 π
 Degrees: 0 - 360
 Right angle 90 degree or π/2 radians
