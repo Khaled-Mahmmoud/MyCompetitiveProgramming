@@ -1,6 +1,6 @@
 ```cpp
-// sin(A)/a = sin(B)/b = sin(C)/c
-// a^2 = b^2 + c^2 - 2*b*c*cos(A)
+// Sine Role : sin(A)/a = sin(B)/b = sin(C)/c
+// Cosine Role : a^2 = b^2 + c^2 - 2*b*c*cos(A)
 // sin(A + B) = sin(A) cos(B) + sin(B) cos(A)
 // sin(A - B) = sin(A) cos(B) - sin(B) cos(A)
 // cos(A + B) = cos(A) cos(B) - sin(A) sin(B)
