@@ -1,7 +1,4 @@
 ```cpp
-#define point complex<double>
-#define X real()
-#define Y imag()
 //Check if point c on, above, below Line AB
 void check_point_line(point a,point b,point c)
 {
