@@ -23,10 +23,10 @@ bool point_on_segment(point a,point b,point c)
     return (point_on_ray(a,b,c)&&point_on_ray(b,a,c));
 }
 // Point C distance to Line AB
+// X = AC sin O = (AB AC sin O) / AB
 double dist_to_line(point a,point b,point c)
 {
-    double d = cross(b-a,c-a)/dist(a,b);
-    return fabs(d);
+    return fabs(cross(vec(a,b),vec(a,c))/dist(a,b));
 }
 // is Line AB and Line CD is the Same
 bool arelinesame(point a,point b,point c,point d)
