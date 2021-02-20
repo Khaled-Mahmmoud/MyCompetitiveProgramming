@@ -20,7 +20,7 @@ bool is_inside_circle(point center, point b, double r)
 }
 
 /*
-// cylinder
+// Cylinder
 The surface area of cylinder consists of three parts:
 
 the area of the top base: πr^2
