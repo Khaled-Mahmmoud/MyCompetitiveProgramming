@@ -5,7 +5,7 @@
 //Check if point c on, above, below Line AB
 void check_point_line(point a,point b,point c)
 {
-    int x = dcmp(cross(c-a,c-b),0);
+    int x = dcmp(cross(c - a, b - a),0);
     if(x==1)
         cout<<"below";
     else if(x==-1)
