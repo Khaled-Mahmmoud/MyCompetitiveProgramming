@@ -17,7 +17,7 @@ int dcmp(double x, double y) {return fabs(x - y) <= EPS ? 0 : x > y ? 1 : -1;}
 #define point complex<double>	
 #define X real()	
 #define Y imag()
-
+/*
 // Angles
 Radians: 0 - 2 π
 Degrees: 0 - 360
