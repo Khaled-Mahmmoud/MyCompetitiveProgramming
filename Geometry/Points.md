@@ -84,7 +84,6 @@ point rotate_around_b(point a,point b,double ang)
     // rotate point a around point b
     return (a - b) * polar(1.0, ang) + b;
 }
-
 point refelct(point v,point m)
 {
     return conj(v/m) * m;
