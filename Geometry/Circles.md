@@ -14,10 +14,6 @@ bool is_inside_circle(point center, point b, double r)
     return (d1 * d1 + d2 * d2) <= r * r;
 }
 
-
-// p = m / v
-// p = density, m = mass, v = volume
-
 /*
 // cylinder
 The surface area of cylinder consists of three parts:
