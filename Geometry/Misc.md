@@ -1,7 +1,4 @@
 ```cpp
-#define PI acos(-1.0)
-#define EPS 1e-9
-int dcmp(double x, double y) {return fabs(x - y) <= EPS ? 0 : x > y ? 1 : -1;}
 /*
 Polar System , Cartesian System
 x = r * cos(O)
@@ -11,6 +8,15 @@ O = atan2(y,x)
 
 Complex number with Catresian System : X + i Y
 Complex number with Polar System : R(cos(O) + i sin(O)) = R e^(i O)
+*/
+
+#define PI acos(-1.0)
+#define EPS 1e-9
+int dcmp(double x, double y) {return fabs(x - y) <= EPS ? 0 : x > y ? 1 : -1;}
+
+#define point complex<double>	
+#define X real()	
+#define Y imag()
 
 // Angles
 Radians: 0 - 2 π
