@@ -1,8 +1,4 @@
 ```cpp
-#define point complex<double>
-#define X real()
-#define Y imag()
-#define polar(r,t) ((r)*exp(point(0,(t))))
 /*
 // Polar system , Cartesian
 x = r * cos(O)
@@ -10,17 +6,9 @@ y = r * sin(O)
 r = sqrt(x^2  + y^2)
 O = atan2(y,x)
 */
-#define pi acos(-1.0)
-#define EPS 1e-8
-int dcmp(double x, double y){return fabs(x - y) <= EPS ? 0 : x < y ? -1 : 1;}
-
-point input()
-{
-    int nx,ny;
-    cin>>nx>>ny;
-    return point(nx,ny);
-}
-
+#define point complex<double>
+#define X real()
+#define Y imag()
 /*
 Dot Product : Algebraically, sum of the products of the corresponding entries
 Geometrically, the product of the Euclidean magnitudes of the two vectors
@@ -109,35 +97,11 @@ point rotate_around_b(point a,point b,double ang)
     // rotate point a around point b
     return (a - b) * polar(1.0, ang) + b;
 }
-void check_point_line(point a,point b,point c)
-{
-    // check if point c on, above, below vector/line ab
-    int x = dcmp(cross(c-a,c-b),0);
-    if(x==1)
-        cout<<"below";
-    else if(x==-1)
-        cout<<"above";
-    else
-        cout<<"on line";
-}
-// Point C distance to Line A-B
-double dist_to_line(point a,point b,point c)
-{
-    double d = cross(b-a,c-a)/dist(a,b);
-    return fabs(d);
-}
 double proj(point a, point b) 
 {
     return dot(a, b) / abs(b);
 }
-bool arelinesame(point a,point b,point c,point d)
-{
-    return (cross(a-c,d-c)==0&&cross(b-c,d-c)==0);
-}
-bool arelinesparallel(point a,point b,point c,point d)
-{
-    return cross(b-a,d-c)==0;
-}
+
 // Check if 4 points is Square
 bool is_square(vector<point> p)
 {
