@@ -14,9 +14,16 @@ void check_point_line(point a,point b,point c)
         cout<<"on line";
 }
 // check if point c is on Ray AB
-bool check_is_on_ray(point a,point b,point c)
+bool point_on_ray(point a,point b,point c)
 {
     return (dcmp(cross(vec(a,b),vec(a,c)),0)==0&&dcmp(dot(vec(a,b),vec(a,c)),0)==1);
+}
+// check if point c is on Segment AP
+bool point_on_segment(point a,point b,point c)
+{
+    if(dcmp(length(vec(a,b)),0)==0)
+        return (dcmp(length(vec(a,c)),0)==0);
+    return (point_on_ray(a,b,c)&&point_on_ray(b,a,c));
 }
 // Point C distance to Line AB
 double dist_to_line(point a,point b,point c)
