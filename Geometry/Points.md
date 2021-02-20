@@ -45,6 +45,7 @@ point vec(point a,point b)
 {
     return b - a;
 }
+
 // distance between two points
 double dist(point a,point b)
 {
