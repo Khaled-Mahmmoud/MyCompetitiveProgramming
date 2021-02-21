@@ -44,11 +44,6 @@ double area_triangle(point a,point b,point c)
 { 
         return 0.5 * cross(vec(a,b),vec(a,c));
 } 
-// a, b, c are coordinate points
-double area_triangle(point a,point b,point c) 
-{ 
-        return abs((a.x*(b.y-c.y) + b.x*(c.y-a.y)+ c.x*(a.y-b.y))/2.0); 
-} 
 // Check whether point X lies inside the triangle abc
 bool isInside(point a,point b,point c,point x) 
 {    
