@@ -38,4 +38,13 @@ bool arelinesparallel(point a,point b,point c,point d)
 {
     return cross(b-a,d-c)==0;
 }
+// rt = intersect point between two lines
+// check if rt on line AB and CD to get intersect between two segments
+bool intersect(point a,point b,point c,point d,point &rt)
+{
+    double d1 = cross(vec(a,c),vec(a,b));
+    double d2 = cross(vec(a,d),vec(a,b));
+    rt = (d1*d - d2*c)/(d1-d2);
+    return (dcmp(fabs(d1 - d2),0) == 1);
+}
 ```
