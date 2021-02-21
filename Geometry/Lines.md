@@ -51,15 +51,15 @@ double distToSegment(point p0, point p1, point p2, point& p4)
     p4 = (p0 + v1 * t);  // this is point
     return dist(p2 - (p0 + v1 * t));
 }
-// is Line AB and Line CD is the Same
-bool arelinesame(point a,point b,point c,point d)
-{
-    return (dcmp(cross(vec(a,c),vec(a,b)), 0) == 0 && dcmp(cross(vec(a,d),vec(a,b)), 0) == 0);
-}
 // is Line AB and Line CD is the Parallel
 bool arelinesparallel(point a,point b,point c,point d)
 {
     return dcmp(cross(vec(a,b),vec(c,d)), 0) == 0;
+}
+// is Line AB and Line CD is the Same
+bool arelinesame(point a,point b,point c,point d)
+{
+    return (arelinesparellel(a,b,c,d) && dcmp(cross(vec(a,c),vec(a,b)), 0) == 0);
 }
 // rt = intersect point between two lines
 // check if rt on line AB and CD to get intersect between two segments
