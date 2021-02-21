@@ -31,12 +31,12 @@ double dist_to_line(point a,point b,point c)
 // is Line AB and Line CD is the Same
 bool arelinesame(point a,point b,point c,point d)
 {
-    return (cross(a-c,d-c)==0&&cross(b-c,d-c)==0);
+    return (dcmp(cross(vec(a,c),vec(a,b)),0)==0&&dcmp(cross(vec(a,d),vec(a,b)),0)==0);
 }
 // is Line AB and Line CD is the Parallel
 bool arelinesparallel(point a,point b,point c,point d)
 {
-    return cross(b-a,d-c)==0;
+    return dcmp(cross(vec(a,b),vec(c,d)),0)==0;
 }
 // rt = intersect point between two lines
 // check if rt on line AB and CD to get intersect between two segments
