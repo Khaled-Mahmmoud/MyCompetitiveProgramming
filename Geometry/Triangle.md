@@ -50,15 +50,13 @@ double area_triangle(point a,point b,point c)
         return abs((a.x*(b.y-c.y) + b.x*(c.y-a.y)+ c.x*(a.y-b.y))/2.0); 
         //OR return abs(a.x*(b.y-c.y) + b.x*(c.y-a.y)+ c.x*(a.y-b.y)); 
 } 
-
 // Check whether point X lies inside the triangle abc
 bool isInside(point a,point b,point c,point x) 
 {    
-        double A  = area_triangle2(a,b,c); 
-        double A1 = area_triangle2(x,a,b); 
-        double A2 = area_triangle2(x,b,c); 
-        double A3 = area_triangle2(x,a,c); 
-   
+        double A  = area_triangle(a,b,c); 
+        double A1 = area_triangle(x,a,b); 
+        double A2 = area_triangle(x,b,c); 
+        double A3 = area_triangle(x,a,c); 
         return (A == A1 + A2 + A3); 
 }
 ```
