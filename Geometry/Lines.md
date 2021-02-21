@@ -67,11 +67,13 @@ bool arelinesame(point a,point b,point c,point d)
 }
 // rt = intersect point between two lines
 // check if rt on line AB and CD to get intersect between two segments
-bool intersect(point a,point b,point c,point d,point &rt)
+bool intersect_line(point a,point b,point c,point d,point &rt)
 {
-    double d1 = cross(vec(a,c),vec(a,b));
-    double d2 = cross(vec(a,d),vec(a,b));
-    rt = (d1*d - d2*c) / (d1-d2);
-    return (dcmp(fabs(d1 - d2), 0) == 1);
+    double d1 = cross(vec(a,b),vec(c,d)), d2 = cross(vec(c,a),vec(c,d));
+    if(dcmp(fabs(d1),0)==0)
+        return 0; // Parllel || Identical
+    double t = -d2 / d1;
+    rt = a + (b - a) * t;
+    return true;
 }
 ```
