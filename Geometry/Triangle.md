@@ -36,28 +36,33 @@ double area_triangle(double a, double b, double c)
 	    return sqrt(s * (s - a) * (s - b) * (s - c));// Heron’s formula
 }
 // a, b, c are medians of triangle
-double area_triangle1(double a, double b, double c) 
+double area_triangle(double a, double b, double c) 
 {
         if(a+b<=c||b+c<=a||a+c<=b)
             return -1;
 	double s = 0.5 * perimeter_triangle(a, b, c);
 	    return (4.0/3.0) * sqrt(s * (s - a) * (s - b) * (s - c));
 }
-
-double area_triangle2(point a,point b,point c) 
+// a, b, c are coordinate points
+double area_triangle(point a,point b,point c) 
 { 
-   return abs((a.x*(b.y-c.y) + b.x*(c.y-a.y)+ c.x*(a.y-b.y))/2.0); 
-   //OR return abs(a.x*(b.y-c.y) + b.x*(c.y-a.y)+ c.x*(a.y-b.y)); 
+        return 0.5 * cross(vec(a,b),vec(a,c));
+} 
+// a, b, c are coordinate points
+double area_triangle(point a,point b,point c) 
+{ 
+        return abs((a.x*(b.y-c.y) + b.x*(c.y-a.y)+ c.x*(a.y-b.y))/2.0); 
+        //OR return abs(a.x*(b.y-c.y) + b.x*(c.y-a.y)+ c.x*(a.y-b.y)); 
 } 
 
 // Check whether point X lies inside the triangle abc
 bool isInside(point a,point b,point c,point x) 
 {    
-   double A  = area_triangle2(a,b,c); 
-   double A1 = area_triangle2(x,a,b); 
-   double A2 = area_triangle2(x,b,c); 
-   double A3 = area_triangle2(x,a,c); 
+        double A  = area_triangle2(a,b,c); 
+        double A1 = area_triangle2(x,a,b); 
+        double A2 = area_triangle2(x,b,c); 
+        double A3 = area_triangle2(x,a,c); 
    
-   return (A == A1 + A2 + A3); 
+        return (A == A1 + A2 + A3); 
 }
 ```
