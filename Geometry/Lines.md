@@ -63,7 +63,7 @@ bool arelinesparallel(point a,point b,point c,point d)
 // is Line AB and Line CD is the Same
 bool arelinesame(point a,point b,point c,point d)
 {
-    return (arelinesparallel(a,b,c,d) && dcmp(cross(vec(a,c),vec(a,b)), 0) == 0);
+    return (arelinesparallel(a,b,c,d) && check_point_online(a,b,c));
 }
 // rt = intersect point between two lines
 // check if rt on line AB and CD to get intersect between two segments
