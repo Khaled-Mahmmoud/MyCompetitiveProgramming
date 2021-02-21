@@ -43,12 +43,14 @@ double area_triangle1(double a, double b, double c)
 	double s = 0.5 * perimeter_triangle(a, b, c);
 	    return (4.0/3.0) * sqrt(s * (s - a) * (s - b) * (s - c));
 }
-// check whether point X lies inside the triangle abc
+
 double area_triangle2(point a,point b,point c) 
 { 
    return abs((a.x*(b.y-c.y) + b.x*(c.y-a.y)+ c.x*(a.y-b.y))/2.0); 
    //OR return abs(a.x*(b.y-c.y) + b.x*(c.y-a.y)+ c.x*(a.y-b.y)); 
 } 
+
+// Check whether point X lies inside the triangle abc
 bool isInside(point a,point b,point c,point x) 
 {    
    double A  = area_triangle2(a,b,c); 
