@@ -1,5 +1,5 @@
 ```cpp
-//Check if point c on, above, below Line AB
+// check if point c on, above, below Line AB
 void check_point_line(point a,point b,point c)
 {
     int x = dcmp(cross(c - a, b - a),0);
