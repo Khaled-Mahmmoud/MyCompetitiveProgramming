@@ -10,6 +10,10 @@ void check_point_line(point a,point b,point c)
     else
         cout<<"on line";
 }
+bool check_point_online(point a,point b,point c)
+{
+    return (dcmp(cross(vec(a,c),vec(a,b)), 0)==0);
+}
 // check if point c is on Ray AB
 bool point_on_ray(point a,point b,point c)
 {
