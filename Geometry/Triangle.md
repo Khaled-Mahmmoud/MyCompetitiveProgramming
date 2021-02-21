@@ -48,7 +48,6 @@ double area_triangle(point a,point b,point c)
 double area_triangle(point a,point b,point c) 
 { 
         return abs((a.x*(b.y-c.y) + b.x*(c.y-a.y)+ c.x*(a.y-b.y))/2.0); 
-        //OR return abs(a.x*(b.y-c.y) + b.x*(c.y-a.y)+ c.x*(a.y-b.y)); 
 } 
 // Check whether point X lies inside the triangle abc
 bool isInside(point a,point b,point c,point x) 
