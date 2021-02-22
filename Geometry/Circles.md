@@ -35,7 +35,7 @@ pair<double, point> findCircle(point a, point b, point c)
     point m1 = (b + a) * 0.5, v1 = b - a, pv1 = point(v1.Y, -v1.X);
     point m2 = (b + c) * 0.5, v2 = b - c, pv2 = point(v2.Y, -v2.X);
     point end1 = m1 + pv1, end2 = m2 + pv2, center;
-    intersectSegments(m1, end1, m2, end2, center);
+    intersect_line(m1, end1, m2, end2, center);
     return make_pair(length(vec(center, a)), center);
 }
 
