@@ -36,4 +36,5 @@ int dcmp(double x,double y){return fabs(x - y) <= EPS ? 0 : x > y ? 1 : -1;}
 #define rotate_clockwise(a,ang) a * polar(1.0, -ang)
 #define rotate_around_b(a,b,ang) (a - b) * polar(1.0, ang) + b  // rotate point a around point b
 #define refelct(v,m) conj(v/m) * m
+#define same(p1,p2) (dot(vec(p1,p2),vec(p1,p2))<=EPS)
 ```
