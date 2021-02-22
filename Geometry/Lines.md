@@ -1,4 +1,11 @@
 ```cpp
+/*
+// Line Equations
+Type
+Explicit 2D : f(x) = y = mx + b where m = ∆y/∆x   // a non-vertical 2D line
+Implicit 2D : f(x,y) = ax + by + c = 0   // any 2D line
+Parametric  : P(t) = P0 + t (p1 - p0)  where t = vec(p0,ps)/vec(p0,p1) // any line in any dimension
+*/
 // check if point c on, above, below Line AB
 void check_point_line(point a,point b,point c)
 {
