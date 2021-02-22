@@ -18,7 +18,7 @@ A x B = |A| |B| sin(O) = A.x * B.y - B.x * A.y
 */
 #define PI acos(-1.0)
 #define EPS 1e-9
-#define dcmp(x,y) fabs(x - y) <= EPS ? 0 : x > y ? 1 : -1
+int dcmp(double x,double y){return fabs(x - y) <= EPS ? 0 : x > y ? 1 : -1;}
 #define point complex<double>
 #define X real()
 #define Y imag()
