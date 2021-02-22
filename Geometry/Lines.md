@@ -73,7 +73,6 @@ bool arelinesame(point a,point b,point c,point d)
     return (arelinesparallel(a,b,c,d) && check_point_online(a,b,c));
 }
 // rt = intersect point between two lines
-// check if rt on line AB and CD to get intersect between two segments
 bool intersect_line(point a,point b,point c,point d,point &rt)
 {
     double d1 = cross(vec(a,b),vec(c,d)), d2 = cross(vec(c,a),vec(c,d)),d3 = cross(vec(a,b),vec(c,a));
@@ -84,5 +83,38 @@ bool intersect_line(point a,point b,point c,point d,point &rt)
     if (t < -EPS || t1 < -EPS || t1 > 1 + EPS)
 		return false;  //e.g ab is ray, cd is segment ... change to whatever
     return true;
+}
+// not use above code to check if two segment intersect because debug with
+// this cases: line1(0,0,1,1),line2(1,1,2,2) and line1(0,0,1,1),line2(2,2,3,3)
+// you have to use below code to check if two segment intersect
+// and above code to find intersect point
+int ccw(point a, point b, point c)
+{
+    point v1(b - a), v2(c - a);
+    double t = cross(v1, v2);
+
+    if (t > +EPS)
+        return 1;
+    if (t < -EPS)
+        return -1;
+    if (v1.X * v2.X < -EPS || v1.Y * v2.Y < -EPS)
+        return -1;
+    if (norm(v1) < norm(v2) - EPS)
+        return +1;
+    return 0;
+}
+bool intersect(point p1, point p2, point p3, point p4)
+{
+    // special case handling if a segment is just a point
+    bool x = (p1 == p2), y = (p3 == p4);
+    if (x && y)
+        return p1 == p3;
+    if (x)
+        return ccw(p3, p4, p1) == 0;
+    if (y)
+        return ccw(p1, p2, p3) == 0;
+
+    return  ccw(p1, p2, p3) * ccw(p1, p2, p4) <= 0 &&
+            ccw(p3, p4, p1) * ccw(p3, p4, p2) <= 0;
 }
 ```
