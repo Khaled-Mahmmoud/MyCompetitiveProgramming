@@ -63,25 +63,17 @@ vector<point> intersectLineCircle(point p0, point p1, point C, double r)
 
 vector<point> intersectCircleCircle(point c1, double r1, point c2, double r2)
 {
-    // Handle infinity case first: same center/radius and r > 0
     if (same(c1, c2) && dcmp(r1, r2) == 0 && dcmp(r1, 0) > 0)
-        return vector<point>(3, c1);    // infinity 2 same circles (not points)
-
-    // Compute 2 intersection case and handle 0, 1, 2 cases
+        return vector<point>(3, c1);
     double ang1 = angle(vec(c1, c2)), ang2 = getAngle_A_abc(r2, r1, length(vec(c1, c2)));
-
-    if (::isnan(ang2)) // if r1 or d = 0 => nan in getAngle_A_abc (/0)
-        ang2 = 0; // fix corruption
-
+   if (isnan(ang2))
+      ang2 = 0;
     vector<point> v(1, polar(r1, ang1 + ang2) + c1);
-
-    // if point NOT on the 2 circles = no intersection
-    if (dcmp(dp(vec(c1, v[0]), vec(c1, v[0])), r1 * r1) != 0 ||
-            dcmp(dp(vec(c2, v[0]), vec(c2, v[0])), r2 * r2) != 0)
-        return vector<point>();
-
+    if (dcmp(dot(vec(c1, v[0]), vec(c1, v[0])), r1 * r1) != 0 ||
+            dcmp(dot(vec(c2, v[0]), vec(c2, v[0])), r2 * r2) != 0)
+    return vector<point>();
     v.push_back(polar(r1, ang1 - ang2) + c1);
-    if (same(v[0], v[1]))  // if same, then 1 intersection only
+    if (same(v[0], v[1]))
         v.pop_back();
     return v;
 }
