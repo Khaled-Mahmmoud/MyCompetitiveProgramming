@@ -13,7 +13,19 @@ bool is_inside_circle(point center, point b, double r)
     double d2 = (b.Y - center.Y);
     return (d1 * d1 + d2 * d2) <= r * r;
 }
-
+bool is_intersect_circles(double x1, double y1, double r1, double x2, double y2, double r2)
+{
+    double x = x1 - x2;
+    double y = y1 - y2;
+    double dist = sqrt(x * x + y * y);
+    return dist <= (r1 + r2) && (abs(r1 - r2) <= dist);
+}
+double distance_circles(double x1, double y1, double x2, double y2)
+{
+    double x = (x1 - x2);
+    double y = (y1 - y2);
+    return (x * x) + (y * y);
+}
 // 2 points has infinite circles
 // Find circle passes with 3 points, some times, there is no circle! (in case colinear)
 // Draw two perpendicular lines and intersect them
