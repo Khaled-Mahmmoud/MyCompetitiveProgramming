@@ -7,10 +7,7 @@
 // cos(A - B) = cos(A) cos(B) + sin(A) sin(B)
 // tan(A + B) = (tan A + tan B)/(1 - tan A tan B)
 // tan(A - B) = (tan A - tan B)/(1 + tan A tan B)
-double fixAngle(double A)
-{
-	return A > 1 ? 1 : (A < -1 ? -1 : A);
-}
+double fixAngle(double A){return A > 1 ? 1 : (A < -1 ? -1 : A);}
 double getSide_a_bAB(double b, double A, double B) 
 {
 	return (sin(A) * b) / sin(B);
