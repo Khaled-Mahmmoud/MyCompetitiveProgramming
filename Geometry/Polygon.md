@@ -7,4 +7,16 @@ bool is_simple_polygon(vector<point>&p)
             return false;
     return true;
 }
+
+bool is_convex_polygon(vector<point>&p)
+{
+    p.push_back(p[0]),p.push_back(p[1]);
+    int sign = ccw(p[0],p[1],p[2]);
+    bool ok = true;
+    for(int i=1;ok&&i<sz(p)-2;i++)
+      if(ccw(p[i],p[i+1],p[i+2])!=sign)
+        ok = false;
+    p.pop_back(),p.pop_back();
+    return ok;
+}
 ```
