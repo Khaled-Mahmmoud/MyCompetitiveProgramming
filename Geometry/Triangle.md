@@ -50,4 +50,22 @@ bool isInside(point a,point b,point c,point x)
         double A3 = area_triangle(x,a,c); 
         return (A == A1 + A2 + A3); 
 }
+double rInCircle(double ab, double bc, double ca)
+{
+    if(ab+bc+ca<EPS)
+        return 0;
+    return area_triangle(ab, bc, ca) / (0.5 * perimeter_triangle(ab, bc, ca));
+}
+double rInCircle(point a, point b, point c)
+{
+    return rInCircle(dist(a - b), dist(b - c), dist(c - a));
+}
+double rCircumCircle(double ab, double bc, double ca)
+{
+    return ab * bc * ca / (4.0 * area_triangle(ab, bc, ca));
+}
+double rCircumCircle(point a, point b, point c)
+{
+    return rCircumCircle(dist(a - b), dist(b - c), dist(c - a));
+}
 ```
