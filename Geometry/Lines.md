@@ -88,6 +88,14 @@ bool intersect_line(point a,point b,point c,point d,point &rt)
 // this cases: line1(0,0,1,1),line2(1,1,2,2) and line1(0,0,1,1),line2(2,2,3,3)
 // you have to use below code to check if two segment intersect
 // and above code to find intersect point
+/*
+Where is c relative to segment a-b?
+ccw = +1 => angle > 0 or collinear after b 
+point c is counter-clockwise about segment a-b
+cw = -1 => angle < 0 or collinear after a
+point c is clockwise about segment a-b
+Undefined = 0 => Collinar in range [a, b]. Be careful here
+*/
 int ccw(point a, point b, point c)
 {
     point v1(b - a), v2(c - a);
