@@ -72,4 +72,20 @@ double rCircumCircle(point a, point b, point c)
     double k = rCircumCircle(dist(a - b), dist(b - c), dist(c - a));
     return isnan(k)? 0 : k;
 }
+// Get radius and point of circle that inscribed with triangle
+bool inCircle(point p1, point p2, point p3, point& ctr, double& r)
+{
+    r = rInCircle(p1, p2, p3);
+    if (fabs(r) < EPS)
+        return 0; // no inCircle center
+    line l1, l2; // compute these two angle bisectors
+    double ratio = dist(p1 - p2) / dist(p1 - p3);
+    point p = translate(p2, scale(vec(p2, p3), ratio / (1 + ratio)));
+    pointsToLine(p1, p, l1);
+    ratio = dist(p2 - p1) / dist(p2 - p3);
+    p = translate(p1, scale(vec(p1, p3), ratio / (1 + ratio)));
+    pointsToLine(p2, p, l2);
+    areIntersect(l1, l2, ctr); // get their intersection point
+    return 1;
+}
 ```
