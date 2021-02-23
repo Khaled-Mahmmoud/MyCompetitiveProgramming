@@ -6,10 +6,10 @@ vector<int> par;
 void dsu(int n)
 {
     cnt = n;
-    siz.resize(n, 1);
+    siz.resize(n);
     par.resize(n);
     for(int i=0; i<n; i++)
-        par[i] = i;
+        par[i] = i,siz[i] = 1;
 }
 int find_set(int u)
 {
