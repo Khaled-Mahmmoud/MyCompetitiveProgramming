@@ -18,9 +18,9 @@ bool is_intersect_circles(double x1, double y1, double r1, double x2, double y2,
     double x = x1 - x2;
     double y = y1 - y2;
     double dist = sqrt(x * x + y * y);
-    return dcmp(dist,(r1 + r2)) == -1 && dcmp(abs(r1 - r2),dist) == -1; 
+    return dcmp(dist, (r1 + r2)) == -1 && dcmp(abs(r1 - r2), dist) == -1; 
     // if intersect on boundaries return 1, we use below code
-   // return (dcmp(dist,(r1 + r2)) == -1||dcmp(dist,(r1 + r2)) == 0)&&(dcmp(abs(r1 - r2),dist) == -1||dcmp(abs(r1 - r2),dist) == 0);
+   // return dcmp(dist, (r1 + r2)) <= 0 && dcmp(abs(r1 - r2), dist) <= 0;
 }
 double distance_circles(double x1, double y1, double x2, double y2)
 {
