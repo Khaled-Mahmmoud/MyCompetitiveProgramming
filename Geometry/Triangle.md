@@ -48,24 +48,28 @@ bool isInside(point a,point b,point c,point x)
         double A1 = area_triangle(x,a,b); 
         double A2 = area_triangle(x,b,c); 
         double A3 = area_triangle(x,a,c); 
-        return (A == A1 + A2 + A3); 
+        return (A == A1 + A2 + A3);    
+	// if X lies on boundaries return 0;
+	// return (A == A1 + A2 + A3 && A1 && A2 && A3);  
 }
 double rInCircle(double ab, double bc, double ca)
 {
-    if(ab+bc+ca<EPS)
-        return 0;
-    return area_triangle(ab, bc, ca) / (0.5 * perimeter_triangle(ab, bc, ca));
+    double k = area_triangle(ab, bc, ca) / (0.5 * perimeter_triangle(ab, bc, ca));
+    return isnan(k)? 0 : k;
 }
 double rInCircle(point a, point b, point c)
 {
-    return rInCircle(dist(a - b), dist(b - c), dist(c - a));
+    double k = rInCircle(dist(a - b), dist(b - c), dist(c - a));
+    return isnan(k)? 0 : k;
 }
 double rCircumCircle(double ab, double bc, double ca)
 {
-    return ab * bc * ca / (4.0 * area_triangle(ab, bc, ca));
+    double k = ab * bc * ca / (4.0 * area_triangle(ab, bc, ca));
+    return isnan(k)? 0 : k;
 }
 double rCircumCircle(point a, point b, point c)
 {
-    return rCircumCircle(dist(a - b), dist(b - c), dist(c - a));
+    double k = rCircumCircle(dist(a - b), dist(b - c), dist(c - a));
+    return isnan(k)? 0 : k;
 }
 ```
