@@ -79,7 +79,7 @@ vector<point> intersectCircleCircle(point c1, double r1, point c2, double r2)
         v.pop_back();
     return v;
 }
-
+// Min enclosing circle
 // get smallest radious that contatin all points
 const int MAX = 100000 + 9;
 point pnts[MAX], r[3], cen;
