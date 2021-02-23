@@ -57,6 +57,22 @@ bool check(int i,int j)
     return i>=0&&j>=0&&i<n&&j<m;
 }
 
+string k = "khaled mahmoud fawzy",s1,s2,s3;
+stringstream input(k);
+input>>s1>>s2>>s3;
+cout<<s1<<':'<<s2<<':'<<s3;  // khaled:mahmoud:fawzy
+
+string k = "23 87 69";int s1,s2,s3;
+stringstream input(k);
+input>>s1>>s2>>s3;
+cout<<s1<<':'<<s2<<':'<<s3;  // 23:87:69
+
+string k = "23 87 69";
+stringstream input(k);
+int n=0,x,a[102];
+while(input>>x)
+a[n++] = x;
+
 /*
 // Grid Conversion
 Say we are given grid of characters, and you want to convert them to grid of numbers.
