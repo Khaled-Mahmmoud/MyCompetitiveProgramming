@@ -1,4 +1,6 @@
 ```cpp
+// Internal angle for Regular Polygon = (n-2) * 180 / n
+// number of diagonals of n-polygon = n * (n-3) / 2
 bool is_simple_polygon(vector<point>&p)
 {
     for(int i=0;i<sz(p)-1;i++)
