@@ -16,9 +16,9 @@ The cross product, a X b, is a vector that is perpendicular
 to both a and b and therefore normal to the plane containing them.
 A x B = |A| |B| sin(O) = A.x * B.y - B.x * A.y 
 */
-#define PI acos(-1.0)
 #define EPS 1e-9
 int dcmp(double x,double y){return fabs(x - y) <= EPS ? 0 : x > y ? 1 : -1;}
+#define PI acos(-1.0)
 #define point complex<double>
 #define X real()
 #define Y imag()
@@ -37,4 +37,5 @@ int dcmp(double x,double y){return fabs(x - y) <= EPS ? 0 : x > y ? 1 : -1;}
 #define rotate_around_b(a,b,ang) (a - b) * polar(1.0, ang) + b  // rotate point a around point b
 #define refelct(v,m) conj(v/m) * m
 #define same(p1,p2) (dot(vec(p1,p2),vec(p1,p2))<=EPS)
+#define traslate(a,b) a + b
 ```
