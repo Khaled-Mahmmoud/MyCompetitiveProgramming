@@ -189,21 +189,6 @@ auto last = v.end();
 cout << distance(first,last);
 // Complexity : Constant for random-access iterators . Otherwise, linear in n.
 
-string k = "khaled mahmoud fawzy",s1,s2,s3;
-stringstream input(k);
-input>>s1>>s2>>s3;
-cout<<s1<<':'<<s2<<':'<<s3;  // khaled:mahmoud:fawzy
-
-string k = "23 87 69";int s1,s2,s3;
-stringstream input(k);
-input>>s1>>s2>>s3;
-cout<<s1<<':'<<s2<<':'<<s3;  // 23:87:69
-
-string k = "23 87 69";
-stringstream input(k);
-int n=0,x,a[102];
-while(input>>x)
-a[n++] = x;
 
 string s = to_string(m); // converts integer/ll/double to string
 int m = stoi(s);   // converts string to integer
