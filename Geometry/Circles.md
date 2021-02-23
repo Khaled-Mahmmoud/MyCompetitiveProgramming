@@ -86,13 +86,13 @@ point pnts[MAX], r[3], cen;
 double rad;
 int ps, rs;	// ps = n, rs = 0, initially
 // Pre condition
-// random_shuffle(pnts, pnts+ps);		rs = 0;
+// random_shuffle(pnts, pnts+ps);
 void MEC()
 {
     if (ps == 0 && rs == 2)
     {
         cen = (r[0] + r[1]) / 2.0;
-        rad = dist(r[0] - cen);
+        rad = dist(r[0] , cen);
     }
     else if (rs == 3)
     {
@@ -102,14 +102,14 @@ void MEC()
     }
     else if (ps == 0)
     {
-        cen = r[0];	// sometime be garbage, but will not affect
+        cen = r[0];	
         rad = 0;
     }
     else
     {
         ps--;
         MEC();
-        if (dist(pnts[ps] - cen) > rad)
+        if (dist(pnts[ps] , cen) > rad)
         {
             r[rs++] = pnts[ps];
             MEC();
