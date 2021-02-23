@@ -1,4 +1,14 @@
 ```cpp
+struct point {
+	double a, b;
+	point():a(0),b(0){}
+	point(double a_,double b_):a(a_),b(b_) {}
+};
+struct line {
+    point a, b;
+    line():a(point(0,0)),b(point(0,0)){}
+    line(point a_,point b_):a(a_),b(b_) {}
+};
 /*
 Polar System , Cartesian System
 x = r * cos(O)
