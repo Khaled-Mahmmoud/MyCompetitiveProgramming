@@ -1,8 +1,4 @@
 ```cpp
-#include<bits/stdc++.h>
-#define ll long long
-#define sz(v) (int)(v).size()
-using namespace std;
 stack<int>ar[3];
 void get(stack<int> st)
 {
