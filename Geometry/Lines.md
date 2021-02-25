@@ -111,7 +111,7 @@ int ccw(point a, point b, point c)
         return +1;
     return 0;
 }
-bool intersect(point p1, point p2, point p3, point p4)
+bool intersect_segment(point p1, point p2, point p3, point p4)
 {
     // special case handling if a segment is just a point
     bool x = (p1 == p2), y = (p3 == p4);
