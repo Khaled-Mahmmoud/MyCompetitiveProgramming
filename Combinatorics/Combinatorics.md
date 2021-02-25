@@ -1,6 +1,6 @@
 ```cpp
 /*
-<without repetition>
+__without repetition__
 order is important (Permutation)
 How? The rule of product.
 First step we do n choices, in second step, we are allowed only n-1, third n-2
@@ -14,7 +14,7 @@ nCr = C(n,r) = n! / (n-r)! * r!
 That is it: P(n, r) = C(n, r) * r!
 nCr = nC(n – r)
 
-<with repetition>
+__with repetition__
 order is important (Permutation)
 n^r
 
@@ -36,8 +36,8 @@ ll perm(ll n,ll r)
     return ans;
 }
 
+__Permutation with repetition__
 /*
-// Permutation with repetition  
 How many permutations of AAABB?
 Imagine it as A1A2A3B1B2 (where A1=A2=A3, B1=B2)
 Now think in permutation: A1A2B1A3B2
@@ -49,20 +49,21 @@ Then 3! * 2! items are duplicate => 5! / (3! * 2!)
 P(n) = n!..but P(n, [c1, c2...cm]) = n!/(c1!c2!...cm!) where c1 is repeated char
 */
 
+__Rules of Binomial coefficients__
 /*
-Some Rules of Binomial coefficients
 nC0 + nC1 + nC2 + ……. + nCn-1 + nCn = 2^n
 nC0 + nC2 + nC4 + nC6 + nC8 + ……… = 2^(n-1)
 nC0^2 + nC1^2 + nC2^2 + .... + nCn-1^2 + nCn^2 = 2nCn
 */
 
+__Catalan numbers__
 /*
-Catalan numbers are a sequence of natural numbers that occurs in many interesting counting problems 
+are a sequence of natural numbers that occurs in many interesting counting problems 
 1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862
 catalan(n) = nCr(2n,n) / (n+1)
 */
+__The Division Rule__
 /*
-<The Division Rule>
 A food table with 3 chairs. Given 3 persons, in how many ways we can seat them? 6 ways
 Wrong! 123 same as 231 same as 312 [by making 1 shift]. so answer is 6 / 3 = 2 .. or generally n! / n = n-1!,
 nPr(circle) = nPr/r
