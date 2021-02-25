@@ -87,5 +87,27 @@ bool is_inside_polygon(vector<point> &points,point p)
     }
     // Answer is either 0 (outside) or 2PI (inside)
     return fabs(angles_sum) > PI;
-}
+}// O(n)
+// Equivalent Approach
+bool is_inside_polygon(vector<point> &points,point p)
+{
+    int wn = 0;
+    for(int i=0;i<sz(points);i++)
+    {
+        point cur = points[i], nx = points[(i+1)%sz(points)];
+        if(point_on_segment(cur,nxt,p))
+            return true;
+        if(cur.Y<=p.Y)
+        {
+            if(nx.Y>p.Y&&cross(vec(cur,nx),vec(cur,p)) > EPS)
+                ++wn;
+        }
+        else
+        {
+            if(nx.Y <= p.Y&&cross(vec(cur,nx),vec(cur,p)) < -EPS)
+                ++wn;
+        }
+    }
+    return wn != 0;
+}// O(n)
 ```
