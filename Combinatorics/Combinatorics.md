@@ -1,6 +1,6 @@
 ```cpp
-/*
 __without repetition__
+/*
 order is important (Permutation)
 How? The rule of product.
 First step we do n choices, in second step, we are allowed only n-1, third n-2
@@ -13,8 +13,10 @@ order is not important (Combination)
 nCr = C(n,r) = n! / (n-r)! * r!
 That is it: P(n, r) = C(n, r) * r!
 nCr = nC(n – r)
+*/
 
 __with repetition__
+/*
 order is important (Permutation)
 n^r
 
