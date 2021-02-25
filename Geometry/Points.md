@@ -18,6 +18,7 @@ A x B = |A| |B| sin(O) = A.x * B.y - B.x * A.y
 */
 #define EPS 1e-9
 int dcmp(double x,double y){return fabs(x - y) <= EPS ? 0 : x > y ? 1 : -1;}
+double fixAngle(double A){return A > 1 ? 1 : (A < -1 ? -1 : A);}
 #define PI acos(-1.0)
 #define point complex<double>
 #define X real()
@@ -30,7 +31,7 @@ int dcmp(double x,double y){return fabs(x - y) <= EPS ? 0 : x > y ? 1 : -1;}
 #define dist(a,b) length(vec((a),(b)))
 #define angle(a) arg(a)
 #define scale(a,s) (a) * (s)
-#define dot_angle(a,b) acos(dot(a,b)/(abs(a) * abs(b)))
+#define dot_angle(a,b) acos(fixAngle(dot(a,b)/(abs(a) * abs(b))))
 #define cross_3d(a,b) point(a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x)
 #define rotate_counterclockwise(a,ang) a * polar(1.0,ang) // rotate around origin
 #define rotate_clockwise(a,ang) a * polar(1.0, -ang)
