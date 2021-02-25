@@ -1,12 +1,12 @@
 ```cpp
+__Line Equations__
 /*
-// Line Equations
 Type
 Explicit 2D : f(x) = y = mx + b where m = ∆y/∆x   // a non-vertical 2D line
 Implicit 2D : f(x,y) = ax + by + c = 0   // any 2D line
 Parametric  : P(t) = P0 + t (p1 - p0)  where t = vec(p0,ps)/vec(p0,p1) // any line in any dimension
 */
-// check if point c on, above, below Line AB
+__Point Related toLine__
 void check_point_line(point a,point b,point c)
 {
     int x = dcmp(cross(vec(a,c),vec(a,b)), 0);
@@ -17,30 +17,36 @@ void check_point_line(point a,point b,point c)
     else
         cout<<"on line";
 }
+
+__Point onLine__
 bool check_point_online(point a,point b,point c)
 {
     return (dcmp(cross(vec(a,c),vec(a,b)), 0)==0);
 }
-// check if point c is on Ray AB
+
+__Point onRay__
 bool point_on_ray(point a,point b,point c)
 {
     return (dcmp(cross(vec(a,c),vec(a,b)), 0) == 0 && dcmp(dot(vec(a,c),vec(a,b)), 0) == 1);
 }
-// check if point c is on Segment AP
+
+__Point onSegment__
 bool point_on_segment(point a,point b,point c)
 {
     if(dcmp(length(vec(a,b)), 0) == 0)
         return (dcmp(length(vec(a,c)), 0) == 0);
     return (point_on_ray(a,b,c) && point_on_ray(b,a,c));
 }
-// Point C distance to Line AB
-// X = AC sin O = (AC AB sin O) / AB
+
+___Point distance toLine__
+// AB line and C point: X = AC sin O = (AC AB sin O) / AB  
 double dist_to_line(point a,point b,point c)
 {
     return fabs(cross(vec(a,c),vec(a,b))/dist(a,b));
 }
-// Point p2 distance to Segment p0-p1
-// p4 is the nearest point to p2
+
+___Point distance toSegment__
+// Point p2 distance to Segment p0-p1 and p4 is the nearest point to p2
 double distToSegment(point p0, point p1, point p2, point& p4)
 {
     point v1 = p1 - p0, v2 = p2 - p0;
@@ -62,16 +68,22 @@ double distToSegment(point p0, point p1, point p2, point& p4)
     p4 = (p0 + v1 * t);  // this is point
     return dist(p2 - (p0 + v1 * t));
 }
+
+__Two Lines Parallel__
 // is Line AB and Line CD is the Parallel
 bool arelinesparallel(point a,point b,point c,point d)
 {
     return dcmp(cross(vec(a,b),vec(c,d)), 0) == 0;
 }
+
+__Two Lines Same__
 // is Line AB and Line CD is the Same
 bool arelinesame(point a,point b,point c,point d)
 {
     return (arelinesparallel(a,b,c,d) && check_point_online(a,b,c));
 }
+
+__Intersect Point__
 // rt = intersect point between two lines
 bool intersect_line(point a,point b,point c,point d,point &rt)
 {
@@ -84,10 +96,13 @@ bool intersect_line(point a,point b,point c,point d,point &rt)
 		return false;  //e.g ab is ray, cd is segment ... change to whatever
     return true;
 }
+
 // not use above code to check if two segment intersect because debug with
 // this cases: line1(0,0,1,1),line2(1,1,2,2) and line1(0,0,1,1),line2(2,2,3,3)
 // you have to use below code to check if two segment intersect
 // and above code to find intersect point
+
+__Counterclockwise Test__
 /*
 Where is c relative to segment a-b?
 ccw = +1 => angle > 0 or collinear after b 
@@ -111,6 +126,7 @@ int ccw(point a, point b, point c)
         return +1;
     return 0;
 }
+__Intersect Segment__
 bool intersect_segment(point p1, point p2, point p3, point p4)
 {
     // special case handling if a segment is just a point
