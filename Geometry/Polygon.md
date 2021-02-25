@@ -73,4 +73,19 @@ pair<vector<point>, vector<point>> polygon(vector<point> &p, point A, point B)
     }
     return make_pair(down,up);
 }
+
+__Winding Number Algorithm__
+bool is_inside_polygon(vector<point> &points,point p)
+{
+    double angles_sum = 0;
+    for(int i=0;i<sz(points);i++)
+    {
+        point cur = points[i], nx = points[(i+1)%sz(points)];
+        if(ccw(cur,nx,p)==0)
+            return true;
+        angles_sum += dot_angle(cur,p,nx) * ccw(p,cur,nx);
+    }
+    // Answer is either 0 (outside) or 2PI (inside)
+    return fabs(angles_sum) > PI;
+}
 ```
