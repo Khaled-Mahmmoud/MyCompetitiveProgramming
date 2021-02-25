@@ -21,4 +21,14 @@ bool is_convex_polygon(vector<point>&p)
     p.pop_back(),p.pop_back();
     return ok;
 }
+
+double polygon_area(vector<point>&points)
+{
+    double a = 0;
+    for(int i=0;i<sz(point);i++)
+        a += cross(points[i],points[(i+1)%sz(points)]);
+    return fabs(a/2);
+}
+
+
 ```
