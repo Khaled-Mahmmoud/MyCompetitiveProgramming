@@ -120,8 +120,8 @@ void MEC()
 }
 /*
 // Circular Sector
-Length of an Arc = (n/360) * 2 * PI * r
-Sector area = (n/360) * PI * r^2
+Length of an Arc = (O/360) * 2 * PI * r
+Sector area = (O/360) * PI * r^2
 */
 
 /*
