@@ -1,4 +1,26 @@
 ```cpp
+__Angles__
+/*
+Radians: 0 - 2π
+Degrees: 0 - 360
+Right angle 90 degree or π/2 radians
+370 Degree = 10 Degree = 370 % 360
+*/
+
+__Cartesian System__
+/*
+x = r * cos(O)
+y = r * sin(O)
+Complex number with Catresian System : X + i Y
+*/
+
+__Polar System__
+/*
+r = sqrt(x^2 + y^2)
+O = atan2(y,x)
+Complex number with Polar System : R(cos(O) + i sin(O)) = R e^(i O)
+*/
+
 struct point {
 	double a, b;
 	point():a(0),b(0){}
@@ -9,24 +31,7 @@ struct line {
     line():a(point(0,0)),b(point(0,0)){}
     line(point a_,point b_):a(a_),b(b_) {}
 };
-/*
-Polar System , Cartesian System
-x = r * cos(O)
-y = r * sin(O)
-r = sqrt(x^2 + y^2)
-O = atan2(y,x)
 
-Complex number with Catresian System : X + i Y
-Complex number with Polar System : R(cos(O) + i sin(O)) = R e^(i O)
-*/
-
-/*
-// Angles
-Radians: 0 - 2 π
-Degrees: 0 - 360
-Right angle 90 degree or π/2 radians
-370 Degree = 10 Degree = 370 % 360
-*/
 double toRadians(double degree) 
 {
     return (degree * PI) / 180.0;
