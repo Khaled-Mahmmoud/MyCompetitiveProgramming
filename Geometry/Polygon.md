@@ -111,7 +111,7 @@ bool is_inside_polygon(vector<point> &points,point p)
     return wn != 0;
 }// O(n)
 
-__point in convex polygon__
+__Point inConvex Polygon__
 bool in_convex(vector<Point>& l, Point p)
 {
     int a = 1, b = l.size()-1, c;
