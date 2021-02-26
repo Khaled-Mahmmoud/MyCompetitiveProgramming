@@ -99,6 +99,7 @@ bool in_convex(vector<point>& l, point p)
     int a = 1, b = l.size()-1, c;
     if (cross(vec(l[0],l[a]),vec(l[0],l[b])) > 0)
         swap(a,b); // if it was counterclockwise , make it clockwise
+        // Allow on edge --> (cross... > 0 || cross ... < 0)
     if (cross(vec(l[0],l[a]),vec(l[0],p)) >= 0 || cross(vec(l[0],l[b]),vec(l[0],p)) <= 0)
         return false;
     while(abs(a-b) > 1)
@@ -109,6 +110,7 @@ bool in_convex(vector<point>& l, point p)
         else
             a = c;
     }
+    // Alow on edge --> return cross... <= 0
     return cross(vec(l[a],l[b]),vec(l[a],p)) < 0;
 }// O(log n)
 ```
