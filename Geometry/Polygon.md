@@ -118,7 +118,7 @@ bool in_convex(vector<point>& l, point p)
 {
     int a = 1, b = l.size()-1, c;
     if (cross(vec(l[0],l[a]),vec(l[0],l[b])) > 0)
-        swap(a,b);
+        swap(a,b); // if it was counterclockwise , make it clockwise
     if (cross(vec(l[0],l[a]),vec(l[0],p)) >= 0 || cross(vec(l[0],l[b]),vec(l[0],p)) <= 0)
         return false;
     while(abs(a-b) > 1)
