@@ -3,14 +3,6 @@
 string s;
 while(s.size()==0)
 getline(cin, s);
-// OR
-while (cin >> x) 
-{
-    // code
-}
-
-freopen("input.txt", "r", stdin);
-freopen("output.txt", "w", stdout);
 
 clockid_t ct1,ct2;
 ct1 = clock();
@@ -35,8 +27,6 @@ if (abs(a-b) < 1e-9)
     // a and b are equal	
 }
 
-map<Double,int>m;
-
 /*
 - Floor of 2 positive Integers
 	 a / b
@@ -45,8 +35,6 @@ map<Double,int>m;
 - Round of 2 positive Integers
 	(a + b/2) / b
 */
-#include<iomanip>	
-cout<< fixed << showpoint << setprecision(n) ;
 
 cout<<setw(5)<<setfill('0')<<"kh"; 000kh
 
