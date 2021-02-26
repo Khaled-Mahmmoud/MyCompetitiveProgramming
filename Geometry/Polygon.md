@@ -111,17 +111,22 @@ bool is_inside_polygon(vector<point> &points,point p)
     return wn != 0;
 }// O(n)
 
-// Check point in convex polygon, O(logN)
-bool in_convex(vector<Point>& l, Point p){
+__point in convex polygon__
+bool in_convex(vector<Point>& l, Point p)
+{
     int a = 1, b = l.size()-1, c;
-    if (Det(l[0], l[a], l[b]) > 0) swap(a,b);
-    // Allow on edge --> if (Det... > 0 || Det ... < 0)
-    if (Det(l[0], l[a], p) >= 0 || Det(l[0], l[b], p) <= 0) return false;
-    while(abs(a-b) > 1) {
+    if (cross(vec(l[0],l[a]),vec(l[0],l[b])) > 0)
+        swap(a,b);
+    if (cross(vec(l[0],l[a]),vec(l[0],p)) >= 0  b|| cross(vec(l[0],l[b]),vec(l[0],p)) <= 0)
+        return false;
+    while(abs(a-b) > 1)
+    {
         c = (a+b)/2;
-        if (Det(l[0], l[c], p) > 0) b = c; else a = c;
+        if (cross(vec(l[0],l[c]),vec(l[0],p)) > 0)
+            b = c;
+        else
+            a = c;
     }
-    // Alow on edge --> return Det... <= 0
-    return Det(l[a], l[b], p) < 0;
-}
+    return cross(vec(l[a],l[b]),vec(l[a],p)) < 0;
+} // O(log n)
 ```
