@@ -1,6 +1,6 @@
 ```cpp
+__Convex Hull__
 // Graham Scan Algorithm
-
 int n;
 vector<point> v,hull;
 bool cmp(point a, point b)
