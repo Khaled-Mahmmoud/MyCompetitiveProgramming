@@ -75,40 +75,20 @@ pair<vector<point>, vector<point>> polygon(vector<point> &p, point A, point B)
 }
 
 __Winding Number Algorithm__
-bool is_inside_polygon(vector<point> &points,point p)
+// 2: onside, 1: inpolygon, 0: outpolygon
+// https://open.kattis.com/submissions/6920809
+int in_polygon(vector<point> &points,point p)
 {
     double angles_sum = 0;
     for(int i=0;i<sz(points);i++)
     {
         point cur = points[i], nx = points[(i+1)%sz(points)];
         if(ccw(cur,nx,p)==0)
-            return true;
-        angles_sum += dot_angle(cur,p,nx) * ccw(p,cur,nx);
+            return 2;
+        angles_sum += dot_angle(vec(p,cur),vec(p,nx)) * ccw(p,cur,nx);
     }
     // Answer is either 0 (outside) or 2PI (inside)
     return fabs(angles_sum) > PI;
-}// O(n)
-// Equivalent Approach
-bool is_inside_polygon(vector<point> &points,point p)
-{
-    int wn = 0;
-    for(int i=0;i<sz(points);i++)
-    {
-        point cur = points[i], nx = points[(i+1)%sz(points)];
-        if(point_on_segment(cur,nxt,p))
-            return true;
-        if(cur.Y<=p.Y)
-        {
-            if(nx.Y>p.Y&&cross(vec(cur,nx),vec(cur,p)) > EPS)
-                ++wn;
-        }
-        else
-        {
-            if(nx.Y <= p.Y&&cross(vec(cur,nx),vec(cur,p)) < -EPS)
-                ++wn;
-        }
-    }
-    return wn != 0;
 }// O(n)
 
 __Point inConvex__
