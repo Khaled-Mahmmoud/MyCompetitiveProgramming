@@ -92,7 +92,7 @@ int in_polygon(vector<point> &points,point p)
 }// O(n)
 
 __Point inConvex__
-// is point p is strictly inside convex polygon
+// is point p is strictly inside convex polygon // On edge --> false
 // https://codeforces.com/contest/166/submission/108568041
 bool in_convex(vector<point>& l, point p)
 {
