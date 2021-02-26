@@ -1,24 +1,8 @@
 ```cpp
 // Graham Scan Algorithm
-#define point complex<double>
-#define x real()
-#define y imag()
+
 int n;
 vector<point> v,hull;
-point input()
-{
-    int nx,ny;
-    cin>>nx>>ny;
-    return point(nx,ny);
-}
-double cross(point a,point b)
-{
-    return (conj(a)*b).imag();
-}
-double length(point a)
-{
-    return abs(a);
-}
 bool cmp(point a, point b)
 {
     a = a-v[0];
@@ -50,7 +34,7 @@ bool operator<(point a,point b)
         return a.x<b.x;
     return a.y<b.y;
 }
-int main()
+void solve()
 {
     cin>>n;
     v.resize(n);
@@ -62,10 +46,9 @@ int main()
             swap(v[0],v[i]);
     sort(v.begin()+1, v.end(), cmp);
     convexHull();
-    cout<<sz(hull)<<endl;
+    cout<<sz(hull)<<'\n';
     for(int i=0; i<sz(hull); ++i)
-        cout<<hull[i].x<<" "<<hull[i].y<<endl;
-    return 0;
+        cout<<hull[i].x<<" "<<hull[i].y<<'\n';
 }
 // O(n log n)
 ```
