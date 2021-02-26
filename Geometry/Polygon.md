@@ -113,12 +113,12 @@ bool is_inside_polygon(vector<point> &points,point p)
 
 __Point inConvex__
 // is point p is strictly inside convex polygon
-bool in_convex(vector<Point>& l, Point p)
+bool in_convex(vector<point>& l, point p)
 {
     int a = 1, b = l.size()-1, c;
     if (cross(vec(l[0],l[a]),vec(l[0],l[b])) > 0)
         swap(a,b);
-    if (cross(vec(l[0],l[a]),vec(l[0],p)) >= 0  b|| cross(vec(l[0],l[b]),vec(l[0],p)) <= 0)
+    if (cross(vec(l[0],l[a]),vec(l[0],p)) >= 0 || cross(vec(l[0],l[b]),vec(l[0],p)) <= 0)
         return false;
     while(abs(a-b) > 1)
     {
@@ -129,5 +129,5 @@ bool in_convex(vector<Point>& l, Point p)
             a = c;
     }
     return cross(vec(l[a],l[b]),vec(l[a],p)) < 0;
-} // O(log n)
+}// O(log n)
 ```
