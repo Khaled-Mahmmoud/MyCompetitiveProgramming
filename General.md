@@ -50,13 +50,6 @@ cout<< fixed << showpoint << setprecision(n) ;
 
 cout<<setw(5)<<setfill('0')<<"kh"; 000kh
 
-int dx[] = {0,0,-1,1,-1,1,-1,1};
-int dy[] = {-1,1,0,0,-1,-1,1,1};
-bool check(int i,int j)
-{
-    return i>=0&&j>=0&&i<n&&j<m;
-}
-
 string k = "khaled mahmoud fawzy",s1,s2,s3;
 stringstream input(k);
 input>>s1>>s2>>s3;
