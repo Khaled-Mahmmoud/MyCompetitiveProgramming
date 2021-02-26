@@ -113,6 +113,7 @@ bool is_inside_polygon(vector<point> &points,point p)
 
 __Point inConvex__
 // is point p is strictly inside convex polygon
+// https://codeforces.com/contest/166/submission/108568041
 bool in_convex(vector<point>& l, point p)
 {
     int a = 1, b = l.size()-1, c;
