@@ -41,7 +41,7 @@ double fixAngle(double A){return A > 1 ? 1 : (A < -1 ? -1 : A);}
 #define rotate_counterclockwise(a,ang) a * polar(1.0,ang) // rotate around origin
 #define rotate_clockwise(a,ang) a * polar(1.0, -ang)
 #define rotate_around_b(a,b,ang) (a - b) * polar(1.0, ang) + b  // rotate point a around point b
-#define refelct(v,m) conj(v/m) * m
+#define reflect(v,m) conj(v/m) * m
 #define same(p1,p2) (dot(vec(p1,p2),vec(p1,p2))<=EPS)
 #define traslate(a,b) a + b
 ```
