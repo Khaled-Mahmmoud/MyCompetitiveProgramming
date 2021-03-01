@@ -44,4 +44,12 @@ double fixAngle(double A){return A > 1 ? 1 : (A < -1 ? -1 : A);}
 #define reflect(v,m) conj(v/m) * m
 #define same(p1,p2) (dot(vec(p1,p2),vec(p1,p2))<=EPS)
 #define transition(a,b) a + b
+
+// to sort array of points
+bool pred(point a,point b)
+{
+    if(a.X != b.X)
+        return a.X < b.X;
+    return a.Y < b.Y;
+}
 ```
