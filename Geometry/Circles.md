@@ -46,8 +46,8 @@ pair<double, point> findCircle(point a, point b, point c)
 // (p1-p0)(p1-p0)t^2 + 2(p1-p0)(p0-C)t + (p0-C)(p0-C) = r*r; -> Quadratic
 vector<point> intersectLineCircle(point p0, point p1, point C, double r)
 {
-    double a = dp(vec(p0, p1), vec(p0, p1)), b = 2 * dp(vec(p0, p1), vec(C, p0)),
-           c = dp(vec(C, p0), vec(C, p0)) - r * r;
+    double a = dot(vec(p0, p1), vec(p0, p1)), b = 2 * dot(vec(p0, p1), vec(C, p0)),
+           c = dot(vec(C, p0), vec(C, p0)) - r * r;
     double f = b * b - 4 * a * c;
     vector<point> v;
     if (dcmp(f, 0) >= 0)
