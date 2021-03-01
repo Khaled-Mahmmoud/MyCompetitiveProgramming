@@ -92,25 +92,41 @@ int in_polygon(vector<point> &points,point p)
 }// O(n)
 
 __Point inConvex__
-// is point p is strictly inside convex polygon // On edge --> false
+// is point p is strictly inside convex polygon 
 // https://codeforces.com/contest/166/submission/108568041
 bool in_convex(vector<point>& l, point p)
 {
     int a = 1, b = l.size()-1, c;
-    if (cross(vec(l[0],l[a]),vec(l[0],l[b])) > 0)
-        swap(a,b); // if it was counterclockwise , make it clockwise
-        // Allow on edge --> (cross... > 0 || cross ... < 0)
-    if (cross(vec(l[0],l[a]),vec(l[0],p)) >= 0 || cross(vec(l[0],l[b]),vec(l[0],p)) <= 0)
+    if (dcmp(cross(vec(l[0],l[a]),vec(l[0],l[b])), 0)== 1)
+        swap(a,b);
+    if (dcmp(cross(vec(l[0],l[a]),vec(l[0],p)), 0)!= -1 || dcmp(cross(vec(l[0],l[b]),vec(l[0],p)),0)!= 1)
         return false;
     while(abs(a-b) > 1)
     {
         c = (a+b)/2;
-        if (cross(vec(l[0],l[c]),vec(l[0],p)) > 0)
+        if (dcmp(cross(vec(l[0],l[c]),vec(l[0],p)), 0)==1)
             b = c;
         else
             a = c;
     }
-    // Alow on edge --> return cross... <= 0
-    return cross(vec(l[a],l[b]),vec(l[a],p)) < 0;
+    return dcmp(cross(vec(l[a],l[b]),vec(l[a],p)), 0) == -1;
 }// O(log n)
+// is point p is inside convex polygon (on edge allowed)
+bool in_convex(vector<point>& l, point p)
+{
+    int a = 1, b = l.size()-1, c;
+    if (dcmp(cross(vec(l[0],l[a]),vec(l[0],l[b])), 0)==1)
+        swap(a,b); 
+    if (dcmp(cross(vec(l[0],l[a]),vec(l[0],p)),0)==1 || dcmp(cross(vec(l[0],l[b]),vec(l[0],p)), 0)==-1)
+        return false;
+    while(abs(a-b) > 1)
+    {
+        c = (a+b)/2;
+        if (dcmp(cross(vec(l[0],l[c]),vec(l[0],p)), 0)==1)
+            b = c;
+        else
+            a = c;
+    }
+    return dcmp(cross(vec(l[a],l[b]),vec(l[a],p)),0)!=1;
+}
 ```
