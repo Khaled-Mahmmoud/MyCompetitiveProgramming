@@ -22,8 +22,14 @@ A x B = |A| |B| sin(O) = A.x * B.y - B.x * A.y
 */
 
 #define EPS 1e-9
-int dcmp(double x,double y){return fabs(x - y) <= EPS ? 0 : x > y ? 1 : -1;}
-double fixAngle(double A){return A > 1 ? 1 : (A < -1 ? -1 : A);}
+int dcmp(double x,double y)
+{
+    return fabs(x - y) <= EPS ? 0 : x > y ? 1 : -1;
+}
+double fixAngle(double A)
+{
+    return A > 1 ? 1 : (A < -1 ? -1 : A);
+}
 #define PI acos(-1.0)
 #define point complex<double>
 #define X real()
@@ -44,12 +50,46 @@ double fixAngle(double A){return A > 1 ? 1 : (A < -1 ? -1 : A);}
 #define reflect(v,m) conj(v/m) * m
 #define same(p1,p2) (dot(vec(p1,p2),vec(p1,p2))<=EPS)
 #define transition(a,b) a + b
-
-// to sort array of points
-bool pred(point a,point b)
+#define toRadians(degree) (degree * PI) / 180.0
+#define toDegree(radian) ((radian+(radian<0?2*PT:0)) * 180.0 / PI)
+#define to_degree(degrees, minutes, seconds) degrees + (minutes/60) + (seconds/60*60)
+bool predp(point a,point b)
 {
-    if(a.X != b.X)
-        return a.X < b.X;
-    return a.Y < b.Y;
+    if(dcmp(a.X,b.X)!=0)
+        return dcmp(a.X, b.X) == -1;
+    return dcmp(a.Y, b.Y) == -1;
 }
+
+__Angles__
+/*
+Radians: 0 - 2π
+Degrees: 0 - 360
+Right angle 90 degree or π/2 radians
+370 Degree = 10 Degree = 370 % 360
+*/
+
+__Cartesian System__
+/*
+x = r * cos(O)
+y = r * sin(O)
+Complex number with Catresian System : X + i Y
+*/
+
+__Polar System__
+/*
+r = sqrt(x^2 + y^2)
+O = atan2(y,x)
+Complex number with Polar System : R(cos(O) + i sin(O)) = R e^(i O)
+*/
+
+struct point {
+	double a, b;
+	point():a(0),b(0){}
+	point(double a_,double b_):a(a_),b(b_) {}
+};
+struct line {
+    point a, b;
+    line():a(point(0,0)),b(point(0,0)){}
+    line(point a_,point b_):a(a_),b(b_) {}
+};
 ```
