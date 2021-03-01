@@ -50,11 +50,11 @@ ___Point distance toSegment__
 double distToSegment(point p0, point p1, point p2, point& p4) {
 	double d1, d2;
 	point v1 = p1 - p0, v2 = p2 - p0;
-	if ((d1 = dot(v1, v2)) <= 0) {
+	if (dcmp((d1 = dot(v1, v2)),0) != 1) {
 		p4 = p0;
 		return dist(p2 , p0);
 	}
-	if ((d2 = dot(v1, v1)) <= d1) {
+	if (dcmp((d2 = dot(v1, v1)), d1) != 1) {
 		p4 = p1;
 		return dist(p2 , p1);
 	}
