@@ -3,6 +3,13 @@ __Polygon__
 // Internal angle for Regular Polygon = (n-2) * 180 / n
 // number of diagonals of n-polygon = n * (n-3) / 2
 
+// Regular Polygon Volume: V = (1/4 * n * s * s * cot(PI/n) ) * h
+/*
+V = Volume of the Polygon based column
+n = number of sides of the polygon
+s = length of the side of the polygon
+h = height of the polygon
+*/
 __Simple Polygon__
 bool is_simple_polygon(vector<point>&p)
 {
