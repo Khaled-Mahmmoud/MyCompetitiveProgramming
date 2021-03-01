@@ -3,13 +3,6 @@ __Polygon__
 // Internal angle for Regular Polygon = (n-2) * 180 / n
 // number of diagonals of n-polygon = n * (n-3) / 2
 
-// Regular Polygon Volume: V = (1/4 * n * s * s * cot(PI/n) ) * h
-/*
-V = Volume of the Polygon based column
-n = number of sides of the polygon
-s = length of the side of the polygon
-h = height of the polygon
-*/
 __Simple Polygon__
 bool is_simple_polygon(vector<point>&p)
 {
@@ -40,6 +33,20 @@ double polygon_area(vector<point>&points)
     for(int i=0;i<sz(point);i++)
         a += cross(points[i],points[(i+1)%sz(points)]);
     return fabs(a/2);
+}
+
+__Polygon Volume__
+double polygon_volume(vector<point>&points, double h)
+{
+    return polygon_area(points) * h;
+}
+V = (1/4 * n * s * s * cot(PI/n) ) * h
+
+__Regular Polygon Volume__
+double rpolygon_volume(int n,double s,double h)
+{
+    // n-polygon, s: length of side, h: height of polygon
+    return (1/4 * n * s * s * cot(PI/n) ) * h;
 }
 
 __Polygon Centroid__
