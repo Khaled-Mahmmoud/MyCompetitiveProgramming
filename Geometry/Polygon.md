@@ -30,7 +30,7 @@ __Polygon Area__
 double polygon_area(vector<point>&points)
 {
     double a = 0;
-    for(int i=0;i<sz(point);i++)
+    for(int i=0;i<sz(points);i++)
         a += cross(points[i],points[(i+1)%sz(points)]);
     return fabs(a/2);
 }
