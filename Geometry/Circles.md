@@ -123,11 +123,11 @@ void MEC()
 Length of an Arc = (O/360) * 2 * PI * r
 Sector area = (O/360) * PI * r^2
 */
-double arc(double theta)
+double arc(double theta,double r)
 {
     return (toDegree(theta)/360) * 2 * PI * r;
 }
-double area_sector(double theta)
+double area_sector(double theta,double r)
 {
     return (toDegree(theta)/360) * PI * r * r;
 }
