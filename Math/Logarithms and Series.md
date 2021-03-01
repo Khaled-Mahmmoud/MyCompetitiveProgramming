@@ -42,8 +42,9 @@ log(1) + log(2) + ... + log(n) <= log(n) + log(n) + ... + log(n)
 ```cpp
 /*
 <Series>
-sum(x=1,n) x   = 1 + 2 + 3 + ... + n = n*(n+1)/2
-sum(x=1,n) x^2 = 1 + 4 + 9 + ... + n*n = n*(n+1)*(2n+1)/6
+sum(x=1,n) x   = 1 + 2 + 3 +  ... + n     = n*(n+1)/2
+sum(x=1,n) x^2 = 1 + 4 + 9 +  ... + n*n   = n*(n+1)*(2n+1)/6
+sum(x=1,n) x^3 = 1 + 8 + 27 + ... + n*n*n = (n*(n+1)/2)^2
 
 Arithmetic Progression (AP) :: is a sequence of numbers where the difference between any two consecutive numbers is constant.
 n ==>> number of elements , a ==>> first element , b ==>> last element , d ==>> difference between any two consecutive numbers
