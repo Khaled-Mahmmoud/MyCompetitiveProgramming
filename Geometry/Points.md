@@ -51,7 +51,7 @@ double fixAngle(double A)
 #define same(p1,p2) (dot(vec(p1,p2),vec(p1,p2))<=EPS)
 #define transition(a,b) a + b
 #define toRadians(degree) (degree * PI) / 180.0
-#define toDegree(radian) ((radian+(radian<0?2*PT:0)) * 180.0 / PI)
+#define toDegree(radian) ((radian+(radian<0?2*PI:0)) * 180.0 / PI)
 #define to_degree(degrees, minutes, seconds) degrees + (minutes/60) + (seconds/60*60)
 bool predp(point a,point b)
 {
