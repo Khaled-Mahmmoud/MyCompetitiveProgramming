@@ -125,7 +125,10 @@ Sector area = (O/360) * PI * r^2
 */
 double arc(double theta,double r)
 {
-    return (toDegree(theta)/360) * 2 * PI * r;
+    // IF theta is degree
+    return (theta/360) * 2 * PI * r;
+    // IF theta is radian
+    return theta * r;
 }
 double area_sector(double theta,double r)
 {
