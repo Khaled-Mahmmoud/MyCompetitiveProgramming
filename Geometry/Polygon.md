@@ -40,7 +40,6 @@ double polygon_volume(vector<point>&points, double h)
 {
     return polygon_area(points) * h;
 }
-V = (1/4 * n * s * s * cot(PI/n) ) * h
 
 __Regular Polygon Volume__
 double rpolygon_volume(int n,double s,double h)
