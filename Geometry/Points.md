@@ -22,14 +22,8 @@ A x B = |A| |B| sin(O) = A.x * B.y - B.x * A.y
 */
 
 #define EPS 1e-9
-int dcmp(double x,double y)
-{
-    return fabs(x - y) <= EPS ? 0 : x > y ? 1 : -1;
-}
-double fixAngle(double A)
-{
-    return A > 1 ? 1 : (A < -1 ? -1 : A);
-}
+int dcmp(double x,double y){return fabs(x - y) <= EPS ? 0 : x > y ? 1 : -1;}
+double fixAngle(double A){return A > 1 ? 1 : (A < -1 ? -1 : A);}
 #define PI acos(-1.0)
 #define point complex<double>
 #define X real()
