@@ -65,23 +65,16 @@ void solve()
         bool ok = 1;
         int cnt1 = 0;
         for (int i = 'a'; i <= 'z'; ++i)
+        if(deg[i]==1)
         {
-            switch (deg[i])
-            {
-            case 0:
-                break;
-            case 1:
-                if (cnt1++)
-                    ok = 0;
-                st = i;
-                break;
-            case -1:
-                break;
-            default:
+            if(cnt1++)
                 ok = 0;
-                break;
-            }
+            st = i;
         }
+        else if(deg[i]==0||deg[i]==-1)
+            continue;
+        else
+            ok = 0;
         resSize = 0;
         Euler(st);
         ok &= resSize == m;
