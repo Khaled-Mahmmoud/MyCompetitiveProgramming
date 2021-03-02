@@ -64,9 +64,7 @@ Remove last bit : index - (index & -index)
 */
 bool is_power_of_two(ll n)
 {
-    if(!n)
-       return 0;
-    return (n&(n-1))==0;
+    return (x&!(n&(n-1)));
 }
 void get_binary_len(int n, int len)
 {
