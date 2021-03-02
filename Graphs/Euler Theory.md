@@ -1,6 +1,6 @@
+```cpp
 // Undirected Graph
 // Fence (USACO)
-```cpp
 const int N = 2e5 + 10, M = 2 * N, E = 1024 + 5;
 int head[N], nxt[M], to[M], n, ne, vis[M], vid;
 int U[E], V[E], I[E], res[M], resSize;
