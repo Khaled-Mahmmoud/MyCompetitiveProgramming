@@ -20,15 +20,13 @@ number of digits of integer x in base b is floor(logb(x)) + 1
 #define numOfBits(x)  1 + floor(log2(x)))
 // Number of Digits in !n = floor(log10(1 * 2 * 3 * 4 * 5 *  .... * n)) + 1 
 //                        = floor(log10(1) + log10(2) + ... + log10(n)) + 1
-int main()
+// Count numOfBits from 1 to n
+void solve(int n)
 {
-    int n;
-    cin>>n;
     double ans = 0;
     for(int i=1;i<=n;i++)
         ans += log10(i);
     cout<<fixed<<setprecision(0)<<floor(ans) + 1;
-    return 0;
 }
 /*
 Harmonic Progression: 1/1 + 1/2 + 1/3 + 1/4 + 1/5 + ..... + 1/(n-1) + 1/n = log(n)
