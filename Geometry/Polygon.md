@@ -37,17 +37,17 @@ double polygon_area(vector<point>&points)
 __Pick theorem__
 // S = area, I = number of integer points strictly Inside, B = number of points on sides of polygon
 // S = I + B/2 - 1
-int get_border_points(vector<point>P)
+ll get_border_points(vector<point>P)
 {
-    int n = P.size(), res = 0;
-    for( int i = 0, j = n - 1; i < n; j = i++ ) 
-            res += __gcd(abs(P[i].X-P[j].X), abs(P[i].Y-P[j].Y));
+    int n = P.size();ll res = 0;
+    for( int i = 0, j = n - 1; i < n; j = i++ )
+            res += __gcd((ll)abs(P[i].X-P[j].X),(ll)abs(P[i].Y-P[j].Y));
     return res;
 }
 // I = (2*A - B + 2)/2
-int get_inside_points(vector<point>&points)
+ll get_inside_points(vector<point>&points)
 {
-    return (2 * polygon_area - get_border_points + 2)/2;
+    return (2 * polygon_area(points) - get_border_points(points) + 2)/2;
 }
 __Polygon Volume__
 double polygon_volume(vector<point>&points, double h)
