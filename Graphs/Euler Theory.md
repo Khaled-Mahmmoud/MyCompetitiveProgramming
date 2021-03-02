@@ -89,7 +89,6 @@ void solve()
         {
             for (int i = resSize - 1; i >= 0; --i)
                 cout<<str[I[res[i]]]<<".\n"[!i];
-
         }
         else
             cout<<"***";
