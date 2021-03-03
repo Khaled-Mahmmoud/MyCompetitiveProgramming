@@ -68,10 +68,18 @@ void solve()
 // Undirected Graph
 // Fence (USACO)
 const int N = 2003;
-vector<vector<pair<int, int>>> adj_(N);
-vector<int> res, vis(N),degree(N);
 vector<queue<pair<int,int>>>adj(N);
-int isOdd[N];
+vector<vector<pair<int, int>>> adj_(N);
+vector<int> res, vis(N),deg(N);
+int odd[N];
+void init()
+{
+    vis = vector<int>(N);
+    deg = vector<int>(N);
+    res = vector<int>();
+    adj = vector<queue<pair<int, int>>>(N);
+    adj = vector<queue<pair<int, int>>>(N);
+}
 void euler(int node)
 {
     while (sz(adj[node]))
@@ -87,6 +95,7 @@ void euler(int node)
 }
 void solve()
 {
+    init();
     int n;
     cin >> n;
     int st = N;
@@ -96,8 +105,8 @@ void solve()
         cin>>u>>v;
         adj_[u].push_back({v,i});
         adj_[v].push_back({u,i});
-        isOdd[u] ^= 1;
-        isOdd[v] ^= 1;
+        odd[u] ^= 1;
+        odd[v] ^= 1;
         st = min(u,v);
     }
     for(int i=0; i<N; i++)
@@ -105,14 +114,14 @@ void solve()
     for(int i=0; i<N; i++)
         for(int j=0; j<sz(adj_[i]); j++)
             adj[i].push(adj_[i][j]);
-    int cntOdd = count(isOdd, isOdd + N, 1);
+    int cntOdd = count(odd, odd + N, 1);
     if (cntOdd > 2)
     {
         cout<<-1<<'\n';
         return;
     }
     if (cntOdd)
-        st = find(isOdd, isOdd + N, 1) - isOdd;
+        st = find(odd, odd + N, 1) - odd;
     euler(st);
     if (sz(res) - 1 != n)
     {
