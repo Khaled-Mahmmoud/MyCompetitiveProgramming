@@ -1,91 +1,66 @@
 ```cpp
 // Dirct Graph	
 // https://open.kattis.com/problems/catenyms	
-const int N = 2e5 + 10, M = 2 * N, E = 1024 + 5;
-int head[N], nxt[M], to[M], n, ne;
-int res[M], resSize, deg[N], I[1000], lst[N];
-char str[1000][21];
-void init()
+vector<vector<pair<int, int>>> adj;
+vector<int> res, vis;
+void euler(int node)
 {
-    memset(head, -1, n * sizeof head[0]);
-    ne = 0;
-}
-void addEdge(int f, int t)
-{
-    to[ne] = t;
-    nxt[ne] = head[f];
-    head[f] = ne++;
-}
-void addBiEdge(int u, int v)
-{
-    addEdge(u, v);
-    addEdge(v, u);
-}
-void Euler(int u)
-{
-    for (int &e = head[u]; ~e;)
+    for (auto &it : adj[node])
     {
-        int x = e;
-        e = nxt[e];
-        int v = to[x];
-        Euler(v);
-        res[resSize++] = x;
+        if (vis[it.second])
+            continue;
+        vis[it.second] = true;
+        euler(it.first);
+        res.push_back(it.second);
     }
 }
 void solve()
 {
-    int t, m;
-    cin>>t;
-    while (t--)
+    int n;
+    cin >> n;
+    vis = vector<int>(n);
+    res = vector<int>();
+    adj = vector<vector<pair<int, int>>>(26);
+    vector<string> v(n);
+    vector<int> deg(26);
+    for (auto &it : v)
+        cin >> it;
+    sort(v.begin(),v.end());
+    int st = 26;
+    for (int i = 0; i < n; i++)
     {
-        n = 128;
-        init();
-        fill(deg + 'a', deg + 'z' + 1, 0);
-        cin>>m;
-
-        int st = 'z';
-        for (int i = 0; i < m; ++i)
+        int a = v[i][0] - 'a', b = v[i].back() - 'a';
+        deg[a]++;
+        deg[b]--;
+        adj[a].push_back( { b, i });
+        st = min( { st, a, b });
+    }
+    bool valid = true;
+    int odd = 0;
+    for (int i = 0; i < 26; i++)
+    {
+        if (deg[i] == 1)
         {
-            cin>>str[i];
-            lst[i] = strlen(str[i]) - 1;
-            I[i] = i;
-            st = min({st, (int) str[i][0], (int) str[i][lst[i]]});
-            deg[(int)str[i][0]]++, deg[(int)str[i][lst[i]]]--;
-        }
-        sort(I, I + m, [](int a, int b)
-        {
-            return strcmp(str[a], str[b]) > 0;
-        });
-
-        for (int i = 0; i < m; ++i)
-        {
-            int j = I[i];
-            addEdge(str[j][0], str[j][lst[j]]);
-        }
-        bool ok = 1;
-        int cnt1 = 0;
-        for (int i = 'a'; i <= 'z'; ++i)
-        if(deg[i]==1)
-        {
-            if(cnt1++)
-                ok = 0;
+            odd++;
             st = i;
         }
-        else if(deg[i]==0||deg[i]==-1)
-            continue;
-        else
-            ok = 0;
-        resSize = 0;
-        Euler(st);
-        ok &= resSize == m;
-        if (ok)
-        {
-            for (int i = resSize - 1; i >= 0; --i)
-                cout<<str[I[res[i]]]<<".\n"[!i];
-        }
-        else
-            cout<<"***";
+        else if (abs(deg[i]) > 1)
+            valid = false;
     }
+    if (odd > 1)
+        valid = false;
+    euler(st);
+    if (sz(res) != n)
+        valid = false;
+    if (valid)
+    {
+        reverse(res.begin(),res.end());
+        for (int i = 0; i < n; i++)
+            cout << v[res[i]] << ".\n"[i + 1 == n];
+    }
+    else
+        cout << "***\n";
+
 }
 
 // Undirected Graph
