@@ -3,12 +3,11 @@ __Undirected Graph Euler__
 // Fence (USACO)
 vector<queue<pair<int,int>>>adj;
 vector<vector<pair<int, int>>> adjv;
-vector<int> rnode, redge, vis, deg, odd;
-void init(int n)
+vector<int> rnode, redge, vis, deg;
+void init(int n,int m)
 {
-    vis = vector<int>(n);
+    vis = vector<int>(m);
     deg = vector<int>(n);
-    odd = vector<int>(n);
     rnode = vector<int>();
     redge = vector<int>();
     adj = vector<queue<pair<int, int>>>(n);
@@ -32,7 +31,7 @@ void solve()
 {
     int n, m;
     cin>>n>>m;
-    init(n);
+    init(n, m);
     int st = n;
     for (int i = 0; i<m; i++)
     {
@@ -41,8 +40,8 @@ void solve()
         u--, v--;
         adjv[u].push_back({v,i});
         adjv[v].push_back({u,i});
-        odd[u] ^= 1;
-        odd[v] ^= 1;
+        deg[u] ^= 1;
+        deg[v] ^= 1;
         st = min(u,v);
     }
     for(int i=0; i<n; i++)
@@ -50,14 +49,14 @@ void solve()
     for(int i=0; i<n; i++)
         for(int j=0; j<sz(adjv[i]); j++)
             adj[i].push(adjv[i][j]);
-    int cntOdd = count(odd.begin(), odd.end(), 1);
+    int cntOdd = count(deg.begin(), deg.end(), 1);
     if (cntOdd > 2)
     {
         cout<<-1<<'\n';
         return;
     }
     if (cntOdd)
-        st = find(odd.begin(), odd.end(), 1) - odd.begin();
+        st = find(deg.begin(), deg.end(), 1) - deg.begin();
     euler(st);
     // OR if(sz(redge) != m)
     if (sz(rnode) - 1 != m)
@@ -67,7 +66,8 @@ void solve()
     }
     reverse(rnode.begin(),rnode.end());
     for(int i=0; i<sz(rnode); i++)
-        cout<<rnode[i]<<'\n';
+        cout<<rnode[i]<<' ';
+    cout<<'\n';
 }
 ```
 ```cpp
