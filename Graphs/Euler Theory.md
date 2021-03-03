@@ -1,8 +1,14 @@
 ```cpp
-// Dirct Graph	
+__Dirct Graph__	
 // https://open.kattis.com/problems/catenyms	
 vector<queue<pair<int, int>>> adj;
 vector<int> res, vis;
+void init()
+{
+    vis = vector<int>(N);
+    res = vector<int>();
+    adj = vector<queue<pair<int, int>>>(N);
+}
 void euler(int node)
 {
     while (sz(adj[node]))
@@ -18,13 +24,9 @@ void euler(int node)
 }
 void solve()
 {
+    init();
     int n;
     cin >> n;
-
-    vis = vector<int>(n);
-    res = vector<int>();
-    adj = vector<queue<pair<int, int>>>(26);
-
     vector<string> v(n);
     vector<int> deg(26);
     for (auto &it : v)
@@ -64,8 +66,9 @@ void solve()
     else
         cout << "***\n";
 }
-
-// Undirected Graph
+```
+```cpp
+__Undirected Graph__
 // Fence (USACO)
 const int N = 2003;
 vector<queue<pair<int,int>>>adj(N);
