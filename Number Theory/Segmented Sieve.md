@@ -1,5 +1,6 @@
 ```cpp
-// O(n.log(log(n))) and Space: O(sqrt(n))
+// Sieve of Eratosthenes: O(n.log(log(n))) and Space: O(n)
+// Segmented Sieve: O(n.log(log(n))) and Space: O(sqrt(n))
 class SEGSIEVE
 {
 public:
