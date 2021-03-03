@@ -33,12 +33,6 @@ void inc_exe(int idx = 0)
     sub.pop_back();
     inc_exe(idx+1);
 }
-int main()
-{
-    subset();
-    cout<<ans;
-    return 0;
-}
 // Complexity : O(2^n)
 /*
 ```
