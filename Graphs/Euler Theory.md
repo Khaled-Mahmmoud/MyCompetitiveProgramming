@@ -1,12 +1,14 @@
 ```cpp
 // Dirct Graph	
 // https://open.kattis.com/problems/catenyms	
-vector<vector<pair<int, int>>> adj;
+vector<queue<pair<int, int>>> adj;
 vector<int> res, vis;
 void euler(int node)
 {
-    for (auto &it : adj[node])
+    while (sz(adj[node]))
     {
+        auto it = adj[node].front();
+        adj[node].pop();
         if (vis[it.second])
             continue;
         vis[it.second] = true;
@@ -18,9 +20,11 @@ void solve()
 {
     int n;
     cin >> n;
+
     vis = vector<int>(n);
     res = vector<int>();
-    adj = vector<vector<pair<int, int>>>(26);
+    adj = vector<queue<pair<int, int>>>(26);
+
     vector<string> v(n);
     vector<int> deg(26);
     for (auto &it : v)
@@ -30,9 +34,8 @@ void solve()
     for (int i = 0; i < n; i++)
     {
         int a = v[i][0] - 'a', b = v[i].back() - 'a';
-        deg[a]++;
-        deg[b]--;
-        adj[a].push_back( { b, i });
+        deg[a]++; deg[b]--;
+        adj[a].push( { b, i });
         st = min( { st, a, b });
     }
     bool valid = true;
@@ -60,7 +63,6 @@ void solve()
     }
     else
         cout << "***\n";
-
 }
 
 // Undirected Graph
