@@ -71,7 +71,7 @@ void solve()
 __Undirected Graph Euler__
 // Fence (USACO)
 vector<queue<pair<int,int>>>adj;
-vector<vector<pair<int, int>>> adj_;
+vector<vector<pair<int, int>>> adjv;
 vector<int> res, vis, deg, odd;
 void init(int n)
 {
@@ -80,7 +80,7 @@ void init(int n)
     odd = vector<int>(n);
     res = vector<int>();
     adj = vector<queue<pair<int, int>>>(n);
-    adj = vector<queue<pair<int, int>>>(n);
+    adjv = vector<vector<pair<int, int>>>(n);
 }
 void euler(int node)
 {
@@ -105,17 +105,17 @@ void solve()
     {
         int u,v;
         cin>>u>>v;
-        adj_[u].push_back({v,i});
-        adj_[v].push_back({u,i});
+        adjv[u].push_back({v,i});
+        adjv[v].push_back({u,i});
         odd[u] ^= 1;
         odd[v] ^= 1;
         st = min(u,v);
     }
     for(int i=0; i<n; i++)
-        sort(adj_[i].begin(),adj_[i].end());
+        sort(adjv[i].begin(),adjv[i].end());
     for(int i=0; i<n; i++)
-        for(int j=0; j<sz(adj_[i]); j++)
-            adj[i].push(adj_[i][j]);
+        for(int j=0; j<sz(adjv[i]); j++)
+            adj[i].push(adjv[i][j]);
     int cntOdd = count(odd.begin(), odd.end(), 1);
     if (cntOdd > 2)
     {
