@@ -38,6 +38,7 @@ void solve()
     {
         int u,v;
         cin>>u>>v;
+        u--, v--;
         adjv[u].push_back({v,i});
         adjv[v].push_back({u,i});
         odd[u] ^= 1;
@@ -71,14 +72,18 @@ void solve()
 ```
 ```cpp
 __Dirct Graph Euler__	
-// https://open.kattis.com/problems/catenyms	
-vector<queue<pair<int, int>>> adj;
-vector<int> res, vis;
-void init()
+// https://open.kattis.com/problems/eulerianpath
+vector<queue<pair<int,int>>>adj;
+vector<vector<pair<int, int>>> adjv;
+vector<int> rnode, redge, vis, deg;
+void init(int n)
 {
-    vis = vector<int>(N);
-    res = vector<int>();
-    adj = vector<queue<pair<int, int>>>(N);
+    vis = vector<int>(n);
+    deg = vector<int>(n);
+    rnode = vector<int>();
+    redge = vector<int>();
+    adj = vector<queue<pair<int, int>>>(n);
+    adjv = vector<vector<pair<int, int>>>(n);
 }
 void euler(int node)
 {
@@ -90,30 +95,35 @@ void euler(int node)
             continue;
         vis[it.second] = true;
         euler(it.first);
-        res.push_back(it.second);
+        redge.push_back(it.second);
     }
+    rnode.push_back(node);
 }
 void solve()
 {
-    init();
-    int n;
-    cin >> n;
-    vector<string> v(n);
-    vector<int> deg(26);
-    for (auto &it : v)
-        cin >> it;
-    sort(v.begin(),v.end());
-    int st = 26;
-    for (int i = 0; i < n; i++)
+    int n, m;
+    cin>>n>>m;
+    init(n);
+    int st = n;
+    for (int i = 0; i<m; i++)
     {
-        int a = v[i][0] - 'a', b = v[i].back() - 'a';
-        deg[a]++; deg[b]--;
-        adj[a].push( { b, i });
-        st = min( { st, a, b });
+        int u,v;
+        cin>>u>>v;
+        u--,v--;
+        adjv[u].push_back({v,i});
+        adjv[v].push_back({u,i});
+        deg[u]++;
+        deg[v]--;
+        st = min(u,v);
     }
+    for(int i=0; i<n; i++)
+        sort(adjv[i].begin(),adjv[i].end());
+    for(int i=0; i<n; i++)
+        for(int j=0; j<sz(adjv[i]); j++)
+            adj[i].push(adjv[i][j]);
     bool valid = true;
     int odd = 0;
-    for (int i = 0; i < 26; i++)
+    for (int i = 0; i < n; i++)
     {
         if (deg[i] == 1)
         {
@@ -126,15 +136,14 @@ void solve()
     if (odd > 1)
         valid = false;
     euler(st);
-    if (sz(res) != n)
-        valid = false;
-    if (valid)
+    // OR if(sz(redge) != m)
+    if (sz(rnode) - 1 != m || !valid)
     {
-        reverse(res.begin(),res.end());
-        for (int i = 0; i < n; i++)
-            cout << v[res[i]] << ".\n"[i + 1 == n];
+        cout<<-1<<'\n';
+        return;
     }
-    else
-        cout << "***\n";
+    reverse(rnode.begin(),rnode.end());
+    for(int i=0; i<sz(rnode); i++)
+        cout<<rnode[i]<<'\n';
 }
 ```
