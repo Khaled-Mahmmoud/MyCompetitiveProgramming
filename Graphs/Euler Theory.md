@@ -73,37 +73,11 @@ void solve()
 ```cpp
 __Dirct Graph Euler__	
 // https://open.kattis.com/problems/eulerianpath
-vector<queue<pair<int,int>>>adj;
-vector<vector<pair<int, int>>> adjv;
-vector<int> rnode, redge, vis, deg;
-void init(int n)
-{
-    vis = vector<int>(n);
-    deg = vector<int>(n);
-    rnode = vector<int>();
-    redge = vector<int>();
-    adj = vector<queue<pair<int, int>>>(n);
-    adjv = vector<vector<pair<int, int>>>(n);
-}
-void euler(int node)
-{
-    while (sz(adj[node]))
-    {
-        auto it = adj[node].front();
-        adj[node].pop();
-        if (vis[it.second])
-            continue;
-        vis[it.second] = true;
-        euler(it.first);
-        redge.push_back(it.second);
-    }
-    rnode.push_back(node);
-}
 void solve()
 {
     int n, m;
     cin>>n>>m;
-    init(n);
+    init(n, m);
     int st = n;
     for (int i = 0; i<m; i++)
     {
@@ -111,7 +85,6 @@ void solve()
         cin>>u>>v;
         u--,v--;
         adjv[u].push_back({v,i});
-        adjv[v].push_back({u,i});
         deg[u]++;
         deg[v]--;
         st = min(u,v);
@@ -144,6 +117,7 @@ void solve()
     }
     reverse(rnode.begin(),rnode.end());
     for(int i=0; i<sz(rnode); i++)
-        cout<<rnode[i]<<'\n';
+        cout<<rnode[i]<<' ';
+    cout<<'\n';
 }
 ```
