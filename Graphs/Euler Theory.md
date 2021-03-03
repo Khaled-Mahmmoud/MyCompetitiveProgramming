@@ -70,18 +70,17 @@ void solve()
 ```cpp
 __Undirected Graph Euler__
 // Fence (USACO)
-const int N = 2003;
-vector<queue<pair<int,int>>>adj(N);
-vector<vector<pair<int, int>>> adj_(N);
-vector<int> res, vis(N),deg(N);
-int odd[N];
-void init()
+vector<queue<pair<int,int>>>adj;
+vector<vector<pair<int, int>>> adj_;
+vector<int> res, vis, deg, odd;
+void init(int n)
 {
-    vis = vector<int>(N);
-    deg = vector<int>(N);
+    vis = vector<int>(n);
+    deg = vector<int>(n);
+    odd = vector<int>(n);
     res = vector<int>();
-    adj = vector<queue<pair<int, int>>>(N);
-    adj = vector<queue<pair<int, int>>>(N);
+    adj = vector<queue<pair<int, int>>>(n);
+    adj = vector<queue<pair<int, int>>>(n);
 }
 void euler(int node)
 {
@@ -98,11 +97,11 @@ void euler(int node)
 }
 void solve()
 {
-    init();
-    int n;
-    cin >> n;
-    int st = N;
-    for (int i = 0; i<n; i++)
+    int n, m;
+    cin>>n>>m;
+    init(n);
+    int st = n;
+    for (int i = 0; i<m; i++)
     {
         int u,v;
         cin>>u>>v;
@@ -112,21 +111,21 @@ void solve()
         odd[v] ^= 1;
         st = min(u,v);
     }
-    for(int i=0; i<N; i++)
+    for(int i=0; i<n; i++)
         sort(adj_[i].begin(),adj_[i].end());
-    for(int i=0; i<N; i++)
+    for(int i=0; i<n; i++)
         for(int j=0; j<sz(adj_[i]); j++)
             adj[i].push(adj_[i][j]);
-    int cntOdd = count(odd, odd + N, 1);
+    int cntOdd = count(odd.begin(), odd.end(), 1);
     if (cntOdd > 2)
     {
         cout<<-1<<'\n';
         return;
     }
     if (cntOdd)
-        st = find(odd, odd + N, 1) - odd;
+        st = find(odd.begin(), odd.end(), 1) - odd.begin();
     euler(st);
-    if (sz(res) - 1 != n)
+    if (sz(res) - 1 != m)
     {
         cout<<-1<<'\n';
         return;
