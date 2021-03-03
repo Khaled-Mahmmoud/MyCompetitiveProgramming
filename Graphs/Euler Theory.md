@@ -1,5 +1,5 @@
 ```cpp
-__Dirct Graph__	
+__Dirct Graph Euler__	
 // https://open.kattis.com/problems/catenyms	
 vector<queue<pair<int, int>>> adj;
 vector<int> res, vis;
@@ -68,7 +68,7 @@ void solve()
 }
 ```
 ```cpp
-__Undirected Graph__
+__Undirected Graph Euler__
 // Fence (USACO)
 const int N = 2003;
 vector<queue<pair<int,int>>>adj(N);
