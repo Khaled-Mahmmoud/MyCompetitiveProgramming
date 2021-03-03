@@ -72,13 +72,14 @@ __Undirected Graph Euler__
 // Fence (USACO)
 vector<queue<pair<int,int>>>adj;
 vector<vector<pair<int, int>>> adjv;
-vector<int> res, vis, deg, odd;
+vector<int> rnode, redge, vis, deg, odd;
 void init(int n)
 {
     vis = vector<int>(n);
     deg = vector<int>(n);
     odd = vector<int>(n);
-    res = vector<int>();
+    rnode = vector<int>();
+    redge = vector<int>();
     adj = vector<queue<pair<int, int>>>(n);
     adjv = vector<vector<pair<int, int>>>(n);
 }
@@ -92,8 +93,9 @@ void euler(int node)
             continue;
         vis[it.second] = true;
         euler(it.first);
+        redge.push_back(it.second);
     }
-    res.push_back(node);
+    rnode.push_back(node);
 }
 void solve()
 {
@@ -125,13 +127,14 @@ void solve()
     if (cntOdd)
         st = find(odd.begin(), odd.end(), 1) - odd.begin();
     euler(st);
-    if (sz(res) - 1 != m)
+    // OR if(sz(redge) != m)
+    if (sz(rnode) - 1 != m)
     {
         cout<<-1<<'\n';
         return;
     }
-    reverse(res.begin(),res.end());
-    for(int i=0; i<sz(res); i++)
-        cout<<res[i]<<'\n';
+    reverse(rnode.begin(),rnode.end());
+    for(int i=0; i<sz(rnode); i++)
+        cout<<rnode[i]<<'\n';
 }
 ```
