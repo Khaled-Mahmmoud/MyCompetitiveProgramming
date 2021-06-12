@@ -5,8 +5,4 @@ admin
 
 
 Bella
-{$_|_€}
-
-Maven
-
-T{+^8x*3
+T{+^0x*2
