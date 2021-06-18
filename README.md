@@ -1,5 +1,6 @@
 # MyCompetitiveProgramming
 
-|Date|earned|rate|
+|Date|Earned|Rate|
 |---|---|---|
-|April 2021| 500 | +500|
+|April 2021| ‪455.55 | +‪455.55 |
+|May 2021| ‪2,421.10 | +1965.55 |
