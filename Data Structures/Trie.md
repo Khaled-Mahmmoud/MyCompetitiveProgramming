@@ -1,5 +1,5 @@
-***Trie*** insert OR search OR erase O(L) Where L length of a word
-implementation O(N * L) Where n is number of words and L is average length of strings
+***Trie*** insert OR search OR erase O(L) Where L length of a word, implementation O(N * L) Where n is number of words and L is average length of strings
+
 **Trie static**
 ```cpp
 #define N 100009
