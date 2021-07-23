@@ -7,7 +7,8 @@ implementation O(N * L) Where n is number of words and L is average length of st
 // Trie static
 #define N 100009
 int sz,d;
-vector<int>en(N);vector<int>prefix(N);
+vector<int>en(N);
+vector<int>prefix(N);
 vector<vector<int>>node(N,vector<int>(27));
 //                                     ^ OR 255 for all characters and digits and symbols
 void insert(string s)
