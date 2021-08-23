@@ -1,3 +1,4 @@
+```cpp
 /*
 Square-free integer
 Is any integer not divisible by perfect square (except 1)
@@ -61,3 +62,4 @@ Count the triples (a,b,c) such a, b, c <= n and gcd(a, b, c) = 1
 ll sum = n*n*n;
 for(ll i=2;i<=n;i++)
     sum -= mobius[i] * (n/i) * (n/i) * (n/i);
+```
