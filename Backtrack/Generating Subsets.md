@@ -1,5 +1,4 @@
 ```cpp
-// 6DF70WXJ - Payoneer
 // Method 1: Recursion
 int n;
 vector<int>v,sub;
