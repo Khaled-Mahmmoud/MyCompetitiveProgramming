@@ -1,4 +1,5 @@
 **PROBLEM:**
+
 You will be given n strings consisting of lowercase English letter. You need to find the shortest non-empty string that doesn’t occur as a substring in given strings. If there are many such string, you need to print the lexicographically minimum one. 
 
 **CONSTRAINTS:**
@@ -13,13 +14,13 @@ Complete the function 'shortestString' in code. Function must return a string re
 
 'shortestString' has the following parameter(n, ar[]):
 
-Input
+**Input**
 
 The first line contains integer n.
 
 Then n strings, one per line.
 
-Output
+**Output**
 
 The lexicographically minimum string.
 
@@ -35,13 +36,9 @@ interview
 
 testbcd
 
-Output 
+Output: f
 
-f
-
-Explanation
-
-The first 5 letters (a,b,c,d,e) occur in strings, so answer is f
+Explanation: The first 5 letters (a,b,c,d,e) occur in strings, so answer is f
 
 **EXAMPLE 2:** 
 
@@ -53,10 +50,6 @@ jklaacbdefghi
 
 mnuvwxyzopqrst
 
-Output 
+Output: ab
 
-ab
-
-Explanation
-
-The strings contain 26 letters, so the shortest string cannot have size 1. The aa occurs as substring. So, answer is ab
+Explanation: The strings contain 26 letters, so the shortest string cannot have size 1. The aa occurs as substring. So, answer is ab
